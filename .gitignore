@@ -33,3 +33,6 @@ preflight/resource_profile.txt
 
 # Vulkan probe build artifact
 /vulkan/test/vkprobe
+
+# OpenMind native CMake build artifacts
+native/build/
