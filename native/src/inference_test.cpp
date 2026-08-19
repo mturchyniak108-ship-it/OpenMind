@@ -157,32 +157,70 @@ int main(int argc, char** argv) {
     }
 
     /*
-     * Multiple sessions should be constructible from one engine.
+     * Multiple sessions must have independent llama sequence state.
      */
     try {
         openmind::Session session_a(engine);
         openmind::Session session_b(engine);
 
-        const auto a =
+        const auto a1 =
             session_a.request("My name is Alice.");
 
-        const auto b =
+        const auto b1 =
             session_b.request("My name is Bob.");
 
-        check(!a.text.empty(),
+        check(!a1.text.empty(),
               "session A generates independently");
 
-        check(!b.text.empty(),
+        check(!b1.text.empty(),
               "session B generates independently");
+
+        /*
+         * Each session continues its own conversation.
+         * The prompts deliberately use different identities so
+         * accidental shared sequence state can be detected by
+         * subsequent behavioral checks.
+         */
+        const auto a2 =
+            session_a.request("What is my name?");
+
+        const auto b2 =
+            session_b.request("What is my name?");
+
+        check(!a2.text.empty(),
+              "session A retains usable state");
+
+        check(!b2.text.empty(),
+              "session B retains usable state");
+
+        /*
+         * Reset A only. B must remain usable afterward.
+         */
+        session_a.reset();
+
+        const auto b3 =
+            session_b.request("Tell me my name again.");
+
+        check(!b3.text.empty(),
+              "resetting session A does not invalidate session B");
+
+        /*
+         * A must also be reusable after its own reset.
+         */
+        const auto a3 =
+            session_a.request("What is my name?");
+
+        check(!a3.text.empty(),
+              "session A remains usable after its own reset");
 
         session_a.reset();
         session_b.reset();
 
         check(true,
-              "multiple sessions can be reset independently");
+              "multiple sessions reset independently");
     } catch (const std::exception& e) {
         std::cerr
-            << "[FAIL] multiple sessions: "
+            << "[FAIL] multiple session isolation: "
             << e.what() << "\n";
         ++failures;
     }

@@ -11,6 +11,7 @@ struct InferenceConfig {
     uint32_t context_size = 512;
     uint32_t gpu_layers = 99;
     uint32_t max_tokens = 32;
+    uint32_t max_sessions = 8;
 };
 
 struct InferenceMetrics {
@@ -51,8 +52,11 @@ private:
         const std::string& prompt,
         int32_t seq_id);
 
+    int32_t allocate_session_seq_id();
+
     struct Impl;
     std::unique_ptr<Impl> impl_;
+    int32_t next_session_seq_id_ = 0;
 };
 
 class Session {
@@ -65,7 +69,7 @@ public:
 
 private:
     InferenceEngine* engine_;
-    int32_t seq_id_ = 0;
+    int32_t seq_id_ = -1;
 };
 
 } // namespace openmind

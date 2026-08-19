@@ -102,6 +102,13 @@ bool InferenceEngine::load() {
         impl_->config.context_size;
 
     /*
+     * Support independent llama sequence state for multiple
+     * OpenMind Session instances.
+     */
+    ctx_params.n_seq_max =
+        impl_->config.max_sessions;
+
+    /*
      * Keep the batch large enough for the configured context.
      * The actual prompt batch is still limited by the prompt size.
      */
@@ -561,12 +568,34 @@ bool InferenceEngine::loaded() const noexcept {
     return impl_ && impl_->loaded;
 }
 
+int32_t InferenceEngine::allocate_session_seq_id() {
+    if (!impl_) {
+        throw std::runtime_error(
+            "OpenMind inference engine implementation unavailable");
+    }
+
+    if (impl_->config.max_sessions == 0) {
+        throw std::runtime_error(
+            "OpenMind maximum session count is zero");
+    }
+
+    if (next_session_seq_id_ < 0 ||
+        static_cast<uint32_t>(next_session_seq_id_) >=
+            impl_->config.max_sessions) {
+        throw std::overflow_error(
+            "OpenMind session sequence capacity exhausted");
+    }
+
+    return next_session_seq_id_++;
+}
+
 } // namespace openmind
 
 namespace openmind {
 
 Session::Session(InferenceEngine& engine)
-    : engine_(&engine) {
+    : engine_(&engine),
+      seq_id_(engine.allocate_session_seq_id()) {
 }
 
 InferenceResult Session::request(const std::string& prompt) {
