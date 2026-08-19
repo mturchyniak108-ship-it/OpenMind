@@ -45,6 +45,12 @@ public:
     bool loaded() const noexcept;
 
 private:
+    friend class Session;
+
+    InferenceResult generate_session(
+        const std::string& prompt,
+        int32_t seq_id);
+
     struct Impl;
     std::unique_ptr<Impl> impl_;
 };
@@ -59,6 +65,7 @@ public:
 
 private:
     InferenceEngine* engine_;
+    int32_t seq_id_ = 0;
 };
 
 } // namespace openmind

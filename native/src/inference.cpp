@@ -324,6 +324,239 @@ InferenceResult InferenceEngine::generate(
     return result;
 }
 
+InferenceResult InferenceEngine::generate_session(
+    const std::string& prompt,
+    int32_t seq_id) {
+
+    if (!loaded()) {
+        throw std::runtime_error(
+            "OpenMind inference engine is not loaded");
+    }
+
+    if (prompt.empty()) {
+        throw std::invalid_argument(
+            "OpenMind inference prompt is empty");
+    }
+
+    if (seq_id < 0) {
+        throw std::invalid_argument(
+            "OpenMind session sequence ID is invalid");
+    }
+
+    InferenceResult result;
+
+    const auto total_start = Clock::now();
+
+    int n_prompt =
+        -llama_tokenize(
+            impl_->vocab,
+            prompt.c_str(),
+            prompt.size(),
+            nullptr,
+            0,
+            true,
+            true);
+
+    if (n_prompt <= 0) {
+        throw std::runtime_error(
+            "Failed to determine prompt token count");
+    }
+
+    std::vector<llama_token> tokens(
+        static_cast<size_t>(n_prompt));
+
+    const int tokenized =
+        llama_tokenize(
+            impl_->vocab,
+            prompt.c_str(),
+            prompt.size(),
+            tokens.data(),
+            tokens.size(),
+            true,
+            true);
+
+    if (tokenized < 0) {
+        throw std::runtime_error(
+            "Prompt tokenization failed");
+    }
+
+    result.metrics.prompt_tokens =
+        static_cast<uint32_t>(n_prompt);
+
+    llama_memory_t memory =
+        llama_get_memory(impl_->ctx);
+
+    llama_pos next_pos =
+        llama_memory_seq_pos_max(
+            memory,
+            seq_id);
+
+    if (next_pos < 0) {
+        next_pos = 0;
+    } else {
+        ++next_pos;
+    }
+
+    const llama_pos prompt_end =
+        next_pos +
+        static_cast<llama_pos>(tokens.size());
+
+    if (prompt_end >
+        static_cast<llama_pos>(impl_->config.context_size)) {
+        throw std::runtime_error(
+            "OpenMind session context capacity exceeded; "
+            "reset the session or increase context_size");
+    }
+
+    const auto prompt_start = Clock::now();
+
+    llama_batch batch =
+        llama_batch_init(
+            static_cast<int32_t>(tokens.size()),
+            0,
+            1);
+
+    for (size_t i = 0; i < tokens.size(); ++i) {
+        batch.token[i] = tokens[i];
+        batch.pos[i] =
+            next_pos +
+            static_cast<llama_pos>(i);
+        batch.n_seq_id[i] = 1;
+        batch.seq_id[i][0] = seq_id;
+        batch.logits[i] =
+            (i + 1 == tokens.size()) ? 1 : 0;
+    }
+
+    batch.n_tokens =
+        static_cast<int32_t>(tokens.size());
+
+    if (llama_decode(
+            impl_->ctx,
+            batch) != 0) {
+        llama_batch_free(batch);
+        throw std::runtime_error(
+            "llama_decode(session prompt) failed");
+    }
+
+    llama_batch_free(batch);
+
+    const auto prompt_end_time = Clock::now();
+
+    result.metrics.prompt_eval_ms =
+        elapsed_ms(
+            prompt_start,
+            prompt_end_time);
+
+    if (result.metrics.prompt_eval_ms > 0.0) {
+        result.metrics.prompt_tokens_per_second =
+            (static_cast<double>(n_prompt) /
+             result.metrics.prompt_eval_ms) *
+            1000.0;
+    }
+
+    const auto generation_start = Clock::now();
+
+    std::string output;
+    uint32_t generated = 0;
+
+    llama_pos generation_pos = prompt_end;
+
+    for (uint32_t i = 0;
+         i < impl_->config.max_tokens;
+         ++i) {
+
+        const llama_token token =
+            llama_sampler_sample(
+                impl_->sampler,
+                impl_->ctx,
+                -1);
+
+        if (llama_vocab_is_eog(
+                impl_->vocab,
+                token)) {
+            break;
+        }
+
+        char piece[256];
+
+        const int n =
+            llama_token_to_piece(
+                impl_->vocab,
+                token,
+                piece,
+                sizeof(piece),
+                0,
+                true);
+
+        if (n < 0) {
+            throw std::runtime_error(
+                "Token-to-piece conversion failed");
+        }
+
+        output.append(
+            piece,
+            static_cast<size_t>(n));
+
+        ++generated;
+
+        if (generation_pos >=
+            static_cast<llama_pos>(
+                impl_->config.context_size)) {
+            break;
+        }
+
+        llama_batch next_batch =
+            llama_batch_init(1, 0, 1);
+
+        next_batch.n_tokens = 1;
+        next_batch.token[0] = token;
+        next_batch.pos[0] = generation_pos;
+        next_batch.n_seq_id[0] = 1;
+        next_batch.seq_id[0][0] = seq_id;
+        next_batch.logits[0] = 1;
+
+        if (llama_decode(
+                impl_->ctx,
+                next_batch) != 0) {
+            llama_batch_free(next_batch);
+            throw std::runtime_error(
+                "llama_decode(session generation) failed");
+        }
+
+        llama_batch_free(next_batch);
+
+        ++generation_pos;
+    }
+
+    const auto generation_end = Clock::now();
+    const auto total_end = Clock::now();
+
+    result.text = std::move(output);
+    result.metrics.generated_tokens = generated;
+
+    result.metrics.generation_ms =
+        elapsed_ms(
+            generation_start,
+            generation_end);
+
+    result.metrics.total_ms =
+        elapsed_ms(
+            total_start,
+            total_end);
+
+    result.metrics.model_load_ms =
+        impl_->model_load_ms;
+
+    if (result.metrics.generation_ms > 0.0) {
+        result.metrics.generation_tokens_per_second =
+            (static_cast<double>(generated) /
+             result.metrics.generation_ms) *
+            1000.0;
+    }
+
+    return result;
+}
+
 bool InferenceEngine::loaded() const noexcept {
     return impl_ && impl_->loaded;
 }
@@ -342,16 +575,21 @@ InferenceResult Session::request(const std::string& prompt) {
             "OpenMind session has no inference engine");
     }
 
-    return engine_->generate(prompt);
+    return engine_->generate_session(
+        prompt,
+        seq_id_);
 }
 
 void Session::reset() noexcept {
-    /*
-     * InferenceEngine::generate() is currently stateless and
-     * clears llama memory before every request. Therefore reset()
-     * is intentionally a no-op until persistent conversational
-     * state is introduced into Session.
-     */
+    if (!engine_ || !engine_->impl_) {
+        return;
+    }
+
+    llama_memory_seq_rm(
+        llama_get_memory(engine_->impl_->ctx),
+        seq_id_,
+        0,
+        -1);
 }
 
 } // namespace openmind

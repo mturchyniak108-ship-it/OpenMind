@@ -41,3 +41,16 @@ set_target_properties(openmind_inference_test PROPERTIES
     BUILD_RPATH "${LLAMA_LIB_DIR}"
     INSTALL_RPATH "${LLAMA_LIB_DIR}"
 )
+
+
+enable_testing()
+
+set(OPENMIND_TEST_MODEL "" CACHE FILEPATH
+    "GGUF model used by the native inference integration test")
+
+if(OPENMIND_TEST_MODEL)
+    add_test(
+        NAME openmind_inference_test
+        COMMAND openmind_inference_test "${OPENMIND_TEST_MODEL}"
+    )
+endif()
