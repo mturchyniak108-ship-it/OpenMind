@@ -225,6 +225,110 @@ int main(int argc, char** argv) {
         ++failures;
     }
 
+    /*
+     * Session capacity must be enforced and released IDs must be reusable.
+     */
+    try {
+        openmind::InferenceConfig limited_config = config;
+        limited_config.max_sessions = 2;
+
+        openmind::InferenceEngine limited_engine(limited_config);
+
+        check(limited_engine.load(),
+              "limited engine loads for session capacity test");
+
+        {
+            openmind::Session session_a(limited_engine);
+            openmind::Session session_b(limited_engine);
+
+            check(true,
+                  "maximum concurrent session capacity is constructible");
+
+            bool rejected = false;
+
+            try {
+                openmind::Session session_c(limited_engine);
+            } catch (const std::overflow_error&) {
+                rejected = true;
+            }
+
+            check(rejected,
+                  "session creation rejects capacity overflow");
+        }
+
+        /*
+         * Both previous sessions are destroyed here, so their sequence
+         * IDs must have been returned to the engine's free pool.
+         */
+        try {
+            openmind::Session reused_session(limited_engine);
+
+            const auto result =
+                reused_session.request(
+                    "Session ID capacity was released. Respond briefly.");
+
+            check(!result.text.empty(),
+                  "released session capacity is reusable");
+        } catch (const std::exception& e) {
+            std::cerr
+                << "[FAIL] session capacity reuse: "
+                << e.what() << "\n";
+            ++failures;
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] session capacity lifecycle: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
+     * Session destruction must release its sequence slot.
+     */
+    try {
+        openmind::InferenceConfig reuse_config = config;
+        reuse_config.max_sessions = 1;
+
+        openmind::InferenceEngine reuse_engine(reuse_config);
+
+        check(reuse_engine.load(),
+              "engine loads for destructor release test");
+
+        {
+            openmind::Session first(reuse_engine);
+
+            const auto result =
+                first.request("Generate a brief response.");
+
+            check(!result.text.empty(),
+                  "first session works before destruction");
+        }
+
+        /*
+         * The only available session slot was released by the destructor.
+         * A second Session must therefore be constructible.
+         */
+        try {
+            openmind::Session second(reuse_engine);
+
+            const auto result =
+                second.request("Generate another brief response.");
+
+            check(!result.text.empty(),
+                  "destroyed session sequence slot is reusable");
+        } catch (const std::exception& e) {
+            std::cerr
+                << "[FAIL] destructor sequence release: "
+                << e.what() << "\n";
+            ++failures;
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] destructor release lifecycle: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
     std::cout << "\n=== TEST RESULT ===\n";
 
     if (failures != 0) {

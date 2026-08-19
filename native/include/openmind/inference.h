@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <memory>
 #include <string>
+#include <vector>
 
 namespace openmind {
 
@@ -53,15 +54,32 @@ private:
         int32_t seq_id);
 
     int32_t allocate_session_seq_id();
+    void release_session_seq_id(int32_t seq_id) noexcept;
 
     struct Impl;
     std::unique_ptr<Impl> impl_;
     int32_t next_session_seq_id_ = 0;
+    std::vector<int32_t> free_session_seq_ids_;
 };
 
+/*
+ * A Session is a non-owning handle into an InferenceEngine.
+ *
+ * Lifetime requirement:
+ *   The InferenceEngine must outlive every Session created from it.
+ *
+ * Session is intentionally non-copyable and non-movable so its llama
+ * sequence identity remains stable for its entire lifetime.
+ */
 class Session {
 public:
     explicit Session(InferenceEngine& engine);
+    ~Session();
+
+    Session(const Session&) = delete;
+    Session& operator=(const Session&) = delete;
+    Session(Session&&) = delete;
+    Session& operator=(Session&&) = delete;
 
     InferenceResult request(const std::string& prompt);
 

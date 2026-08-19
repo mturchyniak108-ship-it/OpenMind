@@ -579,6 +579,12 @@ int32_t InferenceEngine::allocate_session_seq_id() {
             "OpenMind maximum session count is zero");
     }
 
+    if (!free_session_seq_ids_.empty()) {
+        const int32_t seq_id = free_session_seq_ids_.back();
+        free_session_seq_ids_.pop_back();
+        return seq_id;
+    }
+
     if (next_session_seq_id_ < 0 ||
         static_cast<uint32_t>(next_session_seq_id_) >=
             impl_->config.max_sessions) {
@@ -589,6 +595,28 @@ int32_t InferenceEngine::allocate_session_seq_id() {
     return next_session_seq_id_++;
 }
 
+void InferenceEngine::release_session_seq_id(
+    int32_t seq_id) noexcept {
+
+    if (seq_id < 0) {
+        return;
+    }
+
+    if (!impl_ ||
+        static_cast<uint32_t>(seq_id) >=
+            impl_->config.max_sessions) {
+        return;
+    }
+
+    llama_memory_seq_rm(
+        llama_get_memory(impl_->ctx),
+        seq_id,
+        0,
+        -1);
+
+    free_session_seq_ids_.push_back(seq_id);
+}
+
 } // namespace openmind
 
 namespace openmind {
@@ -596,6 +624,15 @@ namespace openmind {
 Session::Session(InferenceEngine& engine)
     : engine_(&engine),
       seq_id_(engine.allocate_session_seq_id()) {
+}
+
+Session::~Session() {
+    if (engine_) {
+        engine_->release_session_seq_id(seq_id_);
+    }
+
+    engine_ = nullptr;
+    seq_id_ = -1;
 }
 
 InferenceResult Session::request(const std::string& prompt) {
