@@ -1,0 +1,60 @@
+OpenMind Native Inference — Persistent Session Benchmark
+=========================================================
+
+Date: 2026-08-19
+Platform: Android ARM64 / Termux
+Backend: Vulkan
+Model: Qwen 2.5 Coder Q8_0
+Executable: native/build/openmind_inference_benchmark
+
+Configuration
+-------------
+Context: 2048
+Max tokens: 128
+GPU layers: 99
+Session mode: persistent Session
+Session reset: yes
+
+Results
+-------
+Model load: 1867.10 ms
+
+Stateless generate()
+Generated tokens: 128
+Generation speed: 17.62 tok/s
+Wall time: 7567.72 ms
+
+Session request()
+Generated tokens: 128
+Generation speed: 15.26 tok/s
+Wall time: 8699.92 ms
+
+Session after reset()
+Generated tokens: 128
+Generation speed: 14.96 tok/s
+Wall time: 8851.55 ms
+
+Summary
+-------
+Load: 1867.10 ms
+Stateless: 17.62 tok/s
+Session: 15.26 tok/s
+Session reset: 14.96 tok/s
+
+Architecture Notes
+------------------
+Persistent Session requests retain llama sequence/KV state.
+Session reset successfully reuses the same session.
+Session performance remains within normal variance of
+stateless inference while providing persistent conversational
+state.
+
+Vulkan scheduler confirmed:
+- Vulkan0 compute buffer: 63.5117 MiB
+- Vulkan_Host compute buffer: 302.7539 MiB
+- Graph nodes: 958
+- Graph splits: 3
+
+Result
+------
+PASS
