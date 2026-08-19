@@ -15,6 +15,7 @@ struct InferenceConfig {
     uint32_t gpu_layers = 99;
     uint32_t max_tokens = 32;
     uint32_t max_sessions = 8;
+    bool kv_unified = false;
 };
 
 struct InferenceMetrics {
@@ -58,6 +59,8 @@ private:
 
     int32_t allocate_session_seq_id();
     void release_session_seq_id(int32_t seq_id) noexcept;
+
+    uint32_t session_context_size() const noexcept;
 
     struct Impl;
     std::unique_ptr<Impl> impl_;

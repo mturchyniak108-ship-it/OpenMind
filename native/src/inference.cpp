@@ -113,11 +113,20 @@ bool InferenceEngine::load() {
         impl_->config.max_sessions;
 
     /*
+     * Use llama.cpp unified KV storage when requested.
+     * This allows each OpenMind session to address the
+     * full configured context instead of partitioning
+     * it across max_sessions.
+     */
+    ctx_params.kv_unified =
+        impl_->config.kv_unified;
+
+    /*
      * Keep the batch large enough for the configured context.
      * The actual prompt batch is still limited by the prompt size.
      */
     ctx_params.n_batch =
-        impl_->config.context_size;
+        std::max<uint32_t>(impl_->config.context_size, 32u);
 
     impl_->ctx =
         llama_init_from_model(
@@ -430,15 +439,40 @@ InferenceResult InferenceEngine::generate_session(
         ++next_pos;
     }
 
+    const uint32_t session_ctx =
+        session_context_size();
+
+    if (session_ctx == 0) {
+        throw std::runtime_error(
+            "OpenMind session context capacity is zero");
+    }
+
     const llama_pos prompt_end =
         next_pos +
         static_cast<llama_pos>(tokens.size());
 
     if (prompt_end >
-        static_cast<llama_pos>(impl_->config.context_size)) {
+        static_cast<llama_pos>(session_ctx)) {
         throw std::runtime_error(
             "OpenMind session context capacity exceeded; "
-            "reset the session or increase context_size");
+            "reset the session or increase context_size "
+            "or reduce max_sessions");
+    }
+
+    /*
+     * llama_decode() requires the complete submitted batch to fit
+     * within the context's logical n_batch capacity.  llama.cpp
+     * asserts this internally, so reject the request here instead
+     * of allowing an oversized prompt to abort the process.
+     */
+    const uint32_t batch_capacity =
+        llama_n_batch(impl_->ctx);
+
+    if (tokens.size() >
+        static_cast<size_t>(batch_capacity)) {
+        throw std::runtime_error(
+            "OpenMind session context capacity exceeded; "
+            "reduce the prompt size or increase context_size");
     }
 
     const auto prompt_start = Clock::now();
@@ -533,8 +567,7 @@ InferenceResult InferenceEngine::generate_session(
         ++generated;
 
         if (generation_pos >=
-            static_cast<llama_pos>(
-                impl_->config.context_size)) {
+            static_cast<llama_pos>(session_ctx)) {
             break;
         }
 
@@ -592,6 +625,14 @@ InferenceResult InferenceEngine::generate_session(
 
 bool InferenceEngine::loaded() const noexcept {
     return impl_ && impl_->loaded;
+}
+
+uint32_t InferenceEngine::session_context_size() const noexcept {
+    if (!impl_ || !impl_->ctx) {
+        return 0;
+    }
+
+    return llama_n_ctx_seq(impl_->ctx);
 }
 
 int32_t InferenceEngine::allocate_session_seq_id() {

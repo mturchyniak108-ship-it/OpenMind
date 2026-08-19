@@ -25,6 +25,27 @@ add_executable(openmind_inference_test
     src/inference_test.cpp
 )
 
+add_executable(openmind_inference_benchmark
+    src/inference_benchmark.cpp
+)
+
+target_link_libraries(openmind_inference_benchmark
+    PRIVATE
+        openmind_inference
+        "${LLAMA_LIB_DIR}/libllama.so"
+        "${LLAMA_LIB_DIR}/libggml.so"
+        "${LLAMA_LIB_DIR}/libggml-base.so"
+        "${LLAMA_LIB_DIR}/libggml-cpu.so"
+        "${LLAMA_LIB_DIR}/libggml-vulkan.so"
+        dl
+        m
+)
+
+set_target_properties(openmind_inference_benchmark PROPERTIES
+    BUILD_RPATH "${LLAMA_LIB_DIR}"
+    INSTALL_RPATH "${LLAMA_LIB_DIR}"
+)
+
 target_link_libraries(openmind_inference_test
     PRIVATE
         openmind_inference
