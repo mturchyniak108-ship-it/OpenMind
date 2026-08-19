@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
+#include <type_traits>
 
 namespace {
 
@@ -17,6 +18,22 @@ void check(bool condition, const char* message) {
         ++failures;
     }
 }
+
+static_assert(
+    !std::is_copy_constructible_v<openmind::Session>,
+    "Session must remain non-copyable");
+
+static_assert(
+    !std::is_copy_assignable_v<openmind::Session>,
+    "Session must remain non-copy-assignable");
+
+static_assert(
+    !std::is_move_constructible_v<openmind::Session>,
+    "Session must remain non-movable");
+
+static_assert(
+    !std::is_move_assignable_v<openmind::Session>,
+    "Session must remain non-move-assignable");
 
 } // namespace
 
