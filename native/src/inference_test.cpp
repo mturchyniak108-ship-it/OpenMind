@@ -273,6 +273,58 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * Session context capacity must reject oversized prompts cleanly.
+     * Reset must then make the same session reusable.
+     */
+    try {
+        openmind::InferenceConfig boundary_config = config;
+        boundary_config.context_size = 8;
+        boundary_config.max_tokens = 1;
+        boundary_config.max_sessions = 1;
+
+        openmind::InferenceEngine boundary_engine(boundary_config);
+
+        check(boundary_engine.load(),
+              "boundary engine loads for context test");
+
+        openmind::Session boundary_session(boundary_engine);
+
+        bool rejected = false;
+
+        try {
+            (void)boundary_session.request(
+                "This prompt is deliberately much longer than eight tokens.");
+        } catch (const std::runtime_error& e) {
+            rejected =
+                std::string(e.what()).find(
+                    "context capacity exceeded") != std::string::npos;
+        }
+
+        check(rejected,
+              "session rejects prompt beyond context capacity");
+
+        boundary_session.reset();
+
+        try {
+            const auto result =
+                boundary_session.request("Say hello.");
+
+            check(!result.text.empty(),
+                  "session remains reusable after context rejection");
+        } catch (const std::exception& e) {
+            std::cerr
+                << "[FAIL] context recovery: "
+                << e.what() << "\n";
+            ++failures;
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] context boundary lifecycle: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
      * Session capacity must be enforced and released IDs must be reusable.
      */
     try {
