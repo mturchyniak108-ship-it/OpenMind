@@ -86,7 +86,7 @@ public:
     void reset() noexcept;
 
 private:
-    InferenceEngine* engine_;
+    InferenceEngine* engine_ = nullptr;
     int32_t seq_id_ = -1;
 };
 
