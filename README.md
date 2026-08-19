@@ -61,6 +61,7 @@ The native inference layer currently provides:
 - Persistent `Session` handles for conversational KV-cache state
 - Independent llama sequence IDs for multiple concurrent sessions
 - Configurable maximum session capacity
+- Configuration validation for required runtime limits
 - Session reset and RAII sequence-slot release
 - Inference timing and token-throughput metrics
 - Vulkan-backed llama.cpp execution
