@@ -48,6 +48,29 @@ Current components:
 4. Native C++ inference
 5. Baseline performance measurement
 6. Reproducible project structure
+7. Native persistent session API
+8. Multi-session sequence isolation and RAII lifecycle
+9. CMake/CTest integration testing
+
+## Native Inference API
+
+The native inference layer currently provides:
+
+- `InferenceEngine` for model and runtime ownership
+- Stateless `InferenceEngine::generate()` requests
+- Persistent `Session` handles for conversational KV-cache state
+- Independent llama sequence IDs for multiple concurrent sessions
+- Configurable maximum session capacity
+- Session reset and RAII sequence-slot release
+- Inference timing and token-throughput metrics
+- Vulkan-backed llama.cpp execution
+
+The native integration test verifies model loading, stateless requests,
+session persistence, session isolation, reset behavior, session capacity,
+sequence-slot reuse, and destructor-based lifecycle cleanup.
+
+CTest is configured through `OPENMIND_TEST_MODEL` and has been verified
+against the Qwen 2.5 3B Q4_K_M GGUF model on the S26 Ultra Vulkan runtime.
 
 ## License
 
