@@ -1,6 +1,7 @@
 #include "openmind/inference.h"
 
 #include <cstdlib>
+#include <cstdint>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -109,6 +110,24 @@ int main(int argc, char** argv) {
 
         check(!engine.loaded(),
               "engine remains unloaded after zero token rejection");
+    }
+
+    /*
+     * GPU layer count is converted to int32_t before being passed
+     * to llama.cpp, so values outside that range must be rejected.
+     */
+    {
+        openmind::InferenceConfig invalid_gpu_layers = config;
+        invalid_gpu_layers.gpu_layers =
+            static_cast<uint32_t>(INT32_MAX) + 1u;
+
+        openmind::InferenceEngine engine(invalid_gpu_layers);
+
+        check(!engine.load(),
+              "GPU layer count above int32 range rejected");
+
+        check(!engine.loaded(),
+              "engine remains unloaded after GPU layer rejection");
     }
 
     /*

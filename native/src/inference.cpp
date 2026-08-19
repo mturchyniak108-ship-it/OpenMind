@@ -4,6 +4,7 @@
 #include "llama.h"
 
 #include <chrono>
+#include <cstdint>
 #include <cstring>
 #include <memory>
 #include <stdexcept>
@@ -67,7 +68,9 @@ bool InferenceEngine::load() {
         impl_->config.model_path.empty() ||
         impl_->config.context_size == 0 ||
         impl_->config.max_tokens == 0 ||
-        impl_->config.max_sessions == 0) {
+        impl_->config.max_sessions == 0 ||
+        impl_->config.gpu_layers >
+            static_cast<uint32_t>(INT32_MAX)) {
         return false;
     }
 
