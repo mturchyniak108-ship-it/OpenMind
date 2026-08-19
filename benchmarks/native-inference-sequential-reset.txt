@@ -1,0 +1,62 @@
+OpenMind Native Inference — Sequential Request / Memory Reset
+===============================================================
+
+Date: 2026-08-19
+Platform: Android ARM64 / Termux
+Backend: Vulkan
+Model: Qwen 2.5 3B Q4_K_M
+Executable: native/build/openmind_inference_test
+
+Configuration
+-------------
+Context: 512
+GPU layers: 99
+Effective GPU layers: 37/37
+Max tokens: 128
+
+Test
+----
+Two sequential generate() calls were executed through the
+same InferenceEngine instance.
+
+Before every generate() call:
+
+    llama_memory_clear(
+        llama_get_memory(impl_->ctx),
+        true);
+
+Purpose
+-------
+Verify that independent inference requests do not inherit
+previous KV-cache/context state.
+
+Results
+-------
+Request 1
+Prompt tokens: 10
+Generated tokens: 128
+Total: 6890.55 ms
+Generation speed: 20.2513 tok/s
+
+Request 2
+Prompt tokens: 11
+Generated tokens: 128
+Total: 7836.21 ms
+Generation speed: 17.3276 tok/s
+
+Result
+------
+PASS
+
+Both sequential requests completed successfully through the
+same engine instance with explicit llama memory reset before
+each request.
+
+Architecture conclusion
+-----------------------
+InferenceEngine.generate() currently represents an independent,
+stateless inference request.
+
+Conversational/persistent state should be introduced later
+through a separate Session abstraction rather than making
+InferenceEngine implicitly retain conversation state.

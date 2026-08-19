@@ -18,16 +18,6 @@ int main(int argc, char ** argv) {
     config.gpu_layers = 99;
     config.max_tokens = 128;
 
-    if (argc >= 3) {
-        // Prompt supplied as one argument.
-        // Shell quoting can be used for spaces.
-    }
-
-    const std::string prompt =
-        argc >= 3
-            ? argv[2]
-            : "Explain in one short sentence what OpenMind is.";
-
     std::cout << "=== OPENMIND NATIVE INFERENCE TEST ===\n";
     std::cout << "Model: " << config.model_path << "\n";
     std::cout << "Context: " << config.context_size << "\n";
@@ -43,55 +33,61 @@ int main(int argc, char ** argv) {
     }
 
     std::cout << "Model loaded successfully.\n";
-    std::cout << "\nPrompt: " << prompt << "\n";
-    std::cout << "\nGenerating...\n\n";
+
+    const std::string prompt_a =
+        argc >= 3
+            ? argv[2]
+            : "In one short sentence, what is OpenMind?";
+
+    const std::string prompt_b =
+        "In one short sentence, why is local inference useful?";
 
     try {
-        const auto result = engine.generate(prompt);
+        std::cout << "\n=== REQUEST 1 ===\n";
+        std::cout << "Prompt: " << prompt_a << "\n";
+        std::cout << "\nGenerating...\n\n";
 
-        std::cout << "=== RESPONSE ===\n";
-        std::cout << result.text << "\n";
+        const auto result_a = engine.generate(prompt_a);
 
-        std::cout << "\n=== METRICS ===\n";
-        std::cout
-            << "Prompt tokens: "
-            << result.metrics.prompt_tokens
-            << "\n";
+        std::cout << "Response 1:\n"
+                  << result_a.text << "\n";
 
-        std::cout
-            << "Generated tokens: "
-            << result.metrics.generated_tokens
-            << "\n";
+        std::cout << "\nMetrics 1:\n"
+                  << "Prompt tokens: "
+                  << result_a.metrics.prompt_tokens << "\n"
+                  << "Generated tokens: "
+                  << result_a.metrics.generated_tokens << "\n"
+                  << "Total: "
+                  << result_a.metrics.total_ms << " ms\n"
+                  << "Generation speed: "
+                  << result_a.metrics.generation_tokens_per_second
+                  << " tok/s\n";
 
-        std::cout
-            << "Model load: "
-            << result.metrics.model_load_ms
-            << " ms\n";
+        std::cout << "\n=== REQUEST 2 ===\n";
+        std::cout << "Prompt: " << prompt_b << "\n";
+        std::cout << "\nGenerating...\n\n";
 
-        std::cout
-            << "Prompt eval: "
-            << result.metrics.prompt_eval_ms
-            << " ms\n";
+        const auto result_b = engine.generate(prompt_b);
 
-        std::cout
-            << "Prompt speed: "
-            << result.metrics.prompt_tokens_per_second
-            << " tok/s\n";
+        std::cout << "Response 2:\n"
+                  << result_b.text << "\n";
 
-        std::cout
-            << "Generation: "
-            << result.metrics.generation_ms
-            << " ms\n";
+        std::cout << "\nMetrics 2:\n"
+                  << "Prompt tokens: "
+                  << result_b.metrics.prompt_tokens << "\n"
+                  << "Generated tokens: "
+                  << result_b.metrics.generated_tokens << "\n"
+                  << "Total: "
+                  << result_b.metrics.total_ms << " ms\n"
+                  << "Generation speed: "
+                  << result_b.metrics.generation_tokens_per_second
+                  << " tok/s\n";
 
-        std::cout
-            << "Total: "
-            << result.metrics.total_ms
-            << " ms\n";
-
-        std::cout
-            << "Generation speed: "
-            << result.metrics.generation_tokens_per_second
-            << " tok/s\n";
+        std::cout << "\n=== RESET TEST ===\n";
+        std::cout << "Two sequential generate() calls completed "
+                     "through the same engine instance.\n";
+        std::cout << "Each request clears llama memory before "
+                     "prompt evaluation.\n";
 
     } catch (const std::exception & e) {
         std::cerr

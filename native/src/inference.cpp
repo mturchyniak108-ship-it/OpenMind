@@ -154,6 +154,16 @@ InferenceResult InferenceEngine::generate(
             "OpenMind inference prompt is empty");
     }
 
+    /*
+     * Each generate() call is an independent inference request.
+     * Clear the previous KV-cache/memory state before evaluating
+     * the new prompt. Explicit conversational state can be added
+     * later as a separate session API.
+     */
+    llama_memory_clear(
+        llama_get_memory(impl_->ctx),
+        true);
+
     InferenceResult result;
 
     const auto total_start = Clock::now();
