@@ -69,6 +69,49 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * Invalid numeric configuration must be rejected cleanly
+     * before attempting a real model load.
+     */
+    {
+        openmind::InferenceConfig invalid_context = config;
+        invalid_context.context_size = 0;
+
+        openmind::InferenceEngine engine(invalid_context);
+
+        check(!engine.load(),
+              "zero context size rejected");
+
+        check(!engine.loaded(),
+              "engine remains unloaded after zero context rejection");
+    }
+
+    {
+        openmind::InferenceConfig invalid_sessions = config;
+        invalid_sessions.max_sessions = 0;
+
+        openmind::InferenceEngine engine(invalid_sessions);
+
+        check(!engine.load(),
+              "zero maximum sessions rejected");
+
+        check(!engine.loaded(),
+              "engine remains unloaded after zero session rejection");
+    }
+
+    {
+        openmind::InferenceConfig invalid_tokens = config;
+        invalid_tokens.max_tokens = 0;
+
+        openmind::InferenceEngine engine(invalid_tokens);
+
+        check(!engine.load(),
+              "zero maximum tokens rejected");
+
+        check(!engine.loaded(),
+              "engine remains unloaded after zero token rejection");
+    }
+
+    /*
      * A failed real model load must leave the engine recoverable.
      * This exercises cleanup after llama_model_load_from_file().
      */

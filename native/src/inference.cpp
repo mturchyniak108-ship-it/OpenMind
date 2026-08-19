@@ -63,7 +63,11 @@ InferenceEngine::InferenceEngine(const InferenceConfig& config)
 InferenceEngine::~InferenceEngine() = default;
 
 bool InferenceEngine::load() {
-    if (!impl_ || impl_->config.model_path.empty()) {
+    if (!impl_ ||
+        impl_->config.model_path.empty() ||
+        impl_->config.context_size == 0 ||
+        impl_->config.max_tokens == 0 ||
+        impl_->config.max_sessions == 0) {
         return false;
     }
 
