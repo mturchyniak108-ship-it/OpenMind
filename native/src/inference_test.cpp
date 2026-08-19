@@ -260,6 +260,34 @@ int main(int argc, char** argv) {
         check(!a3.text.empty(),
               "session A remains usable after its own reset");
 
+        /*
+         * Repeated A/B interleaving must preserve independent
+         * sequence state across alternating requests.
+         */
+        const auto a4 =
+            session_a.request("Alice says hello again.");
+
+        const auto b4 =
+            session_b.request("Bob says hello again.");
+
+        const auto a5 =
+            session_a.request("Alice continues.");
+
+        const auto b5 =
+            session_b.request("Bob continues.");
+
+        check(!a4.text.empty(),
+              "interleaved session A request remains usable");
+
+        check(!b4.text.empty(),
+              "interleaved session B request remains usable");
+
+        check(!a5.text.empty(),
+              "second interleaved session A request remains usable");
+
+        check(!b5.text.empty(),
+              "second interleaved session B request remains usable");
+
         session_a.reset();
         session_b.reset();
 
