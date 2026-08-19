@@ -358,7 +358,8 @@ InferenceResult InferenceEngine::generate(
 
 InferenceResult InferenceEngine::generate_session(
     const std::string& prompt,
-    int32_t seq_id) {
+    int32_t seq_id,
+    llama_sampler* sampler) {
 
     if (!loaded()) {
         throw std::runtime_error(
@@ -499,7 +500,7 @@ InferenceResult InferenceEngine::generate_session(
 
         const llama_token token =
             llama_sampler_sample(
-                impl_->sampler,
+                sampler,
                 impl_->ctx,
                 -1);
 
@@ -646,16 +647,41 @@ void InferenceEngine::release_session_seq_id(
 
 namespace openmind {
 
+struct Session::Impl {
+    llama_sampler* sampler = nullptr;
+
+    ~Impl() {
+        if (sampler) {
+            llama_sampler_free(sampler);
+        }
+    }
+};
+
 Session::Session(InferenceEngine& engine)
-    : engine_(&engine) {
+    : engine_(&engine),
+      impl_(std::make_unique<Impl>()) {
 
     if (!engine.loaded()) {
         engine_ = nullptr;
+        impl_.reset();
         throw std::runtime_error(
             "OpenMind session requires a loaded inference engine");
     }
 
     seq_id_ = engine.allocate_session_seq_id();
+
+    impl_->sampler =
+        llama_sampler_clone(engine.impl_->sampler);
+
+    if (!impl_->sampler) {
+        engine.release_session_seq_id(seq_id_);
+        seq_id_ = -1;
+        engine_ = nullptr;
+        impl_.reset();
+
+        throw std::runtime_error(
+            "OpenMind session sampler clone failed");
+    }
 }
 
 Session::~Session() {
@@ -663,6 +689,7 @@ Session::~Session() {
         engine_->release_session_seq_id(seq_id_);
     }
 
+    impl_.reset();
     engine_ = nullptr;
     seq_id_ = -1;
 }
@@ -673,9 +700,15 @@ InferenceResult Session::request(const std::string& prompt) {
             "OpenMind session has no inference engine");
     }
 
+    if (!impl_ || !impl_->sampler) {
+        throw std::runtime_error(
+            "OpenMind session has no sampler");
+    }
+
     return engine_->generate_session(
         prompt,
-        seq_id_);
+        seq_id_,
+        impl_->sampler);
 }
 
 void Session::reset() noexcept {
@@ -688,6 +721,10 @@ void Session::reset() noexcept {
         seq_id_,
         0,
         -1);
+
+    if (impl_ && impl_->sampler) {
+        llama_sampler_reset(impl_->sampler);
+    }
 }
 
 } // namespace openmind

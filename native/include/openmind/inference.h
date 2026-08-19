@@ -1,5 +1,7 @@
 #pragma once
 
+struct llama_sampler;
+
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -51,7 +53,8 @@ private:
 
     InferenceResult generate_session(
         const std::string& prompt,
-        int32_t seq_id);
+        int32_t seq_id,
+        llama_sampler* sampler);
 
     int32_t allocate_session_seq_id();
     void release_session_seq_id(int32_t seq_id) noexcept;
@@ -86,8 +89,11 @@ public:
     void reset() noexcept;
 
 private:
+    struct Impl;
+
     InferenceEngine* engine_ = nullptr;
     int32_t seq_id_ = -1;
+    std::unique_ptr<Impl> impl_;
 };
 
 } // namespace openmind
