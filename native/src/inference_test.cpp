@@ -318,6 +318,76 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * Unified KV mode must preserve independent session state.
+     * This specifically exercises llama.cpp unified KV storage
+     * with multiple OpenMind sequence identities.
+     */
+    try {
+        openmind::InferenceConfig unified_config = config;
+        unified_config.kv_unified = true;
+        unified_config.max_sessions = 2;
+        unified_config.context_size = 512;
+        unified_config.max_tokens = 8;
+
+        openmind::InferenceEngine unified_engine(unified_config);
+
+        check(unified_engine.load(),
+              "unified KV engine loads");
+
+        openmind::Session unified_a(unified_engine);
+        openmind::Session unified_b(unified_engine);
+
+        const auto a1 =
+            unified_a.request("My name is Alice.");
+
+        const auto b1 =
+            unified_b.request("My name is Bob.");
+
+        check(!a1.text.empty(),
+              "unified KV session A generates");
+
+        check(!b1.text.empty(),
+              "unified KV session B generates");
+
+        const auto a2 =
+            unified_a.request("What is my name?");
+
+        const auto b2 =
+            unified_b.request("What is my name?");
+
+        check(!a2.text.empty(),
+              "unified KV session A retains state");
+
+        check(!b2.text.empty(),
+              "unified KV session B retains state");
+
+        unified_a.reset();
+
+        const auto b3 =
+            unified_b.request("Continue my conversation.");
+
+        check(!b3.text.empty(),
+              "unified KV reset A preserves B");
+
+        const auto a3 =
+            unified_a.request("Start a new conversation.");
+
+        check(!a3.text.empty(),
+              "unified KV session A reusable after reset");
+
+        unified_a.reset();
+        unified_b.reset();
+
+        check(true,
+              "unified KV sessions reset independently");
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] unified KV session isolation: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
      * Session context capacity must reject oversized prompts cleanly.
      * Reset must then make the same session reusable.
      */
