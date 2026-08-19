@@ -89,6 +89,10 @@ bool InferenceEngine::load() {
             model_params);
 
     if (!impl_->model) {
+        if (impl_->backend_initialized) {
+            llama_backend_free();
+            impl_->backend_initialized = false;
+        }
         return false;
     }
 
@@ -121,6 +125,15 @@ bool InferenceEngine::load() {
             ctx_params);
 
     if (!impl_->ctx) {
+        llama_model_free(impl_->model);
+        impl_->model = nullptr;
+        impl_->vocab = nullptr;
+
+        if (impl_->backend_initialized) {
+            llama_backend_free();
+            impl_->backend_initialized = false;
+        }
+
         return false;
     }
 
@@ -131,6 +144,18 @@ bool InferenceEngine::load() {
         llama_sampler_chain_init(sampler_params);
 
     if (!impl_->sampler) {
+        llama_free(impl_->ctx);
+        impl_->ctx = nullptr;
+
+        llama_model_free(impl_->model);
+        impl_->model = nullptr;
+        impl_->vocab = nullptr;
+
+        if (impl_->backend_initialized) {
+            llama_backend_free();
+            impl_->backend_initialized = false;
+        }
+
         return false;
     }
 
