@@ -52,6 +52,34 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * A failed real model load must leave the engine recoverable.
+     * This exercises cleanup after llama_model_load_from_file().
+     */
+    {
+        openmind::InferenceConfig recovery = config;
+        recovery.model_path =
+            "/definitely/nonexistent/openmind-test-model.gguf";
+
+        openmind::InferenceEngine engine(recovery);
+
+        check(!engine.load(),
+              "invalid GGUF path rejected");
+
+        check(!engine.loaded(),
+              "engine remains unloaded after invalid GGUF");
+
+        recovery.model_path = config.model_path;
+
+        openmind::InferenceEngine recovered(recovery);
+
+        check(recovered.load(),
+              "valid GGUF loads after invalid path scenario");
+
+        check(recovered.loaded(),
+              "recovered engine reports loaded");
+    }
+
+    /*
      * A Session requires a loaded engine because sequence state
      * belongs to the llama context created during load().
      */
