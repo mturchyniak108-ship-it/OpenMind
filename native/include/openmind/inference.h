@@ -49,4 +49,16 @@ private:
     std::unique_ptr<Impl> impl_;
 };
 
+class Session {
+public:
+    explicit Session(InferenceEngine& engine);
+
+    InferenceResult request(const std::string& prompt);
+
+    void reset() noexcept;
+
+private:
+    InferenceEngine* engine_;
+};
+
 } // namespace openmind

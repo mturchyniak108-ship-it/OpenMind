@@ -34,6 +34,8 @@ int main(int argc, char ** argv) {
 
     std::cout << "Model loaded successfully.\n";
 
+    openmind::Session session(engine);
+
     const std::string prompt_a =
         argc >= 3
             ? argv[2]
@@ -47,7 +49,7 @@ int main(int argc, char ** argv) {
         std::cout << "Prompt: " << prompt_a << "\n";
         std::cout << "\nGenerating...\n\n";
 
-        const auto result_a = engine.generate(prompt_a);
+        const auto result_a = session.request(prompt_a);
 
         std::cout << "Response 1:\n"
                   << result_a.text << "\n";
@@ -67,7 +69,7 @@ int main(int argc, char ** argv) {
         std::cout << "Prompt: " << prompt_b << "\n";
         std::cout << "\nGenerating...\n\n";
 
-        const auto result_b = engine.generate(prompt_b);
+        const auto result_b = session.request(prompt_b);
 
         std::cout << "Response 2:\n"
                   << result_b.text << "\n";

@@ -329,3 +329,29 @@ bool InferenceEngine::loaded() const noexcept {
 }
 
 } // namespace openmind
+
+namespace openmind {
+
+Session::Session(InferenceEngine& engine)
+    : engine_(&engine) {
+}
+
+InferenceResult Session::request(const std::string& prompt) {
+    if (!engine_) {
+        throw std::runtime_error(
+            "OpenMind session has no inference engine");
+    }
+
+    return engine_->generate(prompt);
+}
+
+void Session::reset() noexcept {
+    /*
+     * InferenceEngine::generate() is currently stateless and
+     * clears llama memory before every request. Therefore reset()
+     * is intentionally a no-op until persistent conversational
+     * state is introduced into Session.
+     */
+}
+
+} // namespace openmind
