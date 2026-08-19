@@ -52,6 +52,25 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * A Session requires a loaded engine because sequence state
+     * belongs to the llama context created during load().
+     */
+    {
+        openmind::InferenceEngine unloaded_engine(config);
+
+        bool rejected = false;
+
+        try {
+            openmind::Session session(unloaded_engine);
+        } catch (const std::runtime_error&) {
+            rejected = true;
+        }
+
+        check(rejected,
+              "session creation rejects unloaded engine");
+    }
+
+    /*
      * Real model load.
      */
     openmind::InferenceEngine engine(config);

@@ -622,8 +622,15 @@ void InferenceEngine::release_session_seq_id(
 namespace openmind {
 
 Session::Session(InferenceEngine& engine)
-    : engine_(&engine),
-      seq_id_(engine.allocate_session_seq_id()) {
+    : engine_(&engine) {
+
+    if (!engine.loaded()) {
+        engine_ = nullptr;
+        throw std::runtime_error(
+            "OpenMind session requires a loaded inference engine");
+    }
+
+    seq_id_ = engine.allocate_session_seq_id();
 }
 
 Session::~Session() {
