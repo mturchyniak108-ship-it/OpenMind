@@ -443,3 +443,77 @@ vs
 OpenMind Truth Graph + Knowledge Waveform
 
 Success requires measurable improvement in retrieval, path selection, latency, memory efficiency, or answer accuracy.
+
+## Milestone 11 — Experimental Fractal Memory
+
+Investigate whether a deterministic multimodal fractal representation of the Truth Graph can function as associative/predictive memory.
+
+The fractal may use double-helix paths from `start_node` to `end_node`, with candidate answers represented by points of greatest validated relational convergence.
+
+### Experimental Status
+
+This milestone is EXPERIMENTAL and NON-CANONICAL.
+
+Truth Graph remains the canonical knowledge representation.
+
+Fractal geometry, color, sound, video, predictive weighting, and RUNE2 are derived experimental mechanisms.
+
+No experimental representation may become authoritative unless a reproducible scientific hypothesis demonstrates measurable benefit.
+
+### Scientific Method
+
+- [ ] Define hypothesis
+- [ ] Define prediction
+- [ ] Define controlled experiment
+- [ ] Define measurements
+- [ ] Define statistical evaluation
+- [ ] Define replication protocol
+- [ ] Define acceptance/rejection criteria
+
+### Fractal Memory
+
+- [ ] Define deterministic fractal representation
+- [ ] Encode complete Truth Graph state
+- [ ] Encode start_node/end_node paths
+- [ ] Implement double-helix relationship representation
+- [ ] Define candidate answer convergence
+- [ ] Define predictive weighting
+- [ ] Implement fractal memory probe
+- [ ] Validate every candidate against Truth Graph
+
+### Multimodal Representation
+
+- [ ] Define geometry encoding
+- [ ] Define color encoding
+- [ ] Define sound encoding
+- [ ] Synchronize geometry/color/sound
+- [ ] Generate deterministic fractal video
+- [ ] Test real-time updates
+
+### Scientific Benchmark
+
+Compare increasing sensory representations:
+
+Traditional retrieval
+vs
+Truth Graph
+vs
+Truth Graph + fractal geometry
+vs
+Truth Graph + fractal + color
+vs
+Truth Graph + fractal + sound
+vs
+Truth Graph + fractal + color + sound
+
+Measure answer accuracy, retrieval recall, path selection, convergence accuracy, contradiction detection, provenance preservation, latency, memory, storage, prediction calibration, and replication stability.
+
+### Experimental Gate
+
+A visually compelling or complex fractal does not constitute evidence.
+
+The center is a candidate hypothesis, not truth.
+
+Predictive weight measures historical prediction performance, not truth confidence.
+
+The feature remains experimental until controlled, reproducible, statistically meaningful results demonstrate a benefit.
