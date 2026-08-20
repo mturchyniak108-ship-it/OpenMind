@@ -1,0 +1,22 @@
+[
+  {"id":"PROJECT","tag":"PROJECT","type":"concept","truth_confidence":1.0},
+  {"id":"ROADMAP","tag":"FUTURE","type":"concept","truth_confidence":1.0},
+  {"id":"AGENT","tag":"AGENT","type":"concept","truth_confidence":1.0},
+  {"id":"DOCS","tag":"MAP","type":"concept","truth_confidence":1.0},
+  {"id":"BUILD","tag":"BUILD","type":"concept","truth_confidence":1.0},
+  {"id":"ENGINE","tag":"ENGINE","type":"concept","truth_confidence":1.0},
+  {"id":"API","tag":"API","type":"concept","truth_confidence":1.0},
+  {"id":"TEST","tag":"TEST","type":"concept","truth_confidence":1.0},
+  {"id":"GPU","tag":"GPU","type":"concept","truth_confidence":1.0},
+  {"id":"PERFORMANCE","tag":"PERFORMANCE","type":"concept","truth_confidence":1.0},
+  {"id":"MEMORY","tag":"MEMORY","type":"concept","truth_confidence":1.0},
+  {"id":"SESSION","tag":"SESSION","type":"concept","truth_confidence":1.0},
+  {"id":"TRUTH","tag":"TRUTH","type":"knowledge","truth_confidence":1.0},
+  {"id":"RELATION","tag":"RELATION","type":"knowledge","truth_confidence":1.0},
+  {"id":"PATH","tag":"PATH","type":"knowledge","truth_confidence":1.0},
+  {"id":"WEIGHT","tag":"WEIGHT","type":"knowledge","truth_confidence":1.0},
+  {"id":"VECTOR","tag":"VECTOR","type":"knowledge","truth_confidence":1.0},
+  {"id":"COMPILED","tag":"COMPILED","type":"knowledge","truth_confidence":1.0},
+  {"id":"LANGUAGE","tag":"LANGUAGE","type":"knowledge","truth_confidence":1.0},
+  {"id":"EVIDENCE","tag":"EVIDENCE","type":"knowledge","truth_confidence":1.0}
+]
