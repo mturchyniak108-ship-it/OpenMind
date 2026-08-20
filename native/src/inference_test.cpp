@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <iostream>
 #include <stdexcept>
+#include <functional>
+#include <thread>
 #include <string>
 #include <type_traits>
 
@@ -375,6 +377,130 @@ int main(int argc, char** argv) {
     } catch (const std::exception& e) {
         std::cerr
             << "[FAIL] multiple session isolation: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
+     * Concurrent session requests must be safe.
+     *
+     * Each Session owns an independent llama sequence ID, while the
+     * underlying llama context is shared. The native inference mutex
+     * must therefore prevent concurrent requests from corrupting
+     * shared context/sampler state.
+     */
+    try {
+        openmind::InferenceConfig concurrent_config = config;
+        concurrent_config.max_sessions = 4;
+        concurrent_config.max_tokens = 8;
+
+        openmind::InferenceEngine concurrent_engine(
+            concurrent_config);
+
+        check(concurrent_engine.load(),
+              "concurrent engine loads");
+
+        openmind::Session session_a(concurrent_engine);
+        openmind::Session session_b(concurrent_engine);
+        openmind::Session session_c(concurrent_engine);
+        openmind::Session session_d(concurrent_engine);
+
+        struct ConcurrentResult {
+            bool success = false;
+            std::string text;
+            std::string error;
+        };
+
+        ConcurrentResult results[4];
+
+        auto run_session =
+            [](openmind::Session& session,
+               const char* prompt,
+               ConcurrentResult& result) {
+                try {
+                    const auto response =
+                        session.request(prompt);
+
+                    result.text = response.text;
+                    result.success = !response.text.empty();
+                } catch (const std::exception& e) {
+                    result.error = e.what();
+                } catch (...) {
+                    result.error = "unknown exception";
+                }
+            };
+
+        std::thread thread_a(
+            run_session,
+            std::ref(session_a),
+            "My name is Alice. Respond briefly.",
+            std::ref(results[0]));
+
+        std::thread thread_b(
+            run_session,
+            std::ref(session_b),
+            "My name is Bob. Respond briefly.",
+            std::ref(results[1]));
+
+        std::thread thread_c(
+            run_session,
+            std::ref(session_c),
+            "My name is Carol. Respond briefly.",
+            std::ref(results[2]));
+
+        std::thread thread_d(
+            run_session,
+            std::ref(session_d),
+            "My name is Dave. Respond briefly.",
+            std::ref(results[3]));
+
+        thread_a.join();
+        thread_b.join();
+        thread_c.join();
+        thread_d.join();
+
+        bool all_successful = true;
+
+        for (const auto& result : results) {
+            if (!result.success) {
+                all_successful = false;
+
+                if (!result.error.empty()) {
+                    std::cerr
+                        << "[FAIL] concurrent session error: "
+                        << result.error << "\n";
+                }
+            }
+        }
+
+        check(all_successful,
+              "concurrent session requests complete safely");
+
+        check(
+            results[0].success &&
+            results[1].success &&
+            results[2].success &&
+            results[3].success,
+            "all concurrent sessions return generated text");
+
+        /*
+         * The sessions must remain usable after concurrent access.
+         */
+        try {
+            const auto follow_up =
+                session_a.request("Continue briefly.");
+
+            check(!follow_up.text.empty(),
+                  "session remains usable after concurrent access");
+        } catch (const std::exception& e) {
+            std::cerr
+                << "[FAIL] post-concurrency session reuse: "
+                << e.what() << "\n";
+            ++failures;
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] concurrent session safety: "
             << e.what() << "\n";
         ++failures;
     }

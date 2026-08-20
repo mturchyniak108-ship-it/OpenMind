@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <cstring>
 #include <memory>
+#include <mutex>
 #include <stdexcept>
 #include <utility>
 #include <vector>
@@ -56,6 +57,14 @@ struct InferenceEngine::Impl {
     bool backend_initialized = false;
     bool loaded = false;
     double model_load_ms = 0.0;
+
+    /*
+     * The llama context, model, and engine sampler are shared
+     * across OpenMind sessions. Serialize access to the native
+     * inference runtime until explicit concurrent execution
+     * semantics are established.
+     */
+    mutable std::mutex inference_mutex;
 };
 
 InferenceEngine::InferenceEngine(const InferenceConfig& config)
@@ -73,6 +82,14 @@ bool InferenceEngine::load() {
             static_cast<uint32_t>(INT32_MAX)) {
         return false;
     }
+
+    /*
+     * Model/context initialization mutates the same native runtime
+     * state used by inference and session lifecycle operations.
+     * Serialize initialization with those operations.
+     */
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
 
     if (impl_->loaded) {
         return true;
@@ -201,6 +218,15 @@ InferenceResult InferenceEngine::generate(
         throw std::invalid_argument(
             "OpenMind inference prompt is empty");
     }
+
+    /*
+     * The llama context and engine sampler are shared runtime
+     * state. Serialize the complete inference transaction so
+     * another request cannot interleave token sampling,
+     * decoding, or KV-cache mutation.
+     */
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
 
     /*
      * Each generate() call is an independent inference request.
@@ -391,6 +417,14 @@ InferenceResult InferenceEngine::generate_session(
         throw std::invalid_argument(
             "OpenMind session sequence ID is invalid");
     }
+
+    /*
+     * Sessions have independent sequence IDs, but they still
+     * share the underlying llama context and native runtime.
+     * Serialize the complete session transaction.
+     */
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
 
     InferenceResult result;
 
@@ -631,7 +665,14 @@ InferenceResult InferenceEngine::generate_session(
 }
 
 bool InferenceEngine::loaded() const noexcept {
-    return impl_ && impl_->loaded;
+    if (!impl_) {
+        return false;
+    }
+
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
+
+    return impl_->loaded;
 }
 
 uint32_t InferenceEngine::session_context_size() const noexcept {
@@ -652,6 +693,9 @@ int32_t InferenceEngine::allocate_session_seq_id() {
         throw std::runtime_error(
             "OpenMind maximum session count is zero");
     }
+
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
 
     if (!free_session_seq_ids_.empty()) {
         const int32_t seq_id = free_session_seq_ids_.back();
@@ -681,6 +725,9 @@ void InferenceEngine::release_session_seq_id(
             impl_->config.max_sessions) {
         return;
     }
+
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
 
     llama_memory_seq_rm(
         llama_get_memory(impl_->ctx),
@@ -718,8 +765,13 @@ Session::Session(InferenceEngine& engine)
 
     seq_id_ = engine.allocate_session_seq_id();
 
-    impl_->sampler =
-        llama_sampler_clone(engine.impl_->sampler);
+    {
+        std::lock_guard<std::mutex> lock(
+            engine.impl_->inference_mutex);
+
+        impl_->sampler =
+            llama_sampler_clone(engine.impl_->sampler);
+    }
 
     if (!impl_->sampler) {
         engine.release_session_seq_id(seq_id_);
@@ -733,11 +785,31 @@ Session::Session(InferenceEngine& engine)
 }
 
 Session::~Session() {
-    if (engine_) {
-        engine_->release_session_seq_id(seq_id_);
+    if (engine_ && engine_->impl_) {
+        std::lock_guard<std::mutex> lock(
+            engine_->impl_->inference_mutex);
+
+        if (seq_id_ >= 0 &&
+            static_cast<uint32_t>(seq_id_) <
+                engine_->impl_->config.max_sessions) {
+            llama_memory_seq_rm(
+                llama_get_memory(engine_->impl_->ctx),
+                seq_id_,
+                0,
+                -1);
+
+            engine_->free_session_seq_ids_.push_back(seq_id_);
+        }
+
+        /*
+         * The session sampler may be in use by request().
+         * Keep the engine mutex held until it has been freed.
+         */
+        impl_.reset();
+    } else {
+        impl_.reset();
     }
 
-    impl_.reset();
     engine_ = nullptr;
     seq_id_ = -1;
 }
@@ -763,6 +835,9 @@ void Session::reset() noexcept {
     if (!engine_ || !engine_->impl_) {
         return;
     }
+
+    std::lock_guard<std::mutex> lock(
+        engine_->impl_->inference_mutex);
 
     llama_memory_seq_rm(
         llama_get_memory(engine_->impl_->ctx),

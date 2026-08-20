@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 
 project(OpenMindNative LANGUAGES CXX)
 
+find_package(Threads REQUIRED)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -19,6 +21,11 @@ target_include_directories(openmind_inference
         "${CMAKE_CURRENT_LIST_DIR}/include"
         "${LLAMA_ROOT}/include"
         "${LLAMA_ROOT}/ggml/include"
+)
+
+target_link_libraries(openmind_inference
+    PUBLIC
+        Threads::Threads
 )
 
 add_executable(openmind_inference_test
