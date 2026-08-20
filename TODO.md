@@ -67,3 +67,38 @@ Fractal memory = derived experimental representation.
 Color/sound/video = derived experimental representations.
 Predictive weight = measured retrieval behavior, not truth.
 No fractal representation may silently replace canonical structured truth.
+
+## ML Fuzzy Logic Weighted Graph
+
+- [ ] Define weighted vector schema
+- [ ] Define vector-to-TruthNode mapping
+- [ ] Define vector-to-TruthEdge mapping
+- [ ] Define fuzzy membership model
+- [ ] Define fuzzy relationship scoring
+- [ ] Define contradiction penalties
+- [ ] Define provenance weighting
+- [ ] Define path-cost weighting
+- [ ] Build fuzzy graph prototype
+- [ ] Build ML weighting prototype
+- [ ] Version learned models
+- [ ] Calibrate predictions
+- [ ] Test overfitting
+- [ ] Test multilingual consistency
+- [ ] Implement deterministic fallback
+- [ ] Build candidate-path ranking
+- [ ] Validate candidates against Truth Graph
+- [ ] Benchmark vector vs fuzzy vs ML-weighted retrieval
+- [ ] Benchmark path accuracy
+- [ ] Benchmark path efficiency
+- [ ] Benchmark contradiction handling
+- [ ] Benchmark latency
+- [ ] Benchmark RAM usage
+- [ ] Replicate experiments
+- [ ] Document falsification criteria
+- [ ] Determine whether measurable benefit exists
+
+## Experimental Architecture Rule
+
+ML/fuzzy/vector/fractal/waveform representations are derived signals.
+
+Truth Graph + Provenance + Validation remain canonical.

@@ -517,3 +517,121 @@ The center is a candidate hypothesis, not truth.
 Predictive weight measures historical prediction performance, not truth confidence.
 
 The feature remains experimental until controlled, reproducible, statistically meaningful results demonstrate a benefit.
+
+## Milestone 12 — Experimental ML Fuzzy Logic Weighted Graph
+
+Investigate whether fuzzy logic and machine-learned weighted vectors can improve Truth Graph retrieval and path selection.
+
+The Truth Graph remains canonical. This subsystem produces candidate hypotheses and rankings only.
+
+### Core Model
+
+- TruthNode
+- TruthEdge
+- relationship tags
+- relationship direction
+- relationship weight
+- truth confidence
+- evidence strength
+- provenance strength
+- semantic relevance
+- contradiction state
+- path cost
+- vector representation
+- fuzzy membership
+- learned weighting
+- predictive performance
+
+### Weighted Vector Layer
+
+- [ ] Define vector-to-TruthNode mapping
+- [ ] Define vector-to-TruthEdge mapping
+- [ ] Define vector metadata
+- [ ] Define embedding model/version
+- [ ] Define graph-version binding
+- [ ] Define deterministic vector generation
+- [ ] Preserve provenance
+- [ ] Preserve contradiction state
+
+### Fuzzy Graph
+
+- [ ] Define fuzzy node membership
+- [ ] Define fuzzy relationship membership
+- [ ] Define semantic similarity membership
+- [ ] Define evidence membership
+- [ ] Define provenance membership
+- [ ] Define contradiction penalty
+- [ ] Define path-cost penalty
+- [ ] Define fuzzy path score
+- [ ] Define explainable score components
+
+### ML Weighting
+
+- [ ] Define training data
+- [ ] Define target outcomes
+- [ ] Define baseline weights
+- [ ] Train experimental weighting model
+- [ ] Version learned weights
+- [ ] Record model provenance
+- [ ] Calibrate predictions
+- [ ] Test overfitting
+- [ ] Test cross-language consistency
+- [ ] Test model drift
+- [ ] Define deterministic fallback
+
+### Candidate Path Ranking
+
+- [ ] Retrieve candidate TruthNodes
+- [ ] Construct candidate paths
+- [ ] Apply fuzzy relationship scoring
+- [ ] Apply learned weighting
+- [ ] Penalize contradictions
+- [ ] Penalize weak provenance
+- [ ] Penalize unnecessary cycles
+- [ ] Penalize excessive path cost
+- [ ] Rank candidate paths
+- [ ] Validate winning candidates against canonical Truth Graph
+
+### Scientific Validation
+
+- [ ] Define explicit hypothesis
+- [ ] Define baseline
+- [ ] Define independent variables
+- [ ] Define dependent variables
+- [ ] Define evaluation dataset
+- [ ] Define accuracy metrics
+- [ ] Define recall metrics
+- [ ] Define path-efficiency metrics
+- [ ] Define latency metrics
+- [ ] Define memory metrics
+- [ ] Define contradiction-detection metrics
+- [ ] Run reproducible experiments
+- [ ] Replicate results
+- [ ] Document limitations
+- [ ] Define falsification criteria
+
+### Benchmark Comparison
+
+Compare:
+
+Traditional vector retrieval
+vs
+Truth Graph traversal
+vs
+Fuzzy graph without ML
+vs
+ML-weighted fuzzy graph
+vs
+OpenMind Truth Graph + ML Fuzzy Graph
+vs
+future multimodal/fractal-assisted retrieval
+
+Success requires measurable and reproducible improvement.
+
+### Architectural Constraint
+
+A vector score, fuzzy score, ML prediction, waveform feature, fractal pattern, or predictive behavior is never canonical truth.
+
+Truth Graph + Provenance + Validation remain authoritative.
+
+Experimental systems may rank hypotheses but may not silently promote hypotheses into TruthNodes or TruthEdges.
