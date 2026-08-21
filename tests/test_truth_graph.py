@@ -352,3 +352,900 @@ def test_non_finite_edge_weight_is_rejected():
             raise AssertionError(
                 f"non-finite edge weight was accepted: {weight!r}"
             )
+
+
+def test_graph_rejects_edge_with_unknown_source(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    edges = [
+        {
+            "from": "UNKNOWN",
+            "to": "A",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "unknown edge source" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "edge with unknown source was accepted"
+        )
+
+
+def test_graph_rejects_edge_with_unknown_target(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    edges = [
+        {
+            "from": "A",
+            "to": "UNKNOWN",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "unknown edge target" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "edge with unknown target was accepted"
+        )
+
+
+def test_graph_rejects_mixed_valid_and_invalid_edges(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+        {
+            "id": "B",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    edges = [
+        {
+            "from": "A",
+            "to": "B",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        },
+        {
+            "from": "A",
+            "to": "UNKNOWN",
+            "tag": "BAD",
+            "relation": "bad",
+            "weight": 1.0,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "unknown edge target" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "graph accepted a mixed valid/invalid edge set"
+        )
+
+def test_graph_rejects_duplicate_truth_node_id(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "duplicate truth node id" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "duplicate TruthNode id was accepted"
+        )
+
+
+def test_graph_rejects_conflicting_duplicate_truth_node_id(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+        {
+            "id": "A",
+            "tag": "DIFFERENT",
+            "type": "other",
+            "truth_confidence": 0.5,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "duplicate truth node id" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "conflicting duplicate TruthNode id was accepted"
+        )
+
+def test_graph_rejects_node_missing_id(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "id" in str(exc).lower()
+    else:
+        raise AssertionError("node missing id was accepted")
+
+
+def test_graph_rejects_node_missing_truth_confidence(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "confidence" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "node missing truth_confidence was accepted"
+        )
+
+
+def test_graph_rejects_node_missing_tag(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "type": "test",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "tag" in str(exc).lower()
+    else:
+        raise AssertionError("node missing tag was accepted")
+
+
+def test_graph_rejects_node_missing_type(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "truth_confidence": 1.0,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "type" in str(exc).lower()
+    else:
+        raise AssertionError("node missing type was accepted")
+
+def test_graph_rejects_edge_missing_source(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [
+        {
+            "to": "B",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "from" in str(exc).lower() or "source" in str(exc).lower()
+    else:
+        raise AssertionError("edge missing source was accepted")
+
+
+def test_graph_rejects_edge_missing_target(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [
+        {
+            "from": "A",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "to" in str(exc).lower() or "target" in str(exc).lower()
+    else:
+        raise AssertionError("edge missing target was accepted")
+
+
+def test_graph_rejects_edge_missing_weight(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [
+        {
+            "from": "A",
+            "to": "B",
+            "tag": "TEST",
+            "relation": "test",
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "weight" in str(exc).lower()
+    else:
+        raise AssertionError("edge missing weight was accepted")
+
+
+def test_graph_rejects_edge_missing_relation(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [
+        {
+            "from": "A",
+            "to": "B",
+            "tag": "TEST",
+            "weight": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, KeyError) as exc:
+        assert "relation" in str(exc).lower()
+    else:
+        raise AssertionError("edge missing relation was accepted")
+
+def test_graph_rejects_duplicate_truth_edge(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+
+    edge = {
+        "from": "A",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": 1.0,
+    }
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([edge, edge]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "duplicate" in str(exc).lower()
+    else:
+        raise AssertionError("duplicate TruthEdge was accepted")
+
+
+def test_graph_rejects_conflicting_duplicate_truth_edge(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+
+    edges = [
+        {
+            "from": "A",
+            "to": "B",
+            "tag": "TEST",
+            "relation": "test",
+            "weight": 1.0,
+        },
+        {
+            "from": "A",
+            "to": "B",
+            "tag": "DIFFERENT",
+            "relation": "other",
+            "weight": 0.5,
+        },
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "duplicate" in str(exc).lower() or "conflict" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "conflicting duplicate TruthEdge was accepted"
+        )
+
+def test_graph_rejects_non_list_nodes_payload(tmp_path: Path):
+    import json
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps({"id": "A"}))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, TypeError) as exc:
+        assert "node" in str(exc).lower() or "list" in str(exc).lower()
+    else:
+        raise AssertionError("non-list nodes payload was accepted")
+
+
+def test_graph_rejects_non_list_edges_payload(tmp_path: Path):
+    import json
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+
+    nodes_path.write_text(json.dumps([
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        }
+    ]))
+    edges_path.write_text(json.dumps({"from": "A"}))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, TypeError) as exc:
+        assert "edge" in str(exc).lower() or "list" in str(exc).lower()
+    else:
+        raise AssertionError("non-list edges payload was accepted")
+
+
+def test_graph_rejects_invalid_node_truth_confidence(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": "not-a-number",
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except (ValueError, TypeError) as exc:
+        assert "confidence" in str(exc).lower() or "float" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "node with invalid truth confidence was accepted"
+        )
+
+def test_graph_rejects_empty_truth_node_id(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "id" in str(exc).lower()
+    else:
+        raise AssertionError("empty TruthNode id was accepted")
+
+
+def test_graph_rejects_whitespace_truth_node_id(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "   ",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.0,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "id" in str(exc).lower()
+    else:
+        raise AssertionError("whitespace TruthNode id was accepted")
+
+
+def test_graph_rejects_truth_confidence_below_zero(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": -0.1,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "confidence" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "truth confidence below zero was accepted"
+        )
+
+
+def test_graph_rejects_truth_confidence_above_one(tmp_path: Path):
+    import json
+
+    nodes = [
+        {
+            "id": "A",
+            "tag": "NODE",
+            "type": "test",
+            "truth_confidence": 1.1,
+        }
+    ]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps([]))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "confidence" in str(exc).lower()
+    else:
+        raise AssertionError(
+            "truth confidence above one was accepted"
+        )
+
+def test_graph_rejects_edge_weight_nan(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": "nan",
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "weight" in str(exc).lower()
+    else:
+        raise AssertionError("NaN edge weight was accepted")
+
+
+def test_graph_rejects_edge_weight_infinity(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": "inf",
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "weight" in str(exc).lower()
+    else:
+        raise AssertionError("infinite edge weight was accepted")
+
+
+def test_graph_rejects_empty_edge_tag(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "B",
+        "tag": "",
+        "relation": "test",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "tag" in str(exc).lower()
+    else:
+        raise AssertionError("empty edge tag was accepted")
+
+def test_graph_rejects_empty_edge_relation(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "relation" in str(exc).lower()
+    else:
+        raise AssertionError("empty edge relation was accepted")
+
+
+def test_graph_rejects_whitespace_edge_relation(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "   ",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "relation" in str(exc).lower()
+    else:
+        raise AssertionError("whitespace edge relation was accepted")
+
+def test_graph_rejects_empty_edge_source(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "source" in str(exc).lower()
+    else:
+        raise AssertionError("empty edge source was accepted")
+
+
+def test_graph_rejects_whitespace_edge_source(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "   ",
+        "to": "B",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "source" in str(exc).lower()
+    else:
+        raise AssertionError("whitespace edge source was accepted")
+
+
+def test_graph_rejects_empty_edge_target(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "target" in str(exc).lower()
+    else:
+        raise AssertionError("empty edge target was accepted")
+
+
+def test_graph_rejects_whitespace_edge_target(tmp_path: Path):
+    import json
+
+    nodes = [
+        {"id": "A", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+        {"id": "B", "tag": "NODE", "type": "test", "truth_confidence": 1.0},
+    ]
+    edges = [{
+        "from": "A",
+        "to": "   ",
+        "tag": "TEST",
+        "relation": "test",
+        "weight": 1.0,
+    }]
+
+    nodes_path = tmp_path / "nodes.json"
+    edges_path = tmp_path / "edges.json"
+    nodes_path.write_text(json.dumps(nodes))
+    edges_path.write_text(json.dumps(edges))
+
+    try:
+        TruthGraph.from_json(nodes_path, edges_path)
+    except ValueError as exc:
+        assert "target" in str(exc).lower()
+    else:
+        raise AssertionError("whitespace edge target was accepted")

@@ -81,8 +81,17 @@ class TruthGraph:
         }
 
         for edge in self.edges:
-            if edge.source in self.nodes and edge.target in self.nodes:
-                self._outgoing[edge.source].append(edge)
+            if edge.source not in self.nodes:
+                raise ValueError(
+                    f"unknown edge source: {edge.source}"
+                )
+
+            if edge.target not in self.nodes:
+                raise ValueError(
+                    f"unknown edge target: {edge.target}"
+                )
+
+            self._outgoing[edge.source].append(edge)
 
         for node_id in self._outgoing:
             self._outgoing[node_id].sort(
@@ -102,30 +111,95 @@ class TruthGraph:
         nodes_data = json.loads(Path(nodes_path).read_text())
         edges_data = json.loads(Path(edges_path).read_text())
 
-        nodes = {
-            item["id"]: TruthNode(
-                id=item["id"],
+        if not isinstance(nodes_data, list):
+            raise ValueError("nodes payload must be a list")
+
+        if not isinstance(edges_data, list):
+            raise ValueError("edges payload must be a list")
+
+        nodes: dict[str, TruthNode] = {}
+
+        for item in nodes_data:
+            node_id = str(item["id"])
+
+            if not node_id.strip():
+                raise ValueError(
+                    "truth node id must not be empty or whitespace"
+                )
+
+            if node_id in nodes:
+                raise ValueError(
+                    f"duplicate truth node id: {node_id}"
+                )
+
+            nodes[node_id] = TruthNode(
+                id=node_id,
                 tag=item["tag"],
                 type=item["type"],
                 truth_confidence=float(item["truth_confidence"]),
             )
-            for item in nodes_data
-        }
 
-        edges = [
-            TruthEdge(
-                source=item["from"],
-                target=item["to"],
-                tag=item["tag"],
-                relation=item["relation"],
-                weight=float(item["weight"]),
-                provenance=tuple(
-                    str(value)
-                    for value in item.get("provenance", [])
-                ),
+        edges: list[TruthEdge] = []
+        edge_keys: set[tuple[str, str, str, str]] = set()
+        endpoint_keys: set[tuple[str, str]] = set()
+
+        for item in edges_data:
+            source = str(item["from"])
+            target = str(item["to"])
+            tag = str(item["tag"])
+            relation = str(item["relation"])
+
+            if not tag.strip():
+                raise ValueError(
+                    "truth edge tag must not be empty or whitespace"
+                )
+
+            if not relation.strip():
+                raise ValueError(
+                    "truth edge relation must not be empty or whitespace"
+                )
+
+            if source not in nodes:
+                raise ValueError(
+                    f"unknown edge source: {source}"
+                )
+
+            if target not in nodes:
+                raise ValueError(
+                    f"unknown edge target: {target}"
+                )
+
+            edge_key = (source, target, tag, relation)
+            endpoint_key = (source, target)
+
+            if endpoint_key in endpoint_keys:
+                raise ValueError(
+                    f"conflicting duplicate TruthEdge: "
+                    f"{source} -> {target}"
+                )
+
+            if edge_key in edge_keys:
+                raise ValueError(
+                    f"duplicate TruthEdge: {source} -> {target} "
+                    f"({tag}, {relation})"
+                )
+
+            endpoint_keys.add(endpoint_key)
+            edge_keys.add(edge_key)
+
+            edges.append(
+                TruthEdge(
+                    source=source,
+                    target=target,
+                    tag=tag,
+                    relation=relation,
+                    weight=float(item["weight"]),
+                    provenance=tuple(
+                        str(value)
+                        for value in item.get("provenance", [])
+                    ),
+                )
             )
-            for item in edges_data
-        ]
 
         return cls(nodes, edges)
 
