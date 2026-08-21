@@ -5,8 +5,12 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from .registry import EvidenceRegistry
+
+if TYPE_CHECKING:
+    from openmind.truth_graph import TruthGraph
 
 
 @dataclass(frozen=True)
@@ -65,6 +69,36 @@ class EdgeEvidenceBindings:
             raise ValueError(
                 "missing evidence binding: "
                 + ", ".join(sorted(set(missing)))
+            )
+
+        return ()
+
+    def validate_graph(
+        self,
+        graph: TruthGraph,
+    ) -> tuple[()]:
+        """Validate that every binding refers to a canonical graph edge."""
+
+        graph_edges = {
+            (edge.source, edge.target)
+            for edge in graph.edges
+        }
+
+        missing = tuple(
+            (source, target)
+            for source, target in self._bindings
+            if (source, target) not in graph_edges
+        )
+
+        if missing:
+            formatted = ", ".join(
+                f"{source} -> {target}"
+                for source, target in sorted(missing)
+            )
+
+            raise ValueError(
+                "binding references unknown graph edge: "
+                + formatted
             )
 
         return ()

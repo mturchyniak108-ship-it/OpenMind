@@ -135,3 +135,91 @@ def test_validate_bindings_rejects_missing_evidence():
         raise AssertionError(
             "missing evidence binding was silently accepted"
         )
+
+
+def test_validate_graph_accepts_existing_edges():
+    from openmind.truth_graph import TruthEdge, TruthGraph, TruthNode
+
+    graph = TruthGraph(
+        nodes={
+            "A": TruthNode(
+                id="A",
+                tag="A",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+            "B": TruthNode(
+                id="B",
+                tag="B",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+        },
+        edges=[
+            TruthEdge(
+                source="A",
+                target="B",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=1.0,
+            ),
+        ],
+    )
+
+    bindings = EdgeEvidenceBindings([
+        EdgeEvidenceBinding(
+            source="A",
+            target="B",
+            evidence_id="E1",
+        ),
+    ])
+
+    assert bindings.validate_graph(graph) == ()
+
+
+def test_validate_graph_rejects_unknown_edges():
+    from openmind.truth_graph import TruthEdge, TruthGraph, TruthNode
+
+    graph = TruthGraph(
+        nodes={
+            "A": TruthNode(
+                id="A",
+                tag="A",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+            "B": TruthNode(
+                id="B",
+                tag="B",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+        },
+        edges=[
+            TruthEdge(
+                source="A",
+                target="B",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=1.0,
+            ),
+        ],
+    )
+
+    bindings = EdgeEvidenceBindings([
+        EdgeEvidenceBinding(
+            source="FAKE",
+            target="EDGE",
+            evidence_id="E1",
+        ),
+    ])
+
+    try:
+        bindings.validate_graph(graph)
+    except ValueError as exc:
+        assert "binding references unknown graph edge" in str(exc)
+        assert "FAKE -> EDGE" in str(exc)
+    else:
+        raise AssertionError(
+            "unknown graph edge binding was silently accepted"
+        )

@@ -8,3 +8,7 @@ __all__ = [
     "TruthEdge",
     "TruthPath",
 ]
+
+from .canonical import CanonicalTruthState
+
+__all__.append("CanonicalTruthState")

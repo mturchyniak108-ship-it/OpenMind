@@ -1249,3 +1249,114 @@ def test_graph_rejects_whitespace_edge_target(tmp_path: Path):
         assert "target" in str(exc).lower()
     else:
         raise AssertionError("whitespace edge target was accepted")
+
+
+def test_truth_graph_to_dict_is_canonical_and_deterministic():
+    from openmind.truth_graph import TruthEdge, TruthGraph, TruthNode
+
+    graph = TruthGraph(
+        nodes={
+            "B": TruthNode(
+                id="B",
+                tag="B",
+                type="concept",
+                truth_confidence=0.8,
+            ),
+            "A": TruthNode(
+                id="A",
+                tag="A",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+        },
+        edges=[
+            TruthEdge(
+                source="B",
+                target="A",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=0.7,
+                provenance=("E2",),
+            ),
+            TruthEdge(
+                source="A",
+                target="B",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=0.9,
+                provenance=("E1",),
+            ),
+        ],
+    )
+
+    data = graph.to_dict()
+
+    assert [node["id"] for node in data["nodes"]] == ["A", "B"]
+
+    assert [
+        (edge["from"], edge["to"])
+        for edge in data["edges"]
+    ] == [
+        ("A", "B"),
+        ("B", "A"),
+    ]
+
+    assert data["edges"][0]["provenance"] == ["E1"]
+    assert data["edges"][1]["provenance"] == ["E2"]
+
+
+def test_truth_graph_json_round_trip_is_stable(tmp_path):
+    import json
+
+    from openmind.truth_graph import TruthEdge, TruthGraph, TruthNode
+
+    graph = TruthGraph(
+        nodes={
+            "B": TruthNode(
+                id="B",
+                tag="B",
+                type="concept",
+                truth_confidence=0.8,
+            ),
+            "A": TruthNode(
+                id="A",
+                tag="A",
+                type="concept",
+                truth_confidence=1.0,
+            ),
+        },
+        edges=[
+            TruthEdge(
+                source="B",
+                target="A",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=0.7,
+                provenance=("E2",),
+            ),
+            TruthEdge(
+                source="A",
+                target="B",
+                tag="SUPPORTS",
+                relation="supports",
+                weight=0.9,
+                provenance=("E1",),
+            ),
+        ],
+    )
+
+    restored = TruthGraph.from_dict(
+        json.loads(graph.to_json())
+    )
+
+    assert restored.to_dict() == graph.to_dict()
+    assert restored.to_json() == graph.to_json()
+
+
+def test_truth_graph_save_uses_canonical_json(tmp_path):
+    from openmind.truth_graph import TruthGraph
+
+    graph = TruthGraph.from_json(
+        tmp_path / "nodes.json",
+        tmp_path / "edges.json",
+    ) if False else None

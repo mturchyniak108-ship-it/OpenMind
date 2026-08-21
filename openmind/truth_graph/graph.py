@@ -102,20 +102,84 @@ class TruthGraph:
                 )
             )
 
+    def to_dict(self) -> dict[str, list[dict[str, object]]]:
+        """Return the canonical Truth Graph representation."""
+
+        nodes = [
+            {
+                "id": node.id,
+                "tag": node.tag,
+                "type": node.type,
+                "truth_confidence": node.truth_confidence,
+            }
+            for node in sorted(
+                self.nodes.values(),
+                key=lambda node: node.id,
+            )
+        ]
+
+        edges = [
+            {
+                "from": edge.source,
+                "to": edge.target,
+                "tag": edge.tag,
+                "relation": edge.relation,
+                "weight": edge.weight,
+                "provenance": list(edge.provenance),
+            }
+            for edge in sorted(
+                self.edges,
+                key=lambda edge: (
+                    edge.source,
+                    edge.target,
+                    edge.tag,
+                    edge.relation,
+                ),
+            )
+        ]
+
+        return {
+            "nodes": nodes,
+            "edges": edges,
+        }
+
+    def to_json(self) -> str:
+        """Serialize the Truth Graph using canonical JSON formatting."""
+
+        return json.dumps(
+            self.to_dict(),
+            indent=2,
+            sort_keys=True,
+        ) + "\n"
+
+    def save(self, path: str | Path) -> None:
+        """Persist the Truth Graph using canonical JSON."""
+
+        Path(path).write_text(
+            self.to_json(),
+            encoding="utf-8",
+        )
+
     @classmethod
-    def from_json(
+    def from_dict(
         cls,
-        nodes_path: str | Path,
-        edges_path: str | Path,
+        data: dict[str, object],
     ) -> "TruthGraph":
-        nodes_data = json.loads(Path(nodes_path).read_text())
-        edges_data = json.loads(Path(edges_path).read_text())
+        """Construct a Truth Graph from canonical dictionaries."""
+
+        if not isinstance(data, dict):
+            raise ValueError(
+                "truth graph data must contain an object"
+            )
+
+        nodes_data = data.get("nodes")
+        edges_data = data.get("edges")
 
         if not isinstance(nodes_data, list):
-            raise ValueError("nodes payload must be a list")
+            raise ValueError("truth graph nodes payload must be a list")
 
         if not isinstance(edges_data, list):
-            raise ValueError("edges payload must be a list")
+            raise ValueError("truth graph edges payload must be a list")
 
         nodes: dict[str, TruthNode] = {}
 
@@ -202,6 +266,28 @@ class TruthGraph:
             )
 
         return cls(nodes, edges)
+
+    @classmethod
+    def from_json(
+        cls,
+        nodes_path: str | Path,
+        edges_path: str | Path,
+    ) -> "TruthGraph":
+        """Construct a Truth Graph from the legacy split JSON files."""
+
+        nodes_data = json.loads(
+            Path(nodes_path).read_text(encoding="utf-8")
+        )
+        edges_data = json.loads(
+            Path(edges_path).read_text(encoding="utf-8")
+        )
+
+        return cls.from_dict(
+            {
+                "nodes": nodes_data,
+                "edges": edges_data,
+            }
+        )
 
     def neighbors(self, node_id: str) -> tuple[TruthEdge, ...]:
         return tuple(self._outgoing.get(node_id, ()))
