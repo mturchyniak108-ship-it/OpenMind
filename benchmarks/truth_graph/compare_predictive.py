@@ -3,6 +3,11 @@ from __future__ import annotations
 import json
 import time
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from openmind.experimental.fuzzy_graph import PredictivePathScorer
 from openmind.truth_graph import TruthGraph
