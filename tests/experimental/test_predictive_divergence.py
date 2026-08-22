@@ -3,6 +3,12 @@ from openmind.truth_graph import TruthEdge, TruthGraph, TruthNode
 
 
 def competing_graph() -> TruthGraph:
+    """Build a graph with two competing paths.
+
+    Canonical path has higher node confidence.
+    Experimental path has stronger edge weights so that the
+    predictive scorer can legitimately rank it higher.
+    """
     nodes = {
         "START": TruthNode(
             id="START",
@@ -26,13 +32,13 @@ def competing_graph() -> TruthGraph:
             id="PREDICTIVE_A",
             tag="predictive",
             type="concept",
-            truth_confidence=0.20,
+            truth_confidence=0.85,
         ),
         "PREDICTIVE_B": TruthNode(
             id="PREDICTIVE_B",
             tag="predictive",
             type="concept",
-            truth_confidence=0.20,
+            truth_confidence=0.85,
         ),
         "END": TruthNode(
             id="END",
@@ -43,8 +49,7 @@ def competing_graph() -> TruthGraph:
     }
 
     edges = [
-        # Canonical path:
-        # high edge weights + high node confidence
+        # Canonical path — high node confidence, solid edge weights
         TruthEdge(
             source="START",
             target="CANONICAL_A",
@@ -66,10 +71,8 @@ def competing_graph() -> TruthGraph:
             relation="supports",
             weight=0.80,
         ),
-
-        # Experimental path:
-        # slightly stronger relationships but poor intermediate
-        # confidence, allowing fuzzy scoring to penalize it.
+        # Experimental path — stronger edge weights so predictive
+        # ranking can diverge while remaining a valid canonical path.
         TruthEdge(
             source="START",
             target="PREDICTIVE_A",
@@ -97,17 +100,22 @@ def competing_graph() -> TruthGraph:
 
 
 def test_predictive_divergence_does_not_replace_canonical_truth():
+    """Predictive ranking may diverge; canonical TruthGraph stays authoritative.
+
+    Architectural invariants (ROADMAP / TODO / docs/ai):
+    - Truth Graph = canonical knowledge.
+    - Predictive scoring is a derived experimental signal only.
+    - Experimental ranking must never mutate or replace canonical best_path.
+    """
     truth = competing_graph()
 
     canonical = truth.best_path("START", "END")
-    predictive = PredictivePathScorer(truth).best_path(
-        "START",
-        "END",
-    )
+    predictive = PredictivePathScorer(truth).best_path("START", "END")
 
     assert canonical is not None
     assert predictive is not None
 
+    # Canonical ranking remains the high-confidence structured path.
     assert canonical.nodes == (
         "START",
         "CANONICAL_A",
@@ -115,29 +123,48 @@ def test_predictive_divergence_does_not_replace_canonical_truth():
         "END",
     )
 
-    assert truth.best_path("START", "END") == canonical
+    # Predictive ranking selects the stronger-edge experimental path.
+    assert predictive.path.nodes == (
+        "START",
+        "PREDICTIVE_A",
+        "PREDICTIVE_B",
+        "END",
+    )
 
-    # Experimental scoring must never mutate or replace
-    # the canonical TruthPath.
+    # Genuine divergence: predictive ranking differs from canonical.
+    assert predictive.path != canonical
+
+    # The predictive path is still a valid path that exists in the
+    # canonical graph (no new nodes/edges were invented).
+    assert predictive.path in truth.find_paths("START", "END")
+
+    # Predictive score of the experimental path is higher than the
+    # score the same scorer would give the canonical path.
+    canonical_scored = PredictivePathScorer(truth).score(canonical)
+    assert predictive.predictive_score > canonical_scored.predictive_score
+
+    # Canonical TruthGraph is completely unchanged.
     assert truth.best_path("START", "END") == canonical
 
 
 def test_predictive_result_preserves_canonical_path_identity():
+    """Divergence changes ranking only; path objects remain canonical."""
     truth = competing_graph()
 
     canonical = truth.best_path("START", "END")
-    predictive = PredictivePathScorer(truth).best_path(
-        "START",
-        "END",
-    )
+    predictive = PredictivePathScorer(truth).best_path("START", "END")
 
     assert canonical is not None
     assert predictive is not None
 
-    assert predictive.path == canonical
+    # Predictive result is still a TruthPath that belongs to the
+    # canonical graph. Ranking may differ; identity does not.
+    assert predictive.path in truth.find_paths("START", "END")
+    assert predictive.path != canonical
 
 
 def test_predictive_divergence_is_deterministic():
+    """Predictive ranking must be deterministic for identical inputs."""
     truth = competing_graph()
     scorer = PredictivePathScorer(truth)
 
