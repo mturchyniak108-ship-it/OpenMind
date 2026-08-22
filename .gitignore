@@ -36,3 +36,4 @@ preflight/resource_profile.txt
 
 # OpenMind native CMake build artifacts
 native/build/
+ts
