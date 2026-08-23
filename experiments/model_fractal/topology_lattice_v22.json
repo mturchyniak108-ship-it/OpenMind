@@ -1,0 +1,67 @@
+{
+  "best_canonical_match": {
+    "degree_score": 0.9285714285714286,
+    "lattice": "simple_cubic",
+    "score": 0.7544642857142857,
+    "square_score": 1.0,
+    "triangle_score": 0.1607142857142857
+  },
+  "bond_count": 76,
+  "bond_threshold": 2.0893456195429265,
+  "canonical_topology_fingerprints": [
+    {
+      "degree_score": 0.9285714285714286,
+      "lattice": "simple_cubic",
+      "score": 0.7544642857142857,
+      "square_score": 1.0,
+      "triangle_score": 0.1607142857142857
+    },
+    {
+      "degree_score": 0.8214285714285714,
+      "lattice": "diamond",
+      "score": 0.5401785714285714,
+      "square_score": 0.3571428571428571,
+      "triangle_score": 0.1607142857142857
+    },
+    {
+      "degree_score": 0.6964285714285714,
+      "lattice": "graphene",
+      "score": 0.4776785714285714,
+      "square_score": 0.3571428571428571,
+      "triangle_score": 0.1607142857142857
+    },
+    {
+      "degree_score": 0.6785714285714286,
+      "lattice": "bcc",
+      "score": 0.46875,
+      "square_score": 0.3571428571428571,
+      "triangle_score": 0.1607142857142857
+    }
+  ],
+  "classification": "MODERATE_PERIODIC_LATTICE_TOPOLOGY",
+  "combined_score": 0.7193320752662635,
+  "degree_cv": 0.26249917556921054,
+  "degree_histogram": {
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 9,
+    "7": 6,
+    "8": 1
+  },
+  "edge_cv": 0.3913045760210953,
+  "geometry_source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "mean_clustering": 0.785374149659864,
+  "mean_degree": 5.428571428571429,
+  "mean_edge_length": 1.274085264913267,
+  "motif_score": 0.6666337595942305,
+  "period8_topology_similarity": 0.6511830357142857,
+  "period8_translation_score": 0.7249988294327342,
+  "quadrilateral_count": 72,
+  "repeated_environment_fraction": 0.5714285714285714,
+  "schema": "openmind.topology_lattice_analysis.v22",
+  "source": "experiments/model_fractal/canonical_lattice_v21.json",
+  "triangle_count": 94,
+  "unique_environment_count": 18
+}

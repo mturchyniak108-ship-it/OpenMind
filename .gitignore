@@ -37,3 +37,56 @@ preflight/resource_profile.txt
 # OpenMind native CMake build artifacts
 native/build/
 ts
+
+# OpenMind local/model artifacts
+*.gguf
+*.gguf.*
+qwen_gguf_dump.txt
+fractal.gguf.txt
+
+# Python/build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.o
+*.a
+*.egg-info/
+build/
+dist/
+
+# Local llama.cpp builds
+llama.cpp/build-*/
+llama.cpp/build/
+
+# Experimental native binaries
+experiments/model_fractal/maf_basic
+experiments/model_fractal/maf_basic.exe
+
+# Generated demo output
+demo/*.wav
+
+# Local/model artifacts
+*.gguf
+*.gguf.*
+qwen_gguf_dump.txt
+fractal.gguf.txt
+
+# Python/build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.o
+*.a
+*.egg-info/
+build/
+dist/
+
+# Local llama.cpp builds
+llama.cpp/build-*/
+llama.cpp/build/
+
+# Experimental binaries
+experiments/model_fractal/maf_basic
+
+# Generated demo output
+demo/*.wav

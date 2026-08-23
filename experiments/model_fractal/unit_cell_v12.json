@@ -1,0 +1,158 @@
+{
+  "schema": "openmind.fractal_unit_cell.v12",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "candidate_periods": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    13
+  ],
+  "results": [
+    {
+      "period": 4,
+      "cell_count": 7,
+      "translation_similarity_mean": 0.4100398079016411,
+      "translation_similarity_rms": 0.6369852922916412,
+      "cell_error_mean": 2.032358018923014,
+      "cell_error_rms": 2.050908005974395,
+      "cell_cosine_mean": -0.4305835428670397,
+      "cell_scale_mean": 2.265920623523442,
+      "cell_scale_rms": 3.266192190741783,
+      "reconstruction_error": 1.7930623563132109
+    },
+    {
+      "period": 5,
+      "cell_count": 5,
+      "translation_similarity_mean": 0.4861698684893487,
+      "translation_similarity_rms": 0.7305382123623891,
+      "cell_error_mean": 1.8171874384194986,
+      "cell_error_rms": 1.9529105633095427,
+      "cell_cosine_mean": -0.07856129351214892,
+      "cell_scale_mean": 1.2901305233765337,
+      "cell_scale_rms": 1.3801316879008945,
+      "reconstruction_error": 2.363676767975551
+    },
+    {
+      "period": 6,
+      "cell_count": 4,
+      "translation_similarity_mean": 0.5495984354529659,
+      "translation_similarity_rms": 0.7283997821898955,
+      "cell_error_mean": 1.5994787134989632,
+      "cell_error_rms": 1.7120687372195216,
+      "cell_cosine_mean": -0.24660057481687184,
+      "cell_scale_mean": 1.0654825741877296,
+      "cell_scale_rms": 1.1179802126594356,
+      "reconstruction_error": 2.5949038058695533
+    },
+    {
+      "period": 7,
+      "cell_count": 4,
+      "translation_similarity_mean": 0.5945924826393292,
+      "translation_similarity_rms": 0.7878716142984838,
+      "cell_error_mean": 1.3556462833777803,
+      "cell_error_rms": 1.4591652913576596,
+      "cell_cosine_mean": -0.005951622002531465,
+      "cell_scale_mean": 1.606701841710199,
+      "cell_scale_rms": 1.7783741058240905,
+      "reconstruction_error": 2.8299631755814922
+    },
+    {
+      "period": 8,
+      "cell_count": 3,
+      "translation_similarity_mean": 0.7324807899975311,
+      "translation_similarity_rms": 0.8086136743474341,
+      "cell_error_mean": 1.6100990720402972,
+      "cell_error_rms": 1.6457106507400863,
+      "cell_cosine_mean": 0.4501662938799623,
+      "cell_scale_mean": 1.0067887884222946,
+      "cell_scale_rms": 1.0166389716727628,
+      "reconstruction_error": 2.486368976669473
+    },
+    {
+      "period": 10,
+      "cell_count": 2,
+      "translation_similarity_mean": 0.6721244322459528,
+      "translation_similarity_rms": 0.737960999031793,
+      "cell_error_mean": 1.6617274062810674,
+      "cell_error_rms": 1.6617274062810674,
+      "cell_cosine_mean": -0.06981103629088665,
+      "cell_scale_mean": 1.1300380480737593,
+      "cell_scale_rms": 1.1300380480737593,
+      "reconstruction_error": 3.7073979193118114
+    },
+    {
+      "period": 11,
+      "cell_count": 2,
+      "translation_similarity_mean": 0.6597328475815629,
+      "translation_similarity_rms": 0.729095890449155,
+      "cell_error_mean": 1.7372216520741421,
+      "cell_error_rms": 1.7372216520741421,
+      "cell_cosine_mean": -0.23596201434609568,
+      "cell_scale_mean": 1.3045112644749415,
+      "cell_scale_rms": 1.3045112644749415,
+      "reconstruction_error": 3.947363109597207
+    },
+    {
+      "period": 13,
+      "cell_count": 2,
+      "translation_similarity_mean": 0.6831402851458692,
+      "translation_similarity_rms": 0.7416591860377361,
+      "cell_error_mean": 1.9772472321594163,
+      "cell_error_rms": 1.9772472321594163,
+      "cell_cosine_mean": -0.6840608446448684,
+      "cell_scale_mean": 1.237481652048937,
+      "cell_scale_rms": 1.237481652048937,
+      "reconstruction_error": 2.490996354942858
+    }
+  ],
+  "best_period": 4,
+  "best_metrics": {
+    "period": 4,
+    "cell_count": 7,
+    "translation_similarity_mean": 0.4100398079016411,
+    "translation_similarity_rms": 0.6369852922916412,
+    "cell_error_mean": 2.032358018923014,
+    "cell_error_rms": 2.050908005974395,
+    "cell_cosine_mean": -0.4305835428670397,
+    "cell_scale_mean": 2.265920623523442,
+    "cell_scale_rms": 3.266192190741783,
+    "reconstruction_error": 1.7930623563132109
+  },
+  "canonical_unit_cell": [
+    {
+      "index": 0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "index": 1,
+      "x": -1.334717137418398,
+      "y": -0.41494594691509024,
+      "z": 1.1715033155474146
+    },
+    {
+      "index": 2,
+      "x": -2.6526069518516837,
+      "y": -1.1136417134653809,
+      "z": 1.1041936241055237
+    },
+    {
+      "index": 3,
+      "x": -3.562112837751107,
+      "y": -1.4795837954415065,
+      "z": 0.4178438251566391
+    },
+    {
+      "index": 4,
+      "x": -4.197262341853867,
+      "y": -2.34223364800281,
+      "z": 0.7670716080049964
+    }
+  ]
+}

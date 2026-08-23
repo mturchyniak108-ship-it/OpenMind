@@ -1,0 +1,115 @@
+{
+  "angle_count": 353,
+  "best_match": {
+    "angle_error": 0.08657073505962071,
+    "angle_score": 0.9134292649403792,
+    "bond_uniformity": 0.6086954239789046,
+    "coordination_error": 0.09523809523809519,
+    "coordination_score": 0.9047619047619048,
+    "lattice": "simple_cubic",
+    "score": 0.8638188767158446
+  },
+  "bond_count": 76,
+  "bond_cv": 0.3913045760210953,
+  "bond_rms": 1.368155964631246,
+  "bond_std": 0.49855539440161084,
+  "bond_threshold": 2.0893456195429265,
+  "canonical_fingerprints": [
+    {
+      "angle_error": 0.08657073505962071,
+      "angle_score": 0.9134292649403792,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.09523809523809519,
+      "coordination_score": 0.9047619047619048,
+      "lattice": "simple_cubic",
+      "score": 0.8638188767158446
+    },
+    {
+      "angle_error": 0.0216025982737126,
+      "angle_score": 0.9783974017262874,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.3214285714285714,
+      "coordination_score": 0.6785714285714286,
+      "lattice": "bcc",
+      "score": 0.7880204171444936
+    },
+    {
+      "angle_error": 0.19474406839295402,
+      "angle_score": 0.805255931607046,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.3571428571428572,
+      "coordination_score": 0.6428571428571428,
+      "lattice": "diamond",
+      "score": 0.7026924005253683
+    },
+    {
+      "angle_error": 0.08009593160704595,
+      "angle_score": 0.919904068392954,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.5476190476190476,
+      "coordination_score": 0.45238095238095244,
+      "lattice": "fcc",
+      "score": 0.6628373695254459
+    },
+    {
+      "angle_error": 0.08009593160704595,
+      "angle_score": 0.919904068392954,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.5476190476190476,
+      "coordination_score": 0.45238095238095244,
+      "lattice": "hexagonal_close_packed",
+      "score": 0.6628373695254459
+    },
+    {
+      "angle_error": 0.2532374017262874,
+      "angle_score": 0.7467625982737126,
+      "bond_uniformity": 0.6086954239789046,
+      "coordination_error": 0.8095238095238096,
+      "coordination_score": 0.19047619047619035,
+      "lattice": "graphene",
+      "score": 0.4757236386206064
+    }
+  ],
+  "classification": "STRONG_CANONICAL_LATTICE_MATCH",
+  "coordination_histogram": {
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 9,
+    "7": 6,
+    "8": 1
+  },
+  "geometry_source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "mean_angle": 74.41726768926827,
+  "mean_bond": 1.274085264913267,
+  "mean_coordination": 5.428571428571429,
+  "nearest_neighbor_shells": {
+    "0.0": 2,
+    "0.120864": 2,
+    "0.29265": 1,
+    "0.402428": 2,
+    "0.451153": 1,
+    "0.559085": 1,
+    "0.65524": 2,
+    "0.683773": 1,
+    "0.708502": 1,
+    "0.738437": 2,
+    "0.759346": 1,
+    "0.811296": 1,
+    "0.883409": 1,
+    "0.907198": 1,
+    "1.017005": 1,
+    "1.056695": 2,
+    "1.126739": 1,
+    "1.196742": 1,
+    "1.269083": 1,
+    "1.417484": 1,
+    "1.493164": 1,
+    "1.623821": 1
+  },
+  "quadrilateral_count": 72,
+  "schema": "openmind.canonical_lattice_fingerprint.v21",
+  "source": "experiments/model_fractal/material_compatibility_v20.json",
+  "triangle_count": 94
+}
