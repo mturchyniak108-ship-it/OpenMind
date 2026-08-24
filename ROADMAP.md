@@ -154,3 +154,22 @@ After experimental validation:
 Build → Test → Measure → Debug → Reproduce → Improve
 
 Experimental results must remain clearly separated from validated capabilities.
+
+
+## Licensing and Open-Source Strategy
+
+OpenMind original software is released under Apache License 2.0.
+
+Original research datasets and results may be released under CC BY 4.0
+when explicitly marked.
+
+Third-party code, libraries, models and datasets retain their respective
+upstream licenses.
+
+OpenMind follows an open-source-first engineering model: established
+open-source projects are used as foundations, studied, integrated,
+extended and tested while preserving applicable upstream licensing.
+
+Licensing must remain separate from experimental claims. Open-source
+availability does not imply that experimental inference methods have been
+validated as replacements for conventional LLMs.
