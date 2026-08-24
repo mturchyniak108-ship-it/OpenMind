@@ -1,0 +1,99 @@
+Explain what a database index does.
+What is a database transaction?
+What is a primary key?
+What is a foreign key?
+Explain database normalization.
+What is a hash table?
+How does binary search work?
+Explain a linked list.
+What is a binary tree?
+Explain recursion.
+What is dynamic programming?
+Explain breadth-first search.
+Explain depth-first search.
+What is a compiler?
+What does a linker do?
+What is an operating system?
+Explain virtual memory.
+What is a process?
+What is a thread?
+What is a mutex?
+What is a semaphore?
+Explain TCP.
+Explain UDP.
+What is DNS?
+How does HTTPS work?
+What is an IP address?
+Explain public key cryptography.
+What is a digital signature?
+What is a hash function?
+What is encryption?
+Explain machine learning.
+What is supervised learning?
+What is reinforcement learning?
+What is overfitting?
+What is gradient descent?
+What is a neural network?
+What is an embedding?
+What is attention?
+What is a transformer?
+What is a language model?
+Explain photosynthesis.
+Why is the sky blue?
+Why does ice float?
+Explain gravity.
+What causes tides?
+How does electricity flow?
+What is an atom?
+What is a molecule?
+Explain evolution.
+What causes earthquakes?
+How do airplanes fly?
+Why do seasons occur?
+Explain the water cycle.
+What is probability?
+What is a prime number?
+Explain compound interest.
+What is a matrix?
+Explain a vector.
+What is a derivative?
+What is an integral?
+Explain recursion in Python.
+Write a Python function that reverses a string.
+Write a Python function that finds the maximum value.
+Explain Python dictionaries.
+What is a Python generator?
+What is an exception?
+Explain object-oriented programming.
+What is inheritance?
+What is polymorphism?
+What is encapsulation?
+Explain REST APIs.
+What is JSON?
+What is SQL?
+Write a SQL query selecting users.
+Explain an HTTP request.
+What is caching?
+What is a database connection pool?
+Explain load balancing.
+What is a distributed system?
+What is eventual consistency?
+What is a message queue?
+What is a container?
+What is virtualization?
+What is Linux?
+What is a shell?
+Explain a file descriptor.
+What is a system call?
+What is a GPU?
+What is Vulkan?
+What is SIMD?
+What is quantization?
+What is a GGUF model?
+What is inference?
+What is model training?
+What is a hidden state?
+What is a residual stream?
+Why do transformer layers have residual connections?
+What is cosine similarity?
+Why can two vectors have high cosine similarity?
