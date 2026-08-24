@@ -1,0 +1,42 @@
+{
+  "q8_parameter_field_v4_1.py": {
+    "sha256": "03e581a31f87109e105bd5730b5a64e66622c2ee4939c3526fcf5a616c1698a0",
+    "bytes": 14303
+  },
+  "q8_phase_detection_v6.py": {
+    "sha256": "0963d1847b0b760b72460f4d20b49af78c2f8100d000436d1faba51d4e9483d0",
+    "bytes": 8497
+  },
+  "q8_phase_component_v8.py": {
+    "sha256": "a429c8e8eaf84e7e637457b979eb4a5bb55056f88a1d010acbad26dcbd956154",
+    "bytes": 7234
+  },
+  "transition_field_v5.py": {
+    "sha256": "47a24f159c5d1bacc0b3b7a37cec2f57c7ecfde63af931725798dba583188d45",
+    "bytes": 5185
+  },
+  "transition_recurrence_v7.py": {
+    "sha256": "661d77009a34021300f42ce74e2031c537d2d6ff74744de0a85d1046d10670d4",
+    "bytes": 4726
+  },
+  "normalized_geometry_v10.py": {
+    "sha256": "0f2898afe2f17a6abe6a3251939b2a40aa47f335ae0f80f92b42a7cd9f1338fe",
+    "bytes": 5947
+  },
+  "structural_lattice_v11.py": {
+    "sha256": "c99b8579e1bb00b1a87a15798b7ef1c70b0a3f984540c95f629a176ebec0a7d4",
+    "bytes": 11158
+  },
+  "crystal_lattice_v13.py": {
+    "sha256": "b42049d50d44301a63776d5715cd7984dd438e233c52f729fbe6cdd475968de5",
+    "bytes": 10251
+  },
+  "canonical_lattice_v21.py": {
+    "sha256": "9a11479583e609768d43565f5f829468fe96bdecce6f574732923b74b2b50339",
+    "bytes": 10891
+  },
+  "topology_lattice_v22.py": {
+    "sha256": "d6a7df983a3a50a873142d714fff983ad6034009dc9d72aa2f4f509feff4d71f",
+    "bytes": 13656
+  }
+}

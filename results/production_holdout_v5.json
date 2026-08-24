@@ -1,0 +1,429 @@
+{
+  "protocol": "production_holdout_v5",
+  "status": "LEAK_FREE_STRUCTURAL_HOLDOUT",
+  "warning": "This tests layer-level structural prediction. It is not an unseen-prompt generalization test.",
+  "representation": {
+    "layers": 28,
+    "components": 12,
+    "values_per_layer": 12,
+    "feature": "tensor RMS",
+    "normalization": "per-target component z-score excluding target layer"
+  },
+  "summary": {
+    "layers_tested": 26,
+    "cosine_left": 0.2882139342194874,
+    "cosine_right": 0.3153976179625067,
+    "cosine_interpolation": 0.3789595423507665,
+    "cosine_baseline": null,
+    "nrmse_left": 1.252410719731335,
+    "nrmse_right": 1.1845659649312745,
+    "nrmse_interpolation": 1.0619766747504304,
+    "nrmse_baseline": 1.0
+  },
+  "components": [
+    "attn_k.bias",
+    "attn_k.weight",
+    "attn_norm.weight",
+    "attn_output.weight",
+    "attn_q.bias",
+    "attn_q.weight",
+    "attn_v.bias",
+    "attn_v.weight",
+    "ffn_down.weight",
+    "ffn_gate.weight",
+    "ffn_norm.weight",
+    "ffn_up.weight"
+  ],
+  "results": [
+    {
+      "layer": 1,
+      "cosine": {
+        "left": 0.25209213693796206,
+        "right": 0.6684446334140779,
+        "interpolation": 0.5496203061134429,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 2.0069294552114676,
+        "right": 0.839585794263548,
+        "interpolation": 1.0028293548273741,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 2,
+      "cosine": {
+        "left": 0.6961799887976847,
+        "right": 0.0010623945776935151,
+        "interpolation": 0.5195484966251147,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.728091958199008,
+        "right": 1.1009722886763675,
+        "interpolation": 0.8549268206713184,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 3,
+      "cosine": {
+        "left": -0.03813460656896533,
+        "right": 0.26114400981951313,
+        "interpolation": 0.0938742063599789,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.9691444272105816,
+        "right": 1.3767757448775388,
+        "interpolation": 1.635780604498904,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 4,
+      "cosine": {
+        "left": 0.2546680593800411,
+        "right": -0.2298663866183165,
+        "interpolation": -0.007942048670321252,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.0534748325764989,
+        "right": 1.4027279237059667,
+        "interpolation": 1.1255718185564065,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 5,
+      "cosine": {
+        "left": -0.22103602258766097,
+        "right": 0.10068996858999464,
+        "interpolation": -0.1385754880928414,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.6065693039770452,
+        "right": 1.1656923440695586,
+        "interpolation": 1.226313919834452,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 6,
+      "cosine": {
+        "left": 0.09630563036969712,
+        "right": 0.0866280437553035,
+        "interpolation": 0.11975549824986623,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.551366199517504,
+        "right": 1.2139586139384657,
+        "interpolation": 1.20316843868581,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 7,
+      "cosine": {
+        "left": 0.07986385419161857,
+        "right": 0.0047796534397531185,
+        "interpolation": 0.04220139107315435,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.4796352832281598,
+        "right": 1.707021934399815,
+        "interpolation": 1.5208694668628493,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 8,
+      "cosine": {
+        "left": 0.032407248532401595,
+        "right": 0.3284525551186382,
+        "interpolation": 0.2885169411574739,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.1769682816367342,
+        "right": 1.322499775012968,
+        "interpolation": 1.0631414794458596,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 9,
+      "cosine": {
+        "left": 0.3059162002826797,
+        "right": 0.4836531652463209,
+        "interpolation": 0.5026797327180126,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.0199306469912752,
+        "right": 0.9012997210772655,
+        "interpolation": 0.86530194412979,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 10,
+      "cosine": {
+        "left": 0.4476165508005974,
+        "right": 0.9162183427948157,
+        "interpolation": 0.7628831246082594,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.158628248605715,
+        "right": 0.4295780762072919,
+        "interpolation": 0.6478825697751713,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 11,
+      "cosine": {
+        "left": 0.9095893513974944,
+        "right": -0.0191879655298554,
+        "interpolation": 0.8239312227572578,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.5561244415626538,
+        "right": 1.3293010432352381,
+        "interpolation": 0.5809223711404466,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 12,
+      "cosine": {
+        "left": -0.02707340743766641,
+        "right": 0.3536772289687732,
+        "interpolation": 0.22969445554221313,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.4887127208592583,
+        "right": 1.5953585611614785,
+        "interpolation": 1.377040970445256,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 13,
+      "cosine": {
+        "left": 0.38648541241106055,
+        "right": 0.18025887267558074,
+        "interpolation": 0.271993601672077,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.9389693501664662,
+        "right": 1.3047729783853768,
+        "interpolation": 1.0716272923622683,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 14,
+      "cosine": {
+        "left": 0.16285058577476147,
+        "right": 0.04070859901695084,
+        "interpolation": 0.13732923713707343,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.2114328487583934,
+        "right": 1.095713372407328,
+        "interpolation": 1.0874110975135476,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 15,
+      "cosine": {
+        "left": -0.020090116431552958,
+        "right": -0.019370347118403825,
+        "interpolation": -0.020589294186445214,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 2.070816801250849,
+        "right": 1.5684380659335873,
+        "interpolation": 1.7652963429136772,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 16,
+      "cosine": {
+        "left": 0.012901212542611595,
+        "right": 0.8278302206301958,
+        "interpolation": 0.8213179178943776,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.2468009898262817,
+        "right": 1.1180084728339377,
+        "interpolation": 0.5774030754136517,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 17,
+      "cosine": {
+        "left": 0.8502308697573536,
+        "right": 0.8561519747901378,
+        "interpolation": 0.9110723141949711,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.6111137292329848,
+        "right": 0.7390301836273807,
+        "interpolation": 0.6520289801106768,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 18,
+      "cosine": {
+        "left": 0.8092741069267604,
+        "right": 0.7717769531657742,
+        "interpolation": 0.8333870409535343,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 2.316871823907742,
+        "right": 0.6739956248866511,
+        "interpolation": 1.2386505365415728,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 19,
+      "cosine": {
+        "left": 0.7731603334040466,
+        "right": 0.4485386169783322,
+        "interpolation": 0.7285876595318774,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.6691327523925068,
+        "right": 1.0991037029181951,
+        "interpolation": 0.6971455250980912,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 20,
+      "cosine": {
+        "left": 0.4528783365778564,
+        "right": 0.3591686784188748,
+        "interpolation": 0.4445990640152203,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.9874992058733995,
+        "right": 1.3536772694495487,
+        "interpolation": 1.047686426919674,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 21,
+      "cosine": {
+        "left": 0.3844409685523361,
+        "right": -0.1420046918972705,
+        "interpolation": 0.13346593581595592,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.9781749735336651,
+        "right": 1.335716896353433,
+        "interpolation": 1.103143218069695,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 22,
+      "cosine": {
+        "left": -0.1656782897391885,
+        "right": -0.639020050208323,
+        "interpolation": -0.48593923280314305,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.655903252970616,
+        "right": 2.3407777646198364,
+        "interpolation": 1.9274572970506123,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 23,
+      "cosine": {
+        "left": -0.6160738948513556,
+        "right": 0.6572453698456829,
+        "interpolation": 0.21791718328642298,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.412156594476425,
+        "right": 0.7731331996267782,
+        "interpolation": 1.0067905921181577,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 24,
+      "cosine": {
+        "left": 0.6495006162806678,
+        "right": 0.2642168091037473,
+        "interpolation": 0.5164711657219071,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.905573634409416,
+        "right": 1.3823799987073948,
+        "interpolation": 1.0029183076471873,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 25,
+      "cosine": {
+        "left": 0.3022343710095748,
+        "right": 0.6972389515930135,
+        "interpolation": 0.652399667367699,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 1.043587994542006,
+        "right": 1.2715454234797325,
+        "interpolation": 0.8812921005626716,
+        "baseline": 1.0
+      }
+    },
+    {
+      "layer": 26,
+      "cosine": {
+        "left": 0.7230527933958555,
+        "right": 0.94190246645417,
+        "interpolation": 0.9047480020767903,
+        "baseline": null
+      },
+      "nrmse": {
+        "left": 0.7190689620980576,
+        "right": 0.35765031435845246,
+        "interpolation": 0.4487929923160727,
+        "baseline": 1.0
+      }
+    }
+  ]
+}
