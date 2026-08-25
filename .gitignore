@@ -135,3 +135,6 @@ openmind_probe/multiprompt/*.csv
 
 # Accidental terminal help capture
 ort
+
+# Local inference probe artifacts
+openmind_probe/
