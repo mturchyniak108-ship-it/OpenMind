@@ -206,6 +206,8 @@ for tensor in tensors:
             "name": name,
             "type": tensor["type_name"],
             "dims": tensor["dims"],
+            "offset": tensor["offset"],
+            "file_start": tensor["file_start"],
             "span": tensor["span"],
         }
 
@@ -215,6 +217,8 @@ for tensor in tensors:
             "name": name,
             "type": tensor["type_name"],
             "dims": tensor["dims"],
+            "offset": tensor["offset"],
+            "file_start": tensor["file_start"],
             "span": tensor["span"],
         })
 

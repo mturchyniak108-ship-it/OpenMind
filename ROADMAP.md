@@ -1,175 +1,305 @@
 # OpenMind Roadmap
 
-## Current Direction
+## Mission
 
-OpenMind is an experimental native AI platform investigating whether useful AI computation can be performed with substantially reduced dependence on conventional token-based inference.
+OpenMind investigates whether useful AI computation can be performed through a local, native, representation-driven architecture that can reduce dependence on conventional token-by-token inference while preserving correctness and provenance.
 
-The project combines native local LLM inference, Qwen/GGUF analysis, representation and vector analysis, cross-prompt consistency testing, transition-vector analysis, quantitative benchmarking, robust testing, AI-assisted development, and experimental fractal/MAF representations.
+The project treats the Truth Canon GGUF as the canonical model/reference artifact and evaluates MAF, fractal MAF, vector maps, fuzzy logic, machine learning, heatwave/heightmap relationships, and native optimized execution as derived computational systems.
+
+## Core Architecture
+
+Truth Canon GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape Map -> Vector Links -> MAF -> Fuzzy/ML Routing -> Fractal MAF -> Validation -> Native C++ -> ARM64/NEON/Vulkan Optimization
 
 ## Phase 1 — Native Local Inference [COMPLETE]
 
 - Native llama.cpp integration
-- GGUF model loading
-- Android/ARM64 execution
+- GGUF loading
+- Android ARM64 execution
 - Vulkan GPU acceleration
-- Local Qwen inference
-- Native smoke testing
+- Native C++ inference
+- Persistent sessions
+- CMake/CTest validation
 
-## Phase 2 — Representation Analysis [ACTIVE]
+## Phase 2 — Representation Discovery [ACTIVE]
 
-- Capture model representations
-- Compare independently generated representations
-- Measure layer-to-layer recurrence
+- Capture activations
+- Analyze layer recurrence
 - Analyze transition vectors
-- Quantify cross-prompt consistency
-- Establish reproducible statistical baselines
+- Cross-prompt consistency
 - Identify stable representation structures
+- Validate numerical reconstruction
+- Establish reproducible representation baselines
 
-## Phase 3 — Representation-Based Computation [ACTIVE]
+## Phase 3 — Truth Canon GGUF [ACTIVE]
 
-Investigate whether useful computation can be performed using representations and vectors rather than conventional token-by-token processing.
+- Establish canonical GGUF artifact
+- Record model hash and metadata
+- Inventory tensors and layers
+- Preserve quantization information
+- Build deterministic extraction tooling
+- Establish GGUF-to-representation correspondence
 
-Goals:
+## Phase 4 — Four-Map Representation [NEXT]
 
-- Representation lookup structures
-- Reusable representation states
-- Efficient transition mechanisms
-- Representation benchmarking
-- Comparison against conventional inference
-- Measurable accuracy and performance criteria
+- Truth Map — canonical semantic structure
+- Relationship Map — semantic and computational relationships
+- Provenance Map — evidence lineage and source ancestry
+- Landscape Map — activation density, recurrence, convergence, heightmap/heatwave features
+- Stable identifiers between all maps
+- Vector links between canonical and derived structures
 
-## Phase 4 — MAF / Fractal Research [EXPERIMENTAL]
+## Phase 5 — GGUF to MAF [RESEARCH]
 
-MAF is experimental research infrastructure.
+- Convert a copy of the Truth Canon GGUF into MAF
+- Preserve source correspondence
+- Measure reconstruction fidelity
+- Measure storage size
+- Measure RAM
+- Measure working memory
+- Measure lookup latency
+- Measure token requirements
+- Compare against original GGUF
 
-The current native `maf_basic` executable:
+## Phase 6 — Fractal MAF [RESEARCH]
 
-- Runs natively on Android ARM64
-- Loads `pi_10M.txt`
-- Stores decimal digits in memory
-- Performs O(1) lookup
-- Provides benchmark, bombardment, accuracy and torture tests
+- Recursive MAF cells
+- Multi-dimensional fractal relationships
+- Fractal links to all three primary maps
+- Sparse activation representation
+- Recursive aggregation
+- Test token reduction
+- Test memory reduction
+- Test computational reduction
 
-MAF is currently NOT a Qwen model format or replacement LLM.
+## Phase 7 — Fuzzy Logic Routing [RESEARCH]
 
-The advanced GGUF/fractal path is the important bridge between model data and experimental representation analysis.
+- Weighted relationship membership
+- Contradiction penalties
+- Provenance weighting
+- Path-cost weighting
+- Candidate ranking
+- Deterministic fallback
 
-Next objectives:
+## Phase 8 — Machine Learning Routing [RESEARCH]
 
-- Validate GGUF ingestion
-- Extract useful model representations
-- Transform representations into experimental MAF/fractal structures
-- Benchmark memory and lookup performance
-- Compare representation fidelity against source model data
-- Determine whether useful computational information is preserved
+- Learn routing weights
+- Train from validated outcomes
+- Use rejected paths as negative evidence
+- Preserve terminated paths
+- Calibrate confidence
+- Test overfitting
+- Test holdout generalization
 
-## Phase 5 — Low-Token Inference [RESEARCH]
+## Phase 9 — Heatwave and Heightmap Features [RESEARCH]
 
-Investigate whether representation reuse and structured transitions can reduce conventional token processing.
+- Activation density
+- Relationship density
+- Recurrence
+- Convergence
+- Height/depth relationships
+- Dynamic landscape features
+- Feed validated features into ML routing
 
-Targets:
+## Phase 10 — Integrated MAF Brain [RESEARCH]
 
-- Reduced token consumption
-- Representation caching
-- State reuse
-- Vector/transition lookup
-- Structured inference pathways
-- Quantitative comparison against conventional inference
+- MAF cells as heuristic neuron-like firing units
+- Node-to-node activation
+- Fractal-cell activation
+- Relationship propagation
+- Sparse routing
+- Candidate convergence
+- Explicit termination states
+- Negative/failure memory
 
-## Phase 6 — Tokenless / Alternative Inference [LONG-TERM RESEARCH]
+## Phase 11 — Comparative Inference [RESEARCH]
 
-Investigate whether useful AI computation can operate without conventional token-by-token generation for selected workloads.
+Compare:
 
-Potential approaches:
+- Original GGUF/LLM
+- MAF
+- Fractal MAF
+- MAF + fuzzy routing
+- MAF + ML routing
+- Integrated fractal MAF
+- Native optimized implementation
 
-- Vector-native computation
-- Representation traversal
-- Learned transition structures
-- Hierarchical state maps
-- Anchor/state lookup
-- Fractal representations
-- Hybrid token/representation inference
+Measure correctness, tokens, RAM, storage, latency, throughput, CPU, GPU, thermal behavior, and energy where available.
 
-Success criteria:
+## Phase 12 — Native Componentization [CONTINUOUS]
 
-- Accuracy
-- Generalization
-- Reproducibility
-- Latency
-- Memory consumption
-- Energy/resource efficiency
+Every validated phase becomes a small native C++ component.
 
-## Phase 7 — AI Engineering Agent [PLANNED]
+Experimental Python -> validated algorithm -> C++ component -> tests -> benchmark -> ARM64 optimization -> NEON/Vulkan optimization -> integration
 
-Use local Qwen Coder as an engineering and evaluation agent.
+## Phase 13 — Production Candidate [FUTURE]
 
-Pipeline:
-
-Qwen Coder
-→ Repository analysis
-→ Proposed change
-→ Implementation
-→ Automated tests
-→ Benchmark
-→ Regression analysis
-→ AI-assisted review
-→ Next experiment
-
-AI-generated changes remain subject to automated testing, benchmarking and validation.
-
-## Phase 8 — Comparative Benchmarking [PLANNED]
-
-Compare OpenMind approaches against conventional LLM inference.
-
-Measure:
-
-- Tokens processed
-- Output quality
-- Latency
-- Memory
-- CPU utilization
-- GPU utilization
-- Energy/resource usage
-- Representation stability
-- Accuracy
-- Reproducibility
-
-The objective is evidence-based comparison rather than assuming alternative inference is superior.
-
-## Phase 9 — Production Candidate [FUTURE]
-
-After experimental validation:
-
-- Stable inference API
+- Stable native API
+- Validated MAF/fractal representation
 - Model/representation packaging
-- Reproducible benchmark suite
-- Device compatibility
+- Device-specific execution paths
 - Failure handling
-- Documentation
 - Security review
-- Release engineering
+- Reproducible release process
 
-## Research Principle
+## Non-Negotiable Research Rules
 
-Build → Test → Measure → Debug → Reproduce → Improve
+Truth Canon GGUF remains canonical.
+Derived representations never silently redefine truth.
+Provenance survives every transformation.
+Rejected, contradictory, pruned, and terminated paths may be retained as negative evidence.
+Experimental success requires reproducible benchmark improvement.
+No alternative inference system is considered a replacement for an LLM until correctness and generalization are demonstrated.
 
-Experimental results must remain clearly separated from validated capabilities.
+## Standard Procedure
+
+Define -> Baseline -> Experiment -> Measure -> Holdout -> Validate -> Componentize -> C++ -> Optimize -> Rebenchmark -> Document -> Commit
+
+## Phase 5A — Truth Canon GGUF → MAF Performance Gate [CRITICAL]
 
 
-## Licensing and Open-Source Strategy
 
-OpenMind original software is released under Apache License 2.0.
+Before expanding MAF into a general inference architecture, determine whether
 
-Original research datasets and results may be released under CC BY 4.0
-when explicitly marked.
+conversion of a copy of the Truth Canon GGUF produces a measurable advantage.
 
-Third-party code, libraries, models and datasets retain their respective
-upstream licenses.
 
-OpenMind follows an open-source-first engineering model: established
-open-source projects are used as foundations, studied, integrated,
-extended and tested while preserving applicable upstream licensing.
 
-Licensing must remain separate from experimental claims. Open-source
-availability does not imply that experimental inference methods have been
-validated as replacements for conventional LLMs.
+The original Truth Canon GGUF remains immutable and is always the reference.
+
+
+
+### Required comparison
+
+
+
+```text
+
+Truth Canon GGUF
+
+       |
+
+       +----> conventional LLM baseline
+
+       |
+
+       +----> MAF representation
+
+```
+
+
+
+### Required metrics
+
+
+
+- persistent model/representation size
+
+- peak RAM
+
+- working memory
+
+- lookup latency
+
+- initialization time
+
+- prompt tokens
+
+- generated tokens
+
+- total tokens
+
+- throughput
+
+- CPU utilization
+
+- GPU utilization
+
+- thermal behavior where measurable
+
+- energy/resource consumption where measurable
+
+- correctness
+
+- reconstruction fidelity
+
+- repeated-prompt consistency
+
+- holdout accuracy
+
+
+
+### Promotion gate
+
+
+
+MAF proceeds toward primary inference only if its measured benefits are
+
+reproducible and correctness/generalization remain acceptable.
+
+
+
+A reduction in storage, memory, or tokens alone is insufficient if correctness
+
+or generalization materially degrades.
+
+
+
+### Negative evidence
+
+
+
+The experiment must preserve:
+
+
+
+- rejected mappings
+
+- contradictory mappings
+
+- pruned mappings
+
+- failed reconstructions
+
+- terminated paths
+
+- unsuccessful compression candidates
+
+
+
+These artifacts may later become training, calibration, routing, or pruning
+
+signals.
+
+
+
+### Experimental sequence
+
+
+
+```text
+
+GGUF
+
+  -> deterministic extraction
+
+  -> MAF conversion
+
+  -> reconstruction/lookup
+
+  -> baseline comparison
+
+  -> holdout validation
+
+  -> resource benchmark
+
+  -> replication
+
+  -> promotion decision
+
+```
+
+
+
+Do not introduce fractalization, fuzzy routing, or ML routing into the primary
+
+comparison until the standalone MAF result has been characterized.

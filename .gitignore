@@ -121,3 +121,17 @@ dist/
 # Local runtime artifacts
 .venv/
 .env
+
+# Local MAF build artifacts
+fractal-maf-threads/maf_affinity
+fractal-maf-threads/maf_basic
+fractal-maf-threads/maf_fractal
+fractal-maf-threads/maf_threads
+
+# Local/generated OpenMind probe outputs
+openmind_probe/logits/
+openmind_probe/multiprompt/*.log
+openmind_probe/multiprompt/*.csv
+
+# Accidental terminal help capture
+ort
