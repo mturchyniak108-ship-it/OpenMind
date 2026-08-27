@@ -8,6 +8,7 @@ These documents are written for people first while remaining structured enough f
 
 - [Getting Started](getting-started/README.md)
 - [Installation and Build](getting-started/INSTALLATION.md)
+- [Command Reference](getting-started/COMMAND_REFERENCE.md)
 - [Glossary](getting-started/GLOSSARY.md)
 
 If you are new to OpenMind:
