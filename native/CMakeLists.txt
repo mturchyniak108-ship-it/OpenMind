@@ -109,3 +109,30 @@ if(OPENMIND_TEST_MODEL)
         COMMAND openmind_inference_test "${OPENMIND_TEST_MODEL}"
     )
 endif()
+
+add_executable(openmind_forest_v9a_2048_live_shadow
+    src/forest_v9a_2048_live_shadow.cpp
+)
+
+target_include_directories(openmind_forest_v9a_2048_live_shadow
+    PRIVATE
+        "${LLAMA_ROOT}/include"
+        "${LLAMA_ROOT}/ggml/include"
+        "${LLAMA_ROOT}/src"
+)
+
+target_link_libraries(openmind_forest_v9a_2048_live_shadow
+    PRIVATE
+        "${LLAMA_LIB_DIR}/libllama.so"
+        "${LLAMA_LIB_DIR}/libggml.so"
+        "${LLAMA_LIB_DIR}/libggml-base.so"
+        "${LLAMA_LIB_DIR}/libggml-cpu.so"
+        "${LLAMA_LIB_DIR}/libggml-vulkan.so"
+        dl
+        m
+)
+
+set_target_properties(openmind_forest_v9a_2048_live_shadow PROPERTIES
+    BUILD_RPATH "${LLAMA_LIB_DIR}"
+    INSTALL_RPATH "${LLAMA_LIB_DIR}"
+)
