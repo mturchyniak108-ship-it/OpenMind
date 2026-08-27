@@ -6,6 +6,9 @@ These documents are written for people first while remaining structured enough f
 
 ## Start Here
 
+- [Getting Started](getting-started/README.md)
+- [Glossary](getting-started/GLOSSARY.md)
+
 If you are new to OpenMind:
 
 1. Read the project `README.md` for the high-level project status.
