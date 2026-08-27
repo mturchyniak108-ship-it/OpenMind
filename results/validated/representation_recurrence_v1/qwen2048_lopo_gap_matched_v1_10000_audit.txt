@@ -1,0 +1,36 @@
+OPENMIND / QWEN-2048 LOPO GAP-MATCHED CONTROL V1
+DEFINITIVE SCIENTIFIC VALIDATION
+
+validation                 : PASS
+protocol                   : PREREGISTERED + VERIFIED
+engine                     : AUDITED + FROZEN
+execution                  : VALID
+primary hypothesis         : PASS
+
+LOPO splits                : 8
+positive enrichments       : 8 / 8
+split random draws         : 10000 / split
+split zero exceedances     : 8 / 8
+Holm robustness            : 8 / 8 PASS
+global random draws        : 10000
+global exceedances         : 0
+empirical p floor          : 0.000099990001
+mean selected recurrence   : +0.544166
+mean gap baseline          : +0.430704
+mean gap enrichment        : +0.113462
+minimum split enrichment   : +0.097583
+maximum split enrichment   : +0.131892
+global null mean           : +0.000051162
+global null sd             : 0.005176207
+global empirical p         : 0.000099990
+
+SUPPORTED CLAIM:
+Training-derived layer-pair topology predicts
+same-token recurrence on held-out prompts beyond
+generic layer-distance effects.
+
+BOUNDARIES:
+Model/corpus-specific until independently replicated.
+No causal transformer recurrence mechanism is claimed.
+No replacement-inference architecture is established.
+p < 1/10001 is not claimed.
