@@ -439,6 +439,100 @@ int main(int argc, char ** argv) {
             << "activation_vectors.csv\n";
     }
 
+    /*
+     * Export ALL token positions for every captured layer.
+     *
+     * llama_get_embeddings_layer_inp() provides a token-major
+     * [token][embedding] buffer for each selected layer.
+     *
+     * Keep activation_vectors.csv unchanged: it remains the
+     * final-token compatibility export used by existing tests.
+     */
+    {
+        std::ofstream out("activation_vectors_all_tokens.csv");
+
+        if (!out) {
+            std::cerr
+                << "ERROR: unable to open "
+                << "activation_vectors_all_tokens.csv\n";
+
+            llama_free(ctx);
+            llama_model_free(model);
+            llama_backend_free();
+
+            return 1;
+        }
+
+        out << "layer,token_index,embedding_dimension";
+
+        for (size_t d = 0; d < n_embd; ++d) {
+            out << ",v" << d;
+        }
+
+        out << "\n";
+
+        for (const LayerVector & v : vectors) {
+
+            for (size_t token = 0;
+                 token < static_cast<size_t>(n_tokens);
+                 ++token) {
+
+                const float * data =
+                    v.data + token * n_embd;
+
+                out
+                    << v.layer
+                    << ","
+                    << token
+                    << ","
+                    << n_embd;
+
+                for (size_t d = 0; d < n_embd; ++d) {
+                    out
+                        << ","
+                        << std::setprecision(9)
+                        << data[d];
+                }
+
+                out << "\n";
+            }
+        }
+
+        out.flush();
+
+        if (!out) {
+            std::cerr
+                << "ERROR: failed while writing "
+                << "activation_vectors_all_tokens.csv\\n";
+
+            out.close();
+
+            llama_free(ctx);
+            llama_model_free(model);
+            llama_backend_free();
+
+            return 1;
+        }
+
+        out.close();
+
+        if (!out) {
+            std::cerr
+                << "ERROR: failed while closing "
+                << "activation_vectors_all_tokens.csv\\n";
+
+            llama_free(ctx);
+            llama_model_free(model);
+            llama_backend_free();
+
+            return 1;
+        }
+
+        std::cout
+            << "\nExported all-token activation tensor to "
+            << "activation_vectors_all_tokens.csv\n";
+    }
+
     std::cout
         << "\n============================================================\n"
         << " FULL CROSS-LAYER RECURRENCE SCAN\n"
