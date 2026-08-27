@@ -303,3 +303,286 @@ GGUF
 Do not introduce fractalization, fuzzy routing, or ML routing into the primary
 
 comparison until the standalone MAF result has been characterized.
+
+## Forest Morphology Research Program
+
+Status: experimental / Labs only.
+
+The Forest program tests whether biological structural analogies
+correspond to measurable representation, storage, routing, or graph
+topologies.
+
+Naming is earned experimentally:
+
+> Nature suggests the hypothesis; benchmarks decide the architecture.
+
+Plant names are not canonical implementation claims until controlled
+experiments demonstrate a distinct computational advantage.
+
+### Established experimental line
+
+#### Lodgepole
+
+Current role:
+
+- hierarchical shared representation
+- trunk/root centroid
+- branch/shared residual hierarchy
+- terminal packaging and coarse addressability
+
+Status:
+
+- RETAIN
+- not deprecated by Orange
+- candidate substrate for hybrid Forest architectures
+
+Validated evidence includes:
+
+- Lodgepole Fractal Storage V1
+- quantized/storage follow-up experiments
+- fair block-addressability controls
+
+#### Orange
+
+Current role:
+
+- correlation-derived non-contiguous terminal wedges
+- selective partial representation access
+- terminal specialization above or within hierarchical structure
+
+Validated sequence:
+
+- Forest V1:
+  Lodgepole vs Orange structural comparison
+- Forest V2:
+  equivalent block addressability established structural access parity
+- Forest V3:
+  correlated non-contiguous Orange wedges showed information
+  concentration advantage
+- Forest V4:
+  Orange grouping generalized across complete held-out token IDs
+- Forest V5:
+  non-oracle layer-conditioned Orange routing passed on held-out tokens
+
+Current Orange result:
+
+- Orange beats Pine/Lodgepole and Random controls at all tested
+  partial-access fractions in every held-out fold
+- non-oracle router retains most of Oracle performance
+- Orange has earned status as a specialized terminal topology
+- production storage and retrieval advantage remain unproven
+
+### Active next gate
+
+#### Forest V6 — Quantized Non-Oracle Orange
+
+Priority: ACTIVE.
+
+Question:
+
+Does Orange's held-out non-oracle routing advantage survive realistic
+quantized wedge storage?
+
+Primary candidate:
+
+- BLOCK_INT8_64
+
+Controls:
+
+- contiguous Lodgepole/Pine BLOCK_INT8_64
+- correlated Orange BLOCK_INT8_64 with non-oracle router
+- correlated Orange BLOCK_INT8_64 with Oracle selector
+
+Required measurements:
+
+- encoded payload bytes
+- routing metadata bytes
+- grouping-map bytes
+- total modeled bytes
+- compression ratio versus flat FP32
+- selected energy fraction
+- Orange/Pine selected-energy ratio
+- router/Oracle retention
+- mean cosine fidelity
+- minimum cosine fidelity
+- mean relative L2 error
+- maximum relative L2 error
+- fold-level consistency
+
+Interpretation boundary:
+
+V6 may validate compressed representation quality and routing behavior.
+It does not by itself establish mmap, filesystem, latency, or complete
+inference-pipeline performance.
+
+### Reserved morphology hypotheses
+
+These experiments are PARKED until the active Orange sequence reaches
+its next decision point.
+
+They must not delay Forest V6.
+
+#### Lady Fern / Local Fern Candidate
+
+Candidate computational property:
+
+- repeated hierarchical/self-similar organization
+- frond -> pinna -> pinnule -> vein structure
+- possible mapping to repeated layer transformations or recurrence
+
+Candidate experiment:
+
+Forest Fern V1 — Cross-Scale Recurrence.
+
+Question:
+
+Can a transformation or displacement model learned at one representation
+scale predict structurally similar transformations at another scale
+better than independent baselines?
+
+Possible measurements:
+
+- recurrence similarity across scale
+- transform reuse
+- residual after shared transform
+- storage required for reused versus independent transforms
+- held-out layer/token generalization
+
+Field-study note:
+
+Prefer a fern species that can be directly observed locally before
+formalizing the biological contract.
+
+#### Daisy
+
+Candidate computational property:
+
+- one apparent object composed of many functional florets
+- central disk units plus surrounding ray units
+- multiple specialized components presented through one interface
+
+Candidate experiment:
+
+Forest Daisy V1 — Composite Representation.
+
+Question:
+
+Can one logical representation be decomposed into multiple small
+specialized components around shared support while improving selective
+retrieval or reconstruction?
+
+Potential controls:
+
+- monolithic representation
+- equal contiguous partition
+- random component partition
+- learned specialized components
+
+Possible measurements:
+
+- specialization
+- redundancy
+- selective reconstruction
+- component independence
+- storage overhead
+- routing cost
+
+#### Dandelion
+
+Candidate computational property:
+
+- dense source structure producing many independently distributable
+  compact units
+- one-to-many packaging and dissemination
+
+Candidate experiment:
+
+Forest Dandelion V1 — Distributed Representation Units.
+
+Question:
+
+Can a representation be encoded into compact independently useful
+fragments that preserve useful partial information and combine cleanly
+when multiple fragments are recovered?
+
+Possible uses:
+
+- portable MAF fragments
+- distributed retrieval
+- constrained-device representation transfer
+- resumable/sharded representation transport
+
+Measurements:
+
+- independent-fragment utility
+- reconstruction versus fragment count
+- redundancy
+- payload overhead
+- loss tolerance
+- deterministic recombination
+
+#### Ivy
+
+Candidate computational property:
+
+- traversal and attachment over an already existing support structure
+- incremental growth
+- opportunistic branching
+- path reuse without replacing the host graph
+
+Candidate experiment:
+
+Forest Ivy V1 — Adaptive Graph Overlay.
+
+Question:
+
+Can a learned traversal layer attach to an existing Truth Graph and
+improve route selection without becoming a second source of canonical
+truth?
+
+Required boundary:
+
+- canonical Truth Graph remains authoritative
+- Ivy may rank, traverse, annotate, or cache
+- Ivy must not silently mutate canonical truth
+
+Potential measurements:
+
+- route length
+- candidate expansion
+- retrieval recall
+- cache reuse
+- overlay size
+- stale-route behavior
+- provenance preservation
+
+### Morphology experiment order
+
+Current priority order:
+
+1. Forest V6 — quantized non-oracle Orange
+2. Forest V7 — production-like Orange indexing / serialization
+3. Forest V8 — wall-clock selective retrieval benchmark
+4. Evaluate whether Orange should become a production terminal topology
+5. Fern recurrence experiment
+6. Daisy composite-representation experiment
+7. Dandelion distributed-fragment experiment
+8. Ivy graph-overlay experiment
+
+This ordering may change if an earlier result falsifies the underlying
+hypothesis.
+
+### Current architecture hypothesis
+
+The present evidence favors a hybrid rather than replacement model:
+
+    Forest
+      |
+      +-- Lodgepole
+      |     hierarchy / shared paths / coarse structure
+      |
+      +-- Orange
+            correlated non-contiguous terminal organization
+
+Other morphologies remain candidate specialized structures until their
+own controlled experiments earn implementation status.
