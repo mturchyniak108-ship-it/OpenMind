@@ -4,7 +4,7 @@
 
 OpenMind must distinguish authoritative information from copied, scraped, derived, mirrored, cloned, synthetic, and unknown information.
 
-The Truth Canon is the canonical knowledge layer. AI-generated or duplicated material must never silently become independent evidence.
+The Canonical Truth Graph is the canonical knowledge layer. AI-generated or duplicated material must never silently become independent evidence.
 
 ## Source classes
 
@@ -47,7 +47,7 @@ confidence
 
 ## Truth protection
 
-The Truth Canon is immutable by default.
+Canonical Truth Graph state is immutable by default.
 
 New information creates an evidence or relationship proposal. Promotion to canonical truth requires an explicit validation path.
 

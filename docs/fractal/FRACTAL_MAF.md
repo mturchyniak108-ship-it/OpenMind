@@ -8,11 +8,11 @@ Investigate whether the Memory/Activation Field (MAF) can represent useful model
 
 The primary maps are:
 
-1. Truth Canon
+1. Canonical Truth Graph
 2. Relationship Map
 3. Landscape Map
 
-The Truth Canon defines canonical knowledge and provenance.
+The Canonical Truth Graph defines canonical knowledge and preserves its evidence and provenance relationships.
 The Relationship Map defines connections between nodes.
 The Landscape Map represents dynamic structural properties including activation density, heatwave relationships, heightmaps, confidence, recurrence, and learned routing signals.
 

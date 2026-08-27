@@ -6,7 +6,7 @@ Every architectural change must be evaluated against the appropriate baseline.
 
 - correctness
 - semantic correctness
-- Truth Canon consistency
+- Canonical Truth Graph consistency
 - contradiction rate
 - provenance correctness
 - repeated-prompt consistency

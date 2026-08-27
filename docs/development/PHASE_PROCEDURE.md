@@ -8,7 +8,7 @@ No experimental result becomes a production capability merely because it appears
 ## Standard Lifecycle
 
 1. Define the hypothesis.
-2. Identify the canonical Truth Canon GGUF and source artifacts.
+2. Identify the Canonical Model Artifact and source artifacts.
 3. Record provenance and hashes.
 4. Establish a baseline.
 5. Build the smallest experimental component.
@@ -28,7 +28,7 @@ No experimental result becomes a production capability merely because it appears
 
 ## Canonical Data Hierarchy
 
-Truth Canon GGUF -> canonical reference.
+Canonical Model Artifact -> authoritative model reference.
 Truth Map -> canonical semantic structure.
 Provenance Map -> evidence lineage.
 Relationship/Vector Map -> derived computational representation.

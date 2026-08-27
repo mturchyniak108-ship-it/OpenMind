@@ -4,11 +4,11 @@
 
 OpenMind investigates whether useful AI computation can be performed through a local, native, representation-driven architecture that can reduce dependence on conventional token-by-token inference while preserving correctness and provenance.
 
-The project treats the Truth Canon GGUF as the canonical model/reference artifact and evaluates MAF, fractal MAF, vector maps, fuzzy logic, machine learning, heatwave/heightmap relationships, and native optimized execution as derived computational systems.
+The project treats the Canonical Model GGUF as the canonical model/reference artifact and evaluates MAF, fractal MAF, vector maps, fuzzy logic, machine learning, heatwave/heightmap relationships, and native optimized execution as derived computational systems.
 
 ## Core Architecture
 
-Truth Canon GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape Map -> Vector Links -> MAF -> Fuzzy/ML Routing -> Fractal MAF -> Validation -> Native C++ -> ARM64/NEON/Vulkan Optimization
+Canonical Model GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape Map -> Vector Links -> MAF -> Fuzzy/ML Routing -> Fractal MAF -> Validation -> Native C++ -> ARM64/NEON/Vulkan Optimization
 
 ## Phase 1 — Native Local Inference [COMPLETE]
 
@@ -30,7 +30,7 @@ Truth Canon GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape M
 - Validate numerical reconstruction
 - Establish reproducible representation baselines
 
-## Phase 3 — Truth Canon GGUF [ACTIVE]
+## Phase 3 — Canonical Model GGUF [ACTIVE]
 
 - Establish canonical GGUF artifact
 - Record model hash and metadata
@@ -50,7 +50,7 @@ Truth Canon GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape M
 
 ## Phase 5 — GGUF to MAF [RESEARCH]
 
-- Convert a copy of the Truth Canon GGUF into MAF
+- Convert a copy of the Canonical Model GGUF into MAF
 - Preserve source correspondence
 - Measure reconstruction fidelity
 - Measure storage size
@@ -143,7 +143,7 @@ Experimental Python -> validated algorithm -> C++ component -> tests -> benchmar
 
 ## Non-Negotiable Research Rules
 
-Truth Canon GGUF remains canonical.
+The Canonical Model GGUF remains the authoritative model artifact.
 Derived representations never silently redefine truth.
 Provenance survives every transformation.
 Rejected, contradictory, pruned, and terminated paths may be retained as negative evidence.
@@ -154,17 +154,17 @@ No alternative inference system is considered a replacement for an LLM until cor
 
 Define -> Baseline -> Experiment -> Measure -> Holdout -> Validate -> Componentize -> C++ -> Optimize -> Rebenchmark -> Document -> Commit
 
-## Phase 5A — Truth Canon GGUF → MAF Performance Gate [CRITICAL]
+## Phase 5A — Canonical Model GGUF → MAF Performance Gate [CRITICAL]
 
 
 
 Before expanding MAF into a general inference architecture, determine whether
 
-conversion of a copy of the Truth Canon GGUF produces a measurable advantage.
+conversion of a copy of the Canonical Model GGUF produces a measurable advantage.
 
 
 
-The original Truth Canon GGUF remains immutable and is always the reference.
+The original Canonical Model GGUF remains immutable and is always the model reference.
 
 
 
@@ -174,7 +174,7 @@ The original Truth Canon GGUF remains immutable and is always the reference.
 
 ```text
 
-Truth Canon GGUF
+Canonical Model GGUF
 
        |
 
