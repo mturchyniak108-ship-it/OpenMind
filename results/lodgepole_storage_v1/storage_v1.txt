@@ -1,0 +1,40 @@
+========================================================================================
+ OPENMIND / LODGEPOLE FRACTAL STORAGE V1
+========================================================================================
+
+Dataset            : activation_vectors_all_tokens.csv
+Vectors            : 364
+Dimensions         : 1536
+Excluded tokens    : [0]
+Branching          : 4
+Maximum depth      : 6
+Tree nodes         : 341
+Terminal leaves    : 256
+
+NODE RESIDUAL MAGNITUDE BY DEPTH
+----------------------------------------------------------------------------------------
+depth   nodes   mean_centroid_norm   mean_parent_residual   residual/centroid
+    0       1         38.536502700          0.000000000         0.000000000
+    1       4         40.777543513         29.531259695         0.724203990
+    2      16         43.508594226         19.385250268         0.445549911
+    3      64         48.615049395         20.665762819         0.425089825
+    4     256         55.205950195         24.746775643         0.448262833
+
+LEAF RESIDUALS
+----------------------------------------------------------------------------------------
+mean original norm : 56.569998417
+mean residual norm : 10.321066706
+residual/original  : 0.182447711
+mean cosine        : 1.000000000000
+min cosine         : 1.000000000000
+max relative error : 6.09497828376e-16
+
+RAW SCALAR ACCOUNTING
+----------------------------------------------------------------------------------------
+flat vectors       : 559104
+hierarchical naive : 1082880
+naive ratio        : 1.936813
+
+NOTE
+----------------------------------------------------------------------------------------
+V1 intentionally stores full-precision residuals. It tests whether residual energy contracts with tree depth; it is not yet a compression benchmark.

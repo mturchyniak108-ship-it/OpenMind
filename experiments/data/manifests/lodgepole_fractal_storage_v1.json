@@ -1,6 +1,6 @@
 {
   "schema": "openmind.lodgepole_fractal_storage.v1",
-  "status": "prepared_not_executed",
+  "status": "executed_lab_candidate",
   "script": {
     "path": "experiments/model_fractal/lodgepole_fractal_storage_v1.py",
     "sha256": "f28cf1d5e27fe43d28cb9c7c97cfb0b4bb5ddfbb83be3466eba9455a6ec2971d"
@@ -12,7 +12,9 @@
     "layers": 28,
     "tokens_before_exclusion": 14,
     "embedding_dimension": 1536,
-    "excluded_tokens": [0],
+    "excluded_tokens": [
+      0
+    ],
     "records_analyzed": 364,
     "tokens_analyzed": 13
   },
@@ -30,5 +32,66 @@
     "exact reconstruction cosine",
     "naive scalar storage ratio"
   ],
-  "interpretation_boundary": "V1 tests residual structure only; full-precision residual accounting is not a compression benchmark."
+  "interpretation_boundary": "V1 tests residual structure only; full-precision residual accounting is not a compression benchmark.",
+  "result": {
+    "path": "results/lodgepole_storage_v1/storage_v1.txt",
+    "sha256": "5e8accf163a18ad1f08cb40f6c984706e65b494a38f9618d69227ee00abfcf7e",
+    "stderr_path": "results/lodgepole_storage_v1/storage_v1.stderr",
+    "vectors": 364,
+    "dimensions": 1536,
+    "tree_nodes": 341,
+    "terminal_leaves": 256,
+    "depth_metrics": {
+      "1": {
+        "parent_residual_norm": 29.531259695,
+        "residual_centroid_ratio": 0.72420399
+      },
+      "2": {
+        "parent_residual_norm": 19.385250268,
+        "residual_centroid_ratio": 0.445549911
+      },
+      "3": {
+        "parent_residual_norm": 20.665762819,
+        "residual_centroid_ratio": 0.425089825
+      },
+      "4": {
+        "parent_residual_norm": 24.746775643,
+        "residual_centroid_ratio": 0.448262833
+      }
+    },
+    "leaf_mean_original_norm": 56.569998417,
+    "leaf_mean_residual_norm": 10.321066706,
+    "leaf_residual_original_ratio": 0.182447711,
+    "mean_reconstruction_cosine": 1.0,
+    "minimum_reconstruction_cosine": 1.0,
+    "maximum_relative_error": 6.09497828376e-16,
+    "flat_scalars": 559104,
+    "hierarchical_naive_scalars": 1082880,
+    "naive_scalar_ratio": 1.936813
+  },
+  "interpretation": {
+    "supported": [
+      "Leaf residual magnitude is substantially smaller than original-vector magnitude.",
+      "Full-precision reconstruction is exact within floating-point precision.",
+      "Reduced-precision and sparse residual encoding are justified follow-up tests."
+    ],
+    "not_supported": [
+      "V1 does not demonstrate storage compression.",
+      "Parent-child residual magnitude does not contract monotonically with tree depth.",
+      "Residual magnitude alone does not prove that residuals can be quantized safely."
+    ],
+    "next_gate": {
+      "experiment": "Lodgepole Fractal Storage V2",
+      "measure": [
+        "actual encoded bytes",
+        "FP16 reconstruction fidelity",
+        "symmetric int8 reconstruction fidelity",
+        "sparse residual reconstruction fidelity",
+        "depth-aware hybrid precision",
+        "cosine fidelity",
+        "relative L2 error"
+      ],
+      "success_question": "Can hierarchical encoding beat flat storage while retaining useful representation geometry?"
+    }
+  }
 }
