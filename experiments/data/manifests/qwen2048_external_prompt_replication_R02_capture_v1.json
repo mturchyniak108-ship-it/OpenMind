@@ -1,0 +1,86 @@
+{
+  "artifacts": {
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/activation_vectors.csv": {
+      "bytes": 926187,
+      "sha256": "08a4e7d7399426c6d0d8a7f67b79a61cfccd56cc5d6445dec2677ad6a151a44a"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/activation_vectors_all_tokens.csv": {
+      "bytes": 16224116,
+      "sha256": "4b529b7771294a68796e7540e80d7613badff7ce1fd85d770997baac04817981"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/probe.stderr": {
+      "bytes": 69879,
+      "sha256": "0664e027b01624dc4f73c00c7aebb2c9efa981e422b52271a6d9b4822ba42ad9"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/probe.stdout": {
+      "bytes": 6115,
+      "sha256": "b64491212478b50cb374dcc3d010da93ce347a56b8bdb589a1f81fbecb10e0e1"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/run_audit.txt": {
+      "bytes": 592,
+      "sha256": "b096011e051931787ce57c9edc0f598a0440027480d08b183effe4f5cd3cac3b"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R02/thermal_governor.txt": {
+      "bytes": 223,
+      "sha256": "84b821de3353c60ed7e29f628d91ecb984844c0fb33694ac527cd23f82e83951"
+    }
+  },
+  "capture_geometry": {
+    "complete_trajectories": 18,
+    "duplicate_layer_token_rows": 0,
+    "embedding_dimension": 2048,
+    "expected_rows": 648,
+    "final_vs_all_token_max_difference": 0.0,
+    "finite_vector_check": "PASS",
+    "layer_range": [
+      0,
+      35
+    ],
+    "layers": 36,
+    "rows": 648,
+    "token_index_zero_captured": true,
+    "token_index_zero_excluded_from_analysis": true,
+    "token_range": [
+      0,
+      17
+    ],
+    "tokens": 18
+  },
+  "execution": {
+    "capture_validation": "PASS",
+    "end": "2026-08-27T04:30:56-07:00",
+    "process_cleanup": "PASS",
+    "start": "2026-08-27T04:30:51-07:00",
+    "thermal_supervision": "PASS",
+    "wall_seconds": 5.309437,
+    "worker_exit": 0
+  },
+  "frozen_contracts": {
+    "capture_runtime_sha256": "18fb725e909bc3403f317c896772a011e77b97fbcf6f3052b2632a7e54f86e3f",
+    "capture_tool_sha256": "08916a959a91c44d881087da9118278694f2cc063cb608c1e30f047144408793",
+    "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "predecessor_capture": {
+    "artifacts_verified_before_R02": true,
+    "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R01_capture_v1.json",
+    "manifest_sha256": "866c3b0c18bc7ae5792ce534624c28caf5ce01fc6f05536eb4f730ba28e4659b",
+    "prompt_id": "R01"
+  },
+  "prompt": {
+    "domain": "physical causal reasoning",
+    "prompt": "Explain why a sealed plastic bottle dents when the warm air inside it cools.",
+    "prompt_id": "R02"
+  },
+  "prompt_id": "R02",
+  "prompt_sha256": "0f4539c22e84ec0b51640808f8043a46e25b9523e0028651699e41b8a986af99",
+  "schema": "openmind.qwen2048_external_prompt_replication.capture.v1",
+  "scientific_boundary": [
+    "R01 and R02 activation captures are now observed.",
+    "No R03 through R08 activation has been captured.",
+    "No prospective replication recurrence statistic has been calculated.",
+    "The frozen predecessor-derived reference topology has not been modified or retrained.",
+    "R01 artifacts were reverified before R02 capture.",
+    "R02 must remain byte-identical before R03 capture."
+  ],
+  "status": "CAPTURE_VALIDATED"
+}
