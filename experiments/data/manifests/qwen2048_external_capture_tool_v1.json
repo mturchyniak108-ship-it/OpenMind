@@ -1,0 +1,90 @@
+{
+  "build": {
+    "binary_bytes": 73240,
+    "binary_path": "native/build/openmind_activation_probe",
+    "binary_sha256": "e195e421b4104e6944828062b37c734db28acc1c7495aac439577b2721fa768b",
+    "clang_version": [
+      "clang version 21.1.8",
+      "Target: aarch64-unknown-linux-android30",
+      "Thread model: posix",
+      "InstalledDir: /data/data/com.termux/files/usr/bin"
+    ],
+    "cmake_path": "native/CMakeLists.txt",
+    "cmake_sha256": "755e73a3196399a1fc779e756ba984766f4c77cf8122fd5999c3c469f69f7229",
+    "cmake_version": [
+      "cmake version 4.3.4",
+      "",
+      "CMake suite maintained and supported by Kitware (kitware.com/cmake)."
+    ],
+    "dependency_file_sha256": "241d7787232e4e0f26dcdad3fd36d8d3623c16d554194d3ed4d9733e681594ae",
+    "link_command": "/data/data/com.termux/files/usr/bin/clang++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/openmind_activation_probe.dir/link.d CMakeFiles/openmind_activation_probe.dir/src/activation_probe.cpp.o -o openmind_activation_probe  -Wl,-rpath,/data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin /data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin/libllama.so /data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin/libggml.so /data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin/libggml-base.so /data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin/libggml-cpu.so /data/data/com.termux/files/home/OpenMind/native/../llama.cpp/build-vulkan/bin/libggml-vulkan.so -ldl -lm",
+    "link_command_sha256": "eadd4bba627508f3682affdcb27aa478eb2673b7bd42c905d11c69f057994da0",
+    "llama_cpp_commit": "dc72703fc69698b1ea68ece8d2dd8a96e6a4e1fe",
+    "object_sha256": "e31dc65d2e0cc68d666fadc0ac67e6b3d37430ed3cbc80fec2379a1f10deeedb"
+  },
+  "capture_contract": {
+    "analysis_excludes_token_index": 0,
+    "capture_all_tokens": true,
+    "dimensions": 2048,
+    "layers": 36,
+    "output_files": [
+      "activation_vectors.csv",
+      "activation_vectors_all_tokens.csv"
+    ],
+    "planned_isolation": "run executable from one dedicated working directory per replication prompt",
+    "prompt_argument": "argv[2]"
+  },
+  "capture_semantics": {
+    "historic_v9a_sha256": "efbff93f9308ccd698d65dd3390bca38aca056b980f2af3427d4cadd75798d99",
+    "historic_v9a_source": "native/src/activation_probe_v9a_2048.cpp",
+    "known_historic_difference": "output paths and diagnostic newline escaping only",
+    "measurement_logic_changed": false,
+    "review": "CAPTURE_SEMANTICS_EQUIVALENT",
+    "review_artifact": "results/runtime/qwen2048_capture_source_semantic_review.txt",
+    "review_sha256": "d515f00e7a325cc9cf1882b9bf30d9a1ea82c37bb6caf9cfc62f23a0b368e0a5",
+    "selected_source": "native/src/activation_probe.cpp",
+    "selected_source_sha256": "a26764b8cb1a4665afc5b0ae6e7e9122a9af9525e5dd6145bfbc6651620f78d0"
+  },
+  "linked_libraries": {
+    "llama.cpp/build-vulkan/bin/libggml-base.so": {
+      "bytes": 1770064,
+      "sha256": "203f8e0c286dacbd5368fa63dd8ce285cd0415d69fca69931182de136c65a3e3"
+    },
+    "llama.cpp/build-vulkan/bin/libggml-cpu.so": {
+      "bytes": 1017464,
+      "sha256": "6cacbbee34afba30bfbed0141fb9b3cd3347030499b1d088a5dd7597155444ce"
+    },
+    "llama.cpp/build-vulkan/bin/libggml-vulkan.so": {
+      "bytes": 53170352,
+      "sha256": "5368c9afd3f8819da26189b68d5542cea460116db1147e193b7d09caeb4c14ae"
+    },
+    "llama.cpp/build-vulkan/bin/libggml.so": {
+      "bytes": 82104,
+      "sha256": "535e412c6ffdd22b83a53e14b4fa76cda3fe15b40059e1919977aa01595d43a2"
+    },
+    "llama.cpp/build-vulkan/bin/libllama.so": {
+      "bytes": 3736272,
+      "sha256": "a7345bc68b534451924f22ea7827632e49bccc57d93cbf090f346d80ccc5ab35"
+    }
+  },
+  "model_contract": {
+    "bytes": 2104932768,
+    "path": "/data/data/com.termux/files/home/models/qwen2.5-3b-q4_k_m.gguf",
+    "sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+  },
+  "replication_protocol": {
+    "path": "experiments/data/manifests/qwen2048_external_prompt_replication_v1_protocol.json",
+    "sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "schema": "openmind.qwen2048_external_capture_tool.provenance.v1",
+  "scientific_boundary": [
+    "No model inference was performed while freezing this capture tool.",
+    "No replication activation was captured while freezing this capture tool.",
+    "R01 through R08 remain unobserved.",
+    "The tracked capture source is used instead of the untracked path-specialized historic copy.",
+    "Each future replication prompt must use the exact frozen protocol text.",
+    "Each future capture must use a dedicated output directory so predecessor files cannot be overwritten."
+  ],
+  "scientific_role": "prospective external-prompt activation capture executable",
+  "status": "CAPTURE_TOOL_FROZEN"
+}
