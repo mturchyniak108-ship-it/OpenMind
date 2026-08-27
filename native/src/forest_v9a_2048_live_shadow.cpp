@@ -655,7 +655,7 @@ int main(
                 reconstructed
             );
 
-        const double residual_energy =
+        const double activation_energy =
             energy_fraction(
                 residual,
                 reconstructed_residual
@@ -723,7 +723,7 @@ int main(
 
         std::cout
             << "====================================================================\n"
-            << " OPENMIND / FOREST V9A — LIVE FULL-ACCESS SHADOW RECONSTRUCTION\n"
+            << " OPENMIND / FOREST V9A-2048 — LIVE FULL-ACCESS SHADOW RECONSTRUCTION\n"
             << "====================================================================\n\n";
 
         std::cout
@@ -762,8 +762,8 @@ int main(
             << "encoded payload bytes     : "
             << encoded_bytes
             << "\n"
-            << "residual energy fraction  : "
-            << residual_energy
+            << "activation energy fraction: "
+            << activation_energy
             << "\n"
             << "activation cosine         : "
             << cos
@@ -787,6 +787,9 @@ int main(
             << "shadow consumed by llama  : NO\n"
             << "llama activation written  : NO\n\n";
 
+        const bool source_copy_intact =
+            source_copy_error == 0.0;
+
         const bool source_unchanged =
             source_mutation_error == 0.0;
 
@@ -800,6 +803,9 @@ int main(
             << "--------------------------------------------------------------------\n"
             << "live activation capture   : PASS\n"
             << "Forest artifact read      : PASS\n"
+            << "source copy intact        : "
+            << (source_copy_intact ? "PASS" : "FAIL")
+            << "\n"
             << "source activation intact  : "
             << (
                 source_unchanged
@@ -816,6 +822,7 @@ int main(
             << "\n";
 
         if (
+            source_copy_intact &&
             source_unchanged &&
             reconstruction_valid
         ) {
@@ -845,6 +852,7 @@ int main(
         llama_backend_free();
 
         return (
+            source_copy_intact &&
             source_unchanged &&
             reconstruction_valid
         )
