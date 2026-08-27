@@ -1,0 +1,728 @@
+{
+  "corpus_load_seconds": 2.1564165099989623,
+  "corpus_sha256": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8",
+  "excluded_token": 0,
+  "final_gate": "PASS",
+  "layer_pairs": 630,
+  "permutations": 1000,
+  "schema": "openmind.qwen2048_lopo_recurrence.result.v1",
+  "scientific_final": true,
+  "seed": 1337,
+  "split_passes": 8,
+  "splits": [
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.32570211645406155,
+      "heldout_prompt": "P01",
+      "heldout_trajectories": 13,
+      "null_mean": 5.192286465671364e-05,
+      "null_sd": 0.051213114262214345,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.25144263083119034,
+      "selected_mean_delta": 0.5771447472852519,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.992515404242821,
+      "split": "LOPO_P01",
+      "split_seed": 1337,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6631497320157331,
+          "pair": "L01<->L02",
+          "training_delta": 0.6529193018767216
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6639335921437034,
+          "pair": "L05<->L06",
+          "training_delta": 0.6361629689921455
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6140542584266754,
+          "pair": "L01<->L03",
+          "training_delta": 0.6263007910342303
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6604106969720976,
+          "pair": "L06<->L07",
+          "training_delta": 0.6200269809152577
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6587770280875349,
+          "pair": "L04<->L05",
+          "training_delta": 0.6175259789960028
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.5916769229896487,
+          "pair": "L01<->L04",
+          "training_delta": 0.6029912412239239
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6354319012976801,
+          "pair": "L07<->L08",
+          "training_delta": 0.6001096732653151
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6210237887198069,
+          "pair": "L08<->L09",
+          "training_delta": 0.5968786172808292
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6431728704461003,
+          "pair": "L03<->L04",
+          "training_delta": 0.5964701743761474
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.623674795960331,
+          "pair": "L09<->L10",
+          "training_delta": 0.5934702286960497
+        }
+      ],
+      "training_prompts": [
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 92,
+      "z": 11.26845794742815
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.3064364401749829,
+      "heldout_prompt": "P02",
+      "heldout_trajectories": 11,
+      "null_mean": -0.0036349096864930885,
+      "null_sd": 0.056411149847489184,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.2487515317845131,
+      "selected_mean_delta": 0.555187971959496,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9935630499254998,
+      "split": "LOPO_P02",
+      "split_seed": 1338,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6686609658029836,
+          "pair": "L01<->L02",
+          "training_delta": 0.6521319827642574
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6368508483723667,
+          "pair": "L05<->L06",
+          "training_delta": 0.6400319323880509
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6038688617713563,
+          "pair": "L06<->L07",
+          "training_delta": 0.628104385943935
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6136168271201347,
+          "pair": "L04<->L05",
+          "training_delta": 0.62397743627706
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6514375740644761,
+          "pair": "L01<->L03",
+          "training_delta": 0.6209603173716873
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5920851650508696,
+          "pair": "L07<->L08",
+          "training_delta": 0.6063020641577166
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6009079462921249,
+          "pair": "L03<->L04",
+          "training_delta": 0.6025080206838582
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5727185493831635,
+          "pair": "L09<->L10",
+          "training_delta": 0.6007496924927879
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6005765800008034,
+          "pair": "L08<->L09",
+          "training_delta": 0.5997996470978296
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.5923532414712067,
+          "pair": "L04<->L06",
+          "training_delta": 0.5978937524984417
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 94,
+      "z": 9.906248731975843
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.30144466361388556,
+      "heldout_prompt": "P03",
+      "heldout_trajectories": 13,
+      "null_mean": 0.00024339142432665452,
+      "null_sd": 0.04825381337597319,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.2457742331072037,
+      "selected_mean_delta": 0.5472188967210893,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9935631938987958,
+      "split": "LOPO_P03",
+      "split_seed": 1339,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6528684836907301,
+          "pair": "L01<->L02",
+          "training_delta": 0.6543880516374365
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6569737262129323,
+          "pair": "L05<->L06",
+          "training_delta": 0.6371572355536842
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6001013937726337,
+          "pair": "L01<->L03",
+          "training_delta": 0.6282940574133791
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6469140053191371,
+          "pair": "L06<->L07",
+          "training_delta": 0.6219550797228235
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6304898631172118,
+          "pair": "L04<->L05",
+          "training_delta": 0.621567002563192
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.5807909894284415,
+          "pair": "L01<->L04",
+          "training_delta": 0.6045463745898106
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6139960256782553,
+          "pair": "L07<->L08",
+          "training_delta": 0.6031719412109472
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6314466001841291,
+          "pair": "L03<->L04",
+          "training_delta": 0.5981453558421432
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6171883141069536,
+          "pair": "L08<->L09",
+          "training_delta": 0.5974265422255225
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.60302702172555,
+          "pair": "L04<->L06",
+          "training_delta": 0.5963689267478213
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 92,
+      "z": 11.335384025195317
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.2879890638849255,
+      "heldout_prompt": "P04",
+      "heldout_trajectories": 16,
+      "null_mean": -0.0015039965837492235,
+      "null_sd": 0.039547835577246705,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.24207171343913203,
+      "selected_mean_delta": 0.5300607773240575,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9936507776537609,
+      "split": "LOPO_P04",
+      "split_seed": 1340,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6356571493832632,
+          "pair": "L01<->L02",
+          "training_delta": 0.6568468136813603
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6182669917587678,
+          "pair": "L05<->L06",
+          "training_delta": 0.6426867690471363
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5866553168105717,
+          "pair": "L04<->L05",
+          "training_delta": 0.6278290806069976
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6133816068972019,
+          "pair": "L01<->L03",
+          "training_delta": 0.6263968841098694
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.616503314784481,
+          "pair": "L06<->L07",
+          "training_delta": 0.6262994640849172
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.562059347965342,
+          "pair": "L03<->L04",
+          "training_delta": 0.6080578204448271
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5979838298638601,
+          "pair": "L07<->L08",
+          "training_delta": 0.6054593977558608
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.5813452902009755,
+          "pair": "L01<->L04",
+          "training_delta": 0.6044671887651629
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.563998210815922,
+          "pair": "L04<->L06",
+          "training_delta": 0.6019444711634823
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5879981159628775,
+          "pair": "L09<->L10",
+          "training_delta": 0.5985668972671144
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P03",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 89,
+      "z": 13.441058559817497
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.29749930804918595,
+      "heldout_prompt": "P05",
+      "heldout_trajectories": 12,
+      "null_mean": -0.0008604963088241711,
+      "null_sd": 0.05547227063609644,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.253373221504483,
+      "selected_mean_delta": 0.5508725295536689,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9973706156982004,
+      "split": "LOPO_P05",
+      "split_seed": 1341,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6612117577192795,
+          "pair": "L01<->L02",
+          "training_delta": 0.6531961553476436
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6240293253811054,
+          "pair": "L05<->L06",
+          "training_delta": 0.6418635785296595
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6050565325142372,
+          "pair": "L06<->L07",
+          "training_delta": 0.6279347186949521
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6145534463757708,
+          "pair": "L04<->L05",
+          "training_delta": 0.623843633526255
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6385501755903467,
+          "pair": "L01<->L03",
+          "training_delta": 0.6228013742965629
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5941550520691918,
+          "pair": "L03<->L04",
+          "training_delta": 0.6034727198585629
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6236266083768828,
+          "pair": "L07<->L08",
+          "training_delta": 0.6017961436825718
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6073760525655892,
+          "pair": "L08<->L09",
+          "training_delta": 0.5988282938742888
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.6209446142587747,
+          "pair": "L01<->L04",
+          "training_delta": 0.5988101424711916
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.5876046199496213,
+          "pair": "L04<->L06",
+          "training_delta": 0.5985721270015253
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 93,
+      "z": 9.94610495542748
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.2687843507721602,
+      "heldout_prompt": "P06",
+      "heldout_trajectories": 14,
+      "null_mean": -0.00014937378927398304,
+      "null_sd": 0.047689081727601834,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.2536870834754927,
+      "selected_mean_delta": 0.5224714342476529,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9900007666578003,
+      "split": "LOPO_P06",
+      "split_seed": 1342,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6501046999745945,
+          "pair": "L01<->L02",
+          "training_delta": 0.6547828778825987
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6264872200954505,
+          "pair": "L05<->L06",
+          "training_delta": 0.6415124507133244
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6073349469804041,
+          "pair": "L06<->L07",
+          "training_delta": 0.6276092309140712
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6158361583757516,
+          "pair": "L04<->L05",
+          "training_delta": 0.6236603889548292
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6326192140952431,
+          "pair": "L01<->L03",
+          "training_delta": 0.6236486545101492
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5818272585966192,
+          "pair": "L07<->L08",
+          "training_delta": 0.6077674793654666
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5717151330050516,
+          "pair": "L03<->L04",
+          "training_delta": 0.6066784225820115
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5545019050821343,
+          "pair": "L09<->L10",
+          "training_delta": 0.6033520702500778
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5788497338873626,
+          "pair": "L08<->L09",
+          "training_delta": 0.6029034822568926
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.6056525349009165,
+          "pair": "L01<->L04",
+          "training_delta": 0.6009947252365999
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P07",
+        "P08"
+      ],
+      "training_trajectories": 91,
+      "z": 10.95891950744861
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.27599420298905114,
+      "heldout_prompt": "P07",
+      "heldout_trajectories": 13,
+      "null_mean": 0.0001371436210973739,
+      "null_sd": 0.047548957667066426,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.25672577490304754,
+      "selected_mean_delta": 0.5327199778920987,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9896491358782773,
+      "split": "LOPO_P07",
+      "split_seed": 1343,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6853950843854651,
+          "pair": "L01<->L02",
+          "training_delta": 0.6497413943953314
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6441058157124084,
+          "pair": "L05<->L06",
+          "training_delta": 0.6389955084823306
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6133722303757141,
+          "pair": "L06<->L07",
+          "training_delta": 0.6267467618575983
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6259206064998865,
+          "pair": "L04<->L05",
+          "training_delta": 0.6222197535085241
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6743066418422212,
+          "pair": "L01<->L03",
+          "training_delta": 0.6176933076891523
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5705646291754962,
+          "pair": "L07<->L08",
+          "training_delta": 0.6093764264256271
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5499122233128764,
+          "pair": "L08<->L09",
+          "training_delta": 0.6070374123389621
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5640278681717164,
+          "pair": "L09<->L10",
+          "training_delta": 0.6019912183801376
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6184646138145975,
+          "pair": "L03<->L04",
+          "training_delta": 0.599999925323505
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.6003038718039856,
+          "pair": "L04<->L06",
+          "training_delta": 0.5967579481651875
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P08"
+      ],
+      "training_trajectories": 92,
+      "z": 11.200725744612509
+    },
+    {
+      "empirical_p": 0.000999000999000999,
+      "exceedances": 0,
+      "heldout_all_pair_mean_delta": 0.29321296771656075,
+      "heldout_prompt": "P08",
+      "heldout_trajectories": 13,
+      "null_mean": -0.0007194774144115858,
+      "null_sd": 0.05013190782653231,
+      "primary_split_pass": true,
+      "selected_enrichment": 0.2444402945964667,
+      "selected_mean_delta": 0.5376532623130275,
+      "selected_positive_fraction": 1.0,
+      "spearman_training_vs_heldout": 0.9933390274771835,
+      "split": "LOPO_P08",
+      "split_seed": 1344,
+      "top10_selected": [
+        {
+          "gap": 1,
+          "heldout_delta": 0.6165369721807359,
+          "pair": "L01<->L02",
+          "training_delta": 0.6595782675674356
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6464268554119879,
+          "pair": "L05<->L06",
+          "training_delta": 0.6386639313823906
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.5737089309774895,
+          "pair": "L01<->L03",
+          "training_delta": 0.6320644092412567
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.647138974661474,
+          "pair": "L06<->L07",
+          "training_delta": 0.6219229412453469
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6356096346726932,
+          "pair": "L04<->L05",
+          "training_delta": 0.6208356066266946
+        },
+        {
+          "gap": 3,
+          "heldout_delta": 0.5414553905344395,
+          "pair": "L01<->L04",
+          "training_delta": 0.6101657458603824
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.5965425273025949,
+          "pair": "L03<->L04",
+          "training_delta": 0.6031316519680768
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6206841961152221,
+          "pair": "L07<->L08",
+          "training_delta": 0.6022164882913804
+        },
+        {
+          "gap": 1,
+          "heldout_delta": 0.6103828278585157,
+          "pair": "L08<->L09",
+          "training_delta": 0.598398754546728
+        },
+        {
+          "gap": 2,
+          "heldout_delta": 0.605996273442849,
+          "pair": "L04<->L06",
+          "training_delta": 0.5959447479310641
+        }
+      ],
+      "training_prompts": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "training_trajectories": 92,
+      "z": 10.739123306264943
+    }
+  ],
+  "top_k": 50,
+  "total_runtime_seconds": 2.40642479097005
+}
