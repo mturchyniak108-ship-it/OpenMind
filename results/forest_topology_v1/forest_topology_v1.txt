@@ -1,0 +1,90 @@
+================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V1 — LODGEPOLE VS ORANGE
+================================================================================================================
+
+DATASET
+----------------------------------------------------------------------------------------------------------------
+path                      : activation_vectors_all_tokens.csv
+vectors                   : 364
+dimensions                : 1536
+tree nodes                : 341
+terminal leaves           : 256
+branching                 : 4
+maximum depth             : 6
+wedge size                : 64
+wedges / full vector      : 24
+
+BIOLOGICAL / COMPUTATIONAL CONTRACT
+----------------------------------------------------------------------------------------------------------------
+LODGEPOLE: trunk=root, branches=shared residuals, needles=terminal residuals, cones=leaf packages, scales=directory entries, seeds=item routes
+ORANGE: trunk=root, branches=shared residuals, leaves=terminal clusters, fruit=item representation, wedges=64-component blocks, seeds=item routes
+
+SHARED ENCODING
+----------------------------------------------------------------------------------------------------------------
+flat FP32 bytes           : 2236416
+root FP32 bytes           : 6144
+FP16 node bytes           : 1044480
+BLOCK_INT8_64 item bytes  : 594048
+shared encoded payload    : 1644672
+payload ratio vs flat     : 0.735405220
+payload saving            : 0.264594780
+
+FULL RECONSTRUCTION FIDELITY
+----------------------------------------------------------------------------------------------------------------
+mean cosine               : 0.999970500263
+minimum cosine            : 0.991610043926
+mean relative L2          : 0.002462710181
+maximum relative L2       : 0.129729751845
+
+TOPOLOGY METADATA
+----------------------------------------------------------------------------------------------------------------
+Lodgepole cone headers    : 1024
+Lodgepole scale directory : 3640
+Lodgepole seeds           : 2912
+Lodgepole metadata total  : 7576
+Lodgepole total bytes     : 1652248
+Lodgepole ratio vs flat   : 0.738792783
+
+Orange fruit headers      : 1456
+Orange wedge directory    : 69888
+Orange seeds              : 2912
+Orange metadata total     : 74256
+Orange total bytes        : 1718928
+Orange ratio vs flat      : 0.768608345
+
+PARTIAL ACCESS / TOUCHED BYTES
+----------------------------------------------------------------------------------------------------------------
+request    pine_mean     orange_mean   orange/pine   reduction
+   0.25     20086.000     18900.000     0.940954    0.059046
+   0.50     20086.000     19356.000     0.963656    0.036344
+   0.75     20086.000     19812.000     0.986359    0.013641
+   1.00     20086.000     20268.000     1.009061   -0.009061
+
+ORANGE WEDGE FIDELITY
+----------------------------------------------------------------------------------------------------------------
+request   mean_cosine   min_cosine    mean_rel_l2   max_rel_l2
+   0.25   0.999980156   0.994579100   0.002354921   0.104021275
+   0.50   0.999973516   0.992050471   0.002304358   0.125899803
+   0.75   0.999975088   0.992527274   0.002296140   0.122211577
+   1.00   0.999970500   0.991610044   0.002462710   0.129729752
+
+FULL-ACCESS COMPARISON
+----------------------------------------------------------------------------------------------------------------
+Lodgepole touched bytes   : 20086.000
+Orange touched bytes      : 20268.000
+Orange/Lodgepole          : 1.009061038
+
+FOREST V1 QUESTIONS
+----------------------------------------------------------------------------------------------------------------
+1. Does cone/seed metadata preserve a coherent Lodgepole packaging model?
+2. Does wedge addressability reduce touched bytes for partial retrieval?
+3. Does wedge-only reconstruction retain the same quantization quality on addressed dimensions?
+4. Is Orange's extra wedge-directory metadata worth its retrieval reduction?
+
+INTERPRETATION BOUNDARY
+----------------------------------------------------------------------------------------------------------------
+Forest V1 uses structural 64-component wedges.
+It does NOT claim those wedges are semantic facets.
+Both species share identical tree construction and encoded numerical payload for a fair first comparison.
+Touched-byte results are deterministic access-model measurements, not yet wall-clock mmap/storage benchmarks.
+A later Forest benchmark may learn or derive semantic wedges only if this structural experiment justifies it.

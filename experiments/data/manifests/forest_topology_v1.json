@@ -1,0 +1,94 @@
+{
+  "artifact": {
+    "result": {
+      "path": "results/forest_topology_v1/forest_topology_v1.txt",
+      "sha256": "e075f18b8e80753c2c9fd284f358931ac0afc2249d7414e02907243671051ae6"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v1.py",
+      "sha256": "f7d259ea1087bf7661c1c0c5cfa9cd18ba65302f00ae5a6e20e95b6535f03c18"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v1/forest_topology_v1.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "dataset": {
+    "branching": 4,
+    "dimensions": 1536,
+    "excluded_tokens": [
+      0
+    ],
+    "maximum_depth": 6,
+    "path": "activation_vectors_all_tokens.csv",
+    "vectors": 364
+  },
+  "lodgepole": {
+    "contract": {
+      "branches": "shared residual hierarchy",
+      "cones": "terminal-leaf packages",
+      "needles": "terminal residuals",
+      "scales": "needle directory entries",
+      "seeds": "item routes",
+      "trunk": "root centroid"
+    },
+    "metadata_bytes": 7576,
+    "ratio_vs_flat": 0.738792783,
+    "total_bytes": 1652248
+  },
+  "next_gate": {
+    "access_modes": [
+      "PINE_FULL",
+      "PINE_BLOCK",
+      "ORANGE_WEDGE",
+      "ORANGE_CACHED_WEDGE"
+    ],
+    "experiment": "Forest Topology V2",
+    "question": "Does Orange retain an access advantage when Lodgepole receives equivalent block-level terminal addressability?"
+  },
+  "not_yet_supported": [
+    "Forest V1 does not demonstrate that Orange topology intrinsically beats Lodgepole.",
+    "The V1 partial-access comparison gives Orange block-level access while Lodgepole materializes the full terminal residual.",
+    "64-component wedges are structural and are not demonstrated semantic facets.",
+    "Touched bytes are modeled rather than measured wall-clock storage-engine accesses."
+  ],
+  "orange": {
+    "contract": {
+      "branches": "shared residual hierarchy",
+      "fruit": "item representation",
+      "leaves": "terminal clusters",
+      "seeds": "item routes",
+      "trunk": "root centroid",
+      "wedges": "64-component terminal blocks"
+    },
+    "metadata_bytes": 74256,
+    "ratio_vs_flat": 0.768608345,
+    "total_bytes": 1718928
+  },
+  "partial_access": {
+    "orange_reduction_vs_pine": {
+      "0.25": 0.059046,
+      "0.50": 0.036344,
+      "0.75": 0.013641,
+      "1.00": -0.009061
+    }
+  },
+  "schema": "openmind.forest_topology.v1",
+  "shared_encoding": {
+    "flat_fp32_bytes": 2236416,
+    "maximum_relative_l2": 0.129729751845,
+    "mean_cosine": 0.999970500263,
+    "minimum_cosine": 0.991610043926,
+    "payload_bytes": 1644672,
+    "payload_saving": 0.26459478,
+    "root": "FP32",
+    "shared_nodes": "FP16",
+    "terminal_residuals": "BLOCK_INT8_64"
+  },
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Cone/scale/seed packaging can be represented without changing numerical reconstruction.",
+    "Wedge-level access can reduce modeled touched bytes for partial terminal access.",
+    "The additional Orange directory metadata creates a measurable storage cost."
+  ]
+}
