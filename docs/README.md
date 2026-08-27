@@ -62,6 +62,7 @@ AI-specific navigation and repository rules are under [AI Documentation](ai/READ
 ### Architecture
 
 - [System Architecture](architecture/ARCHITECTURE.md)
+- [Authority and Terminology](architecture/AUTHORITY_AND_TERMINOLOGY.md)
 - [Inference Pipeline](architecture/INFERENCE_PIPELINE.md)
 - [Representation Pipeline](architecture/REPRESENTATION_PIPELINE.md)
 
