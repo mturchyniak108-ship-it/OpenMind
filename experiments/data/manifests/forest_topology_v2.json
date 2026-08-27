@@ -1,0 +1,60 @@
+{
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v2/forest_topology_v2.txt",
+      "sha256": "1234c1b0a6390dee1dac7b6dea11d21c0e68d297b37e48b82771d36fa4ece88a"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v2.py",
+      "sha256": "9cb30cb755ce3b7cb9167816aaefcfd3a5c4868e4bcc634b5a58227950f98a65"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v2/forest_topology_v2.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "cached_access_difference_bytes": -4,
+  "experiment": {
+    "block_size": 64,
+    "dimensions": 1536,
+    "purpose": "Compare Lodgepole and Orange under equivalent 64-component terminal addressability.",
+    "vectors": 364
+  },
+  "fair_access": {
+    "mean_orange_pine_ratio": 0.999795654855,
+    "result": "structural_access_parity"
+  },
+  "fidelity": {
+    "full_max_relative_l2": 0.129729752,
+    "full_mean_cosine": 0.9999705,
+    "full_mean_relative_l2": 0.00246271,
+    "full_minimum_cosine": 0.991610044
+  },
+  "metadata": {
+    "difference_orange_minus_lodgepole": -1024,
+    "lodgepole_bytes": 75280,
+    "orange_bytes": 74256
+  },
+  "next_gate": {
+    "candidate_method": "dimension covariance/correlation grouping",
+    "compare_against": "contiguous BLOCK_INT8_64 Lodgepole baseline",
+    "experiment": "Forest Topology V3",
+    "hypothesis": "Non-contiguous wedges derived from representation structure may concentrate useful information better than contiguous terminal blocks."
+  },
+  "not_supported": [
+    "Forest V2 does not justify Orange as a distinct architecture when wedges are ordinary contiguous 64-component blocks.",
+    "Forest V2 does not test semantic or learned wedges."
+  ],
+  "payload": {
+    "encoded_payload_bytes": 1644672,
+    "flat_fp32_bytes": 2236416,
+    "saving": 0.26459478
+  },
+  "schema": "openmind.forest_topology.v2",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Equivalent 64-component addressability removes the meaningful Orange advantage observed in V1.",
+    "Contiguous structural wedges and Lodgepole blocks are functionally equivalent under this benchmark.",
+    "Forest V1's partial-access advantage was primarily caused by asymmetric access granularity."
+  ]
+}
