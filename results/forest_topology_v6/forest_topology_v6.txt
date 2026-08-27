@@ -1,0 +1,89 @@
+====================================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V6 — QUANTIZED NON-ORACLE ORANGE
+====================================================================================================================================
+
+EXPERIMENT CONTRACT
+------------------------------------------------------------------------------------------------------------------------------------
+Pine and Orange both use BLOCK_INT8_64 quantization for selected terminal groups.
+Orange groups and layer-conditioned routing statistics are learned from training tokens only.
+Held-out residual values are never inspected before non-oracle routing.
+Orange Oracle is retained only as an upper-bound selection control.
+
+GLOBAL ACCOUNTING
+------------------------------------------------------------------------------------------------------------------------------------
+vectors                    : 364
+tokens                     : 13
+dimensions                 : 1536
+layers                     : 28
+group size                 : 64
+groups                     : 24
+flat FP32 bytes            : 2236416
+Orange group map bytes     : 3072
+Orange router bytes        : 2688
+Orange fixed metadata      : 5760
+
+FOLD RESULTS
+------------------------------------------------------------------------------------------------------------------------------------
+
+FOLD 1
+  held-out tokens           : 3,7,10,12
+  request pine_energy orange_energy oracle_energy orange/pine router/oracle pine_cos orange_cos orange_l2 pine_l2
+    0.125 0.347275237   0.437300679   0.444716096 1.259233691   0.983325503 0.57318642 0.65208218 0.74154745 0.80045088
+    0.250 0.475016658   0.563005765   0.591402952 1.185233730   0.951983352 0.68130035 0.74603864 0.65241254 0.71604312
+    0.500 0.673171844   0.751919648   0.785232261 1.116980240   0.957576103 0.81824828 0.86610777 0.49113649 0.56358920
+    0.750 0.840644928   0.890925925   0.913636508 1.059812407   0.975142650 0.91630196 0.94365723 0.32545542 0.39251773
+
+FOLD 2
+  held-out tokens           : 1,8,13
+  request pine_energy orange_energy oracle_energy orange/pine router/oracle pine_cos orange_cos orange_l2 pine_l2
+    0.125 0.353248033   0.466495267   0.520387314 1.320588435   0.896438584 0.57427705 0.67051435 0.71826697 0.79529708
+    0.250 0.514056102   0.585837489   0.647077969 1.139637264   0.905358423 0.70923596 0.75954611 0.63157561 0.68774066
+    0.500 0.713114705   0.794208167   0.817882918 1.113717278   0.971053619 0.84256619 0.89005499 0.44485003 0.52760181
+    0.750 0.867548813   0.919750763   0.932691569 1.060171773   0.986125310 0.93097304 0.95874223 0.27771575 0.35865266
+
+FOLD 3
+  held-out tokens           : 2,4,6
+  request pine_energy orange_energy oracle_energy orange/pine router/oracle pine_cos orange_cos orange_l2 pine_l2
+    0.125 0.354550095   0.395947181   0.424472986 1.116759483   0.932797124 0.57974996 0.61248012 0.76519336 0.79540468
+    0.250 0.472936075   0.513806264   0.568965009 1.086418000   0.903054242 0.67880369 0.70963536 0.68621456 0.71603998
+    0.500 0.663125930   0.735678131   0.764759278 1.109409386   0.961973464 0.81154916 0.85621080 0.50559248 0.57026529
+    0.750 0.837388654   0.887650050   0.907304172 1.060021586   0.978337891 0.91450914 0.94180283 0.33006693 0.39589330
+
+FOLD 4
+  held-out tokens           : 5,9,11
+  request pine_energy orange_energy oracle_energy orange/pine router/oracle pine_cos orange_cos orange_l2 pine_l2
+    0.125 0.369752346   0.404801448   0.424686080 1.094790747   0.953178045 0.59487454 0.62191930 0.76073634 0.78693481
+    0.250 0.493774315   0.524095445   0.560813022 1.061406859   0.934527952 0.69616953 0.71705734 0.67874249 0.70366013
+    0.500 0.685641012   0.717874424   0.760350614 1.047012082   0.944136049 0.82592438 0.84529741 0.52075209 0.55260645
+    0.750 0.844032047   0.887421718   0.907752764 1.051407612   0.977602882 0.91814064 0.94164212 0.32886122 0.38821567
+
+CROSS-FOLD QUANTIZED SUMMARY
+------------------------------------------------------------------------------------------------------------------------------------
+request pine_energy orange_energy oracle_energy orange/pine router/oracle pine_cos orange_cos pine_l2 orange_l2 bytes/item fold_wins
+  0.125 0.356206428   0.426136144   0.453565619 1.196317950   0.939524791 0.58052199 0.63924899 0.79452186 0.74643603    204.000    4/4
+  0.250 0.488945787   0.546686241   0.592064738 1.118091729   0.923355515 0.69137738 0.73306936 0.70587097 0.66223630    408.000    4/4
+  0.500 0.683763373   0.749920093   0.782056267 1.096753822   0.958908104 0.82457200 0.86441774 0.55351568 0.49058277    816.000    4/4
+  0.750 0.847403611   0.896437114   0.915346253 1.057863222   0.979342092 0.91998119 0.94646110 0.38381984 0.31552483   1224.000    4/4
+
+MODELED STORAGE
+------------------------------------------------------------------------------------------------------------------------------------
+BLOCK_INT8_64 bytes/block : 68
+full blocks/item          : 24
+Pine full payload bytes   : 594048
+Orange full payload bytes : 594048
+Orange map bytes          : 3072
+Orange router bytes       : 2688
+Orange modeled total      : 599808
+Pine ratio vs flat FP32   : 0.265625000
+Orange ratio vs flat FP32 : 0.268200549
+
+FOREST V6 DECISION
+------------------------------------------------------------------------------------------------------------------------------------
+result                     : QUANTIZED NON-ORACLE ORANGE PASSES
+
+INTERPRETATION BOUNDARY
+------------------------------------------------------------------------------------------------------------------------------------
+V6 applies the same BLOCK_INT8_64 quantizer to Pine and Orange selected groups.
+The Orange grouping and router are trained only on non-held-out token trajectories.
+Orange grouping-map and router-score metadata are explicitly modeled.
+This remains an in-memory numerical experiment; serialization, mmap, filesystem, cache behavior, and wall-clock retrieval are not yet measured.
