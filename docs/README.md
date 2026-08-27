@@ -7,6 +7,7 @@ These documents are written for people first while remaining structured enough f
 ## Start Here
 
 - [Getting Started](getting-started/README.md)
+- [Installation and Build](getting-started/INSTALLATION.md)
 - [Glossary](getting-started/GLOSSARY.md)
 
 If you are new to OpenMind:
