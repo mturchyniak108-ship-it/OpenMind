@@ -1,0 +1,34 @@
+{
+  "schema": "openmind.lodgepole_fractal_storage.v1",
+  "status": "prepared_not_executed",
+  "script": {
+    "path": "experiments/model_fractal/lodgepole_fractal_storage_v1.py",
+    "sha256": "f28cf1d5e27fe43d28cb9c7c97cfb0b4bb5ddfbb83be3466eba9455a6ec2971d"
+  },
+  "input": {
+    "dataset": "activation_vectors_all_tokens.csv",
+    "sha256": "863d6770a5fd824c5a4deb1b7653b42402d1352d37151c36e55388848c8f1432",
+    "records_before_exclusion": 392,
+    "layers": 28,
+    "tokens_before_exclusion": 14,
+    "embedding_dimension": 1536,
+    "excluded_tokens": [0],
+    "records_analyzed": 364,
+    "tokens_analyzed": 13
+  },
+  "tree": {
+    "branching": 4,
+    "maximum_depth": 6,
+    "split_strategy": "deterministic maximum-variance axis quartile split"
+  },
+  "hypothesis": "hierarchical parent-child and leaf residual magnitudes contract as tree depth increases",
+  "primary_measurements": [
+    "centroid norm by depth",
+    "parent-child residual norm by depth",
+    "residual-to-centroid ratio by depth",
+    "leaf residual-to-original norm ratio",
+    "exact reconstruction cosine",
+    "naive scalar storage ratio"
+  ],
+  "interpretation_boundary": "V1 tests residual structure only; full-precision residual accounting is not a compression benchmark."
+}
