@@ -508,28 +508,104 @@ No V1.1 validation runner, raw result, or runtime exists.
 
 Rollback remains outside scope.
 
+## Phase 6B.7 Activation V1.1 Validation Runner Freeze Checkpoint
+
+The frozen additive Activation V1.1 implementation remains:
+
+    experiments/model_fractal/
+    maf_activation_v1_1.py
+
+    commit:
+        bd52026
+
+    sha256:
+        9435ae8dd32656c7350887689d453f3c
+        b8460887068bfaf06e6f68b5b5b927a1
+
+The preregistered Activation V1.1 validation runner is now included in
+the targeted freeze:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1.py
+
+Runner SHA256:
+
+    b6457a3f9e9cdf971b6d92f4531c4484790146b1fcc4f4f10f20280f60c9f664
+
+The runner is self-contained around controlled physical segment fixtures.
+
+It preregisters:
+
+- exact current-physical reconstruction of known-good candidates;
+- first activation;
+- exact five-field active authority;
+- canonical active bytes;
+- exact manifest SHA256 binding;
+- independent authority reopen;
+- manifest-path and segment-path independence;
+- same-generation idempotence with no authority rewrite;
+- same-generation physical revalidation before idempotent success;
+- replacement generation A -> B;
+- logical model/object PK preservation;
+- multi-segment mapping-order independence;
+- wrong segment-to-content association rejection;
+- canonical synthetic-manifest rejection without physical evidence;
+- missing/malformed/corrupt candidate controls;
+- exact segment mapping controls;
+- missing/non-regular/length/SHA physical segment controls;
+- object byte-range SHA256 mismatch rejection;
+- malformed and cross-model existing authority rejection;
+- pre-existing partial authority rejection;
+- controlled failure at the real frozen Activation V1 os.replace boundary;
+- byte-for-byte preservation of prior authority on failed replacement;
+- frozen engine/protocol identity controls;
+- no source GGUF operational dependency;
+- no rollback, retirement, SQLite, mmap, inference, or MAF-native compute.
+
+The runner also fails closed if its result, result partial, or runtime
+already exists. Existing validation evidence will not be silently cleaned
+or reused.
+
+No runner execution has occurred at this checkpoint.
+
+No Activation V1.1 raw validation result exists.
+
+No Activation V1.1 validation runtime exists.
+
 ## Current Exact Next Task
 
 Phase 6B.7 — Atomic activation remains the current incomplete gate.
 
 Next action:
 
-    Preregister and freeze the Activation V1.1 validation runner only.
+    Execute the exact frozen Activation V1.1 validation runner once.
 
 Expected runner:
 
     experiments/model_fractal/
     maf_activation_validation_v1_1.py
 
-The runner must test the full corrective protocol, including synthetic
-canonical-manifest rejection, physical substitution/mutation rejection,
-same-generation physical revalidation, replacement atomicity, and injected
-pre-os.replace failure preservation.
+Expected raw result:
 
-Do not execute activation validation before the runner is frozen.
+    experiments/model_fractal/
+    maf_activation_validation_v1_1.json
 
-Do not modify Activation V1, Activation V1.1, or Generation Engine V1
-during the runner-preregistration stage.
+Expected runtime:
+
+    results/runtime/
+    maf_activation_validation_v1_1
+
+Before execution, verify the runner SHA256 above directly from frozen
+HEAD and verify Activation V1, Activation V1.1, Generation Engine V1,
+and the V1.1 corrective protocol remain exact.
+
+Then execute the frozen runner exactly once.
+
+Freeze the raw result before interpretation.
+
+Do not modify the runner or engines during execution.
+
+Do not delete or clean failed runtime evidence.
 
 Do not begin rollback, resident-directory work, storage-engine selection,
 or Phase 6C.
