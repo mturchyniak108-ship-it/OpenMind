@@ -261,12 +261,29 @@ current targeted freeze:
 The protocol preserves the frozen V1 history and defines the corrected
 source-GGUF independence test.
 
-No V1.1 runner has been created or executed at this checkpoint.
+## V1.1 Runner Freeze Checkpoint
+
+The V1.1 corrective-validation runner is now included in the current
+targeted freeze:
+
+    experiments/model_fractal/
+    maf_generation_engine_validation_v1_1.py
+
+The V1 behavioral validation body is preserved.
+
+The corrective delta is limited to:
+
+- V1.1-specific runtime/result/schema naming;
+- V1.1 console/failure labeling;
+- the corrected AST-based runner source-GGUF static-policy check.
+
+No V1.1 validation has been executed at this checkpoint.
+
+No V1.1 raw result exists at this checkpoint.
 
 Current exact next task:
 
-    Audit the frozen V1 validation runner and implement the
-    V1.1 corrective-validation runner.
+    Perform a pre-execution frozen-runner audit, then execute the
+    frozen V1.1 runner exactly once.
 
-The V1.1 runner must then be frozen in its own stage before it is
-executed.
+After execution, freeze the raw V1.1 result before interpreting it.
