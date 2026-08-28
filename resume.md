@@ -1602,27 +1602,86 @@ V1.1 has not been executed.
 
 V1.1 result and runtime remain absent.
 
+
+## Phase 6B.9 Benchmark V1.1 Raw-Result Checkpoint
+
+The frozen corrected Resident PK Directory Benchmark V1.1 has now been executed exactly once.
+
+Benchmark V1 remains failed historical evidence and was not rerun.
+
+Benchmark V1.1 correction protocol SHA256:
+
+    d35aca6c8c98d891761f6fbfb176e3b7fc385d466d03e07ae3125892015b61ef
+
+Benchmark V1.1 runner SHA256:
+
+    f9b8d1560eab35ce9340e00cfd7cb2b3683765fbf5b085544ee7f21d8f97a28e
+
+Raw V1.1 result:
+
+    experiments/model_fractal/benchmark_maf_resident_pk_directory_v1_1.json
+
+Raw V1.1 result SHA256:
+
+    57562c9fbcac012c6706903ff07c23a15b5bf59bb0599a9f6dd04ceecbec95b1
+
+V1.1 return code: 0
+
+Raw all_pass field: True
+
+Raw acceptance.pass field: True
+
+Raw direct median scaling ratio: 1.0
+
+Raw direct p95 scaling ratio: 1.3984674329501916
+
+Raw linear median growth ratio 100000 vs 1000: 100.35176445350208
+
+Raw build median ns: 242864
+
+Raw build p95 ns: 274531
+
+Raw refresh median ns: 237422
+
+Raw refresh p95 ns: 250416
+
+Raw 100000-entry direct median ns: 260
+
+Raw 100000-entry linear median ns: 3742318
+
+These values are frozen raw evidence only.
+
+Semantic benchmark acceptance has not yet been decided.
+
+Benchmark V1.1 must not be rerun.
+
+Both failed V1 runtime and V1.1 runtime must be preserved.
+
+Functional validation must not be rerun.
+
+No cleanup was performed.
+
+No Segment Reader implementation was added.
+
+No production storage engine was selected.
+
+Phase 6C has not started.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Execute frozen Resident PK Directory Benchmark V1.1 exactly once and freeze its raw result.
+    Interpret the frozen Benchmark V1.1 raw result only.
 
-Before execution require exact correction-protocol and V1.1-runner hashes and require V1.1 result/runtime to be absent.
+Do not rerun V1 or V1.1.
 
-Do not rerun Benchmark V1.
+Do not modify either frozen benchmark lineage.
 
-Do not clean the failed V1 runtime.
+Do not clean either benchmark runtime.
 
-Do not rerun functional validation.
-
-Do not automatically retry V1.1.
-
-Do not interpret V1.1 inside its raw-result freeze gate.
-
-After benchmark interpretation, perform the dedicated logic/resource/leak/degradation diagnostic gate before Phase 6B.10.
+After benchmark interpretation, run the dedicated logic/resource/leak/degradation diagnostic checkpoint before Phase 6B.10.
 
 Do not implement Segment Reader V1 yet.
 
