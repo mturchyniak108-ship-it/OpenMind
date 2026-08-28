@@ -1748,21 +1748,48 @@ Diagnostics V1.1 result and runtime remain absent.
 
 A final independent frozen-state fatal/logic/resource preflight is required before exact-once execution.
 
+
+## Phase 6B.9 Diagnostics V1.2 Coverage Correction
+
+Diagnostics V1 and V1.1 remain frozen and were never executed.
+
+The V1.1 final preflight produced two findings.
+
+The reported unsupported `self` lookup parameter was a preflight-helper false positive caused by inspecting the unbound class method. The runner uses the bound snapshot.lookup method, so no runner correction was required for that finding.
+
+A real diagnostic coverage defect was confirmed: rebuild and intentionally failed-refresh stress occurred before memory/resource baselines, preventing path-specific leak/resource detection.
+
+Diagnostics V1.2 adds isolated tracemalloc, live-snapshot, RSS, file-descriptor, runtime-file-count, and runtime-byte measurements around both the existing 200-build and 200-failed-refresh stress blocks.
+
+V1.2 also adds a post-setup write-intent filesystem-open audit.
+
+All existing V1.1 workloads and thresholds remain unchanged.
+
+Diagnostics V1.2 correction protocol SHA256: fbaaeb38346d5173637f31579e72e880a807dfea31d7d92434fc9af040cf23a8
+
+Diagnostics V1.2 runner SHA256: 9cfca287a6edff317a27ed650f8984057175f1028a6f596a8073892bc5a5fde6
+
+Diagnostics V1.2 has not been executed.
+
+Its result and runtime remain absent.
+
+A final frozen-state preflight is required before execution.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Perform the final read-only frozen-state fatal, logic, leak-methodology, resource, and exact-once preflight of Diagnostics V1.1.
+    Perform final read-only preflight of frozen Diagnostics V1.2.
 
-Do not execute Diagnostics V1.
+Do not execute Diagnostics V1 or V1.1.
 
-Do not execute Diagnostics V1.1 yet.
+Do not execute Diagnostics V1.2 yet.
 
-Do not rerun functional validation or either benchmark lineage.
+Do not rerun functional validation or benchmark lineages.
 
-Do not clean preserved benchmark runtimes.
+Do not clean preserved runtimes.
 
 Do not begin Segment Reader V1.
 
