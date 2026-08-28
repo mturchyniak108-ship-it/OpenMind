@@ -860,34 +860,122 @@ No inference or MAF-native compute is enabled.
 
 No rollback implementation or validation exists yet.
 
+## Phase 6B.8 Rollback V1 Engine Freeze Checkpoint
+
+The Rollback V1 protocol remains frozen:
+
+    experiments/model_fractal/
+    MAF_ROLLBACK_V1_PROTOCOL.md
+
+Protocol commit:
+
+    9f4a438
+
+Protocol SHA256:
+
+    0d71f4eb28ea35658d9c24a55d085e54
+    b6cc6a5c92cda9dc2a17dfe57df07a42
+
+The minimum Rollback V1 implementation is:
+
+    experiments/model_fractal/
+    maf_rollback_v1.py
+
+Rollback engine SHA256:
+
+    73b02c26f840d59499dd7be86985db6a3a14720769de1d040f2cad9c78703b79
+
+The rollback engine intentionally owns no authority persistence mechanism.
+
+Its operation is:
+
+    strictly reopen current active authority
+        ->
+    enforce active model_pk equality
+        ->
+    delegate retained target physical validation
+        ->
+    delegate atomic authority transition
+
+Target validation and same-generation physical revalidation remain owned by
+frozen Activation V1.1.
+
+Atomic active-record persistence remains owned by frozen Activation V1.
+
+Rollback V1 remains operational reactivation of retained immutable
+generation evidence. It does not create historical-authority provenance.
+
+No source GGUF dependency exists.
+
+No generation deletion or retirement is implemented.
+
+No storage engine is selected.
+
+No inference, residency, or MAF-native compute is implemented.
+
+No rollback validation runner, result, or runtime exists yet.
+
+Phase 6B.8 remains INCOMPLETE / CURRENT.
+
 ## Current Exact Next Task
 
-Phase 6B.8 — Rollback remains INCOMPLETE / CURRENT.
+Preregister and freeze the Rollback V1 validation runner only.
 
-Next action:
+Expected runner:
 
-    Create, statically audit, and freeze maf_rollback_v1.py only.
+    experiments/model_fractal/
+    maf_rollback_validation_v1.py
 
-The implementation should:
+Expected future raw result:
 
-- strictly reopen current authority;
-- enforce model consistency;
-- validate retained target physical evidence;
-- reuse frozen Activation V1.1 target-validation semantics;
-- reuse frozen Activation V1 atomic authority mutation;
-- preserve current authority on every precommit failure;
-- require physical revalidation before idempotent success;
-- retain all generations unchanged.
+    experiments/model_fractal/
+    maf_rollback_validation_v1.json
 
-Do not create or execute the rollback validation runner yet.
+Expected future runtime:
 
-Do not modify Activation V1, Activation V1.1, Generation Engine V1,
-or frozen Phase 6B.7 validation evidence.
+    results/runtime/
+    maf_rollback_validation_v1
+
+The validation runner must cover the frozen Rollback V1 protocol, including:
+
+- valid A -> B rollback;
+- later B -> A operational reactivation;
+- strict current-authority validation;
+- current model-scope enforcement;
+- retained target physical reconstruction;
+- canonical five-field active record;
+- manifest hash binding;
+- independent reopen;
+- target path independence;
+- same-generation physical revalidation;
+- same-generation changed=false behavior;
+- current-authority preservation on every precommit failure;
+- missing/corrupt current authority rejection;
+- cross-model rejection;
+- malformed target identity and manifest rejection;
+- missing/extra segment mapping;
+- missing/nonregular target segments;
+- target segment length/SHA failures;
+- target object byte-range failure;
+- wrong multi-segment content association;
+- invalid physical evidence on same-generation rollback;
+- injected failure before authority replacement;
+- generation retention and immutability;
+- no historical-authority provenance claim;
+- source-GGUF independence;
+- storage neutrality;
+- no inference;
+- no MAF-native compute;
+- no Phase 6B.9 implementation.
+
+Do not execute rollback validation during preregistration.
+
+Do not modify Rollback V1 after it is frozen unless new additive correction
+evidence requires a separately preregistered version.
+
+Do not modify Activation V1, Activation V1.1, Generation Engine V1, or
+Phase 6B.7 frozen evidence.
 
 Do not clean historical runtime evidence.
 
-Do not begin Phase 6B.9.
-
-Do not select a storage engine.
-
-Do not begin Phase 6C.
+Do not begin Phase 6B.9 or Phase 6C.
