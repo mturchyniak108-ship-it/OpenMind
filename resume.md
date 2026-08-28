@@ -369,18 +369,58 @@ It does not implement those semantics.
 
 Rollback remains explicitly outside scope.
 
+## Phase 6B.7 Activation Engine Freeze Checkpoint
+
+The minimum Activation V1 reference engine is now included in the
+current targeted freeze:
+
+    experiments/model_fractal/
+    maf_activation_v1.py
+
+The implementation reuses the frozen Generation Engine V1 manifest
+verification contract rather than duplicating generation identity logic.
+
+Public authority surface:
+
+    build_active_record(...)
+    verify_active_record(...)
+    reopen_active_generation(...)
+    activate_generation(...)
+
+Only:
+
+    activate_generation(...)
+
+mutates active-generation authority.
+
+The implementation uses canonical active-record bytes and a sibling
+partial file followed by fsync and os.replace.
+
+The os.replace operation is the authority linearization point.
+
+The later validation runner can inject a pre-commit replacement failure
+by replacing os.replace during the controlled negative test. No
+test-specific mutation API is included in the activation engine.
+
+No activation call has been executed at this checkpoint.
+
+No activation validation runner or raw result exists at this checkpoint.
+
+Rollback remains outside scope.
+
 ## Current Exact Next Task
 
-Phase 6B.7 — Atomic activation is now the first incomplete gate.
+Phase 6B.7 remains the current incomplete gate.
 
 Next action:
 
-    Audit the frozen Activation V1 protocol against the existing
-    Generation Engine API, then design the minimum reference
-    implementation and preregistered validation runner.
+    Preregister and freeze the Activation V1 validation runner against
+    the frozen implementation.
 
-Do not execute activation validation before the implementation and
-validation runner have been frozen.
+The validation runner must cover all protocol-required positive and
+negative controls, including the real os.replace failure boundary.
+
+Do not execute activation validation before the runner is frozen.
 
 Do not begin rollback, resident-directory work, storage-engine
 selection, or Phase 6C.
