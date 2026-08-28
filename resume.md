@@ -1446,23 +1446,62 @@ Average O(1) resident lookup remains a target until benchmark evidence is frozen
 
 No Segment Reader implementation, production storage-engine selection, MAF-native compute, inference replacement, or Phase 6C implementation is claimed.
 
+
+## Phase 6B.9 Resident PK Directory Validation Raw-Result Checkpoint
+
+The already-frozen Resident PK Directory Validation V1 runner has now been executed exactly once.
+
+Runner SHA256:
+
+    8dcf90a3a076cc84ff290b3d4443534044b735d5d2cd3767014a34dc12473257
+
+Raw validation result:
+
+    experiments/model_fractal/maf_resident_pk_directory_validation_v1.json
+
+Raw result SHA256:
+
+    24540c16eac53e9a179781c7007d61d98b34f7bc74e1f3dfc462b5786dd186b1
+
+Runner return code: 0
+
+Raw all_pass field: True
+
+Raw negative controls passed: 22 / 22
+
+Raw benchmark_performed field: False
+
+These values are recorded as raw evidence only.
+
+The result has not yet been semantically interpreted or accepted.
+
+The validation runner must not be rerun.
+
+The validation runtime is preserved and must not be cleaned.
+
+No benchmark was performed in this raw-freeze gate.
+
+No Segment Reader implementation was added.
+
+No production storage engine was selected.
+
+Phase 6C has not started.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Execute the already-frozen
-    maf_resident_pk_directory_validation_v1.py
-    exactly once and freeze its raw result.
+    Interpret the frozen Resident PK Directory Validation V1 raw result only.
 
-Before execution, recheck the frozen protocol, engine, and runner hashes and require both validation result and validation runtime to be absent.
+Do not rerun the validation runner.
 
-Do not modify the frozen validation runner.
+Do not modify the frozen raw result.
 
-Do not retry automatically if execution produces a negative result.
+Do not benchmark during interpretation.
 
-Do not benchmark in the same gate.
+Do not clean the validation runtime.
 
 Do not implement Segment Reader V1.
 
