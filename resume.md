@@ -1709,22 +1709,61 @@ Both benchmark runtimes remain preserved.
 
 Benchmark and functional runners must not be rerun.
 
+
+## Phase 6B.9 Diagnostics V1.1 Frozen Correction Checkpoint
+
+Diagnostics V1 remains frozen historical preregistration evidence and was never executed.
+
+Diagnostics V1 protocol SHA256: 5101e4a4dd78b869eb91ce226a1a304181bc2c3636d2ff86a056db15caf0560a
+
+Diagnostics V1 runner SHA256: 88452ca6d8fa0d70c4a9982630b1170fb5034e12871a501ead90f68676e2c8aa
+
+Diagnostics V1 execution is forbidden because static preflight identified repeated inspect.signature lookup-measurement contamination.
+
+No Diagnostics V1 result or runtime exists.
+
+The existing Diagnostics V1.1 correction drafts were independently audited before adoption.
+
+Static preflight result:
+
+    STATIC_ACCEPTANCE=PASS
+    FAILED_COUNT=0
+    CLASSIFICATION=EXISTING_V1_1_DRAFTS_STATICALLY_ACCEPTABLE
+
+Diagnostics V1.1 correction protocol SHA256:
+
+    9f01c39fe8777c6f93eae550d16596af625d3cb86d07993e500c0479648b35ab
+
+Diagnostics V1.1 runner SHA256:
+
+    12e70402b018488940c710e4b24a76966d150c91ac113fb89d23656e01e812c2
+
+The correction resolves lookup signature and keyword binding once during setup and reuses the prepared bound lookup operation.
+
+No diagnostic workload, threshold, leak limit, resource limit, failure-path test, or degradation threshold was relaxed.
+
+Diagnostics V1.1 has not been executed.
+
+Diagnostics V1.1 result and runtime remain absent.
+
+A final independent frozen-state fatal/logic/resource preflight is required before exact-once execution.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Execute the frozen Resident PK Directory Diagnostics V1 exactly once and freeze the raw result.
+    Perform the final read-only frozen-state fatal, logic, leak-methodology, resource, and exact-once preflight of Diagnostics V1.1.
+
+Do not execute Diagnostics V1.
+
+Do not execute Diagnostics V1.1 yet.
 
 Do not rerun functional validation or either benchmark lineage.
 
-Do not automatically retry diagnostics.
+Do not clean preserved benchmark runtimes.
 
-Do not clean any preserved runtime.
-
-Do not interpret diagnostics inside the raw-result freeze gate.
-
-Do not begin Segment Reader V1 until diagnostic evidence is frozen and interpreted.
+Do not begin Segment Reader V1.
 
 Do not begin Phase 6C.
