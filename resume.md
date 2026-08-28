@@ -1232,44 +1232,159 @@ No Phase 6C implementation has begun.
 
 No Resident PK Directory implementation or validation exists yet.
 
+## Phase 6B.9 Resident PK Directory V1 Engine Checkpoint
+
+Phase 6B.8 Rollback remains COMPLETE.
+
+Phase 6B.9 Resident PK Directory remains INCOMPLETE / CURRENT.
+
+Frozen protocol:
+
+    experiments/model_fractal/
+    MAF_RESIDENT_PK_DIRECTORY_V1_PROTOCOL.md
+
+Protocol SHA256:
+
+    5d053b52963a10285f21a600aa0bb257
+    b0ad645f12a9a36417cfa6f77a017939
+
+Resident PK Directory V1 implementation is now frozen as:
+
+    experiments/model_fractal/
+    maf_resident_pk_directory_v1.py
+
+Engine SHA256:
+
+    4dadac5a1ffe448437718432edeee14a
+    219a20da5a54956d2884d0b0b1d426b6
+
+The implementation remains derived process-local state rather than authority.
+
+Current authority remains the frozen five-field active-generation record.
+
+Current immutable logical mapping remains the frozen active generation descriptor.
+
+Snapshot construction:
+
+- strictly reopens current active authority;
+- rejects cross-model authority;
+- binds candidate manifest bytes to generation_manifest_sha256;
+- reuses frozen Activation V1.1 physical candidate validation;
+- reuses frozen Activation V1.1 segment-path mapping;
+- validates the complete snapshot before publication;
+- verifies active authority did not change during build;
+- verifies candidate manifest did not change during build.
+
+Resident PK Directory V1 minimum key class is:
+
+    object_pk
+
+The logical resident key remains:
+
+    (model_pk, "object_pk", object_pk)
+
+Each resident object entry preserves:
+
+    model_pk
+    generation_pk
+    generation_manifest_sha256
+    object_pk
+    segment_id
+    offset
+    length
+    object_file_sha256
+    payload_sha256
+    segment_length
+    segment_sha256
+
+Physical segment path is retained only as runtime metadata.
+
+Resident entries and snapshots are frozen dataclasses.
+
+The published entry mapping uses immutable MappingProxyType state.
+
+A successful resident lookup:
+
+- is model scoped;
+- requires expected_generation_pk;
+- rejects stale generation expectation;
+- rejects unsupported PK classes;
+- rejects missing logical PK explicitly;
+- uses direct resident mapping access;
+- performs no JSON parsing;
+- performs no filesystem read;
+- performs no manifest scan;
+- performs no linear descriptor scan.
+
+ResidentPKDirectory.refresh() builds a complete replacement snapshot before
+one publication assignment.
+
+Therefore a failed replacement build preserves the prior published snapshot.
+
+No active-authority writer was added.
+
+No rollback writer was added.
+
+No source GGUF dependency was added.
+
+No generation deletion was added.
+
+No storage engine was selected.
+
+No Segment Reader was implemented.
+
+No inference or MAF-native compute was implemented.
+
+No directory validation runner, result, or runtime exists yet.
+
+No benchmark has been executed.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Create, statically audit, and freeze maf_resident_pk_directory_v1.py only.
+    Preregister, statically audit, and freeze
+    maf_resident_pk_directory_validation_v1.py only.
 
-The minimum implementation should:
+The validation runner must be frozen before execution.
 
-- build one immutable snapshot for one active model generation;
-- strictly validate active authority binding before build;
-- require current physical generation validity;
-- index canonical object_pk only for V1 minimum scope;
-- use model-scoped logical lookup;
-- preserve exact segment_id / offset / length / object_file_sha256 evidence;
-- reject duplicate object_pk mappings;
-- reject unsupported PK classes;
-- reject missing and cross-model PK lookups explicitly;
-- expose generation-bound freshness information;
-- reject stale generation expectations;
-- publish replacement snapshots only after complete construction;
-- preserve the prior snapshot on failed rebuild;
-- keep physical paths as runtime metadata only;
-- perform direct resident lookups without JSON parsing or manifest scans;
-- own no generation deletion;
-- own no storage engine;
-- require no source GGUF;
-- perform no inference or MAF-native compute;
-- implement no Segment Reader behavior.
+It must validate at minimum:
 
-Do not create or execute the 6B.9 validation runner yet.
+- exact build from current active generation;
+- every canonical object_pk indexed exactly once;
+- exact resident mapping equality with descriptor evidence;
+- model-scoped direct lookup;
+- required generation-bound stale rejection;
+- missing object_pk rejection;
+- unsupported PK-class rejection;
+- cross-model lookup rejection;
+- byte-identical physical relocation preserving logical identity;
+- relocated snapshot changing runtime path only;
+- activation-style generation refresh semantics;
+- rollback-style generation refresh semantics;
+- same-generation physical revalidation;
+- duplicate object_pk rejection;
+- failed replacement build preserving the prior snapshot;
+- no JSON/filesystem/linear-scan work on successful lookup;
+- source-GGUF independence;
+- storage neutrality;
+- no generation deletion;
+- no Segment Reader implementation;
+- no inference;
+- no MAF-native compute.
 
-Do not benchmark until the implementation and validation protocol boundaries
-are frozen.
+Do not execute the validation runner during preregistration.
 
-Do not modify Rollback V1, Activation V1, Activation V1.1, Generation Engine
-V1, or frozen Phase 6B.7 / 6B.8 evidence.
+Do not create the raw validation result or validation runtime yet.
+
+Do not benchmark until the validation runner is frozen and its validation
+evidence has been interpreted.
+
+Do not modify the frozen Resident PK Directory engine, Rollback V1,
+Activation V1, Activation V1.1, Generation Engine V1, or prior frozen
+validation evidence.
 
 Do not clean preserved runtime evidence.
 
