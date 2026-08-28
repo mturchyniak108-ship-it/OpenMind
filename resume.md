@@ -279,130 +279,94 @@ Staging:
 
 ---
 
+
+## Phase 6B.10 Segment Reader V1 — Exact-Once Validation Evidence
+
+The frozen Segment Reader V1 functional-validation runner has executed exactly once.
+
+Execution parent HEAD:
+
+    66be27b
+
+Validation runner SHA256:
+
+    1f5cfdba3d3bd681eb78b07d98b9ee49497a3608bc51408c7e503b0dbc80bf88
+
+Runner exit code:
+
+    0
+
+Raw result:
+
+    experiments/model_fractal/maf_segment_reader_validation_v1.json
+
+Raw result SHA256:
+
+    1ceef1ed2b814da3951811ea97e9f4475b3fa79557b341e7c8e089ec8a409328
+
+Result schema:
+
+    openmind.maf_segment_reader_validation.v1
+
+Result all_pass:
+
+    True
+
+Checks:
+
+    total = 39
+    passed = 39
+    failed = 0
+    first failure = NONE
+
+Fatal error type:
+
+    NONE
+
+Fatal error message:
+
+    NONE
+
+Preserved source evidence unchanged:
+
+    True
+
+Validation runtime:
+
+    results/runtime/maf_segment_reader_validation_v1
+
+Runtime files:
+
+    2
+
+Runtime bytes:
+
+    8193
+
+This execution is historical exact-once evidence.
+
+DO NOT execute maf_segment_reader_validation_v1.py again.
+
+DO NOT clean or overwrite the validation runtime.
+
+DO NOT alter the first raw result.
+
 ## Exact Next Task
 
-The next gate is:
+Interpret the frozen Segment Reader V1 validation result read-only.
 
-    Phase 6B.10f3 — corrected final read-only Segment Reader V1 validation preflight
+If all_pass is True, fatal_error is absent, identities are exact, and preserved source evidence is unchanged:
 
-IT HAS NOT BEEN RUN YET.
+    classify the functional validation before benchmark preregistration.
 
-Because this handoff updates and commits only `resume.md`, the current Git HEAD after the handoff commit will be newer than `e0b1443`.
+Otherwise:
 
-Therefore DO NOT paste an older 6B.10f3 block unchanged if it hardcodes:
+    audit the first frozen negative-evidence condition only.
 
-    EXPECTED_HEAD="e0b1443"
+Do not rerun functional validation.
 
-Regenerate the same corrected read-only preflight using the new current HEAD.
+Do not benchmark Segment Reader V1 until result interpretation is complete.
 
-The corrected preflight must use semantic predicates for:
+Do not start Phase 6C.
 
-- dynamic prohibited-write-flag coverage;
-- reader `O_RDONLY` + optional `O_CLOEXEC`;
-- module-scope execution;
-- GGUF self-check detection.
-
-It must also re-confirm:
-
-- frozen protocol/runner/engine SHA identities;
-- validation result absent;
-- validation runtime absent;
-- exact-once guard order;
-- runtime/result exclusive creation;
-- fixture selection;
-- at least two selected objects with distinct offsets;
-- exact object-file hashes;
-- payload-hash distinction;
-- negative-test write isolation;
-- both monkeypatches restored in `finally`;
-- FD measurement support;
-- no validation execution during preflight.
-
-Required authorization outcome:
-
-    CLASSIFICATION: SEGMENT_READER_V1_VALIDATION_FINAL_PREFLIGHT_PASS
-    SAFE TO EXEC : True
-
-Until BOTH are true:
-
-    DO NOT EXECUTE VALIDATION
-
----
-
-## After Final Preflight Pass
-
-Next sequence only:
-
-1. execute the frozen Segment Reader V1 validation runner exactly once;
-2. freeze the first raw result immediately, PASS or FAIL;
-3. interpret the result without rerunning;
-4. preregister/freeze Segment Reader benchmark;
-5. execute/freeze benchmark according to its protocol;
-6. preregister/run mandatory post-validation diagnostics;
-7. complete/freeze Phase 6B.10;
-8. only then consider Phase 6C.
-
-Do not jump directly to 6C.
-
----
-
-## Historical Evidence — Do Not Rerun
-
-Phase 6B.9 Resident PK Directory is complete.
-
-Especially do not rerun:
-
-- Resident PK functional validation V1;
-- failed Resident PK benchmark V1;
-- successful Resident PK benchmark V1.1;
-- Resident PK diagnostics V1.4.
-
-Resident diagnostics V1/V1.1/V1.2/V1.3 were never validly executed and remain forbidden.
-
-Preserve all existing runtime evidence.
-
-No cleanup.
-
----
-
-## Phase 6B.9 Reference
-
-Completion commit:
-
-    9ea0294 research: complete MAF resident PK directory phase 6B.9
-
-Resident lookup validated:
-
-- stable generation-bound resident PK entries;
-- O(1)-style lookup over the tested range/device only;
-- 100K indexed median approximately 260 ns;
-- 100K linear median approximately 3.74 ms;
-- approximately 14,393x observed speedup;
-- no universal production-performance claim.
-
-Diagnostics V1.4 exact-once result:
-
-    45/45 PASS
-
-No fatal error, no write opens, stale-generation rejection passed, FD/resource/degradation/failure-path checks passed.
-
----
-
-## Scope Guard
-
-Current work proves infrastructure for MAF object access.
-
-It does NOT yet prove:
-
-- MAF-native LLM replacement;
-- production storage-engine choice;
-- production performance guarantees;
-- raw payload/tensor decoding by Segment Reader V1;
-- descriptor residency;
-- mmap residency;
-- FD caching;
-- Phase 6C runtime residency;
-- selective inference/tensor avoidance;
-- end-to-end replacement of a standard LLM runtime.
-
-Keep validated, implemented-but-not-validated, and future claims clearly separated.
+Do not push upstream.
