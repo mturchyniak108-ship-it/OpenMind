@@ -1775,17 +1775,61 @@ Its result and runtime remain absent.
 
 A final frozen-state preflight is required before execution.
 
+
+## Phase 6B.9 Diagnostics V1.3 Frozen Coverage Checkpoint
+
+Diagnostics V1.3 recovered draft bytes passed an independent exact-content static audit before adoption.
+
+Audit classification:
+
+    EXISTING_V1_3_DRAFTS_STATICALLY_ACCEPTABLE
+
+Audit failed checks:
+
+    0
+
+Bound lookup unsupported required parameters:
+
+    NONE
+
+Tracemalloc lifecycle:
+
+    starts = 4
+    stops  = 4
+
+Diagnostics V1.3 correction protocol SHA256:
+
+    e6e3a0d3995550106c9abf8a60c586b01083fb6e971573df26f3552c06292ff6
+
+Diagnostics V1.3 runner SHA256:
+
+    972fa763ea233f791add465ca73c3743d8e4d68d092edd7b874288562e8aea35
+
+V1.3 adds the remaining requested diagnostic coverage:
+
+- sustained real build-path degradation;
+- repeated hash/file-validation degradation through that real build path;
+- repeated stale-generation rejection with projection and resource preservation checks.
+
+All prior V1.2 diagnostic coverage and limits remain preserved.
+
+Diagnostics V1.3 has not been executed.
+
+Its raw result and runtime remain absent.
+
+One final independent frozen-state preflight is required before any exact-once execution.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Perform final read-only preflight of frozen Diagnostics V1.2.
+    Perform final independent read-only frozen-state preflight of Diagnostics V1.3.
 
-Do not execute Diagnostics V1 or V1.1.
+Do not execute Diagnostics V1, V1.1, or V1.2.
 
-Do not execute Diagnostics V1.2 yet.
+Do not execute Diagnostics V1.3 yet.
 
 Do not rerun functional validation or benchmark lineages.
 
