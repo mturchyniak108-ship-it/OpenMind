@@ -8,7 +8,7 @@ The project treats the Canonical Model GGUF as the canonical model/reference art
 
 ## Core Architecture
 
-Canonical Model GGUF -> Truth Map -> Relationship Map + Provenance Map + Landscape Map -> Vector Links -> MAF -> Fuzzy/ML Routing -> Fractal MAF -> Validation -> Native C++ -> ARM64/NEON/Vulkan Optimization
+Canonical Model GGUF -> Truth/Relationship/Provenance/Landscape Maps -> MAF Object Compiler -> MAF Model Catalog -> MAF Segment Store -> MAF Object Runtime + Adaptive Residency -> Fractal/Selective MAF -> Routing/Transition Intelligence -> Validation -> Native C++ -> ARM64/NEON -> Vulkan Optimization
 
 ## Phase 1 — Native Local Inference [COMPLETE]
 
@@ -70,6 +70,185 @@ Canonical Model GGUF -> Truth Map -> Relationship Map + Provenance Map + Landsca
 - Test token reduction
 - Test memory reduction
 - Test computational reduction
+
+
+## Phase 6A — MAF Object Compilation [ACTIVE RESEARCH]
+
+Goal: make MAF the persistent model-object representation rather than merely
+an index around conventional tensors.
+
+Development order:
+
+1. Prove exact `tensor -> MAF object -> tensor/view` round-trip fidelity.
+2. Assign stable model, object, and fragment primary keys.
+3. Classify objects from metadata before reading payload bytes whenever possible.
+4. Generate a compile recipe before payload conversion.
+5. Stream source payloads once, performing hashing, exact transformation,
+   fragment construction, and placement statistics in the same pass.
+6. Avoid whole-tensor temporary allocations where block streaming is sufficient.
+7. Preserve dense tensors as optional compute/materialization views until
+   MAF-native computation is independently validated.
+
+Initial MAF Compiler stages:
+
+`Scanner -> Classifier -> Planner -> Encoder -> Segment Builder`
+
+Classification is split into:
+
+- static semantic class: weight, embedding, norm, state, route, residual, etc.
+- structural class: direct, fragmentable, fractal, sparse, reversible-transform.
+- runtime class: cold, warm, hot-MAF, hot-dense, prefetch candidate.
+
+Runtime usage changes must not change logical object identity.
+
+Natural lossless gains such as exact deduplication, reversible transforms,
+shared fragments, or exact residual representation may be measured during
+compilation, but compression must not reduce representation fidelity.
+
+## Phase 6B — MAF Model Catalog and Segment Store [RESEARCH]
+
+Goal: separate permanent logical identity from temporary physical placement.
+
+The catalog must provide stable primary-key identity for:
+
+- model
+- MAF object
+- fragment
+- route/transition
+- physical segment generation
+
+Physical records may change segment, offset, cache tier, or device residency
+without changing their logical primary key.
+
+Initial storage model:
+
+- compact resident object/fragment directory
+- immutable MAF segment files
+- direct `(PK -> segment, offset, length)` resolution
+- integrity hashes independent of PK identity
+- generation manifests with atomic activation/rollback
+- no JSON parsing on the inference hot path
+
+Candidate storage engines remain experimental until benchmarked:
+
+1. compiled binary/RAM index + external MAF segments
+2. SQLite control plane + external MAF segments
+3. purpose-built MAFDB object engine
+4. other permissively licensed embedded engines only when they provide a
+   measurable advantage
+
+Do not fork or replace a mature database engine merely for architectural novelty.
+A custom MAFDB must earn promotion through measured MAF-specific advantage.
+
+## Phase 6C — MAF Object Runtime and Residency [RESEARCH]
+
+Goal: keep only the useful model working set resident.
+
+The database/catalog knows every MAF object; it does not require every object
+to be loaded.
+
+Target residency states:
+
+`COLD_DISK -> MAPPED -> HOT_MAF -> HOT_DENSE`
+
+Later:
+
+`HOT_MAF/HOT_DENSE -> VULKAN_MAF`
+
+Required runtime capabilities:
+
+- map/attach and detach/unmap MAF segments
+- object pin/unpin
+- fragment-level retrieval
+- dense materialization on demand
+- reuse-aware promotion/demotion
+- byte-budgeted caches rather than object-count caches
+- bounded allocation arenas/slabs
+- minimize copies between disk, mapped payload, decoded cache, and compute view
+- preserve canonical immutable bytes on disk so eviction does not require
+  reserialization
+
+Compare cache policies including simple LRU controls and frequency/reuse-aware
+admission/eviction such as TinyLFU/CLOCK-style designs.
+
+## Phase 6D — Segment Locality and Path-Aware Repacking [RESEARCH]
+
+Goal: make physical storage follow measured model pathways.
+
+Initial segment-size and fragment-size choices are hypotheses and must be
+device-benchmarked rather than assumed.
+
+Collect runtime telemetry in RAM, then periodically persist aggregated statistics:
+
+- object access count
+- reuse interval
+- transition frequency
+- materialization count
+- bytes read
+- cache hit/miss
+- promotion/demotion
+- prefetch usefulness
+
+Frequently traversed object sequences may be physically colocated in a new
+immutable segment generation.
+
+Rules:
+
+- logical PKs never change because of repacking
+- physical segment/offset mappings may change
+- repacking is generational, validated, and atomically activated
+- avoid frequent rewrites that create flash wear or cache churn
+- transition locality is more important than global popularity alone
+- old generations remain recoverable until the new generation validates
+
+## Phase 6E — Selective MAF Access and Tensor Avoidance [CRITICAL RESEARCH]
+
+Goal: determine whether OpenMind can avoid touching or materializing complete
+dense tensors while preserving inference fidelity.
+
+Required progression:
+
+1. exact whole-object reconstruction
+2. partial/fractal reconstruction
+3. selective fragment retrieval
+4. shadow hidden-state comparison against untouched model oracle
+5. logit/top-k/token agreement
+6. selective dense materialization
+7. direct MAF-native computation only after fidelity gates pass
+
+A smaller payload or lower RAM footprint is not sufficient evidence by itself.
+
+The core hypothesis is falsifiable:
+
+> A MAF object may become the persistent numerical state, while a dense tensor
+> is only an optional materialized compute view.
+
+If selective access does not preserve correctness, retain full materialization
+and record the negative result rather than rescuing the hypothesis post hoc.
+
+## Phase 6F — Proven MAF Runtime Optimization [FUTURE]
+
+Optimization order must compound proven gains:
+
+1. representation correctness
+2. compiler efficiency
+3. indexed disk retrieval
+4. RAM residency/cache behavior
+5. selective access
+6. native C++ implementation
+7. mmap/pread, batching, arenas, prefetch, and copy reduction
+8. ARM64/NEON optimization
+9. Vulkan optimization
+
+Vulkan work begins only after the MAF object/runtime architecture demonstrates
+a measurable advantage or a clearly identified GPU-addressable bottleneck.
+
+Potential Vulkan endpoint:
+
+`disk MAF -> mapped fragment -> RAM MAF cache -> Vulkan MAF cache -> GPU MAF kernel`
+
+Do not use GPU acceleration to justify an otherwise inferior representation
+or storage architecture.
 
 ## Phase 7 — Fuzzy Logic Routing [RESEARCH]
 
