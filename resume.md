@@ -1539,26 +1539,91 @@ Average O(1) resident lookup remains a target until the benchmark result is froz
 
 No production latency guarantee is preregistered.
 
+
+## Phase 6B.9 Benchmark V1 Failure and V1.1 Correction Checkpoint
+
+Resident PK Directory Benchmark V1 was executed exactly once and failed before performance measurement or raw-result publication.
+
+Failed V1 benchmark runner SHA256:
+
+    536d5a360bf7d450eb6a882581cd3c202cc81d66323d7b9e871bd15353f1c27d
+
+Failed V1 runtime remains preserved at:
+
+    results/runtime/maf_resident_pk_directory_benchmark_v1
+
+V1 must not be rerun.
+
+Root cause is confirmed as a Benchmark V1 input-contract defect.
+
+Activation requires:
+
+    dict[segment_id -> path-like]
+
+V1 incorrectly supplied a list of paths.
+
+The frozen Activation source proves the value flow:
+
+    value = segment_paths[segment_id]
+    path = Path(value)
+    mapped[segment_id] = path
+
+No Resident PK Directory engine defect is indicated.
+
+No Activation defect is indicated.
+
+No functional-validation defect is indicated.
+
+No performance measurement was reached in V1.
+
+The g6 VALUE_FLOW_NOT_FULLY_PROVEN classification was a static-audit false negative caused by inspecting only top-level function-body assignments; the extracted nested source body itself proves the contract.
+
+Benchmark V1.1 correction protocol:
+
+    experiments/model_fractal/MAF_RESIDENT_PK_DIRECTORY_BENCHMARK_V1_1_CORRECTION_PROTOCOL.md
+
+Correction protocol SHA256:
+
+    d35aca6c8c98d891761f6fbfb176e3b7fc385d466d03e07ae3125892015b61ef
+
+Corrected benchmark runner:
+
+    experiments/model_fractal/benchmark_maf_resident_pk_directory_v1_1.py
+
+Corrected runner SHA256:
+
+    f9b8d1560eab35ce9340e00cfd7cb2b3683765fbf5b085544ee7f21d8f97a28e
+
+The V1.1 correction changes only the segment-path adapter plus distinct V1.1 lineage/result/runtime identities and correction-protocol binding.
+
+Benchmark sizes, repetitions, warmups, measurement logic, memory logic, actual build/refresh measurement, and all acceptance thresholds remain unchanged.
+
+V1.1 has not been executed.
+
+V1.1 result and runtime remain absent.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Execute the frozen Resident PK Directory Performance Benchmark V1 exactly once and freeze its raw result.
+    Execute frozen Resident PK Directory Benchmark V1.1 exactly once and freeze its raw result.
 
-Before execution, require the benchmark protocol and runner hashes to match their frozen identities and require both benchmark result and runtime to be absent.
+Before execution require exact correction-protocol and V1.1-runner hashes and require V1.1 result/runtime to be absent.
 
-Do not rerun the functional validation runner.
+Do not rerun Benchmark V1.
 
-Do not modify the frozen benchmark after execution begins.
+Do not clean the failed V1 runtime.
 
-Do not automatically retry a failed or negative benchmark.
+Do not rerun functional validation.
 
-Do not interpret and rewrite benchmark evidence in the raw-result gate.
+Do not automatically retry V1.1.
 
-Do not implement Segment Reader V1.
+Do not interpret V1.1 inside its raw-result freeze gate.
 
-Do not select a production storage engine.
+After benchmark interpretation, perform the dedicated logic/resource/leak/degradation diagnostic gate before Phase 6B.10.
+
+Do not implement Segment Reader V1 yet.
 
 Do not begin Phase 6C.
