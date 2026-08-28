@@ -711,35 +711,81 @@ Result:
 
     ABSENT
 
+
+## CPU Thermal Characterization V1.2 — Complete
+
+Exact-once raw result:
+
+    experiments/model_fractal/cpu_thermal_characterization_v1_2.json
+
+Result SHA256:
+
+    b2e587547ed2b7388f141210fb3de5873de7a9d61b1ca3273ec4e4a964eaa8b2
+
+Raw evidence commit:
+
+    ae6b260
+
+Completion record:
+
+    experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_2_COMPLETION.md
+
+Completion SHA256:
+
+    3b89868f324b774c9107faa6b038c8a8573d509c0d93527d960922cda6ae62dd
+
+V1.2 is permanently non-rerunnable.
+
+Validated scheduling result:
+
+    normal workload lane:
+        CPU0 + CPU3
+        cluster 0
+        confirmed active window = 250 ms
+
+Prospective Segment Reader V1.1 routing test:
+
+    CPU6 + CPU7
+    cluster 1
+    micro-fragment / small-object candidate lane only
+
+Cluster 1 has no validated sustained time window.
+
+Segment Reader Benchmark V1.1 must test cluster 1 using individual
+bounded fragments/objects with thermal observation around each dispatch,
+and must report per-CPU and per-cluster latency + throughput separately.
+
+Successful V1.2 JSON omits an explicit top-level affinity_restored field.
+No restoration exception was recorded. This reporting limitation is
+permanent and does not authorize a rerun.
+
 ## Exact Next Task
 
-Perform final read-only CPU Thermal Characterization V1.2 execution
-preflight.
+Preregister MAF Segment Reader Benchmark V1.1 using the completed CPU
+thermal policy.
 
-It must independently verify:
+Required scheduling lanes:
 
-- V1.2 frozen identities and lineage;
-- V1 and V1.1 results remain absent;
-- non-trip governing sensor set is currently thermally safe;
-- cpu-hw-trip-* remains excluded;
-- topology and affinity capability remain valid;
-- partial failure evidence preservation;
-- dual execution/restoration exception preservation;
-- bridge cooldown ordering;
-- thermal limits and 100 ms epoch bound;
-- exact-once exclusive result publication;
-- no sysfs writes;
-- no cleanup;
-- no Segment Reader Benchmark execution.
+    CPU0 / CPU3:
+        normal lane
+        <=250 ms active workload batches
 
-Do not execute V1 or V1.1.
+    CPU6 / CPU7:
+        prospective micro-fragment/small-object lane
+        one bounded unit per dispatch
+        no claimed sustained time window
 
-Do not execute V1.2 until final preflight passes.
+The benchmark must determine the fragment/object-size crossover, if any,
+where cluster 1 improves latency or throughput without unacceptable
+thermal escalation.
+
+Report raw latency, ops/s, returned bytes/s, returned MiB/s,
+whole-segment processed throughput where applicable, per-CPU,
+per-cluster and pooled metrics.
 
 Do not execute Segment Reader Benchmark V1.
 
-Do not create Segment Reader Benchmark V1.1 until CPU thermal
-characterization is completed and interpreted.
+Freeze V1.1 protocol and runner before execution.
 
 Do not start Phase 6C.
 
