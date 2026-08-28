@@ -682,38 +682,182 @@ No V1.1.1 validation execution has occurred.
 
 No V1.1.1 raw result or runtime exists.
 
+## Phase 6B.7 Atomic Activation Completion Checkpoint
+
+Phase 6B.7 is now complete.
+
+Status:
+
+    Phase 6B.7 — Atomic activation — COMPLETE
+
+The final accepted validation evidence is:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1_1.json
+
+Frozen result commit:
+
+    0d62257
+
+Result SHA256:
+
+    586f4a4958aab67972dc06845171ee79
+    bfe937dfcd731f1f5b3fc594df841ac8
+
+Frozen corrected validation runner:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1_1.py
+
+Runner SHA256:
+
+    7d6d5c106cd8b438938a1d6d33bb55e
+    9c107795f8da05207c210bd94ebdb42d2
+
+Frozen validation correction protocol:
+
+    experiments/model_fractal/
+    MAF_ACTIVATION_VALIDATION_V1_1_1_PROTOCOL.md
+
+Protocol SHA256:
+
+    98f4d3dcdbc079f00f097b70a28cab28
+    41f32abd19b02e79b54a36fbcdf7a9fc
+
+Final V1.1.1 validation recorded:
+
+    all_pass = true
+
+Validated properties include:
+
+- canonical candidate identity validation;
+- current physical segment reconstruction before authority change;
+- exact segment mapping requirements;
+- physical segment length validation;
+- physical segment SHA256 validation;
+- object byte-range SHA256 validation;
+- exact descriptor reconstruction;
+- exact reconstructed generation_pk;
+- canonical five-field active authority records;
+- first activation;
+- replacement activation;
+- independent active-record reopen;
+- idempotent same-generation activation;
+- mandatory physical revalidation before idempotent success;
+- path independence;
+- multi-segment mapping order independence;
+- wrong-content association rejection;
+- synthetic canonical but physically unsupported manifest rejection;
+- malformed and cross-model authority rejection;
+- pre-existing partial rejection;
+- injected pre-os.replace failure preservation;
+- prior-authority byte preservation on failed replacement;
+- partial cleanup after injected precommit failure.
+
+The final suite contains 25 negative controls and all pass.
+
+The corrected wrong-content control records:
+
+    error_type    = MAFActivationError
+    error_text    = segment length mismatch
+    raised        = true
+    failed_closed = true
+    pass          = true
+
+Historical Validation V1.1 remains preserved unchanged:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1.json
+
+Historical V1.1 result SHA256:
+
+    aff5b47e3ff6cbd611b2b29fa1ce826d
+    fce1ece6fdc7356fb94ba9fefe41b548
+
+Historical V1.1 remains:
+
+    all_pass = false
+
+That failure remains valid historical evidence of the
+overconstrained validation-runner expectation.
+
+No historical runner was reexecuted.
+
+Historical and corrected runtime evidence remain preserved separately:
+
+    results/runtime/
+    maf_activation_validation_v1_1
+
+    results/runtime/
+    maf_activation_validation_v1_1_1
+
+Activation V1 remains frozen unchanged.
+
+Activation V1.1 remains frozen unchanged.
+
+Generation Engine V1 remains frozen unchanged.
+
+No source GGUF is required by activation validation.
+
+No rollback implementation exists.
+
+No catalog/storage engine has been selected.
+
+No inference was performed.
+
+MAF-native compute was not enabled.
+
+Phase 6B.7 therefore establishes the validated authority transition:
+
+    logical PK
+        ->
+    validated current physical generation
+        ->
+    atomic active-generation authority record
+
+within the explicitly frozen V1/V1.1 research scope.
+
 ## Current Exact Next Task
 
-Phase 6B.7 — Atomic activation remains the current incomplete gate.
+Phase 6B.8 — Rollback is now the current incomplete gate.
 
 Next action:
 
-    Verify every frozen hash and execute the frozen
-    maf_activation_validation_v1_1_1.py runner exactly once.
+    Preregister the Phase 6B.8 rollback protocol/design only.
 
-Before execution confirm:
+The rollback protocol must define how a previously retained immutable
+generation becomes authoritative again without rewriting its logical
+identity.
 
-- branch and exact frozen-runner HEAD;
-- V1.1.1 protocol hash;
-- V1.1.1 runner hash;
-- Activation V1 hash;
-- Activation V1.1 hash;
-- Generation Engine V1 hash;
-- historical V1.1 runner/result hashes;
-- historical V1.1 runtime remains preserved;
-- V1.1.1 result is absent;
-- V1.1.1 result partial is absent;
-- V1.1.1 runtime is absent.
+The protocol must preserve the Phase 6B.7 authority model and must define
+at minimum:
 
-Execute the frozen V1.1.1 runner exactly once.
+- rollback target identity;
+- model-scoped authority;
+- retained-generation prerequisites;
+- current physical validity requirements before rollback;
+- relationship to generation_manifest_sha256;
+- atomic authority replacement;
+- failure preservation of the currently active generation;
+- idempotent rollback semantics;
+- cross-model rejection;
+- corrupt-current-authority behavior;
+- missing or invalid rollback-target behavior;
+- historical-generation immutability;
+- no generation deletion as part of rollback;
+- rollback evidence requirements;
+- concurrency and crash-consistency nonclaims;
+- storage-engine neutrality;
+- source-GGUF independence;
+- inference/residency/MAF-native-compute nonclaims.
 
-Freeze any completed canonical raw result before interpretation.
+Do not implement rollback during protocol preregistration.
 
-Do not retry automatically.
+Do not create a rollback validation runner yet.
 
-Do not clean either historical or corrective runtime evidence.
+Do not modify Activation V1, Activation V1.1, Generation Engine V1,
+or any frozen validation evidence.
 
-Do not modify Activation V1, Activation V1.1, or Generation Engine V1.
+Do not begin Phase 6B.9 resident PK directory work.
 
-Do not begin rollback, resident-directory work, storage-engine selection,
-or Phase 6C.
+Do not begin storage-engine selection or Phase 6C.
