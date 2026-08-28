@@ -1163,54 +1163,115 @@ Phase 6B.8 therefore establishes:
 
 within the frozen Phase 6B.7 / 6B.8 research scope.
 
+## Phase 6B.9 Resident PK Directory V1 Protocol Checkpoint
+
+Phase 6B.8 Rollback remains COMPLETE.
+
+Phase 6B.9 Resident PK Directory is the current incomplete gate.
+
+The Resident PK Directory V1 protocol is frozen as:
+
+    experiments/model_fractal/
+    MAF_RESIDENT_PK_DIRECTORY_V1_PROTOCOL.md
+
+The resident directory is derived in-memory state, not authority.
+
+Authority remains:
+
+    canonical active-generation record
+        ->
+    canonical immutable active generation descriptor
+
+The minimum V1 resident key class is canonical object_pk.
+
+Logical lookup scope is model-bound.
+
+The minimum semantic lookup key is:
+
+    (model_pk, "object_pk", object_pk)
+
+The resident mapping preserves the active immutable descriptor evidence needed
+for direct access:
+
+    generation_pk
+    generation_manifest_sha256
+    segment_id
+    offset
+    length
+    object_file_sha256
+
+Physical segment path may be retained as runtime metadata but is not logical
+identity.
+
+Directory snapshots are generation-bound and immutable after publication.
+
+Activation and rollback make the prior generation snapshot stale.
+
+Current physical evidence must be validated before a replacement snapshot is
+published.
+
+A failed replacement build must preserve the prior valid snapshot unchanged.
+
+A resident successful lookup must not require JSON parsing, manifest scanning,
+filesystem discovery, or linear scanning over all descriptor objects.
+
+Average O(1) keyed lookup is the implementation target, not yet a benchmarked
+performance claim.
+
+No source GGUF dependency is allowed.
+
+No storage engine is selected.
+
+No generation deletion is implemented.
+
+No Segment Reader is implemented.
+
+No inference or MAF-native compute is enabled.
+
+No Phase 6C implementation has begun.
+
+No Resident PK Directory implementation or validation exists yet.
+
 ## Current Exact Next Task
 
-Phase 6B.9 — Resident PK Directory is now the current incomplete gate.
+Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Preregister the Phase 6B.9 Resident PK Directory protocol/design only.
+    Create, statically audit, and freeze maf_resident_pk_directory_v1.py only.
 
-The protocol must define the minimum resident lookup authority needed to map
-logical MAF identities to the currently active immutable physical generation
-without changing logical PK identity.
+The minimum implementation should:
 
-At minimum the protocol should define:
+- build one immutable snapshot for one active model generation;
+- strictly validate active authority binding before build;
+- require current physical generation validity;
+- index canonical object_pk only for V1 minimum scope;
+- use model-scoped logical lookup;
+- preserve exact segment_id / offset / length / object_file_sha256 evidence;
+- reject duplicate object_pk mappings;
+- reject unsupported PK classes;
+- reject missing and cross-model PK lookups explicitly;
+- expose generation-bound freshness information;
+- reject stale generation expectations;
+- publish replacement snapshots only after complete construction;
+- preserve the prior snapshot on failed rebuild;
+- keep physical paths as runtime metadata only;
+- perform direct resident lookups without JSON parsing or manifest scans;
+- own no generation deletion;
+- own no storage engine;
+- require no source GGUF;
+- perform no inference or MAF-native compute;
+- implement no Segment Reader behavior.
 
-- directory authority source;
-- model-scoped directory identity;
-- supported logical PK key classes;
-- directory value contract;
-- active-generation binding;
-- segment_id / offset / length mapping semantics;
-- immutable descriptor evidence retained by directory entries;
-- startup/rebuild behavior;
-- activation-triggered refresh behavior;
-- rollback-triggered refresh behavior;
-- stale-entry rejection;
-- missing-PK behavior;
-- duplicate-PK rejection;
-- cross-model rejection;
-- path-independence requirements;
-- generation-change invalidation;
-- direct lookup correctness requirements;
-- resident-memory ownership;
-- storage-engine neutrality;
-- JSON hot-path non-goal or exclusion;
-- source-GGUF independence;
-- concurrency and crash-consistency nonclaims;
-- inference/residency execution boundary;
-- MAF-native-compute nonclaim;
-- benchmark requirements before production claims.
+Do not create or execute the 6B.9 validation runner yet.
 
-Do not implement the resident PK directory during protocol preregistration.
+Do not benchmark until the implementation and validation protocol boundaries
+are frozen.
 
-Do not create a Phase 6B.9 validation runner yet.
+Do not modify Rollback V1, Activation V1, Activation V1.1, Generation Engine
+V1, or frozen Phase 6B.7 / 6B.8 evidence.
 
-Do not modify Rollback V1, Activation V1, Activation V1.1,
-Generation Engine V1, or frozen validation evidence.
-
-Do not clean any preserved runtime evidence.
+Do not clean preserved runtime evidence.
 
 Do not select SQLite, mmap, MAFDB, or another production storage engine.
 
