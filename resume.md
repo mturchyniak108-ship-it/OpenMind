@@ -1873,20 +1873,53 @@ No diagnostic, benchmark, or functional-validation rerun is authorized.
 
 Preserved runtimes must not be cleaned.
 
+
+## Phase 6B.10 Segment Reader V1 — Protocol Frozen
+
+Physical-contract discovery resolved the object/payload boundary before implementation.
+
+The generation descriptor offset and length identify serialized object-file bytes inside the immutable segment.
+
+For the preserved discovery sample:
+
+- segment_id: segment:00000000
+- object_pk: mafobj:v1:ea258c628d783a1e140430a6bbde438f97f0be7d85e5f218ee149ad3b1fb2815
+- offset: 64
+- length: 512
+- physical range SHA256 equals object_file_sha256
+- physical range SHA256 does not equal payload_sha256
+- object_file_sha256 and payload_sha256 are distinct
+
+Segment Reader V1 therefore reads and verifies the serialized object range using object_file_sha256.
+
+It does not decode or verify the underlying payload layer.
+
+Frozen Segment Reader V1 protocol:
+
+    experiments/model_fractal/MAF_SEGMENT_READER_V1_PROTOCOL.md
+
+Protocol SHA256:
+
+    192402f1e4f2d41540d225cce7629757152b9996a9adffaafeab6674e13f0f5d
+
+Segment Reader implementation has not started.
+
+Validation has not been preregistered or executed.
+
 ## Current Exact Next Task
 
-Phase 6B.10 — Segment Reader V1.
+Phase 6B.10 — Segment Reader V1 preimplementation audit.
 
 Next action:
 
-    Begin Segment Reader V1 with read-only discovery and protocol definition before implementation.
+    Perform a final read-only audit of the frozen Segment Reader V1 protocol, then implement the minimal stateless positional serialized-object reader in a separate gate.
 
-Do not modify the completed Resident PK Directory V1 evidence.
+Do not modify completed Phase 6B.9 evidence.
 
-Do not rerun Diagnostics V1.4.
+Do not rerun Resident PK Directory validation, benchmark, or diagnostics.
 
-Do not rerun Resident PK Directory benchmark or functional validation.
+Do not decode payload_sha256 semantics inside Segment Reader V1.
 
-Do not begin Phase 6C.
+Do not implement FD residency, mmap residency, descriptor caching, tensor reconstruction, or Phase 6C.
 
 Do not push upstream in this gate.
