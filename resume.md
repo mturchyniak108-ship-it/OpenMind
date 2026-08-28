@@ -997,44 +997,221 @@ The runner preregisters:
 
 Phase 6B.8 remains INCOMPLETE / CURRENT.
 
-## Current Exact Next Task
+## Phase 6B.8 Rollback Completion Checkpoint
 
-Verify the exact frozen Rollback V1 protocol, engine, validation runner, and
-all inherited Phase 6B.7 evidence hashes.
+Phase 6B.8 is now complete.
 
-Then execute:
+Status:
+
+    Phase 6B.8 — Rollback — COMPLETE
+
+Frozen Rollback V1 protocol:
+
+    experiments/model_fractal/
+    MAF_ROLLBACK_V1_PROTOCOL.md
+
+Protocol commit:
+
+    9f4a438
+
+Protocol SHA256:
+
+    0d71f4eb28ea35658d9c24a55d085e54
+    b6cc6a5c92cda9dc2a17dfe57df07a42
+
+Frozen Rollback V1 engine:
+
+    experiments/model_fractal/
+    maf_rollback_v1.py
+
+Engine commit:
+
+    fea6e01
+
+Engine SHA256:
+
+    73b02c26f840d59499dd7be86985db6a
+    3a14720769de1d040f2cad9c78703b79
+
+Frozen Rollback V1 validation runner:
 
     experiments/model_fractal/
     maf_rollback_validation_v1.py
 
-exactly once.
+Runner commit:
 
-Before execution confirm:
+    e019732
 
-- exact branch and frozen-runner HEAD;
-- rollback protocol SHA256;
-- rollback engine SHA256;
-- rollback runner SHA256;
-- Activation V1 SHA256;
-- Activation V1.1 SHA256;
-- Generation Engine V1 SHA256;
-- final Activation V1.1.1 runner/result SHA256;
-- historical activation runtimes remain present;
-- rollback raw result is absent;
-- rollback result partial is absent;
-- rollback runtime is absent.
+Runner SHA256:
 
-Execute the frozen rollback runner exactly once.
+    42fdb589b743197be672c47d3b70e407
+    06c1ceea01d23f8862f489cfd5270b7d
 
-Freeze any completed canonical raw result before interpretation, including a
-failed result.
+Frozen Rollback V1 raw validation result:
 
-Do not automatically retry.
+    experiments/model_fractal/
+    maf_rollback_validation_v1.json
 
-Do not clean rollback runtime evidence.
+Result commit:
 
-Do not clean activation runtime evidence.
+    6a898c3
 
-Do not modify any frozen engine or runner.
+Result SHA256:
 
-Do not begin Phase 6B.9 or Phase 6C.
+    36698287b411b30d1616bc24455435022
+    a0e13a9e9b35b16e68cdf32300c4a82
+
+The frozen validation runner executed exactly once.
+
+The raw result was frozen before semantic interpretation.
+
+Final accepted result:
+
+    all_pass = true
+
+Validation establishes:
+
+- valid operational rollback A -> B;
+- later B -> A operational reactivation;
+- strict validation of current authority before rollback;
+- model-scoped rollback authority;
+- exact retained-target generation identity;
+- current physical target reconstruction before authority transition;
+- exact target segment mapping;
+- target segment length and SHA256 validation;
+- target object byte-range SHA256 integrity;
+- canonical five-field active authority records;
+- exact generation_manifest_sha256 binding;
+- independent active-authority reopen;
+- target path independence;
+- same-generation physical revalidation;
+- same-generation changed=false idempotence;
+- current-authority byte preservation on precommit failure;
+- partial cleanup after injected precommit failure;
+- retained generation immutability;
+- source Activation V1.1.1 runtime preservation;
+- rollback candidate-copy preservation;
+- source-GGUF independence;
+- storage/catalog neutrality;
+- no generation deletion;
+- no inference;
+- no MAF-native compute;
+- no resident PK directory implementation.
+
+The final rollback suite contains 25 negative controls and all pass.
+
+Twenty-two controls are executed directly by the Rollback V1 validation runner.
+
+Three controls intentionally inherit already-frozen Activation V1.1.1 evidence:
+
+- object_byte_range_sha256_mismatch;
+- multi_segment_wrong_content_association;
+- synthetic_canonical_without_physical_evidence.
+
+The inherited wrong-content evidence is:
+
+    mode                 = inherited_frozen_activation_v1_1_1
+    pass                 = true
+    source_error_type    = MAFActivationError
+    source_error_text    = segment length mismatch
+    source_failed_closed = true
+
+The inherited-control projection contract was verified read-only against the
+exact frozen Activation V1.1.1 result.
+
+The earlier Phase 6B.8e and 6B.8e1 interpretation failures were
+interpretation-audit expectation defects. They did not indicate a Rollback
+V1 engine defect or Rollback V1 validation-runner defect.
+
+No rollback validation rerun occurred.
+
+No frozen rollback or activation result was rewritten.
+
+Rollback runtime evidence remains preserved:
+
+    results/runtime/
+    maf_rollback_validation_v1
+
+Activation runtime evidence remains preserved:
+
+    results/runtime/
+    maf_activation_validation_v1_1_1
+
+Historical Activation V1.1 runtime evidence remains preserved:
+
+    results/runtime/
+    maf_activation_validation_v1_1
+
+Rollback V1 remains operational reactivation of retained immutable generation
+evidence.
+
+It does not create or infer authoritative historical activation provenance.
+
+Phase 6B.8 therefore establishes:
+
+    current valid authority A
+        +
+    retained immutable target B
+        +
+    current physical validation of B
+        ->
+    atomic authority transition
+        ->
+    B authoritative
+        +
+    A retained unchanged
+
+within the frozen Phase 6B.7 / 6B.8 research scope.
+
+## Current Exact Next Task
+
+Phase 6B.9 — Resident PK Directory is now the current incomplete gate.
+
+Next action:
+
+    Preregister the Phase 6B.9 Resident PK Directory protocol/design only.
+
+The protocol must define the minimum resident lookup authority needed to map
+logical MAF identities to the currently active immutable physical generation
+without changing logical PK identity.
+
+At minimum the protocol should define:
+
+- directory authority source;
+- model-scoped directory identity;
+- supported logical PK key classes;
+- directory value contract;
+- active-generation binding;
+- segment_id / offset / length mapping semantics;
+- immutable descriptor evidence retained by directory entries;
+- startup/rebuild behavior;
+- activation-triggered refresh behavior;
+- rollback-triggered refresh behavior;
+- stale-entry rejection;
+- missing-PK behavior;
+- duplicate-PK rejection;
+- cross-model rejection;
+- path-independence requirements;
+- generation-change invalidation;
+- direct lookup correctness requirements;
+- resident-memory ownership;
+- storage-engine neutrality;
+- JSON hot-path non-goal or exclusion;
+- source-GGUF independence;
+- concurrency and crash-consistency nonclaims;
+- inference/residency execution boundary;
+- MAF-native-compute nonclaim;
+- benchmark requirements before production claims.
+
+Do not implement the resident PK directory during protocol preregistration.
+
+Do not create a Phase 6B.9 validation runner yet.
+
+Do not modify Rollback V1, Activation V1, Activation V1.1,
+Generation Engine V1, or frozen validation evidence.
+
+Do not clean any preserved runtime evidence.
+
+Do not select SQLite, mmap, MAFDB, or another production storage engine.
+
+Do not begin Phase 6C.
