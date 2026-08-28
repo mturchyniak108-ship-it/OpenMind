@@ -1819,17 +1819,48 @@ Its raw result and runtime remain absent.
 
 One final independent frozen-state preflight is required before any exact-once execution.
 
+
+## Phase 6B.9 Diagnostics V1.4 Exact Stale-Exception Correction
+
+Diagnostics V1.3 remained unexecuted after final frozen-state preflight.
+
+The preflight resolved the engine-defined stale-generation rejection exception as:
+
+    MAFResidentPKDirectoryStaleSnapshotError
+
+V1.3 required a stable exception type but did not require that type to equal the engine-defined stale-snapshot exception.
+
+Diagnostics V1.4 corrects only that acceptance defect.
+
+All 200 stale-generation attempts must still reject.
+
+The observed exception-type set must now equal exactly:
+
+    {MAFResidentPKDirectoryStaleSnapshotError}
+
+All V1.3 workloads, thresholds, resource checks, build/hash degradation checks, stale-state preservation checks, and exact-once semantics remain unchanged.
+
+Diagnostics V1.4 correction protocol SHA256: dbb86b4ef1c9cb01efeda00893b8710562895bd347145540335bb20303c1d337
+
+Diagnostics V1.4 runner SHA256: 1d01720bd0bd88bcfcc522af70876e134d12d3b9763fd56cc23975f9f7d5c694
+
+Diagnostics V1.4 has not been executed.
+
+Its result and runtime remain absent.
+
+A final frozen-state preflight is required before exact-once execution.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Perform final independent read-only frozen-state preflight of Diagnostics V1.3.
+    Perform final read-only frozen-state preflight of Diagnostics V1.4.
 
-Do not execute Diagnostics V1, V1.1, or V1.2.
+Do not execute Diagnostics V1 through V1.3.
 
-Do not execute Diagnostics V1.3 yet.
+Do not execute Diagnostics V1.4 yet.
 
 Do not rerun functional validation or benchmark lineages.
 
