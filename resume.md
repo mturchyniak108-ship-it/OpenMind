@@ -62,10 +62,10 @@ remains incomplete unless a deliberate research exception is documented.
         COMPLETE
 
     6B.6 Activation protocol
-        CURRENT INCOMPLETE GATE
+        COMPLETE
 
     6B.7 Atomic activation
-        NOT STARTED
+        CURRENT INCOMPLETE GATE
 
     6B.8 Rollback
         NOT STARTED
@@ -336,16 +336,51 @@ No behavioral validation evidence was weakened.
 The V1.1 runtime directory remains untracked research/runtime evidence and
 has not been cleaned as part of this interpretation checkpoint.
 
+## Phase 6B.6 Activation Protocol Checkpoint
+
+Phase 6B.6 — Activation Protocol is COMPLETE.
+
+Frozen protocol:
+
+    experiments/model_fractal/
+    MAF_ACTIVATION_V1_PROTOCOL.md
+
+The protocol defines one model-scoped active-generation authority record:
+
+    schema
+    active_generation_version
+    model_pk
+    generation_pk
+    generation_manifest_sha256
+
+The authority record:
+
+- references one validated immutable generation;
+- contains no candidate manifest filesystem path;
+- does not change logical PK identity;
+- does not change generation_pk;
+- does not modify generation/segment/object bytes;
+- does not require the source GGUF;
+- remains independent of catalog storage-engine choice.
+
+The protocol defines required old-or-new atomic authority semantics.
+
+It does not implement those semantics.
+
+Rollback remains explicitly outside scope.
+
 ## Current Exact Next Task
 
-Phase 6B.6 — Activation Protocol is now the first incomplete gate.
+Phase 6B.7 — Atomic activation is now the first incomplete gate.
 
 Next action:
 
-    Audit the existing catalog/generation contracts and preregister
-    the activation protocol only.
+    Audit the frozen Activation V1 protocol against the existing
+    Generation Engine API, then design the minimum reference
+    implementation and preregistered validation runner.
 
-Do not implement atomic activation during the protocol stage.
+Do not execute activation validation before the implementation and
+validation runner have been frozen.
 
 Do not begin rollback, resident-directory work, storage-engine
 selection, or Phase 6C.

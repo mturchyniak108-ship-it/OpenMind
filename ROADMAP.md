@@ -163,8 +163,8 @@ Lean Phase 6B progression:
 - **6B.3 Generation descriptor / manifest — COMPLETE**
 - **6B.4 Generation Engine V1 — COMPLETE**
 - **6B.5 Generation Engine validation — COMPLETE**
-- **6B.6 Activation protocol — INCOMPLETE / CURRENT**
-- **6B.7 Atomic activation — NOT STARTED**
+- **6B.6 Activation protocol — COMPLETE**
+- **6B.7 Atomic activation — INCOMPLETE / CURRENT**
 - **6B.8 Rollback — NOT STARTED**
 - **6B.9 Resident PK directory — NOT STARTED**
 - **6B.10 Segment Reader validation — NOT STARTED**
@@ -219,6 +219,29 @@ Phase 6B.5 is COMPLETE.
 The next single incomplete gate is Phase 6B.6 — Activation Protocol.
 Atomic activation implementation, rollback, resident-directory work,
 storage-engine selection, and Phase 6C remain outside that gate.
+
+Phase 6B.6 Activation Protocol is frozen as:
+
+    experiments/model_fractal/
+    MAF_ACTIVATION_V1_PROTOCOL.md
+
+The protocol defines model-scoped active-generation authority while
+remaining storage-engine neutral.
+
+Its canonical authority record binds:
+
+- model_pk;
+- generation_pk;
+- generation_manifest_sha256.
+
+Candidate manifest paths do not enter active authority identity.
+
+Phase 6B.6 defines required atomic semantics only. Phase 6B.7 must
+implement and independently validate the authority transition.
+
+Rollback remains outside scope until Phase 6B.8.
+
+The next single incomplete gate is Phase 6B.7 — Atomic activation.
 
 <!-- OPENMIND_PHASE_6B_STATUS_END -->
 
