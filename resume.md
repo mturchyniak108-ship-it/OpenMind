@@ -351,21 +351,98 @@ DO NOT clean or overwrite the validation runtime.
 
 DO NOT alter the first raw result.
 
+
+## Phase 6B.10 Segment Reader V1 — Benchmark V1 Preregistered
+
+Functional validation is accepted and its exact-once runner is permanently forbidden from rerun.
+
+Benchmark V1 protocol:
+
+    experiments/model_fractal/MAF_SEGMENT_READER_BENCHMARK_V1_PROTOCOL.md
+
+SHA256:
+
+    48263a8c6e57c4e3739f0c1c2eeef1a85c4ab04bc53b7b24762aaacff889d55b
+
+Benchmark V1 runner:
+
+    experiments/model_fractal/benchmark_maf_segment_reader_v1.py
+
+SHA256:
+
+    2972beda0d1a798cf5da9bf6371f5c0c96ee493ce6903da68021cec64e7947d4
+
+Benchmark execution:
+
+    NONE
+
+Benchmark result:
+
+    ABSENT
+
+Frozen configuration:
+
+    warmup = 100 per object/mode
+    measured repeats = 1000 per object/mode
+    clock = time.perf_counter_ns
+    mode order = deterministic rotating
+    raw timing samples = preserved
+    performance threshold = NONE / observational
+
+Modes:
+
+    reader_v1
+    direct_nohash_reference
+    whole_segment_hash_reference
+
+Throughput is mandatory alongside latency.
+
+Every applicable per-object and aggregate report includes:
+
+    operations/second
+    returned bytes/second
+    returned MiB/second
+
+Whole-segment-hash mode additionally includes:
+
+    full segment processing bytes/second
+    full segment processing MiB/second
+
+Throughput is derived deterministically from the raw timing samples and actual byte counts.
+
+Latency and throughput ratios are descriptive only.
+
+The original prereg static failure was an auditor false positive caused by treating the canonical __main__ guard as module-scope benchmark execution. The corrected structural audit permits only the canonical guard and rejects real unsafe module-level calls.
+
 ## Exact Next Task
 
-Interpret the frozen Segment Reader V1 validation result read-only.
+Perform the final read-only Benchmark V1 preflight.
 
-If all_pass is True, fatal_error is absent, identities are exact, and preserved source evidence is unchanged:
+Do not execute Benchmark V1 yet.
 
-    classify the functional validation before benchmark preregistration.
+The preflight must confirm the frozen hashes above and revalidate:
 
-Otherwise:
+- benchmark result absent;
+- source fixture identity;
+- fixture count and distinct offsets;
+- exact object bytes and payload-hash distinction;
+- all three benchmark modes;
+- read-only flags;
+- timer boundaries;
+- deterministic rotation;
+- raw timing preservation;
+- latency statistics;
+- operations/s throughput;
+- returned bytes/s and MiB/s throughput;
+- full-segment processing throughput for whole-hash mode;
+- sample-specific aggregate byte accounting;
+- latency and throughput ratios;
+- no manifest/JSON work in the timed orchestrator;
+- exact-once publication;
+- no cleanup;
+- no validation rerun.
 
-    audit the first frozen negative-evidence condition only.
-
-Do not rerun functional validation.
-
-Do not benchmark Segment Reader V1 until result interpretation is complete.
+Only after that read-only preflight passes may Benchmark V1 execute exactly once.
 
 Do not start Phase 6C.
 
