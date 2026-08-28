@@ -1931,23 +1931,69 @@ It does not parse JSON, reopen manifests, access the source GGUF, hash the compl
 
 No Segment Reader functional validation has been preregistered or executed.
 
+
+## Phase 6B.10 Segment Reader V1 — Functional Validation Preregistered
+
+The Segment Reader V1 functional-validation protocol and runner are frozen before execution.
+
+The initial freeze attempts exposed two false positives in temporary external static auditors:
+
+1. legitimate reader calls inside run_validation() were incorrectly counted as module-level execution;
+2. the runner's own ".gguf" prohibition detector was incorrectly treated as GGUF access.
+
+Read-only AST audits resolved both issues without modifying the accepted drafts:
+
+- module-scope Segment Reader calls: 0;
+- validation-function Segment Reader calls: 18;
+- GGUF literal count: 1;
+- the single GGUF literal is the negative prohibition detector inside run_static_checks();
+- actual GGUF path values/access: none.
+
+The exact accepted drafts were preserved byte-for-byte.
+
+Frozen Segment Reader engine SHA256:
+
+    3499cb8e528fe8e9315e3e5656d6aa888c95ca175310b6371e722de409827369
+
+Validation protocol:
+
+    experiments/model_fractal/MAF_SEGMENT_READER_VALIDATION_V1_PROTOCOL.md
+
+Validation protocol SHA256:
+
+    c896e6b68be67352e4b09ed8f6486cdea2e20435fa03c7c44fd4871051e202be
+
+Validation runner:
+
+    experiments/model_fractal/maf_segment_reader_validation_v1.py
+
+Validation runner SHA256:
+
+    1f5cfdba3d3bd681eb78b07d98b9ee49497a3608bc51408c7e503b0dbc80bf88
+
+No Segment Reader validation has executed.
+
+The validation result remains absent.
+
+The validation runtime remains absent.
+
 ## Current Exact Next Task
 
-Phase 6B.10 — Segment Reader V1 functional-validation preregistration.
+Phase 6B.10 — Segment Reader V1 final frozen validation preflight.
 
 Next action:
 
-    Design and freeze Segment Reader V1 functional validation before any validation execution.
+    Perform a final read-only frozen-state preflight of the exact protocol and runner before the single permitted validation execution.
 
-The validation must cover exact serialized-object reconstruction, generation rejection before file access, invalid ranges, missing/non-regular/truncated/corrupt segments, object_file_sha256 mismatch, FD closure, immutable entry behavior, and hot-path access prohibitions.
+Do not execute validation yet.
 
-Do not execute validation before its protocol and runner are frozen.
+Do not modify or regenerate the frozen validation protocol or runner.
+
+Do not rerun completed Resident PK Directory evidence.
 
 Do not benchmark Segment Reader V1 yet.
 
-Do not modify Phase 6B.9 evidence.
-
-Do not decode payload_sha256 in Segment Reader V1.
+Do not decode payload_sha256.
 
 Do not implement FD residency, mmap residency, descriptor caching, or Phase 6C.
 
