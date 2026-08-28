@@ -1414,62 +1414,58 @@ runtime already exists.
 
 No benchmark has been executed.
 
+
+## Phase 6B.9 Documentation Checkpoint
+
+Phase 6B documentation has been synchronized before first Resident PK Directory validation execution.
+
+Updated surfaces include:
+
+- root README;
+- Phase 6B roadmap status;
+- documentation index;
+- architecture and authority documentation;
+- MAF research documentation;
+- development best practices;
+- glossary;
+- Labs guidance;
+- AI collaborator guidance;
+- Phase 6B walkthrough / tutorial.
+
+The documentation now distinguishes validated behavior, frozen implementation awaiting validation, benchmark targets, and future work.
+
+Atomic Activation and Rollback are documented as complete and validated.
+
+Resident PK Directory V1 protocol, engine, and validation runner remain frozen.
+
+The Resident PK Directory validation runner has still not been executed.
+
+No Resident PK Directory validation result or runtime exists yet.
+
+Average O(1) resident lookup remains a target until benchmark evidence is frozen.
+
+No Segment Reader implementation, production storage-engine selection, MAF-native compute, inference replacement, or Phase 6C implementation is claimed.
+
 ## Current Exact Next Task
 
-Before first Resident PK Directory validation execution, perform the requested
-OpenMind documentation checkpoint.
+Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
-Audit and update the appropriate documentation surfaces, including where
-applicable:
+Next action:
 
-- README.md;
-- MAF / model-fractal documentation;
-- roadmap and status documentation;
-- developer / AI guidance;
-- architecture documentation;
-- best-practice guidance;
-- tutorial / walkthrough documentation.
+    Execute the already-frozen
+    maf_resident_pk_directory_validation_v1.py
+    exactly once and freeze its raw result.
 
-The documentation must accurately explain the frozen Phase 6B architecture,
-including:
+Before execution, recheck the frozen protocol, engine, and runner hashes and require both validation result and validation runtime to be absent.
 
-- stable logical PK identity;
-- immutable generation descriptors and segment evidence;
-- Atomic Activation;
-- operational Rollback;
-- active authority versus derived resident state;
-- Resident PK Directory V1;
-- model-scoped object_pk lookup;
-- generation-bound immutable snapshots;
-- path independence;
-- stale-snapshot rejection;
-- activation and rollback refresh semantics;
-- source-GGUF independence of resident lookup;
-- JSON / manifest-scan exclusion from the resident lookup hot path.
+Do not modify the frozen validation runner.
 
-Documentation must clearly distinguish:
+Do not retry automatically if execution produces a negative result.
 
-- validated behavior;
-- frozen implementation awaiting validation;
-- benchmark targets;
-- future work.
-
-Resident PK Directory average O(1) lookup remains an implementation/design
-target until benchmark evidence is frozen.
-
-Do not execute maf_resident_pk_directory_validation_v1.py during the
-documentation checkpoint.
-
-Do not create its raw result or runtime.
-
-Do not modify the frozen protocol, directory engine, validation runner,
-Activation V1, Activation V1.1, Rollback V1, Generation Engine V1, or prior
-frozen validation evidence.
-
-Do not clean preserved runtime evidence.
-
-Do not select a production storage engine.
+Do not benchmark in the same gate.
 
 Do not implement Segment Reader V1.
+
+Do not select a production storage engine.
 
 Do not begin Phase 6C.

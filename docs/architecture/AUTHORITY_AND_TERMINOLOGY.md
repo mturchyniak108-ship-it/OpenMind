@@ -115,3 +115,25 @@ Prefer:
 Neither a successful experiment nor a derived representation changes canonical authority automatically.
 
 Research promotion follows the validation and promotion rules documented elsewhere in OpenMind.
+
+## MAF Phase 6B Authority Chain
+
+MAF Phase 6B uses a strict authority-versus-derived-state boundary.
+
+Authoritative current-generation selection:
+
+1. the canonical five-field active-generation record;
+2. the immutable generation manifest and descriptor identified by that record;
+3. the immutable physical segment and object-range evidence validated against the descriptor.
+
+Derived state:
+
+- Resident PK Directory snapshots;
+- runtime physical segment paths;
+- lookup indexes and cache structures.
+
+Derived state must never redefine `model_pk`, `generation_pk`, `object_pk`, segment identity, object offsets, lengths, or integrity hashes.
+
+Physical relocation may change runtime path metadata while stable logical PK identity and immutable descriptor evidence remain unchanged.
+
+A successful activation or rollback invalidates the prior current-generation resident snapshot. A replacement snapshot must be completely rebuilt and validated before publication.

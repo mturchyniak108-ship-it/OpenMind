@@ -164,9 +164,9 @@ Lean Phase 6B progression:
 - **6B.4 Generation Engine V1 — COMPLETE**
 - **6B.5 Generation Engine validation — COMPLETE**
 - **6B.6 Activation protocol — COMPLETE**
-- **6B.7 Atomic activation — INCOMPLETE / CURRENT**
-- **6B.8 Rollback — NOT STARTED**
-- **6B.9 Resident PK directory — NOT STARTED**
+- **6B.7 Atomic activation — COMPLETE / VALIDATED**
+- **6B.8 Rollback — COMPLETE / VALIDATED**
+- **6B.9 Resident PK directory — INCOMPLETE / CURRENT**
 - **6B.10 Segment Reader validation — NOT STARTED**
 
 The frozen Generation Engine V1 validation result remains historical
@@ -870,3 +870,25 @@ The present evidence favors a hybrid rather than replacement model:
 
 Other morphologies remain candidate specialized structures until their
 own controlled experiments earn implementation status.
+
+### Current Phase 6B.9 Checkpoint
+
+The current Phase 6B status list supersedes older historical checkpoint notes retained elsewhere in this roadmap.
+
+- Phase 6B.7 Atomic Activation is complete and validated.
+- Phase 6B.8 Rollback is complete and validated.
+- Phase 6B.9 Resident PK Directory is incomplete and current.
+- Resident PK Directory V1 protocol is frozen.
+- Resident PK Directory V1 engine is frozen.
+- Resident PK Directory Validation V1 runner is preregistered and frozen.
+- The Resident PK Directory validation runner has not yet been executed.
+- Its raw result and validation runtime do not exist.
+- Resident PK Directory performance has not yet been benchmarked under the frozen validation line.
+- Phase 6B.10 Segment Reader validation has not started.
+- Phase 6C has not started.
+
+Resident PK Directory V1 is derived immutable process-local state for exactly one model and one active generation.
+
+The minimum logical lookup key is `(model_pk, "object_pk", object_pk)`.
+
+Average O(1) lookup is a design and implementation target until measured by accepted benchmark evidence.

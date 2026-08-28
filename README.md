@@ -174,3 +174,24 @@ Original OpenMind research datasets, benchmark results, measurements, and other 
 Third-party software, models, datasets, and artifacts retain their applicable upstream licenses.
 
 See `LICENSE`, `RESEARCH_DATA_LICENSE.md`, and `THIRD_PARTY_LICENSES.md`.
+
+#### Phase 6B — current MAF engineering state
+
+Phase 6B is building the catalog, immutable-generation, activation, rollback, and resident-lookup layer required before MAF can be treated as a runtime model-object system.
+
+Current frozen research status:
+
+- Atomic Activation is complete and validated.
+- Rollback is complete and validated.
+- Resident PK Directory V1 protocol and implementation are frozen.
+- Resident PK Directory Validation V1 is preregistered and frozen but has not yet been executed.
+- Segment Reader validation has not started.
+- Phase 6C runtime and residency work has not started.
+
+The Resident PK Directory is derived process-local state, not authority. Authority remains the active-generation record plus the immutable active generation descriptor.
+
+The minimum V1 resident lookup key is model-scoped canonical `object_pk` identity. Successful lookup is generation-bound and returns immutable segment, offset, length, object-hash, and runtime-path evidence.
+
+The implementation is designed for direct average O(1) resident lookup with no JSON parsing, manifest scan, filesystem discovery, or linear descriptor scan on the successful hot path. This remains an implementation target until benchmark evidence is frozen.
+
+Phase 6B does not yet claim MAF-native inference, a replacement for `llama.cpp`, a production storage engine, or Segment Reader implementation.

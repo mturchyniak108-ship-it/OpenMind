@@ -152,3 +152,22 @@ git diff --stat
 ```
 
 A commit should represent one understandable logical change whenever practical.
+
+## MAF Phase 6B Best Practices
+
+When changing Phase 6B MAF infrastructure:
+
+1. Preserve logical identity. Never synthesize or rewrite canonical PKs from paths, ordering, offsets, or filenames.
+2. Keep authority separate from caches. The active-generation record and immutable descriptor remain authority; resident indexes are derived.
+3. Validate before publication. Build and validate a complete replacement snapshot before making it visible.
+4. Preserve the prior valid snapshot on failed refresh. Never publish partial resident state.
+5. Treat activation and rollback as freshness boundaries. A snapshot for the previous active generation becomes stale.
+6. Revalidate physical evidence after rollback or same-generation refresh. Historical validity is not enough.
+7. Keep physical paths out of logical identity. Relocation may change runtime paths without changing PKs or descriptor evidence.
+8. Keep successful resident lookup free of JSON parsing, manifest scanning, filesystem discovery, and linear descriptor scans.
+9. Do not add source-GGUF dependency to resident directory construction or lookup.
+10. Do not select SQLite, mmap, MAFDB, LMDB, RocksDB, or another production storage engine without separate measured evidence.
+11. Preserve failed and negative evidence. A failed validation is research evidence, not disposable noise.
+12. Distinguish implementation targets from validated performance. Average O(1) resident lookup is not a benchmark claim until measured.
+13. Do not merge Segment Reader, inference, tensor computation, or Phase 6C responsibilities into Resident PK Directory V1.
+14. Freeze validation protocols and runners before first execution and preserve exact-once evidence boundaries.

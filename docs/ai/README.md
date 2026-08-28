@@ -121,3 +121,20 @@ TruthPath represents a candidate route between semantic start and end nodes.
 PathWeight represents the confidence and cost of a candidate route.
 
 Natural-language expressions should reference semantic truths rather than creating separate truths for every language.
+
+## Phase 6B MAF Agent Rules
+
+AI collaborators working on Phase 6B must preserve these boundaries:
+
+- treat the canonical active-generation record as current-generation authority;
+- treat the immutable generation descriptor as logical-to-physical mapping authority;
+- treat Resident PK Directory state as derived and rebuildable;
+- never synthesize logical PK identity from path, position, filename, or ordering;
+- require current physical validation before resident snapshot publication;
+- reject stale generation expectations rather than silently serving old state;
+- preserve the prior valid resident snapshot when replacement construction fails;
+- keep successful resident lookup free of JSON parsing, manifest scanning, filesystem discovery, and linear descriptor scans;
+- preserve source-GGUF independence for resident directory construction and lookup;
+- do not claim measured average O(1) performance until benchmark evidence exists;
+- do not infer Segment Reader, MAF-native compute, inference replacement, storage-engine selection, or Phase 6C completion from Phase 6B.9 implementation alone;
+- do not rerun exact-once validation runners after frozen raw evidence exists.

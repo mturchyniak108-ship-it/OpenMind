@@ -173,3 +173,29 @@ A structured metadata file describing an artifact or experiment, including confi
 The explicit process of moving work from a lower evidence status toward validated research or canonical project behavior.
 
 Promotion is never implied merely by the existence of a successful-looking result.
+
+## MAF Generation
+
+An immutable canonical descriptor plus its generation identity and physical segment evidence. A generation is not defined by its current filesystem location.
+
+## Active Generation
+
+The generation selected by the canonical active-generation authority record for a model.
+
+## Stable Logical PK
+
+A canonical logical identifier such as `model_pk`, `generation_pk`, or `object_pk` whose identity is independent of mutable physical placement.
+
+## Resident PK Directory
+
+A derived process-local immutable lookup snapshot built from current active-generation authority and validated physical evidence. It is not authoritative truth.
+
+Resident PK Directory V1 supports model-scoped canonical `object_pk` lookup as its minimum key class.
+
+## Stale Snapshot
+
+A resident snapshot whose generation binding no longer matches the generation expected by the current runtime after activation, rollback, or another authority transition.
+
+## Path Independence
+
+The property that byte-identical valid physical evidence may move to another runtime path without changing logical PK identity or immutable descriptor mappings.

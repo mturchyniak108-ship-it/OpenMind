@@ -123,3 +123,12 @@ Important OpenMind concepts should eventually provide three levels of explanatio
 3. a precise technical description.
 
 Commands should be reproducible, claims should identify their evidence level, and limitations should be stated explicitly.
+
+## Phase 6B MAF Engineering
+
+- [MAF Research](experiments/MAF.md)
+- [Phase 6B MAF Walkthrough](getting-started/MAF_PHASE6B_WALKTHROUGH.md)
+- [Authority and Terminology](architecture/AUTHORITY_AND_TERMINOLOGY.md)
+- [Development Best Practices](development/BEST_PRACTICES.md)
+
+These documents distinguish frozen implementation, validated behavior, benchmark targets, and future work.

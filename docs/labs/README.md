@@ -73,3 +73,21 @@ All-token activation capture V1 is documented at:
 Its tracked manifest is:
 
 `experiments/data/manifests/activation_vectors_all_tokens_v1.json`
+
+#### Current Phase 6B engineering checkpoint
+
+The active MAF engineering line has progressed beyond isolated index experiments into immutable generation management and derived resident lookup.
+
+Validated:
+
+- Atomic Activation;
+- Rollback.
+
+Frozen but awaiting first validation execution:
+
+- Resident PK Directory V1 engine;
+- Resident PK Directory Validation V1 runner.
+
+The resident directory is derived, model-scoped, generation-bound state. It does not replace active-generation or generation-descriptor authority.
+
+No Phase 6B.9 benchmark result, Segment Reader implementation, MAF-native inference claim, production storage-engine choice, or Phase 6C runtime claim has been accepted.
