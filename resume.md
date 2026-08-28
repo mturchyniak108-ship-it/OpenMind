@@ -1667,22 +1667,64 @@ No production storage engine was selected.
 
 Phase 6C has not started.
 
+
+## Phase 6B.9 Post-Validation Diagnostic Preregistration
+
+Resident PK Directory functional evidence is semantically accepted.
+
+Resident PK Directory Benchmark V1.1 performance evidence is semantically accepted.
+
+Accepted Benchmark V1.1 result SHA256: 57562c9fbcac012c6706903ff07c23a15b5bf59bb0599a9f6dd04ceecbec95b1
+
+Observed accepted performance evidence includes:
+
+    direct median scaling ratio: 1.0
+    direct p95 scaling ratio: 1.3984674329501916
+    linear 100K/1K median growth: 100.35176445350208
+    100K direct median: 260 ns
+    100K linear median: 3742318 ns
+    device-local 100K ratio: approximately 14393.53x
+
+The O(1)-style claim remains limited to observed scaling over the tested range.
+
+No production performance guarantee is claimed.
+
+Before Phase 6B.10, a dedicated post-validation diagnostic suite is now frozen.
+
+Diagnostic protocol: experiments/model_fractal/MAF_RESIDENT_PK_DIRECTORY_DIAGNOSTICS_V1_PROTOCOL.md
+
+Diagnostic protocol SHA256: 5101e4a4dd78b869eb91ce226a1a304181bc2c3636d2ff86a056db15caf0560a
+
+Diagnostic runner: experiments/model_fractal/diagnose_maf_resident_pk_directory_v1.py
+
+Diagnostic runner SHA256: 88452ca6d8fa0d70c4a9982630b1170fb5034e12871a501ead90f68676e2c8aa
+
+The suite preregisters logic/invariant, failed-refresh preservation, hot-path filesystem-I/O, tracemalloc retention, live snapshot retention, RSS, file-descriptor, runtime-file accumulation, and sustained lookup/refresh degradation checks.
+
+Diagnostic execution has not occurred.
+
+Diagnostic result and runtime remain absent.
+
+Both benchmark runtimes remain preserved.
+
+Benchmark and functional runners must not be rerun.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Interpret the frozen Benchmark V1.1 raw result only.
+    Execute the frozen Resident PK Directory Diagnostics V1 exactly once and freeze the raw result.
 
-Do not rerun V1 or V1.1.
+Do not rerun functional validation or either benchmark lineage.
 
-Do not modify either frozen benchmark lineage.
+Do not automatically retry diagnostics.
 
-Do not clean either benchmark runtime.
+Do not clean any preserved runtime.
 
-After benchmark interpretation, run the dedicated logic/resource/leak/degradation diagnostic checkpoint before Phase 6B.10.
+Do not interpret diagnostics inside the raw-result freeze gate.
 
-Do not implement Segment Reader V1 yet.
+Do not begin Segment Reader V1 until diagnostic evidence is frozen and interpreted.
 
 Do not begin Phase 6C.
