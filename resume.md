@@ -1487,21 +1487,75 @@ No production storage engine was selected.
 
 Phase 6C has not started.
 
+
+## Phase 6B.9 Functional Interpretation and Benchmark Preregistration Checkpoint
+
+Resident PK Directory V1 functional validation is semantically ACCEPTED.
+
+Frozen functional validation result SHA256:
+
+    24540c16eac53e9a179781c7007d61d98b34f7bc74e1f3dfc462b5786dd186b1
+
+Functional interpretation established:
+
+- all top-level contract bindings passed;
+- all 37 positive boolean checks passed;
+- all 11 static policy checks passed;
+- all 22 preregistered negative controls passed;
+- activation refresh behavior passed;
+- rollback refresh behavior passed;
+- stale snapshot rejection passed;
+- failed refresh prior-snapshot preservation passed;
+- physical relocation semantics passed;
+- source Activation runtime remained unchanged.
+
+The functional validation runner must not be rerun.
+
+Phase 6B.9 remains incomplete because dedicated performance evidence is still required.
+
+Resident PK Directory Performance Benchmark V1 protocol is frozen as:
+
+    experiments/model_fractal/MAF_RESIDENT_PK_DIRECTORY_BENCHMARK_V1_PROTOCOL.md
+
+Benchmark protocol SHA256:
+
+    496a19e5f2f2a9cebbb74aaf204b96e28916c0aa0276fb85dfb8401e55e2266f
+
+Benchmark runner is frozen as:
+
+    experiments/model_fractal/benchmark_maf_resident_pk_directory_v1.py
+
+Benchmark runner SHA256:
+
+    536d5a360bf7d450eb6a882581cd3c202cc81d66323d7b9e871bd15353f1c27d
+
+The benchmark has not been executed.
+
+Its raw result and runtime remain absent.
+
+The benchmark preregisters direct lookup latency distributions, scaling, linear comparison, actual build and refresh cost, and memory scaling.
+
+Average O(1) resident lookup remains a target until the benchmark result is frozen and interpreted.
+
+No production latency guarantee is preregistered.
+
 ## Current Exact Next Task
 
 Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Interpret the frozen Resident PK Directory Validation V1 raw result only.
+    Execute the frozen Resident PK Directory Performance Benchmark V1 exactly once and freeze its raw result.
 
-Do not rerun the validation runner.
+Before execution, require the benchmark protocol and runner hashes to match their frozen identities and require both benchmark result and runtime to be absent.
 
-Do not modify the frozen raw result.
+Do not rerun the functional validation runner.
 
-Do not benchmark during interpretation.
+Do not modify the frozen benchmark after execution begins.
 
-Do not clean the validation runtime.
+Do not automatically retry a failed or negative benchmark.
+
+Do not interpret and rewrite benchmark evidence in the raw-result gate.
 
 Do not implement Segment Reader V1.
 
