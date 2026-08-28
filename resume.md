@@ -414,35 +414,138 @@ Latency and throughput ratios are descriptive only.
 
 The original prereg static failure was an auditor false positive caused by treating the canonical __main__ guard as module-scope benchmark execution. The corrected structural audit permits only the canonical guard and rejects real unsafe module-level calls.
 
+
+## CPU Thermal Characterization V1 — Preregistered
+
+CPU thermal characterization now precedes Segment Reader Benchmark V1.1.
+
+Thermal tolerance is the primary CPU operating-window selection criterion.
+
+Protocol:
+
+    experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_PROTOCOL.md
+
+SHA256:
+
+    16ac28f006c14aba612d93f774a6e52bfb44520a7f28a0b0980213928fbf70bb
+
+Runner:
+
+    experiments/model_fractal/cpu_thermal_characterization_v1.py
+
+SHA256:
+
+    dffe23ab714d85004200ddffbb3f4a5c22bb32788350e665c9b57adc179b8264
+
+Execution:
+
+    NONE
+
+Result:
+
+    ABSENT
+
+Known topology:
+
+    cluster 0 = cpu0,cpu1,cpu2,cpu3,cpu4,cpu5
+    cluster 1 = cpu6,cpu7
+
+Thermal operating envelope:
+
+    optimal:
+        <= CPU-specific baseline + 5 C
+        <= 75 C
+
+    hard stop:
+        >= min(CPU-specific baseline + 8 C, 80 C)
+
+Candidate active durations:
+
+    100 ms
+    250 ms
+    500 ms
+    1 s
+    2 s
+    4 s
+    8 s
+
+Active epochs are bounded to 100 ms.
+
+Selection is thermal-first:
+
+    longest fully completed thermally eligible stage
+
+Each preliminary optimum receives exactly one confirmation cycle.
+
+Per-CPU evidence includes:
+
+    ns/op
+    operations/s
+    bytes/s
+    MiB/s
+    thermal rise
+    thermal rise per active second
+    MiB processed per degree C
+    frequency observations
+    recovery time
+    sustainable duty cycle
+
+Cross-cluster thermal distribution is mandatory.
+
+For same-cluster consecutive test targets, the corrected runner now:
+
+    1. pins an opposite-cluster bridge CPU;
+    2. cools to the global resume threshold while pinned there;
+    3. records bridge-cooldown evidence;
+    4. only then pins the next target CPU.
+
+The prior static failures for:
+
+    BUFFER_SIZE
+    eligible-stage filtering
+    confirmation thermal eligibility
+    duty-cycle formula
+
+were auditor false positives and were resolved using AST-aware semantic
+audits before freeze.
+
+No CPU characterization workload has executed.
+
+Segment Reader Benchmark V1 remains frozen and unexecuted.
+
+Segment Reader Benchmark V1.1 remains deferred until CPU thermal
+characterization is executed and interpreted.
+
 ## Exact Next Task
 
-Perform the final read-only Benchmark V1 preflight.
+Perform the final read-only execution preflight for CPU Thermal
+Characterization V1.
 
-Do not execute Benchmark V1 yet.
+The preflight must independently verify:
 
-The preflight must confirm the frozen hashes above and revalidate:
-
-- benchmark result absent;
-- source fixture identity;
-- fixture count and distinct offsets;
-- exact object bytes and payload-hash distinction;
-- all three benchmark modes;
-- read-only flags;
-- timer boundaries;
-- deterministic rotation;
-- raw timing preservation;
-- latency statistics;
-- operations/s throughput;
-- returned bytes/s and MiB/s throughput;
-- full-segment processing throughput for whole-hash mode;
-- sample-specific aggregate byte accounting;
-- latency and throughput ratios;
-- no manifest/JSON work in the timed orchestrator;
-- exact-once publication;
+- frozen protocol and runner identities;
+- exact commit lineage;
+- result absence;
+- discovered topology availability;
+- thermal-zone availability and plausible current readings;
+- current affinity capability;
+- bridge cooldown ordering;
+- thermal optimal and hard-stop formulas;
+- staircase and epoch limits;
+- confirmation semantics;
+- recovery and duty-cycle semantics;
+- latency and all throughput metrics;
+- frequency evidence;
+- exact-once result publication;
+- affinity restoration;
+- no sysfs writes;
 - no cleanup;
-- no validation rerun.
+- no Segment Reader benchmark execution.
 
-Only after that read-only preflight passes may Benchmark V1 execute exactly once.
+Do not execute CPU Thermal Characterization V1 until that final preflight
+passes.
+
+Do not execute Segment Reader Benchmark V1.
 
 Do not start Phase 6C.
 
