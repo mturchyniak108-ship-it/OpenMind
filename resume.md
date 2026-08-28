@@ -611,18 +611,130 @@ V1.1 result:
 
     ABSENT
 
+
+## CPU Thermal Characterization V1.2 — Preregistered
+
+V1 and V1.1 are preserved unchanged and permanently unexecuted.
+
+V1.1 final execution-safety preflight established:
+
+    governing non-trip sensors = 20
+    trip-zone contamination = 0
+    current governing maximum = 50.4 C
+    live thermal state = safe
+
+but also found:
+
+    CPU_THERMAL_V1_1_FATAL_PARTIAL_EVIDENCE_PRESERVATION_DEFECT
+
+V1.2 supersedes V1.1 before any CPU characterization load.
+
+Protocol:
+
+    experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_2_PROTOCOL.md
+
+SHA256:
+
+    b98e4c4d7309948b0fbf71f4a961e038a7e55470f03153e85ec724ffd32f3cbb
+
+Runner:
+
+    experiments/model_fractal/cpu_thermal_characterization_v1_2.py
+
+SHA256:
+
+    19218eaf8fe98a6bcbf6f465f9f0d5320d8fb42f6b3937bbfcc5b4a29a78c2f2
+
+V1.2 preserves a permanent fatal result containing, where available:
+
+    completed CPU profiles
+    completed stages for the current CPU
+    completed confirmation evidence
+    affinity transitions
+    bridge cooldowns
+    topology and thermal selector context
+    original affinity
+    affinity restoration status
+    original execution exception
+    distinct affinity-restoration exception
+
+An affinity-restoration failure cannot replace or hide the original
+execution exception.
+
+V1.2 does not fabricate a record for an operation that had not returned
+a complete evidence object when failure occurred.
+
+Existing thermal governance is unchanged:
+
+    governing sensors:
+        plausible non-trip live sensors only
+
+    excluded but preserved:
+        trip
+        threshold
+        thresh
+
+    optimal:
+        <= CPU baseline + 5 C
+        <= 75 C
+
+    hard stop:
+        >= min(CPU baseline + 8 C, 80 C)
+
+    epoch maximum:
+        100 ms
+
+    staircase:
+        100,250,500,1000,2000,4000,8000 ms
+
+    same-cluster scheduling:
+        opposite-cluster bridge
+        cool on bridge
+        then target CPU
+
+Metrics remain:
+
+    ns/op
+    operations/s
+    bytes/s
+    MiB/s
+    thermal rise/slope
+    MiB per degree C
+    recovery
+    sustainable duty cycle
+
+Execution:
+
+    NONE
+
+Result:
+
+    ABSENT
+
 ## Exact Next Task
 
-Perform the final read-only execution preflight for CPU Thermal
-Characterization V1.1.
+Perform final read-only CPU Thermal Characterization V1.2 execution
+preflight.
 
-The preflight must verify the corrected live-sensor selector against
-the current device and prove that cpu-hw-trip-* zones are excluded from
-the governing set while preserved as diagnostic evidence.
+It must independently verify:
 
-Do not execute V1.
+- V1.2 frozen identities and lineage;
+- V1 and V1.1 results remain absent;
+- non-trip governing sensor set is currently thermally safe;
+- cpu-hw-trip-* remains excluded;
+- topology and affinity capability remain valid;
+- partial failure evidence preservation;
+- dual execution/restoration exception preservation;
+- bridge cooldown ordering;
+- thermal limits and 100 ms epoch bound;
+- exact-once exclusive result publication;
+- no sysfs writes;
+- no cleanup;
+- no Segment Reader Benchmark execution.
 
-Do not execute V1.1 until that final preflight passes.
+Do not execute V1 or V1.1.
+
+Do not execute V1.2 until final preflight passes.
 
 Do not execute Segment Reader Benchmark V1.
 
