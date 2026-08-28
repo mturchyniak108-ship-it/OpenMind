@@ -516,36 +516,118 @@ Segment Reader Benchmark V1 remains frozen and unexecuted.
 Segment Reader Benchmark V1.1 remains deferred until CPU thermal
 characterization is executed and interpreted.
 
+
+## CPU Thermal Characterization V1.1 — Preregistered
+
+V1 was frozen at commit af50fb7 but never executed.
+
+Its final execution preflight was blocked because the original thermal
+selector included static hardware trip-threshold zones.
+
+Read-only root-cause evidence:
+
+    hottest selected zone:
+        thermal_zone56
+        type = cpu-hw-trip-0
+        temp = 105000 mC
+        two-second delta = 0 mC
+        exposed trip point = 105000 mC
+
+    selected trip-like zones:
+        2
+
+    selected non-trip zones:
+        20
+        all 20 moved during passive two-second observation
+
+    maximum observed non-trip reading:
+        40700 mC
+
+Classification:
+
+    CPU_THERMAL_V1_SENSOR_SELECTOR_TRIP_ZONE_FALSE_HIGH_CONFIRMED
+
+V1 remains unchanged and permanently unexecuted.
+
+V1.1 protocol:
+
+    experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_1_PROTOCOL.md
+
+SHA256:
+
+    dfad67bef0a587e82c229795cb5c57fb458abcaca28b54b75fe2f85f2ff047a1
+
+V1.1 runner:
+
+    experiments/model_fractal/cpu_thermal_characterization_v1_1.py
+
+SHA256:
+
+    d9c41d4b4024f48357aa0bccdefdb237df319f99b4639f03945339a9c823e78a
+
+V1.1 sensor-selection correction:
+
+    plausible thermal zones are discovered as before;
+
+    zone types containing:
+        trip
+        threshold
+        thresh
+
+    are preserved as excluded diagnostic evidence but cannot govern
+    baseline, cooldown, optimal-envelope or hard-stop decisions;
+
+    governing sensors are selected only from plausible non-trip live
+    candidates.
+
+All prior thermal governance remains unchanged:
+
+    optimal:
+        <= CPU baseline + 5 C
+        <= 75 C
+
+    hard stop:
+        >= min(CPU baseline + 8 C, 80 C)
+
+    active epoch:
+        <= 100 ms
+
+    test staircase:
+        100,250,500,1000,2000,4000,8000 ms
+
+    same-cluster transition:
+        opposite-cluster bridge
+        cooldown on bridge
+        then target CPU
+
+Latency, ops/s, bytes/s, MiB/s, thermal slope, thermal efficiency,
+recovery and sustainable duty cycle remain required.
+
+Execution:
+
+    NONE
+
+V1.1 result:
+
+    ABSENT
+
 ## Exact Next Task
 
 Perform the final read-only execution preflight for CPU Thermal
-Characterization V1.
+Characterization V1.1.
 
-The preflight must independently verify:
+The preflight must verify the corrected live-sensor selector against
+the current device and prove that cpu-hw-trip-* zones are excluded from
+the governing set while preserved as diagnostic evidence.
 
-- frozen protocol and runner identities;
-- exact commit lineage;
-- result absence;
-- discovered topology availability;
-- thermal-zone availability and plausible current readings;
-- current affinity capability;
-- bridge cooldown ordering;
-- thermal optimal and hard-stop formulas;
-- staircase and epoch limits;
-- confirmation semantics;
-- recovery and duty-cycle semantics;
-- latency and all throughput metrics;
-- frequency evidence;
-- exact-once result publication;
-- affinity restoration;
-- no sysfs writes;
-- no cleanup;
-- no Segment Reader benchmark execution.
+Do not execute V1.
 
-Do not execute CPU Thermal Characterization V1 until that final preflight
-passes.
+Do not execute V1.1 until that final preflight passes.
 
 Do not execute Segment Reader Benchmark V1.
+
+Do not create Segment Reader Benchmark V1.1 until CPU thermal
+characterization is completed and interpreted.
 
 Do not start Phase 6C.
 
