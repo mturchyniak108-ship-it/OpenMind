@@ -1,0 +1,196 @@
+{
+  "clarification_sha256": "ced1a4443b2628036009531622b9a868e9f96079dc446f3e893948d55076ec68",
+  "engine_sha256": "9ee610d66b22379adbba40043e4882a9f0cdc70d27017353015471d34c397209",
+  "hierarchy_results": [
+    {
+      "candidate": "tuple_maf",
+      "logical_entries": 20480,
+      "median_five_step_hierarchy_traversal_ns": 2076.16796875
+    },
+    {
+      "candidate": "packed_integer",
+      "logical_entries": 20480,
+      "median_five_step_hierarchy_traversal_ns": 3261.3309326171875
+    },
+    {
+      "candidate": "morton3d",
+      "logical_entries": 20480,
+      "median_five_step_hierarchy_traversal_ns": 6088.752685546875
+    },
+    {
+      "candidate": "nested_dict_control",
+      "logical_entries": 20480,
+      "median_five_step_hierarchy_traversal_ns": 2338.0469970703125
+    }
+  ],
+  "point_results": [
+    {
+      "build_ns": 258333,
+      "candidate": "tuple_maf",
+      "estimated_shallow_bytes_per_entry": 128.952,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 325.711669921875,
+      "median_lookup_only_ns": 102.7490234375,
+      "size": 1000
+    },
+    {
+      "build_ns": 2938698,
+      "candidate": "tuple_maf",
+      "estimated_shallow_bytes_per_entry": 121.4992,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 337.708740234375,
+      "median_lookup_only_ns": 115.216552734375,
+      "size": 10000
+    },
+    {
+      "build_ns": 33787031,
+      "candidate": "tuple_maf",
+      "estimated_shallow_bytes_per_entry": 144.4296,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 346.8958740234375,
+      "median_lookup_only_ns": 121.2183837890625,
+      "size": 100000
+    },
+    {
+      "build_ns": 355818594,
+      "candidate": "tuple_maf",
+      "estimated_shallow_bytes_per_entry": 133.943128,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 426.0126953125,
+      "median_lookup_only_ns": 127.23291015625,
+      "size": 1000000,
+      "speedup_vs_tuple": 1.0
+    },
+    {
+      "build_ns": 526771,
+      "candidate": "packed_integer",
+      "estimated_shallow_bytes_per_entry": 96.888,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 582.796875,
+      "median_lookup_only_ns": 104.5799560546875,
+      "size": 1000
+    },
+    {
+      "build_ns": 5955312,
+      "candidate": "packed_integer",
+      "estimated_shallow_bytes_per_entry": 89.4352,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 642.388671875,
+      "median_lookup_only_ns": 138.7596435546875,
+      "size": 10000
+    },
+    {
+      "build_ns": 58319428,
+      "candidate": "packed_integer",
+      "estimated_shallow_bytes_per_entry": 112.36688,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 611.50244140625,
+      "median_lookup_only_ns": 113.0928955078125,
+      "size": 100000
+    },
+    {
+      "build_ns": 607106615,
+      "candidate": "packed_integer",
+      "estimated_shallow_bytes_per_entry": 101.8806,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 622.5712890625,
+      "median_lookup_only_ns": 109.6280517578125,
+      "size": 1000000,
+      "speedup_vs_tuple": 0.6842793794008907
+    },
+    {
+      "build_ns": 1058594,
+      "candidate": "morton3d",
+      "estimated_shallow_bytes_per_entry": 92.952,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 1102.7208251953125,
+      "median_lookup_only_ns": 106.048583984375,
+      "size": 1000
+    },
+    {
+      "build_ns": 10840990,
+      "candidate": "morton3d",
+      "estimated_shallow_bytes_per_entry": 85.4992,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 1140.8680419921875,
+      "median_lookup_only_ns": 116.856689453125,
+      "size": 10000
+    },
+    {
+      "build_ns": 112680156,
+      "candidate": "morton3d",
+      "estimated_shallow_bytes_per_entry": 108.4296,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 1167.03662109375,
+      "median_lookup_only_ns": 121.1103515625,
+      "size": 100000
+    },
+    {
+      "build_ns": 1186203281,
+      "candidate": "morton3d",
+      "estimated_shallow_bytes_per_entry": 97.943128,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 1198.2027587890625,
+      "median_lookup_only_ns": 117.079345703125,
+      "size": 1000000,
+      "speedup_vs_tuple": 0.3555430766517684
+    },
+    {
+      "build_ns": 329375,
+      "candidate": "nested_dict_control",
+      "estimated_shallow_bytes_per_entry": 93.456,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 446.3387451171875,
+      "median_lookup_only_ns": 138.8995361328125,
+      "size": 1000
+    },
+    {
+      "build_ns": 3375469,
+      "candidate": "nested_dict_control",
+      "estimated_shallow_bytes_per_entry": 93.0404,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 446.5546875,
+      "median_lookup_only_ns": 141.62060546875,
+      "size": 10000
+    },
+    {
+      "build_ns": 33642865,
+      "candidate": "nested_dict_control",
+      "estimated_shallow_bytes_per_entry": 92.09664,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 458.5394287109375,
+      "median_lookup_only_ns": 151.551513671875,
+      "size": 100000
+    },
+    {
+      "build_ns": 355098854,
+      "candidate": "nested_dict_control",
+      "estimated_shallow_bytes_per_entry": 92.148728,
+      "lookup_correctness": true,
+      "median_address_plus_lookup_ns": 484.3583984375,
+      "median_lookup_only_ns": 169.9066162109375,
+      "size": 1000000,
+      "speedup_vs_tuple": 0.8795402261771069
+    }
+  ],
+  "primary": {
+    "metric": "median_address_plus_lookup_ns",
+    "size": 1000000,
+    "tuple_baseline_ns": 426.0126953125,
+    "winner": "tuple_maf",
+    "winner_ns": 426.0126953125,
+    "winner_speedup_vs_tuple": 1.0
+  },
+  "protocol_sha256": "12feefe26bebff9e631209ad5d6ceb96aefda69992d1e00a977ef083d6dc892b",
+  "query_count": 4096,
+  "repeats": 20,
+  "schema": "openmind.maf3d.address_geometry_result.v1",
+  "sizes": [
+    1000,
+    10000,
+    100000,
+    1000000
+  ],
+  "status": "COMPLETE",
+  "warmups": 2
+}
