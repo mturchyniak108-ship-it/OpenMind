@@ -917,65 +917,124 @@ No rollback validation runner, result, or runtime exists yet.
 
 Phase 6B.8 remains INCOMPLETE / CURRENT.
 
-## Current Exact Next Task
+## Phase 6B.8 Rollback V1 Validation Runner Freeze Checkpoint
 
-Preregister and freeze the Rollback V1 validation runner only.
+Rollback V1 protocol remains frozen:
 
-Expected runner:
+    experiments/model_fractal/
+    MAF_ROLLBACK_V1_PROTOCOL.md
+
+Protocol SHA256:
+
+    0d71f4eb28ea35658d9c24a55d085e54
+    b6cc6a5c92cda9dc2a17dfe57df07a42
+
+Rollback V1 implementation remains frozen:
+
+    experiments/model_fractal/
+    maf_rollback_v1.py
+
+Rollback engine commit:
+
+    fea6e01
+
+Rollback engine SHA256:
+
+    73b02c26f840d59499dd7be86985db6a
+    3a14720769de1d040f2cad9c78703b79
+
+The preregistered Rollback V1 validation runner is:
 
     experiments/model_fractal/
     maf_rollback_validation_v1.py
 
-Expected future raw result:
+Runner SHA256:
 
-    experiments/model_fractal/
-    maf_rollback_validation_v1.json
+    42fdb589b743197be672c47d3b70e40706c1ceea01d23f8862f489cfd5270b7d
 
-Expected future runtime:
+The runner has not been executed.
 
-    results/runtime/
-    maf_rollback_validation_v1
+No rollback result exists.
 
-The validation runner must cover the frozen Rollback V1 protocol, including:
+No rollback runtime exists.
 
-- valid A -> B rollback;
-- later B -> A operational reactivation;
-- strict current-authority validation;
-- current model-scope enforcement;
-- retained target physical reconstruction;
-- canonical five-field active record;
-- manifest hash binding;
-- independent reopen;
-- target path independence;
+The validation runner uses frozen Activation V1.1.1 evidence as read-only
+retained generation evidence and copies byte-identical candidate evidence into
+its own isolated runtime when executed.
+
+The runner preregisters:
+
+- A -> B operational rollback;
+- B -> A operational reactivation;
 - same-generation physical revalidation;
-- same-generation changed=false behavior;
-- current-authority preservation on every precommit failure;
-- missing/corrupt current authority rejection;
-- cross-model rejection;
-- malformed target identity and manifest rejection;
-- missing/extra segment mapping;
+- changed=false idempotence;
+- exact five-field authority;
+- generation manifest hash binding;
+- independent authority reopen;
+- physical-path independence;
+- strict current-authority validation;
+- active model-scope enforcement;
+- malformed/cross-model current-authority rejection;
+- malformed target request and manifest rejection;
+- missing/extra segment mappings;
 - missing/nonregular target segments;
-- target segment length/SHA failures;
-- target object byte-range failure;
-- wrong multi-segment content association;
-- invalid physical evidence on same-generation rollback;
+- segment length and SHA256 rejection;
+- inherited frozen object-range integrity evidence;
+- inherited frozen multi-segment wrong-content evidence;
+- inherited physically unsupported-manifest evidence;
+- invalid same-generation physical evidence rejection;
 - injected failure before authority replacement;
-- generation retention and immutability;
+- exact prior-authority byte preservation;
+- precommit partial cleanup;
+- retained generation immutability;
 - no historical-authority provenance claim;
+- no generation deletion;
 - source-GGUF independence;
 - storage neutrality;
 - no inference;
 - no MAF-native compute;
 - no Phase 6B.9 implementation.
 
-Do not execute rollback validation during preregistration.
+Phase 6B.8 remains INCOMPLETE / CURRENT.
 
-Do not modify Rollback V1 after it is frozen unless new additive correction
-evidence requires a separately preregistered version.
+## Current Exact Next Task
 
-Do not modify Activation V1, Activation V1.1, Generation Engine V1, or
-Phase 6B.7 frozen evidence.
+Verify the exact frozen Rollback V1 protocol, engine, validation runner, and
+all inherited Phase 6B.7 evidence hashes.
 
-Do not clean historical runtime evidence.
+Then execute:
+
+    experiments/model_fractal/
+    maf_rollback_validation_v1.py
+
+exactly once.
+
+Before execution confirm:
+
+- exact branch and frozen-runner HEAD;
+- rollback protocol SHA256;
+- rollback engine SHA256;
+- rollback runner SHA256;
+- Activation V1 SHA256;
+- Activation V1.1 SHA256;
+- Generation Engine V1 SHA256;
+- final Activation V1.1.1 runner/result SHA256;
+- historical activation runtimes remain present;
+- rollback raw result is absent;
+- rollback result partial is absent;
+- rollback runtime is absent.
+
+Execute the frozen rollback runner exactly once.
+
+Freeze any completed canonical raw result before interpretation, including a
+failed result.
+
+Do not automatically retry.
+
+Do not clean rollback runtime evidence.
+
+Do not clean activation runtime evidence.
+
+Do not modify any frozen engine or runner.
 
 Do not begin Phase 6B.9 or Phase 6C.
