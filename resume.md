@@ -250,7 +250,23 @@ When a new ChatGPT session receives this file:
 5. continue the V1.1 corrective-validation sequence;
 6. do not begin Phase 6B.6 until 6B.5 has a frozen interpreted result.
 
+## V1.1 Protocol Freeze Checkpoint
+
+The Phase 6B.5 corrective-validation protocol is now included in the
+current targeted freeze:
+
+    experiments/model_fractal/
+    MAF_GENERATION_ENGINE_V1_1_PROTOCOL.md
+
+The protocol preserves the frozen V1 history and defines the corrected
+source-GGUF independence test.
+
+No V1.1 runner has been created or executed at this checkpoint.
+
 Current exact next task:
 
-    Document and freeze the Generation Engine V1.1
-    corrective-validation protocol.
+    Audit the frozen V1 validation runner and implement the
+    V1.1 corrective-validation runner.
+
+The V1.1 runner must then be frozen in its own stage before it is
+executed.
