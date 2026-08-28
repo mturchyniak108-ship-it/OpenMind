@@ -59,10 +59,10 @@ remains incomplete unless a deliberate research exception is documented.
         COMPLETE
 
     6B.5 Generation Engine validation
-        CURRENT INCOMPLETE GATE
+        COMPLETE
 
     6B.6 Activation protocol
-        NOT STARTED
+        CURRENT INCOMPLETE GATE
 
     6B.7 Atomic activation
         NOT STARTED
@@ -261,29 +261,91 @@ current targeted freeze:
 The protocol preserves the frozen V1 history and defines the corrected
 source-GGUF independence test.
 
-## V1.1 Runner Freeze Checkpoint
+## Phase 6B.5 Completion Checkpoint
 
-The V1.1 corrective-validation runner is now included in the current
-targeted freeze:
+Phase 6B.5 — Generation Engine validation is COMPLETE.
+
+Historical V1 result:
+
+    experiments/model_fractal/
+    maf_generation_engine_validation_v1.json
+
+    all_pass = false
+
+The V1 failure remains preserved exactly as historical evidence.
+
+Corrective V1.1 protocol:
+
+    experiments/model_fractal/
+    MAF_GENERATION_ENGINE_V1_1_PROTOCOL.md
+
+Frozen V1.1 runner:
 
     experiments/model_fractal/
     maf_generation_engine_validation_v1_1.py
 
-The V1 behavioral validation body is preserved.
+    commit:
+        33ebd95
 
-The corrective delta is limited to:
+    sha256:
+        f9dc577d25f75b2cb57dde633fbdd2bc
+        4ab0d9213d285aa31901843115fa9ec3
 
-- V1.1-specific runtime/result/schema naming;
-- V1.1 console/failure labeling;
-- the corrected AST-based runner source-GGUF static-policy check.
+Frozen V1.1 raw result:
 
-No V1.1 validation has been executed at this checkpoint.
+    experiments/model_fractal/
+    maf_generation_engine_validation_v1_1.json
 
-No V1.1 raw result exists at this checkpoint.
+    commit:
+        9dbb325
 
-Current exact next task:
+    sha256:
+        a37ee07ab548b1dea398bb42de42cd89
+        3df437b06b91a8a767464a4559e52727
 
-    Perform a pre-execution frozen-runner audit, then execute the
-    frozen V1.1 runner exactly once.
+V1.1 records:
 
-After execution, freeze the raw V1.1 result before interpreting it.
+    all_pass = true
+    source_gguf_required = false
+    generation_activated = false
+    catalog_engine_selected = false
+    maf_native_compute_enabled = false
+
+Validated evidence:
+
+- 16/16 positive checks pass;
+- 12/12 negative controls pass;
+- generation_pk is unchanged from V1;
+- path independence passes;
+- multi-segment order independence passes;
+- placement sensitivity passes;
+- source-segment immutability passes;
+- engine static-policy controls pass;
+- corrected runner source-GGUF policy check passes.
+
+The complete V1/V1.1 JSON comparison produced only five differences:
+
+- schema version;
+- aggregate all_pass;
+- corrected runner static-policy value;
+- V1/V1.1 runtime path in positive manifest_path;
+- V1/V1.1 runtime path in missing-segment error_text.
+
+No behavioral validation evidence was weakened.
+
+The V1.1 runtime directory remains untracked research/runtime evidence and
+has not been cleaned as part of this interpretation checkpoint.
+
+## Current Exact Next Task
+
+Phase 6B.6 — Activation Protocol is now the first incomplete gate.
+
+Next action:
+
+    Audit the existing catalog/generation contracts and preregister
+    the activation protocol only.
+
+Do not implement atomic activation during the protocol stage.
+
+Do not begin rollback, resident-directory work, storage-engine
+selection, or Phase 6C.

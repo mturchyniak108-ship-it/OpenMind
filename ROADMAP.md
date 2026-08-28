@@ -162,25 +162,63 @@ Lean Phase 6B progression:
 - **6B.2 Segment Builder — COMPLETE + VALIDATED**
 - **6B.3 Generation descriptor / manifest — COMPLETE**
 - **6B.4 Generation Engine V1 — COMPLETE**
-- **6B.5 Generation Engine validation — INCOMPLETE / CURRENT**
-- **6B.6 Activation protocol — NOT STARTED**
+- **6B.5 Generation Engine validation — COMPLETE**
+- **6B.6 Activation protocol — INCOMPLETE / CURRENT**
 - **6B.7 Atomic activation — NOT STARTED**
 - **6B.8 Rollback — NOT STARTED**
 - **6B.9 Resident PK directory — NOT STARTED**
 - **6B.10 Segment Reader validation — NOT STARTED**
 
-The frozen Generation Engine V1 validation result records
-`all_pass=false`.
+The frozen Generation Engine V1 validation result remains historical
+evidence with `all_pass=false`.
 
-The engine behavioral controls passed, while the aggregate validation
-failed on the runner static-policy check
-`runner_no_source_gguf_path=false`.
+The additive V1.1 corrective validation is now frozen and interpreted.
 
-The frozen V1 record must remain unchanged.
+Frozen V1.1 evidence:
 
-The next controlled step is an additive V1.1 corrective-validation
-protocol and runner. Activation, rollback, resident-directory work,
-storage-engine selection, and Phase 6C remain outside the current gate.
+    runner commit: 33ebd95
+    result commit: 9dbb325
+    runner sha256:
+        f9dc577d25f75b2cb57dde633fbdd2bc
+        4ab0d9213d285aa31901843115fa9ec3
+    result sha256:
+        a37ee07ab548b1dea398bb42de42cd89
+        3df437b06b91a8a767464a4559e52727
+
+V1.1 records `all_pass=true`.
+
+Acceptance evidence:
+
+- 16/16 positive checks pass;
+- 12/12 negative controls fail closed as required;
+- generation identity is unchanged;
+- path independence passes;
+- multi-segment order independence passes;
+- placement sensitivity passes;
+- source segment remains unchanged;
+- `source_gguf_required=false`;
+- generation activation remains disabled;
+- no catalog engine is selected;
+- MAF-native computation remains disabled;
+- all engine static-policy controls pass;
+- corrected `runner_no_source_gguf_path=true`.
+
+A field-level V1/V1.1 comparison found only five differences:
+
+1. validation schema version;
+2. aggregate `all_pass`;
+3. corrected runner static-policy result;
+4. V1/V1.1 runtime directory in the positive manifest path;
+5. V1/V1.1 runtime directory in the missing-segment error text.
+
+The behavioral evidence is therefore preserved. The runtime-path
+differences are run-specific provenance, not behavioral changes.
+
+Phase 6B.5 is COMPLETE.
+
+The next single incomplete gate is Phase 6B.6 — Activation Protocol.
+Atomic activation implementation, rollback, resident-directory work,
+storage-engine selection, and Phase 6C remain outside that gate.
 
 <!-- OPENMIND_PHASE_6B_STATUS_END -->
 
