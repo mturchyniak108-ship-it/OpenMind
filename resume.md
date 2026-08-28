@@ -454,27 +454,82 @@ The active-record schema remains unchanged.
 
 Historical Activation V1 remains untouched.
 
-## Current Exact Next Task
+## Phase 6B.7 Activation V1.1 Engine Freeze Checkpoint
 
-Phase 6B.7 — Atomic activation remains the first incomplete gate.
-
-Next action:
-
-    Implement the additive Activation V1.1 engine only.
-
-Expected target:
+The additive Activation V1.1 implementation is now included in the
+current targeted freeze:
 
     experiments/model_fractal/
     maf_activation_v1_1.py
 
-The V1.1 implementation must reuse frozen Generation Engine
-build_descriptor physical reconstruction and must complete that
-reconstruction before the authority os.replace commit point.
+Frozen prerequisite:
 
-Do not create or execute the validation runner in the implementation
-stage.
+    experiments/model_fractal/
+    MAF_ACTIVATION_V1_1_PROTOCOL.md
 
-Do not modify Activation V1 or Generation Engine V1.
+    commit:
+        26d0a70
+
+    sha256:
+        94aebe64ab466f9ae94db91ce8a82f2c
+        56f87376cd962f687d133712a491bcfb
+
+Activation V1.1 adds only the corrective candidate-eligibility boundary.
+
+Before any authority switch it:
+
+- reopens and verifies canonical candidate manifest identity;
+- requires an exact segment_id -> physical path execution mapping;
+- reconstructs the descriptor through frozen Generation Engine
+  build_descriptor;
+- rechecks current segment length and SHA256;
+- rechecks object byte-range SHA256;
+- requires exact reconstructed descriptor equality;
+- requires exact canonical descriptor-byte equality;
+- requires exact descriptor SHA256;
+- requires exact reconstructed generation_pk equality.
+
+Physical paths remain execution metadata and do not enter generation or
+active-record identity.
+
+The five-field active authority record remains exactly the Activation V1
+record.
+
+The authority mutation itself remains delegated to frozen Activation V1,
+so the existing partial/fsync/os.replace transition is not duplicated.
+
+Every V1.1 activate_generation call performs physical eligibility checking
+before delegating to Activation V1. Same-generation reactivation therefore
+cannot bypass current physical reconstruction.
+
+No activation call has been executed.
+
+No V1.1 validation runner, raw result, or runtime exists.
+
+Rollback remains outside scope.
+
+## Current Exact Next Task
+
+Phase 6B.7 — Atomic activation remains the current incomplete gate.
+
+Next action:
+
+    Preregister and freeze the Activation V1.1 validation runner only.
+
+Expected runner:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1.py
+
+The runner must test the full corrective protocol, including synthetic
+canonical-manifest rejection, physical substitution/mutation rejection,
+same-generation physical revalidation, replacement atomicity, and injected
+pre-os.replace failure preservation.
+
+Do not execute activation validation before the runner is frozen.
+
+Do not modify Activation V1, Activation V1.1, or Generation Engine V1
+during the runner-preregistration stage.
 
 Do not begin rollback, resident-directory work, storage-engine selection,
 or Phase 6C.
