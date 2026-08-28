@@ -1906,20 +1906,49 @@ Segment Reader implementation has not started.
 
 Validation has not been preregistered or executed.
 
+
+## Phase 6B.10 Segment Reader V1 — Engine Frozen
+
+The minimal stateless Segment Reader V1 implementation is frozen.
+
+Protocol SHA256:
+
+    192402f1e4f2d41540d225cce7629757152b9996a9adffaafeab6674e13f0f5d
+
+Engine:
+
+    experiments/model_fractal/maf_segment_reader_v1.py
+
+Engine SHA256:
+
+    3499cb8e528fe8e9315e3e5656d6aa888c95ca175310b6371e722de409827369
+
+The implementation accepts a ResidentPKEntry plus expected_generation_pk.
+
+It rejects generation mismatch before opening storage, validates the physical range, opens segment_path read-only, uses the same descriptor for fstat and os.pread, requires a regular file and exact segment length, requires an exact-length positional read, verifies the returned serialized object bytes against object_file_sha256, and closes the descriptor on every path.
+
+It does not parse JSON, reopen manifests, access the source GGUF, hash the complete segment, decode payload_sha256, implement descriptor residency, or begin Phase 6C.
+
+No Segment Reader functional validation has been preregistered or executed.
+
 ## Current Exact Next Task
 
-Phase 6B.10 — Segment Reader V1 preimplementation audit.
+Phase 6B.10 — Segment Reader V1 functional-validation preregistration.
 
 Next action:
 
-    Perform a final read-only audit of the frozen Segment Reader V1 protocol, then implement the minimal stateless positional serialized-object reader in a separate gate.
+    Design and freeze Segment Reader V1 functional validation before any validation execution.
 
-Do not modify completed Phase 6B.9 evidence.
+The validation must cover exact serialized-object reconstruction, generation rejection before file access, invalid ranges, missing/non-regular/truncated/corrupt segments, object_file_sha256 mismatch, FD closure, immutable entry behavior, and hot-path access prohibitions.
 
-Do not rerun Resident PK Directory validation, benchmark, or diagnostics.
+Do not execute validation before its protocol and runner are frozen.
 
-Do not decode payload_sha256 semantics inside Segment Reader V1.
+Do not benchmark Segment Reader V1 yet.
 
-Do not implement FD residency, mmap residency, descriptor caching, tensor reconstruction, or Phase 6C.
+Do not modify Phase 6B.9 evidence.
+
+Do not decode payload_sha256 in Segment Reader V1.
+
+Do not implement FD residency, mmap residency, descriptor caching, or Phase 6C.
 
 Do not push upstream in this gate.
