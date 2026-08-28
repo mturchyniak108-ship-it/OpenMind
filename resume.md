@@ -1850,22 +1850,43 @@ Its result and runtime remain absent.
 
 A final frozen-state preflight is required before exact-once execution.
 
+
+## Phase 6B.9 Resident PK Directory — COMPLETE
+
+Phase 6B.9 has passed semantic acceptance and is now closed.
+
+Completion evidence is frozen in:
+
+    experiments/model_fractal/MAF_RESIDENT_PK_DIRECTORY_V1_COMPLETION.md
+
+Completion record SHA256:
+
+    6fffb5c5f6c616b9930a65a7297eb4f290e953e04785e72591b5033735ff1f01
+
+Frozen Diagnostics V1.4 result:
+
+    9f665383917560327b05673206a8b385d9312386077bbb741878d49866ce29b0
+
+Diagnostics V1.4 executed exactly once with RC 0 and 45 / 45 checks passing.
+
+No diagnostic, benchmark, or functional-validation rerun is authorized.
+
+Preserved runtimes must not be cleaned.
+
 ## Current Exact Next Task
 
-Phase 6B.9 — Resident PK Directory remains INCOMPLETE / CURRENT.
+Phase 6B.10 — Segment Reader V1.
 
 Next action:
 
-    Perform final read-only frozen-state preflight of Diagnostics V1.4.
+    Begin Segment Reader V1 with read-only discovery and protocol definition before implementation.
 
-Do not execute Diagnostics V1 through V1.3.
+Do not modify the completed Resident PK Directory V1 evidence.
 
-Do not execute Diagnostics V1.4 yet.
+Do not rerun Diagnostics V1.4.
 
-Do not rerun functional validation or benchmark lineages.
-
-Do not clean preserved runtimes.
-
-Do not begin Segment Reader V1.
+Do not rerun Resident PK Directory benchmark or functional validation.
 
 Do not begin Phase 6C.
+
+Do not push upstream in this gate.
