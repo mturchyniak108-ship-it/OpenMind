@@ -817,47 +817,77 @@ Phase 6B.7 therefore establishes the validated authority transition:
 
 within the explicitly frozen V1/V1.1 research scope.
 
+## Phase 6B.8 Rollback V1 Protocol Checkpoint
+
+Phase 6B.7 Atomic Activation remains COMPLETE.
+
+Phase 6B.8 Rollback is now the current incomplete gate.
+
+The Rollback V1 protocol is frozen as:
+
+    experiments/model_fractal/
+    MAF_ROLLBACK_V1_PROTOCOL.md
+
+Rollback preserves the frozen five-field active authority record.
+
+Rollback is defined as current physical validation and operational
+reactivation of retained immutable generation evidence followed by the
+existing atomic authority transition.
+
+The currently active authority must strictly validate before rollback.
+
+The retained target must physically reconstruct exactly before authority
+mutation.
+
+Any precommit failure must preserve current authority bytes exactly.
+
+A same-generation rollback request must physically revalidate before
+idempotent changed=false success.
+
+The generation being left remains retained and immutable.
+
+Phase 6B.7 did not create an authoritative append-only activation-history
+journal. Rollback V1 therefore does not invent proof that arbitrary retained
+generation evidence was historically authoritative.
+
+No source GGUF is required.
+
+No generation deletion is part of rollback.
+
+No storage engine is selected.
+
+No inference or MAF-native compute is enabled.
+
+No rollback implementation or validation exists yet.
+
 ## Current Exact Next Task
 
-Phase 6B.8 — Rollback is now the current incomplete gate.
+Phase 6B.8 — Rollback remains INCOMPLETE / CURRENT.
 
 Next action:
 
-    Preregister the Phase 6B.8 rollback protocol/design only.
+    Create, statically audit, and freeze maf_rollback_v1.py only.
 
-The rollback protocol must define how a previously retained immutable
-generation becomes authoritative again without rewriting its logical
-identity.
+The implementation should:
 
-The protocol must preserve the Phase 6B.7 authority model and must define
-at minimum:
+- strictly reopen current authority;
+- enforce model consistency;
+- validate retained target physical evidence;
+- reuse frozen Activation V1.1 target-validation semantics;
+- reuse frozen Activation V1 atomic authority mutation;
+- preserve current authority on every precommit failure;
+- require physical revalidation before idempotent success;
+- retain all generations unchanged.
 
-- rollback target identity;
-- model-scoped authority;
-- retained-generation prerequisites;
-- current physical validity requirements before rollback;
-- relationship to generation_manifest_sha256;
-- atomic authority replacement;
-- failure preservation of the currently active generation;
-- idempotent rollback semantics;
-- cross-model rejection;
-- corrupt-current-authority behavior;
-- missing or invalid rollback-target behavior;
-- historical-generation immutability;
-- no generation deletion as part of rollback;
-- rollback evidence requirements;
-- concurrency and crash-consistency nonclaims;
-- storage-engine neutrality;
-- source-GGUF independence;
-- inference/residency/MAF-native-compute nonclaims.
-
-Do not implement rollback during protocol preregistration.
-
-Do not create a rollback validation runner yet.
+Do not create or execute the rollback validation runner yet.
 
 Do not modify Activation V1, Activation V1.1, Generation Engine V1,
-or any frozen validation evidence.
+or frozen Phase 6B.7 validation evidence.
 
-Do not begin Phase 6B.9 resident PK directory work.
+Do not clean historical runtime evidence.
 
-Do not begin storage-engine selection or Phase 6C.
+Do not begin Phase 6B.9.
+
+Do not select a storage engine.
+
+Do not begin Phase 6C.
