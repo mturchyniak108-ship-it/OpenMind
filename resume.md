@@ -408,19 +408,73 @@ No activation validation runner or raw result exists at this checkpoint.
 
 Rollback remains outside scope.
 
+## Phase 6B.7 V1.1 Corrective Protocol Checkpoint
+
+The frozen Activation V1 implementation remains preserved unchanged:
+
+    experiments/model_fractal/
+    maf_activation_v1.py
+
+    commit:
+        ca44146
+
+    sha256:
+        76d79f90d9bc30118a6dfe0297beacd9
+        b323aed9f56876881f653a2c01c1f210
+
+No activation call or Activation V1 validation execution occurred before
+the corrective requirement was discovered.
+
+Read-only audits 6B.7c1-c3 established:
+
+- Generation Engine verify_manifest accepts canonical generation
+  structure/identity without reopening physical segment bytes;
+- a synthetic in-memory manifest can therefore pass verify_manifest
+  without physical segment/object evidence;
+- the generation manifest contains no historical validation receipt;
+- physical segment paths intentionally do not enter generation identity;
+- the frozen Generation Engine build_descriptor path revalidates current
+  physical segment length/SHA and object byte ranges;
+- current frozen physical evidence reconstructs the exact frozen candidate
+  descriptor;
+- reconstructed canonical descriptor bytes are exact;
+- reconstructed generation_pk is exact.
+
+The additive correction is preregistered as:
+
+    experiments/model_fractal/
+    MAF_ACTIVATION_V1_1_PROTOCOL.md
+
+V1.1 defines activation eligibility as current physical reconstruction of
+the exact immutable candidate generation.
+
+Physical segment paths remain execution metadata only.
+
+The active-record schema remains unchanged.
+
+Historical Activation V1 remains untouched.
+
 ## Current Exact Next Task
 
-Phase 6B.7 remains the current incomplete gate.
+Phase 6B.7 — Atomic activation remains the first incomplete gate.
 
 Next action:
 
-    Preregister and freeze the Activation V1 validation runner against
-    the frozen implementation.
+    Implement the additive Activation V1.1 engine only.
 
-The validation runner must cover all protocol-required positive and
-negative controls, including the real os.replace failure boundary.
+Expected target:
 
-Do not execute activation validation before the runner is frozen.
+    experiments/model_fractal/
+    maf_activation_v1_1.py
 
-Do not begin rollback, resident-directory work, storage-engine
-selection, or Phase 6C.
+The V1.1 implementation must reuse frozen Generation Engine
+build_descriptor physical reconstruction and must complete that
+reconstruction before the authority os.replace commit point.
+
+Do not create or execute the validation runner in the implementation
+stage.
+
+Do not modify Activation V1 or Generation Engine V1.
+
+Do not begin rollback, resident-directory work, storage-engine selection,
+or Phase 6C.
