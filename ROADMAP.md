@@ -140,6 +140,50 @@ Candidate storage engines remain experimental until benchmarked:
 Do not fork or replace a mature database engine merely for architectural novelty.
 A custom MAFDB must earn promotion through measured MAF-specific advantage.
 
+<!-- OPENMIND_PHASE_6B_STATUS_START -->
+
+### Current Phase 6B Research Status
+
+Research anchor for this Phase 6B status:
+
+    local branch: labs/multidimensional-maf
+    anchor HEAD:  7b4ed07
+
+Last verified remote comparison:
+
+    origin/main:                  aa17ed9
+    origin/labs/multidimensional-maf: absent
+
+The active MAF research history is currently local-only.
+
+Lean Phase 6B progression:
+
+- **6B.1 Authority / identity rules — COMPLETE**
+- **6B.2 Segment Builder — COMPLETE + VALIDATED**
+- **6B.3 Generation descriptor / manifest — COMPLETE**
+- **6B.4 Generation Engine V1 — COMPLETE**
+- **6B.5 Generation Engine validation — INCOMPLETE / CURRENT**
+- **6B.6 Activation protocol — NOT STARTED**
+- **6B.7 Atomic activation — NOT STARTED**
+- **6B.8 Rollback — NOT STARTED**
+- **6B.9 Resident PK directory — NOT STARTED**
+- **6B.10 Segment Reader validation — NOT STARTED**
+
+The frozen Generation Engine V1 validation result records
+`all_pass=false`.
+
+The engine behavioral controls passed, while the aggregate validation
+failed on the runner static-policy check
+`runner_no_source_gguf_path=false`.
+
+The frozen V1 record must remain unchanged.
+
+The next controlled step is an additive V1.1 corrective-validation
+protocol and runner. Activation, rollback, resident-directory work,
+storage-engine selection, and Phase 6C remain outside the current gate.
+
+<!-- OPENMIND_PHASE_6B_STATUS_END -->
+
 ## Phase 6C — MAF Object Runtime and Residency [RESEARCH]
 
 Goal: keep only the useful model working set resident.
