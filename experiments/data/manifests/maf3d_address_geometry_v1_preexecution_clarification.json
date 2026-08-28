@@ -1,0 +1,32 @@
+{
+  "execution_state": "No address-geometry timing has been performed.",
+  "hierarchy": {
+    "depths": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "excluded_from_primary_million_entry_table_size": true,
+    "parent_rule": "node_id shifts right by one per parent step",
+    "steps": 5,
+    "storage": "separate bounded hierarchy table; maximum 4096*5 logical addresses"
+  },
+  "point_queries": {
+    "count": 4096,
+    "formula": "(104729 + 7919 * j) % table_size",
+    "j_range": "0..4095",
+    "same_stream_for_all_candidates": true
+  },
+  "protocol_commit": "d229210",
+  "schema": "openmind.maf3d.address_geometry_clarification.v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "timing": {
+    "address_plus_lookup": "coordinate derivation, key encoding, and lookup inside timed region",
+    "lookup_only": "precompute encoded keys outside timed region",
+    "measured_repeats": 20,
+    "method": "time complete query batch then divide by 4096",
+    "warmup_batches": 2
+  }
+}
