@@ -572,40 +572,104 @@ No Activation V1.1 raw validation result exists.
 
 No Activation V1.1 validation runtime exists.
 
+## Phase 6B.7 Validation V1.1.1 Corrective Protocol Checkpoint
+
+The frozen Activation V1.1 validation result remains historical evidence:
+
+    experiments/model_fractal/
+    maf_activation_validation_v1_1.json
+
+    commit:
+        53bb864
+
+    sha256:
+        aff5b47e3ff6cbd611b2b29fa1ce826d
+        fce1ece6fdc7356fb94ba9fefe41b548
+
+Historical status remains:
+
+    all_pass = false
+
+Exactly one negative control recorded pass=false:
+
+    multi_segment_wrong_content_association
+
+Frozen evidence:
+
+    raised        = true
+    failed_closed = true
+    error_type    = MAFActivationError
+    error_text    = segment length mismatch
+
+The frozen runner AST proves that this control required:
+
+    expected_text = "segment SHA256 mismatch"
+
+The frozen controlled fixture uses unequal 2048-byte and 3072-byte
+segments.
+
+Swapping their segment_id -> physical path association therefore correctly
+violates segment length before SHA256 comparison.
+
+Classification:
+
+    Activation V1.1 engine defect:
+        NOT INDICATED
+
+    Validation-runner expectation defect:
+        CONFIRMED
+
+The validation-only correction is preregistered as:
+
+    experiments/model_fractal/
+    MAF_ACTIVATION_VALIDATION_V1_1_1_PROTOCOL.md
+
+Historical Activation V1.1 engine, runner, raw result, and runtime remain
+untouched.
+
 ## Current Exact Next Task
 
 Phase 6B.7 — Atomic activation remains the current incomplete gate.
 
 Next action:
 
-    Execute the exact frozen Activation V1.1 validation runner once.
+    Create, statically audit, and freeze the corrected V1.1.1
+    validation runner only.
 
 Expected runner:
 
     experiments/model_fractal/
-    maf_activation_validation_v1_1.py
+    maf_activation_validation_v1_1_1.py
 
-Expected raw result:
+The corrected runner must preserve the substantive V1.1 validation suite.
+
+Only the confirmed wrong-content-association expectation and required
+versioned validation identifiers may change intentionally.
+
+For the controlled wrong-content association, the accepted physical
+integrity error family is:
+
+    segment length mismatch
+    segment SHA256 mismatch
+
+The corrected runner must still require MAFActivationError and fail-closed
+behavior.
+
+Do not execute V1.1.1 during runner freeze.
+
+Do not rerun V1.1.
+
+Do not modify Activation V1, Activation V1.1, or Generation Engine V1.
+
+Do not clean the historical V1.1 runtime.
+
+Use distinct future evidence targets:
 
     experiments/model_fractal/
-    maf_activation_validation_v1_1.json
-
-Expected runtime:
+    maf_activation_validation_v1_1_1.json
 
     results/runtime/
-    maf_activation_validation_v1_1
-
-Before execution, verify the runner SHA256 above directly from frozen
-HEAD and verify Activation V1, Activation V1.1, Generation Engine V1,
-and the V1.1 corrective protocol remain exact.
-
-Then execute the frozen runner exactly once.
-
-Freeze the raw result before interpretation.
-
-Do not modify the runner or engines during execution.
-
-Do not delete or clean failed runtime evidence.
+    maf_activation_validation_v1_1_1
 
 Do not begin rollback, resident-directory work, storage-engine selection,
 or Phase 6C.
