@@ -1,5 +1,10 @@
 # OpenMind
 
+<!-- OPENMIND:MAF-CURRENT-STATUS:START -->
+> **MAF research status:** Phase 6B and Phase 6C are closed; Phase 6D is active; Phase 6D-Q remains roadmap-only; Phase 6E has not been entered. See [`docs/research/MAF_CURRENT_STATUS.md`](docs/research/MAF_CURRENT_STATUS.md) for the current evidence-bound status and research/publication lineage.
+<!-- OPENMIND:MAF-CURRENT-STATUS:END -->
+
+
 OpenMind is a local-first AI inference platform designed around native
 llama.cpp execution and hardware-accelerated inference.
 
