@@ -1,0 +1,5 @@
+result path : results/forest_recurrence_bridge_v1/forest_recurrence_bridge_v1_result.json
+status      : PRIMARY_FAIL
+enrichment  : 0.005409795442
+empirical p : 0.147385261474
+robustness  : PASS

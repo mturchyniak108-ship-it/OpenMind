@@ -1,637 +1,896 @@
 # OpenMind Roadmap
 
-## Vision
+## Mission
 
-OpenMind is a local-first AI inference and knowledge platform built around native `llama.cpp` execution, hardware acceleration, language-neutral knowledge representation, and optimized semantic reasoning paths.
+OpenMind investigates whether useful AI computation can be performed through a local, native, representation-driven architecture that can reduce dependence on conventional token-by-token inference while preserving correctness and provenance.
 
-> **Core principle:** Known truths are language-independent. Language is an interface to knowledge, not the representation of knowledge.
+The project treats the Canonical Model GGUF as the canonical model/reference artifact and evaluates MAF, fractal MAF, vector maps, fuzzy logic, machine learning, heatwave/heightmap relationships, and native optimized execution as derived computational systems.
 
-## Milestone 0 — Native Inference Foundation
+## Core Architecture
 
-### Completed
+Canonical Model GGUF -> Truth/Relationship/Provenance/Landscape Maps -> MAF Object Compiler -> MAF Model Catalog -> MAF Segment Store -> MAF Object Runtime + Adaptive Residency -> Fractal/Selective MAF -> Routing/Transition Intelligence -> Validation -> Native C++ -> ARM64/NEON -> Vulkan Optimization
 
-- Device/resource discovery
-- Vulkan capability verification
-- `llama.cpp` Vulkan build
+## Phase 1 — Native Local Inference [COMPLETE]
+
+- Native llama.cpp integration
+- GGUF loading
+- Android ARM64 execution
+- Vulkan GPU acceleration
 - Native C++ inference
-- Reproducible performance benchmarks
-- Persistent native session API
-- Multi-session sequence isolation
-- RAII session lifecycle
-- Session reset and capacity management
-- CMake/CTest integration
-- Native inference concurrency protection
-- Concurrent session regression testing
-
-## Milestone 1 — Language-Neutral Truth Graph
-
-Create a knowledge representation in which semantic truth is independent of natural language.
-
-- [ ] Define `TruthNode`
-- [ ] Define canonical semantic identity
-- [ ] Define truth status and confidence
-- [ ] Define provenance and evidence
-- [ ] Define multilingual `TruthExpression`
-- [ ] Allow multiple languages to reference one `TruthNode`
-- [ ] Define contradiction status
-- [ ] Create initial truth-graph schema
-
-## Milestone 2 — Truth Relationship Graph
-
-Represent relationships between known truths as a directed, weighted graph.
-
-- [ ] Define `TruthEdge`
-- [ ] Define relationship types
-- [ ] Define relationship confidence
-- [ ] Define provenance model
-- [ ] Implement graph storage
-- [ ] Implement node lookup and edge traversal
-- [ ] Implement relationship validation
-- [ ] Implement contradiction representation
-
-## Milestone 3 — Start/End Truth Paths
-
-Discover paths between semantic start and end nodes while minimizing unnecessary cycles and favoring high-confidence routes.
-
-- [ ] Define `TruthPath`
-- [ ] Define start-node semantics
-- [ ] Define end-node semantics
-- [ ] Implement path discovery
-- [ ] Detect cycles
-- [ ] Penalize unnecessary cycles
-- [ ] Detect contradictory paths
-- [ ] Rank candidate paths
-- [ ] Select highest-confidence useful paths
-
-## Milestone 4 — Specialized Vector Index
-
-Build a local vector/index system around the Truth Graph rather than a conventional document-only vector database.
-
-- [ ] Design vector storage
-- [ ] Select embedding representation
-- [ ] Define vector-to-`TruthNode` mapping
-- [ ] Define `TruthNode`-to-vector mapping
-- [ ] Define index persistence and updates
-- [ ] Define index rebuild behavior
-- [ ] Benchmark candidate index structures
-- [ ] Compare SQLite-backed and specialized binary/index approaches
-
-## Milestone 5 — Compiled Heuristic Mapping
-
-Compile frequently useful truth paths into optimized mappings that favor high-confidence, low-cost routes between semantic start and end nodes.
-
-### Path Weighting Inputs
-
-- Truth confidence
-- Evidence strength
-- Provenance quality
-- Relationship confidence
-- Semantic similarity
-- Path length
-- Cycle penalty
-- Contradiction penalty
-- Historical retrieval success
-- Historical answer success
-- Context relevance
-
-### Heuristic Model
-
-- [ ] Define `PathWeight`
-- [ ] Define heuristic scoring
-- [ ] Define path cost
-- [ ] Define cycle penalty
-- [ ] Define contradiction penalty
-- [ ] Define confidence aggregation
-- [ ] Define semantic relevance weighting
-- [ ] Define evidence weighting
-
-### Path Compilation
-
-- [ ] Implement candidate path ranking
-- [ ] Identify frequently useful paths
-- [ ] Compile high-value paths into optimized mappings
-- [ ] Cache compiled mappings
-- [ ] Define mapping versioning
-- [ ] Define mapping invalidation
-- [ ] Define incremental recompilation
-- [ ] Benchmark compiled vs dynamic traversal
+- Persistent sessions
+- CMake/CTest validation
 
-### Optimization Principle
+## Phase 2 — Representation Discovery [ACTIVE]
 
-Prefer the path with the highest combined truth confidence and semantic relevance while minimizing path length, unnecessary cycles, contradictions, and weak relationships.
+- Capture activations
+- Analyze layer recurrence
+- Analyze transition vectors
+- Cross-prompt consistency
+- Identify stable representation structures
+- Validate numerical reconstruction
+- Establish reproducible representation baselines
 
-The compiled mapping should allow frequently requested semantic routes to bypass expensive graph exploration and directly reach the most probable valid knowledge path.
+## Phase 3 — Canonical Model GGUF [ACTIVE]
 
-## Milestone 6 — Language-Independent Retrieval
+- Establish canonical GGUF artifact
+- Record model hash and metadata
+- Inventory tensors and layers
+- Preserve quantization information
+- Build deterministic extraction tooling
+- Establish GGUF-to-representation correspondence
 
-Resolve queries expressed in different languages to the same underlying semantic truths when they represent the same meaning.
+## Phase 4 — Four-Map Representation [NEXT]
 
-- [ ] Define language-independent query representation
-- [ ] Test multilingual semantic retrieval
-- [ ] Test cross-language `TruthNode` matching
-- [ ] Test multilingual path retrieval
-- [ ] Test multilingual response generation
-- [ ] Verify identical truth identity across languages
-- [ ] Prevent language-specific duplication of truths
+- Truth Map — canonical semantic structure
+- Relationship Map — semantic and computational relationships
+- Provenance Map — evidence lineage and source ancestry
+- Landscape Map — activation density, recurrence, convergence, heightmap/heatwave features
+- Stable identifiers between all maps
+- Vector links between canonical and derived structures
 
-## Milestone 8 — Core Truth Data Model
+## Phase 5 — GGUF to MAF [RESEARCH]
 
-Define the language-independent structures that form the foundation of the OpenMind knowledge graph.
+- Convert a copy of the Canonical Model GGUF into MAF
+- Preserve source correspondence
+- Measure reconstruction fidelity
+- Measure storage size
+- Measure RAM
+- Measure working memory
+- Measure lookup latency
+- Measure token requirements
+- Compare against original GGUF
 
-### TruthNode
+## Phase 6 — Fractal MAF [RESEARCH]
 
-`TruthNode` represents a canonical semantic truth independent of the language used to express it.
+- Recursive MAF cells
+- Multi-dimensional fractal relationships
+- Fractal links to all three primary maps
+- Sparse activation representation
+- Recursive aggregation
+- Test token reduction
+- Test memory reduction
+- Test computational reduction
 
-- [ ] Define immutable TruthNode identity
-- [ ] Define canonical semantic representation
-- [ ] Define truth status
-- [ ] Define confidence score
-- [ ] Define evidence references
-- [ ] Define provenance references
-- [ ] Define creation and update metadata
-- [ ] Define contradiction relationships
-- [ ] Define semantic versioning
-
-### TruthExpression
-
-`TruthExpression` represents a language-specific expression that resolves to a language-independent TruthNode.
-
-- [ ] Define language identifier
-- [ ] Define normalized semantic representation
-- [ ] Define original expression
-- [ ] Map multiple languages to one TruthNode
-- [ ] Prevent language-specific duplication of TruthNodes
-- [ ] Support equivalent expressions across languages
-
-### TruthEdge
-
-`TruthEdge` represents a validated relationship between two TruthNodes.
-
-- [ ] Define source TruthNode
-- [ ] Define destination TruthNode
-- [ ] Define relationship type
-- [ ] Define relationship confidence
-- [ ] Define evidence references
-- [ ] Define provenance references
-- [ ] Define directionality
-- [ ] Define contradiction semantics
-- [ ] Define edge versioning
-
-### TruthPath
-
-`TruthPath` represents a candidate route through the Truth Graph from a semantic start node to a semantic end node.
-
-- [ ] Define start node
-- [ ] Define end node
-- [ ] Define ordered TruthEdge sequence
-- [ ] Define path length
-- [ ] Define aggregate confidence
-- [ ] Define semantic relevance
-- [ ] Define cycle count
-- [ ] Define contradiction count
-- [ ] Define path cost
-- [ ] Define final PathWeight
-
-### PathWeight
-
-`PathWeight` determines how strongly OpenMind should prefer one valid path over another.
-
-- [ ] Define deterministic weighting function
-- [ ] Combine truth confidence
-- [ ] Combine evidence strength
-- [ ] Combine provenance quality
-- [ ] Combine relationship confidence
-- [ ] Combine semantic relevance
-- [ ] Penalize path length
-- [ ] Penalize unnecessary cycles
-- [ ] Penalize contradictions
-- [ ] Define stable tie-breaking rules
-
-### Provenance
-
-Every known truth and relationship should retain enough provenance to explain why it is considered valid.
-
-- [ ] Define provenance identifier
-- [ ] Define source reference
-- [ ] Define evidence type
-- [ ] Define evidence confidence
-- [ ] Define verification state
-- [ ] Define provenance timestamps
-- [ ] Preserve provenance through compilation
-
-### Invariants
-
-- [ ] TruthNode identity must not depend on language
-- [ ] TruthExpressions must resolve to canonical TruthNodes
-- [ ] Invalid relationships must not enter the trusted graph
-- [ ] Contradictory truths must remain distinguishable
-- [ ] Provenance must survive graph traversal
-- [ ] Compiled mappings must reference versioned graph objects
-- [ ] Path ranking must be deterministic for identical inputs
-- [ ] Language changes must not change TruthNode identity
-
-## Milestone 9 — Specialized Vector Index Architecture
-
-Build a specialized local vector index that accelerates semantic discovery without becoming the source of truth. The Truth Graph remains authoritative; vectors provide approximate semantic navigation into that graph.
-
-### Core Principle
-
-Vectors locate likely semantic neighbors. TruthNodes, TruthEdges, provenance, and validated relationships determine what OpenMind considers knowledge.
-
-```text
-Natural Language Query
-        |
-        v
-Language-Independent Semantic Representation
-        |
-        v
-Vector Search
-        |
-        v
-Candidate TruthNodes
-        |
-        v
-Truth Graph Validation
-        |
-        v
-Validated Start / End Nodes
-        |
-        v
-Path Discovery + Heuristic Ranking
-        |
-        v
-Compiled Truth Path
-```
-
-### Vector Record
-
-Each vector entry should map directly to a canonical TruthNode rather than storing an independent copy of knowledge.
-
-- [ ] Define vector record format
-- [ ] Define TruthNode identifier
-- [ ] Define embedding identifier
-- [ ] Define embedding dimensions
-- [ ] Define embedding model/version
-- [ ] Define normalization requirements
-- [ ] Define vector metadata
-- [ ] Define vector-to-TruthNode mapping
-- [ ] Define TruthNode-to-vector reverse mapping
-
-### Specialized Index
-
-Design the index specifically for OpenMind retrieval rather than adopting a document-oriented vector database as the architectural authority.
-
-- [ ] Evaluate flat vector search
-- [ ] Evaluate approximate nearest-neighbor indexing
-- [ ] Evaluate graph-assisted vector search
-- [ ] Evaluate memory-mapped indexes
-- [ ] Evaluate quantized vectors
-- [ ] Evaluate compact mobile-readable indexes
-- [ ] Benchmark index construction on Vivobook
-- [ ] Benchmark index lookup on S26 Ultra
-- [ ] Measure index memory footprint
-- [ ] Measure index persistence size
-
-### Storage Separation
-
-Keep semantic truth, graph structure, and vector acceleration logically separate.
-
-- [ ] TruthNode storage
-- [ ] TruthEdge storage
-- [ ] Provenance storage
-- [ ] Vector storage
-- [ ] Compiled mapping storage
-- [ ] Query/cache storage
-
-### Candidate Retrieval
-
-Vector search should produce a candidate set rather than an unconditional answer.
-
-- [ ] Retrieve top-K candidate TruthNodes
-- [ ] Apply semantic similarity threshold
-- [ ] Remove duplicate semantic identities
-- [ ] Validate candidate TruthNodes
-- [ ] Reject invalidated truths
-- [ ] Preserve confidence and provenance
-- [ ] Pass candidates to graph traversal
-
-### Index Updates
-
-- [ ] Support insertion of new TruthNodes
-- [ ] Support vector updates
-- [ ] Support TruthNode invalidation
-- [ ] Support deletion/tombstoning
-- [ ] Support incremental index updates
-- [ ] Support background rebuilds
-- [ ] Support index versioning
-- [ ] Detect embedding-model changes
-- [ ] Rebuild affected vectors when required
-
-### Vivobook Compilation
-
-The Vivobook should perform expensive index construction and optimization while the S26 Ultra consumes compact runtime artifacts.
-
-- [ ] Generate embeddings on Vivobook
-- [ ] Construct vector index on Vivobook
-- [ ] Optimize index layout
-- [ ] Validate TruthNode mappings
-- [ ] Produce versioned index artifact
-- [ ] Transfer runtime index to S26 Ultra
-- [ ] Validate artifact integrity on S26 Ultra
-
-### Runtime Requirements
-
-- [ ] Fast candidate retrieval
-- [ ] Low memory overhead
-- [ ] Deterministic TruthNode mapping
-- [ ] Offline operation
-- [ ] No mandatory network dependency
-- [ ] Efficient mobile storage
-- [ ] Compatible with compiled heuristic mappings
-
-### Benchmark Comparison
-
-- [ ] SQLite-backed vector prototype
-- [ ] Specialized binary index prototype
-- [ ] ANN prototype
-- [ ] Memory-mapped prototype
-- [ ] Compare latency
-- [ ] Compare RAM usage
-- [ ] Compare storage size
-- [ ] Compare retrieval recall
-- [ ] Compare S26 Ultra runtime performance
-- [ ] Compare Vivobook build performance
-
-### Architectural Constraint
-
-The vector index must never silently become the authority for truth. A high-similarity vector match is a candidate semantic location, not proof that the associated knowledge is true.
-
-## Milestone 10 — Knowledge Waveform Encoding
-
-Experiment with lossless PCM/WAV representations of Truth Graph relationships and paths.
-
-The Truth Graph remains the canonical knowledge representation. Waveforms are derived experimental representations.
-
-### Core Model
-
-- start_node
-- end_node
-- relationship tag
-- relationship direction
-- relationship weight
-- truth confidence
-- evidence strength
-- provenance strength
-- semantic relevance
-- contradiction signal
-- path cost
-
-### Waveform Concept
-
-- Amplitude may represent relationship strength.
-- Frequency may represent relationship class.
-- Phase may represent relationship direction.
-- Duration may represent path significance or cost.
-- Positive signal regions may represent supporting evidence.
-- Negative signal regions may represent contradiction or known-untruth evidence.
-- Silence may represent absence of evidence.
-
-These mappings are experimental and must be benchmarked rather than assumed to improve reasoning.
-
-### Multi-Channel Experiment
-
-- Channel 1: truth confidence
-- Channel 2: evidence strength
-- Channel 3: relationship weight
-- Channel 4: semantic relevance
-- Channel 5: contradiction
-- Channel 6: path cost
-- Channel 7: provenance strength
-- Channel 8: retrieval history
-
-### Path Encoding
-
-Encode a start_node to end_node route as a deterministic waveform.
-
-The waveform must be reproducible from the same Truth Graph state and path metadata.
-
-### Validation
-
-- [ ] Define deterministic waveform encoding
-- [ ] Define reversible metadata representation
-- [ ] Define relationship-tag encoding
-- [ ] Define truth-confidence encoding
-- [ ] Define contradiction encoding
-- [ ] Define multi-channel representation
-- [ ] Generate test WAV files
-- [ ] Verify lossless round-trip
-- [ ] Compare waveform storage against structured graph storage
-- [ ] Benchmark waveform generation
-- [ ] Benchmark waveform retrieval
-- [ ] Benchmark waveform path comparison
-- [ ] Test candidate-path ranking
-- [ ] Test unnecessary graph traversal reduction
-
-### Benchmark Comparison
-
-Traditional LLM retrieval
-vs
-Traditional vector retrieval
-vs
-OpenMind Truth Graph
-vs
-OpenMind Truth Graph + Knowledge Waveform
-
-Success requires measurable improvement in retrieval, path selection, latency, memory efficiency, or answer accuracy.
-
-## Milestone 11 — Experimental Fractal Memory
-
-Investigate whether a deterministic multimodal fractal representation of the Truth Graph can function as associative/predictive memory.
-
-The fractal may use double-helix paths from `start_node` to `end_node`, with candidate answers represented by points of greatest validated relational convergence.
-
-### Experimental Status
-
-This milestone is EXPERIMENTAL and NON-CANONICAL.
-
-Truth Graph remains the canonical knowledge representation.
-
-Fractal geometry, color, sound, video, predictive weighting, and RUNE2 are derived experimental mechanisms.
-
-No experimental representation may become authoritative unless a reproducible scientific hypothesis demonstrates measurable benefit.
-
-### Scientific Method
-
-- [ ] Define hypothesis
-- [ ] Define prediction
-- [ ] Define controlled experiment
-- [ ] Define measurements
-- [ ] Define statistical evaluation
-- [ ] Define replication protocol
-- [ ] Define acceptance/rejection criteria
-
-### Fractal Memory
-
-- [ ] Define deterministic fractal representation
-- [ ] Encode complete Truth Graph state
-- [ ] Encode start_node/end_node paths
-- [ ] Implement double-helix relationship representation
-- [ ] Define candidate answer convergence
-- [ ] Define predictive weighting
-- [ ] Implement fractal memory probe
-- [ ] Validate every candidate against Truth Graph
-
-### Multimodal Representation
-
-- [ ] Define geometry encoding
-- [ ] Define color encoding
-- [ ] Define sound encoding
-- [ ] Synchronize geometry/color/sound
-- [ ] Generate deterministic fractal video
-- [ ] Test real-time updates
-
-### Scientific Benchmark
-
-Compare increasing sensory representations:
-
-Traditional retrieval
-vs
-Truth Graph
-vs
-Truth Graph + fractal geometry
-vs
-Truth Graph + fractal + color
-vs
-Truth Graph + fractal + sound
-vs
-Truth Graph + fractal + color + sound
-
-Measure answer accuracy, retrieval recall, path selection, convergence accuracy, contradiction detection, provenance preservation, latency, memory, storage, prediction calibration, and replication stability.
-
-### Experimental Gate
-
-A visually compelling or complex fractal does not constitute evidence.
-
-The center is a candidate hypothesis, not truth.
-
-Predictive weight measures historical prediction performance, not truth confidence.
-
-The feature remains experimental until controlled, reproducible, statistically meaningful results demonstrate a benefit.
-
-## Milestone 12 — Experimental ML Fuzzy Logic Weighted Graph
-
-Investigate whether fuzzy logic and machine-learned weighted vectors can improve Truth Graph retrieval and path selection.
-
-The Truth Graph remains canonical. This subsystem produces candidate hypotheses and rankings only.
-
-### Core Model
-
-- TruthNode
-- TruthEdge
-- relationship tags
-- relationship direction
-- relationship weight
-- truth confidence
-- evidence strength
-- provenance strength
-- semantic relevance
-- contradiction state
-- path cost
-- vector representation
-- fuzzy membership
-- learned weighting
-- predictive performance
-
-### Weighted Vector Layer
-
-- [ ] Define vector-to-TruthNode mapping
-- [ ] Define vector-to-TruthEdge mapping
-- [ ] Define vector metadata
-- [ ] Define embedding model/version
-- [ ] Define graph-version binding
-- [ ] Define deterministic vector generation
-- [ ] Preserve provenance
-- [ ] Preserve contradiction state
-
-### Fuzzy Graph
-
-- [ ] Define fuzzy node membership
-- [ ] Define fuzzy relationship membership
-- [ ] Define semantic similarity membership
-- [ ] Define evidence membership
-- [ ] Define provenance membership
-- [ ] Define contradiction penalty
-- [ ] Define path-cost penalty
-- [ ] Define fuzzy path score
-- [ ] Define explainable score components
-
-### ML Weighting
-
-- [ ] Define training data
-- [ ] Define target outcomes
-- [ ] Define baseline weights
-- [ ] Train experimental weighting model
-- [ ] Version learned weights
-- [ ] Record model provenance
-- [ ] Calibrate predictions
-- [ ] Test overfitting
-- [ ] Test cross-language consistency
-- [ ] Test model drift
-- [ ] Define deterministic fallback
-
-### Candidate Path Ranking
-
-- [ ] Retrieve candidate TruthNodes
-- [ ] Construct candidate paths
-- [ ] Apply fuzzy relationship scoring
-- [ ] Apply learned weighting
-- [ ] Penalize contradictions
-- [ ] Penalize weak provenance
-- [ ] Penalize unnecessary cycles
-- [ ] Penalize excessive path cost
-- [ ] Rank candidate paths
-- [ ] Validate winning candidates against canonical Truth Graph
-
-### Scientific Validation
-
-- [ ] Define explicit hypothesis
-- [ ] Define baseline
-- [ ] Define independent variables
-- [ ] Define dependent variables
-- [ ] Define evaluation dataset
-- [ ] Define accuracy metrics
-- [ ] Define recall metrics
-- [ ] Define path-efficiency metrics
-- [ ] Define latency metrics
-- [ ] Define memory metrics
-- [ ] Define contradiction-detection metrics
-- [ ] Run reproducible experiments
-- [ ] Replicate results
-- [ ] Document limitations
-- [ ] Define falsification criteria
-
-### Benchmark Comparison
+
+## Phase 6A — MAF Object Compilation [ACTIVE RESEARCH]
+
+Goal: make MAF the persistent model-object representation rather than merely
+an index around conventional tensors.
+
+Development order:
+
+1. Prove exact `tensor -> MAF object -> tensor/view` round-trip fidelity.
+2. Assign stable model, object, and fragment primary keys.
+3. Classify objects from metadata before reading payload bytes whenever possible.
+4. Generate a compile recipe before payload conversion.
+5. Stream source payloads once, performing hashing, exact transformation,
+   fragment construction, and placement statistics in the same pass.
+6. Avoid whole-tensor temporary allocations where block streaming is sufficient.
+7. Preserve dense tensors as optional compute/materialization views until
+   MAF-native computation is independently validated.
+
+Initial MAF Compiler stages:
+
+`Scanner -> Classifier -> Planner -> Encoder -> Segment Builder`
+
+Classification is split into:
+
+- static semantic class: weight, embedding, norm, state, route, residual, etc.
+- structural class: direct, fragmentable, fractal, sparse, reversible-transform.
+- runtime class: cold, warm, hot-MAF, hot-dense, prefetch candidate.
+
+Runtime usage changes must not change logical object identity.
+
+Natural lossless gains such as exact deduplication, reversible transforms,
+shared fragments, or exact residual representation may be measured during
+compilation, but compression must not reduce representation fidelity.
+
+## Phase 6B — MAF Model Catalog and Segment Store [RESEARCH]
+
+Goal: separate permanent logical identity from temporary physical placement.
+
+The catalog must provide stable primary-key identity for:
+
+- model
+- MAF object
+- fragment
+- route/transition
+- physical segment generation
+
+Physical records may change segment, offset, cache tier, or device residency
+without changing their logical primary key.
+
+Initial storage model:
+
+- compact resident object/fragment directory
+- immutable MAF segment files
+- direct `(PK -> segment, offset, length)` resolution
+- integrity hashes independent of PK identity
+- generation manifests with atomic activation/rollback
+- no JSON parsing on the inference hot path
+
+Candidate storage engines remain experimental until benchmarked:
+
+1. compiled binary/RAM index + external MAF segments
+2. SQLite control plane + external MAF segments
+3. purpose-built MAFDB object engine
+4. other permissively licensed embedded engines only when they provide a
+   measurable advantage
+
+Do not fork or replace a mature database engine merely for architectural novelty.
+A custom MAFDB must earn promotion through measured MAF-specific advantage.
+
+<!-- OPENMIND_PHASE_6B_STATUS_START -->
+
+### Current Phase 6B / Phase 6C Research Status
+
+Research authority for this status:
+
+    local branch: labs/multidimensional-maf
+    Phase 6B exit HEAD: 4c1b973
+    Phase 6B completion SHA256: 2539b9ad7c623b6415434f73786bf33fc5571a5ec79bd319f7dd8d6bdfe09e94
+    Phase 6C entry checkpoint: experiments/model_fractal/MAF_PHASE_6C_ENTRY_CHECKPOINT.md
+
+The active MAF research history remains local-only unless a later
+explicit upstream synchronization is performed.
+
+Phase 6B progression:
+
+- **6B.1 Authority / identity rules — COMPLETE**
+- **6B.2 Segment Builder — COMPLETE + VALIDATED**
+- **6B.3 Generation descriptor / manifest — COMPLETE**
+- **6B.4 Generation Engine V1 — COMPLETE**
+- **6B.5 Generation Engine validation — COMPLETE**
+- **6B.6 Activation protocol — COMPLETE**
+- **6B.7 Atomic activation — COMPLETE / VALIDATED**
+- **6B.8 Rollback — COMPLETE / VALIDATED**
+- **6B.9 Resident PK Directory — COMPLETE / VALIDATED / BENCHMARKED / DIAGNOSTICALLY ACCEPTED**
+- **6B.10 Segment Reader V1 — COMPLETE / VALIDATED / BENCHMARKED / DIAGNOSTICALLY ACCEPTED**
+
+**Phase 6B — COMPLETE / CLOSED.**
+
+The unresolved CPU6/CPU7 cluster-1 crossover is optional prospective
+follow-up research and does not block Phase 6B exit or Phase 6C entry.
+
+Phase 6C status:
+
+- **Phase 6C — MAF Object Runtime and Residency — RESEARCH CURRENT / ENTRY FROZEN**
+- **Phase 6C runtime implementation — NOT YET ACCEPTED**
+
+The Phase 6C entry checkpoint freezes scope before runtime
+implementation. Frozen Phase 6B artifacts remain immutable.
+
+<!-- OPENMIND_PHASE_6B_STATUS_END -->
+
+## Phase 6C — MAF Object Runtime and Residency [RESEARCH]
+
+Status: **STARTED / RESEARCH CURRENT / ENTRY FROZEN / NO RUNTIME IMPLEMENTATION ACCEPTED YET**
+
+Entry checkpoint: `experiments/model_fractal/MAF_PHASE_6C_ENTRY_CHECKPOINT.md`
+
+Goal: keep only the useful model working set resident.
+
+Starting Phase 6C scope includes:
+
+- runtime residency state machines;
+- long-lived descriptor ownership where justified;
+- mmap / mapped-segment residency where justified;
+- eviction and reuse policy;
+- on-demand dense materialization;
+- runtime concurrency and thread-safety contracts.
+
+The database/catalog knows every MAF object; it does not require every object
+to be loaded.
+
+Target residency states:
+
+`COLD_DISK -> MAPPED -> HOT_MAF -> HOT_DENSE`
+
+Later:
+
+`HOT_MAF/HOT_DENSE -> VULKAN_MAF`
+
+Required runtime capabilities:
+
+- map/attach and detach/unmap MAF segments
+- object pin/unpin
+- fragment-level retrieval
+- dense materialization on demand
+- reuse-aware promotion/demotion
+- byte-budgeted caches rather than object-count caches
+- bounded allocation arenas/slabs
+- minimize copies between disk, mapped payload, decoded cache, and compute view
+- preserve canonical immutable bytes on disk so eviction does not require
+  reserialization
+
+Compare cache policies including simple LRU controls and frequency/reuse-aware
+admission/eviction such as TinyLFU/CLOCK-style designs.
+
+## Phase 6D — Segment Locality and Path-Aware Repacking [RESEARCH]
+
+Goal: make physical storage follow measured model pathways.
+
+Initial segment-size and fragment-size choices are hypotheses and must be
+device-benchmarked rather than assumed.
+
+Collect runtime telemetry in RAM, then periodically persist aggregated statistics:
+
+- object access count
+- reuse interval
+- transition frequency
+- materialization count
+- bytes read
+- cache hit/miss
+- promotion/demotion
+- prefetch usefulness
+
+Frequently traversed object sequences may be physically colocated in a new
+immutable segment generation.
+
+Rules:
+
+- logical PKs never change because of repacking
+- physical segment/offset mappings may change
+- repacking is generational, validated, and atomically activated
+- avoid frequent rewrites that create flash wear or cache churn
+- transition locality is more important than global popularity alone
+- old generations remain recoverable until the new generation validates
+
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-ROADMAP:START -->
+## Phase 6D-Q — Query-Scoped MAF Working Sets and Reusable PK Route Cache
+
+Status: PROPOSED — NOT VALIDATED
+
+Phase 6D-Q introduces a proposed bridge from persistent/locality-aware MAF
+storage to selective MAF execution.
+
+The proposed architecture separates:
+
+- canonical immutable MAFDB model authority;
+- a temporary Query-Scoped MAF Capsule containing or referencing the PK working
+  set for one input;
+- a persistent derived Query Route Cache that remembers successful PK routes for
+  exact or similar future queries.
+
+Proposed execution flow:
+
+    input
+    -> query signature
+    -> prior route lookup
+    -> bounded PK selection
+    -> query-scoped MAF working set
+    -> selective execution
+    -> bounded expansion when insufficient
+    -> answer
+    -> release/detach
+    -> retire ephemeral materialization
+    -> retain compact route metadata
+
+The initial PK set is not required to be perfect. The intended architecture
+allows deterministic bounded expansion when the current working set is
+insufficient.
+
+The scientific gates are:
+
+- 6D-Q1: freeze Query Capsule and Query Route Cache schemas;
+- 6D-Q2: test non-oracle query-to-PK selection feasibility;
+- 6D-Q3: prove attach/detach ownership and cleanup semantics;
+- 6D-Q4: test exact/similar query-route reuse with generation binding;
+- 6E-A: test selective working-set sufficiency;
+- 6E-B: test bounded expansion/recovery;
+- 6E-C: prove actual tensor/object avoidance;
+- 6E-D: evaluate output parity/quality;
+- 6F: measure performance only after correctness.
+
+No current result proves that a prompt can yet select a sufficient PK subset or
+that this architecture improves inference performance.
+
+Architecture:
+`experiments/model_fractal/MAF_QUERY_SCOPED_WORKING_SET_ARCHITECTURE.md`
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-ROADMAP:END -->
+
+## Phase 6E — Selective MAF Access and Tensor Avoidance [CRITICAL RESEARCH]
+
+Goal: determine whether OpenMind can avoid touching or materializing complete
+dense tensors while preserving inference fidelity.
+
+Required progression:
+
+1. exact whole-object reconstruction
+2. partial/fractal reconstruction
+3. selective fragment retrieval
+4. shadow hidden-state comparison against untouched model oracle
+5. logit/top-k/token agreement
+6. selective dense materialization
+7. direct MAF-native computation only after fidelity gates pass
+
+A smaller payload or lower RAM footprint is not sufficient evidence by itself.
+
+The core hypothesis is falsifiable:
+
+> A MAF object may become the persistent numerical state, while a dense tensor
+> is only an optional materialized compute view.
+
+If selective access does not preserve correctness, retain full materialization
+and record the negative result rather than rescuing the hypothesis post hoc.
+
+## Phase 6F — Proven MAF Runtime Optimization [FUTURE]
+
+Optimization order must compound proven gains:
+
+1. representation correctness
+2. compiler efficiency
+3. indexed disk retrieval
+4. RAM residency/cache behavior
+5. selective access
+6. native C++ implementation
+7. mmap/pread, batching, arenas, prefetch, and copy reduction
+8. ARM64/NEON optimization
+9. Vulkan optimization
+
+Vulkan work begins only after the MAF object/runtime architecture demonstrates
+a measurable advantage or a clearly identified GPU-addressable bottleneck.
+
+Potential Vulkan endpoint:
+
+`disk MAF -> mapped fragment -> RAM MAF cache -> Vulkan MAF cache -> GPU MAF kernel`
+
+Do not use GPU acceleration to justify an otherwise inferior representation
+or storage architecture.
+
+## Phase 7 — Fuzzy Logic Routing [RESEARCH]
+
+- Weighted relationship membership
+- Contradiction penalties
+- Provenance weighting
+- Path-cost weighting
+- Candidate ranking
+- Deterministic fallback
+
+## Phase 8 — Machine Learning Routing [RESEARCH]
+
+- Learn routing weights
+- Train from validated outcomes
+- Use rejected paths as negative evidence
+- Preserve terminated paths
+- Calibrate confidence
+- Test overfitting
+- Test holdout generalization
+
+## Phase 9 — Heatwave and Heightmap Features [RESEARCH]
+
+- Activation density
+- Relationship density
+- Recurrence
+- Convergence
+- Height/depth relationships
+- Dynamic landscape features
+- Feed validated features into ML routing
+
+## Phase 10 — Integrated MAF Brain [RESEARCH]
+
+- MAF cells as heuristic neuron-like firing units
+- Node-to-node activation
+- Fractal-cell activation
+- Relationship propagation
+- Sparse routing
+- Candidate convergence
+- Explicit termination states
+- Negative/failure memory
+
+## Phase 11 — Comparative Inference [RESEARCH]
 
 Compare:
 
-Traditional vector retrieval
-vs
-Truth Graph traversal
-vs
-Fuzzy graph without ML
-vs
-ML-weighted fuzzy graph
-vs
-OpenMind Truth Graph + ML Fuzzy Graph
-vs
-future multimodal/fractal-assisted retrieval
+- Original GGUF/LLM
+- MAF
+- Fractal MAF
+- MAF + fuzzy routing
+- MAF + ML routing
+- Integrated fractal MAF
+- Native optimized implementation
 
-Success requires measurable and reproducible improvement.
+Measure correctness, tokens, RAM, storage, latency, throughput, CPU, GPU, thermal behavior, and energy where available.
 
-### Architectural Constraint
+## Phase 12 — Native Componentization [CONTINUOUS]
 
-A vector score, fuzzy score, ML prediction, waveform feature, fractal pattern, or predictive behavior is never canonical truth.
+Every validated phase becomes a small native C++ component.
 
-Truth Graph + Provenance + Validation remain authoritative.
+Experimental Python -> validated algorithm -> C++ component -> tests -> benchmark -> ARM64 optimization -> NEON/Vulkan optimization -> integration
 
-Experimental systems may rank hypotheses but may not silently promote hypotheses into TruthNodes or TruthEdges.
+## Phase 13 — Production Candidate [FUTURE]
+
+- Stable native API
+- Validated MAF/fractal representation
+- Model/representation packaging
+- Device-specific execution paths
+- Failure handling
+- Security review
+- Reproducible release process
+
+## Non-Negotiable Research Rules
+
+The Canonical Model GGUF remains the authoritative model artifact.
+Derived representations never silently redefine truth.
+Provenance survives every transformation.
+Rejected, contradictory, pruned, and terminated paths may be retained as negative evidence.
+Experimental success requires reproducible benchmark improvement.
+No alternative inference system is considered a replacement for an LLM until correctness and generalization are demonstrated.
+
+## Standard Procedure
+
+Define -> Baseline -> Experiment -> Measure -> Holdout -> Validate -> Componentize -> C++ -> Optimize -> Rebenchmark -> Document -> Commit
+
+## Phase 5A — Canonical Model GGUF → MAF Performance Gate [CRITICAL]
+
+
+
+Before expanding MAF into a general inference architecture, determine whether
+
+conversion of a copy of the Canonical Model GGUF produces a measurable advantage.
+
+
+
+The original Canonical Model GGUF remains immutable and is always the model reference.
+
+
+
+### Required comparison
+
+
+
+```text
+
+Canonical Model GGUF
+
+       |
+
+       +----> conventional LLM baseline
+
+       |
+
+       +----> MAF representation
+
+```
+
+
+
+### Required metrics
+
+
+
+- persistent model/representation size
+
+- peak RAM
+
+- working memory
+
+- lookup latency
+
+- initialization time
+
+- prompt tokens
+
+- generated tokens
+
+- total tokens
+
+- throughput
+
+- CPU utilization
+
+- GPU utilization
+
+- thermal behavior where measurable
+
+- energy/resource consumption where measurable
+
+- correctness
+
+- reconstruction fidelity
+
+- repeated-prompt consistency
+
+- holdout accuracy
+
+
+
+### Promotion gate
+
+
+
+MAF proceeds toward primary inference only if its measured benefits are
+
+reproducible and correctness/generalization remain acceptable.
+
+
+
+A reduction in storage, memory, or tokens alone is insufficient if correctness
+
+or generalization materially degrades.
+
+
+
+### Negative evidence
+
+
+
+The experiment must preserve:
+
+
+
+- rejected mappings
+
+- contradictory mappings
+
+- pruned mappings
+
+- failed reconstructions
+
+- terminated paths
+
+- unsuccessful compression candidates
+
+
+
+These artifacts may later become training, calibration, routing, or pruning
+
+signals.
+
+
+
+### Experimental sequence
+
+
+
+```text
+
+GGUF
+
+  -> deterministic extraction
+
+  -> MAF conversion
+
+  -> reconstruction/lookup
+
+  -> baseline comparison
+
+  -> holdout validation
+
+  -> resource benchmark
+
+  -> replication
+
+  -> promotion decision
+
+```
+
+
+
+Do not introduce fractalization, fuzzy routing, or ML routing into the primary
+
+comparison until the standalone MAF result has been characterized.
+
+## Forest Morphology Research Program
+
+Status: experimental / Labs only.
+
+The Forest program tests whether biological structural analogies
+correspond to measurable representation, storage, routing, or graph
+topologies.
+
+Naming is earned experimentally:
+
+> Nature suggests the hypothesis; benchmarks decide the architecture.
+
+Plant names are not canonical implementation claims until controlled
+experiments demonstrate a distinct computational advantage.
+
+### Established experimental line
+
+#### Lodgepole
+
+Current role:
+
+- hierarchical shared representation
+- trunk/root centroid
+- branch/shared residual hierarchy
+- terminal packaging and coarse addressability
+
+Status:
+
+- RETAIN
+- not deprecated by Orange
+- candidate substrate for hybrid Forest architectures
+
+Validated evidence includes:
+
+- Lodgepole Fractal Storage V1
+- quantized/storage follow-up experiments
+- fair block-addressability controls
+
+#### Orange
+
+Current role:
+
+- correlation-derived non-contiguous terminal wedges
+- selective partial representation access
+- terminal specialization above or within hierarchical structure
+
+Validated sequence:
+
+- Forest V1:
+  Lodgepole vs Orange structural comparison
+- Forest V2:
+  equivalent block addressability established structural access parity
+- Forest V3:
+  correlated non-contiguous Orange wedges showed information
+  concentration advantage
+- Forest V4:
+  Orange grouping generalized across complete held-out token IDs
+- Forest V5:
+  non-oracle layer-conditioned Orange routing passed on held-out tokens
+
+Current Orange result:
+
+- Orange beats Pine/Lodgepole and Random controls at all tested
+  partial-access fractions in every held-out fold
+- non-oracle router retains most of Oracle performance
+- Orange has earned status as a specialized terminal topology
+- production storage and retrieval advantage remain unproven
+
+### Active next gate
+
+#### Forest V6 — Quantized Non-Oracle Orange
+
+Priority: ACTIVE.
+
+Question:
+
+Does Orange's held-out non-oracle routing advantage survive realistic
+quantized wedge storage?
+
+Primary candidate:
+
+- BLOCK_INT8_64
+
+Controls:
+
+- contiguous Lodgepole/Pine BLOCK_INT8_64
+- correlated Orange BLOCK_INT8_64 with non-oracle router
+- correlated Orange BLOCK_INT8_64 with Oracle selector
+
+Required measurements:
+
+- encoded payload bytes
+- routing metadata bytes
+- grouping-map bytes
+- total modeled bytes
+- compression ratio versus flat FP32
+- selected energy fraction
+- Orange/Pine selected-energy ratio
+- router/Oracle retention
+- mean cosine fidelity
+- minimum cosine fidelity
+- mean relative L2 error
+- maximum relative L2 error
+- fold-level consistency
+
+Interpretation boundary:
+
+V6 may validate compressed representation quality and routing behavior.
+It does not by itself establish mmap, filesystem, latency, or complete
+inference-pipeline performance.
+
+### Reserved morphology hypotheses
+
+These experiments are PARKED until the active Orange sequence reaches
+its next decision point.
+
+They must not delay Forest V6.
+
+#### Lady Fern / Local Fern Candidate
+
+Candidate computational property:
+
+- repeated hierarchical/self-similar organization
+- frond -> pinna -> pinnule -> vein structure
+- possible mapping to repeated layer transformations or recurrence
+
+Candidate experiment:
+
+Forest Fern V1 — Cross-Scale Recurrence.
+
+Question:
+
+Can a transformation or displacement model learned at one representation
+scale predict structurally similar transformations at another scale
+better than independent baselines?
+
+Possible measurements:
+
+- recurrence similarity across scale
+- transform reuse
+- residual after shared transform
+- storage required for reused versus independent transforms
+- held-out layer/token generalization
+
+Field-study note:
+
+Prefer a fern species that can be directly observed locally before
+formalizing the biological contract.
+
+#### Daisy
+
+Candidate computational property:
+
+- one apparent object composed of many functional florets
+- central disk units plus surrounding ray units
+- multiple specialized components presented through one interface
+
+Candidate experiment:
+
+Forest Daisy V1 — Composite Representation.
+
+Question:
+
+Can one logical representation be decomposed into multiple small
+specialized components around shared support while improving selective
+retrieval or reconstruction?
+
+Potential controls:
+
+- monolithic representation
+- equal contiguous partition
+- random component partition
+- learned specialized components
+
+Possible measurements:
+
+- specialization
+- redundancy
+- selective reconstruction
+- component independence
+- storage overhead
+- routing cost
+
+#### Dandelion
+
+Candidate computational property:
+
+- dense source structure producing many independently distributable
+  compact units
+- one-to-many packaging and dissemination
+
+Candidate experiment:
+
+Forest Dandelion V1 — Distributed Representation Units.
+
+Question:
+
+Can a representation be encoded into compact independently useful
+fragments that preserve useful partial information and combine cleanly
+when multiple fragments are recovered?
+
+Possible uses:
+
+- portable MAF fragments
+- distributed retrieval
+- constrained-device representation transfer
+- resumable/sharded representation transport
+
+Measurements:
+
+- independent-fragment utility
+- reconstruction versus fragment count
+- redundancy
+- payload overhead
+- loss tolerance
+- deterministic recombination
+
+#### Ivy
+
+Candidate computational property:
+
+- traversal and attachment over an already existing support structure
+- incremental growth
+- opportunistic branching
+- path reuse without replacing the host graph
+
+Candidate experiment:
+
+Forest Ivy V1 — Adaptive Graph Overlay.
+
+Question:
+
+Can a learned traversal layer attach to an existing Truth Graph and
+improve route selection without becoming a second source of canonical
+truth?
+
+Required boundary:
+
+- canonical Truth Graph remains authoritative
+- Ivy may rank, traverse, annotate, or cache
+- Ivy must not silently mutate canonical truth
+
+Potential measurements:
+
+- route length
+- candidate expansion
+- retrieval recall
+- cache reuse
+- overlay size
+- stale-route behavior
+- provenance preservation
+
+### Morphology experiment order
+
+Current priority order:
+
+1. Forest V6 — quantized non-oracle Orange
+2. Forest V7 — production-like Orange indexing / serialization
+3. Forest V8 — wall-clock selective retrieval benchmark
+4. Evaluate whether Orange should become a production terminal topology
+5. Fern recurrence experiment
+6. Daisy composite-representation experiment
+7. Dandelion distributed-fragment experiment
+8. Ivy graph-overlay experiment
+
+This ordering may change if an earlier result falsifies the underlying
+hypothesis.
+
+### Current architecture hypothesis
+
+The present evidence favors a hybrid rather than replacement model:
+
+    Forest
+      |
+      +-- Lodgepole
+      |     hierarchy / shared paths / coarse structure
+      |
+      +-- Orange
+            correlated non-contiguous terminal organization
+
+Other morphologies remain candidate specialized structures until their
+own controlled experiments earn implementation status.
+
+### Phase 6B Exit / Phase 6C Entry Checkpoint
+
+The frozen completion artifacts supersede the older Phase 6B.9
+checkpoint state previously recorded here.
+
+- Phase 6B.7 Atomic Activation is complete and validated.
+- Phase 6B.8 Rollback is complete and validated.
+- Phase 6B.9 Resident PK Directory is complete, validated, benchmarked, and diagnostically accepted.
+- Phase 6B.10 Segment Reader V1 is complete, validated, benchmarked, and diagnostically accepted.
+- Phase 6B is complete and closed.
+- Phase 6B closure is frozen by `experiments/model_fractal/MAF_SEGMENT_READER_V1_COMPLETION.md`.
+- Phase 6C entry is frozen by `experiments/model_fractal/MAF_PHASE_6C_ENTRY_CHECKPOINT.md`.
+- Phase 6C is the current research phase.
+- No Phase 6C runtime implementation has yet been accepted.
+
+Resident PK Directory V1 is derived immutable process-local state for exactly one model and one active generation.
+
+The minimum logical lookup key is `(model_pk, "object_pk", object_pk)`.
+
+Average O(1) lookup is a design and implementation target until measured by accepted benchmark evidence.

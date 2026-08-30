@@ -1,0 +1,92 @@
+{
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v4/forest_topology_v4.txt",
+      "sha256": "03c8b05e9d328b87c2c1f70d962e94d180a88376bfb15caa23df3e579f142a26"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v4.py",
+      "sha256": "baf8692b3ec159e3935421cdabc734a79e39c850ab8e57a04827ae24767dd137"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v4/forest_topology_v4.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "cross_fold": {
+    "0.125": {
+      "orange_l2_pine": 0.936971413,
+      "orange_l2_random": 0.939073272,
+      "orange_pine_energy": 1.170834553,
+      "orange_random_energy": 1.161434869,
+      "pine_fold_wins": "4/4",
+      "random_fold_wins": "4/4"
+    },
+    "0.250": {
+      "orange_l2_pine": 0.925264443,
+      "orange_l2_random": 0.926828792,
+      "orange_pine_energy": 1.118645364,
+      "orange_random_energy": 1.113472772,
+      "pine_fold_wins": "4/4",
+      "random_fold_wins": "4/4"
+    },
+    "0.500": {
+      "orange_l2_pine": 0.901430177,
+      "orange_l2_random": 0.905306007,
+      "orange_pine_energy": 1.065612724,
+      "orange_random_energy": 1.061148742,
+      "pine_fold_wins": "4/4",
+      "random_fold_wins": "4/4"
+    },
+    "0.750": {
+      "orange_l2_pine": 0.869399704,
+      "orange_l2_random": 0.876942065,
+      "orange_pine_energy": 1.029941704,
+      "orange_random_energy": 1.027672962,
+      "pine_fold_wins": "4/4",
+      "random_fold_wins": "4/4"
+    }
+  },
+  "decision": {
+    "pine_win_requirement": "4/4 partial-access levels",
+    "random_control_requirement": "4/4 partial-access levels",
+    "result": "held_out_orange_generalization_passes"
+  },
+  "experiment": {
+    "dimensions": 1536,
+    "excluded_tokens": [
+      0
+    ],
+    "folds": 4,
+    "group_size": 64,
+    "groups": 24,
+    "name": "Forest Topology V4",
+    "purpose": "Test whether Orange correlation wedges learned without held-out token trajectories retain their information-concentration advantage.",
+    "tokens": 13,
+    "vectors": 364
+  },
+  "limitations": [
+    "V4 isolates wedge grouping generalization rather than a fully frozen/retrained hierarchical tree.",
+    "Per-item top-energy group selection remains oracle.",
+    "No quantization or production serialization is included.",
+    "No wall-clock storage or retrieval benchmark is included."
+  ],
+  "next_gate": {
+    "controls": [
+      "oracle Orange selector",
+      "non-oracle Orange selector",
+      "contiguous Pine baseline",
+      "deterministic random grouping"
+    ],
+    "experiment": "Forest Topology V5",
+    "quantization": "HOLD until routing is validated",
+    "question": "Can a practical non-oracle router predict useful Orange wedges while preserving the held-out information-concentration advantage?"
+  },
+  "schema": "openmind.forest_topology.v4",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Orange correlation-derived grouping retains an information-concentration advantage on complete held-out token trajectories.",
+    "Orange beats both contiguous Pine and deterministic random grouping in every fold at every tested partial-access level.",
+    "The V3 Orange result is therefore not explained solely by fitting and evaluating on the same tokens."
+  ]
+}

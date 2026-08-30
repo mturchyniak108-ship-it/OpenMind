@@ -1,0 +1,146 @@
+{
+  "bond_threshold": 2.0893456195429265,
+  "center": [
+    -0.057265293325661985,
+    -1.926070764645541,
+    -0.41104799133000397
+  ],
+  "classification": "SPATIALLY_SIGNIFICANT_LATTICE_LIKE_STRUCTURE",
+  "geometry_source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "null_statistics": {
+    "clustering": {
+      "empirical_p_two_sided": 0.0004997501249375312,
+      "null_mean": 0.3907552745865246,
+      "null_std": 0.06941977439106219,
+      "observed": 0.785374149659864,
+      "z_score": 5.684531223773995
+    },
+    "degree_cv": {
+      "empirical_p_two_sided": 0.0004997501249375312,
+      "null_mean": 0.7677052772206151,
+      "null_std": 0.07990703887658737,
+      "observed": 0.26249917556921054,
+      "z_score": -6.322423014969575
+    },
+    "edge_count": {
+      "empirical_p_two_sided": 0.0004997501249375312,
+      "null_mean": 45.821,
+      "null_std": 5.466164926161668,
+      "observed": 76,
+      "z_score": 5.521055512898994
+    },
+    "edge_cv": {
+      "empirical_p_two_sided": 0.0014992503748125937,
+      "null_mean": 0.2680403274558275,
+      "null_std": 0.033118623771780945,
+      "observed": 0.3913045760210953,
+      "z_score": 3.721901290786616
+    },
+    "mean_angle": {
+      "empirical_p_two_sided": 0.005497251374312844,
+      "null_mean": 85.3118490809112,
+      "null_std": 3.7664183182269286,
+      "observed": 74.41726768926827,
+      "z_score": -2.892557456754204
+    },
+    "mean_degree": {
+      "empirical_p_two_sided": 0.0004997501249375312,
+      "null_mean": 3.2729285714285714,
+      "null_std": 0.3904403518686906,
+      "observed": 5.428571428571429,
+      "z_score": 5.521055512898995
+    },
+    "mean_edge": {
+      "empirical_p_two_sided": 0.0014992503748125937,
+      "null_mean": 1.5274049315787468,
+      "null_std": 0.059314640495627395,
+      "observed": 1.274085264913267,
+      "z_score": -4.270778083602382
+    },
+    "period8_topology": {
+      "empirical_p_two_sided": 0.0004997501249375312,
+      "null_mean": 0.1675257508208166,
+      "null_std": 0.037200178227135075,
+      "observed": 0.3715836064520275,
+      "z_score": 5.485399945808973
+    },
+    "period8_translation": {
+      "empirical_p_two_sided": 0.08545727136431784,
+      "null_mean": 0.2519005433474526,
+      "null_std": 0.08636187313427654,
+      "observed": 0.40033597127879544,
+      "z_score": 1.7187610984369637
+    },
+    "quadrilateral_count": {
+      "empirical_p_two_sided": 0.013493253373313344,
+      "null_mean": 16.1805,
+      "null_std": 15.998309902924122,
+      "observed": 72,
+      "z_score": 3.4890873060158367
+    },
+    "simple_cubic_score": {
+      "empirical_p_two_sided": 0.0014992503748125937,
+      "null_mean": 0.7442143006210026,
+      "null_std": 0.027646636941540476,
+      "observed": 0.8638188767158446,
+      "z_score": 4.32618898087854
+    },
+    "triangle_count": {
+      "empirical_p_two_sided": 0.006496751624187906,
+      "null_mean": 108.0285,
+      "null_std": 42.95874401969871,
+      "observed": 282,
+      "z_score": 4.049734319984435
+    }
+  },
+  "observed": {
+    "clustering": 0.785374149659864,
+    "degree_cv": 0.26249917556921054,
+    "edge_count": 76,
+    "edge_cv": 0.3913045760210953,
+    "mean_angle": 74.41726768926827,
+    "mean_degree": 5.428571428571429,
+    "mean_edge": 1.274085264913267,
+    "period8_topology": 0.3715836064520275,
+    "period8_translation": 0.40033597127879544,
+    "quadrilateral_count": 72,
+    "simple_cubic_score": 0.8638188767158446,
+    "triangle_count": 282
+  },
+  "period": 8,
+  "radii": [
+    1.9702762129758264,
+    2.5337423048992664,
+    3.1131650198519454,
+    3.629100242039699,
+    4.324434402051181,
+    4.8289610539273005,
+    5.134709279506838,
+    0.9084866034107939,
+    1.070496682812579,
+    1.3981300612276089,
+    1.5842589655487291,
+    1.7366895836030631,
+    2.7850461679784777,
+    1.6405896194044207,
+    2.240632846929302,
+    5.469106625339066,
+    4.225240295135843,
+    4.443669233924494,
+    4.114101331476128,
+    3.662809956476626,
+    3.5207928593550006,
+    2.372499745507465,
+    2.1367718256797623,
+    2.896323379749445,
+    2.2020109313770435,
+    2.216814604682654,
+    1.9824269080835115,
+    1.9702762129758267
+  ],
+  "schema": "openmind.spatial_null.v24",
+  "seed": 2401,
+  "source": "experiments/model_fractal/topology_lattice_v22.json",
+  "trials": 2000
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "openmind.activation_capture.v1",
+  "status": "canonical_reproducible_capture",
+  "dataset": {
+    "filename": "activation_vectors_all_tokens.csv",
+    "tracked_in_git": false,
+    "sha256": "863d6770a5fd824c5a4deb1b7653b42402d1352d37151c36e55388848c8f1432",
+    "size_bytes": 7428820,
+    "csv_lines": 393,
+    "records": 392,
+    "layers": {
+      "count": 28,
+      "first": 0,
+      "last": 27
+    },
+    "tokens": {
+      "count": 14,
+      "first": 0,
+      "last": 13
+    },
+    "embedding_dimension": 1536,
+    "activation_values": 602112,
+    "missing_layer_token_pairs": 0,
+    "duplicate_or_schema_errors": 0
+  },
+  "model": {
+    "artifact_name": "qwen2.5-coder-q8_0.gguf",
+    "sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+    "local_equivalent_artifact": "experiments/model_fractal/model.gguf",
+    "local_equivalent_byte_identical": true
+  },
+  "probe": {
+    "source": "native/src/activation_probe.cpp",
+    "target": "openmind_activation_probe",
+    "n_gpu_layers": 99,
+    "n_ctx": 512,
+    "n_batch": 512,
+    "layer_selection": "all repeating transformer layers discovered from loaded model",
+    "token_selection": "all prompt-token positions",
+    "csv_precision": 9
+  },
+  "prompt": "The purpose of this experiment is to measure representation recurrence across transformer layers.",
+  "reproduction": {
+    "command": "native/build/openmind_activation_probe ~/qwen2.5-coder-q8_0.gguf \"The purpose of this experiment is to measure representation recurrence across transformer layers.\"",
+    "verification": {
+      "legacy_capture_date": "2026-08-25",
+      "canonical_reproduction_date": "2026-08-26",
+      "legacy_sha256": "863d6770a5fd824c5a4deb1b7653b42402d1352d37151c36e55388848c8f1432",
+      "canonical_sha256": "863d6770a5fd824c5a4deb1b7653b42402d1352d37151c36e55388848c8f1432",
+      "byte_identical": true
+    }
+  },
+  "provenance_notes": [
+    "The August 25 capture was preserved before reproduction.",
+    "The August 26 canonical run used the explicitly named model and deterministic prompt.",
+    "Both CSV artifacts are byte-identical.",
+    "The large CSV remains local and is excluded from Git; this manifest is the durable repository record."
+  ]
+}

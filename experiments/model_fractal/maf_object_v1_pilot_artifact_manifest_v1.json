@@ -1,0 +1,36 @@
+{
+  "experiment_parent_commit": "d463c33",
+  "object_count": 5,
+  "objects": [
+    {
+      "bytes": 6732,
+      "file": "results/runtime/maf_object_v1_pilot/objects/01.mafobj",
+      "sha256": "9876e1c5f65a65bcbca530f49919b5caf02df79b8d6aae4018edb3a80da025d3"
+    },
+    {
+      "bytes": 6738,
+      "file": "results/runtime/maf_object_v1_pilot/objects/02.mafobj",
+      "sha256": "acf67a3155f6c39913aac0b9bc35e7bb8047f4771250dc31a0e4757a4c097e59"
+    },
+    {
+      "bytes": 2507352,
+      "file": "results/runtime/maf_object_v1_pilot/objects/03.mafobj",
+      "sha256": "fcb3ca0d64349bc916025a6f84e26c3dfb31abcc7cb03206841d7a89b8f21269"
+    },
+    {
+      "bytes": 14623326,
+      "file": "results/runtime/maf_object_v1_pilot/objects/04.mafobj",
+      "sha256": "3b3dcf5f71f8b6a93270134667e9225a41e818a9ef5ddd19a2d4461486996eae"
+    },
+    {
+      "bytes": 247960154,
+      "file": "results/runtime/maf_object_v1_pilot/objects/05.mafobj",
+      "sha256": "f3129cf6231ec68a3f600c8751eb7e90c7d8a460d7c951b5450a11aea0e9b13e"
+    }
+  ],
+  "runtime_result_bytes": 4275,
+  "runtime_result_file": "results/runtime/maf_object_v1_pilot/maf_object_v1_pilot_fidelity.json",
+  "runtime_result_sha256": "3468466146bc46485369ae44a1d55d06abed7ad6d08644154b075c7c77abde69",
+  "schema": "openmind.maf_object_v1_pilot_artifacts.v1",
+  "total_object_file_bytes": 265104302
+}

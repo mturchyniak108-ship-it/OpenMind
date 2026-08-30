@@ -1,0 +1,59 @@
+{
+  "baseline_commit": "9a8036b",
+  "boundaries": [
+    "shadow/offline benchmark only",
+    "no model execution",
+    "no layer skipping",
+    "no inference mutation",
+    "no Forest retraining"
+  ],
+  "control": {
+    "draws": 10000,
+    "method": "exact-gap-matched randomization",
+    "seed": 48311,
+    "selected_pairs_remain_eligible": true
+  },
+  "corpus_sha256": "d51422d9c89da5a469e328297362faa23887e03a9c7dd56e19e00260c7a5835d",
+  "delta": "target_layer_activation - source_layer_activation",
+  "forest_access": {
+    "budgets": [
+      4,
+      8,
+      16,
+      24,
+      32
+    ],
+    "group_size": 64,
+    "groups": 32,
+    "payload_bytes": [
+      272,
+      544,
+      1088,
+      1632,
+      2176
+    ],
+    "priority": "frozen OMFRST01 nonoracle priority",
+    "quantization": "BLOCK_INT8_64"
+  },
+  "forest_sha256": "da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902",
+  "gap_profile": {
+    "1": 19,
+    "2": 13,
+    "3": 8,
+    "4": 7,
+    "5": 2,
+    "6": 1
+  },
+  "primary": {
+    "metric": "mean reconstruction cosine across 4,8,16,24 groups",
+    "pass": "selected enrichment > 0 and empirical p <= 0.01"
+  },
+  "robustness": {
+    "all_partial_budgets_positive": true,
+    "positive_prompts_required": 7
+  },
+  "schema": "openmind.forest.recurrence_bridge.v1",
+  "selected_pairs": 50,
+  "selection_sha256": "945c826494a62c20ba52a8f4ae1b0133a3d8686f0a7fc23dc336666863992e7a",
+  "status": "PREREGISTERED"
+}

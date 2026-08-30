@@ -1,0 +1,17 @@
+[
+  {
+    "source": "PROJECT",
+    "target": "AGENT",
+    "evidence_id": "E_PROJECT_AGENT"
+  },
+  {
+    "source": "ENGINE",
+    "target": "TEST",
+    "evidence_id": "E_ENGINE_TEST"
+  },
+  {
+    "source": "TEST",
+    "target": "EVIDENCE",
+    "evidence_id": "E_TEST_EVIDENCE"
+  }
+]

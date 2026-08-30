@@ -1,0 +1,74 @@
+{
+  "execution_state": "Token scope clarified from metadata only before any MAF-3D Qwen reconstruction outcome.",
+  "frozen_prompt_token_scope": {
+    "R01": {
+      "active_count_after_T00": 17,
+      "token_count": 18,
+      "token_max": 17,
+      "token_min": 0
+    },
+    "R02": {
+      "active_count_after_T00": 17,
+      "token_count": 18,
+      "token_max": 17,
+      "token_min": 0
+    },
+    "R03": {
+      "active_count_after_T00": 16,
+      "token_count": 17,
+      "token_max": 16,
+      "token_min": 0
+    },
+    "R04": {
+      "active_count_after_T00": 18,
+      "token_count": 19,
+      "token_max": 18,
+      "token_min": 0
+    },
+    "R05": {
+      "active_count_after_T00": 17,
+      "token_count": 18,
+      "token_max": 17,
+      "token_min": 0
+    },
+    "R06": {
+      "active_count_after_T00": 18,
+      "token_count": 19,
+      "token_max": 18,
+      "token_min": 0
+    },
+    "R07": {
+      "active_count_after_T00": 26,
+      "token_count": 27,
+      "token_max": 26,
+      "token_min": 0
+    },
+    "R08": {
+      "active_count_after_T00": 15,
+      "token_count": 16,
+      "token_max": 15,
+      "token_min": 0
+    }
+  },
+  "global_structure": {
+    "T00_trajectories": 8,
+    "active_trajectories_after_T00": 144,
+    "complete_36_layer_trajectories": 152,
+    "csv_rows": 5472,
+    "layer_count": 36,
+    "prompt_count": 8,
+    "total_trajectories": 152
+  },
+  "reason": "Metadata-only validation showed that the frozen external corpus contains prompt-specific token counts rather than 19 tokens for every prompt. No activation float values were parsed and no reconstruction outcome was computed.",
+  "schema": "openmind.maf3d.neutral_qwen_shadow_token_scope_clarification.v1",
+  "scientific_boundary": {
+    "activation_float_values_parsed": 0,
+    "deltas_constructed": 0,
+    "primary_gate_changed": false,
+    "reconstruction_metrics_computed": false
+  },
+  "shadow_protocol_commit": "ba2672e",
+  "status": "FROZEN_BEFORE_RECONSTRUCTION_OUTCOME",
+  "validation_rule": "For each prompt, token indices must be exactly contiguous from 0 through that prompt's frozen token_max. T00 is token index 0 and is excluded from scoring. All remaining tokens are included.",
+  "weighting_rule_unchanged": "Equal prompt, then equal route, then equal active-token weighting remains unchanged from the frozen shadow protocol."
+}

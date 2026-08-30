@@ -1,0 +1,22 @@
+{
+  "clarification": {
+    "normalization": "inherit frozen prospective replication tensor semantics",
+    "tensor_slice": "[1:, :, :]",
+    "token_policy": "exclude token_index 0 (T00)"
+  },
+  "execution_state": "No bridge result or bridge outcome statistic has been computed.",
+  "protocol_commit": "91bf252",
+  "reason": "Token-index scope was not explicit in the preregistered bridge protocol.",
+  "schema": "openmind.forest.recurrence_bridge.preexecution_clarification.v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "unchanged": [
+    "50-pair reference topology",
+    "exact-gap-matched control",
+    "10000 randomization draws",
+    "seed 48311",
+    "Forest geometry",
+    "group budgets",
+    "primary endpoint",
+    "pass/fail criterion"
+  ]
+}

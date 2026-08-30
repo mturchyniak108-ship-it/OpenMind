@@ -1,0 +1,84 @@
+{
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v8/forest_topology_v8_corrected.txt",
+      "sha256": "cbdd5824bfb63134ac309d0bcf705dcaddec299006bb3de7ff9db61be4685786"
+    },
+    "shader": {
+      "path": "native/shaders/forest_v8_decode_scatter.comp",
+      "sha256": "2f3cee3712d5c8ff715917ce20fdfaff95db8582bc0e67f5564e5e62b05f02fb"
+    },
+    "source": {
+      "path": "native/src/forest_v8_vulkan_benchmark.cpp",
+      "sha256": "73290c8e8f8fa3f65a2a445ea1a282627813746e92fd42d8b95c600a1f51e0b6"
+    },
+    "spirv": {
+      "path": "native/shaders/forest_v8_decode_scatter.spv",
+      "sha256": "9d2004ba0b0829b8f1c061d6cc77e15e97afda2dd602b2a3b19e909f7cc8fcd9"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v8/forest_topology_v8_corrected.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "correctness": {
+    "benchmark_shapes": 25,
+    "maximum_absolute_error": 0.0,
+    "result": "pass",
+    "rows_above_1e_minus_6": 0
+  },
+  "crossover": {
+    "batch_1": {
+      "first_gpu_win_request_fraction": 0.5
+    },
+    "batch_16": {
+      "first_gpu_win_request_fraction": 0.125
+    },
+    "batch_256": {
+      "first_gpu_win_request_fraction": 0.125
+    },
+    "batch_4": {
+      "first_gpu_win_request_fraction": 0.25
+    },
+    "batch_64": {
+      "first_gpu_win_request_fraction": 0.125
+    }
+  },
+  "experiment": {
+    "device": "Adreno (TM) 840",
+    "dimensions": 1536,
+    "encoded_bytes_per_group": 68,
+    "group_size": 64,
+    "groups_per_item": 24,
+    "name": "Forest Topology V8",
+    "purpose": "Validate Vulkan BLOCK_INT8_64 decode and non-contiguous scatter before controlled inference-path integration.",
+    "vulkan_api": "1.4.335"
+  },
+  "limitations": [
+    "V8 uses deterministic synthetic Orange-like non-contiguous geometry.",
+    "V8 does not modify llama.cpp or the OpenMind inference graph.",
+    "Queue submission, output clearing, and fence synchronization are included.",
+    "The CPU implementation is a direct reference loop rather than an optimized SIMD production baseline.",
+    "V8 is a kernel microbenchmark and does not establish end-to-end inference speedup."
+  ],
+  "next_gate": {
+    "experiment": "Forest V9 \u2014 Activation Shadow Integration",
+    "generation_authority": "standard llama.cpp activation path",
+    "protocol": [
+      "capture a real activation at one controlled injection candidate",
+      "encode the activation using the validated Orange representation",
+      "decode and scatter through Vulkan",
+      "compare reconstructed and untouched activation",
+      "leave original activation unchanged for model continuation"
+    ],
+    "purpose": "Run Forest decode/scatter beside a real llama.cpp activation without modifying the model's authoritative activation."
+  },
+  "schema": "openmind.forest_topology.v8",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Standalone Vulkan compute performs the Forest BLOCK_INT8_64 decode operation.",
+    "Vulkan non-contiguous scatter reproduces the CPU reference exactly across all 25 tested benchmark shapes.",
+    "GPU execution crosses over against the CPU reference as request size or batch size increases.",
+    "Batch sizes 16, 64, and 256 show a GPU advantage from the smallest tested 12.5 percent access fraction."
+  ]
+}

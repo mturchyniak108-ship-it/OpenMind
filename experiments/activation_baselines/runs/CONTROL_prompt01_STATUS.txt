@@ -1,0 +1,30 @@
+CONTROL ACTIVATION BASELINE STATUS
+
+Model: qwen2.5-3b-q4_k_m.gguf
+Layers: 36
+Embedding dimension: 2048
+Prompt tokens: 14
+Probe: openmind_activation_probe
+Backend: Vulkan
+
+Original:
+  lines = 1470
+  sha256 = a70685931f78f6c4e162f0c68d415394d0485a8229acc6882f36900306cfeab4
+
+Retest:
+  lines = 1470
+  sha256 = a6e08d106af52e019ba6312ce1cd4ba69f717effda8ceb6835bab1de90a50804
+
+Top-20 recurrence scan:
+  EXACT MATCH
+
+Layer-gap comparison:
+  33 common complete rows
+  0 numerical differences
+
+Known artifact:
+  Retest row 27 is split by asynchronous llama_context diagnostics.
+  This is an output-stream interleaving artifact, not an observed numerical
+  activation difference.
+
+CONTROL STATUS: PASS

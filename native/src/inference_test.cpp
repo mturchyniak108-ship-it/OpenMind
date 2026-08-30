@@ -235,6 +235,121 @@ int main(int argc, char** argv) {
     }
 
     /*
+     * Stateless micro-batch inference.
+     *
+     * Each prompt must produce an independent result while preserving
+     * the input ordering.
+     */
+    try {
+        const std::vector<std::string> prompts = {
+            "Say exactly: ALPHA",
+            "Say exactly: BRAVO",
+        };
+
+        const auto results =
+            engine.generate_batch(prompts);
+
+        check(results.size() == prompts.size(),
+              "batch returns one result per prompt");
+
+        if (results.size() == prompts.size()) {
+            check(!results[0].text.empty(),
+                  "batch result 0 generated text");
+
+            check(!results[1].text.empty(),
+                  "batch result 1 generated text");
+
+            check(results[0].metrics.generated_tokens > 0,
+                  "batch result 0 reports generated tokens");
+
+            check(results[1].metrics.generated_tokens > 0,
+                  "batch result 1 reports generated tokens");
+
+            check(results[0].metrics.prompt_tokens > 0,
+                  "batch result 0 reports prompt tokens");
+
+            check(results[1].metrics.prompt_tokens > 0,
+                  "batch result 1 reports prompt tokens");
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] stateless micro-batch inference: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
+     * A larger batch must preserve result ordering and remain usable.
+     */
+    try {
+        const std::vector<std::string> prompts = {
+            "Respond with ALPHA.",
+            "Respond with BRAVO.",
+            "Respond with CHARLIE.",
+        };
+
+        const auto results =
+            engine.generate_batch(prompts);
+
+        check(results.size() == prompts.size(),
+              "three-request batch preserves result count");
+
+        if (results.size() == prompts.size()) {
+            for (size_t i = 0; i < results.size(); ++i) {
+                check(!results[i].text.empty(),
+                      "three-request batch result is non-empty");
+
+                check(results[i].metrics.generated_tokens > 0,
+                      "three-request batch reports generated tokens");
+            }
+        }
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] three-request batch: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
+     * Empty batches and empty prompts must be rejected without
+     * corrupting the engine.
+     */
+    try {
+        bool rejected = false;
+
+        try {
+            (void)engine.generate_batch({});
+        } catch (const std::invalid_argument&) {
+            rejected = true;
+        }
+
+        check(rejected,
+              "empty inference batch rejected");
+
+        rejected = false;
+
+        try {
+            (void)engine.generate_batch({
+                "valid prompt",
+                "",
+            });
+        } catch (const std::invalid_argument&) {
+            rejected = true;
+        }
+
+        check(rejected,
+              "empty prompt inside batch rejected");
+
+        check(engine.loaded(),
+              "engine remains loaded after batch validation errors");
+    } catch (const std::exception& e) {
+        std::cerr
+            << "[FAIL] batch validation: "
+            << e.what() << "\n";
+        ++failures;
+    }
+
+    /*
      * Session persistence.
      */
     try {
@@ -735,12 +850,15 @@ int main(int argc, char** argv) {
 
     if (failures != 0) {
         std::cerr
+            << "OPENMIND NATIVE API TEST: FAILURE\n"
+            << "Tests failed: "
             << failures
-            << " test(s) failed.\n";
+            << "\n";
         return 1;
     }
 
     std::cout
+        << "OPENMIND NATIVE API TEST: SUCCESS\n"
         << "All native API tests passed.\n";
 
     return 0;

@@ -1,0 +1,191 @@
+{
+  "global": {
+    "empirical_p": 9.999000099990002e-05,
+    "exceedances": 0,
+    "null_mean": 5.116205759936081e-05,
+    "null_sd": 0.005176207435333245,
+    "observed_mean_gap_adjusted_enrichment": 0.1134618683294524,
+    "primary_pass": true
+  },
+  "global_draws": 10000,
+  "global_seed": 17331,
+  "positive_splits": 8,
+  "primary_gate": "PASS",
+  "protocol_sha256": "8275d0bd85233a1d2efa02708406a92a2bb1e44832590e401291114cf5ca4065",
+  "schema": "openmind.qwen2048_lopo_gap_matched.result.v1",
+  "split_draws": 10000,
+  "split_seed_base": 7331,
+  "splits": [
+    {
+      "deterministic_gap_baseline": 0.4657746634124912,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.1113700838727606,
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "heldout_prompt": "P01",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.46603512616362985,
+      "matched_random_sd": 0.01570039077701331,
+      "observed_selected_mean": 0.5771447472852518,
+      "selection_hash": "34a762393c7521845a95953507f074ce186547320ae0d3e7a49378464f2c3c06",
+      "split": "LOPO_P01"
+    },
+    {
+      "deterministic_gap_baseline": 0.4459157605713233,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.10927221138817256,
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "heldout_prompt": "P02",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.44585226107952347,
+      "matched_random_sd": 0.014729928736362198,
+      "observed_selected_mean": 0.5551879719594959,
+      "selection_hash": "7c0dcdad73d2a3a96d54b7dfc9a2e5eb198f71f032342d0fa0199f518655b010",
+      "split": "LOPO_P02"
+    },
+    {
+      "deterministic_gap_baseline": 0.4292928015733642,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11792609514772506,
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "heldout_prompt": "P03",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.429122342260052,
+      "matched_random_sd": 0.01506034581818928,
+      "observed_selected_mean": 0.5472188967210893,
+      "selection_hash": "c6de9f756c2cb10d0a461dec2597ce0ebce328c0407eeb331edd21aa1a189db6",
+      "split": "LOPO_P03"
+    },
+    {
+      "deterministic_gap_baseline": 0.4324781706942431,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.09758260662981444,
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 2,
+        "6": 1
+      },
+      "heldout_prompt": "P04",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.43226158992697855,
+      "matched_random_sd": 0.013322026295670565,
+      "observed_selected_mean": 0.5300607773240575,
+      "selection_hash": "d3661196a8ebbfb8f156d495a2a1d7a6ff5dda5c16a55d73aaea8717cb5c668b",
+      "split": "LOPO_P04"
+    },
+    {
+      "deterministic_gap_baseline": 0.4403233020713242,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11054922748234475,
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "heldout_prompt": "P05",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4402406184878042,
+      "matched_random_sd": 0.014372488490837127,
+      "observed_selected_mean": 0.5508725295536689,
+      "selection_hash": "a78b13174d34179fa2e693e8a6f94fe24f81bdfae1d3722b568a35a68bcbec4b",
+      "split": "LOPO_P05"
+    },
+    {
+      "deterministic_gap_baseline": 0.4101770794677881,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11229435477986477,
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 7,
+        "5": 1,
+        "6": 1
+      },
+      "heldout_prompt": "P06",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.41017095027542516,
+      "matched_random_sd": 0.013235518927120788,
+      "observed_selected_mean": 0.5224714342476529,
+      "selection_hash": "a314cde6f03ef90b6edc58aa7b3adb2235c3297e20287a49f71f3bb6a43426e8",
+      "split": "LOPO_P06"
+    },
+    {
+      "deterministic_gap_baseline": 0.40082754818985206,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.13189242970224663,
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 7,
+        "5": 1,
+        "6": 1
+      },
+      "heldout_prompt": "P07",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.400879689549213,
+      "matched_random_sd": 0.014946667485072285,
+      "observed_selected_mean": 0.5327199778920987,
+      "selection_hash": "71c3aa02472c61a48ea5984728e20a3a3d182805305e686803ef6978eff6f6d7",
+      "split": "LOPO_P07"
+    },
+    {
+      "deterministic_gap_baseline": 0.42084532468033714,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11680793763269043,
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "heldout_prompt": "P08",
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4208039108604656,
+      "matched_random_sd": 0.014840046856401046,
+      "observed_selected_mean": 0.5376532623130276,
+      "selection_hash": "fd4c64540d7308985d8f062a3be0f7a5cff26dec22d6b5b95d9019e9fa6f02d2",
+      "split": "LOPO_P08"
+    }
+  ],
+  "strong_all_prompt_count": 8
+}

@@ -1,0 +1,93 @@
+{
+  "artifacts": {
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/activation_vectors.csv": {
+      "bytes": 925762,
+      "sha256": "5de6f1af74a0c96abdaa739d59e3fa2f89eaa283f0562b53daf1b8bdf64f3a8c"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/activation_vectors_all_tokens.csv": {
+      "bytes": 15329079,
+      "sha256": "be357324171eeb6b825677c088da6c48081d8957fb724effc9923fdb0bf77255"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/probe.stderr": {
+      "bytes": 69878,
+      "sha256": "797e25ed827369135c9ba2abcd447dad0a317b8f645612e3f42f877f92a3363e"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/probe.stdout": {
+      "bytes": 6116,
+      "sha256": "69f890bd262dbe666e4bd79fa3e6f20a0f65a9846606d236d06fa9093d45b5f1"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/run_audit.txt": {
+      "bytes": 681,
+      "sha256": "d98cd6a0249afab2e89271df111f9d428f9dd8f093d42659e7b9c785c84167f1"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R03/thermal_governor.txt": {
+      "bytes": 223,
+      "sha256": "81e5fadebd7761c63afd211860a2342ea895ac7fc6bfefe763cd706cf7fa8b0a"
+    }
+  },
+  "capture_geometry": {
+    "complete_trajectories": 17,
+    "duplicate_layer_token_rows": 0,
+    "embedding_dimension": 2048,
+    "expected_rows": 612,
+    "final_vs_all_token_max_difference": 0.0,
+    "finite_vector_check": "PASS",
+    "layer_range": [
+      0,
+      35
+    ],
+    "layers": 36,
+    "rows": 612,
+    "token_index_zero_captured": true,
+    "token_index_zero_excluded_from_analysis": true,
+    "token_range": [
+      0,
+      16
+    ],
+    "tokens": 17
+  },
+  "execution": {
+    "capture_validation": "PASS",
+    "end": "2026-08-27T11:53:31-07:00",
+    "process_cleanup": "PASS",
+    "start": "2026-08-27T11:53:26-07:00",
+    "thermal_supervision": "PASS",
+    "wall_seconds": 4.76942,
+    "worker_exit": 0
+  },
+  "frozen_contracts": {
+    "capture_runtime_sha256": "18fb725e909bc3403f317c896772a011e77b97fbcf6f3052b2632a7e54f86e3f",
+    "capture_tool_sha256": "08916a959a91c44d881087da9118278694f2cc063cb608c1e30f047144408793",
+    "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "predecessor_artifacts_verified_before_capture": true,
+  "predecessor_captures": [
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R01_capture_v1.json",
+      "manifest_sha256": "866c3b0c18bc7ae5792ce534624c28caf5ce01fc6f05536eb4f730ba28e4659b",
+      "prompt_id": "R01"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R02_capture_v1.json",
+      "manifest_sha256": "409d40c2de0952519de74d975b5bb78bb3c4fc43c7af080579b0b9d18d004b0f",
+      "prompt_id": "R02"
+    }
+  ],
+  "prompt": {
+    "domain": "software and data reasoning",
+    "prompt": "A database query returns duplicate rows after two tables are joined; identify a likely cause.",
+    "prompt_id": "R03"
+  },
+  "prompt_id": "R03",
+  "prompt_sha256": "daa69ab5263a304bbcf3180a8792806c53c2786c764d2fad957ee24a5659ccac",
+  "schema": "openmind.qwen2048_external_prompt_replication.capture.v1",
+  "scientific_boundary": [
+    "R01 through R03 activation captures are now observed.",
+    "No R04 through R08 activation has been captured.",
+    "No prospective replication recurrence or gap-matched statistic has been calculated.",
+    "The frozen predecessor-derived reference topology has not been modified or retrained.",
+    "R01 and R02 artifacts were reverified before R03 capture.",
+    "R03 must remain byte-identical before R04 capture."
+  ],
+  "status": "CAPTURE_VALIDATED"
+}

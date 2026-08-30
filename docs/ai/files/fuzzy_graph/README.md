@@ -2,7 +2,19 @@
 
 ## Status
 
-EXPERIMENTAL / RESEARCH ONLY
+**EXPERIMENTAL / RESEARCH ONLY — IMPLEMENTED PROTOTYPE**
+
+The current prototype provides:
+
+- deterministic weighted node vectors
+- fuzzy relationship membership
+- experimental predictive path scoring
+- canonical-path reuse
+- bounded experimental scores
+- explicit isolation from canonical Truth Graph state
+
+The implementation is not authoritative and must not modify canonical
+truth, provenance, or canonical path scores.
 
 This subsystem must not become authoritative over the OpenMind Truth Graph.
 
@@ -50,6 +62,26 @@ Answer / Hypothesis
 
 The ML/fuzzy layer produces candidates and hypotheses.
 It does not create truth merely because a score is high.
+
+## Current Prototype
+
+The implemented prototype derives experimental signals from canonical graph
+state.
+
+`FuzzyVectorGraph` currently derives:
+
+- node vectors from TruthNode confidence and outgoing relationships
+- relationship membership from edge weight and endpoint confidence
+- bounded predictive relationship weights
+
+`PredictivePathScorer` currently evaluates canonical graph paths using:
+
+- mean relationship weight
+- mean fuzzy relationship membership
+- path cost penalty
+- deterministic tie-breaking
+
+These calculations are experimental signals only.
 
 ## Fuzzy Model
 
@@ -112,6 +144,21 @@ Each experiment must define:
 10. Limitations
 
 No feature graduates from experimental status without measurable and reproducible evidence.
+
+## Current Research Gaps
+
+The prototype does **not** yet establish:
+
+- learned ML weighting
+- model training or calibration
+- contradiction-aware scoring
+- provenance-aware predictive weighting
+- vector persistence
+- embedding-model integration
+- multilingual evaluation
+- benchmark evidence demonstrating retrieval improvement
+
+These remain research tasks rather than implemented capabilities.
 
 ## Required Comparisons
 

@@ -47,6 +47,16 @@ public:
     bool load();
     InferenceResult generate(const std::string& prompt);
 
+    /*
+     * Stateless micro-batched inference.
+     *
+     * Each prompt is an independent request. Prompt evaluation and
+     * autoregressive decode may be combined into shared llama.cpp
+     * batches while preserving independent sampler state.
+     */
+    std::vector<InferenceResult> generate_batch(
+        const std::vector<std::string>& prompts);
+
     bool loaded() const noexcept;
 
 private:

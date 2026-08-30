@@ -1,0 +1,21 @@
+{
+  "name": "openmind_truth_graph_adversarial",
+  "experimental": true,
+  "results": [
+    {
+      "name": "multiple_competing_paths",
+      "candidate_paths": 5,
+      "agreement": true,
+      "canonical_path": [
+        "PROJECT",
+        "ALT_C",
+        "EVIDENCE"
+      ],
+      "predictive_path": [
+        "PROJECT",
+        "ALT_C",
+        "EVIDENCE"
+      ]
+    }
+  ]
+}

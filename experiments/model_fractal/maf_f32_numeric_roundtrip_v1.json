@@ -1,0 +1,37 @@
+{
+  "schema": "openmind.maf_f32_numeric_roundtrip.v1",
+  "decode": "IEEE-754 little-endian F32 -> Python float",
+  "encode": "Python float -> IEEE-754 little-endian F32",
+  "target_count": 2,
+  "element_count": 3072,
+  "payload_bytes": 12288,
+  "results": [
+    {
+      "name": "output_norm.weight",
+      "elements": 1536,
+      "span_bytes": 6144,
+      "finite_count": 1536,
+      "minimum": -0.08203125,
+      "maximum": 11.8125,
+      "mean": 4.62272451321284,
+      "source_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "reencoded_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "byte_equal": true,
+      "pass": true
+    },
+    {
+      "name": "blk.0.attn_norm.weight",
+      "elements": 1536,
+      "span_bytes": 6144,
+      "finite_count": 1536,
+      "minimum": -0.464111328125,
+      "maximum": 1.7431640625,
+      "mean": 0.6402284304300944,
+      "source_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "reencoded_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "byte_equal": true,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,43 @@
+
+===== V3 FINAL STATE =====
+V3 already stopped
+
+===== V3 OUTPUT BEFORE STOP =====
+0 0 results/validated/representation_recurrence_v1/topology_permutation_v3.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  results/validated/representation_recurrence_v1/topology_permutation_v3.txt
+0 0 results/validated/representation_recurrence_v1/topology_permutation_v3.stderr
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  results/validated/representation_recurrence_v1/topology_permutation_v3.stderr
+
+===== PRESERVE V3 SOURCE =====
+66f496ffeafff5313d5d479303e5e81d61822e2f1609a9f970e0e4385eb80930  experiments/model_fractal/recurrence_topology_v3.py
+backup: experiments/model_fractal/recurrence_topology_v3.py.before_runtime_fix
+
+===== STOP V3 =====
+
+===== STOP V3 SUPERVISOR =====
+supervisor PID: 6460
+
+===== STOP VERIFICATION =====
+V3 process          : STOPPED — PASS
+V3 supervisor       : STOPPED — PASS
+
+===== LEFTOVER V3 PROCESSES =====
+none
+
+===== DEVICE AFTER V3 STOP =====
+ 02:51:14 up 10 days,  3:38,  load average: 3.71, 4.63, 4.83
+               total        used        free      shared  buff/cache   available
+Mem:            10Gi       7.2Gi       309Mi        59Mi       3.4Gi       4.3Gi
+Swap:           11Gi       3.5Gi       8.5Gi
+
+===== FROZEN FOREST CHECK =====
+frozen Forest        : PRESENT
+da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902  results/forest_qwen25_3b_v1/forest_qwen25_3b_v1.bin
+65a7745eaed0d5773539efe351c6a191af963126f4278f0afd695fd06a95c70e  results/forest_qwen25_3b_v1/forest_qwen25_3b_v1_manifest.json
+
+===== DECISION =====
+V3 experiment       : intentionally terminated
+V3 evidence         : preserved
+V3 source           : backed up before fix
+Forest Qwen V1      : preserved
+next                : diagnose V3 complexity, then V9A live shadow

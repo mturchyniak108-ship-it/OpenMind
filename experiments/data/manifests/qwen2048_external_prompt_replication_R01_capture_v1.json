@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/activation_vectors.csv": {
+      "bytes": 925320,
+      "sha256": "a821202ba43b47fc44136023b29d89d0e6477f7872af9293c6cb8d264b2b8b60"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/activation_vectors_all_tokens.csv": {
+      "bytes": 16234634,
+      "sha256": "c5f03d2af30ba250354b77deca469b320b3b9096f221323db6f14db9cf446b27"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/probe.stderr": {
+      "bytes": 69879,
+      "sha256": "d659ec5684ae01a6fdb2a30cbdfb693dc22519f583c3265ccfe3b595124f9237"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/probe.stdout": {
+      "bytes": 6118,
+      "sha256": "1f234e62dc80a39bcaa6f771b4e355502f43028ce8e4057a25401d71eafa3de1"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/run_audit.txt": {
+      "bytes": 681,
+      "sha256": "cc03d13ed4d637828dcce4e0b9926f1312c53cac248a7312195c9ff93b632419"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R01/thermal_governor.txt": {
+      "bytes": 220,
+      "sha256": "45c6bb5c3657ddbc842d05276d88c383fb1e4e1f6d96ded318e085db3dbdff55"
+    }
+  },
+  "capture_geometry": {
+    "complete_trajectories": 18,
+    "duplicate_layer_token_rows": 0,
+    "embedding_dimension": 2048,
+    "expected_rows": 648,
+    "final_vs_all_token_max_difference": 0.0,
+    "finite_vector_check": "PASS",
+    "layer_range": [
+      0,
+      35
+    ],
+    "layers": 36,
+    "rows": 648,
+    "token_index_zero_captured": true,
+    "token_index_zero_excluded_from_analysis": true,
+    "token_range": [
+      0,
+      17
+    ],
+    "tokens": 18
+  },
+  "execution": {
+    "capture_validation": "PASS",
+    "end": "2026-08-27T04:28:20-07:00",
+    "process_cleanup": "PASS",
+    "start": "2026-08-27T04:28:13-07:00",
+    "thermal_supervision": "PASS",
+    "wall_seconds": 6.504455,
+    "worker_exit": 0
+  },
+  "frozen_contracts": {
+    "capture_runtime_manifest": {
+      "path": "experiments/data/manifests/qwen2048_external_capture_runtime_v1.json",
+      "sha256": "18fb725e909bc3403f317c896772a011e77b97fbcf6f3052b2632a7e54f86e3f"
+    },
+    "capture_tool_manifest": {
+      "path": "experiments/data/manifests/qwen2048_external_capture_tool_v1.json",
+      "sha256": "08916a959a91c44d881087da9118278694f2cc063cb608c1e30f047144408793"
+    },
+    "protocol": {
+      "path": "experiments/data/manifests/qwen2048_external_prompt_replication_v1_protocol.json",
+      "sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+    }
+  },
+  "prompt": {
+    "domain": "visual-spatial narrative",
+    "prompt": "At dusk, six paper lanterns reflected in a puddle beside the empty train platform.",
+    "prompt_id": "R01"
+  },
+  "prompt_id": "R01",
+  "prompt_sha256": "3bdff0444c8cde0695621d0e78c008328934ac4effd304d38babf8786a35eaa5",
+  "schema": "openmind.qwen2048_external_prompt_replication.capture.v1",
+  "scientific_boundary": [
+    "R01 activation capture is now observed.",
+    "No R02 through R08 activation has been captured.",
+    "No recurrence or gap-matched replication statistic was calculated while validating R01 geometry.",
+    "The frozen reference topology was not retrained or modified.",
+    "R01 must remain byte-identical before the experiment proceeds to R02."
+  ],
+  "scientific_role": "first prospectively captured external replication prompt",
+  "status": "CAPTURE_VALIDATED"
+}

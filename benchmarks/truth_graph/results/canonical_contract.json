@@ -1,0 +1,48 @@
+{
+  "name": "openmind_canonical_truth_contract",
+  "status": "canonical",
+  "experimental": false,
+  "pipeline": [
+    "artifact",
+    "ingestion",
+    "evidence",
+    "artifact_evidence_binding",
+    "provenance",
+    "truth_graph",
+    "truth_trace",
+    "canonical_score"
+  ],
+  "invariants": {
+    "truth_graph_is_authoritative": true,
+    "predictive_layers_are_experimental": true,
+    "evidence_does_not_modify_graph": true,
+    "provenance_does_not_modify_score": true,
+    "trace_is_deterministic": true,
+    "score_is_deterministic": true
+  },
+  "canonical_cases": [
+    {
+      "start": "PROJECT",
+      "end": "EVIDENCE",
+      "path": [
+        "PROJECT",
+        "AGENT",
+        "DOCS",
+        "ENGINE",
+        "TEST",
+        "EVIDENCE"
+      ],
+      "score": 0.8758
+    },
+    {
+      "start": "ENGINE",
+      "end": "EVIDENCE",
+      "path": [
+        "ENGINE",
+        "TEST",
+        "EVIDENCE"
+      ],
+      "score": 0.94075
+    }
+  ]
+}

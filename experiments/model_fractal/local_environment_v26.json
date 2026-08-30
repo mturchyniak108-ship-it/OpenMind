@@ -1,0 +1,21 @@
+{
+  "bond_count": 76,
+  "bond_threshold": 2.0893456195429265,
+  "classification": "WEAK_PERIODIC_LOCAL_ENVIRONMENT",
+  "empirical_p": 0.0004997501249375312,
+  "layer_count": 28,
+  "mean_degree": 5.428571428571429,
+  "null_mean": 0.31779556213736804,
+  "null_std": 0.06776858250682849,
+  "null_trials": 2000,
+  "observed_angle_recurrence": 0.49904535814150536,
+  "observed_bond_recurrence": 0.6928387190749982,
+  "observed_degree_recurrence": 0.15,
+  "observed_environment_similarity": 0.6101825418296378,
+  "period": 8,
+  "random_seed": 2601,
+  "schema": "openmind.local_environment.v26",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "v24_source": "experiments/model_fractal/spatial_null_v24.json",
+  "z_score": 4.314491595907415
+}

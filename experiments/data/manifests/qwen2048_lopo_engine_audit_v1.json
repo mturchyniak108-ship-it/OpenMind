@@ -1,0 +1,155 @@
+{
+  "checks": {
+    "heldout_selection_leakage": {
+      "splits_tested": 8,
+      "status": "PASS"
+    },
+    "observed_direct_vs_vectorized": {
+      "comparisons": 128,
+      "maximum_abs_difference": 1.1102230246251565e-15,
+      "status": "PASS"
+    },
+    "permutation_explicit_vs_algebraic": {
+      "maximum_abs_difference": 1.6653345369377348e-16,
+      "pair_permutation_checks": 256,
+      "status": "PASS"
+    },
+    "smoke_split_contract": {
+      "splits_checked": 8,
+      "status": "PASS"
+    }
+  },
+  "hashes": {
+    "canonical": "7f7e4d2079f4808fb9492a6fb81271d4a8d740523eb0426523377354dd390cca",
+    "corpus": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8",
+    "engine": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7",
+    "protocol": "2998b68c4b08f850487db3f82478c9e6ee4615c10795866da17367899ec2dd81",
+    "smoke": "2a0df68868377a40948495775846cc22f38572ff009b470cbd3c720ab7317271"
+  },
+  "schema": "openmind.qwen2048_lopo_engine_audit.v1",
+  "scientific_boundary": [
+    "This audit does not constitute the preregistered final experiment.",
+    "The 100-permutation smoke remains engineering evidence only.",
+    "No endpoint or threshold was changed.",
+    "The final run remains fixed at 1000 permutations per held-out split."
+  ],
+  "selected_gap_profiles": {
+    "P01": {
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.26,
+      "min_gap": 1
+    },
+    "P02": {
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.26,
+      "min_gap": 1
+    },
+    "P03": {
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "max_gap": 7,
+      "mean_gap": 2.26,
+      "min_gap": 1
+    },
+    "P04": {
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 2,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.22,
+      "min_gap": 1
+    },
+    "P05": {
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.26,
+      "min_gap": 1
+    },
+    "P06": {
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 7,
+        "5": 1,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.2,
+      "min_gap": 1
+    },
+    "P07": {
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 7,
+        "5": 1,
+        "6": 1
+      },
+      "max_gap": 6,
+      "mean_gap": 2.2,
+      "min_gap": 1
+    },
+    "P08": {
+      "gap_counts": {
+        "1": 19,
+        "2": 14,
+        "3": 8,
+        "4": 6,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "max_gap": 7,
+      "mean_gap": 2.26,
+      "min_gap": 1
+    }
+  },
+  "selection_hashes": {
+    "P01": "34a762393c7521845a95953507f074ce186547320ae0d3e7a49378464f2c3c06",
+    "P02": "7c0dcdad73d2a3a96d54b7dfc9a2e5eb198f71f032342d0fa0199f518655b010",
+    "P03": "c6de9f756c2cb10d0a461dec2597ce0ebce328c0407eeb331edd21aa1a189db6",
+    "P04": "d3661196a8ebbfb8f156d495a2a1d7a6ff5dda5c16a55d73aaea8717cb5c668b",
+    "P05": "a78b13174d34179fa2e693e8a6f94fe24f81bdfae1d3722b568a35a68bcbec4b",
+    "P06": "a314cde6f03ef90b6edc58aa7b3adb2235c3297e20287a49f71f3bb6a43426e8",
+    "P07": "71c3aa02472c61a48ea5984728e20a3a3d182805305e686803ef6978eff6f6d7",
+    "P08": "fd4c64540d7308985d8f062a3be0f7a5cff26dec22d6b5b95d9019e9fa6f02d2"
+  },
+  "status": "ENGINE_AUDIT_PASS"
+}

@@ -1,0 +1,32 @@
+OPENMIND / QWEN-2048 LOPO RECURRENCE V1
+DEFINITIVE SCIENTIFIC VALIDATION
+
+validation             : PASS
+preregistered protocol : VERIFIED
+canonical corpus       : VERIFIED
+audited engine         : VERIFIED
+LOPO splits            : 8
+split passes           : 8 / 8
+permutations/split     : 1000
+total null draws       : 8000
+zero exceedances       : 8 / 8
+empirical p floor      : 0.000999000999
+mean selected delta    : +0.544166
+mean null delta        : -0.000804
+mean empirical z       : +11.099503
+mean train/test rho    : +0.992956
+mean enrichment        : +0.249533
+selected positive      : 8 / 8 splits at 1.000
+stderr                 : CLEAN
+thermal supervision    : VERIFIED
+
+SUPPORTED CLAIM:
+Prompt-generalizing same-token representation recurrence
+is present in the training-selected short-range layer topology.
+
+NOT YET SUPPORTED:
+That the selected topology contains information beyond
+generic layer-distance decay.
+
+NEXT CONTROL:
+Preregister and run a gap-matched held-out baseline.

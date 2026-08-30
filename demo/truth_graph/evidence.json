@@ -1,0 +1,20 @@
+[
+  {
+    "id": "E_TEST_EVIDENCE",
+    "source": "truth_graph_demo",
+    "claim": "TEST produces EVIDENCE",
+    "confidence": 0.96
+  },
+  {
+    "id": "E_ENGINE_TEST",
+    "source": "truth_graph_demo",
+    "claim": "ENGINE is validated by TEST",
+    "confidence": 0.97
+  },
+  {
+    "id": "E_PROJECT_AGENT",
+    "source": "truth_graph_demo",
+    "claim": "PROJECT is documented for AGENT",
+    "confidence": 0.95
+  }
+]

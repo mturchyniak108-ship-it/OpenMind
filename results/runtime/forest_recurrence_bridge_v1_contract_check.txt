@@ -1,0 +1,6 @@
+contract       : PASS
+draws          : 10000
+seed           : 48311
+corpus prompts : 8
+Forest groups  : 32
+Forest dims    : 2048

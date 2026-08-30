@@ -1,0 +1,62 @@
+========================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V2 — FAIR BLOCK ADDRESSABILITY
+========================================================================================================================
+
+DATASET
+------------------------------------------------------------------------------------------------------------------------
+vectors                    : 364
+dimensions                 : 1536
+tree nodes                 : 341
+terminal leaves            : 256
+block/wedge size           : 64
+blocks per vector          : 24
+
+PAYLOAD
+------------------------------------------------------------------------------------------------------------------------
+flat FP32 bytes            : 2236416
+shared encoded payload     : 1644672
+payload saving             : 0.264594780
+
+FAIR TOPOLOGY METADATA
+------------------------------------------------------------------------------------------------------------------------
+Lodgepole metadata         : 75280
+Lodgepole total            : 1719952
+Orange metadata            : 74256
+Orange total               : 1718928
+Orange minus Lodgepole     : -1024
+
+UNCACHED ACCESS
+------------------------------------------------------------------------------------------------------------------------
+request    PINE_FULL    PINE_BLOCK   ORANGE_WEDGE  orange/pineblock
+   0.25    20272.000    18904.000     18900.000      0.999788405
+   0.50    20272.000    19360.000     19356.000      0.999793388
+   0.75    20272.000    19816.000     19812.000      0.999798143
+   1.00    20272.000    20272.000     20268.000      0.999802684
+
+CACHED SHARED-PATH ACCESS
+------------------------------------------------------------------------------------------------------------------------
+request    PINE_CACHED   ORANGE_CACHED   orange/pine   difference
+   0.25       472.000         468.000  0.991525424      -4.000
+   0.50       928.000         924.000  0.995689655      -4.000
+   0.75      1384.000        1380.000  0.997109827      -4.000
+   1.00      1840.000        1836.000  0.997826087      -4.000
+
+PARTIAL RECONSTRUCTION FIDELITY
+------------------------------------------------------------------------------------------------------------------------
+request   mean_cosine   min_cosine    mean_rel_l2   max_rel_l2
+   0.25   0.999980156   0.994579100   0.002354921   0.104021275
+   0.50   0.999973516   0.992050471   0.002304358   0.125899803
+   0.75   0.999975088   0.992527274   0.002296140   0.122211577
+   1.00   0.999970500   0.991610044   0.002462710   0.129729752
+
+FAIRNESS RESULT
+------------------------------------------------------------------------------------------------------------------------
+mean Orange/Pine fair ratio : 0.999795654855
+result                      : STRUCTURAL ACCESS PARITY
+
+INTERPRETATION
+------------------------------------------------------------------------------------------------------------------------
+PINE_BLOCK and ORANGE_WEDGE receive equivalent 64-component terminal addressability.
+If their access costs converge, Forest V1's Orange advantage came primarily from access granularity.
+Orange should only become a distinct architecture if future wedges provide useful organization that ordinary Pine blocks cannot reproduce.
+Possible next test: non-contiguous or learned wedges derived from representation structure.

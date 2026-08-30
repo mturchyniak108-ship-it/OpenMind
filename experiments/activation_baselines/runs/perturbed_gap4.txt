@@ -1,0 +1,24 @@
+Top 20 pairs with layer gap >= 4:
+L17 <-> L21 | gap=4 | cosine=0.941980118 | distance=25.125898
+L21 <-> L25 | gap=4 | cosine=0.940115886 | distance=28.948306
+L20 <-> L24 | gap=4 | cosine=0.939091579 | distance=28.263229
+L18 <-> L22 | gap=4 | cosine=0.933902390 | distance=27.165531
+L22 <-> L26 | gap=4 | cosine=0.933306852 | distance=31.301699
+L19 <-> L23 | gap=4 | cosine=0.931939855 | distance=26.255476
+L16 <-> L20 | gap=4 | cosine=0.930117785 | distance=25.840961
+L17 <-> L22 | gap=5 | cosine=0.929591248 | distance=27.357385
+L19 <-> L24 | gap=5 | cosine=0.927935413 | distance=29.926722
+L20 <-> L25 | gap=5 | cosine=0.926784862 | distance=32.721848
+L24 <-> L28 | gap=4 | cosine=0.926400840 | distance=50.289330
+L23 <-> L27 | gap=4 | cosine=0.926015376 | distance=41.173796
+L21 <-> L26 | gap=5 | cosine=0.923742169 | distance=33.156344
+L22 <-> L27 | gap=5 | cosine=0.923342695 | distance=40.266585
+L16 <-> L21 | gap=5 | cosine=0.922435609 | distance=30.287290
+L18 <-> L23 | gap=5 | cosine=0.922374699 | distance=27.384679
+L25 <-> L29 | gap=4 | cosine=0.917043675 | distance=61.837164
+L21 <-> L27 | gap=6 | cosine=0.916668037 | distance=41.393588
+L19 <-> L25 | gap=6 | cosine=0.915318603 | distance=34.085653
+L15 <-> L20 | gap=5 | cosine=0.915218841 | distance=28.535582
+
+============================================================
+ ACTIVATION PROBE COMPLETE

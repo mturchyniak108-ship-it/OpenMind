@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v3/forest_topology_v3.txt",
+      "sha256": "8ab4895af399f327d8ee5d74c6fb8f19fcd64769101e6817cdf45155928937e8"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v3.py",
+      "sha256": "9e1ee04c98728cf4fad3153bbc34ecf81debb2d719c56bdd082e3d8e0ac3fadc"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v3/forest_topology_v3.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "decision": {
+    "partial_access_tests": 4,
+    "partial_access_wins": 4,
+    "result": "correlated_wedges_promising"
+  },
+  "experiment": {
+    "dimensions": 1536,
+    "group_count": 24,
+    "group_size": 64,
+    "name": "Forest Topology V3",
+    "purpose": "Test whether correlation-derived non-contiguous Orange wedges concentrate terminal residual information better than contiguous Pine groups.",
+    "vectors": 364
+  },
+  "group_structure": {
+    "orange_global_map_bytes": 3072,
+    "orange_mean_abs_correlation": 0.355298487,
+    "orange_pine_ratio": 1.651427675,
+    "orange_random_ratio": 1.643625513,
+    "pine_mean_abs_correlation": 0.21514626,
+    "random_mean_abs_correlation": 0.216167542
+  },
+  "limitations": [
+    "The same residual population was used for wedge construction and evaluation.",
+    "Per-item group selection is an oracle using actual residual energy.",
+    "Very low worst-case partial cosine values remain for some representations.",
+    "No quantization, production routing, serialization, or wall-clock retrieval is tested."
+  ],
+  "next_gate": {
+    "controls": [
+      "PINE_CONTIGUOUS",
+      "RANDOM_NONCONTIGUOUS",
+      "ORANGE_TRAINED_CORRELATED"
+    ],
+    "experiment": "Forest Topology V4",
+    "hypothesis": "Correlation-derived Orange wedges learned on training residuals retain their information-concentration advantage on unseen residuals.",
+    "protocol": [
+      "split residuals into deterministic train/test folds",
+      "learn Orange grouping from training residuals only",
+      "freeze grouping before evaluation",
+      "evaluate held-out residual energy concentration",
+      "retain oracle group selection for this gate only"
+    ]
+  },
+  "orange_vs_pine": {
+    "0.125": {
+      "cosine_delta": 0.004014923,
+      "energy_ratio": 1.068838665,
+      "relative_l2_ratio": 0.948519443
+    },
+    "0.250": {
+      "cosine_delta": 0.004596687,
+      "energy_ratio": 1.066704207,
+      "relative_l2_ratio": 0.919287654
+    },
+    "0.500": {
+      "cosine_delta": 0.003620429,
+      "energy_ratio": 1.043007858,
+      "relative_l2_ratio": 0.881960002
+    },
+    "0.750": {
+      "cosine_delta": 0.001813702,
+      "energy_ratio": 1.01914398,
+      "relative_l2_ratio": 0.867473451
+    }
+  },
+  "schema": "openmind.forest_topology.v3",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Correlation-derived non-contiguous groups have substantially higher within-group correlation than contiguous Pine groups.",
+    "Orange captures more terminal residual energy than Pine at every tested partial-access level.",
+    "Orange also beats deterministic random non-contiguous grouping.",
+    "The Orange advantage is therefore associated with learned representation structure rather than non-contiguity alone."
+  ]
+}
