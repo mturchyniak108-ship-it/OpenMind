@@ -63,3 +63,31 @@ Any **new** whitespace exception blocks future mirror publication.
 This research branch does not modify `main`. Stable documentation or
 implementation should be promoted later through a separate integration
 branch/review after its scientific dependency gates are satisfied.
+
+## Download frozen reference evidence
+
+The frozen V1.2 benchmark payload is available as a GitHub Release asset so
+the exact reference evidence can be inspected without placing the 308 MiB raw
+JSON object in normal Git history.
+
+- Release: `openmind-maf-segment-reader-benchmark-v1.2-artifact`
+- Release URL: https://github.com/mturchyniak108-ship-it/OpenMind/releases/tag/openmind-maf-segment-reader-benchmark-v1.2-artifact
+- Release target commit: `5c50452b200e78f0864fa72e2e5cf0c78bde1c55`
+- Compressed asset: `maf_segment_reader_benchmark_v1_2.json.gz`
+- Compressed bytes: `4546962`
+- Compressed SHA256: `9bf27fcefbed59d8f372dd18e0b31b547f3ba8fd94556ea9f4b6fbc729f12fc2`
+- Frozen raw bytes after decompression: `323334664`
+- Frozen raw SHA256 after decompression: `44b15ba5a02492f9a7c79cda3120c0cb4b6b398201eacb5f5249f38a281e5a54`
+
+GitHub CLI download:
+
+    gh release download openmind-maf-segment-reader-benchmark-v1.2-artifact --repo mturchyniak108-ship-it/OpenMind --pattern 'maf_segment_reader_benchmark_v1_2.json.gz'
+
+Verification:
+
+    sha256sum maf_segment_reader_benchmark_v1_2.json.gz
+    gzip -dc maf_segment_reader_benchmark_v1_2.json.gz > maf_segment_reader_benchmark_v1_2.json
+    sha256sum maf_segment_reader_benchmark_v1_2.json
+
+Researchers may download the frozen reference evidence or independently
+reproduce the benchmark using the frozen protocol and runner.

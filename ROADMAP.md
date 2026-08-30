@@ -1,5 +1,10 @@
 # OpenMind Roadmap
 
+<!-- OPENMIND:PUBLIC-MAF-STATUS-AUTHORITY:START -->
+> **Current MAF status authority:** see [`docs/research/MAF_CURRENT_STATUS.md`](docs/research/MAF_CURRENT_STATUS.md). Older phase-status passages below are retained as historical provenance and may describe earlier checkpoints.
+<!-- OPENMIND:PUBLIC-MAF-STATUS-AUTHORITY:END -->
+
+
 ## Mission
 
 OpenMind investigates whether useful AI computation can be performed through a local, native, representation-driven architecture that can reduce dependence on conventional token-by-token inference while preserving correctness and provenance.

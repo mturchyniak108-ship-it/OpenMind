@@ -75,6 +75,27 @@
     "Mainline integration is not implied by publication of this research branch."
   ],
   "publication_branch": "research/multidimensional-maf-public",
+  "publication_release": {
+    "compressed_asset": {
+      "byte_length": 4546962,
+      "download_url": "https://github.com/mturchyniak108-ship-it/OpenMind/releases/download/openmind-maf-segment-reader-benchmark-v1.2-artifact/maf_segment_reader_benchmark_v1_2.json.gz",
+      "filename": "maf_segment_reader_benchmark_v1_2.json.gz",
+      "github_digest": "sha256:9bf27fcefbed59d8f372dd18e0b31b547f3ba8fd94556ea9f4b6fbc729f12fc2",
+      "sha256": "9bf27fcefbed59d8f372dd18e0b31b547f3ba8fd94556ea9f4b6fbc729f12fc2"
+    },
+    "prerelease": true,
+    "purpose": "heavyweight frozen research evidence excluded from normal Git history",
+    "raw_reference": {
+      "byte_length": 323334664,
+      "path": "experiments/model_fractal/maf_segment_reader_benchmark_v1_2.json",
+      "sha256": "44b15ba5a02492f9a7c79cda3120c0cb4b6b398201eacb5f5249f38a281e5a54"
+    },
+    "release_id": 379214270,
+    "release_url": "https://github.com/mturchyniak108-ship-it/OpenMind/releases/tag/openmind-maf-segment-reader-benchmark-v1.2-artifact",
+    "tag": "openmind-maf-segment-reader-benchmark-v1.2-artifact",
+    "target_commit": "5c50452b200e78f0864fa72e2e5cf0c78bde1c55",
+    "verification": "GitHub asset digest matched the locally verified deterministic gzip; gzip round-trip matched the frozen raw SHA256 and byte length."
+  },
   "remote_main_base": "aa17ed954b07372d321b280b4bc7449869fefd52",
   "reproduction": {
     "candidate_runner_paths": [

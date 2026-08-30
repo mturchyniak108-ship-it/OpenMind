@@ -1,5 +1,10 @@
 # OpenMind
 
+<!-- OPENMIND:PUBLIC-MAF-STATUS-AUTHORITY:START -->
+> **Current MAF status authority:** see [`docs/research/MAF_CURRENT_STATUS.md`](docs/research/MAF_CURRENT_STATUS.md). Older phase-status passages below are retained as historical provenance and may describe earlier checkpoints.
+<!-- OPENMIND:PUBLIC-MAF-STATUS-AUTHORITY:END -->
+
+
 OpenMind is a local-first AI systems project focused on native inference, evidence-backed knowledge structures, reproducible model research, and experimental representation-driven computation.
 
 The long-term research question is whether useful AI computation can be performed with less dependence on conventional token-by-token inference while preserving correctness, provenance, and reproducibility.
