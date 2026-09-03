@@ -1,0 +1,1901 @@
+{
+  "schema": "openmind.geometry_scaling_component_localization_test.v43",
+  "source": "experiments/model_fractal/q8_parameter_field_v4_1.json",
+  "layer_count": 28,
+  "component_dimension": 12,
+  "breakpoint": 21,
+  "lag_range": {
+    "min": 1,
+    "max": 27
+  },
+  "null_runs": 2500,
+  "seed": 34038,
+  "paired_permutation_null": true,
+  "cosine_component_level": "not applicable: scalar RMS cosine distance is degenerate",
+  "geometries": {
+    "euclidean_rms": {
+      "attn_norm.weight": {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.7919557122231566,
+        "quadratic_delta_bic": 31.805685202967396,
+        "slope_before": 0.012741060245615523,
+        "slope_after": 0.001969170888713895,
+        "slope_change": -0.010771889356901628,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.5942874259226087,
+          "sd": 8.032242803332657,
+          "p95": 19.924042117822268,
+          "p99": 31.438597541916156,
+          "max": 63.64481786940082,
+          "exceedances": 2025,
+          "empirical_p": 0.8100759696121551
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.5715778087557974,
+          "sd": 6.096413507596953,
+          "p95": 13.95369677568383,
+          "p99": 23.870763339795804,
+          "max": 60.12232659522064,
+          "exceedances": 5,
+          "empirical_p": 0.0023990403838464614
+        }
+      },
+      "ffn_down.weight": {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 8.030613054455898,
+        "quadratic_delta_bic": 0.6254017465582251,
+        "slope_before": 7.533086488803584e-05,
+        "slope_after": -0.00019745181581420603,
+        "slope_change": -0.00027278268070224187,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.094409902254229,
+          "sd": 8.551424337486116,
+          "p95": 21.47699779891207,
+          "p99": 32.789659571955276,
+          "max": 60.98574530916949,
+          "exceedances": 611,
+          "empirical_p": 0.24470211915233905
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.7772248590214084,
+          "sd": 6.367373919918425,
+          "p95": 14.790980391383924,
+          "p99": 26.316683108411187,
+          "max": 43.19772873338292,
+          "exceedances": 999,
+          "empirical_p": 0.39984006397441024
+        }
+      },
+      "ffn_gate.weight": {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.371344748728802,
+        "quadratic_delta_bic": -0.055611681628874976,
+        "slope_before": 4.275377146729188e-05,
+        "slope_after": -2.8121387270715588e-05,
+        "slope_change": -7.087515873800747e-05,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.070938397782325,
+          "sd": 8.142245924918276,
+          "p95": 20.679227106137294,
+          "p99": 30.507955042983856,
+          "max": 57.89504492711944,
+          "exceedances": 1909,
+          "empirical_p": 0.7636945221911235
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.0893224144047693,
+          "sd": 6.507976027927398,
+          "p95": 16.05866629618528,
+          "p99": 25.571229068959905,
+          "max": 45.1931431706663,
+          "exceedances": 1200,
+          "empirical_p": 0.4802079168332667
+        }
+      },
+      "ffn_up.weight": {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -1.993881184912368,
+        "quadratic_delta_bic": -0.8540662749213652,
+        "slope_before": 0.00025323901509304253,
+        "slope_after": 7.878421028695323e-05,
+        "slope_change": -0.0001744548048060893,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.8029414469444993,
+          "sd": 8.6858416913675,
+          "p95": 21.476542983885196,
+          "p99": 34.4194642088773,
+          "max": 71.33023406558948,
+          "exceedances": 1731,
+          "empirical_p": 0.6925229908036785
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.9236183717756954,
+          "sd": 6.61067878027719,
+          "p95": 15.194580276962883,
+          "p99": 28.418276519148492,
+          "max": 48.639700161903306,
+          "exceedances": 1287,
+          "empirical_p": 0.5149940023990404
+        }
+      },
+      "ffn_norm.weight": {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 6.146380404653556,
+        "quadratic_delta_bic": 5.457826924494412,
+        "slope_before": 0.01677441259998204,
+        "slope_after": 0.11579563383844421,
+        "slope_change": 0.09902122123846217,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.740676327753689,
+          "sd": 8.024646263060278,
+          "p95": 20.293309676547118,
+          "p99": 31.686202645256163,
+          "max": 52.83351783763432,
+          "exceedances": 675,
+          "empirical_p": 0.27029188324670134
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.475424722862232,
+          "sd": 5.998513767414243,
+          "p95": 14.254043171144337,
+          "p99": 24.85444268246424,
+          "max": 40.32738740913288,
+          "exceedances": 453,
+          "empirical_p": 0.18152738904438226
+        }
+      },
+      "attn_k.bias": {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 37.03829012787082,
+        "quadratic_delta_bic": 17.561363132525386,
+        "slope_before": 0.1786913657305833,
+        "slope_after": 8.205828014634761,
+        "slope_change": 8.027136648904179,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.450472627156842,
+          "sd": 10.173760671592312,
+          "p95": 30.039430161950893,
+          "p99": 34.19167997988917,
+          "max": 45.66575614314624,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 9.399925141156055,
+          "sd": 9.479246884804411,
+          "p95": 25.31316451346932,
+          "p99": 29.854252825508564,
+          "max": 37.85763850743645,
+          "exceedances": 546,
+          "empirical_p": 0.2187125149940024
+        }
+      },
+      "attn_k.weight": {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 61.12857239379571,
+        "quadratic_delta_bic": 34.00456689869969,
+        "slope_before": 0.00012748419977157035,
+        "slope_after": 0.0020288982503242218,
+        "slope_change": 0.0019014140505526516,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.499687572596876,
+          "sd": 9.088195931931633,
+          "p95": 23.55207513502345,
+          "p99": 34.060257014281085,
+          "max": 62.395667723774864,
+          "exceedances": 1,
+          "empirical_p": 0.0007996801279488205
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.9096993662649497,
+          "sd": 7.110859801225173,
+          "p95": 17.222910471296238,
+          "p99": 26.385124480129278,
+          "max": 50.9216883650505,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        }
+      },
+      "attn_output.weight": {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 30.288269693582265,
+        "quadratic_delta_bic": 29.518699490841982,
+        "slope_before": -6.0688905343021294e-05,
+        "slope_after": 0.0008314279536640838,
+        "slope_change": 0.0008921168590071051,
+        "primary_null": {
+          "n": 2500,
+          "mean": 1.9374928592466665,
+          "sd": 6.935837547630813,
+          "p95": 15.591821579135539,
+          "p99": 28.812878503643603,
+          "max": 67.17649336675589,
+          "exceedances": 21,
+          "empirical_p": 0.008796481407437025
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 0.17556754790912654,
+          "sd": 5.058003921299153,
+          "p95": 10.030855048271189,
+          "p99": 20.98629834543342,
+          "max": 53.04677944981239,
+          "exceedances": 7,
+          "empirical_p": 0.003198720511795282
+        }
+      },
+      "attn_q.bias": {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 18.048294449659608,
+        "quadratic_delta_bic": 5.707693551798386,
+        "slope_before": 0.006142162773668178,
+        "slope_after": 0.1449822854153407,
+        "slope_change": 0.13884012264167253,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.8073823774295095,
+          "sd": 9.611543820074122,
+          "p95": 25.544208633804526,
+          "p99": 36.19093842437024,
+          "max": 52.58404078264036,
+          "exceedances": 279,
+          "empirical_p": 0.11195521791283487
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 3.2878113988065416,
+          "sd": 7.513098517571725,
+          "p95": 18.74507314234242,
+          "p99": 28.141758085159854,
+          "max": 45.25893138830028,
+          "exceedances": 700,
+          "empirical_p": 0.2802878848460616
+        }
+      },
+      "attn_q.weight": {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 39.711150559001965,
+        "quadratic_delta_bic": 22.04824039842572,
+        "slope_before": 2.5941911689709215e-06,
+        "slope_after": 0.0009607261283084886,
+        "slope_change": 0.0009581319371395177,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.133293354670633,
+          "sd": 8.801102661136458,
+          "p95": 22.50807670135726,
+          "p99": 33.78398319082547,
+          "max": 76.81888136586417,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.3412203620926855,
+          "sd": 6.51161905887915,
+          "p95": 15.66952689792151,
+          "p99": 23.847268270996643,
+          "max": 55.228782968806684,
+          "exceedances": 41,
+          "empirical_p": 0.01679328268692523
+        }
+      },
+      "attn_v.bias": {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 56.267661304093735,
+        "quadratic_delta_bic": 29.52351079594405,
+        "slope_before": 0.00995451428379462,
+        "slope_after": 0.0415706009782007,
+        "slope_change": 0.031616086694406076,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.192364696844928,
+          "sd": 9.384296035251243,
+          "p95": 23.24948475516475,
+          "p99": 37.41057120401329,
+          "max": 62.37295561503636,
+          "exceedances": 3,
+          "empirical_p": 0.001599360255897641
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.9589600061901327,
+          "sd": 7.591190479858789,
+          "p95": 19.34448750527573,
+          "p99": 30.39211211050259,
+          "max": 51.28961237024666,
+          "exceedances": 28,
+          "empirical_p": 0.011595361855257898
+        }
+      },
+      "attn_v.weight": {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 64.35146891338422,
+        "quadratic_delta_bic": 33.73543523971102,
+        "slope_before": 0.0004138177499552265,
+        "slope_after": 0.0026861475769816828,
+        "slope_change": 0.002272329827026456,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.368921306785606,
+          "sd": 9.87219262360376,
+          "p95": 25.15369067006394,
+          "p99": 40.030887080953335,
+          "max": 75.04453604714655,
+          "exceedances": 2,
+          "empirical_p": 0.0011995201919232307
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 3.30292740694538,
+          "sd": 7.625961254232466,
+          "p95": 19.31561224099923,
+          "p99": 29.494104813401744,
+          "max": 50.23133913298483,
+          "exceedances": 14,
+          "empirical_p": 0.0059976009596161535
+        }
+      }
+    },
+    "relative_rms": {
+      "attn_norm.weight": {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 13.041591357902206,
+        "quadratic_delta_bic": 32.149189043727944,
+        "slope_before": 0.007168831922624352,
+        "slope_after": 0.02833793420607737,
+        "slope_change": 0.021169102283453017,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.589429907483918,
+          "sd": 8.029948545604933,
+          "p95": 19.19321523258614,
+          "p99": 31.662494824181696,
+          "max": 74.34737214004362,
+          "exceedances": 308,
+          "empirical_p": 0.12355057976809276
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.3238660573183596,
+          "sd": 5.9365146198355605,
+          "p95": 13.314900929695304,
+          "p99": 24.625980710104315,
+          "max": 57.79801110982555,
+          "exceedances": 5,
+          "empirical_p": 0.0023990403838464614
+        }
+      },
+      "ffn_down.weight": {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 6.280983938215371,
+        "quadratic_delta_bic": 5.9066873932031285,
+        "slope_before": 0.006200230405280687,
+        "slope_after": -0.008433303875240687,
+        "slope_change": -0.014633534280521374,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.15869415457758,
+          "sd": 9.395797290942749,
+          "p95": 23.955279083604946,
+          "p99": 37.162252031635546,
+          "max": 59.19863056188717,
+          "exceedances": 857,
+          "empirical_p": 0.343062774890044
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.554431610420577,
+          "sd": 7.055129678529449,
+          "p95": 17.16402477344762,
+          "p99": 28.671580191337686,
+          "max": 42.405750393993316,
+          "exceedances": 576,
+          "empirical_p": 0.23070771691323472
+        }
+      },
+      "ffn_gate.weight": {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.996556419717649,
+        "quadratic_delta_bic": -0.5542209930922297,
+        "slope_before": 0.0025258039986782495,
+        "slope_after": 0.0003517500846090321,
+        "slope_change": -0.0021740539140692175,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.025054766342424,
+          "sd": 8.144801418410207,
+          "p95": 20.240078526025997,
+          "p99": 30.555214044297536,
+          "max": 56.520862718566605,
+          "exceedances": 2166,
+          "empirical_p": 0.866453418632547
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.945757651730267,
+          "sd": 6.436501375363787,
+          "p95": 15.975113333791958,
+          "p99": 26.128682234957175,
+          "max": 43.80774117395205,
+          "exceedances": 1272,
+          "empirical_p": 0.5089964014394243
+        }
+      },
+      "ffn_up.weight": {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -3.2945728708021704,
+        "quadratic_delta_bic": -3.288738668827591,
+        "slope_before": 0.005750464912704009,
+        "slope_after": 0.005608997308305782,
+        "slope_change": -0.00014146760439822672,
+        "primary_null": {
+          "n": 2500,
+          "mean": 2.864112271978751,
+          "sd": 7.7641472533724185,
+          "p95": 18.366595251159808,
+          "p99": 31.84966020505346,
+          "max": 57.48918266014286,
+          "exceedances": 2477,
+          "empirical_p": 0.9908036785285885
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 0.9405900594795119,
+          "sd": 5.697751247411174,
+          "p95": 12.670820892593424,
+          "p99": 23.642184047059462,
+          "max": 49.42351710534433,
+          "exceedances": 2427,
+          "empirical_p": 0.970811675329868
+        }
+      },
+      "ffn_norm.weight": {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 1.7526996307215654,
+        "quadratic_delta_bic": 5.644562577711554,
+        "slope_before": 0.0069571028905228895,
+        "slope_after": 0.02934253977327772,
+        "slope_change": 0.022385436882754833,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.4473661759851493,
+          "sd": 7.820898053644827,
+          "p95": 20.338565679623613,
+          "p99": 30.96213440637973,
+          "max": 49.84691616470596,
+          "exceedances": 1071,
+          "empirical_p": 0.42862854858056776
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.1379889655367228,
+          "sd": 5.690536858455546,
+          "p95": 13.738972858717027,
+          "p99": 22.314412367724053,
+          "max": 37.68833282561633,
+          "exceedances": 396,
+          "empirical_p": 0.15873650539784087
+        }
+      },
+      "attn_k.bias": {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 61.679996236347336,
+        "quadratic_delta_bic": 36.14637990761153,
+        "slope_before": 0.0032948036826129998,
+        "slope_after": 0.09270077596848328,
+        "slope_change": 0.08940597228587029,
+        "primary_null": {
+          "n": 2500,
+          "mean": 7.40486613190285,
+          "sd": 10.768885926976168,
+          "p95": 28.616946037028963,
+          "p99": 43.499337711716954,
+          "max": 62.463396971467475,
+          "exceedances": 3,
+          "empirical_p": 0.001599360255897641
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 3.842236586316253,
+          "sd": 8.36482542318584,
+          "p95": 21.60472845140873,
+          "p99": 32.971557544174395,
+          "max": 56.151794072106355,
+          "exceedances": 11,
+          "empirical_p": 0.004798080767692923
+        }
+      },
+      "attn_k.weight": {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 61.85814868359478,
+        "quadratic_delta_bic": 32.146585632536386,
+        "slope_before": 0.0058415672062406936,
+        "slope_after": 0.05693765955364384,
+        "slope_change": 0.05109609234740315,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.9605571151670693,
+          "sd": 8.35301406668866,
+          "p95": 21.23461699604698,
+          "p99": 32.80431787397162,
+          "max": 54.338669393695255,
+          "exceedances": 0,
+          "empirical_p": 0.00039984006397441024
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.7729064316057193,
+          "sd": 6.27094678444911,
+          "p95": 14.907790109045273,
+          "p99": 24.459399710788226,
+          "max": 46.912602534125114,
+          "exceedances": 7,
+          "empirical_p": 0.003198720511795282
+        }
+      },
+      "attn_output.weight": {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 31.133460142622397,
+        "quadratic_delta_bic": 30.009058050047685,
+        "slope_before": -0.0025807693166415447,
+        "slope_after": 0.03598879098310209,
+        "slope_change": 0.038569560299743635,
+        "primary_null": {
+          "n": 2500,
+          "mean": 1.9335712376025362,
+          "sd": 6.956319563209091,
+          "p95": 15.88702878184883,
+          "p99": 28.479957256944576,
+          "max": 67.27963113520494,
+          "exceedances": 20,
+          "empirical_p": 0.008396641343462616
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 0.12445499175835689,
+          "sd": 5.0379561051304655,
+          "p95": 9.778523312557011,
+          "p99": 20.462709746303062,
+          "max": 53.702828897599744,
+          "exceedances": 7,
+          "empirical_p": 0.003198720511795282
+        }
+      },
+      "attn_q.bias": {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 16.40170424168383,
+        "quadratic_delta_bic": 3.877273320189687,
+        "slope_before": 0.00390362873095617,
+        "slope_after": 0.044612359514333254,
+        "slope_change": 0.040708730783377084,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.642032756829039,
+          "sd": 9.044197557780237,
+          "p95": 23.60638129904356,
+          "p99": 36.309553507248005,
+          "max": 55.0549236377409,
+          "exceedances": 272,
+          "empirical_p": 0.10915633746501399
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.2797152461736414,
+          "sd": 6.746743671539207,
+          "p95": 16.28910997586222,
+          "p99": 25.723212959850372,
+          "max": 46.981170758005874,
+          "exceedances": 709,
+          "empirical_p": 0.2838864454218313
+        }
+      },
+      "attn_q.weight": {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 36.497710826402,
+        "quadratic_delta_bic": 20.7749559627224,
+        "slope_before": -0.0003695747803015865,
+        "slope_after": 0.03659752372478962,
+        "slope_change": 0.0369670985050912,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.6946882631887696,
+          "sd": 8.045525222953072,
+          "p95": 20.620575465577748,
+          "p99": 31.44738383032623,
+          "max": 60.53045341914324,
+          "exceedances": 12,
+          "empirical_p": 0.005197920831667333
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.475149718746023,
+          "sd": 5.761721534462239,
+          "p95": 13.710087366135262,
+          "p99": 22.50276002707976,
+          "max": 40.91133730421765,
+          "exceedances": 38,
+          "empirical_p": 0.015593762495002
+        }
+      },
+      "attn_v.bias": {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.808837327027959,
+        "quadratic_delta_bic": 3.953338316279712,
+        "slope_before": 0.011573169761970568,
+        "slope_after": 0.0081481185616912,
+        "slope_change": -0.0034250512002793687,
+        "primary_null": {
+          "n": 2500,
+          "mean": 1.996711913511188,
+          "sd": 6.37942621894359,
+          "p95": 14.608873986189744,
+          "p99": 24.80775710447747,
+          "max": 42.02317294945526,
+          "exceedances": 1964,
+          "empirical_p": 0.7856857257097161
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 0.1522571563567215,
+          "sd": 4.783549954793394,
+          "p95": 10.08738199838084,
+          "p99": 19.29683646957636,
+          "max": 32.042508786509046,
+          "exceedances": 377,
+          "empirical_p": 0.15113954418232706
+        }
+      },
+      "attn_v.weight": {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 38.37081601350542,
+        "quadratic_delta_bic": 8.00397558713368,
+        "slope_before": 0.013290667229057522,
+        "slope_after": 0.05137067124942539,
+        "slope_change": 0.03808000402036787,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.521300869558436,
+          "sd": 8.182271337270322,
+          "p95": 20.659217493280845,
+          "p99": 32.38590797685721,
+          "max": 58.42536069595924,
+          "exceedances": 9,
+          "empirical_p": 0.003998400639744102
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.2573478976307064,
+          "sd": 6.015476959315408,
+          "p95": 13.148881027611681,
+          "p99": 25.05696254009131,
+          "max": 45.329317718752236,
+          "exceedances": 277,
+          "empirical_p": 0.11115553778488604
+        }
+      }
+    },
+    "standardized_euclidean_rms": {
+      "attn_norm.weight": {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.7919557122231566,
+        "quadratic_delta_bic": 31.805685202967453,
+        "slope_before": 0.021053865094391132,
+        "slope_after": 0.0032539409938864387,
+        "slope_change": -0.017799924100504693,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.5942874259226096,
+          "sd": 8.03224280333266,
+          "p95": 19.92404211782228,
+          "p99": 31.438597541916135,
+          "max": 63.644817869400796,
+          "exceedances": 2025,
+          "empirical_p": 0.8100759696121551
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.571577808755797,
+          "sd": 6.096413507596954,
+          "p95": 13.95369677568379,
+          "p99": 23.87076333979576,
+          "max": 60.12232659522065,
+          "exceedances": 5,
+          "empirical_p": 0.0023990403838464614
+        }
+      },
+      "ffn_down.weight": {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 8.030613054455898,
+        "quadratic_delta_bic": 0.6254017465582109,
+        "slope_before": 0.028241029115784015,
+        "slope_after": -0.074023343388681,
+        "slope_change": -0.102264372504465,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.094409902254223,
+          "sd": 8.551424337486118,
+          "p95": 21.476997798912016,
+          "p99": 32.789659571955276,
+          "max": 60.985745309169516,
+          "exceedances": 611,
+          "empirical_p": 0.24470211915233905
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.7772248590214288,
+          "sd": 6.367373919918425,
+          "p95": 14.790980391384004,
+          "p99": 26.31668310841123,
+          "max": 43.19772873338283,
+          "exceedances": 999,
+          "empirical_p": 0.39984006397441024
+        }
+      },
+      "ffn_gate.weight": {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -2.371344748728795,
+        "quadratic_delta_bic": -0.05561168162888208,
+        "slope_before": 0.02699421432600391,
+        "slope_after": -0.017755503879020276,
+        "slope_change": -0.044749718205024186,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.070938397782318,
+          "sd": 8.142245924918276,
+          "p95": 20.67922710613727,
+          "p99": 30.50795504298387,
+          "max": 57.89504492711946,
+          "exceedances": 1909,
+          "empirical_p": 0.7636945221911235
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.089322414404789,
+          "sd": 6.507976027927396,
+          "p95": 16.058666296185255,
+          "p99": 25.571229068959934,
+          "max": 45.19314317066634,
+          "exceedances": 1200,
+          "empirical_p": 0.4802079168332667
+        }
+      },
+      "ffn_up.weight": {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": -1.993881184912368,
+        "quadratic_delta_bic": -0.8540662749213368,
+        "slope_before": 0.035062557493144575,
+        "slope_after": 0.01090817661616355,
+        "slope_change": -0.024154380876981026,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.802941446944492,
+          "sd": 8.6858416913675,
+          "p95": 21.47654298388521,
+          "p99": 34.41946420887729,
+          "max": 71.33023406558948,
+          "exceedances": 1731,
+          "empirical_p": 0.6925229908036785
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.9236183717757158,
+          "sd": 6.610678780277189,
+          "p95": 15.194580276962895,
+          "p99": 28.418276519148534,
+          "max": 48.639700161903335,
+          "exceedances": 1287,
+          "empirical_p": 0.5149940023990404
+        }
+      },
+      "ffn_norm.weight": {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 6.146380404653549,
+        "quadratic_delta_bic": 5.457826924494405,
+        "slope_before": 0.03431045472086178,
+        "slope_after": 0.23684888087775344,
+        "slope_change": 0.20253842615689166,
+        "primary_null": {
+          "n": 2500,
+          "mean": 3.7406763277536914,
+          "sd": 8.02464626306028,
+          "p95": 20.29330967654711,
+          "p99": 31.686202645256177,
+          "max": 52.83351783763432,
+          "exceedances": 675,
+          "empirical_p": 0.27029188324670134
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 1.4754247228622304,
+          "sd": 5.998513767414243,
+          "p95": 14.254043171144316,
+          "p99": 24.85444268246422,
+          "max": 40.327387409132854,
+          "exceedances": 453,
+          "empirical_p": 0.18152738904438226
+        }
+      },
+      "attn_k.bias": {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 37.03829012787083,
+        "quadratic_delta_bic": 17.561363132525386,
+        "slope_before": 0.012556710004995614,
+        "slope_after": 0.576626645106008,
+        "slope_change": 0.5640699351010124,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.450472627156842,
+          "sd": 10.173760671592312,
+          "p95": 30.039430161950857,
+          "p99": 34.19167997988916,
+          "max": 45.66575614314626,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 9.399925141156057,
+          "sd": 9.479246884804411,
+          "p95": 25.31316451346929,
+          "p99": 29.854252825508564,
+          "max": 37.85763850743646,
+          "exceedances": 546,
+          "empirical_p": 0.2187125149940024
+        }
+      },
+      "attn_k.weight": {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 61.12857239379573,
+        "quadratic_delta_bic": 34.00456689869972,
+        "slope_before": 0.029888612706084283,
+        "slope_after": 0.4756742728326381,
+        "slope_change": 0.4457856601265538,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.499687572596868,
+          "sd": 9.088195931931635,
+          "p95": 23.55207513502346,
+          "p99": 34.0602570142811,
+          "max": 62.39566772377488,
+          "exceedances": 1,
+          "empirical_p": 0.0007996801279488205
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.9096993662649724,
+          "sd": 7.110859801225171,
+          "p95": 17.222910471296224,
+          "p99": 26.385124480129235,
+          "max": 50.92168836505051,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        }
+      },
+      "attn_output.weight": {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 30.28826969358228,
+        "quadratic_delta_bic": 29.51869949084196,
+        "slope_before": -0.020157782261569265,
+        "slope_after": 0.2761582790365818,
+        "slope_change": 0.2963160612981511,
+        "primary_null": {
+          "n": 2500,
+          "mean": 1.937492859246659,
+          "sd": 6.935837547630813,
+          "p95": 15.591821579135551,
+          "p99": 28.81287850364358,
+          "max": 67.17649336675592,
+          "exceedances": 21,
+          "empirical_p": 0.008796481407437025
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 0.17556754790914786,
+          "sd": 5.058003921299152,
+          "p95": 10.030855048271233,
+          "p99": 20.986298345433333,
+          "max": 53.0467794498125,
+          "exceedances": 7,
+          "empirical_p": 0.003198720511795282
+        }
+      },
+      "attn_q.bias": {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 18.0482944496596,
+        "quadratic_delta_bic": 5.707693551798371,
+        "slope_before": 0.01817447805341979,
+        "slope_after": 0.4289982961233245,
+        "slope_change": 0.4108238180699047,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.807382377429516,
+          "sd": 9.611543820074122,
+          "p95": 25.54420863380457,
+          "p99": 36.19093842437025,
+          "max": 52.584040782640365,
+          "exceedances": 279,
+          "empirical_p": 0.11195521791283487
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 3.287811398806536,
+          "sd": 7.513098517571725,
+          "p95": 18.74507314234242,
+          "p99": 28.141758085159896,
+          "max": 45.25893138830032,
+          "exceedances": 700,
+          "empirical_p": 0.2802878848460616
+        }
+      },
+      "attn_q.weight": {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 39.71115055900202,
+        "quadratic_delta_bic": 22.048240398425705,
+        "slope_before": 0.0009492779084933345,
+        "slope_after": 0.35155315484231986,
+        "slope_change": 0.35060387693382655,
+        "primary_null": {
+          "n": 2500,
+          "mean": 4.1332933546706245,
+          "sd": 8.801102661136458,
+          "p95": 22.508076701357194,
+          "p99": 33.783983190825445,
+          "max": 76.81888136586417,
+          "exceedances": 8,
+          "empirical_p": 0.003598560575769692
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.3412203620927055,
+          "sd": 6.511619058879148,
+          "p95": 15.66952689792152,
+          "p99": 23.847268270996643,
+          "max": 55.228782968806705,
+          "exceedances": 41,
+          "empirical_p": 0.01679328268692523
+        }
+      },
+      "attn_v.bias": {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "breakpoint": 21,
+        "primary_delta_bic": 56.267661304093735,
+        "quadratic_delta_bic": 29.523510795944077,
+        "slope_before": 0.05646739608167185,
+        "slope_after": 0.23581096212907093,
+        "slope_change": 0.1793435660473991,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.192364696844935,
+          "sd": 9.384296035251243,
+          "p95": 23.24948475516475,
+          "p99": 37.4105712040133,
+          "max": 62.37295561503635,
+          "exceedances": 3,
+          "empirical_p": 0.001599360255897641
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 2.958960006190126,
+          "sd": 7.59119047985879,
+          "p95": 19.34448750527575,
+          "p99": 30.392112110502577,
+          "max": 51.289612370246694,
+          "exceedances": 28,
+          "empirical_p": 0.011595361855257898
+        }
+      },
+      "attn_v.weight": {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "breakpoint": 21,
+        "primary_delta_bic": 64.35146891338424,
+        "quadratic_delta_bic": 33.73543523971101,
+        "slope_before": 0.058621325138764585,
+        "slope_after": 0.38051903403849996,
+        "slope_change": 0.32189770889973535,
+        "primary_null": {
+          "n": 2500,
+          "mean": 5.368921306785598,
+          "sd": 9.872192623603759,
+          "p95": 25.153690670063895,
+          "p99": 40.03088708095332,
+          "max": 75.04453604714651,
+          "exceedances": 2,
+          "empirical_p": 0.0011995201919232307
+        },
+        "quadratic_null": {
+          "n": 2500,
+          "mean": 3.3029274069453995,
+          "sd": 7.6259612542324655,
+          "p95": 19.31561224099929,
+          "p99": 29.49410481340178,
+          "max": 50.231339132984814,
+          "exceedances": 14,
+          "empirical_p": 0.0059976009596161535
+        }
+      }
+    }
+  },
+  "component_summary": {
+    "attn_norm.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": -2.7919557122231566,
+        "primary_p": 0.8100759696121551,
+        "quadratic_delta_bic": 31.805685202967396,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": -0.010771889356901628
+      },
+      "relative_rms": {
+        "primary_delta_bic": 13.041591357902206,
+        "primary_p": 0.12355057976809276,
+        "quadratic_delta_bic": 32.149189043727944,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": 0.021169102283453017
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": -2.7919557122231566,
+        "primary_p": 0.8100759696121551,
+        "quadratic_delta_bic": 31.805685202967453,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": -0.017799924100504693
+      }
+    },
+    "ffn_down.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 8.030613054455898,
+        "primary_p": 0.24470211915233905,
+        "quadratic_delta_bic": 0.6254017465582251,
+        "quadratic_p": 0.39984006397441024,
+        "slope_change": -0.00027278268070224187
+      },
+      "relative_rms": {
+        "primary_delta_bic": 6.280983938215371,
+        "primary_p": 0.343062774890044,
+        "quadratic_delta_bic": 5.9066873932031285,
+        "quadratic_p": 0.23070771691323472,
+        "slope_change": -0.014633534280521374
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 8.030613054455898,
+        "primary_p": 0.24470211915233905,
+        "quadratic_delta_bic": 0.6254017465582109,
+        "quadratic_p": 0.39984006397441024,
+        "slope_change": -0.102264372504465
+      }
+    },
+    "ffn_gate.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": -2.371344748728802,
+        "primary_p": 0.7636945221911235,
+        "quadratic_delta_bic": -0.055611681628874976,
+        "quadratic_p": 0.4802079168332667,
+        "slope_change": -7.087515873800747e-05
+      },
+      "relative_rms": {
+        "primary_delta_bic": -2.996556419717649,
+        "primary_p": 0.866453418632547,
+        "quadratic_delta_bic": -0.5542209930922297,
+        "quadratic_p": 0.5089964014394243,
+        "slope_change": -0.0021740539140692175
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": -2.371344748728795,
+        "primary_p": 0.7636945221911235,
+        "quadratic_delta_bic": -0.05561168162888208,
+        "quadratic_p": 0.4802079168332667,
+        "slope_change": -0.044749718205024186
+      }
+    },
+    "ffn_up.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": -1.993881184912368,
+        "primary_p": 0.6925229908036785,
+        "quadratic_delta_bic": -0.8540662749213652,
+        "quadratic_p": 0.5149940023990404,
+        "slope_change": -0.0001744548048060893
+      },
+      "relative_rms": {
+        "primary_delta_bic": -3.2945728708021704,
+        "primary_p": 0.9908036785285885,
+        "quadratic_delta_bic": -3.288738668827591,
+        "quadratic_p": 0.970811675329868,
+        "slope_change": -0.00014146760439822672
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": -1.993881184912368,
+        "primary_p": 0.6925229908036785,
+        "quadratic_delta_bic": -0.8540662749213368,
+        "quadratic_p": 0.5149940023990404,
+        "slope_change": -0.024154380876981026
+      }
+    },
+    "ffn_norm.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 6.146380404653556,
+        "primary_p": 0.27029188324670134,
+        "quadratic_delta_bic": 5.457826924494412,
+        "quadratic_p": 0.18152738904438226,
+        "slope_change": 0.09902122123846217
+      },
+      "relative_rms": {
+        "primary_delta_bic": 1.7526996307215654,
+        "primary_p": 0.42862854858056776,
+        "quadratic_delta_bic": 5.644562577711554,
+        "quadratic_p": 0.15873650539784087,
+        "slope_change": 0.022385436882754833
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 6.146380404653549,
+        "primary_p": 0.27029188324670134,
+        "quadratic_delta_bic": 5.457826924494405,
+        "quadratic_p": 0.18152738904438226,
+        "slope_change": 0.20253842615689166
+      }
+    },
+    "attn_k.bias": {
+      "euclidean_rms": {
+        "primary_delta_bic": 37.03829012787082,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 17.561363132525386,
+        "quadratic_p": 0.2187125149940024,
+        "slope_change": 8.027136648904179
+      },
+      "relative_rms": {
+        "primary_delta_bic": 61.679996236347336,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 36.14637990761153,
+        "quadratic_p": 0.004798080767692923,
+        "slope_change": 0.08940597228587029
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 37.03829012787083,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 17.561363132525386,
+        "quadratic_p": 0.2187125149940024,
+        "slope_change": 0.5640699351010124
+      }
+    },
+    "attn_k.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 61.12857239379571,
+        "primary_p": 0.0007996801279488205,
+        "quadratic_delta_bic": 34.00456689869969,
+        "quadratic_p": 0.003598560575769692,
+        "slope_change": 0.0019014140505526516
+      },
+      "relative_rms": {
+        "primary_delta_bic": 61.85814868359478,
+        "primary_p": 0.00039984006397441024,
+        "quadratic_delta_bic": 32.146585632536386,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.05109609234740315
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 61.12857239379573,
+        "primary_p": 0.0007996801279488205,
+        "quadratic_delta_bic": 34.00456689869972,
+        "quadratic_p": 0.003598560575769692,
+        "slope_change": 0.4457856601265538
+      }
+    },
+    "attn_output.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 30.288269693582265,
+        "primary_p": 0.008796481407437025,
+        "quadratic_delta_bic": 29.518699490841982,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.0008921168590071051
+      },
+      "relative_rms": {
+        "primary_delta_bic": 31.133460142622397,
+        "primary_p": 0.008396641343462616,
+        "quadratic_delta_bic": 30.009058050047685,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.038569560299743635
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 30.28826969358228,
+        "primary_p": 0.008796481407437025,
+        "quadratic_delta_bic": 29.51869949084196,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.2963160612981511
+      }
+    },
+    "attn_q.bias": {
+      "euclidean_rms": {
+        "primary_delta_bic": 18.048294449659608,
+        "primary_p": 0.11195521791283487,
+        "quadratic_delta_bic": 5.707693551798386,
+        "quadratic_p": 0.2802878848460616,
+        "slope_change": 0.13884012264167253
+      },
+      "relative_rms": {
+        "primary_delta_bic": 16.40170424168383,
+        "primary_p": 0.10915633746501399,
+        "quadratic_delta_bic": 3.877273320189687,
+        "quadratic_p": 0.2838864454218313,
+        "slope_change": 0.040708730783377084
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 18.0482944496596,
+        "primary_p": 0.11195521791283487,
+        "quadratic_delta_bic": 5.707693551798371,
+        "quadratic_p": 0.2802878848460616,
+        "slope_change": 0.4108238180699047
+      }
+    },
+    "attn_q.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 39.711150559001965,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 22.04824039842572,
+        "quadratic_p": 0.01679328268692523,
+        "slope_change": 0.0009581319371395177
+      },
+      "relative_rms": {
+        "primary_delta_bic": 36.497710826402,
+        "primary_p": 0.005197920831667333,
+        "quadratic_delta_bic": 20.7749559627224,
+        "quadratic_p": 0.015593762495002,
+        "slope_change": 0.0369670985050912
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 39.71115055900202,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 22.048240398425705,
+        "quadratic_p": 0.01679328268692523,
+        "slope_change": 0.35060387693382655
+      }
+    },
+    "attn_v.bias": {
+      "euclidean_rms": {
+        "primary_delta_bic": 56.267661304093735,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 29.52351079594405,
+        "quadratic_p": 0.011595361855257898,
+        "slope_change": 0.031616086694406076
+      },
+      "relative_rms": {
+        "primary_delta_bic": -2.808837327027959,
+        "primary_p": 0.7856857257097161,
+        "quadratic_delta_bic": 3.953338316279712,
+        "quadratic_p": 0.15113954418232706,
+        "slope_change": -0.0034250512002793687
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 56.267661304093735,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 29.523510795944077,
+        "quadratic_p": 0.011595361855257898,
+        "slope_change": 0.1793435660473991
+      }
+    },
+    "attn_v.weight": {
+      "euclidean_rms": {
+        "primary_delta_bic": 64.35146891338422,
+        "primary_p": 0.0011995201919232307,
+        "quadratic_delta_bic": 33.73543523971102,
+        "quadratic_p": 0.0059976009596161535,
+        "slope_change": 0.002272329827026456
+      },
+      "relative_rms": {
+        "primary_delta_bic": 38.37081601350542,
+        "primary_p": 0.003998400639744102,
+        "quadratic_delta_bic": 8.00397558713368,
+        "quadratic_p": 0.11115553778488604,
+        "slope_change": 0.03808000402036787
+      },
+      "standardized_euclidean_rms": {
+        "primary_delta_bic": 64.35146891338424,
+        "primary_p": 0.0011995201919232307,
+        "quadratic_delta_bic": 33.73543523971101,
+        "quadratic_p": 0.0059976009596161535,
+        "slope_change": 0.32189770889973535
+      }
+    }
+  },
+  "ranking": {
+    "euclidean_rms": [
+      {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 64.35146891338422,
+        "primary_p": 0.0011995201919232307,
+        "quadratic_delta_bic": 33.73543523971102,
+        "quadratic_p": 0.0059976009596161535,
+        "slope_change": 0.002272329827026456
+      },
+      {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 61.12857239379571,
+        "primary_p": 0.0007996801279488205,
+        "quadratic_delta_bic": 34.00456689869969,
+        "quadratic_p": 0.003598560575769692,
+        "slope_change": 0.0019014140505526516
+      },
+      {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 56.267661304093735,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 29.52351079594405,
+        "quadratic_p": 0.011595361855257898,
+        "slope_change": 0.031616086694406076
+      },
+      {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 39.711150559001965,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 22.04824039842572,
+        "quadratic_p": 0.01679328268692523,
+        "slope_change": 0.0009581319371395177
+      },
+      {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 37.03829012787082,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 17.561363132525386,
+        "quadratic_p": 0.2187125149940024,
+        "slope_change": 8.027136648904179
+      },
+      {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 30.288269693582265,
+        "primary_p": 0.008796481407437025,
+        "quadratic_delta_bic": 29.518699490841982,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.0008921168590071051
+      },
+      {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 18.048294449659608,
+        "primary_p": 0.11195521791283487,
+        "quadratic_delta_bic": 5.707693551798386,
+        "quadratic_p": 0.2802878848460616,
+        "slope_change": 0.13884012264167253
+      },
+      {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 8.030613054455898,
+        "primary_p": 0.24470211915233905,
+        "quadratic_delta_bic": 0.6254017465582251,
+        "quadratic_p": 0.39984006397441024,
+        "slope_change": -0.00027278268070224187
+      },
+      {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 6.146380404653556,
+        "primary_p": 0.27029188324670134,
+        "quadratic_delta_bic": 5.457826924494412,
+        "quadratic_p": 0.18152738904438226,
+        "slope_change": 0.09902122123846217
+      },
+      {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -1.993881184912368,
+        "primary_p": 0.6925229908036785,
+        "quadratic_delta_bic": -0.8540662749213652,
+        "quadratic_p": 0.5149940023990404,
+        "slope_change": -0.0001744548048060893
+      },
+      {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -2.371344748728802,
+        "primary_p": 0.7636945221911235,
+        "quadratic_delta_bic": -0.055611681628874976,
+        "quadratic_p": 0.4802079168332667,
+        "slope_change": -7.087515873800747e-05
+      },
+      {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": -2.7919557122231566,
+        "primary_p": 0.8100759696121551,
+        "quadratic_delta_bic": 31.805685202967396,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": -0.010771889356901628
+      }
+    ],
+    "relative_rms": [
+      {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 61.85814868359478,
+        "primary_p": 0.00039984006397441024,
+        "quadratic_delta_bic": 32.146585632536386,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.05109609234740315
+      },
+      {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 61.679996236347336,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 36.14637990761153,
+        "quadratic_p": 0.004798080767692923,
+        "slope_change": 0.08940597228587029
+      },
+      {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 38.37081601350542,
+        "primary_p": 0.003998400639744102,
+        "quadratic_delta_bic": 8.00397558713368,
+        "quadratic_p": 0.11115553778488604,
+        "slope_change": 0.03808000402036787
+      },
+      {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 36.497710826402,
+        "primary_p": 0.005197920831667333,
+        "quadratic_delta_bic": 20.7749559627224,
+        "quadratic_p": 0.015593762495002,
+        "slope_change": 0.0369670985050912
+      },
+      {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 31.133460142622397,
+        "primary_p": 0.008396641343462616,
+        "quadratic_delta_bic": 30.009058050047685,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.038569560299743635
+      },
+      {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 16.40170424168383,
+        "primary_p": 0.10915633746501399,
+        "quadratic_delta_bic": 3.877273320189687,
+        "quadratic_p": 0.2838864454218313,
+        "slope_change": 0.040708730783377084
+      },
+      {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 13.041591357902206,
+        "primary_p": 0.12355057976809276,
+        "quadratic_delta_bic": 32.149189043727944,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": 0.021169102283453017
+      },
+      {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 6.280983938215371,
+        "primary_p": 0.343062774890044,
+        "quadratic_delta_bic": 5.9066873932031285,
+        "quadratic_p": 0.23070771691323472,
+        "slope_change": -0.014633534280521374
+      },
+      {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 1.7526996307215654,
+        "primary_p": 0.42862854858056776,
+        "quadratic_delta_bic": 5.644562577711554,
+        "quadratic_p": 0.15873650539784087,
+        "slope_change": 0.022385436882754833
+      },
+      {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": -2.808837327027959,
+        "primary_p": 0.7856857257097161,
+        "quadratic_delta_bic": 3.953338316279712,
+        "quadratic_p": 0.15113954418232706,
+        "slope_change": -0.0034250512002793687
+      },
+      {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -2.996556419717649,
+        "primary_p": 0.866453418632547,
+        "quadratic_delta_bic": -0.5542209930922297,
+        "quadratic_p": 0.5089964014394243,
+        "slope_change": -0.0021740539140692175
+      },
+      {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -3.2945728708021704,
+        "primary_p": 0.9908036785285885,
+        "quadratic_delta_bic": -3.288738668827591,
+        "quadratic_p": 0.970811675329868,
+        "slope_change": -0.00014146760439822672
+      }
+    ],
+    "standardized_euclidean_rms": [
+      {
+        "component": "attn_v.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 64.35146891338424,
+        "primary_p": 0.0011995201919232307,
+        "quadratic_delta_bic": 33.73543523971101,
+        "quadratic_p": 0.0059976009596161535,
+        "slope_change": 0.32189770889973535
+      },
+      {
+        "component": "attn_k.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 61.12857239379573,
+        "primary_p": 0.0007996801279488205,
+        "quadratic_delta_bic": 34.00456689869972,
+        "quadratic_p": 0.003598560575769692,
+        "slope_change": 0.4457856601265538
+      },
+      {
+        "component": "attn_v.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 56.267661304093735,
+        "primary_p": 0.001599360255897641,
+        "quadratic_delta_bic": 29.523510795944077,
+        "quadratic_p": 0.011595361855257898,
+        "slope_change": 0.1793435660473991
+      },
+      {
+        "component": "attn_q.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 39.71115055900202,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 22.048240398425705,
+        "quadratic_p": 0.01679328268692523,
+        "slope_change": 0.35060387693382655
+      },
+      {
+        "component": "attn_k.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 37.03829012787083,
+        "primary_p": 0.003598560575769692,
+        "quadratic_delta_bic": 17.561363132525386,
+        "quadratic_p": 0.2187125149940024,
+        "slope_change": 0.5640699351010124
+      },
+      {
+        "component": "attn_output.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": 30.28826969358228,
+        "primary_p": 0.008796481407437025,
+        "quadratic_delta_bic": 29.51869949084196,
+        "quadratic_p": 0.003198720511795282,
+        "slope_change": 0.2963160612981511
+      },
+      {
+        "component": "attn_q.bias",
+        "family": "attention",
+        "parameter_type": "bias",
+        "primary_delta_bic": 18.0482944496596,
+        "primary_p": 0.11195521791283487,
+        "quadratic_delta_bic": 5.707693551798371,
+        "quadratic_p": 0.2802878848460616,
+        "slope_change": 0.4108238180699047
+      },
+      {
+        "component": "ffn_down.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 8.030613054455898,
+        "primary_p": 0.24470211915233905,
+        "quadratic_delta_bic": 0.6254017465582109,
+        "quadratic_p": 0.39984006397441024,
+        "slope_change": -0.102264372504465
+      },
+      {
+        "component": "ffn_norm.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": 6.146380404653549,
+        "primary_p": 0.27029188324670134,
+        "quadratic_delta_bic": 5.457826924494405,
+        "quadratic_p": 0.18152738904438226,
+        "slope_change": 0.20253842615689166
+      },
+      {
+        "component": "ffn_up.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -1.993881184912368,
+        "primary_p": 0.6925229908036785,
+        "quadratic_delta_bic": -0.8540662749213368,
+        "quadratic_p": 0.5149940023990404,
+        "slope_change": -0.024154380876981026
+      },
+      {
+        "component": "ffn_gate.weight",
+        "family": "ffn",
+        "parameter_type": "weight",
+        "primary_delta_bic": -2.371344748728795,
+        "primary_p": 0.7636945221911235,
+        "quadratic_delta_bic": -0.05561168162888208,
+        "quadratic_p": 0.4802079168332667,
+        "slope_change": -0.044749718205024186
+      },
+      {
+        "component": "attn_norm.weight",
+        "family": "attention",
+        "parameter_type": "weight",
+        "primary_delta_bic": -2.7919557122231566,
+        "primary_p": 0.8100759696121551,
+        "quadratic_delta_bic": 31.805685202967453,
+        "quadratic_p": 0.0023990403838464614,
+        "slope_change": -0.017799924100504693
+      }
+    ]
+  },
+  "family_summary": {
+    "euclidean_rms": {
+      "attention": {
+        "component_count": 8,
+        "mean_primary_delta_bic": 38.00521896614565,
+        "median_primary_delta_bic": 38.374720343436394,
+        "mean_primary_p": 0.11770291883246702,
+        "mean_quadratic_delta_bic": 25.488149338864204,
+        "significant_primary_p_lt_0_05": 6,
+        "significant_quadratic_p_lt_0_05": 6
+      },
+      "ffn": {
+        "component_count": 4,
+        "mean_primary_delta_bic": 2.452941881367071,
+        "median_primary_delta_bic": 2.076249609870594,
+        "mean_primary_p": 0.49280287884846063,
+        "mean_quadratic_delta_bic": 1.2933876786255993,
+        "significant_primary_p_lt_0_05": 0,
+        "significant_quadratic_p_lt_0_05": 0
+      },
+      "weights": {
+        "component_count": 9,
+        "mean_primary_delta_bic": 22.4999192636677,
+        "median_primary_delta_bic": 8.030613054455898,
+        "mean_primary_p": 0.3106313030343418,
+        "mean_quadratic_delta_bic": 17.365130882794247,
+        "significant_primary_p_lt_0_05": 4,
+        "significant_quadratic_p_lt_0_05": 5
+      },
+      "biases": {
+        "component_count": 3,
+        "mean_primary_delta_bic": 37.11808196054139,
+        "median_primary_delta_bic": 37.03829012787082,
+        "mean_primary_p": 0.0390510462481674,
+        "mean_quadratic_delta_bic": 17.597522493422606,
+        "significant_primary_p_lt_0_05": 2,
+        "significant_quadratic_p_lt_0_05": 1
+      }
+    },
+    "relative_rms": {
+      "attention": {
+        "component_count": 8,
+        "mean_primary_delta_bic": 32.02182377187875,
+        "median_primary_delta_bic": 33.8155854845122,
+        "mean_primary_p": 0.12974810075969612,
+        "mean_quadratic_delta_bic": 20.88259447753113,
+        "significant_primary_p_lt_0_05": 5,
+        "significant_quadratic_p_lt_0_05": 5
+      },
+      "ffn": {
+        "component_count": 4,
+        "mean_primary_delta_bic": 0.43563856960427927,
+        "median_primary_delta_bic": -0.6219283944980418,
+        "mean_primary_p": 0.6572371051579369,
+        "mean_quadratic_delta_bic": 1.9270725772487154,
+        "significant_primary_p_lt_0_05": 0,
+        "significant_quadratic_p_lt_0_05": 0
+      },
+      "weights": {
+        "component_count": 9,
+        "mean_primary_delta_bic": 20.29380903360488,
+        "median_primary_delta_bic": 13.041591357902206,
+        "mean_primary_p": 0.307832422586521,
+        "mean_quadratic_delta_bic": 14.532450509462551,
+        "significant_primary_p_lt_0_05": 4,
+        "significant_quadratic_p_lt_0_05": 4
+      },
+      "biases": {
+        "component_count": 3,
+        "mean_primary_delta_bic": 25.090954383667736,
+        "median_primary_delta_bic": 16.40170424168383,
+        "mean_primary_p": 0.2988138078102092,
+        "mean_quadratic_delta_bic": 14.658997181360311,
+        "significant_primary_p_lt_0_05": 1,
+        "significant_quadratic_p_lt_0_05": 1
+      }
+    },
+    "standardized_euclidean_rms": {
+      "attention": {
+        "component_count": 8,
+        "mean_primary_delta_bic": 38.00521896614566,
+        "median_primary_delta_bic": 38.37472034343642,
+        "mean_primary_p": 0.11770291883246702,
+        "mean_quadratic_delta_bic": 25.48814933886421,
+        "significant_primary_p_lt_0_05": 6,
+        "significant_quadratic_p_lt_0_05": 6
+      },
+      "ffn": {
+        "component_count": 4,
+        "mean_primary_delta_bic": 2.452941881367071,
+        "median_primary_delta_bic": 2.0762496098705903,
+        "mean_primary_p": 0.49280287884846063,
+        "mean_quadratic_delta_bic": 1.2933876786255993,
+        "significant_primary_p_lt_0_05": 0,
+        "significant_quadratic_p_lt_0_05": 0
+      },
+      "weights": {
+        "component_count": 9,
+        "mean_primary_delta_bic": 22.49991926366771,
+        "median_primary_delta_bic": 8.030613054455898,
+        "mean_primary_p": 0.3106313030343418,
+        "mean_quadratic_delta_bic": 17.365130882794247,
+        "significant_primary_p_lt_0_05": 4,
+        "significant_quadratic_p_lt_0_05": 5
+      },
+      "biases": {
+        "component_count": 3,
+        "mean_primary_delta_bic": 37.11808196054139,
+        "median_primary_delta_bic": 37.03829012787083,
+        "mean_primary_p": 0.0390510462481674,
+        "mean_quadratic_delta_bic": 17.597522493422613,
+        "significant_primary_p_lt_0_05": 2,
+        "significant_quadratic_p_lt_0_05": 1
+      }
+    }
+  }
+}

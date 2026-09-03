@@ -1,0 +1,6 @@
+synthetic self-test    : PASS
+exact_gap_draws_checked: 250
+baseline_identity_max_diff: 1.3877787807814457e-17
+holm_max_diff          : 0.0
+randomization_center_error: 0.0013132069297001059
+selected_pairs_eligible: True

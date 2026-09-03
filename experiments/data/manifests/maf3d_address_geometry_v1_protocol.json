@@ -1,0 +1,71 @@
+{
+  "baseline_commit": "d440b10",
+  "benchmark": {
+    "candidate_memory_policy": "build, benchmark, measure, destroy, and gc one candidate at a time",
+    "clock": "time.perf_counter_ns",
+    "payload": "small integer sentinel",
+    "query_count_per_size": 4096,
+    "query_stream": "fixed deterministic shuffled stream",
+    "repeats": 20
+  },
+  "candidates": {
+    "morton3d": "Morton/Z-order bit-interleaved 3D integer key",
+    "nested_dict_control": "route -> depth -> node nested dictionaries; control only",
+    "packed_integer": "Bit-packed integer encoding of the three coordinates",
+    "tuple_maf": "Python tuple (route_id, depth, node_id) used as a flat indexed key"
+  },
+  "coordinate_contract": {
+    "depth_bits": 5,
+    "generator": "deterministic unique logical coordinates; same coordinate/query stream for every candidate",
+    "morton_coordinate_bits": 21,
+    "morton_key_bits": 63,
+    "node_bits": 21,
+    "route_bits": 21
+  },
+  "execution_state": "No MAF-3D address-geometry benchmark has been run.",
+  "followup": "Winner becomes the physical address geometry for the neutral MAF-3D fractal prototype; native C++ confirmation is required before inference-critical optimization claims.",
+  "logical_coordinates": [
+    "route_id",
+    "depth",
+    "node_id"
+  ],
+  "metrics": [
+    "median_address_plus_lookup_ns",
+    "median_lookup_only_ns_where_separable",
+    "median_five_step_hierarchy_traversal_ns",
+    "build_ns",
+    "estimated_bytes_per_entry",
+    "lookup_correctness"
+  ],
+  "primary": {
+    "decision": "Prefer the fastest candidate that passes exact lookup correctness at every tested scale.",
+    "metric": "median_address_plus_lookup_ns",
+    "size": 1000000
+  },
+  "purpose": "Choose the physical address geometry for logical MAF-3D coordinates before inference implementation.",
+  "safety": [
+    "read existing tracked MAF evidence only",
+    "no model inference",
+    "no activation corpus analysis",
+    "no Forest dependency",
+    "no simultaneous million-entry candidate structures",
+    "progress must be visible during long loops"
+  ],
+  "schema": "openmind.maf3d.address_geometry_protocol.v1",
+  "secondary": {
+    "hierarchy_metric": "median_five_step_hierarchy_traversal_ns",
+    "memory_metric": "estimated_bytes_per_entry"
+  },
+  "selection_rule": {
+    "minimum_reportable_factor": 1.0,
+    "no_claim_without_measurement": true,
+    "speedup_factor": "baseline tuple_maf median / candidate median"
+  },
+  "sizes": [
+    1000,
+    10000,
+    100000,
+    1000000
+  ],
+  "status": "PREREGISTERED_DESIGN"
+}

@@ -1,0 +1,85 @@
+{
+  "artifacts": {
+    "binary": {
+      "bytes": 8344,
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1.bin",
+      "sha256": "da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902"
+    },
+    "geometry_json": {
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1_geometry.json",
+      "sha256": "d9e68155244708a1c0e8c24b05031b287feac8a5c841a7c0f6e2c7f7cd1e9038"
+    }
+  },
+  "geometry": {
+    "algorithm": "Orange greedy absolute-correlation grouping",
+    "complete_training_samples": 113,
+    "group_count": 32,
+    "group_size": 64,
+    "residual_vectors": 3955,
+    "training_signal": "adjacent-layer activation residuals"
+  },
+  "limitations": [
+    "Qualification currently covers Qwen2.5-3B Q4_K_M only.",
+    "The held-out evaluation contains eight prompts and 113 complete prompt-token trajectories.",
+    "The frozen geometry is trained on the complete validated corpus only after held-out algorithm qualification.",
+    "The artifact has not yet been used to modify authoritative model activations.",
+    "No end-to-end language-model quality or generation-speed claim is established by this freeze."
+  ],
+  "model": {
+    "embedding_dimension": 2048,
+    "name": "qwen2.5-3b-q4_k_m",
+    "path": "/data/data/com.termux/files/home/models/qwen2.5-3b-q4_k_m.gguf",
+    "sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+    "transformer_layers": 36
+  },
+  "next_gate": {
+    "name": "Forest V9A Live Shadow Retry",
+    "purpose": "Use this exact frozen Qwen-qualified geometry against a newly captured live activation.",
+    "requirements": [
+      "copy live activation into Forest-owned shadow memory",
+      "use frozen geometry without retraining",
+      "perform full 32/32-group reconstruction first",
+      "verify source activation remains byte-for-byte or numerically unchanged",
+      "verify standard llama generation remains authoritative"
+    ]
+  },
+  "qualification": {
+    "evaluation": "8-fold leave-one-prompt-out",
+    "evaluation_manifest": {
+      "path": "results/forest_v9a_orange_2048/forest_v9a_orange_2048.json",
+      "sha256": "841ba79a638b2800df3a9eb7ef9aa444f2a3e6135fb575819dc3054019ca5042"
+    },
+    "evaluation_result": {
+      "path": "results/forest_v9a_orange_2048/forest_v9a_orange_2048.txt",
+      "sha256": "63bc525ddd9214f4ea93dbe710abe11450b2a4568e69e975397ebac99caa85cc"
+    },
+    "nonoracle_control_gate": "Orange > Pine and Random",
+    "partial_access_fractions": [
+      0.125,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "result": "GENERALIZATION PASS",
+    "wins": "4/4"
+  },
+  "safety": {
+    "activation_mutation": false,
+    "attention_mutation": false,
+    "authoritative_inference": "standard llama.cpp",
+    "kv_cache_mutation": false,
+    "sampling_mutation": false,
+    "weight_mutation": false
+  },
+  "schema": "openmind.forest.qwen25_3b.v1",
+  "status": "qualified_frozen_candidate",
+  "training_corpus": {
+    "complete_samples": 113,
+    "manifest_path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_manifest.json",
+    "manifest_sha256": "babca920e2ebb777f6bd9207e1f4d33e64564d557df354ab665ae6d35b62d220",
+    "path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv",
+    "prompts": 8,
+    "rows": 4068,
+    "sha256": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8"
+  }
+}

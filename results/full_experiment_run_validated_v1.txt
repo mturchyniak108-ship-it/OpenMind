@@ -1,0 +1,190 @@
+============================================================
+ OPENMIND EXPERIMENT EXECUTION
+============================================================
+ROOT: /data/data/com.termux/files/home/OpenMind
+TIMEOUT: 300s
+TOTAL FILES: 88
+
+[RUN ] activation_recurrence.py
+      PASS         0.78s rc=0
+[RUN ] benchmark_maf.py
+      FAIL         0.11s rc=1
+[RUN ] benchmark_maf_advanced.py
+      FAIL         0.09s rc=1
+[RUN ] canonical_lattice_v21.py
+      PASS         0.05s rc=0
+[RUN ] closed_curve_spectrum_v18.py
+      PASS         7.33s rc=0
+[RUN ] crystal_lattice_v13.py
+      PASS         0.05s rc=0
+[RUN ] crystal_raw_lattice_v15.py
+      PASS         8.09s rc=0
+[RUN ] crystal_realization_v14.py
+      PASS        10.56s rc=0
+[RUN ] fractal_renormalization_v17.py
+      PASS         0.03s rc=0
+[RUN ] geometry_null_v28.py
+      PASS         2.30s rc=0
+[RUN ] geometry_order_null_v29.py
+      PASS         1.06s rc=0
+[RUN ] geometry_order_null_v30.py
+      PASS         1.05s rc=0
+[SKIP] geometry_order_null_v30_reference.py
+[RUN ] geometry_scaling_component_localization_test_v43.py
+      PASS        24.25s rc=0
+[RUN ] geometry_scaling_component_localization_test_v44.py
+      PASS       209.87s rc=0
+[RUN ] geometry_scaling_component_localization_test_v44_frozen.py
+      PASS       211.77s rc=0
+[RUN ] geometry_scaling_model_audit_v33.py
+      PASS         8.12s rc=0
+[SKIP] geometry_scaling_model_audit_v33_reference.py
+[RUN ] geometry_scaling_model_audit_v34.py
+      PASS        62.41s rc=0
+[RUN ] geometry_scaling_model_audit_v37.py
+      PASS         0.07s rc=0
+[RUN ] geometry_scaling_model_audit_v38.py
+      TIMEOUT    301.05s rc=None
+[SKIP] geometry_scaling_model_audit_v38_snapshot.py
+[RUN ] geometry_scaling_model_audit_v39.py
+      PASS       276.46s rc=0
+[SKIP] geometry_scaling_model_audit_v39_backup.py
+[SKIP] geometry_scaling_model_audit_v39_work.py
+[RUN ] geometry_scaling_model_audit_v40.py
+      PASS       283.43s rc=0
+[RUN ] geometry_scaling_transition_test_v41.py
+      PASS         3.65s rc=0
+[RUN ] geometry_scaling_transition_test_v42.py
+      PASS        25.93s rc=0
+[RUN ] geometry_scaling_v31.py
+      PASS        13.82s rc=0
+[RUN ] geometry_scaling_windows_v32.py
+      PASS        31.48s rc=0
+[RUN ] gguf_structural_v1.py
+      PASS         0.37s rc=0
+[RUN ] gguf_to_fractal.py
+      FAIL         0.17s rc=1
+[RUN ] hybrid_fractal.py
+      FAIL         0.10s rc=1
+[RUN ] hybrid_weighted.py
+      FAIL         0.11s rc=1
+[RUN ] inspect_gguf_header.py
+      PASS         0.26s rc=0
+[RUN ] lattice_recovery_v25.py
+      PASS         0.18s rc=0
+[RUN ] layer_similarity.py
+      PASS         4.84s rc=0
+[RUN ] local_environment_v26.py
+      PASS         2.54s rc=0
+[SKIP] maf_basic.cpp (C++)
+[RUN ] material_compatibility_v20.py
+      PASS         0.07s rc=0
+[RUN ] motif_graph_v19.py
+      PASS         0.04s rc=0
+[RUN ] normalized_geometry_v10.py
+      PASS         0.04s rc=0
+[RUN ] null_model_v23.py
+      PASS        47.38s rc=0
+[RUN ] parameter_divergence.py
+      PASS         3.79s rc=0
+[RUN ] parameter_fingerprint.py
+      PASS         1.61s rc=0
+[RUN ] periodicity_scan_v27.py
+      PASS        12.68s rc=0
+[RUN ] pi10Mcorrected.py
+      TIMEOUT    300.09s rc=None
+[RUN ] pi_benchmark.py
+      PASS         0.05s rc=0
+[RUN ] pi_benchmark_fixed.py
+      PASS         0.03s rc=0
+[RUN ] pi_full_pipeline.py
+      FAIL         0.10s rc=1
+[RUN ] pi_maf_10m_benchmark.py
+      TIMEOUT    301.39s rc=None
+[RUN ] pi_predictor_v2.py
+      PASS         0.24s rc=0
+[RUN ] pi_science_benchmark.py
+      FAIL         0.36s rc=1
+[RUN ] pi_waveform_fractal.py
+      PASS         0.26s rc=0
+[RUN ] q8_aware_divergence.py
+      PASS        11.01s rc=0
+[RUN ] q8_aware_divergence_v3.py
+      PASS        11.18s rc=0
+[RUN ] q8_component_coherence_v5.py
+      PASS         0.06s rc=0
+[RUN ] q8_cross_metric_v7.py
+      PASS         0.05s rc=0
+[RUN ] q8_parameter_field_v4.py
+      PASS        13.75s rc=0
+[RUN ] q8_parameter_field_v4_1.py
+      PASS         1.76s rc=0
+[RUN ] q8_phase_blind_discovery_v13.py
+      PASS         1.18s rc=0
+[RUN ] q8_phase_component_v8.py
+      PASS         0.09s rc=0
+[RUN ] q8_phase_detection_v6.py
+      PASS         0.08s rc=0
+[RUN ] q8_phase_region_discovery_v12.py
+      PASS        83.73s rc=0
+[RUN ] q8_phase_region_validation_v10.py
+      PASS         8.58s rc=0
+[RUN ] q8_phase_stability_v11.py
+      PASS         1.85s rc=0
+[RUN ] q8_phase_validation_v9.py
+      PASS         1.35s rc=0
+[RUN ] q8_structural_matched_targets_v14.py
+      PASS         0.17s rc=0
+[RUN ] q8_target_specificity_v15.py
+      PASS         2.10s rc=0
+[RUN ] recurrence_stability.py
+      PASS        25.97s rc=0
+[RUN ] recurrence_stability_v2.py
+      PASS         4.64s rc=0
+[RUN ] spatial_null_v24.py
+      PASS         2.42s rc=0
+[RUN ] structural_divergence_v1.py
+      PASS         0.03s rc=0
+[RUN ] structural_fingerprint.py
+      PASS         0.31s rc=0
+[RUN ] structural_lattice_v11.py
+      PASS         0.03s rc=0
+[RUN ] symmetry_spectrum_v16.py
+      PASS         0.06s rc=0
+[RUN ] threshold_robustness_v25.py
+      PASS         0.05s rc=0
+[RUN ] tie_experiment.py
+      FAIL         0.17s rc=1
+[RUN ] tie_hybrid_experiment.py
+      FAIL         0.10s rc=1
+[RUN ] tie_pi_experiment.py
+      PASS         0.13s rc=0
+[RUN ] topology_lattice_v22.py
+      PASS         0.05s rc=0
+[RUN ] transition_field_v5.py
+      PASS         0.05s rc=0
+[RUN ] transition_geometry_v6.py
+      PASS         0.05s rc=0
+[RUN ] transition_geometry_v9.py
+      PASS         0.04s rc=0
+[RUN ] transition_periodicity_v8.py
+      PASS         0.04s rc=0
+[RUN ] transition_recurrence_v7.py
+      PASS         0.04s rc=0
+[RUN ] unit_cell_v12.py
+      PASS         0.05s rc=0
+[SKIP] visualize_hybrid_basin.py
+
+============================================================
+ EXECUTION SUMMARY
+============================================================
+PASS       69
+FAIL       9
+TIMEOUT    3
+ERROR      0
+SKIPPED    7
+
+RESULTS:
+  results/experiment_summary.json
+  results/experiment_runs/*.log
+============================================================

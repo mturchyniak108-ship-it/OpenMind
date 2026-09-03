@@ -1,0 +1,55 @@
+====================================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V7 — SERIALIZED INDEXED PARTIAL READS
+====================================================================================================================================
+
+SERIALIZED FORMAT
+------------------------------------------------------------------------------------------------------------------------------------
+vectors                    : 364
+dimensions                 : 1536
+groups                     : 24
+group size                 : 64
+block bytes                : 68
+index entry bytes          : 16
+header bytes               : 56
+
+ACTUAL FILE STORAGE
+------------------------------------------------------------------------------------------------------------------------------------
+Pine file bytes            : 601272
+Orange file bytes          : 604344
+Orange minus Pine          : 3072
+Orange/Pine file ratio     : 1.005109169
+Pine index bytes           : 5824
+Orange index bytes         : 5824
+Orange map bytes           : 3072
+Pine router bytes          : 1344
+Orange router bytes        : 1344
+
+WARM INDEXED PARTIAL READ BENCHMARK
+------------------------------------------------------------------------------------------------------------------------------------
+request  pine_mean_ns orange_mean_ns orange/pine pine_bytes orange_bytes pine_p50_ns orange_p50_ns
+  0.125      16077.9        16059.8    0.998872      204.0        204.0     15989.0       15989.0
+  0.250      31451.6        31443.5    0.999741      408.0        408.0     31302.0       31250.0
+  0.500      62353.6        62387.4    1.000542      816.0        816.0     61979.0       62031.0
+  0.750      93297.2        93278.8    0.999802     1224.0       1224.0     92448.0       92448.0
+  1.000     135833.8       135880.6    1.000344     1632.0       1632.0    134896.0      135000.0
+
+SERIALIZATION VALIDATION
+------------------------------------------------------------------------------------------------------------------------------------
+Pine magic                 : PASS
+Orange magic               : PASS
+Pine item count            : PASS
+Orange item count          : PASS
+Orange map roundtrip       : PASS
+equal requested bytes      : PASS
+
+FOREST V7 DECISION
+------------------------------------------------------------------------------------------------------------------------------------
+result                     : REAL SERIALIZATION AND INDEXED READS EXECUTED
+
+INTERPRETATION BOUNDARY
+------------------------------------------------------------------------------------------------------------------------------------
+V7 writes real binary Pine and Orange artifacts and uses os.pread() for indexed terminal reads.
+Pine and Orange request the same quantized block bytes at each access fraction.
+The benchmark is warm/page-cache influenced and does not claim controlled cold-storage latency.
+The Orange geometry/router in V7 are trained on the full experimental residual set because V7 isolates serialization and access-engine cost.
+Held-out generalization remains established by Forest V4-V6, not by this storage benchmark.

@@ -1,0 +1,119 @@
+{
+  "artifacts": {
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/activation_vectors.csv": {
+      "bytes": 928311,
+      "sha256": "df7f42be963d411ee20b8f164c29ca777fe4cab9d4db0baa4cb299425bd2c681"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/activation_vectors_all_tokens.csv": {
+      "bytes": 14406899,
+      "sha256": "0f5f2654f3d083994c736cd8e3a28701235fce5d08c10925a81c8d323cbcafda"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/probe.stderr": {
+      "bytes": 69877,
+      "sha256": "cb00b751989685ad26d3122926482b526b4a61572ac931421c9fc13026b2ec59"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/probe.stdout": {
+      "bytes": 6120,
+      "sha256": "0f6f66053e212398ff676ef82b795d216053b7ddf6e4b20c75887680c22b7a36"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/run_audit.txt": {
+      "bytes": 1126,
+      "sha256": "b76c7154d7ff996424b35fe7c22b07cbfde505b68d74d446ca310af79147070c"
+    },
+    "/data/data/com.termux/files/home/OpenMind/results/qwen2048_external_prompt_replication_v1/R08/thermal_governor.txt": {
+      "bytes": 223,
+      "sha256": "036522d5c41e388fc28c9229c3871b0a17162b8cd71db298f62a1a29355ff0bc"
+    }
+  },
+  "capture_geometry": {
+    "complete_trajectories": 16,
+    "duplicate_layer_token_rows": 0,
+    "embedding_dimension": 2048,
+    "expected_rows": 576,
+    "final_vs_all_token_max_difference": 0.0,
+    "finite_vector_check": "PASS",
+    "layer_range": [
+      0,
+      35
+    ],
+    "layers": 36,
+    "rows": 576,
+    "token_index_zero_captured": true,
+    "token_index_zero_excluded_from_analysis": true,
+    "token_range": [
+      0,
+      15
+    ],
+    "tokens": 16
+  },
+  "execution": {
+    "capture_validation": "PASS",
+    "end": "2026-08-27T12:21:13-07:00",
+    "process_cleanup": "PASS",
+    "start": "2026-08-27T12:21:09-07:00",
+    "thermal_supervision": "PASS",
+    "wall_seconds": 3.449928,
+    "worker_exit": 0
+  },
+  "frozen_contracts": {
+    "capture_runtime_sha256": "18fb725e909bc3403f317c896772a011e77b97fbcf6f3052b2632a7e54f86e3f",
+    "capture_tool_sha256": "08916a959a91c44d881087da9118278694f2cc063cb608c1e30f047144408793",
+    "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "predecessor_artifacts_verified_before_capture": true,
+  "predecessor_captures": [
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R01_capture_v1.json",
+      "manifest_sha256": "866c3b0c18bc7ae5792ce534624c28caf5ce01fc6f05536eb4f730ba28e4659b",
+      "prompt_id": "R01"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R02_capture_v1.json",
+      "manifest_sha256": "409d40c2de0952519de74d975b5bb78bb3c4fc43c7af080579b0b9d18d004b0f",
+      "prompt_id": "R02"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R03_capture_v1.json",
+      "manifest_sha256": "b56e94fe3d586f2b3bc7157c762b58094d609e75383ff541414f8d61d7613c10",
+      "prompt_id": "R03"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R04_capture_v1.json",
+      "manifest_sha256": "ce8e84d6de6126b1a0b8804d83da5d784586ba3b56a4e9738f18f333f89e3e5a",
+      "prompt_id": "R04"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R05_capture_v1.json",
+      "manifest_sha256": "9c46864f89ff30d06f584d48182b5c1822266fcc2e739c5fadf2767be4db0339",
+      "prompt_id": "R05"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R06_capture_v1.json",
+      "manifest_sha256": "576ad34d649e139e5e8d5b0894db12bf4ce7e5f2db9f1c744e1097e67baa108c",
+      "prompt_id": "R06"
+    },
+    {
+      "manifest_path": "experiments/data/manifests/qwen2048_external_prompt_replication_R07_capture_v1.json",
+      "manifest_sha256": "df4c4bf50184b524dd529cf09deaae422573eaddec068a8db7cdb7648b9ccf1c",
+      "prompt_id": "R07"
+    }
+  ],
+  "prompt": {
+    "domain": "abstract systems reasoning",
+    "prompt": "A short rule repeated many times can create a pattern that becomes difficult to predict.",
+    "prompt_id": "R08"
+  },
+  "prompt_id": "R08",
+  "prompt_sha256": "8ef706c5703b7ac6064b426159dafb0dba143a0401279d51f5006b81e688603b",
+  "schema": "openmind.qwen2048_external_prompt_replication.capture.v1",
+  "scientific_boundary": [
+    "R01 through R08 activation captures are now observed.",
+    "All eight preregistered replication prompts have been captured.",
+    "No prospective replication recurrence statistic has been calculated.",
+    "No prospective gap-matched replication statistic has been calculated.",
+    "The frozen predecessor-derived reference topology has not been modified or retrained.",
+    "R01 through R07 artifacts were reverified before R08 capture.",
+    "The complete eight-prompt raw capture set must be frozen and audited before statistical analysis."
+  ],
+  "status": "CAPTURE_VALIDATED"
+}

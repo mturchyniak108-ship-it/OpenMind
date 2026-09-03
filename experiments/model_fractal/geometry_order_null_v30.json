@@ -1,0 +1,35 @@
+{
+  "schema": "openmind.geometry_order_null.v30",
+  "source": "experiments/model_fractal/q8_parameter_field_v4_1.json",
+  "layer_count": 28,
+  "component_dimension": 12,
+  "null_runs": 10000,
+  "seed": 28029,
+  "real": {
+    "mean_distance": 3.992959568568764,
+    "mean_cosine": 0.9097662367972446,
+    "median_distance": 0.7859365725483984,
+    "min_cosine": 0.6150342246871687,
+    "max_distance": 66.62561604733533
+  },
+  "null": {
+    "mean_distance": 7.390495526668669,
+    "std_distance": 0.7436402184102654,
+    "mean_cosine": 0.837419713113604,
+    "std_cosine": 0.021793425926771415,
+    "mean_median_distance": 1.30330578063553,
+    "std_median_distance": 0.15370046801353923,
+    "mean_min_cosine": 0.2510562929588122,
+    "std_min_cosine": 0.05464989580740199
+  },
+  "statistics": {
+    "distance_lower_tail_fraction": 0.0001,
+    "distance_empirical_p": 0.00019998000199980003,
+    "cosine_upper_tail_fraction": 0.0016,
+    "cosine_empirical_p": 0.0016998300169983002,
+    "distance_z": -4.568789952435694,
+    "cosine_z": 3.3196489586691778,
+    "distance_effect_size": 4.568789952435694,
+    "cosine_effect_size": 3.3196489586691778
+  }
+}

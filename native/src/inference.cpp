@@ -398,6 +398,453 @@ InferenceResult InferenceEngine::generate(
     return result;
 }
 
+std::vector<InferenceResult>
+InferenceEngine::generate_batch(
+    const std::vector<std::string>& prompts) {
+
+    if (!loaded()) {
+        throw std::runtime_error(
+            "OpenMind inference engine is not loaded");
+    }
+
+    if (prompts.empty()) {
+        throw std::invalid_argument(
+            "OpenMind inference batch is empty");
+    }
+
+    /*
+     * The llama context is shared runtime state. Serialize the batch
+     * transaction exactly as the existing stateless/session paths do.
+     *
+     * This is intentionally the first scheduler-compatible
+     * implementation: one caller owns the context, while multiple
+     * requests share llama_decode() calls.
+     */
+    std::lock_guard<std::mutex> lock(
+        impl_->inference_mutex);
+
+    llama_memory_t memory =
+        llama_get_memory(impl_->ctx);
+
+    /*
+     * Batch requests are independent/stateless.
+     */
+    llama_memory_clear(
+        memory,
+        true);
+
+    const auto total_start = Clock::now();
+
+    struct BatchRequest {
+        std::vector<llama_token> tokens;
+        llama_sampler* sampler = nullptr;
+        std::string output;
+        uint32_t generated = 0;
+        bool finished = false;
+
+        /*
+         * Index of the most recently produced logits for this request.
+         * Initially this points at the final token of the prompt batch.
+         * After each generation decode it points into that generation
+         * batch and is used for the next sampler step.
+         */
+        int32_t last_logits_index = -1;
+    };
+
+    std::vector<BatchRequest> requests;
+    requests.reserve(prompts.size());
+
+    /*
+     * Tokenize every request and create an independent sampler.
+     */
+    for (const auto& prompt : prompts) {
+        if (prompt.empty()) {
+            throw std::invalid_argument(
+                "OpenMind inference batch contains an empty prompt");
+        }
+
+        BatchRequest request;
+
+        const int n_prompt =
+            -llama_tokenize(
+                impl_->vocab,
+                prompt.c_str(),
+                prompt.size(),
+                nullptr,
+                0,
+                true,
+                true);
+
+        if (n_prompt <= 0) {
+            throw std::runtime_error(
+                "Failed to determine batch prompt token count");
+        }
+
+        request.tokens.resize(
+            static_cast<size_t>(n_prompt));
+
+        const int tokenized =
+            llama_tokenize(
+                impl_->vocab,
+                prompt.c_str(),
+                prompt.size(),
+                request.tokens.data(),
+                request.tokens.size(),
+                true,
+                true);
+
+        if (tokenized < 0) {
+            throw std::runtime_error(
+                "Batch prompt tokenization failed");
+        }
+
+        request.sampler =
+            llama_sampler_clone(impl_->sampler);
+
+        if (!request.sampler) {
+            for (auto& existing : requests) {
+                if (existing.sampler) {
+                    llama_sampler_free(existing.sampler);
+                }
+            }
+
+            throw std::runtime_error(
+                "OpenMind batch sampler clone failed");
+        }
+
+        requests.push_back(std::move(request));
+    }
+
+    /*
+     * Make sure the complete prompt batch fits in n_batch.
+     */
+    size_t total_prompt_tokens = 0;
+
+    for (const auto& request : requests) {
+        total_prompt_tokens += request.tokens.size();
+    }
+
+    const uint32_t batch_capacity =
+        llama_n_batch(impl_->ctx);
+
+    if (total_prompt_tokens >
+        static_cast<size_t>(batch_capacity)) {
+
+        for (auto& request : requests) {
+            if (request.sampler) {
+                llama_sampler_free(request.sampler);
+            }
+        }
+
+        throw std::runtime_error(
+            "OpenMind inference batch exceeds n_batch capacity");
+    }
+
+    const auto prompt_start = Clock::now();
+
+    /*
+     * One llama_batch contains every prompt.
+     *
+     * Each request gets its own sequence ID. Since this is a
+     * stateless batch, sequence IDs are temporary and are cleared
+     * with the memory after the transaction.
+     */
+    llama_batch batch =
+        llama_batch_init(
+            static_cast<int32_t>(total_prompt_tokens),
+            0,
+            static_cast<int32_t>(requests.size()));
+
+    size_t batch_index = 0;
+    int32_t prompt_logits_index = 0;
+
+    for (size_t request_index = 0;
+         request_index < requests.size();
+         ++request_index) {
+
+        const auto& tokens =
+            requests[request_index].tokens;
+
+        for (size_t token_index = 0;
+             token_index < tokens.size();
+             ++token_index) {
+
+            batch.token[batch_index] =
+                tokens[token_index];
+
+            batch.pos[batch_index] =
+                static_cast<llama_pos>(token_index);
+
+            batch.n_seq_id[batch_index] = 1;
+
+            batch.seq_id[batch_index][0] =
+                static_cast<llama_seq_id>(request_index);
+
+            batch.logits[batch_index] =
+                (token_index + 1 == tokens.size())
+                    ? 1
+                    : 0;
+
+            if (token_index + 1 == tokens.size()) {
+                requests[request_index].last_logits_index =
+                    static_cast<int32_t>(batch_index);
+
+            }
+
+            ++batch_index;
+        }
+    }
+
+    batch.n_tokens =
+        static_cast<int32_t>(batch_index);
+
+    if (llama_decode(
+            impl_->ctx,
+            batch) != 0) {
+
+        llama_batch_free(batch);
+
+        for (auto& request : requests) {
+            if (request.sampler) {
+                llama_sampler_free(request.sampler);
+            }
+        }
+
+        throw std::runtime_error(
+            "llama_decode(batch prompt) failed");
+    }
+
+    llama_batch_free(batch);
+
+    const auto prompt_end = Clock::now();
+
+    /*
+     * Autoregressive generation.
+     *
+     * Every active request contributes one token to the next
+     * llama_batch. This is the critical micro-batching behavior:
+     * one GPU decode operation services multiple requests.
+     */
+    const auto generation_start = Clock::now();
+
+    for (uint32_t step = 0;
+         step < impl_->config.max_tokens;
+         ++step) {
+
+        size_t active_count = 0;
+
+        for (const auto& request : requests) {
+            if (!request.finished) {
+                ++active_count;
+            }
+        }
+
+        if (active_count == 0) {
+            break;
+        }
+
+        llama_batch generation_batch =
+            llama_batch_init(
+                static_cast<int32_t>(active_count),
+                0,
+                static_cast<int32_t>(requests.size()));
+
+        size_t output_index = 0;
+
+        for (size_t request_index = 0;
+             request_index < requests.size();
+             ++request_index) {
+
+            auto& request =
+                requests[request_index];
+
+            if (request.finished) {
+                continue;
+            }
+
+            if (request.last_logits_index < 0) {
+                llama_batch_free(generation_batch);
+
+                for (auto& cleanup : requests) {
+                    if (cleanup.sampler) {
+                        llama_sampler_free(cleanup.sampler);
+                        cleanup.sampler = nullptr;
+                    }
+                }
+
+                throw std::runtime_error(
+                    "Batch request has no valid logits index");
+            }
+
+            const llama_token token =
+                llama_sampler_sample(
+                    request.sampler,
+                    impl_->ctx,
+                    request.last_logits_index);
+
+            if (llama_vocab_is_eog(
+                    impl_->vocab,
+                    token)) {
+
+                request.finished = true;
+                continue;
+            }
+
+            char piece[256];
+
+            const int n =
+                llama_token_to_piece(
+                    impl_->vocab,
+                    token,
+                    piece,
+                    sizeof(piece),
+                    0,
+                    true);
+
+            if (n < 0) {
+                llama_batch_free(generation_batch);
+
+                for (auto& cleanup : requests) {
+                    if (cleanup.sampler) {
+                        llama_sampler_free(cleanup.sampler);
+                    }
+                }
+
+                throw std::runtime_error(
+                    "Batch token-to-piece conversion failed");
+            }
+
+            request.output.append(
+                piece,
+                static_cast<size_t>(n));
+
+            ++request.generated;
+
+            generation_batch.token[output_index] =
+                token;
+
+            generation_batch.pos[output_index] =
+                static_cast<llama_pos>(
+                    request.tokens.size() +
+                    request.generated -
+                    1);
+
+            generation_batch.n_seq_id[output_index] = 1;
+
+            generation_batch.seq_id[output_index][0] =
+                static_cast<llama_seq_id>(request_index);
+
+            generation_batch.logits[output_index] = 1;
+
+            request.last_logits_index =
+                static_cast<int32_t>(output_index);
+
+            ++output_index;
+        }
+
+        if (output_index == 0) {
+            llama_batch_free(generation_batch);
+            break;
+        }
+
+        generation_batch.n_tokens =
+            static_cast<int32_t>(output_index);
+
+        if (llama_decode(
+                impl_->ctx,
+                generation_batch) != 0) {
+
+            llama_batch_free(generation_batch);
+
+            for (auto& request : requests) {
+                if (request.sampler) {
+                    llama_sampler_free(request.sampler);
+                }
+            }
+
+            throw std::runtime_error(
+                "llama_decode(batch generation) failed");
+        }
+
+        llama_batch_free(generation_batch);
+    }
+
+    const auto generation_end = Clock::now();
+    const auto total_end = Clock::now();
+
+    std::vector<InferenceResult> results;
+    results.reserve(requests.size());
+
+    const double prompt_ms =
+        elapsed_ms(
+            prompt_start,
+            prompt_end);
+
+    const double generation_ms =
+        elapsed_ms(
+            generation_start,
+            generation_end);
+
+    const double total_ms =
+        elapsed_ms(
+            total_start,
+            total_end);
+
+    for (auto& request : requests) {
+        InferenceResult result;
+
+        result.text =
+            std::move(request.output);
+
+        result.metrics.model_load_ms =
+            impl_->model_load_ms;
+
+        result.metrics.prompt_tokens =
+            static_cast<uint32_t>(
+                request.tokens.size());
+
+        result.metrics.generated_tokens =
+            request.generated;
+
+        result.metrics.prompt_eval_ms =
+            prompt_ms;
+
+        result.metrics.generation_ms =
+            generation_ms;
+
+        result.metrics.total_ms =
+            total_ms;
+
+        if (prompt_ms > 0.0) {
+            result.metrics.prompt_tokens_per_second =
+                (static_cast<double>(
+                    request.tokens.size()) /
+                 prompt_ms) *
+                1000.0;
+        }
+
+        if (generation_ms > 0.0) {
+            result.metrics.generation_tokens_per_second =
+                (static_cast<double>(
+                    request.generated) /
+                 generation_ms) *
+                1000.0;
+        }
+
+        results.push_back(
+            std::move(result));
+
+        if (request.sampler) {
+            llama_sampler_free(
+                request.sampler);
+
+            request.sampler = nullptr;
+        }
+    }
+
+    return results;
+}
+
 InferenceResult InferenceEngine::generate_session(
     const std::string& prompt,
     int32_t seq_id,

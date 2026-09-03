@@ -1,0 +1,115 @@
+{
+  "boundaries": [
+    "offline shadow analysis only",
+    "no model execution",
+    "no layer skipping",
+    "no inference mutation",
+    "no Forest retraining"
+  ],
+  "budgets": {
+    "16": {
+      "enrichment": 0.0020052782178415773,
+      "gap_baseline": 0.7445921728747098,
+      "selected_score": 0.7465974510925514
+    },
+    "24": {
+      "enrichment": 0.0009075588867819562,
+      "gap_baseline": 0.882371294110819,
+      "selected_score": 0.883278852997601
+    },
+    "32": {
+      "enrichment": -1.422339042100873e-06,
+      "gap_baseline": 0.9999766276845605,
+      "selected_score": 0.9999752053455184
+    },
+    "4": {
+      "enrichment": 0.01296862936024934,
+      "gap_baseline": 0.45500218868856174,
+      "selected_score": 0.4679708180488111
+    },
+    "8": {
+      "enrichment": 0.005757715304023803,
+      "gap_baseline": 0.5702701051217036,
+      "selected_score": 0.5760278204257274
+    }
+  },
+  "full_access_sanity": {
+    "budget": 32,
+    "enrichment": -1.422339042100873e-06,
+    "gap_baseline": 0.9999766276845605,
+    "selected_score": 0.9999752053455184
+  },
+  "pair_count": 630,
+  "primary": {
+    "budgets": [
+      4,
+      8,
+      16,
+      24
+    ],
+    "enrichment": 0.005409795442224197,
+    "gap_baseline": 0.6630589401989485,
+    "pass": false,
+    "selected_score": 0.6684687356411727
+  },
+  "prompt_count": 8,
+  "prompt_primary": {
+    "R01": {
+      "enrichment": 0.003015415656754006,
+      "gap_baseline": 0.6610675874673889,
+      "selected_score": 0.6640830031241429
+    },
+    "R02": {
+      "enrichment": 0.006195631479646191,
+      "gap_baseline": 0.6596304661683012,
+      "selected_score": 0.6658260976479474
+    },
+    "R03": {
+      "enrichment": 0.0045447684885993045,
+      "gap_baseline": 0.67518249753428,
+      "selected_score": 0.6797272660228793
+    },
+    "R04": {
+      "enrichment": 0.005589674547042289,
+      "gap_baseline": 0.6548619472000329,
+      "selected_score": 0.6604516217470752
+    },
+    "R05": {
+      "enrichment": 0.004730147942098584,
+      "gap_baseline": 0.6582409560154515,
+      "selected_score": 0.6629711039575501
+    },
+    "R06": {
+      "enrichment": 0.003926579910718653,
+      "gap_baseline": 0.660179017616514,
+      "selected_score": 0.6641055975272326
+    },
+    "R07": {
+      "enrichment": 0.010659841430109562,
+      "gap_baseline": 0.6578556822415456,
+      "selected_score": 0.6685155236716551
+    },
+    "R08": {
+      "enrichment": 0.00461630408282554,
+      "gap_baseline": 0.677453367348074,
+      "selected_score": 0.6820696714308996
+    }
+  },
+  "randomization": {
+    "draws": 10000,
+    "empirical_p": 0.1473852614738526,
+    "exceedances": 1473,
+    "null_mean": -1.5773432986223477e-05,
+    "null_sd": 0.005064910814456779,
+    "seed": 48311
+  },
+  "robustness": {
+    "all_partial_budgets_positive": true,
+    "pass": true,
+    "positive_prompts": 8,
+    "required_positive_prompts": 7
+  },
+  "schema": "openmind.forest.recurrence_bridge.result.v1",
+  "selected_pair_count": 50,
+  "status": "PRIMARY_FAIL"
+}

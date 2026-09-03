@@ -1,0 +1,64 @@
+============================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V5 — NON-ORACLE LAYER-CONDITIONED ROUTING
+============================================================================================================================
+
+ROUTING CONTRACT
+----------------------------------------------------------------------------------------------------------------------------
+Orange wedge geometry is learned from training tokens only.
+The router ranks wedges using mean training energy conditioned only on layer index.
+Held-out residual values are never inspected before wedge selection.
+Orange Oracle remains only as an upper-bound control.
+
+FOLD RESULTS
+----------------------------------------------------------------------------------------------------------------------------
+
+FOLD 1
+  held-out tokens           : 3,7,10,12
+  request  pine_router random_router orange_router orange_oracle orange/pine oracle_fraction
+    0.125 0.347218667   0.337741729   0.437313640   0.444719762 1.259476178    0.983346541
+    0.250 0.474950155   0.467397645   0.562989434   0.591391984 1.185365300    0.951973393
+    0.500 0.673105600   0.689532266   0.751879368   0.785200239 1.117030327    0.957563856
+    0.750 0.840580180   0.857384357   0.890883007   0.913579117 1.059842985    0.975156930
+
+FOLD 2
+  held-out tokens           : 1,8,13
+  request  pine_router random_router orange_router orange_oracle orange/pine oracle_fraction
+    0.125 0.353158757   0.376486032   0.466321330   0.520181721 1.320429753    0.896458510
+    0.250 0.513929626   0.503577400   0.585667656   0.646868350 1.139587263    0.905389259
+    0.500 0.712963102   0.722937007   0.794001399   0.817668881 1.113664083    0.971054931
+    0.750 0.867387634   0.874662476   0.919527626   0.932471991 1.060111523    0.986118227
+
+FOLD 3
+  held-out tokens           : 2,4,6
+  request  pine_router random_router orange_router orange_oracle orange/pine oracle_fraction
+    0.125 0.354484268   0.339285030   0.395763418   0.424291132 1.116448469    0.932763823
+    0.250 0.472885678   0.475671188   0.513631513   0.568760855 1.086164240    0.903071139
+    0.500 0.663056271   0.681312016   0.735485945   0.764548453 1.109236089    0.961987355
+    0.750 0.837318031   0.854714401   0.887413277   0.907062623 1.059828218    0.978337388
+
+FOLD 4
+  held-out tokens           : 5,9,11
+  request  pine_router random_router orange_router orange_oracle orange/pine oracle_fraction
+    0.125 0.369686266   0.361467926   0.404699058   0.424545580 1.094709475    0.953252319
+    0.250 0.493697212   0.486925345   0.523985847   0.560674184 1.061350630    0.934563891
+    0.500 0.685521432   0.700072954   0.717719159   0.760167361 1.046968228    0.944159399
+    0.750 0.843889947   0.867577050   0.887209765   0.907540756 1.051333493    0.977597710
+
+CROSS-FOLD SUMMARY
+----------------------------------------------------------------------------------------------------------------------------
+request  pine_energy random_energy orange_router orange_oracle orange/pine orange/random router/oracle fold_wins
+  0.125 0.356136990   0.353745179   0.426024362   0.453434549 1.196237330   1.204325562   0.939549849    4/4
+  0.250 0.488865668   0.483392895   0.546568612   0.591923843 1.118034356   1.130692276   0.923376577    4/4
+  0.500 0.683661601   0.698463561   0.749771468   0.781896233 1.096699693   1.073458244   0.958914285    4/4
+  0.750 0.847293948   0.863584571   0.896258419   0.915163622 1.057789237   1.037835146   0.979342270    4/4
+
+FOREST V5 DECISION
+----------------------------------------------------------------------------------------------------------------------------
+result                     : NON-ORACLE ORANGE ROUTING PASSES
+
+INTERPRETATION BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+V5 uses only layer identity and statistics learned from training tokens to select wedges.
+It does not inspect held-out residual energy before routing.
+The Orange Oracle is retained only to measure how much routing headroom remains.
+No quantization, serialization, mmap, or wall-clock access benchmark is included.

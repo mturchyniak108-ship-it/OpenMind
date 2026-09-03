@@ -1,0 +1,192 @@
+{
+  "canonical_manifest": {
+    "path": "experiments/data/manifests/qwen25_3b_multi_prompt_2048_canonical_v1.json",
+    "sha256": "7f7e4d2079f4808fb9492a6fb81271d4a8d740523eb0426523377354dd390cca"
+  },
+  "corpus": {
+    "complete_trajectories": 113,
+    "dimensions": 2048,
+    "layers": 36,
+    "path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv",
+    "prompts": 8,
+    "sha256": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8",
+    "t00_excluded_trajectories": 105
+  },
+  "engineering_smoke": {
+    "permutations": 100,
+    "purpose": "runtime, implementation, schema, thermal and leakage validation only",
+    "scientific_result": false
+  },
+  "exclude_token_index": 0,
+  "heldout_protocol": {
+    "splits": [
+      {
+        "heldout_prompt": "P01",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P01",
+        "training_prompts": [
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P02",
+        "heldout_trajectories_t00_excluded": 11,
+        "split_id": "LOPO_P02",
+        "training_prompts": [
+          "P01",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 94
+      },
+      {
+        "heldout_prompt": "P03",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P03",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P04",
+        "heldout_trajectories_t00_excluded": 16,
+        "split_id": "LOPO_P04",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 89
+      },
+      {
+        "heldout_prompt": "P05",
+        "heldout_trajectories_t00_excluded": 12,
+        "split_id": "LOPO_P05",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 93
+      },
+      {
+        "heldout_prompt": "P06",
+        "heldout_trajectories_t00_excluded": 14,
+        "split_id": "LOPO_P06",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 91
+      },
+      {
+        "heldout_prompt": "P07",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P07",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P08",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P08",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07"
+        ],
+        "training_trajectories_t00_excluded": 92
+      }
+    ],
+    "type": "leave-one-prompt-out"
+  },
+  "layer_pairs": 630,
+  "primary_endpoint": {
+    "alternative": "observed >= null",
+    "empirical_p": "(exceedances + 1) / (permutations + 1)",
+    "final_permutations": 1000,
+    "metric": "mean held-out delta across the 50 training-selected layer pairs",
+    "null": "shared within-heldout-prompt token-label permutation",
+    "permutation_preserves": "one common token permutation across all 50 selected pairs",
+    "seed": 1337,
+    "split_seed": "1337 + zero-based heldout split index"
+  },
+  "primary_experiment_pass": {
+    "requirement": "all 8 leave-one-prompt-out splits pass the primary split gate"
+  },
+  "primary_split_pass": {
+    "empirical_p": "<= 0.01",
+    "observed_selected_mean_delta": "> 0"
+  },
+  "schema": "openmind.qwen2048_lopo_recurrence.v1",
+  "scientific_boundaries": [
+    "The protocol is frozen before any held-out topology result is inspected.",
+    "Training selection for each split must use exactly seven prompts.",
+    "The held-out prompt must not influence layer-pair selection.",
+    "Token labels are permuted only inside the held-out prompt.",
+    "Token indices are not matched across different prompts.",
+    "Token index 0 is excluded before all statistics.",
+    "The 100-permutation smoke run is not scientific evidence.",
+    "Only the preregistered 1000-permutation run may satisfy the final experiment gate."
+  ],
+  "secondary_endpoints": [
+    "Spearman rank correlation between training pair score and held-out pair delta across all 630 layer pairs",
+    "held-out selected-top50 mean delta minus held-out all-pair mean delta",
+    "fraction of selected held-out pairs with positive delta"
+  ],
+  "status": "PREREGISTERED",
+  "training_statistic": {
+    "heldout_prompt_used_for_selection": false,
+    "pair_training_score": "mean per-prompt delta across the seven training prompts",
+    "per_prompt_delta": "mean same-token cosine minus mean cross-token cosine",
+    "selection": "descending training score",
+    "top_k": 50
+  },
+  "trajectory_unit": [
+    "prompt_id",
+    "token_index"
+  ]
+}

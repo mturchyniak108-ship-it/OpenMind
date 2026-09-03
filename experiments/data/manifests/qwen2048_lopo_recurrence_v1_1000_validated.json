@@ -1,0 +1,66 @@
+{
+  "artifacts": {
+    "canonical": "experiments/data/manifests/qwen25_3b_multi_prompt_2048_canonical_v1.json",
+    "corpus": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv",
+    "engine": "experiments/model_fractal/qwen2048_lopo_recurrence_v1.py",
+    "engine_audit": "experiments/data/manifests/qwen2048_lopo_engine_audit_v1.json",
+    "governor_trace": "results/runtime/qwen2048_lopo_1000_governor.txt",
+    "protocol": "experiments/data/manifests/qwen2048_lopo_recurrence_v1_protocol.json",
+    "result": "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.txt",
+    "result_json": "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.json",
+    "run_audit": "results/runtime/qwen2048_lopo_1000_run_audit.txt",
+    "stderr": "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.stderr"
+  },
+  "experiment": "Qwen2.5-3B 2048-dimensional leave-one-prompt-out representation recurrence",
+  "interpretation_boundary": [
+    "The preregistered primary LOPO recurrence hypothesis passed on all eight held-out prompts.",
+    "This establishes prompt-generalizing same-token recurrence within the training-selected layer topology.",
+    "The training-selected top-50 sets are concentrated at short layer gaps, especially gaps 1 through 4.",
+    "Therefore this experiment does not by itself establish topology information beyond generic layer-distance decay.",
+    "A separately preregistered gap-matched control is required before making that stronger claim."
+  ],
+  "primary_result": {
+    "mean_null_delta": -0.0008044744840839137,
+    "mean_selected_delta": 0.5441661996620428,
+    "mean_z": 11.099502847271294,
+    "minimum_empirical_p": 0.000999000999000999,
+    "permutations_per_split": 1000,
+    "seed": 1337,
+    "split_passes": 8,
+    "splits": 8,
+    "top_k": 50,
+    "total_null_draws": 8000,
+    "zero_exceedance_splits": 8
+  },
+  "schema": "openmind.qwen2048_lopo_recurrence.validated.v1",
+  "secondary_summary": {
+    "all_selected_pairs_positive_splits": 8,
+    "max_selected_delta": 0.5771447472852519,
+    "max_selected_enrichment": 0.25672577490304754,
+    "max_spearman": 0.9973706156982004,
+    "max_z": 13.441058559817497,
+    "mean_null_delta": -0.0008044744840839137,
+    "mean_selected_delta": 0.5441661996620428,
+    "mean_selected_enrichment": 0.24953331045519114,
+    "mean_spearman": 0.9929564964290424,
+    "mean_z": 11.099502847271294,
+    "min_selected_delta": 0.5224714342476529,
+    "min_selected_enrichment": 0.24207171343913203,
+    "min_spearman": 0.9896491358782773,
+    "min_z": 9.906248731975843,
+    "zero_exceedance_splits": 8
+  },
+  "sha256": {
+    "experiments/data/manifests/qwen2048_lopo_engine_audit_v1.json": "5e23d967f4f4567a918c3b23490e3f9d5638e0d1f09f82dfc20aba46db38fc54",
+    "experiments/data/manifests/qwen2048_lopo_recurrence_v1_protocol.json": "2998b68c4b08f850487db3f82478c9e6ee4615c10795866da17367899ec2dd81",
+    "experiments/data/manifests/qwen25_3b_multi_prompt_2048_canonical_v1.json": "7f7e4d2079f4808fb9492a6fb81271d4a8d740523eb0426523377354dd390cca",
+    "experiments/model_fractal/qwen2048_lopo_recurrence_v1.py": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7",
+    "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8",
+    "results/runtime/qwen2048_lopo_1000_governor.txt": "826a80f272891b21754d083cc9b14b4a3e277041f77efaa251d196296d516d41",
+    "results/runtime/qwen2048_lopo_1000_run_audit.txt": "87516aec41ff0692841e55c2924ab5bb0e44a24f632acdd802733ec900041ea8",
+    "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.json": "d599c0af7b87b2d636a11b8f02e5292d8e276a327743e5e73e451e8fc0fab975",
+    "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.txt": "b6f9a1450b01a83a3a1883dc27f8edc0658f86824cb27c5aa4b491e48e273d65"
+  },
+  "status": "VALIDATED_PASS"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "openmind.forest.recurrence_bridge.analysis_contract.v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "protocol_commit": "91bf252",
+  "clarification_commit": "0cd3f90",
+
+  "delta_semantics": {
+    "activation_input": "L2-normalized prospective tensor after T00 exclusion",
+    "delta": "target_layer - source_layer",
+    "forest_codec_input": "delta cast to float32"
+  },
+
+  "partial_reconstruction": {
+    "group_order": "first K groups from frozen OMFRST01 global_ranking",
+    "unselected_dimensions": "zero",
+    "quantization": "C++-equivalent BLOCK_INT8_64",
+    "rounding": "lround half away from zero",
+    "cosine": "float32 source delta versus float32 reconstruction"
+  },
+
+  "aggregation": {
+    "token": "mean cosine within each prompt/pair/budget",
+    "prompt_weighting": "equal",
+    "pair_weighting": "equal",
+    "primary_budgets": [4, 8, 16, 24],
+    "full_32_group_result": "reported as reconstruction sanity only"
+  },
+
+  "enrichment": {
+    "baseline": "deterministic exact-gap-weighted mean over the complete canonical pair universe",
+    "observed": "50-pair selected score minus deterministic gap baseline",
+    "random_draw": "one exact-gap-matched 50-pair set scored across all prompts",
+    "empirical_p": "(1 + draws >= observed enrichment) / (10000 + 1)"
+  },
+
+  "robustness": {
+    "all_partial_budgets_positive": "selected minus exact-gap baseline > 0 at each of 4,8,16,24 groups",
+    "positive_prompts": "selected minus exact-gap baseline > 0 for at least 7 of 8 prompts"
+  },
+
+  "execution_state": "No bridge outcome statistic has been computed."
+}

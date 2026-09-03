@@ -1,5 +1,9 @@
 # OpenMind AI Agent Documentation
 
+<!-- OPENMIND:CURRENT-WORK-LINK:START -->
+Current scientific work: [`../research/CURRENT_WORK.md`](../research/CURRENT_WORK.md).
+<!-- OPENMIND:CURRENT-WORK-LINK:END -->
+
 ## Purpose
 
 This directory contains machine-readable documentation for AI agents, repository scrapers, coding agents, and maintainers.
@@ -121,3 +125,39 @@ TruthPath represents a candidate route between semantic start and end nodes.
 PathWeight represents the confidence and cost of a candidate route.
 
 Natural-language expressions should reference semantic truths rather than creating separate truths for every language.
+
+## Phase 6B MAF Agent Rules
+
+AI collaborators working on Phase 6B must preserve these boundaries:
+
+- treat the canonical active-generation record as current-generation authority;
+- treat the immutable generation descriptor as logical-to-physical mapping authority;
+- treat Resident PK Directory state as derived and rebuildable;
+- never synthesize logical PK identity from path, position, filename, or ordering;
+- require current physical validation before resident snapshot publication;
+- reject stale generation expectations rather than silently serving old state;
+- preserve the prior valid resident snapshot when replacement construction fails;
+- keep successful resident lookup free of JSON parsing, manifest scanning, filesystem discovery, and linear descriptor scans;
+- preserve source-GGUF independence for resident directory construction and lookup;
+- do not claim measured average O(1) performance until benchmark evidence exists;
+- do not infer Segment Reader, MAF-native compute, inference replacement, storage-engine selection, or Phase 6C completion from Phase 6B.9 implementation alone;
+- do not rerun exact-once validation runners after frozen raw evidence exists.
+
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-DOCS-AI-README-MD:START -->
+## Proposed query-scoped MAF execution architecture
+
+OpenMind now tracks a proposed **Phase 6D-Q** research direction in which an
+input is compiled into a bounded PK working set over canonical MAFDB objects.
+
+The proposed design separates canonical MAFDB authority from a temporary
+Query-Scoped MAF Capsule and a persistent derived Query Route Cache. A query may
+start from an initial PK set, expand deterministically when required, answer,
+release its temporary working state, and retain only compact reusable route
+metadata for future exact or similar queries.
+
+This is a roadmap architecture, **not a validated inference capability**.
+Selective sufficiency, object/tensor avoidance, output parity, route reuse, and
+performance all require separate prospective experiments.
+
+Architecture document: `../../experiments/model_fractal/MAF_QUERY_SCOPED_WORKING_SET_ARCHITECTURE.md`
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-DOCS-AI-README-MD:END -->

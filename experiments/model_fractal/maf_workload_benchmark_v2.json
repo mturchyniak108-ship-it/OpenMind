@@ -1,0 +1,1106 @@
+{
+  "format": "openmind.maf_workload_benchmark.v2",
+  "source": {
+    "path": "/data/data/com.termux/files/home/qwen2.5-coder-q8_0.gguf",
+    "sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+    "bytes": 1894532160
+  },
+  "benchmark": {
+    "seed": 20260825,
+    "repeats": 5,
+    "requests_per_workload": 1000,
+    "read_sizes": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "tensor_count": 339
+  },
+  "results": {
+    "random": {
+      "64": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5867.721,
+            "median_ns": 5782.0,
+            "p95_ns": 10938.0,
+            "p99_ns": 11458.0,
+            "min_ns": 156,
+            "max_ns": 78438,
+            "requests_per_second": 170423.9175652694
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6561.0738,
+            "median_ns": 6354.0,
+            "p95_ns": 11979.0,
+            "p99_ns": 12657.510000000011,
+            "min_ns": 156,
+            "max_ns": 95000,
+            "requests_per_second": 152414.07587885993
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 167.5556,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 3490,
+            "requests_per_second": 5968168.178204727
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 159.8408,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 15260,
+            "requests_per_second": 6256224.9438191
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 144.8088,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 5261,
+            "requests_per_second": 6905657.6672135955
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 149.1938,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 260.0,
+            "min_ns": 104,
+            "max_ns": 625,
+            "requests_per_second": 6702691.398704235
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1596.161,
+            "median_ns": 1510.0,
+            "p95_ns": 2083.0,
+            "p99_ns": 3125.0,
+            "min_ns": 260,
+            "max_ns": 27448,
+            "requests_per_second": 626503.2161542601
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 338.245,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 65781,
+            "requests_per_second": 2956436.902245414
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 326.3662,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 31458,
+            "requests_per_second": 3064042.7838421995
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6090.7426,
+            "median_ns": 5990.0,
+            "p95_ns": 11145.05,
+            "p99_ns": 11615.0,
+            "min_ns": 364,
+            "max_ns": 78646,
+            "requests_per_second": 164183.5923258356
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6755.021,
+            "median_ns": 6536.5,
+            "p95_ns": 12136.0,
+            "p99_ns": 12864.0,
+            "min_ns": 365,
+            "max_ns": 98646,
+            "requests_per_second": 148038.02978554767
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 394.6154,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 312,
+            "max_ns": 62396,
+            "requests_per_second": 2534112.961633023
+          }
+        },
+        "checksums": {
+          "linear": 10907,
+          "nested": 10907,
+          "indexed": 10907
+        }
+      },
+      "256": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5836.0304,
+            "median_ns": 5782.0,
+            "p95_ns": 10937.0,
+            "p99_ns": 11458.0,
+            "min_ns": 156,
+            "max_ns": 18438,
+            "requests_per_second": 171349.34732348207
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6497.8368,
+            "median_ns": 6354.0,
+            "p95_ns": 11979.0,
+            "p99_ns": 12657.0,
+            "min_ns": 156,
+            "max_ns": 29323,
+            "requests_per_second": 153897.37089118644
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 167.5102,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 313,
+            "requests_per_second": 5969785.720511348
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 153.2888,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 5052,
+            "requests_per_second": 6523633.820605288
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 141.0004,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7092178.4619050715
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 145.018,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 4636,
+            "requests_per_second": 6895695.706739853
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1484.6946,
+            "median_ns": 1459.0,
+            "p95_ns": 1563.0,
+            "p99_ns": 1875.0,
+            "min_ns": 260,
+            "max_ns": 9948,
+            "requests_per_second": 673539.191157562
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 323.4318,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 5781,
+            "requests_per_second": 3091841.9277263395
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 317.2298,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 677,
+            "requests_per_second": 3152288.9715909413
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6061.8116,
+            "median_ns": 5990.0,
+            "p95_ns": 11145.0,
+            "p99_ns": 11615.0,
+            "min_ns": 364,
+            "max_ns": 34271,
+            "requests_per_second": 164967.18571722024
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6667.4504,
+            "median_ns": 6511.0,
+            "p95_ns": 12136.0,
+            "p99_ns": 12813.0,
+            "min_ns": 364,
+            "max_ns": 26719,
+            "requests_per_second": 149982.36807280936
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 371.8338,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 312,
+            "max_ns": 521,
+            "requests_per_second": 2689373.5857256656
+          }
+        },
+        "checksums": {
+          "linear": 54879,
+          "nested": 54879,
+          "indexed": 54879
+        }
+      },
+      "1024": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5854.8248,
+            "median_ns": 5782.0,
+            "p95_ns": 10937.0,
+            "p99_ns": 11458.0,
+            "min_ns": 156,
+            "max_ns": 32968,
+            "requests_per_second": 170799.3038493654
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6513.4158,
+            "median_ns": 6354.0,
+            "p95_ns": 11979.0,
+            "p99_ns": 12656.01,
+            "min_ns": 156,
+            "max_ns": 114062,
+            "requests_per_second": 153529.27414828943
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 165.8612,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 5938,
+            "requests_per_second": 6029137.616271919
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 147.7606,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 261,
+            "requests_per_second": 6767703.975213961
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 138.5752,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7216298.443011448
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 142.0486,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7039844.109692035
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1515.3806,
+            "median_ns": 1510.0,
+            "p95_ns": 1615.0,
+            "p99_ns": 1927.0,
+            "min_ns": 312,
+            "max_ns": 10052,
+            "requests_per_second": 659900.2257254713
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 375.0544,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 312,
+            "max_ns": 573,
+            "requests_per_second": 2666279.878332317
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 339.4892,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 21719,
+            "requests_per_second": 2945601.8041221933
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6116.2418,
+            "median_ns": 6093.0,
+            "p95_ns": 11198.0,
+            "p99_ns": 11719.0,
+            "min_ns": 416,
+            "max_ns": 26146,
+            "requests_per_second": 163499.09514695773
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6733.3564,
+            "median_ns": 6614.5,
+            "p95_ns": 12239.0,
+            "p99_ns": 12916.0,
+            "min_ns": 416,
+            "max_ns": 25521,
+            "requests_per_second": 148514.34271324181
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 413.3958,
+            "median_ns": 417.0,
+            "p95_ns": 471.5500000000093,
+            "p99_ns": 521.0,
+            "min_ns": 312,
+            "max_ns": 573,
+            "requests_per_second": 2418989.2592038913
+          }
+        },
+        "checksums": {
+          "linear": 177983,
+          "nested": 177983,
+          "indexed": 177983
+        }
+      },
+      "4096": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5843.798,
+            "median_ns": 5781.0,
+            "p95_ns": 10937.0,
+            "p99_ns": 11407.0,
+            "min_ns": 156,
+            "max_ns": 28490,
+            "requests_per_second": 171121.58907614535
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6478.2786,
+            "median_ns": 6328.5,
+            "p95_ns": 11928.0,
+            "p99_ns": 12656.0,
+            "min_ns": 156,
+            "max_ns": 34375,
+            "requests_per_second": 154361.9936320738
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 163.956,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 365,
+            "requests_per_second": 6099197.345629316
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 147.3838,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 261,
+            "requests_per_second": 6785006.221850705
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 135.9874,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 157.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7353622.467963943
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 139.6964,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7158380.602506578
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1502.1778,
+            "median_ns": 1459.0,
+            "p95_ns": 1563.0,
+            "p99_ns": 1875.0,
+            "min_ns": 1198,
+            "max_ns": 22031,
+            "requests_per_second": 665700.1587961159
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 1235.582,
+            "median_ns": 1354.0,
+            "p95_ns": 1407.0,
+            "p99_ns": 1511.0,
+            "min_ns": 312,
+            "max_ns": 13177,
+            "requests_per_second": 809335.1958833974
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 1221.6738,
+            "median_ns": 1354.0,
+            "p95_ns": 1407.0,
+            "p99_ns": 1510.0,
+            "min_ns": 312,
+            "max_ns": 6771,
+            "requests_per_second": 818549.1086082062
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 7082.1986,
+            "median_ns": 7083.0,
+            "p95_ns": 12083.0,
+            "p99_ns": 12864.01,
+            "min_ns": 677,
+            "max_ns": 29844,
+            "requests_per_second": 141199.09035027627
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 7677.4854,
+            "median_ns": 7604.0,
+            "p95_ns": 13281.0,
+            "p99_ns": 13959.0,
+            "min_ns": 781,
+            "max_ns": 28281,
+            "requests_per_second": 130250.98035354128
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 1277.475,
+            "median_ns": 1406.0,
+            "p95_ns": 1459.0,
+            "p99_ns": 1562.0,
+            "min_ns": 312,
+            "max_ns": 10573,
+            "requests_per_second": 782794.1838392142
+          }
+        },
+        "checksums": {
+          "linear": 206421,
+          "nested": 206421,
+          "indexed": 206421
+        }
+      }
+    },
+    "sequential": {
+      "64": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5874.5066,
+            "median_ns": 5885.0,
+            "p95_ns": 10680.55000000001,
+            "p99_ns": 11354.0,
+            "min_ns": 156,
+            "max_ns": 87917,
+            "requests_per_second": 170227.0621331841
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6531.0782,
+            "median_ns": 6562.0,
+            "p95_ns": 12083.0,
+            "p99_ns": 12604.0,
+            "min_ns": 208,
+            "max_ns": 84167,
+            "requests_per_second": 153114.07540641606
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 170.4488,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 14479,
+            "requests_per_second": 5866864.41911002
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 152.8806,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 625,
+            "requests_per_second": 6541052.298329547
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 142.5686,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 573,
+            "requests_per_second": 7014167.214940737
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 145.5464,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 15573,
+            "requests_per_second": 6870661.17746643
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1300.6284,
+            "median_ns": 1458.0,
+            "p95_ns": 1563.0,
+            "p99_ns": 1875.0,
+            "min_ns": 260,
+            "max_ns": 22812,
+            "requests_per_second": 768859.114563391
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 316.0354,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 469,
+            "requests_per_second": 3164202.4912399054
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 316.828,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 5834,
+            "requests_per_second": 3156286.691832793
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6129.074,
+            "median_ns": 6094.0,
+            "p95_ns": 10886.0,
+            "p99_ns": 11563.0,
+            "min_ns": 365,
+            "max_ns": 89844,
+            "requests_per_second": 163156.78355327412
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6761.5072,
+            "median_ns": 6719.0,
+            "p95_ns": 12292.0,
+            "p99_ns": 12864.01,
+            "min_ns": 364,
+            "max_ns": 79948,
+            "requests_per_second": 147896.01939638547
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 368.7788,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 312,
+            "max_ns": 5729,
+            "requests_per_second": 2711652.6221138528
+          }
+        },
+        "checksums": {
+          "linear": 3256,
+          "nested": 3256,
+          "indexed": 3256
+        }
+      },
+      "256": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5844.6224,
+            "median_ns": 5886.0,
+            "p95_ns": 10677.0,
+            "p99_ns": 11354.0,
+            "min_ns": 156,
+            "max_ns": 38125,
+            "requests_per_second": 171097.4519072438
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6517.0398,
+            "median_ns": 6562.0,
+            "p95_ns": 12083.0,
+            "p99_ns": 12604.01,
+            "min_ns": 156,
+            "max_ns": 31719,
+            "requests_per_second": 153443.89948332065
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 165.4746,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 469,
+            "requests_per_second": 6043223.552134285
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 149.8486,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 6673402.354109414
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 140.1218,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 521,
+            "requests_per_second": 7136648.258871924
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 141.9116,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 9114,
+            "requests_per_second": 7046640.302836414
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1283.9296,
+            "median_ns": 1458.0,
+            "p95_ns": 1562.0,
+            "p99_ns": 1667.0,
+            "min_ns": 260,
+            "max_ns": 10573,
+            "requests_per_second": 778858.9031672765
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 316.6468,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 417,
+            "requests_per_second": 3158092.8656155695
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 313.339,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 417,
+            "requests_per_second": 3191431.644321326
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6018.0856,
+            "median_ns": 6094.0,
+            "p95_ns": 10885.0,
+            "p99_ns": 11511.0,
+            "min_ns": 416,
+            "max_ns": 18542,
+            "requests_per_second": 166165.79863869
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6713.7462,
+            "median_ns": 6719.0,
+            "p95_ns": 12240.0,
+            "p99_ns": 12813.0,
+            "min_ns": 417,
+            "max_ns": 26250,
+            "requests_per_second": 148948.1386710746
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 368.4482,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 312,
+            "max_ns": 677,
+            "requests_per_second": 2714085.7249404397
+          }
+        },
+        "checksums": {
+          "linear": 34455,
+          "nested": 34455,
+          "indexed": 34455
+        }
+      },
+      "1024": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5850.9678,
+            "median_ns": 5885.0,
+            "p95_ns": 10680.55000000001,
+            "p99_ns": 11406.0,
+            "min_ns": 208,
+            "max_ns": 99011,
+            "requests_per_second": 170911.89597727745
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6509.4786,
+            "median_ns": 6562.0,
+            "p95_ns": 12083.0,
+            "p99_ns": 12604.0,
+            "min_ns": 157,
+            "max_ns": 36823,
+            "requests_per_second": 153622.13495870467
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 166.1832,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 313,
+            "requests_per_second": 6017455.434725051
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 150.8856,
+            "median_ns": 156.0,
+            "p95_ns": 208.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 260,
+            "requests_per_second": 6627537.684179272
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 141.9588,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7044297.359515578
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 141.6822,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7058049.635028253
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1319.229,
+            "median_ns": 1510.0,
+            "p95_ns": 1563.0,
+            "p99_ns": 1667.5100000000111,
+            "min_ns": 260,
+            "max_ns": 6875,
+            "requests_per_second": 758018.50929596
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 377.3112,
+            "median_ns": 365.0,
+            "p95_ns": 417.0,
+            "p99_ns": 469.0,
+            "min_ns": 261,
+            "max_ns": 5938,
+            "requests_per_second": 2650332.139623738
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 333.9214,
+            "median_ns": 313.0,
+            "p95_ns": 365.0,
+            "p99_ns": 365.0,
+            "min_ns": 260,
+            "max_ns": 521,
+            "requests_per_second": 2994716.720761233
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 6086.0364,
+            "median_ns": 6146.0,
+            "p95_ns": 10938.0,
+            "p99_ns": 11563.0,
+            "min_ns": 416,
+            "max_ns": 25677,
+            "requests_per_second": 164310.55193820398
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6766.7676,
+            "median_ns": 6822.0,
+            "p95_ns": 12343.0,
+            "p99_ns": 12865.0,
+            "min_ns": 416,
+            "max_ns": 23333,
+            "requests_per_second": 147781.0468915764
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 414.8092,
+            "median_ns": 417.0,
+            "p95_ns": 469.0,
+            "p99_ns": 521.0,
+            "min_ns": 312,
+            "max_ns": 4896,
+            "requests_per_second": 2410746.916895768
+          }
+        },
+        "checksums": {
+          "linear": 179216,
+          "nested": 179216,
+          "indexed": 179216
+        }
+      },
+      "4096": {
+        "lookup": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 5826.6102,
+            "median_ns": 5885.0,
+            "p95_ns": 10678.0,
+            "p99_ns": 11354.0,
+            "min_ns": 156,
+            "max_ns": 23021,
+            "requests_per_second": 171626.3772029919
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 6507.5888,
+            "median_ns": 6562.0,
+            "p95_ns": 12083.0,
+            "p99_ns": 12604.01,
+            "min_ns": 208,
+            "max_ns": 25157,
+            "requests_per_second": 153666.74673728616
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 168.4026,
+            "median_ns": 156.0,
+            "p95_ns": 209.0,
+            "p99_ns": 261.0,
+            "min_ns": 104,
+            "max_ns": 14167,
+            "requests_per_second": 5938150.598624961
+          }
+        },
+        "address_resolution": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 148.9182,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 209.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 6715095.938575674
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 142.8704,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 13906,
+            "requests_per_second": 6999350.460277286
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 139.6862,
+            "median_ns": 156.0,
+            "p95_ns": 157.0,
+            "p99_ns": 208.0,
+            "min_ns": 104,
+            "max_ns": 209,
+            "requests_per_second": 7158903.313283631
+          }
+        },
+        "payload_access": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 1459.3724,
+            "median_ns": 1458.0,
+            "p95_ns": 1563.0,
+            "p99_ns": 1771.0,
+            "min_ns": 1146,
+            "max_ns": 6823,
+            "requests_per_second": 685226.0601886126
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 1210.2512,
+            "median_ns": 1354.0,
+            "p95_ns": 1458.0,
+            "p99_ns": 1510.0,
+            "min_ns": 312,
+            "max_ns": 7032,
+            "requests_per_second": 826274.7436234726
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 1192.699,
+            "median_ns": 1354.0,
+            "p95_ns": 1407.0,
+            "p99_ns": 1459.0,
+            "min_ns": 312,
+            "max_ns": 16042,
+            "requests_per_second": 838434.5086228796
+          }
+        },
+        "end_to_end": {
+          "linear": {
+            "count": 5000,
+            "mean_ns": 7006.5042,
+            "median_ns": 7135.0,
+            "p95_ns": 11979.0,
+            "p99_ns": 12657.0,
+            "min_ns": 677,
+            "max_ns": 28906,
+            "requests_per_second": 142724.52730421541
+          },
+          "nested": {
+            "count": 5000,
+            "mean_ns": 7672.8202,
+            "median_ns": 7630.5,
+            "p95_ns": 13281.0,
+            "p99_ns": 13958.0,
+            "min_ns": 833,
+            "max_ns": 30834,
+            "requests_per_second": 130330.1750769554
+          },
+          "indexed": {
+            "count": 5000,
+            "mean_ns": 1237.5234,
+            "median_ns": 1355.0,
+            "p95_ns": 1459.0,
+            "p99_ns": 1511.0,
+            "min_ns": 313,
+            "max_ns": 14948,
+            "requests_per_second": 808065.528296273
+          }
+        },
+        "checksums": {
+          "linear": 462180,
+          "nested": 462180,
+          "indexed": 462180
+        }
+      }
+    }
+  }
+}

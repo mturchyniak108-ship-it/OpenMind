@@ -1,0 +1,51 @@
+{
+  "authoritative_inference": {
+    "activation_written_by_forest": false,
+    "engine": "standard llama.cpp",
+    "kv_cache_modified_by_forest": false,
+    "sampling_modified_by_forest": false,
+    "shadow_consumed_by_llama": false,
+    "weights_modified_by_forest": false
+  },
+  "baseline_commit": "f3c5e06",
+  "forest_artifact": {
+    "embedding_dimension": 2048,
+    "format": "OMFRST01",
+    "group_count": 32,
+    "group_size": 64,
+    "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1.bin",
+    "sha256": "da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902"
+  },
+  "interpretation_boundary": [
+    "This is a live shadow integration gate.",
+    "It does not replace transformer computation.",
+    "It does not skip layers.",
+    "It does not modify authoritative inference.",
+    "It does not test selective Forest routing.",
+    "It does not yet exploit the validated 50-pair recurrence topology."
+  ],
+  "next_if_pass": {
+    "constraint": "remain shadow-only before any mutating experiment",
+    "name": "Forest recurrence exploitation benchmark"
+  },
+  "pass_gates": {
+    "all_groups_processed": 32,
+    "artifact_layout_valid": true,
+    "live_activation_available": true,
+    "reconstruction_metrics_finite": true,
+    "source_copy_max_error": 0.0,
+    "source_mutation_max_error": 0.0,
+    "standard_greedy_token_remains_authoritative": true
+  },
+  "runtime_semantics": {
+    "access": "all 32 of 32 groups",
+    "baseline": "raw copied activation; no centroid invented",
+    "group_mapping": "frozen OMFRST01 dimension map",
+    "input": "copied live llama layer-input activation",
+    "nonoracle_priority_used": false,
+    "quantization": "per-group signed INT8 with float scale",
+    "reconstruction": "Forest-owned shadow memory only"
+  },
+  "schema": "openmind.forest.v9a_2048.shadow_protocol.v1",
+  "status": "PREREGISTERED"
+}

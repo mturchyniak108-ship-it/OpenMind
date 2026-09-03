@@ -1,0 +1,83 @@
+============================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V3 — NON-CONTIGUOUS ORANGE WEDGES
+============================================================================================================================
+
+DATASET
+----------------------------------------------------------------------------------------------------------------------------
+vectors                     : 364
+dimensions                  : 1536
+terminal residuals          : 364
+terminal leaves             : 256
+group size                  : 64
+groups                      : 24
+
+GROUPING CONTRACT
+----------------------------------------------------------------------------------------------------------------------------
+PINE_CONTIGUOUS   : ordinary contiguous 64-dimension terminal groups
+RANDOM_CONTROL    : deterministic shuffled non-contiguous groups
+ORANGE_CORRELATED : non-contiguous groups seeded by terminal-residual dimension correlation
+
+WITHIN-GROUP ABSOLUTE CORRELATION
+----------------------------------------------------------------------------------------------------------------------------
+PINE_CONTIGUOUS             : 0.215146260
+RANDOM_CONTROL              : 0.216167542
+ORANGE_CORRELATED           : 0.355298487
+Orange/Pine correlation     : 1.651427675
+Orange/Random correlation   : 1.643625513
+
+GLOBAL GROUP-MAP STORAGE
+----------------------------------------------------------------------------------------------------------------------------
+Pine mapping bytes          : 0
+Random mapping bytes        : 3072
+Orange mapping bytes        : 3072
+Orange mapping assumption  : uint16 dimension ID stored once globally
+
+ORACLE INFORMATION CONCENTRATION
+----------------------------------------------------------------------------------------------------------------------------
+scheme               request groups mean_energy  mean_cosine  min_cosine mean_rel_l2  max_rel_l2
+PINE_CONTIGUOUS        0.125      3 0.527289259  0.961197125 0.064268780 0.207487774 11.424020370
+PINE_CONTIGUOUS        0.250      6 0.615850116  0.968293884 0.066781215 0.186270425 10.158521988
+PINE_CONTIGUOUS        0.500     12 0.767677989  0.980311219 0.115503801 0.143440860 7.614393221
+PINE_CONTIGUOUS        0.750     18 0.896301516  0.990268559 0.210933494 0.094545767 4.793405758
+PINE_CONTIGUOUS        1.000     24 1.000000000  1.000000000 1.000000000 0.000000000 0.000000000
+RANDOM_CONTROL         0.125      3 0.529249572  0.961596682 0.055665358 0.207373600 11.531542253
+RANDOM_CONTROL         0.250      6 0.617540691  0.968558059 0.046427262 0.186130770 10.279963696
+RANDOM_CONTROL         0.500     12 0.768436181  0.980450575 0.127426996 0.143355762 7.707600893
+RANDOM_CONTROL         0.750     18 0.896491502  0.990238415 0.186071831 0.094864288 4.970733350
+RANDOM_CONTROL         1.000     24 1.000000000  1.000000000 1.000000000 0.000000000 0.000000000
+ORANGE_CORRELATED      0.125      3 0.563587147  0.965212047 0.054999370 0.196806188 10.882369608
+ORANGE_CORRELATED      0.250      6 0.656929910  0.972890570 0.073047169 0.171236102 9.089638742
+ORANGE_CORRELATED      0.500     12 0.800694175  0.983931648 0.142166040 0.126509101 6.165195582
+ORANGE_CORRELATED      0.750     18 0.913460295  0.992082261 0.226425941 0.082015943 3.944302737
+ORANGE_CORRELATED      1.000     24 1.000000000  1.000000000 1.000000000 0.000000000 0.000000000
+
+ORANGE VS PINE
+----------------------------------------------------------------------------------------------------------------------------
+request  orange_energy/pine  orange_cos-pine   orange_rel_l2/pine
+  0.125        1.068838665      +0.004014923        0.948519443
+  0.250        1.066704207      +0.004596687        0.919287654
+  0.500        1.043007858      +0.003620429        0.881960002
+  0.750        1.019143980      +0.001813702        0.867473451
+  1.000        1.000000000      +0.000000000        1.000000000
+
+RANDOM CONTROL CHECK
+----------------------------------------------------------------------------------------------------------------------------
+request  orange_energy/random orange_rel_l2/random
+  0.125          1.064879742          0.949041674
+  0.250          1.063784006          0.919977402
+  0.500          1.041978755          0.882483544
+  0.750          1.018928002          0.864560784
+  1.000          1.000000000          1.000000000
+
+FOREST V3 DECISION
+----------------------------------------------------------------------------------------------------------------------------
+partial-access Orange wins : 4/4
+result                     : CORRELATED WEDGES PROMISING
+
+INTERPRETATION BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+Forest V3 isolates terminal grouping geometry using exact residual values.
+It deliberately does NOT benchmark quantization or production serialization.
+Group selection is oracle top-energy selection per item, so this measures information-concentration potential rather than a deployable query router.
+The random control distinguishes correlation-derived structure from arbitrary non-contiguous grouping.
+If Orange wins this gate, the next experiment should quantize correlated wedges and replace oracle selection with a measurable routing rule.

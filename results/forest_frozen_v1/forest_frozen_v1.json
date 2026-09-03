@@ -1,0 +1,83 @@
+{
+  "artifact": {
+    "bytes": 15252,
+    "header_bytes": 68,
+    "path": "results/forest_frozen_v1/forest_frozen_v1.bin",
+    "sha256": "721e8d4a78613f7f4b2af7b2c9b65b99e70565e46e08568fec1eeeef97921b35"
+  },
+  "encoding": {
+    "centroid": "float32[1536]",
+    "dimension_map": "uint32[1536]",
+    "endianness": "little",
+    "global_ranking": "uint32[24]",
+    "layer_ids": "uint32[28]",
+    "layer_rankings": "uint32[28][24]"
+  },
+  "geometry": {
+    "dimensions": 1536,
+    "group_count": 24,
+    "group_size": 64,
+    "layer_count": 28,
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  "schema": "openmind.forest_frozen.v1",
+  "scientific_contract": {
+    "intended_next_use": "Forest V9 shadow activation integration",
+    "live_activation_used_for_training": false,
+    "live_routing_feedback": false
+  },
+  "status": "frozen_training_artifact",
+  "training": {
+    "dataset": "activation_vectors_all_tokens.csv",
+    "dataset_sha256": "863d6770a5fd824c5a4deb1b7653b42402d1352d37151c36e55388848c8f1432",
+    "excluded_tokens": [
+      0
+    ],
+    "rows": 364,
+    "token_count": 13,
+    "tokens": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  }
+}

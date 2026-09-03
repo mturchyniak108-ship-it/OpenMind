@@ -1,0 +1,39 @@
+{
+  "name": "openmind_truth_graph_baseline",
+  "status": "canonical_baseline",
+  "experimental": false,
+  "nodes": 20,
+  "edges": 24,
+  "cases": [
+    {
+      "start": "PROJECT",
+      "end": "EVIDENCE",
+      "expected_path": ["PROJECT", "AGENT", "DOCS", "ENGINE", "TEST", "EVIDENCE"],
+      "expected_score": 0.8758
+    },
+    {
+      "start": "PROJECT",
+      "end": "TRUTH",
+      "expected_path": ["PROJECT", "ROADMAP", "TRUTH"],
+      "expected_score": 0.92975
+    },
+    {
+      "start": "ENGINE",
+      "end": "EVIDENCE",
+      "expected_path": ["ENGINE", "TEST", "EVIDENCE"],
+      "expected_score": 0.94075
+    },
+    {
+      "start": "PATH",
+      "end": "TRUTH",
+      "expected_path": ["PATH", "WEIGHT", "VECTOR", "TRUTH"],
+      "expected_score": 0.921666666667
+    },
+    {
+      "start": "TRUTH",
+      "end": "VECTOR",
+      "expected_path": ["TRUTH", "RELATION", "PATH", "WEIGHT", "VECTOR"],
+      "expected_score": 0.90625
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "corpus": {
+    "bytes": 101759739,
+    "columns": 2052,
+    "complete_trajectories": 113,
+    "duplicate_rows": 0,
+    "layer_range": [
+      0,
+      35
+    ],
+    "layers": 36,
+    "path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv",
+    "prompts": 8,
+    "rows": 4068,
+    "sha256": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8",
+    "t00_excluded_trajectories": 105,
+    "trajectories": 113,
+    "vector_dimensions": 2048
+  },
+  "heldout_protocol": {
+    "exclude_token_index": 0,
+    "splits": [
+      {
+        "heldout_prompt": "P01",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P01",
+        "training_prompts": [
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P02",
+        "heldout_trajectories_t00_excluded": 11,
+        "split_id": "LOPO_P02",
+        "training_prompts": [
+          "P01",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 94
+      },
+      {
+        "heldout_prompt": "P03",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P03",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P04",
+        "heldout_trajectories_t00_excluded": 16,
+        "split_id": "LOPO_P04",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 89
+      },
+      {
+        "heldout_prompt": "P05",
+        "heldout_trajectories_t00_excluded": 12,
+        "split_id": "LOPO_P05",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 93
+      },
+      {
+        "heldout_prompt": "P06",
+        "heldout_trajectories_t00_excluded": 14,
+        "split_id": "LOPO_P06",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P07",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 91
+      },
+      {
+        "heldout_prompt": "P07",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P07",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P08"
+        ],
+        "training_trajectories_t00_excluded": 92
+      },
+      {
+        "heldout_prompt": "P08",
+        "heldout_trajectories_t00_excluded": 13,
+        "split_id": "LOPO_P08",
+        "training_prompts": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07"
+        ],
+        "training_trajectories_t00_excluded": 92
+      }
+    ],
+    "type": "leave-one-prompt-out"
+  },
+  "per_prompt": {
+    "P01": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 13,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "token_max": 13,
+      "token_min": 0,
+      "trajectory_count": 14
+    },
+    "P02": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 11,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "token_max": 11,
+      "token_min": 0,
+      "trajectory_count": 12
+    },
+    "P03": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 13,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "token_max": 13,
+      "token_min": 0,
+      "trajectory_count": 14
+    },
+    "P04": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 16,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "token_max": 16,
+      "token_min": 0,
+      "trajectory_count": 17
+    },
+    "P05": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 12,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "token_max": 12,
+      "token_min": 0,
+      "trajectory_count": 13
+    },
+    "P06": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 14,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "token_max": 14,
+      "token_min": 0,
+      "trajectory_count": 15
+    },
+    "P07": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 13,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "token_max": 13,
+      "token_min": 0,
+      "trajectory_count": 14
+    },
+    "P08": {
+      "contains_t00": true,
+      "t00_excluded_trajectory_count": 13,
+      "token_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "token_max": 13,
+      "token_min": 0,
+      "trajectory_count": 14
+    }
+  },
+  "prompt_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08"
+  ],
+  "schema": "openmind.qwen25_3b_multi_prompt_2048.canonical.v1",
+  "scientific_boundary": [
+    "Corpus identity is frozen before topology analysis.",
+    "Token index 0 is excluded to match the validated V3 structural control.",
+    "Each trajectory is identified by (prompt_id, token_index) across layers 0..35.",
+    "Held-out prompt data must not contribute to training-prompt topology selection.",
+    "No model inference was performed by this freeze.",
+    "No permutation control was performed by this freeze."
+  ],
+  "source_manifest": {
+    "path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_manifest.json",
+    "sha256": "babca920e2ebb777f6bd9207e1f4d33e64564d557df354ab665ae6d35b62d220"
+  },
+  "status": "CANONICAL_FROZEN"
+}
