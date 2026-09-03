@@ -5,16 +5,19 @@
 
 - Phase 6B/6C: closed
 - Phase 6D: active
-- Phase 6D-Q: active preregistered query-to-PK validation
+- Phase 6D-Q2: V1.4 validation harness frozen; scientific execution pending
 - Phase 6E: not entered
-- frozen Q2 runner commit: `15d8046ab4fd83373273e28d4a82ed581f8fd9bf`
-- runner SHA256: `e2e32f85b1dc7015802ec51a6f214188becc5d35f45c76f4b320617ccd6cd873`
-- Chunk 11 static audit: `25 PASS / 0 FAIL`
+- V1.4 protocol SHA256: `a814bca93a6b014ee53aad234b8396c841d0efc2a9363598e8a2192f23745699`
+- frozen V1.4 runner commit: `d9056941f2db77f521222f38b125927ae16bbf3e`
+- V1.4 runner SHA256: `7bda960c125786fdf3cfca65c4b7b5851ca8bd91257282facfee2fec1ae7a030`
+- static closure audit: `0 critical findings`
+- post-freeze self-SHA finding: `CLOSED — audit matcher false-negative`
 - authoritative Q2 run: `NOT EXECUTED`
-- V01-V48: `NOT EXECUTED`
+- V01-V74: `NOT EXECUTED`
 - exact-once result slot: `UNSPENT`
 
-Runner completion is not a scientific PASS or FAIL.
+Runner freeze and static-audit completion are not a scientific PASS or FAIL.
+Next scientific gate: non-spending readiness/prequalification; do not arm the exact-once run yet.
 Current authority: `docs/research/CURRENT_WORK.md`.
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
 
