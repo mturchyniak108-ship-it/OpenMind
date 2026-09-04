@@ -16,7 +16,7 @@
 - authoritative result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`
 - authoritative verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`
 - authoritative freeze commit: `10da372a8317dc629674fb2b52a7560f55ee416f`
-- next scientific gate: separate preregistration for any next Phase 6D-Q experiment; Phase 6E not entered
+- next scientific gate: 6D-Q3 attach/detach ownership and cleanup semantics under a new preregistration; Phase 6E not entered
 
 Current evidence establishes an authoritative Q2 V1.4 scientific PASS for the
 frozen query-to-PK selection experiment only. It does not establish inference,

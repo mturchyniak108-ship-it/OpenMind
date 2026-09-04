@@ -29,6 +29,9 @@ AI collaborators must not:
 
 Q2 V1.4 is closed. Any next Phase 6D-Q experiment requires a separately
 preregistered scientific gate. Phase 6E remains not entered.
+Next authorized research target: **6D-Q3 — attach/detach ownership and cleanup semantics** under a separate preregistration.
+
+Do not interpret Q2 PASS as selective-working-set sufficiency or Phase 6E entry. Human-readable summary: `../research/Q2_V1_4_SUMMARY.md`.
 <!-- OPENMIND:Q2-V1-4-AGENT-STATUS:END -->
 
 ## Purpose

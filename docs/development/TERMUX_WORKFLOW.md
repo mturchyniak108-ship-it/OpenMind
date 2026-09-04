@@ -29,8 +29,14 @@ If Termux unexpectedly shows `>`, treat the operation as incomplete and executio
 
 ## Current Q2 Boundary
 
-- frozen runner commit: `09b2d6fd887155f9fda8fff6405b31ac556ed42b`
-- frozen runner SHA256: `e2e32f85b1dc7015802ec51a6f214188becc5d35f45c76f4b320617ccd6cd873`
-- authoritative run: not executed
-- V01-V48: not executed
-- exact-once result slot: `UNSPENT`
+- active authority: Q2 V1.4
+- authoritative result: `PASS — 74/74`
+- V01-V74: `ALL PASS`
+- result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`
+- verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`
+- exact-once namespace: `PERMANENTLY SPENT`
+- scientific retry: `FORBIDDEN`
+- next gate: `6D-Q3 — attach/detach ownership and cleanup semantics`
+- Phase 6E: `NOT ENTERED`
+
+Termux documentation, Git operations, and publication must never invoke the V1.4 runner or alter its slot, result, or verdict.

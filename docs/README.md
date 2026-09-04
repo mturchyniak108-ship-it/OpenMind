@@ -140,3 +140,13 @@ Commands should be reproducible, claims should identify their evidence level, an
 - [Development Best Practices](development/BEST_PRACTICES.md)
 
 These documents distinguish frozen implementation, validated behavior, benchmark targets, and future work.
+
+<!-- OPENMIND:Q2-HUMAN-SUMMARY:START -->
+## Q2 V1.4 Result
+
+Q2 V1.4 query-to-PK selection validation is complete: **PASS — 74/74**.
+
+For a plain-language explanation of what was proven, what remains unproven, and why the next gate is 6D-Q3, see [`research/Q2_V1_4_SUMMARY.md`](research/Q2_V1_4_SUMMARY.md).
+
+Phase 6E remains not entered.
+<!-- OPENMIND:Q2-HUMAN-SUMMARY:END -->

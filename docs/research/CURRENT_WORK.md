@@ -70,6 +70,10 @@ Termux click-paste operations are atomic and no-heredoc; see
 `docs/development/TERMUX_WORKFLOW.md`.
 
 ## Next scientific gate
-Q2 V1.4 is closed and must not be rerun. Any next Phase 6D-Q experiment must
-have a separate preregistration and authority boundary before execution.
-Phase 6E remains not entered.
+**6D-Q3 — attach/detach ownership and cleanup semantics.**
+
+Q3 requires a new preregistration and authority boundary. It must validate query-scoped object ownership, attachment lifetime, deterministic detach and cleanup, generation binding, and failure cleanup without modifying or rerunning Q2 V1.4 evidence.
+
+The roadmap then proceeds to 6D-Q4 route reuse with generation binding. Phase 6E remains not entered.
+
+Human-readable Q2 explanation: `Q2_V1_4_SUMMARY.md`.

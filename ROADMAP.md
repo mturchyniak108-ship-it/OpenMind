@@ -23,6 +23,11 @@ Exact-once namespace: **PERMANENTLY SPENT**. V1.4 retry is **FORBIDDEN**.
 This does not establish inference, answer generation, selective working-set sufficiency,
 tensor/object avoidance, output parity, answer quality, performance superiority,
 MAF-native compute, or replacement of a conventional LLM.
+Next prospective gate: **6D-Q3 — attach/detach ownership and cleanup semantics**.
+
+Q3 requires a new preregistration and authority boundary. Q2 V1.4 remains permanently closed and must not be rerun.
+
+Human-readable Q2 explanation: [`docs/research/Q2_V1_4_SUMMARY.md`](docs/research/Q2_V1_4_SUMMARY.md).
 <!-- OPENMIND:Q2-ROADMAP:END -->
 
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:START -->

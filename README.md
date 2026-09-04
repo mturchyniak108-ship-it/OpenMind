@@ -22,6 +22,9 @@
 Runner freeze and static-audit completion are not a scientific PASS or FAIL.
 Q2 V1.4 is closed and must not be rerun. Any next Phase 6D-Q experiment requires a separate preregistered gate; Phase 6E remains not entered.
 Current authority: `docs/research/CURRENT_WORK.md`.
+Human-readable Q2 explanation: [`docs/research/Q2_V1_4_SUMMARY.md`](docs/research/Q2_V1_4_SUMMARY.md).
+
+Next research gate: **6D-Q3 — attach/detach ownership and cleanup semantics**. Phase 6E remains not entered.
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
 
 OpenMind is a local-first AI systems project focused on native inference, evidence-backed knowledge structures, reproducible model research, and experimental representation-driven computation.

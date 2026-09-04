@@ -46,6 +46,9 @@ LLM replacement.
 
 Any next Phase 6D-Q experiment requires a new preregistered gate. Phase 6E
 remains not entered.
+Successor gate: **6D-Q3 — attach/detach ownership and cleanup semantics** under a new preregistered authority.
+
+AI collaborators must not reuse, regenerate, repair, or rerun Q2 V1.4. Human-readable closure: `docs/research/Q2_V1_4_SUMMARY.md`.
 <!-- OPENMIND:Q2-V1-4-AUTHORITY:END -->
 
 ## Human Authority Rule
