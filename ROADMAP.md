@@ -1,16 +1,28 @@
 # OpenMind Roadmap
 
 <!-- OPENMIND:Q2-ROADMAP:START -->
-## Phase 6D-Q — Query-to-PK Selection Validation
-- [x] protocol, authorities, fixtures and selector frozen
-- [x] exact-once publication contract
-- [x] qualification/readiness modes
-- [x] runner frozen
-- [x] static audit: 25 PASS / 0 FAIL
+## Phase 6D-Q2 — Query-to-PK Selection Validation
+
+- [x] selector, catalog, prospective query fixture and Q1 authority frozen
+- [x] V1.4 durable exact-once protocol frozen
+- [x] V1.4 namespace guard and permanent-spend/no-retry contract frozen
+- [x] V1.4 runner candidate static closure: 0 critical findings
+- [x] V1.4 runner + SHA authority frozen at `d9056941f2db77f521222f38b125927ae16bbf3e`
+- [x] post-freeze `runner_sha_pre_slot` finding closed as an audit matcher false-negative
 - [x] atomic Termux operator policy
-- [ ] authoritative Q2 execution
-- [ ] V01-V48/result hash
-- [ ] interpretation/promotion
+- [x] non-spending readiness/prequalification passed
+- [x] authoritative Q2 exact-once execution completed
+- [x] V01-V74 all passed in exact frozen order
+- [x] permanent slot journal and final result hash-chain verified
+- [x] authoritative result + verdict frozen at `10da372a8317dc629674fb2b52a7560f55ee416f`
+
+Scientific classification: **PASS — Q2 query-to-PK selection validation only**.
+
+Exact-once namespace: **PERMANENTLY SPENT**. V1.4 retry is **FORBIDDEN**.
+
+This does not establish inference, answer generation, selective working-set sufficiency,
+tensor/object avoidance, output parity, answer quality, performance superiority,
+MAF-native compute, or replacement of a conventional LLM.
 <!-- OPENMIND:Q2-ROADMAP:END -->
 
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:START -->
@@ -18,16 +30,22 @@
 
 - Phase 6B/6C: closed
 - Phase 6D: active
-- Phase 6D-Q: active preregistered query-to-PK validation
+- Phase 6D-Q2: authoritative V1.4 query-to-PK selection validation PASS — 74/74
 - Phase 6E: not entered
-- frozen Q2 runner commit: `15d8046ab4fd83373273e28d4a82ed581f8fd9bf`
-- runner SHA256: `e2e32f85b1dc7015802ec51a6f214188becc5d35f45c76f4b320617ccd6cd873`
-- Chunk 11 static audit: `25 PASS / 0 FAIL`
-- authoritative Q2 run: `NOT EXECUTED`
-- V01-V48: `NOT EXECUTED`
-- exact-once result slot: `UNSPENT`
+- V1.4 protocol SHA256: `a814bca93a6b014ee53aad234b8396c841d0efc2a9363598e8a2192f23745699`
+- frozen V1.4 runner commit: `d9056941f2db77f521222f38b125927ae16bbf3e`
+- V1.4 runner SHA256: `7bda960c125786fdf3cfca65c4b7b5851ca8bd91257282facfee2fec1ae7a030`
+- static closure audit: `0 critical findings`
+- post-freeze self-SHA finding: `CLOSED — audit matcher false-negative`
+- authoritative Q2 run: `PASS — 74/74`
+- V01-V74: `ALL PASS`
+- exact-once result slot: `SPENT`
+- authoritative result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`
+- authoritative verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`
+- authoritative freeze commit: `10da372a8317dc629674fb2b52a7560f55ee416f`
 
-Runner completion is not a scientific PASS or FAIL.
+Runner freeze and static-audit completion are not a scientific PASS or FAIL.
+Q2 V1.4 is closed and must not be rerun. Any next Phase 6D-Q experiment requires a separate preregistered gate; Phase 6E remains not entered.
 Current authority: `docs/research/CURRENT_WORK.md`.
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
 
@@ -304,7 +322,12 @@ Rules:
 <!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-ROADMAP:START -->
 ## Phase 6D-Q — Query-Scoped MAF Working Sets and Reusable PK Route Cache
 
-Status: PROPOSED — NOT VALIDATED
+Status: ARCHITECTURE PROPOSED — Q2 QUERY-TO-PK SELECTION VALIDATION PASS; WORKING-SET INFERENCE NOT VALIDATED
+
+Current 6D-Q2 state: the frozen V1.4 exact-once experiment completed with
+all 74 checks passing. The namespace is permanently `SPENT`; the authoritative
+result and verdict are frozen at `10da372a8317dc629674fb2b52a7560f55ee416f`. Q2 validates query-to-PK
+selection only and does not validate selective working-set inference.
 
 Phase 6D-Q introduces a proposed bridge from persistent/locality-aware MAF
 storage to selective MAF execution.

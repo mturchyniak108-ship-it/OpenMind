@@ -19,6 +19,35 @@ Required practice:
 If Termux unexpectedly shows `>`, treat the operation as incomplete and execution state as unproven. Cancel the pending input, verify Git and artifact state, and do not assume any embedded program executed.
 <!-- OPENMIND:TERMUX-ATOMIC-PASTE:END -->
 
+<!-- OPENMIND:Q2-V1-4-AUTHORITY:START -->
+## Current Q2 Exact-Once Research Boundary
+
+For Phase 6D-Q2, the authoritative frozen validation authority is V1.4:
+
+- scientific result: `PASS — 74/74`;
+- authoritative V01-V74: `ALL PASS`;
+- exact-once slot: `PERMANENTLY SPENT`;
+- retry: `FORBIDDEN`;
+- result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`;
+- verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`;
+- freeze commit: `10da372a8317dc629674fb2b52a7560f55ee416f`.
+
+The earlier post-run shell-auditor failure label is superseded: it resulted
+from an incorrect assumption about the result `checks` representation and was
+not produced by the V1.4 runner. The forensic audit confirmed the exact
+74-check order and the permanent slot journal hash chain.
+
+AI collaborators must preserve the frozen authority. Do not import, execute,
+repair, regenerate, or rerun V1.4. The Q2 PASS is limited to query-to-PK
+selection validation and does not establish inference, answer generation,
+selective working-set sufficiency, tensor/object avoidance, output parity,
+answer quality, performance superiority, MAF-native compute, or conventional
+LLM replacement.
+
+Any next Phase 6D-Q experiment requires a new preregistered gate. Phase 6E
+remains not entered.
+<!-- OPENMIND:Q2-V1-4-AUTHORITY:END -->
+
 ## Human Authority Rule
 
 OpenMind source code is modified by human contributors.
