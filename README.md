@@ -1,5 +1,53 @@
 # OpenMind
 
+<!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
+## MAF Phase 6D-Q4 status — CLOSED
+
+Phase 6D-Q4 Query Route Cache validation is formally closed on frozen evidence.
+
+- Scientific result: **PASS — 44/44 Q4 checks**.
+- Frozen cases: `q001`, `q025`, `q026`, `q033`.
+- Frozen runner: `bafed2c9ef6d2cf35d8d5212bbb17497f68a67fff9a67d855ac96243af3ac686`.
+- Frozen result: `1be2608271e899d320b4255fccba2e64c1616281110ebb375f803a7f740c43e0` / 9184 bytes.
+- Frozen exact-once slot: `af63aa8d3b769ad984b898d805ff45361eb5e079658d47a088514d3ba4145a2d` / 1311 bytes.
+- Runner implementation contract: `daa291fcb06c0456e028807308e35ef86486e5176b4fe88d254915718d6943e4`.
+- Evidence commit: `b386abde55b1b8f156292eb7500fb739ea8be918`.
+- Exact-once history: V1, V1.1, V1.2, and V1.3 are permanently spent and MUST NOT be rerun.
+- Durable V1.3 state: `RESERVATION_PREPARED -> RESERVED_DURABLE -> PUBLISHED_DURABLE`; no partial residue.
+- Claim scope remains limited to safe generation-bound route-metadata persistence, reuse, and invalidation.
+- Not established by Q4: inference execution, answer generation, working-set sufficiency, performance superiority or metrics, output parity, route-expansion optimality, MAF-native compute, or LLM replacement.
+- Phase 6E: **READY FOR ENTRY REVIEW — NOT ENTERED**.
+- Canonical closure record: `experiments/model_fractal/MAF_QUERY_ROUTE_CACHE_VALIDATION_V1_3_VERDICT.md`.
+
+<!-- OPENMIND_MAF_Q4_STATUS_END -->
+
+<!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:START -->
+## Current Scientific Status
+
+- Phase 6B/6C: closed
+- Phase 6D: active
+- Phase 6D-Q2: authoritative V1.4 query-to-PK selection validation PASS — 74/74
+- Phase 6E: not entered
+- V1.4 protocol SHA256: `a814bca93a6b014ee53aad234b8396c841d0efc2a9363598e8a2192f23745699`
+- frozen V1.4 runner commit: `d9056941f2db77f521222f38b125927ae16bbf3e`
+- V1.4 runner SHA256: `7bda960c125786fdf3cfca65c4b7b5851ca8bd91257282facfee2fec1ae7a030`
+- static closure audit: `0 critical findings`
+- post-freeze self-SHA finding: `CLOSED — audit matcher false-negative`
+- authoritative Q2 run: `PASS — 74/74`
+- V01-V74: `ALL PASS`
+- exact-once result slot: `SPENT`
+- authoritative result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`
+- authoritative verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`
+- authoritative freeze commit: `10da372a8317dc629674fb2b52a7560f55ee416f`
+
+Runner freeze and static-audit completion are not a scientific PASS or FAIL.
+Q2 V1.4 is closed and must not be rerun. Any next Phase 6D-Q experiment requires a separate preregistered gate; Phase 6E remains not entered.
+Current authority: `docs/research/CURRENT_WORK.md`.
+Human-readable Q2 explanation: [`docs/research/Q2_V1_4_SUMMARY.md`](docs/research/Q2_V1_4_SUMMARY.md).
+
+Next research gate: **6D-Q3 — attach/detach ownership and cleanup semantics**. Phase 6E remains not entered.
+<!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
+
 OpenMind is a local-first AI systems project focused on native inference, evidence-backed knowledge structures, reproducible model research, and experimental representation-driven computation.
 
 The long-term research question is whether useful AI computation can be performed with less dependence on conventional token-by-token inference while preserving correctness, provenance, and reproducibility.
@@ -175,23 +223,61 @@ Third-party software, models, datasets, and artifacts retain their applicable up
 
 See `LICENSE`, `RESEARCH_DATA_LICENSE.md`, and `THIRD_PARTY_LICENSES.md`.
 
-#### Phase 6B — current MAF engineering state
+#### Current MAF engineering state
 
-Phase 6B is building the catalog, immutable-generation, activation, rollback, and resident-lookup layer required before MAF can be treated as a runtime model-object system.
+OpenMind's current MAF engineering status is determined from frozen completion,
+validation, benchmark, diagnostic, and scientific-verdict artifacts rather than
+from roadmap intent alone.
 
-Current frozen research status:
+Current accepted state:
 
+- **Phase 6B — MAF Persistent Object Pipeline — COMPLETE / CLOSED.**
 - Atomic Activation is complete and validated.
 - Rollback is complete and validated.
-- Resident PK Directory V1 protocol and implementation are frozen.
-- Resident PK Directory Validation V1 is preregistered and frozen but has not yet been executed.
-- Segment Reader validation has not started.
-- Phase 6C runtime and residency work has not started.
+- Resident PK Directory is complete, validated, benchmarked, and diagnostically accepted.
+- Segment Reader V1 is complete, validated, benchmarked, and diagnostically accepted.
+- **Phase 6C — MAF Object Runtime and Residency — CLOSED / PASS** for its
+  preregistered runtime/residency correctness surface.
+- The Phase 6C performance verdict is **NONE** and no Phase 6C benchmark was
+  executed as part of that scientific closure.
+- **Phase 6D — Segment Locality and Path-Aware Repacking — ACTIVE RESEARCH.**
+- The Phase 6D locality data-model implementation and Validation V1 result are
+  accepted and frozen with a PASS result.
+- Telemetry snapshot persistence Validation V1.3 is **PASS / accepted / frozen**
+  for its preregistered V01-V57 correctness surface.
+- No telemetry persistence benchmark was executed and its performance verdict is
+  **NONE**.
+- Runtime telemetry integration and real-model telemetry collection remain
+  separately gated Phase 6D research.
+- Phase 6D-Q query-scoped MAF working sets remain **PROPOSED — NOT VALIDATED**.
 
-The Resident PK Directory is derived process-local state, not authority. Authority remains the active-generation record plus the immutable active generation descriptor.
+The Resident PK Directory remains derived process-local state rather than
+canonical authority. Authority remains bound to the active-generation record
+and immutable generation artifacts.
 
-The minimum V1 resident lookup key is model-scoped canonical `object_pk` identity. Successful lookup is generation-bound and returns immutable segment, offset, length, object-hash, and runtime-path evidence.
+MAF engineering results do not currently establish MAF-native inference, a
+replacement for `llama.cpp` or another language-model runtime, or a general
+performance advantage over conventional inference.
 
-The implementation is designed for direct average O(1) resident lookup with no JSON parsing, manifest scan, filesystem discovery, or linear descriptor scan on the successful hot path. This remains an implementation target until benchmark evidence is frozen.
+All performance and correctness claims remain bounded to the exact workloads,
+artifacts, devices, versions, controls, and validation scopes that produced
+their accepted evidence.
 
-Phase 6B does not yet claim MAF-native inference, a replacement for `llama.cpp`, a production storage engine, or Segment Reader implementation.
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-README-MD:START -->
+## Proposed query-scoped MAF execution architecture
+
+OpenMind now tracks a proposed **Phase 6D-Q** research direction in which an
+input is compiled into a bounded PK working set over canonical MAFDB objects.
+
+The proposed design separates canonical MAFDB authority from a temporary
+Query-Scoped MAF Capsule and a persistent derived Query Route Cache. A query may
+start from an initial PK set, expand deterministically when required, answer,
+release its temporary working state, and retain only compact reusable route
+metadata for future exact or similar queries.
+
+This is a roadmap architecture, **not a validated inference capability**.
+Selective sufficiency, object/tensor avoidance, output parity, route reuse, and
+performance all require separate prospective experiments.
+
+Architecture document: `./experiments/model_fractal/MAF_QUERY_SCOPED_WORKING_SET_ARCHITECTURE.md`
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-README-MD:END -->

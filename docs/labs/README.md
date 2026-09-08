@@ -1,5 +1,30 @@
 # OpenMind Labs
 
+<!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
+## MAF Phase 6D-Q4 status — CLOSED
+
+Phase 6D-Q4 Query Route Cache validation is formally closed on frozen evidence.
+
+- Scientific result: **PASS — 44/44 Q4 checks**.
+- Frozen cases: `q001`, `q025`, `q026`, `q033`.
+- Frozen runner: `bafed2c9ef6d2cf35d8d5212bbb17497f68a67fff9a67d855ac96243af3ac686`.
+- Frozen result: `1be2608271e899d320b4255fccba2e64c1616281110ebb375f803a7f740c43e0` / 9184 bytes.
+- Frozen exact-once slot: `af63aa8d3b769ad984b898d805ff45361eb5e079658d47a088514d3ba4145a2d` / 1311 bytes.
+- Runner implementation contract: `daa291fcb06c0456e028807308e35ef86486e5176b4fe88d254915718d6943e4`.
+- Evidence commit: `b386abde55b1b8f156292eb7500fb739ea8be918`.
+- Exact-once history: V1, V1.1, V1.2, and V1.3 are permanently spent and MUST NOT be rerun.
+- Durable V1.3 state: `RESERVATION_PREPARED -> RESERVED_DURABLE -> PUBLISHED_DURABLE`; no partial residue.
+- Claim scope remains limited to safe generation-bound route-metadata persistence, reuse, and invalidation.
+- Not established by Q4: inference execution, answer generation, working-set sufficiency, performance superiority or metrics, output parity, route-expansion optimality, MAF-native compute, or LLM replacement.
+- Phase 6E: **READY FOR ENTRY REVIEW — NOT ENTERED**.
+- Canonical closure record: `experiments/model_fractal/MAF_QUERY_ROUTE_CACHE_VALIDATION_V1_3_VERDICT.md`.
+
+<!-- OPENMIND_MAF_Q4_STATUS_END -->
+
+<!-- OPENMIND:CURRENT-WORK-LINK:START -->
+Current scientific work: [`../research/CURRENT_WORK.md`](../research/CURRENT_WORK.md).
+<!-- OPENMIND:CURRENT-WORK-LINK:END -->
+
 This directory documents active and historical experimental work.
 
 Experiments under `experiments/model_fractal/` are not automatically production capabilities.
@@ -74,20 +99,35 @@ Its tracked manifest is:
 
 `experiments/data/manifests/activation_vectors_all_tokens_v1.json`
 
-#### Current Phase 6B engineering checkpoint
+#### Current MAF engineering checkpoint
 
-The active MAF engineering line has progressed beyond isolated index experiments into immutable generation management and derived resident lookup.
+The active MAF engineering line has progressed through the persistent object
+pipeline and runtime/residency correctness gates into Phase 6D locality
+research.
 
-Validated:
+Accepted state:
 
-- Atomic Activation;
-- Rollback.
+- Phase 6B is **COMPLETE / CLOSED**.
+- Atomic Activation is complete and validated.
+- Rollback is complete and validated.
+- Resident PK Directory is complete, validated, benchmarked, and diagnostically accepted.
+- Segment Reader V1 is complete, validated, benchmarked, and diagnostically accepted.
+- Phase 6C MAF Object Runtime and Residency is **CLOSED / PASS** for its
+  preregistered correctness surface.
+- Phase 6C has **no performance verdict** and executed **no benchmark**.
+- Phase 6D is **ACTIVE RESEARCH**.
+- Phase 6D locality data-model Validation V1 is **PASS / accepted / frozen**.
+- Telemetry snapshot persistence Validation V1.3 is **PASS / accepted / frozen**
+  for its preregistered V01-V57 correctness surface.
+- No telemetry persistence benchmark was executed; its performance verdict is
+  **NONE**.
+- Runtime telemetry integration and real-model telemetry collection remain
+  separately gated Phase 6D research.
+- Phase 6D-Q remains **PROPOSED / NOT VALIDATED**.
 
-Frozen but awaiting first validation execution:
+The resident directory and runtime layers remain derived state and do not
+replace immutable generation authority.
 
-- Resident PK Directory V1 engine;
-- Resident PK Directory Validation V1 runner.
-
-The resident directory is derived, model-scoped, generation-bound state. It does not replace active-generation or generation-descriptor authority.
-
-No Phase 6B.9 benchmark result, Segment Reader implementation, MAF-native inference claim, production storage-engine choice, or Phase 6C runtime claim has been accepted.
+No current accepted evidence establishes MAF-native inference, general
+selective tensor avoidance, a replacement for `llama.cpp`, or an overall
+inference-performance advantage.

@@ -1,5 +1,24 @@
 # OpenMind Development Best Practices
 
+<!-- OPENMIND:TERMUX-ATOMIC-PASTE:START -->
+## Termux Atomic Paste Safety
+
+For interactive Termux click-paste work, shell heredocs are prohibited. Do not use `<<EOF`, `<<'PY'`, `cat <<...`, multiline `python <<...`, or equivalent heredoc forms.
+
+Required practice:
+
+- use one atomic no-heredoc command;
+- prefer `python -c` or an already tracked script bound to an exact SHA256;
+- hard-bind branch, HEAD, and important artifact hashes before mutation;
+- stage exact intended paths only; never use `git add .`, `git add -A`, or `git add --all`;
+- never use `exit` or `logout` in click-paste packets;
+- a failed gate stops only the operation and leaves Termux open;
+- keep scientific execution separate from source assembly, documentation, Git commits, and remote publication;
+- emit a bounded Gold Standard return packet.
+
+If Termux unexpectedly shows `>`, treat the operation as incomplete and execution state as unproven. Cancel the pending input, verify Git and artifact state, and do not assume any embedded program executed.
+<!-- OPENMIND:TERMUX-ATOMIC-PASTE:END -->
+
 ## Purpose
 
 OpenMind is developed by human contributors with AI systems acting as engineering collaborators.
@@ -152,6 +171,23 @@ git diff --stat
 ```
 
 A commit should represent one understandable logical change whenever practical.
+
+## Exact-Once Research Closure and Successor Gates
+
+When exact-once research produces authoritative evidence:
+
+1. Treat the namespace as permanently spent.
+2. Never rerun, repair, regenerate, or replace its scientific evidence.
+3. Freeze protocol, runner, slot, result, verdict, hashes, and claim boundary.
+4. Synchronize human docs, AI guardrails, roadmap, and operator workflow.
+5. State explicitly what the experiment proves and does not prove.
+6. Give every successor experiment a new preregistration and authority boundary.
+7. Keep scientific execution separate from documentation, Git work, and publication.
+8. Preserve negative evidence and audit corrections as provenance.
+9. Use publication-safe branches when large scientific artifacts block ordinary remote publication.
+10. Verify the live remote evidence after publication.
+
+For Q2 V1.4, query-to-PK selection passed within its frozen scope. The next gate is 6D-Q3 attach/detach ownership and cleanup semantics. Phase 6E remains not entered.
 
 ## MAF Phase 6B Best Practices
 

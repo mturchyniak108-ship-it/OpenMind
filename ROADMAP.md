@@ -1,5 +1,80 @@
 # OpenMind Roadmap
 
+<!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
+## MAF Phase 6D-Q4 status — CLOSED
+
+Phase 6D-Q4 Query Route Cache validation is formally closed on frozen evidence.
+
+- Scientific result: **PASS — 44/44 Q4 checks**.
+- Frozen cases: `q001`, `q025`, `q026`, `q033`.
+- Frozen runner: `bafed2c9ef6d2cf35d8d5212bbb17497f68a67fff9a67d855ac96243af3ac686`.
+- Frozen result: `1be2608271e899d320b4255fccba2e64c1616281110ebb375f803a7f740c43e0` / 9184 bytes.
+- Frozen exact-once slot: `af63aa8d3b769ad984b898d805ff45361eb5e079658d47a088514d3ba4145a2d` / 1311 bytes.
+- Runner implementation contract: `daa291fcb06c0456e028807308e35ef86486e5176b4fe88d254915718d6943e4`.
+- Evidence commit: `b386abde55b1b8f156292eb7500fb739ea8be918`.
+- Exact-once history: V1, V1.1, V1.2, and V1.3 are permanently spent and MUST NOT be rerun.
+- Durable V1.3 state: `RESERVATION_PREPARED -> RESERVED_DURABLE -> PUBLISHED_DURABLE`; no partial residue.
+- Claim scope remains limited to safe generation-bound route-metadata persistence, reuse, and invalidation.
+- Not established by Q4: inference execution, answer generation, working-set sufficiency, performance superiority or metrics, output parity, route-expansion optimality, MAF-native compute, or LLM replacement.
+- Phase 6E: **READY FOR ENTRY REVIEW — NOT ENTERED**.
+- Canonical closure record: `experiments/model_fractal/MAF_QUERY_ROUTE_CACHE_VALIDATION_V1_3_VERDICT.md`.
+
+<!-- OPENMIND_MAF_Q4_STATUS_END -->
+
+<!-- OPENMIND:Q2-ROADMAP:START -->
+## Phase 6D-Q2 — Query-to-PK Selection Validation
+
+- [x] selector, catalog, prospective query fixture and Q1 authority frozen
+- [x] V1.4 durable exact-once protocol frozen
+- [x] V1.4 namespace guard and permanent-spend/no-retry contract frozen
+- [x] V1.4 runner candidate static closure: 0 critical findings
+- [x] V1.4 runner + SHA authority frozen at `d9056941f2db77f521222f38b125927ae16bbf3e`
+- [x] post-freeze `runner_sha_pre_slot` finding closed as an audit matcher false-negative
+- [x] atomic Termux operator policy
+- [x] non-spending readiness/prequalification passed
+- [x] authoritative Q2 exact-once execution completed
+- [x] V01-V74 all passed in exact frozen order
+- [x] permanent slot journal and final result hash-chain verified
+- [x] authoritative result + verdict frozen at `10da372a8317dc629674fb2b52a7560f55ee416f`
+
+Scientific classification: **PASS — Q2 query-to-PK selection validation only**.
+
+Exact-once namespace: **PERMANENTLY SPENT**. V1.4 retry is **FORBIDDEN**.
+
+This does not establish inference, answer generation, selective working-set sufficiency,
+tensor/object avoidance, output parity, answer quality, performance superiority,
+MAF-native compute, or replacement of a conventional LLM.
+Next prospective gate: **6D-Q3 — attach/detach ownership and cleanup semantics**.
+
+Q3 requires a new preregistration and authority boundary. Q2 V1.4 remains permanently closed and must not be rerun.
+
+Human-readable Q2 explanation: [`docs/research/Q2_V1_4_SUMMARY.md`](docs/research/Q2_V1_4_SUMMARY.md).
+<!-- OPENMIND:Q2-ROADMAP:END -->
+
+<!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:START -->
+## Current Scientific Status
+
+- Phase 6B/6C: closed
+- Phase 6D: active
+- Phase 6D-Q2: authoritative V1.4 query-to-PK selection validation PASS — 74/74
+- Phase 6E: not entered
+- V1.4 protocol SHA256: `a814bca93a6b014ee53aad234b8396c841d0efc2a9363598e8a2192f23745699`
+- frozen V1.4 runner commit: `d9056941f2db77f521222f38b125927ae16bbf3e`
+- V1.4 runner SHA256: `7bda960c125786fdf3cfca65c4b7b5851ca8bd91257282facfee2fec1ae7a030`
+- static closure audit: `0 critical findings`
+- post-freeze self-SHA finding: `CLOSED — audit matcher false-negative`
+- authoritative Q2 run: `PASS — 74/74`
+- V01-V74: `ALL PASS`
+- exact-once result slot: `SPENT`
+- authoritative result SHA256: `b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6`
+- authoritative verdict SHA256: `c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663`
+- authoritative freeze commit: `10da372a8317dc629674fb2b52a7560f55ee416f`
+
+Runner freeze and static-audit completion are not a scientific PASS or FAIL.
+Q2 V1.4 is closed and must not be rerun. Any next Phase 6D-Q experiment requires a separate preregistered gate; Phase 6E remains not entered.
+Current authority: `docs/research/CURRENT_WORK.md`.
+<!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
+
 ## Mission
 
 OpenMind investigates whether useful AI computation can be performed through a local, native, representation-driven architecture that can reduce dependence on conventional token-by-token inference while preserving correctness and provenance.
@@ -142,21 +217,13 @@ A custom MAFDB must earn promotion through measured MAF-specific advantage.
 
 <!-- OPENMIND_PHASE_6B_STATUS_START -->
 
-### Current Phase 6B Research Status
+### Current Phase 6B / Phase 6C / Phase 6D Research Status
 
-Research anchor for this Phase 6B status:
+Research authority for current status is the frozen completion, validation,
+benchmark, diagnostic, and scientific-verdict lineage committed on
+`labs/multidimensional-maf`.
 
-    local branch: labs/multidimensional-maf
-    anchor HEAD:  7b4ed07
-
-Last verified remote comparison:
-
-    origin/main:                  aa17ed9
-    origin/labs/multidimensional-maf: absent
-
-The active MAF research history is currently local-only.
-
-Lean Phase 6B progression:
+Phase 6B progression:
 
 - **6B.1 Authority / identity rules — COMPLETE**
 - **6B.2 Segment Builder — COMPLETE + VALIDATED**
@@ -166,88 +233,60 @@ Lean Phase 6B progression:
 - **6B.6 Activation protocol — COMPLETE**
 - **6B.7 Atomic activation — COMPLETE / VALIDATED**
 - **6B.8 Rollback — COMPLETE / VALIDATED**
-- **6B.9 Resident PK directory — INCOMPLETE / CURRENT**
-- **6B.10 Segment Reader validation — NOT STARTED**
+- **6B.9 Resident PK Directory — COMPLETE / VALIDATED / BENCHMARKED / DIAGNOSTICALLY ACCEPTED**
+- **6B.10 Segment Reader V1 — COMPLETE / VALIDATED / BENCHMARKED / DIAGNOSTICALLY ACCEPTED**
 
-The frozen Generation Engine V1 validation result remains historical
-evidence with `all_pass=false`.
+**Phase 6B — COMPLETE / CLOSED.**
 
-The additive V1.1 corrective validation is now frozen and interpreted.
+Frozen Phase 6B artifacts remain immutable unless a separately prospective
+successor version is defined.
 
-Frozen V1.1 evidence:
+Phase 6C status:
 
-    runner commit: 33ebd95
-    result commit: 9dbb325
-    runner sha256:
-        f9dc577d25f75b2cb57dde633fbdd2bc
-        4ab0d9213d285aa31901843115fa9ec3
-    result sha256:
-        a37ee07ab548b1dea398bb42de42cd89
-        3df437b06b91a8a767464a4559e52727
+- **Phase 6C — MAF Object Runtime and Residency — CLOSED / PASS**
+- scientific engine verdict: **PASS**
+- accepted preregistered correctness checks: **32 / 32**
+- performance verdict: **NONE**
+- Phase 6C benchmark executed: **NO**
 
-V1.1 records `all_pass=true`.
+Phase 6C closure establishes only the correctness surface defined by its
+prospective protocol and frozen V1.3 evidence. It does not establish a storage,
+latency, throughput, memory, energy, or inference-performance advantage.
 
-Acceptance evidence:
+Phase 6D status:
 
-- 16/16 positive checks pass;
-- 12/12 negative controls fail closed as required;
-- generation identity is unchanged;
-- path independence passes;
-- multi-segment order independence passes;
-- placement sensitivity passes;
-- source segment remains unchanged;
-- `source_gguf_required=false`;
-- generation activation remains disabled;
-- no catalog engine is selected;
-- MAF-native computation remains disabled;
-- all engine static-policy controls pass;
-- corrected `runner_no_source_gguf_path=true`.
+- **Phase 6D — Segment Locality and Path-Aware Repacking — ACTIVE RESEARCH**
+- locality data-model Validation V1: **PASS / ACCEPTED / FROZEN**
+- runtime integration remains separately gated
+- telemetry snapshot persistence Validation V1.3: **PASS / ACCEPTED / FROZEN**
+  for its preregistered V01-V57 correctness surface
+- telemetry persistence benchmark executed: **NO**; performance verdict: **NONE**
+- real-model telemetry collection remains separately gated
+- **Phase 6D-Q — PROPOSED / NOT VALIDATED**
 
-A field-level V1/V1.1 comparison found only five differences:
-
-1. validation schema version;
-2. aggregate `all_pass`;
-3. corrected runner static-policy result;
-4. V1/V1.1 runtime directory in the positive manifest path;
-5. V1/V1.1 runtime directory in the missing-segment error text.
-
-The behavioral evidence is therefore preserved. The runtime-path
-differences are run-specific provenance, not behavioral changes.
-
-Phase 6B.5 is COMPLETE.
-
-The next single incomplete gate is Phase 6B.6 — Activation Protocol.
-Atomic activation implementation, rollback, resident-directory work,
-storage-engine selection, and Phase 6C remain outside that gate.
-
-Phase 6B.6 Activation Protocol is frozen as:
-
-    experiments/model_fractal/
-    MAF_ACTIVATION_V1_PROTOCOL.md
-
-The protocol defines model-scoped active-generation authority while
-remaining storage-engine neutral.
-
-Its canonical authority record binds:
-
-- model_pk;
-- generation_pk;
-- generation_manifest_sha256.
-
-Candidate manifest paths do not enter active authority identity.
-
-Phase 6B.6 defines required atomic semantics only. Phase 6B.7 must
-implement and independently validate the authority transition.
-
-Rollback remains outside scope until Phase 6B.8.
-
-The next single incomplete gate is Phase 6B.7 — Atomic activation.
+No Phase 6D result currently establishes selective MAF inference, tensor
+avoidance, output parity, or improved inference performance.
 
 <!-- OPENMIND_PHASE_6B_STATUS_END -->
 
 ## Phase 6C — MAF Object Runtime and Residency [RESEARCH]
 
+Status: **CLOSED / PASS — preregistered runtime/residency correctness; PERFORMANCE VERDICT NONE; BENCHMARK NOT EXECUTED**
+
+The scope below records the Phase 6C runtime/residency design that was subsequently implemented, prospectively validated, and scientifically closed on frozen V1.3 evidence.
+
+Entry checkpoint: `experiments/model_fractal/MAF_PHASE_6C_ENTRY_CHECKPOINT.md`
+
 Goal: keep only the useful model working set resident.
+
+Starting Phase 6C scope includes:
+
+- runtime residency state machines;
+- long-lived descriptor ownership where justified;
+- mmap / mapped-segment residency where justified;
+- eviction and reuse policy;
+- on-demand dense materialization;
+- runtime concurrency and thread-safety contracts.
 
 The database/catalog knows every MAF object; it does not require every object
 to be loaded.
@@ -306,6 +345,64 @@ Rules:
 - transition locality is more important than global popularity alone
 - old generations remain recoverable until the new generation validates
 
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-ROADMAP:START -->
+## Phase 6D-Q — Query-Scoped MAF Working Sets and Reusable PK Route Cache
+
+Status: ARCHITECTURE PROPOSED — Q2 QUERY-TO-PK SELECTION VALIDATION PASS; WORKING-SET INFERENCE NOT VALIDATED
+
+Current 6D-Q2 state: the frozen V1.4 exact-once experiment completed with
+all 74 checks passing. The namespace is permanently `SPENT`; the authoritative
+result and verdict are frozen at `10da372a8317dc629674fb2b52a7560f55ee416f`. Q2 validates query-to-PK
+selection only and does not validate selective working-set inference.
+
+Phase 6D-Q introduces a proposed bridge from persistent/locality-aware MAF
+storage to selective MAF execution.
+
+The proposed architecture separates:
+
+- canonical immutable MAFDB model authority;
+- a temporary Query-Scoped MAF Capsule containing or referencing the PK working
+  set for one input;
+- a persistent derived Query Route Cache that remembers successful PK routes for
+  exact or similar future queries.
+
+Proposed execution flow:
+
+    input
+    -> query signature
+    -> prior route lookup
+    -> bounded PK selection
+    -> query-scoped MAF working set
+    -> selective execution
+    -> bounded expansion when insufficient
+    -> answer
+    -> release/detach
+    -> retire ephemeral materialization
+    -> retain compact route metadata
+
+The initial PK set is not required to be perfect. The intended architecture
+allows deterministic bounded expansion when the current working set is
+insufficient.
+
+The scientific gates are:
+
+- 6D-Q1: freeze Query Capsule and Query Route Cache schemas;
+- 6D-Q2: test non-oracle query-to-PK selection feasibility;
+- 6D-Q3: prove attach/detach ownership and cleanup semantics;
+- 6D-Q4: test exact/similar query-route reuse with generation binding;
+- 6E-A: test selective working-set sufficiency;
+- 6E-B: test bounded expansion/recovery;
+- 6E-C: prove actual tensor/object avoidance;
+- 6E-D: evaluate output parity/quality;
+- 6F: measure performance only after correctness.
+
+No current result proves that a prompt can yet select a sufficient PK subset or
+that this architecture improves inference performance.
+
+Architecture:
+`experiments/model_fractal/MAF_QUERY_SCOPED_WORKING_SET_ARCHITECTURE.md`
+<!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-ROADMAP:END -->
+
 ## Phase 6E — Selective MAF Access and Tensor Avoidance [CRITICAL RESEARCH]
 
 Goal: determine whether OpenMind can avoid touching or materializing complete
@@ -354,6 +451,105 @@ Potential Vulkan endpoint:
 
 Do not use GPU acceleration to justify an otherwise inferior representation
 or storage architecture.
+
+<!-- OPENMIND_PHASE_6F_GPT_OSS_SCALE_TARGET_START -->
+
+### Phase 6F prospective scale-validation target — GPT-OSS-20B
+
+Status: **PROSPECTIVE TARGET — NO EXECUTION AUTHORIZED**
+
+GPT-OSS-20B is an explicit future scale-validation workload for the proven MAF
+runtime architecture. Naming this workload does not enter Phase 6F, authorize
+model access or execution, select a storage backend, or establish any
+performance or capability claim.
+
+The existing Phase 6E-D correctness boundary remains mandatory:
+
+1. complete-model persistent MAF generation must remain qualified;
+2. a real MAF-to-inference treatment path must be frozen and qualified;
+3. treatment numerical-state provenance must be explicit;
+4. the comparison observation surface must be frozen;
+5. output/token/logit/quality fidelity required by the Phase 6E-D protocol must
+   close before Phase 6F performance interpretation.
+
+GPT-OSS-20B MUST NOT be used to bypass or replace the Qwen-based Phase 6E-D
+correctness/fidelity work already in progress.
+
+#### Low-RAM capability objective
+
+After correctness is established and Phase 6F is separately entered, the
+project may test whether MAF object addressing, persistent storage, selective
+materialization, and bounded runtime residency reduce the memory envelope
+required for useful model execution.
+
+A reproducible lower peak-RAM requirement is a valid Phase 6F capability
+advantage when it enables correct execution inside a device memory envelope
+where the frozen reference runtime cannot complete or cannot operate
+practically.
+
+Such a low-RAM capability result does not require latency or throughput
+superiority to be scientifically useful. It does require:
+
+- preserved correctness under the frozen comparison boundary;
+- preregistered resource measurement;
+- an explicit reference runtime/configuration;
+- peak RAM and working-memory evidence;
+- model/state identity and provenance;
+- repeated confirmation under the frozen device/runtime configuration;
+- honest reporting of latency, throughput, I/O, thermal, and energy costs where
+  measurable.
+
+A smaller payload, lower RAM measurement, or successful load by itself remains
+insufficient if inference correctness is not preserved.
+
+#### MAFDB relationship
+
+The existing Phase 6B storage-engine candidates remain unchanged:
+
+- compiled binary/RAM index plus external MAF segments;
+- SQLite control plane plus external MAF segments;
+- purpose-built MAFDB;
+- another measured embedded engine.
+
+GPT-OSS-20B may later serve as a scale workload for comparing those candidates.
+
+This amendment does **not** preselect purpose-built MAFDB.
+
+A purpose-built MAFDB must still earn promotion through reproducible
+MAF-specific advantage, including one or more of:
+
+- lower peak RAM or working memory;
+- stronger bounded-residency behavior;
+- lower serialized-state or I/O cost;
+- better indexed access characteristics;
+- lower latency;
+- higher throughput;
+- improved scaling;
+- a model-capability envelope unavailable to the reference architecture.
+
+#### Native-device progression
+
+The frozen Phase 6F optimization order remains authoritative.
+
+Validated algorithms may progress through:
+
+`Python research -> validated component -> native C++ -> ARM64/NEON -> Vulkan`
+
+Native compilation is an optimization/componentization stage, not a substitute
+for correctness or baseline measurement.
+
+Vulkan remains downstream of demonstrated MAF/runtime advantage or a clearly
+identified GPU-addressable bottleneck.
+
+Potential long-term scale path:
+
+`persistent MAF/MAFDB -> bounded RAM residency -> native C++ runtime -> ARM64/NEON -> VULKAN_MAF`
+
+No GPT-OSS download, conversion, MAF compilation, model loading, inference,
+benchmark, Phase 6F entry, MAFDB promotion, native implementation, or Vulkan
+execution is authorized by this roadmap amendment.
+
+<!-- OPENMIND_PHASE_6F_GPT_OSS_SCALE_TARGET_END -->
 
 ## Phase 7 — Fuzzy Logic Routing [RESEARCH]
 
@@ -871,24 +1067,24 @@ The present evidence favors a hybrid rather than replacement model:
 Other morphologies remain candidate specialized structures until their
 own controlled experiments earn implementation status.
 
-### Current Phase 6B.9 Checkpoint
+### Phase 6B Exit / Phase 6C Entry Checkpoint
 
-The current Phase 6B status list supersedes older historical checkpoint notes retained elsewhere in this roadmap.
+The frozen completion artifacts supersede the older Phase 6B.9
+checkpoint state previously recorded here.
 
 - Phase 6B.7 Atomic Activation is complete and validated.
 - Phase 6B.8 Rollback is complete and validated.
-- Phase 6B.9 Resident PK Directory is incomplete and current.
-- Resident PK Directory V1 protocol is frozen.
-- Resident PK Directory V1 engine is frozen.
-- Resident PK Directory Validation V1 runner is preregistered and frozen.
-- The Resident PK Directory validation runner has not yet been executed.
-- Its raw result and validation runtime do not exist.
-- Resident PK Directory performance has not yet been benchmarked under the frozen validation line.
-- Phase 6B.10 Segment Reader validation has not started.
-- Phase 6C has not started.
+- Phase 6B.9 Resident PK Directory is complete, validated, benchmarked, and diagnostically accepted.
+- Phase 6B.10 Segment Reader V1 is complete, validated, benchmarked, and diagnostically accepted.
+- Phase 6B is complete and closed.
+- Phase 6B closure is frozen by `experiments/model_fractal/MAF_SEGMENT_READER_V1_COMPLETION.md`.
+- Phase 6C entry is frozen by `experiments/model_fractal/MAF_PHASE_6C_ENTRY_CHECKPOINT.md`.
+- Phase 6C subsequently completed its preregistered runtime/residency correctness validation and is scientifically closed with PASS.
+- Phase 6C established no performance verdict and executed no benchmark.
+- Phase 6D is the current MAF engineering research phase.
 
 Resident PK Directory V1 is derived immutable process-local state for exactly one model and one active generation.
 
 The minimum logical lookup key is `(model_pk, "object_pk", object_pk)`.
 
-Average O(1) lookup is a design and implementation target until measured by accepted benchmark evidence.
+Resident PK Directory lookup has accepted Phase 6B benchmark evidence within its frozen measured scope. The result must not be generalized to unlike workloads or runtime configurations without measurement.

@@ -1,5 +1,9 @@
 # Getting Started with OpenMind
 
+<!-- OPENMIND:CURRENT-WORK-LINK:START -->
+Current scientific work: [`../research/CURRENT_WORK.md`](../research/CURRENT_WORK.md).
+<!-- OPENMIND:CURRENT-WORK-LINK:END -->
+
 ## What OpenMind Is
 
 OpenMind is a local-first AI systems project.

@@ -124,3 +124,5 @@ ort
 # Vulkan probe executable
 
 # Vulkan probe executable
+/results/runtime/maf_full_model_persistent_generation_v1/
+/results/runtime/maf_full_model_persistent_generation_v1.building/

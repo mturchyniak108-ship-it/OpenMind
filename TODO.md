@@ -1,5 +1,9 @@
 # OpenMind TODO
 
+<!-- OPENMIND:CURRENT-AUTHORITY:START -->
+Current scientific authority is `docs/research/CURRENT_WORK.md`; `TODO.md` is planning material.
+<!-- OPENMIND:CURRENT-AUTHORITY:END -->
+
 ## Knowledge Waveform Research
 
 - [ ] Define canonical start_node/end_node path object
