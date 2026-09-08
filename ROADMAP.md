@@ -1,8 +1,47 @@
 # OpenMind Roadmap
 
 <!-- OPENMIND:MAF-CURRENT-STATUS:START -->
-> **MAF research status:** Phase 6B and Phase 6C are closed; Phase 6D is active; Phase 6D-Q remains roadmap-only; Phase 6E has not been entered. See [`docs/research/MAF_CURRENT_STATUS.md`](docs/research/MAF_CURRENT_STATUS.md) for the current evidence-bound status and research/publication lineage.
+> **Current MAF status:** Whole Phase 6 is formally closed. **MAF — Model Address Fabric** is the active successor identity for model-object representation/addressing work. The MAF documentation foundation, SEO publication and public GitHub Pages deployment are complete. Historical OpenMind evidence remains frozen and preserved. Successor implementation work has not yet begun.
 <!-- OPENMIND:MAF-CURRENT-STATUS:END -->
+
+## MAF successor roadmap — post-Phase-6
+
+This checklist is the current successor roadmap.
+
+The legacy OpenMind milestones retained later in this file are
+historical/planning context. Their unchecked boxes do not override
+the current MAF phase status below.
+
+### Complete
+
+- [x] Phase 6A–6F scientific closure
+- [x] MAF successor identity and OpenMind → MAF lineage policy
+- [x] MAF documentation foundation and authority/terminology structure
+- [x] SEO qualification and dedicated documentation-source publication
+- [x] Frozen `gh-pages` deployment artifact with provenance binding
+- [x] Public GitHub Pages deployment and live byte-for-byte verification
+
+### Not complete
+
+- [ ] Reconcile remaining active-facing OpenMind naming and terminology without rewriting frozen provenance
+- [ ] Decide compatibility boundaries for Python package, native symbols, schemas and repository/remote identity
+- [ ] Evaluate the external OpenMind robotics project and define a collaboration/integration boundary
+- [ ] Design and validate MAFDB or an equivalent persistent-storage successor
+- [ ] Build and validate the native C++ MAF successor path
+- [ ] Build and validate the ARM64/NEON optimization path
+- [ ] Build and validate the Vulkan MAF-native acceleration path
+- [ ] Characterize and optimize performance against frozen baselines
+- [ ] Validate broader model, runtime and hardware generalization
+
+### Successor ordering rule
+
+Complete the active MAF/OpenMind disentanglement and compatibility
+decisions before external integration work.
+
+MAFDB/storage, native runtime, ARM64/NEON, Vulkan, optimization and
+broader-generalization work each require their own authorization,
+protocol and validation gates.
+
 
 
 ## Vision
