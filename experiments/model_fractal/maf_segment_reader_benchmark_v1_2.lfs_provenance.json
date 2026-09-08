@@ -1,0 +1,31 @@
+{
+  "git_lfs": {
+    "attributes_rule": "experiments/model_fractal/maf_segment_reader_benchmark_v1_2.json filter=lfs diff=lfs merge=lfs -text",
+    "oid": "sha256:44b15ba5a02492f9a7c79cda3120c0cb4b6b398201eacb5f5249f38a281e5a54",
+    "size": 323334664,
+    "version": "3.7.1"
+  },
+  "governance": {
+    "authority_statement": "The scientific branch remains the source of truth. The LFS-backed publication copy exists to expose the exact historical evidence for provenance and peer review.",
+    "publication_only": true,
+    "reason": "The original ordinary Git blob exceeds GitHub's 100 MiB Git-object limit.",
+    "scientific_branch_modified": false,
+    "scientific_history_rewritten": false
+  },
+  "historical_evidence": {
+    "bytes": 323334664,
+    "git_blob_sha1": "efaa5121816581ffa59937b2e45d63f5a1326801",
+    "introducing_commit": "a524d71d46090a42a7ac6b69582ca79ca699e65f",
+    "path": "experiments/model_fractal/maf_segment_reader_benchmark_v1_2.json",
+    "sha256": "44b15ba5a02492f9a7c79cda3120c0cb4b6b398201eacb5f5249f38a281e5a54"
+  },
+  "publication_mirror": {
+    "branch": "publication/labs-multidimensional-maf",
+    "parent_commit": "8a6ef95a9ae5501060d0a209c2e035576df83dbd"
+  },
+  "schema": "openmind.maf.publication_lfs_provenance.v1",
+  "scientific_authority": {
+    "branch": "labs/multidimensional-maf",
+    "head": "35d9bf7e0f0a364929a139feda952e084edf5fc1"
+  }
+}
