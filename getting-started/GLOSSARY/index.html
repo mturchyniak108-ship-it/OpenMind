@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Mitchell Turchyniak">
+        <link rel="canonical" href="https://mturchyniak108-ship-it.github.io/OpenMind/getting-started/GLOSSARY/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+<meta name="description" content="Definitions for MAF terminology covering model-object identity, deterministic addressing, provenance, reconstruction, storage, and related research concepts.">
+
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MAF — Model Address Fabric">
+<meta property="og:title" content="MAF Glossary: Model Addressing and Provenance Terms">
+<meta property="og:description" content="Definitions for MAF terminology covering model-object identity, deterministic addressing, provenance, reconstruction, storage, and related research concepts.">
+<meta property="og:url" content="https://mturchyniak108-ship-it.github.io/OpenMind/getting-started/GLOSSARY/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MAF Glossary: Model Addressing and Provenance Terms">
+<meta name="twitter:description" content="Definitions for MAF terminology covering model-object identity, deterministic addressing, provenance, reconstruction, storage, and related research concepts.">
+
+
+
+<title>MAF Glossary: Model Addressing and Provenance Terms</title>
+
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MAF — Model Address Fabric Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting Started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../INSTALLATION/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../COMMAND_REFERENCE/" class="dropdown-item">Command Reference</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Glossary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Concepts</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../concepts/MAF_OVERVIEW/" class="dropdown-item">MAF Overview</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Terminology</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../terminology/COINED_TERMS/" class="dropdown-item">Coined Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../architecture/AUTHORITY_AND_TERMINOLOGY/" class="dropdown-item">Authority and Terminology</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-To</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">How-To Index</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/READ_THE_MAF_DOCUMENTATION/" class="dropdown-item">Read the Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/INTERPRET_MAF_TERMS/" class="dropdown-item">Interpret MAF Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/TRACE_MAF_PROVENANCE/" class="dropdown-item">Trace Provenance</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS/" class="dropdown-item">Historical OpenMind Artifacts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Architecture</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../architecture/ARCHITECTURE/" class="dropdown-item">Architecture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reference</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/MAF_OBJECT_MODEL/" class="dropdown-item">MAF Object Model</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/SCHEMA_REGISTRY/" class="dropdown-item">Schema Registry</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Provenance</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../provenance/OPENMIND_TO_MAF_LINEAGE/" class="dropdown-item">OpenMind to MAF Lineage</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Compatibility</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../compatibility/OPENMIND_COMPATIBILITY/" class="dropdown-item">OpenMind Compatibility</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Research</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../research/PHASE_6_SUMMARY/" class="dropdown-item">Phase 6 Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../research/CURRENT_WORK/" class="dropdown-item">Current Work</a>
+</li>
+                                    
+<li>
+    <a href="../../research/" class="dropdown-item">Research Index</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../COMMAND_REFERENCE/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../concepts/MAF_OVERVIEW/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mturchyniak108-ship-it/OpenMind/edit/master/docs/getting-started/GLOSSARY.md" class="nav-link">Edit on OpenMind / MAF Research
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#openmind-glossary" class="nav-link">OpenMind Glossary</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#canonical" class="nav-link">Canonical</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#validated-research" class="nav-link">Validated Research</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lab-candidate" class="nav-link">Lab Candidate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#historical" class="nav-link">Historical</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#provenance" class="nav-link">Provenance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evidence" class="nav-link">Evidence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#truth-graph" class="nav-link">Truth Graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#truth-path" class="nav-link">Truth Path</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#representation" class="nav-link">Representation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#activation" class="nav-link">Activation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#embedding-dimension" class="nav-link">Embedding Dimension</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recurrence" class="nav-link">Recurrence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cosine-similarity" class="nav-link">Cosine Similarity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#holdout" class="nav-link">Holdout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#baseline" class="nav-link">Baseline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#control" class="nav-link">Control</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#maf" class="nav-link">MAF</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lodgepole" class="nav-link">Lodgepole</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#root" class="nav-link">Root</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#branch" class="nav-link">Branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#leaf-needle" class="nav-link">Leaf / Needle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#centroid" class="nav-link">Centroid</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#residual" class="nav-link">Residual</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reconstruction" class="nav-link">Reconstruction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fractal" class="nav-link">Fractal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#deterministic" class="nav-link">Deterministic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#manifest" class="nav-link">Manifest</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#promotion" class="nav-link">Promotion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#maf-generation" class="nav-link">MAF Generation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#active-generation" class="nav-link">Active Generation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stable-logical-pk" class="nav-link">Stable Logical PK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resident-pk-directory" class="nav-link">Resident PK Directory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stale-snapshot" class="nav-link">Stale Snapshot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#path-independence" class="nav-link">Path Independence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#maf-model-address-fabric" class="nav-link">MAF — Model Address Fabric</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#terminology-status" class="nav-link">Terminology status</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="openmind-glossary">OpenMind Glossary</h1>
+<p>This glossary gives a plain-language meaning first, followed by the more technical OpenMind usage where useful.</p>
+<h2 id="canonical">Canonical</h2>
+<p><strong>Plain language:</strong> A part of OpenMind that the project currently treats as implemented behavior.</p>
+<p><strong>Technical meaning:</strong> Source-backed behavior supported by appropriate tests and repository evidence.</p>
+<p>Canonical does not mean perfect or permanently frozen.</p>
+<h2 id="validated-research">Validated Research</h2>
+<p><strong>Plain language:</strong> An experimental result that has passed its stated evidence and validation requirements.</p>
+<p><strong>Technical meaning:</strong> Reproducible research with immutable inputs, controls or baselines, characterized outputs, hashes, limitations, and explicit promotion.</p>
+<p>Validated research is still not automatically a production feature.</p>
+<h2 id="lab-candidate">Lab Candidate</h2>
+<p><strong>Plain language:</strong> Work currently being investigated.</p>
+<p>It may be promising, incomplete, wrong, or later superseded.</p>
+<h2 id="historical">Historical</h2>
+<p><strong>Plain language:</strong> Older work kept so the research path is not lost.</p>
+<p>Historical experiments may remain useful for provenance, comparison, or methodology even when newer versions replace them.</p>
+<h2 id="provenance">Provenance</h2>
+<p><strong>Plain language:</strong> The record of where information or an artifact came from.</p>
+<p><strong>Technical meaning:</strong> Source identity, version, command, environment, hashes, relationships, and other evidence needed to trace an artifact.</p>
+<h2 id="evidence">Evidence</h2>
+<p>Information used to support or verify a project claim.</p>
+<p>OpenMind distinguishes measured evidence from interpretation.</p>
+<h2 id="truth-graph">Truth Graph</h2>
+<p><strong>Plain language:</strong> A structured network for representing things OpenMind knows and how those things relate.</p>
+<p><strong>Technical meaning:</strong> Canonical nodes and weighted relationships with provenance-aware traversal and evidence bindings.</p>
+<h2 id="truth-path">Truth Path</h2>
+<p>A route through related entries in the Truth Graph.</p>
+<p>A path can represent how one piece of information connects to another and can carry relationship and provenance information.</p>
+<h2 id="representation">Representation</h2>
+<p><strong>Plain language:</strong> The internal numerical form a model uses while processing information.</p>
+<p>In current OpenMind research, representations often refer to hidden-state vectors captured at transformer layers.</p>
+<h2 id="activation">Activation</h2>
+<p>A numerical value or vector produced inside a neural network during computation.</p>
+<p>OpenMind activation experiments capture selected internal model representations for analysis.</p>
+<h2 id="embedding-dimension">Embedding Dimension</h2>
+<p>The number of numerical components in a representation vector.</p>
+<p>For example, a 1536-dimensional activation contains 1536 scalar values.</p>
+<h2 id="recurrence">Recurrence</h2>
+<p><strong>Plain language:</strong> Similar internal structure appearing again at another point in model processing.</p>
+<p>In OpenMind research, recurrence is measured rather than assumed. High similarity alone does not prove identical information or identical computation.</p>
+<h2 id="cosine-similarity">Cosine Similarity</h2>
+<p>A measurement of how closely two vectors point in the same direction.</p>
+<p>Values near 1 indicate similar direction, but interpretation depends on the experiment and its controls.</p>
+<h2 id="holdout">Holdout</h2>
+<p>Data intentionally kept out of discovery or fitting so a candidate can be tested on information it did not use during development.</p>
+<h2 id="baseline">Baseline</h2>
+<p>A reference measurement used for comparison.</p>
+<p>A baseline may represent current behavior, exhaustive search, a control population, or another appropriate reference.</p>
+<h2 id="control">Control</h2>
+<p>An alternative condition designed to test whether an observed result could arise for a simpler or unrelated reason.</p>
+<p>Examples include shuffled labels, cross-token comparisons, and randomized mappings.</p>
+<h2 id="maf">MAF</h2>
+<p><strong>Plain language:</strong> OpenMind research into compact, indexed, or structured representations of model-derived information.</p>
+<p>MAF work includes retrieval, indexing, reconstruction, streaming, scaling, and related representation experiments.</p>
+<p>MAF engineering results do not by themselves prove that a scientific recurrence hypothesis is correct.</p>
+<h2 id="lodgepole">Lodgepole</h2>
+<p><strong>Plain language:</strong> An experimental tree organization inspired by a lodgepole pine: shared structure forms the trunk and branches while increasingly specific information appears toward terminal needles.</p>
+<p><strong>Technical meaning:</strong> Current experiments use deterministic hierarchical partitioning, centroids, routing, and residual representations to investigate retrieval and storage behavior.</p>
+<h2 id="root">Root</h2>
+<p>The top node of a tree structure.</p>
+<p>In Lodgepole experiments, the root represents the broadest shared group.</p>
+<h2 id="branch">Branch</h2>
+<p>An intermediate subdivision of the tree containing more specific related information.</p>
+<h2 id="leaf-needle">Leaf / Needle</h2>
+<p>A terminal part of a Lodgepole tree.</p>
+<p>Current experiments use terminal nodes to hold the most localized groups of representations.</p>
+<p>The term <code>needle</code> is a project metaphor and should not be confused with a standard machine-learning term.</p>
+<h2 id="centroid">Centroid</h2>
+<p>The arithmetic center of a group of vectors.</p>
+<p>It provides a representative vector for a tree node or cluster.</p>
+<h2 id="residual">Residual</h2>
+<p><strong>Plain language:</strong> The difference left after subtracting a shared representation.</p>
+<p>For example, a child centroid minus its parent centroid is a parent-child residual.</p>
+<p>Residual magnitude is currently being investigated as a possible basis for hierarchical storage.</p>
+<h2 id="reconstruction">Reconstruction</h2>
+<p>Building an approximation or exact version of an original representation from stored components.</p>
+<p>Any lossy reconstruction must be evaluated for numerical error and, where relevant, behavioral fidelity.</p>
+<h2 id="fractal">Fractal</h2>
+<p>OpenMind uses this term for experimental repeated or hierarchical structure.</p>
+<p>It should not be interpreted as proof that transformer representations are mathematical fractals unless an experiment specifically establishes that property.</p>
+<h2 id="deterministic">Deterministic</h2>
+<p>Given the same defined inputs and environment, an operation produces the same result.</p>
+<p>Where execution is not deterministic, OpenMind should record sources of variation.</p>
+<h2 id="manifest">Manifest</h2>
+<p>A structured metadata file describing an artifact or experiment, including configuration, hashes, provenance, status, and validation information.</p>
+<h2 id="promotion">Promotion</h2>
+<p>The explicit process of moving work from a lower evidence status toward validated research or canonical project behavior.</p>
+<p>Promotion is never implied merely by the existence of a successful-looking result.</p>
+<h2 id="maf-generation">MAF Generation</h2>
+<p>An immutable canonical descriptor plus its generation identity and physical segment evidence. A generation is not defined by its current filesystem location.</p>
+<h2 id="active-generation">Active Generation</h2>
+<p>The generation selected by the canonical active-generation authority record for a model.</p>
+<h2 id="stable-logical-pk">Stable Logical PK</h2>
+<p>A canonical logical identifier such as <code>model_pk</code>, <code>generation_pk</code>, or <code>object_pk</code> whose identity is independent of mutable physical placement.</p>
+<h2 id="resident-pk-directory">Resident PK Directory</h2>
+<p>A derived process-local immutable lookup snapshot built from current active-generation authority and validated physical evidence. It is not authoritative truth.</p>
+<p>Resident PK Directory V1 supports model-scoped canonical <code>object_pk</code> lookup as its minimum key class.</p>
+<h2 id="stale-snapshot">Stale Snapshot</h2>
+<p>A resident snapshot whose generation binding no longer matches the generation expected by the current runtime after activation, rollback, or another authority transition.</p>
+<h2 id="path-independence">Path Independence</h2>
+<p>The property that byte-identical valid physical evidence may move to another runtime path without changing logical PK identity or immutable descriptor mappings.</p>
+<!-- MAF_GLOSSARY_POST_PHASE6_V1 -->
+<h2 id="maf-model-address-fabric">MAF — Model Address Fabric</h2>
+<p><strong>Status:</strong> Canonical current term.</p>
+<p>MAF means <strong>Model Address Fabric</strong>.</p>
+<p>It is the persistent model-object representation and
+addressing architecture focused on stable identities,
+deterministic addressing, tensor ↔ object relationships,
+payload provenance, reconstruction, scalable lookup and
+selection, and fail-closed validation.</p>
+<p>The acronym existed in earlier OpenMind research. This
+post-Phase-6 definition establishes the expanded
+current-facing name without rewriting historical
+evidence.</p>
+<h2 id="terminology-status">Terminology status</h2>
+<p><strong>Canonical</strong> — preferred current term.</p>
+<p><strong>Provisional</strong> — working term that may change after
+design or validation.</p>
+<p><strong>Historical</strong> — preserved term from earlier research or
+evidence.</p>
+<p><strong>Compatibility Identifier</strong> — historical identifier that
+remains valid because software, schemas or data may
+depend on it.</p>
+<p>See <code>../terminology/COINED_TERMS.md</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

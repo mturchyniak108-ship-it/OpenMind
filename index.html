@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="MAF — Model Address Fabric documentation for stable model-object identity, deterministic addressing, tensor-object relationships, payload provenance, and reconstruction.">
+        <meta name="author" content="Mitchell Turchyniak">
+        <link rel="canonical" href="https://mturchyniak108-ship-it.github.io/OpenMind/">
+        <link rel="shortcut icon" href="img/favicon.ico">
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MAF — Model Address Fabric">
+<meta property="og:title" content="MAF — Model Address Fabric | Model-Object Addressing">
+<meta property="og:description" content="MAF — Model Address Fabric documentation for stable model-object identity, deterministic addressing, tensor-object relationships, payload provenance, and reconstruction.">
+<meta property="og:url" content="https://mturchyniak108-ship-it.github.io/OpenMind/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MAF — Model Address Fabric | Model-Object Addressing">
+<meta name="twitter:description" content="MAF — Model Address Fabric documentation for stable model-object identity, deterministic addressing, tensor-object relationships, payload provenance, and reconstruction.">
+
+
+
+<title>MAF — Model Address Fabric | Model-Object Addressing</title>
+
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">MAF — Model Address Fabric Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting Started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="getting-started/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="getting-started/INSTALLATION/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="getting-started/COMMAND_REFERENCE/" class="dropdown-item">Command Reference</a>
+</li>
+                                    
+<li>
+    <a href="getting-started/GLOSSARY/" class="dropdown-item">Glossary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Concepts</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="concepts/MAF_OVERVIEW/" class="dropdown-item">MAF Overview</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Terminology</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="terminology/COINED_TERMS/" class="dropdown-item">Coined Terms</a>
+</li>
+                                    
+<li>
+    <a href="architecture/AUTHORITY_AND_TERMINOLOGY/" class="dropdown-item">Authority and Terminology</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-To</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="howto/" class="dropdown-item">How-To Index</a>
+</li>
+                                    
+<li>
+    <a href="howto/READ_THE_MAF_DOCUMENTATION/" class="dropdown-item">Read the Documentation</a>
+</li>
+                                    
+<li>
+    <a href="howto/INTERPRET_MAF_TERMS/" class="dropdown-item">Interpret MAF Terms</a>
+</li>
+                                    
+<li>
+    <a href="howto/TRACE_MAF_PROVENANCE/" class="dropdown-item">Trace Provenance</a>
+</li>
+                                    
+<li>
+    <a href="howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS/" class="dropdown-item">Historical OpenMind Artifacts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Architecture</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="architecture/ARCHITECTURE/" class="dropdown-item">Architecture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reference</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="reference/MAF_OBJECT_MODEL/" class="dropdown-item">MAF Object Model</a>
+</li>
+                                    
+<li>
+    <a href="reference/SCHEMA_REGISTRY/" class="dropdown-item">Schema Registry</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Provenance</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="provenance/OPENMIND_TO_MAF_LINEAGE/" class="dropdown-item">OpenMind to MAF Lineage</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Compatibility</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="compatibility/OPENMIND_COMPATIBILITY/" class="dropdown-item">OpenMind Compatibility</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Research</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="research/PHASE_6_SUMMARY/" class="dropdown-item">Phase 6 Summary</a>
+</li>
+                                    
+<li>
+    <a href="research/CURRENT_WORK/" class="dropdown-item">Current Work</a>
+</li>
+                                    
+<li>
+    <a href="research/" class="dropdown-item">Research Index</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="getting-started/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mturchyniak108-ship-it/OpenMind/edit/master/docs/index.md" class="nav-link">Edit on OpenMind / MAF Research
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#maf-model-address-fabric" class="nav-link">MAF — Model Address Fabric</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#in-one-minute" class="nav-link">In one minute</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#what-problem-is-maf-trying-to-solve" class="nav-link">What problem is MAF trying to solve?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#what-maf-can-do-today" class="nav-link">What MAF can do today</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#is-maf-a-good-fit-for-what-i-am-doing" class="nav-link">Is MAF a good fit for what I am doing?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#when-you-probably-want-maf" class="nav-link">When you probably want MAF</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#when-maf-may-not-be-necessary" class="nav-link">When MAF may not be necessary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#what-maf-is-not" class="nav-link">What MAF is not</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#core-concepts" class="nav-link">Core concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#for-humans-fastest-reading-path" class="nav-link">For humans: fastest reading path</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#for-ai-agents" class="nav-link">For AI agents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evidence-and-maturity" class="nav-link">Evidence and maturity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#historical-lineage" class="nav-link">Historical lineage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#current-project-boundary" class="nav-link">Current project boundary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#documentation-map" class="nav-link">Documentation map</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#short-answer" class="nav-link">Short answer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="maf-model-address-fabric">MAF — Model Address Fabric</h1>
+<p><strong>MAF — Model Address Fabric</strong> is a persistent model-object
+representation and addressing architecture.</p>
+<p>It is intended for systems that need model data to have more
+explicit identity, provenance, addressing and reconstruction
+relationships than a conventional opaque model file normally
+exposes.</p>
+<p>This page is the fastest way to decide whether MAF is relevant
+to what you are building, researching or evaluating.</p>
+<hr />
+<h2 id="in-one-minute">In one minute</h2>
+<p>MAF treats model-related data as <strong>addressable objects</strong> rather
+than only as bytes inside one large model file.</p>
+<p>The architecture focuses on:</p>
+<ul>
+<li>stable model-object identity;</li>
+<li>deterministic addressing;</li>
+<li>tensor ↔ object relationships;</li>
+<li>persistent payload provenance;</li>
+<li>object and tensor reconstruction;</li>
+<li>catalogs and segment-based storage;</li>
+<li>selective lookup and working-set selection;</li>
+<li>runtime residency and object location;</li>
+<li>compatibility across representation boundaries;</li>
+<li>fail-closed validation when identity or authority cannot be
+  proven.</li>
+</ul>
+<p>A simplified mental model is:</p>
+<p><strong>model data → identified objects → persistent addresses →
+provenance → selective retrieval → reconstruction</strong></p>
+<p>MAF does <strong>not</strong> require pretending that conventional model
+formats never existed. Existing model formats can remain source,
+compatibility or reconstruction boundaries.</p>
+<hr />
+<h2 id="what-problem-is-maf-trying-to-solve">What problem is MAF trying to solve?</h2>
+<p>Most model runtimes begin with a large serialized model artifact
+and load whatever structures the runtime requires from that
+artifact.</p>
+<p>MAF explores a different question:</p>
+<blockquote>
+<p>What if model components had stable identities and could be
+addressed, located, selected, validated and reconstructed as
+persistent objects?</p>
+</blockquote>
+<p>That makes several capabilities possible to investigate
+explicitly rather than treating them as incidental properties of
+a model file.</p>
+<p>These include:</p>
+<ul>
+<li>identifying the same logical model object independently of its
+  storage location;</li>
+<li>tracing where payload data came from;</li>
+<li>validating that reconstructed data belongs to the expected
+  object;</li>
+<li>organizing model data into persistent segments;</li>
+<li>selecting bounded subsets of model objects;</li>
+<li>reasoning about which model objects are resident or absent;</li>
+<li>building deterministic lookup structures around model data;</li>
+<li>testing alternative provisioning and storage architectures.</li>
+</ul>
+<hr />
+<h2 id="what-maf-can-do-today">What MAF can do today</h2>
+<p>The current repository contains validated research and
+engineering work around:</p>
+<p><strong>Persistent object identity</strong></p>
+<p>Model-related objects can be represented with stable identity and
+explicit provenance relationships.</p>
+<p><strong>Tensor ↔ object relationships</strong></p>
+<p>The research includes exact tensor/object representation and
+reconstruction work rather than treating an object name as merely
+descriptive metadata.</p>
+<p><strong>Persistent segment storage</strong></p>
+<p>MAF research includes segment-based storage, catalogs and readers
+for locating persistent model objects.</p>
+<p><strong>PK-based lookup and selection</strong></p>
+<p>Existing work includes PK-oriented catalogs, resident
+directories, query-scoped selection and related validation.</p>
+<p><strong>Selective model access research</strong></p>
+<p>Phase 6 investigated whether bounded model working sets and
+persistent MAF-backed provisioning could be used across increasingly
+complete model-access boundaries.</p>
+<p><strong>Inference correctness validation</strong></p>
+<p>A frozen Phase 6E-D result demonstrated numerical logit parity
+between the tested MAF-backed model path and its conventional
+reference under one pinned model, runtime, prompt and validation
+boundary.</p>
+<p><strong>Performance characterization</strong></p>
+<p>Phase 6F measured the current persistent MAF provisioning path
+against the conventional reference path.</p>
+<p>That baseline is important because the current implementation was
+<strong>not faster</strong>: median model-ready time was approximately <strong>3.98×
+the control</strong> under that frozen workload.</p>
+<p>This means the repository currently contains a validated
+architectural/research foundation, <strong>not a claim that MAF already
+provides a faster production inference runtime</strong>.</p>
+<p>See <a href="research/PHASE_6_SUMMARY/">Phase 6 Research Summary</a>.</p>
+<hr />
+<h2 id="is-maf-a-good-fit-for-what-i-am-doing">Is MAF a good fit for what I am doing?</h2>
+<table>
+<thead>
+<tr>
+<th>Your goal</th>
+<th>Current fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable identity for model components</td>
+<td><strong>Strong architectural fit</strong></td>
+</tr>
+<tr>
+<td>Deterministic model-object addressing</td>
+<td><strong>Strong architectural fit</strong></td>
+</tr>
+<tr>
+<td>Payload provenance and reconstruction</td>
+<td><strong>Strong architectural fit</strong></td>
+</tr>
+<tr>
+<td>Persistent model-object storage research</td>
+<td><strong>Strong research fit</strong></td>
+</tr>
+<tr>
+<td>Selective / bounded model working sets</td>
+<td><strong>Active research foundation exists</strong></td>
+</tr>
+<tr>
+<td>Model catalog and object lookup</td>
+<td><strong>Existing validated research foundation</strong></td>
+</tr>
+<tr>
+<td>Compatibility-aware model transformation</td>
+<td><strong>Relevant</strong></td>
+</tr>
+<tr>
+<td>Research into model storage/provisioning architectures</td>
+<td><strong>Relevant</strong></td>
+</tr>
+<tr>
+<td>Drop-in replacement for a normal inference server</td>
+<td><strong>Not the current goal</strong></td>
+</tr>
+<tr>
+<td>Guaranteed faster inference today</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>Production-ready universal model database</td>
+<td><strong>Not yet</strong></td>
+</tr>
+<tr>
+<td>Proven native no-copy runtime</td>
+<td><strong>Not yet</strong></td>
+</tr>
+<tr>
+<td>Proven performance across arbitrary models/hardware</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>Conventional model serving with no need for object identity</td>
+<td><strong>Probably unnecessary</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-you-probably-want-maf">When you probably want MAF</h2>
+<p>MAF is worth investigating when your system needs questions like
+these to have explicit answers:</p>
+<ul>
+<li>What model object is this?</li>
+<li>Is this the same logical object as the one seen earlier?</li>
+<li>Where is the object's payload stored?</li>
+<li>What source produced this payload?</li>
+<li>What version or authority governs it?</li>
+<li>Which objects are needed for this operation?</li>
+<li>Which required objects are already resident?</li>
+<li>Can this object be reconstructed deterministically?</li>
+<li>Can the reconstruction be validated?</li>
+<li>Can storage placement change without changing logical identity?</li>
+<li>Can model data be selected or provisioned without treating the
+  entire source artifact as one indivisible unit?</li>
+</ul>
+<p>If those questions matter to your architecture, MAF is likely
+relevant.</p>
+<hr />
+<h2 id="when-maf-may-not-be-necessary">When MAF may not be necessary</h2>
+<p>You may not need MAF if your only requirement is:</p>
+<ul>
+<li>load a conventional model;</li>
+<li>run inference;</li>
+<li>keep the model as one normal runtime artifact;</li>
+<li>and you do not need persistent object identity, provenance,
+  selective addressing or reconstruction.</li>
+</ul>
+<p>MAF adds architectural structure deliberately. That structure is
+useful only when the problems it addresses matter to the system.</p>
+<hr />
+<h2 id="what-maf-is-not">What MAF is not</h2>
+<p>MAF is not currently presented as:</p>
+<ul>
+<li>a new neural-network architecture;</li>
+<li>a new foundation model;</li>
+<li>proof that model objects improve model intelligence;</li>
+<li>a universal replacement for GGUF or other model formats;</li>
+<li>a production-ready distributed database;</li>
+<li>a proven no-copy inference system;</li>
+<li>a proven performance optimization;</li>
+<li>a claim that every model should be decomposed in the same way.</li>
+</ul>
+<p>Research claims must remain bounded by the protocols and evidence
+that established them.</p>
+<hr />
+<h2 id="core-concepts">Core concepts</h2>
+<h3 id="maf-object">MAF object</h3>
+<p>An addressable model-related object governed by identity,
+provenance and representation rules.</p>
+<p><a href="reference/MAF_OBJECT_MODEL/">Read the MAF Object Model</a>.</p>
+<h3 id="pk">PK</h3>
+<p>An established identifier/addressing concept used by existing MAF
+catalog, selection and residency work.</p>
+<p>Earlier protocols remain authoritative for their exact semantics.</p>
+<h3 id="segment">Segment</h3>
+<p>A persistent storage grouping that can contain serialized MAF
+object data.</p>
+<p>Physical segment placement does not automatically define logical
+object identity.</p>
+<h3 id="provenance">Provenance</h3>
+<p>Evidence describing where an object or payload came from and what
+authority governs its interpretation.</p>
+<h3 id="reconstruction">Reconstruction</h3>
+<p>Recovering the model-facing representation required from governed
+MAF object and payload data.</p>
+<h3 id="authority">Authority</h3>
+<p>The protocol, schema, identity or frozen evidence that determines
+how an artifact is interpreted and validated.</p>
+<hr />
+<h2 id="for-humans-fastest-reading-path">For humans: fastest reading path</h2>
+<p>If you have only a few minutes:</p>
+<ol>
+<li>Read this page.</li>
+<li>Read the <a href="getting-started/GLOSSARY/">Glossary</a>.</li>
+<li>Read the <a href="reference/MAF_OBJECT_MODEL/">MAF Object Model</a>.</li>
+<li>Read the <a href="research/PHASE_6_SUMMARY/">Phase 6 Research Summary</a>.</li>
+</ol>
+<p>If you are deciding whether to build on MAF:</p>
+<ol>
+<li>Read <a href="concepts/MAF_OVERVIEW/">What Is MAF?</a>.</li>
+<li>Read <a href="architecture/AUTHORITY_AND_TERMINOLOGY/">Authority and Terminology</a>.</li>
+<li>Read <a href="reference/SCHEMA_REGISTRY/">Schema Registry</a>.</li>
+<li>Read <a href="compatibility/OPENMIND_COMPATIBILITY/">OpenMind Compatibility</a>.</li>
+<li>Check <a href="research/CURRENT_WORK/">Current Work</a>.</li>
+</ol>
+<p>If you want to operate the repository:</p>
+<ul>
+<li><a href="getting-started/">Getting Started</a></li>
+<li><a href="getting-started/INSTALLATION/">Installation</a></li>
+<li><a href="getting-started/COMMAND_REFERENCE/">Command Reference</a></li>
+<li><a href="howto/">How-To Guides</a></li>
+</ul>
+<hr />
+<h2 id="for-ai-agents">For AI agents</h2>
+<p>An agent entering this repository should not infer authority from
+a filename, a recent implementation or a successful compile alone.</p>
+<p>Recommended orientation order:</p>
+<ol>
+<li>Read this page.</li>
+<li>Read
+   <a href="architecture/AUTHORITY_AND_TERMINOLOGY/">Authority and Terminology</a>.</li>
+<li>Read the
+   <a href="provenance/OPENMIND_TO_MAF_LINEAGE/">OpenMind → MAF Lineage</a>.</li>
+<li>Read
+   <a href="compatibility/OPENMIND_COMPATIBILITY/">OpenMind Compatibility</a>.</li>
+<li>Read <a href="research/CURRENT_WORK/">Current Work</a>.</li>
+<li>Locate the protocol or frozen authority governing the specific
+   artifact or operation.</li>
+<li>Distinguish historical evidence from active defects.</li>
+<li>Do not broaden mutation, execution or publication authority
+   beyond the explicitly authorized operation.</li>
+</ol>
+<p>For terminology created by this project, use the
+<a href="terminology/COINED_TERMS/">Coined Terms Registry</a>.</p>
+<hr />
+<h2 id="evidence-and-maturity">Evidence and maturity</h2>
+<p>MAF currently spans several levels of maturity.</p>
+<p><strong>Implemented</strong></p>
+<p>Code or data structures exist.</p>
+<p><strong>Validated</strong></p>
+<p>A defined test, protocol or experiment produced qualifying
+evidence.</p>
+<p><strong>Architectural</strong></p>
+<p>A design relationship or system boundary has been established but
+does not itself prove production performance.</p>
+<p><strong>Research</strong></p>
+<p>A hypothesis or implementation has bounded experimental evidence
+and should not be generalized beyond that evidence.</p>
+<p><strong>Prospective</strong></p>
+<p>Planned or proposed work that has not yet been demonstrated.</p>
+<p>These categories should not be treated as interchangeable.</p>
+<hr />
+<h2 id="historical-lineage">Historical lineage</h2>
+<p>MAF emerged from model-object research developed in the OpenMind
+repository.</p>
+<p>The transition to <strong>MAF — Model Address Fabric</strong> preserves that
+provenance rather than rewriting it.</p>
+<p>Historical OpenMind paths, Git history, frozen research artifacts
+and compatibility-bearing <code>openmind.*</code> schema identifiers remain
+part of the evidence chain.</p>
+<p>Read
+<a href="provenance/OPENMIND_TO_MAF_LINEAGE/">OpenMind → MAF Lineage</a>
+before changing historical identifiers.</p>
+<hr />
+<h2 id="current-project-boundary">Current project boundary</h2>
+<p>Whole Phase 6 is formally closed.</p>
+<p>The repository now has a frozen MAF documentation foundation and
+a validated research baseline.</p>
+<p>Current documentation does not imply that future storage,
+database, native-runtime, hardware-acceleration or model-support
+work has already been completed.</p>
+<p>Those capabilities require their own implementation and validation
+gates.</p>
+<hr />
+<h2 id="documentation-map">Documentation map</h2>
+<p><strong>Understand MAF</strong></p>
+<ul>
+<li><a href="concepts/MAF_OVERVIEW/">MAF Overview</a></li>
+<li><a href="getting-started/GLOSSARY/">Glossary</a></li>
+<li><a href="terminology/COINED_TERMS/">Coined Terms</a></li>
+</ul>
+<p><strong>Understand the architecture</strong></p>
+<ul>
+<li><a href="architecture/AUTHORITY_AND_TERMINOLOGY/">Authority and Terminology</a></li>
+<li><a href="reference/MAF_OBJECT_MODEL/">MAF Object Model</a></li>
+<li><a href="reference/SCHEMA_REGISTRY/">Schema Registry</a></li>
+</ul>
+<p><strong>Use the repository</strong></p>
+<ul>
+<li><a href="getting-started/">Getting Started</a></li>
+<li><a href="getting-started/COMMAND_REFERENCE/">Command Reference</a></li>
+<li><a href="howto/">How-To Guides</a></li>
+</ul>
+<p><strong>Understand the evidence</strong></p>
+<ul>
+<li><a href="research/PHASE_6_SUMMARY/">Phase 6 Research Summary</a></li>
+<li><a href="research/CURRENT_WORK/">Current Work</a></li>
+</ul>
+<p><strong>Understand provenance and compatibility</strong></p>
+<ul>
+<li><a href="provenance/OPENMIND_TO_MAF_LINEAGE/">OpenMind → MAF Lineage</a></li>
+<li><a href="compatibility/OPENMIND_COMPATIBILITY/">OpenMind Compatibility</a></li>
+</ul>
+<hr />
+<h2 id="short-answer">Short answer</h2>
+<p>MAF is most relevant when you need a model to be treated as a
+collection of <strong>persistent, identifiable, addressable and
+provenance-aware objects</strong>, rather than only as one opaque
+serialized artifact.</p>
+<p>If that distinction matters to your system, continue into the
+architecture and object-model documentation.</p>
+<p>If it does not, a conventional model-loading architecture may be
+simpler and more appropriate.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-09-08 12:24:07+00:00
+-->

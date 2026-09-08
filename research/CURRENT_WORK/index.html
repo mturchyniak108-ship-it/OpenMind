@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Mitchell Turchyniak">
+        <link rel="canonical" href="https://mturchyniak108-ship-it.github.io/OpenMind/research/CURRENT_WORK/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+<meta name="description" content="See the current MAF research and engineering direction, validated foundations, active boundaries, and work that remains architectural or experimental.">
+
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MAF — Model Address Fabric">
+<meta property="og:title" content="Current MAF Research and Engineering Work">
+<meta property="og:description" content="See the current MAF research and engineering direction, validated foundations, active boundaries, and work that remains architectural or experimental.">
+<meta property="og:url" content="https://mturchyniak108-ship-it.github.io/OpenMind/research/CURRENT_WORK/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Current MAF Research and Engineering Work">
+<meta name="twitter:description" content="See the current MAF research and engineering direction, validated foundations, active boundaries, and work that remains architectural or experimental.">
+
+
+
+<title>Current MAF Research and Engineering Work</title>
+
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MAF — Model Address Fabric Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting Started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../getting-started/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/INSTALLATION/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/COMMAND_REFERENCE/" class="dropdown-item">Command Reference</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/GLOSSARY/" class="dropdown-item">Glossary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Concepts</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../concepts/MAF_OVERVIEW/" class="dropdown-item">MAF Overview</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Terminology</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../terminology/COINED_TERMS/" class="dropdown-item">Coined Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../architecture/AUTHORITY_AND_TERMINOLOGY/" class="dropdown-item">Authority and Terminology</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-To</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">How-To Index</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/READ_THE_MAF_DOCUMENTATION/" class="dropdown-item">Read the Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/INTERPRET_MAF_TERMS/" class="dropdown-item">Interpret MAF Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/TRACE_MAF_PROVENANCE/" class="dropdown-item">Trace Provenance</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS/" class="dropdown-item">Historical OpenMind Artifacts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Architecture</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../architecture/ARCHITECTURE/" class="dropdown-item">Architecture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reference</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/MAF_OBJECT_MODEL/" class="dropdown-item">MAF Object Model</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/SCHEMA_REGISTRY/" class="dropdown-item">Schema Registry</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Provenance</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../provenance/OPENMIND_TO_MAF_LINEAGE/" class="dropdown-item">OpenMind to MAF Lineage</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Compatibility</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../compatibility/OPENMIND_COMPATIBILITY/" class="dropdown-item">OpenMind Compatibility</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Research</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../PHASE_6_SUMMARY/" class="dropdown-item">Phase 6 Summary</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Current Work</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Research Index</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../PHASE_6_SUMMARY/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mturchyniak108-ship-it/OpenMind/edit/master/docs/research/CURRENT_WORK.md" class="nav-link">Edit on OpenMind / MAF Research
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#openmind-current-work" class="nav-link">OpenMind Current Work</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#maf-phase-6d-q4-status-closed" class="nav-link">MAF Phase 6D-Q4 status — CLOSED</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#scientific-authority" class="nav-link">Scientific authority</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-state" class="nav-link">Phase state</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#q2-v14" class="nav-link">Q2 V1.4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#scientific-boundary" class="nav-link">Scientific boundary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#authority-order" class="nav-link">Authority order</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#next-scientific-gate" class="nav-link">Next scientific gate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#post-phase-6-current-state" class="nav-link">Post-Phase-6 current state</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="openmind-current-work">OpenMind Current Work</h1>
+<!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
+<h2 id="maf-phase-6d-q4-status-closed">MAF Phase 6D-Q4 status — CLOSED</h2>
+<p>Phase 6D-Q4 Query Route Cache validation is formally closed on frozen evidence.</p>
+<ul>
+<li>Scientific result: <strong>PASS — 44/44 Q4 checks</strong>.</li>
+<li>Frozen cases: <code>q001</code>, <code>q025</code>, <code>q026</code>, <code>q033</code>.</li>
+<li>Frozen runner: <code>bafed2c9ef6d2cf35d8d5212bbb17497f68a67fff9a67d855ac96243af3ac686</code>.</li>
+<li>Frozen result: <code>1be2608271e899d320b4255fccba2e64c1616281110ebb375f803a7f740c43e0</code> / 9184 bytes.</li>
+<li>Frozen exact-once slot: <code>af63aa8d3b769ad984b898d805ff45361eb5e079658d47a088514d3ba4145a2d</code> / 1311 bytes.</li>
+<li>Runner implementation contract: <code>daa291fcb06c0456e028807308e35ef86486e5176b4fe88d254915718d6943e4</code>.</li>
+<li>Evidence commit: <code>b386abde55b1b8f156292eb7500fb739ea8be918</code>.</li>
+<li>Exact-once history: V1, V1.1, V1.2, and V1.3 are permanently spent and MUST NOT be rerun.</li>
+<li>Durable V1.3 state: <code>RESERVATION_PREPARED -&gt; RESERVED_DURABLE -&gt; PUBLISHED_DURABLE</code>; no partial residue.</li>
+<li>Claim scope remains limited to safe generation-bound route-metadata persistence, reuse, and invalidation.</li>
+<li>Not established by Q4: inference execution, answer generation, working-set sufficiency, performance superiority or metrics, output parity, route-expansion optimality, MAF-native compute, or LLM replacement.</li>
+<li>Phase 6E: <strong>READY FOR ENTRY REVIEW — NOT ENTERED</strong>.</li>
+<li>Canonical closure record: <code>experiments/model_fractal/MAF_QUERY_ROUTE_CACHE_VALIDATION_V1_3_VERDICT.md</code>.</li>
+</ul>
+<!-- OPENMIND_MAF_Q4_STATUS_END -->
+
+<h2 id="scientific-authority">Scientific authority</h2>
+<ul>
+<li>branch: <code>labs/multidimensional-maf</code></li>
+<li>V1.4 protocol SHA256: <code>a814bca93a6b014ee53aad234b8396c841d0efc2a9363598e8a2192f23745699</code></li>
+<li>frozen V1.4 runner commit: <code>d9056941f2db77f521222f38b125927ae16bbf3e</code></li>
+<li>V1.4 runner SHA256: <code>7bda960c125786fdf3cfca65c4b7b5851ca8bd91257282facfee2fec1ae7a030</code></li>
+</ul>
+<h2 id="phase-state">Phase state</h2>
+<ul>
+<li>6B: closed</li>
+<li>6C: closed</li>
+<li>6D: active</li>
+<li>6D-Q2: authoritative V1.4 query-to-PK selection validation PASS — 74/74</li>
+<li>6E: not entered</li>
+</ul>
+<h2 id="q2-v14">Q2 V1.4</h2>
+<p>The durable exact-once V1.4 protocol and validation runner are frozen.</p>
+<p>Static closure established:
+- V01-V74 exact count/order: PASS
+- journal schemas: PASS
+- unconditional slot/partial/result namespace guard: PASS
+- <code>RESERVATION_PREPARED -&gt; RESERVED_DURABLE -&gt; SCIENCE</code> ordering: PASS
+- permanent namespace spend after successful slot creation: PASS
+- absolute post-slot no-retry semantics: PASS
+- no-replace result publication and durability barriers: PASS
+- non-finite canonical JSON forbidden with <code>allow_nan=False</code>
+- unchanged V1 scientific metric surface: 17/17 fields
+- result binds exact <code>validation_runner_sha256</code></p>
+<p>The initial post-freeze audit reported <code>runner_sha_pre_slot</code>. Exact source
+inspection closed that finding as an audit matcher false-negative:
+<code>_full_prequalification()</code> calls <code>_qualify_authorities()</code>, which verifies the
+runner SHA authority/self-hash path, and full prequalification completes before
+the first V1.4 slot creation.</p>
+<p>Authoritative execution order begins:
+<code>NAMESPACE_GUARD -&gt; PREQUAL -&gt; SLOT_CREATE -&gt; PREPARED_WRITE -&gt; SLOT_FSYNC -&gt; DIR_FSYNC -&gt; RESERVED_DURABLE_APPEND -&gt; SLOT_FSYNC -&gt; DIR_FSYNC -&gt; PARTIAL_CREATE -&gt; SCIENCE</code>.</p>
+<p>The V1.4 runner reuses the frozen V1 scientific evaluation and preserves its
+scientific metric schema. The V1.4 harness changes execution durability,
+exact-once handling, provenance and the V01-V74 validation surface; it does not
+claim new science before execution.</p>
+<h2 id="scientific-boundary">Scientific boundary</h2>
+<ul>
+<li>authoritative run: PASS — 74/74</li>
+<li>authoritative result SHA256: <code>b2ad49d7a9a3e1ef565e07e595efc4a4e00b283f422723553c6437ef3a42def6</code></li>
+<li>authoritative verdict SHA256: <code>c17198e0013fd9c0a8c59b8f09c05d4f22693dc7d56afdc0f761f55a008c2663</code></li>
+<li>authoritative freeze commit: <code>10da372a8317dc629674fb2b52a7560f55ee416f</code></li>
+<li>V01-V74: ALL PASS</li>
+<li>result: PRESENT — authoritative frozen result</li>
+<li>partial: ABSENT</li>
+<li>exact-once slot: SPENT</li>
+<li>retry: FORBIDDEN</li>
+</ul>
+<p>Q2 does not establish inference, answer generation, selective-working-set
+sufficiency, tensor/object avoidance, output parity, answer quality,
+MAF-native compute, performance improvement, or LLM replacement.</p>
+<h2 id="authority-order">Authority order</h2>
+<ol>
+<li>exact source/Git commit</li>
+<li>frozen protocols and runner SHA authorities</li>
+<li>tests/static audits</li>
+<li>immutable validated results</li>
+<li>manifests/provenance</li>
+<li>current-status docs</li>
+<li>README/roadmap</li>
+</ol>
+<p>Termux click-paste operations are atomic and no-heredoc; see
+<code>docs/development/TERMUX_WORKFLOW.md</code>.</p>
+<h2 id="next-scientific-gate">Next scientific gate</h2>
+<p><strong>6D-Q3 — attach/detach ownership and cleanup semantics.</strong></p>
+<p>Q3 requires a new preregistration and authority boundary. It must validate query-scoped object ownership, attachment lifetime, deterministic detach and cleanup, generation binding, and failure cleanup without modifying or rerunning Q2 V1.4 evidence.</p>
+<p>The roadmap then proceeds to 6D-Q4 route reuse with generation binding. Phase 6E remains not entered.</p>
+<p>Human-readable Q2 explanation: <code>Q2_V1_4_SUMMARY.md</code>.</p>
+<!-- MAF_CURRENT_WORK_POST_PHASE6_V1 -->
+<h2 id="post-phase-6-current-state">Post-Phase-6 current state</h2>
+<p>Whole Phase 6 is formally closed.</p>
+<p>Current authorized successor work is documentation,
+terminology, lineage and compatibility design for
+<strong>MAF — Model Address Fabric</strong>.</p>
+<p>The completed Phase-6 scientific evidence remains frozen.</p>
+<p>Current documentation work does not authorize:</p>
+<ul>
+<li>Phase-6 reruns;</li>
+<li>mutation of frozen evidence;</li>
+<li>schema migration;</li>
+<li>package/native rename;</li>
+<li>repository/remote rename;</li>
+<li>MAFDB implementation;</li>
+<li>native/NEON/Vulkan successor implementation;</li>
+<li>GPT-OSS model work.</li>
+</ul>
+<p>See <code>PHASE_6_SUMMARY.md</code> for the bounded closure summary.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Mitchell Turchyniak">
+        <link rel="canonical" href="https://mturchyniak108-ship-it.github.io/OpenMind/getting-started/COMMAND_REFERENCE/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+<meta name="description" content="Reference the documented commands used to inspect, validate, and work with the OpenMind/MAF research repository and its tooling.">
+
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MAF — Model Address Fabric">
+<meta property="og:title" content="MAF Command Reference">
+<meta property="og:description" content="Reference the documented commands used to inspect, validate, and work with the OpenMind/MAF research repository and its tooling.">
+<meta property="og:url" content="https://mturchyniak108-ship-it.github.io/OpenMind/getting-started/COMMAND_REFERENCE/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MAF Command Reference">
+<meta name="twitter:description" content="Reference the documented commands used to inspect, validate, and work with the OpenMind/MAF research repository and its tooling.">
+
+
+
+<title>MAF Command Reference</title>
+
+
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MAF — Model Address Fabric Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Getting Started</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../INSTALLATION/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Command Reference</a>
+</li>
+                                    
+<li>
+    <a href="../GLOSSARY/" class="dropdown-item">Glossary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Concepts</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../concepts/MAF_OVERVIEW/" class="dropdown-item">MAF Overview</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Terminology</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../terminology/COINED_TERMS/" class="dropdown-item">Coined Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../architecture/AUTHORITY_AND_TERMINOLOGY/" class="dropdown-item">Authority and Terminology</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-To</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">How-To Index</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/READ_THE_MAF_DOCUMENTATION/" class="dropdown-item">Read the Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/INTERPRET_MAF_TERMS/" class="dropdown-item">Interpret MAF Terms</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/TRACE_MAF_PROVENANCE/" class="dropdown-item">Trace Provenance</a>
+</li>
+                                    
+<li>
+    <a href="../../howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS/" class="dropdown-item">Historical OpenMind Artifacts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Architecture</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../architecture/ARCHITECTURE/" class="dropdown-item">Architecture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Reference</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/MAF_OBJECT_MODEL/" class="dropdown-item">MAF Object Model</a>
+</li>
+                                    
+<li>
+    <a href="../../reference/SCHEMA_REGISTRY/" class="dropdown-item">Schema Registry</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Provenance</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../provenance/OPENMIND_TO_MAF_LINEAGE/" class="dropdown-item">OpenMind to MAF Lineage</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Compatibility</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../compatibility/OPENMIND_COMPATIBILITY/" class="dropdown-item">OpenMind Compatibility</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Research</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../research/PHASE_6_SUMMARY/" class="dropdown-item">Phase 6 Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../research/CURRENT_WORK/" class="dropdown-item">Current Work</a>
+</li>
+                                    
+<li>
+    <a href="../../research/" class="dropdown-item">Research Index</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../INSTALLATION/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../GLOSSARY/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/mturchyniak108-ship-it/OpenMind/edit/master/docs/getting-started/COMMAND_REFERENCE.md" class="nav-link">Edit on OpenMind / MAF Research
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#openmind-command-reference" class="nav-link">OpenMind Command Reference</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#purpose" class="nav-link">Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#command-status-classes" class="nav-link">Command Status Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#general-rule" class="nav-link">General Rule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#canonical-truth-cli" class="nav-link">Canonical Truth CLI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#python-validation-commands" class="nav-link">Python Validation Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#native-build-commands" class="nav-link">Native Build Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#native-integration-tests" class="nav-link">Native Integration Tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#activation-probe" class="nav-link">Activation Probe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#native-inference-benchmark" class="nav-link">Native Inference Benchmark</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#native-inference-integration-test-executable" class="nav-link">Native Inference Integration Test Executable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#preflight-tools" class="nav-link">Preflight Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#vulkan-probe" class="nav-link">Vulkan Probe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#git-inspection-commands" class="nav-link">Git Inspection Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#experimental-model-fractal-commands" class="nav-link">Experimental Model-Fractal Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#running-lab-scripts" class="nav-link">Running Lab Scripts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#long-running-experiments" class="nav-link">Long-Running Experiments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#status-and-evidence-rules" class="nav-link">Status and Evidence Rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#related-manuals" class="nav-link">Related Manuals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="openmind-command-reference">OpenMind Command Reference</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This manual describes the currently verified command-line and development surfaces in OpenMind.</p>
+<p>Commands are grouped by status so users do not accidentally treat research scripts as supported interfaces.</p>
+<h2 id="command-status-classes">Command Status Classes</h2>
+<h3 id="canonical-command">Canonical Command</h3>
+<p>A user-facing command backed by canonical OpenMind implementation.</p>
+<h3 id="development-tool">Development Tool</h3>
+<p>A command used to build, test, benchmark, inspect, or operate OpenMind during development.</p>
+<h3 id="diagnostic-tool">Diagnostic Tool</h3>
+<p>A command that inspects the local environment or hardware without defining canonical project behavior.</p>
+<h3 id="experimental-lab-command">Experimental / Lab Command</h3>
+<p>A research command under <code>experiments/</code>.</p>
+<p>Lab commands may be incomplete, superseded, computationally expensive, or tied to specific research artifacts. Their existence does not make them supported production interfaces.</p>
+<h2 id="general-rule">General Rule</h2>
+<p>Run commands from the OpenMind repository root unless a section explicitly says otherwise.</p>
+<pre><code class="language-bash">cd ~/OpenMind
+</code></pre>
+<p>Human contributors apply source-code changes and decide what enters the repository. AI collaborators may inspect output, propose commands, analyze failures, and suggest changes for human review.</p>
+<h2 id="canonical-truth-cli">Canonical Truth CLI</h2>
+<p><strong>Status:</strong> Canonical Command</p>
+<p>Module:</p>
+<p><code>openmind.cli.truth</code></p>
+<p>Purpose:</p>
+<p>Resolve a canonical path through the current demonstration Truth Graph while reporting relationship weights, evidence status, canonical score, provenance coverage, and provenance gaps.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-bash">python -m openmind.cli.truth &lt;start_node&gt; &lt;end_node&gt;
+</code></pre>
+<p>The command requires exactly two node identifiers.</p>
+<p>If the start or end node is unknown, or no canonical path can be resolved, it returns:</p>
+<pre><code class="language-text">NO CANONICAL PATH
+</code></pre>
+<h3 id="data-source">Data Source</h3>
+<p>The current CLI loads its canonical demonstration data from:</p>
+<p><code>demo/truth_graph/</code></p>
+<p>This includes the graph, evidence registry, and evidence bindings used by the implemented truth-trace pipeline.</p>
+<h3 id="human-readable-output">Human-Readable Output</h3>
+<p>Successful output includes:</p>
+<ul>
+<li>start node;</li>
+<li>end node;</li>
+<li>resolved path;</li>
+<li>relationship type and weight for every edge;</li>
+<li>evidence identifier and evidence status;</li>
+<li>canonical path score;</li>
+<li>registered, unbound, and missing evidence counts;</li>
+<li>provenance coverage;</li>
+<li>explicit provenance gaps.</li>
+</ul>
+<h3 id="programmatic-json-interface">Programmatic JSON Interface</h3>
+<p>The same module currently exposes the Python function:</p>
+<p><code>report_json(start, end)</code></p>
+<p>It returns an exit/status code and deterministic JSON report for programmatic use.</p>
+<p>This is currently a Python API surface rather than a separate command-line flag.</p>
+<h2 id="python-validation-commands">Python Validation Commands</h2>
+<p><strong>Status:</strong> Development Tool</p>
+<h3 id="compile-python-sources">Compile Python Sources</h3>
+<pre><code class="language-bash">python -m compileall -q .
+</code></pre>
+<p>Purpose: detect Python syntax/compilation failures across the repository.</p>
+<h3 id="check-git-whitespace">Check Git Whitespace</h3>
+<pre><code class="language-bash">git diff --check
+</code></pre>
+<p>Purpose: detect whitespace errors in modified tracked content.</p>
+<h3 id="run-python-tests">Run Python Tests</h3>
+<pre><code class="language-bash">pytest -q
+</code></pre>
+<p>Purpose: execute the Python test suite.</p>
+<p>Use focused tests before the full suite when diagnosing a specific component.</p>
+<p>Example:</p>
+<pre><code class="language-bash">pytest -q tests/test_truth_graph.py
+</code></pre>
+<p>A passing test establishes only the behavior covered by that test.</p>
+<h2 id="native-build-commands">Native Build Commands</h2>
+<p><strong>Status:</strong> Development Tool</p>
+<p>The current native project is defined by:</p>
+<p><code>native/CMakeLists.txt</code></p>
+<h3 id="build-existing-native-configuration">Build Existing Native Configuration</h3>
+<pre><code class="language-bash">cmake --build native/build -j2
+</code></pre>
+<p>The current native CMake project defines these targets:</p>
+<ul>
+<li><code>openmind_inference</code> — static native inference library;</li>
+<li><code>openmind_inference_test</code> — integration test executable;</li>
+<li><code>openmind_inference_benchmark</code> — inference benchmark executable;</li>
+<li><code>openmind_activation_probe</code> — activation capture and representation-analysis executable.</li>
+</ul>
+<p>The currently observed build tree contains:</p>
+<pre><code class="language-text">native/build/openmind_activation_probe
+native/build/openmind_inference_benchmark
+native/build/openmind_inference_test
+</code></pre>
+<h2 id="native-integration-tests">Native Integration Tests</h2>
+<p><strong>Status:</strong> Development Tool</p>
+<p>CTest is enabled by the native CMake project.</p>
+<p>The native inference test is registered when <code>OPENMIND_TEST_MODEL</code> is configured.</p>
+<h3 id="run-registered-native-tests">Run Registered Native Tests</h3>
+<pre><code class="language-bash">ctest --test-dir native/build --output-on-failure
+</code></pre>
+<p>The recorded Termux build currently configures <code>OPENMIND_TEST_MODEL</code> to a local Qwen 2.5 3B Q4_K_M GGUF path.</p>
+<p>Model paths are environment-specific.</p>
+<h2 id="activation-probe">Activation Probe</h2>
+<p><strong>Status:</strong> Development / Research Tool</p>
+<p>Build only the activation probe with:</p>
+<pre><code class="language-bash">cmake --build native/build --target openmind_activation_probe -j2
+</code></pre>
+<p>A currently documented invocation is:</p>
+<pre><code class="language-bash">native/build/openmind_activation_probe ~/qwen2.5-coder-q8_0.gguf &quot;The purpose of this experiment is to measure representation recurrence across transformer layers.&quot;
+</code></pre>
+<p>The activation probe captures internal model representations and therefore belongs to the representation-research workflow even though the executable itself is built by the native project.</p>
+<p>For reproducible captures, record the model identity and hash, prompt, build/revision state, output artifact, dimensions, and relevant environment information.</p>
+<p>See <code>docs/experiments/ACTIVATION_CAPTURE.md</code>.</p>
+<h2 id="native-inference-benchmark">Native Inference Benchmark</h2>
+<p><strong>Status:</strong> Development / Benchmark Tool</p>
+<p>Executable:</p>
+<p><code>native/build/openmind_inference_benchmark</code></p>
+<p>Use this executable only with a workload and model configuration whose command contract has been verified for the current source revision.</p>
+<p>Benchmark results should record model identity, hardware, runtime revision, workload, configuration, repetitions, and relevant resource conditions.</p>
+<p>Do not compare unlike workloads without documenting the differences.</p>
+<h2 id="native-inference-integration-test-executable">Native Inference Integration Test Executable</h2>
+<p><strong>Status:</strong> Development Tool</p>
+<p>Executable:</p>
+<p><code>native/build/openmind_inference_test</code></p>
+<p>Normally prefer the registered CTest invocation when validating the configured build:</p>
+<pre><code class="language-bash">ctest --test-dir native/build --output-on-failure
+</code></pre>
+<h2 id="preflight-tools">Preflight Tools</h2>
+<p><strong>Status:</strong> Diagnostic Tool</p>
+<p>The <code>preflight/</code> directory currently contains:</p>
+<pre><code class="language-text">preflight.sh
+resource_profile.sh
+report.txt
+resource_profile.txt
+</code></pre>
+<p>The <code>.sh</code> files are executable diagnostic scripts. The <code>.txt</code> files are captured output artifacts and should not be mistaken for current machine state.</p>
+<h3 id="system-preflight">System Preflight</h3>
+<pre><code class="language-bash">bash preflight/preflight.sh
+</code></pre>
+<p>Purpose: inspect the development environment and required system capabilities.</p>
+<h3 id="resource-profile">Resource Profile</h3>
+<pre><code class="language-bash">bash preflight/resource_profile.sh
+</code></pre>
+<p>Purpose: inspect hardware, software, memory, storage, and other resource characteristics relevant to OpenMind development.</p>
+<p>Environment reports are snapshots. Rerun diagnostics when current state matters.</p>
+<h2 id="vulkan-probe">Vulkan Probe</h2>
+<p><strong>Status:</strong> Diagnostic Tool</p>
+<p>Script:</p>
+<p><code>vulkan/probe.sh</code></p>
+<p>Run with:</p>
+<pre><code class="language-bash">bash vulkan/probe.sh
+</code></pre>
+<p>The probe currently reports or attempts to inspect:</p>
+<ul>
+<li>Android device identity;</li>
+<li>SoC information;</li>
+<li>architecture;</li>
+<li>Android GPU properties;</li>
+<li>system GPU libraries;</li>
+<li><code>vulkaninfo</code> availability and summary;</li>
+<li><code>vkmark</code> availability;</li>
+<li>Termux Vulkan libraries;</li>
+<li>Vulkan ICD files;</li>
+<li><code>/dev/dri</code> visibility;</li>
+<li>relevant Vulkan, Mesa, GPU, EGL, ICD, and Termux environment variables;</li>
+<li>OpenCL availability through <code>clinfo</code>.</li>
+</ul>
+<p>The Vulkan probe is diagnostic. Its output does not itself prove that a particular OpenMind model workload will execute correctly.</p>
+<h2 id="git-inspection-commands">Git Inspection Commands</h2>
+<p><strong>Status:</strong> Development Tool</p>
+<p>Useful read-only repository checks include:</p>
+<pre><code class="language-bash">git status --short
+git diff --stat
+git diff --check
+git log -5 --oneline --decorate
+</code></pre>
+<p>Before committing, humans should inspect the exact staged content:</p>
+<pre><code class="language-bash">git diff --cached --name-status
+git diff --cached --check
+git diff --cached --stat
+</code></pre>
+<h2 id="experimental-model-fractal-commands">Experimental Model-Fractal Commands</h2>
+<p><strong>Status:</strong> Experimental / Lab Command</p>
+<p>The directory <code>experiments/model_fractal/</code> contains a large research surface.</p>
+<p>These scripts are not a stable CLI API.</p>
+<p>Current research families include:</p>
+<h3 id="representation-recurrence">Representation Recurrence</h3>
+<ul>
+<li><code>all_token_recurrence.py</code>;</li>
+<li><code>recurrence_controlled_baseline_v1.py</code>;</li>
+<li><code>recurrence_controls_v1.py</code>;</li>
+<li><code>recurrence_controls_v2.py</code>;</li>
+<li><code>recurrence_structure_analysis.py</code>;</li>
+<li><code>recurrence_token_topology_v1.py</code>;</li>
+<li><code>recurrence_token_topology_v2.py</code>;</li>
+<li><code>recurrence_topology_v1.py</code>;</li>
+<li><code>recurrence_topology_v2.py</code>;</li>
+<li><code>recurrence_topology_v3.py</code>;</li>
+<li><code>recurrence_topology_v4_fast.py</code>;</li>
+<li><code>transition_recurrence.py</code>.</li>
+</ul>
+<h3 id="cross-prompt-research">Cross-Prompt Research</h3>
+<ul>
+<li><code>cross_prompt_baseline_v1.py</code>;</li>
+<li><code>cross_prompt_recurrence_v1.py</code>;</li>
+<li><code>maf_cross_prompt_holdout_v1.py</code>.</li>
+</ul>
+<h3 id="lodgepole-research">Lodgepole Research</h3>
+<ul>
+<li><code>maf_lodgepole_v1.py</code>;</li>
+<li><code>maf_lodgepole_v2.py</code>;</li>
+<li><code>maf_lodgepole_v3.py</code>;</li>
+<li><code>lodgepole_fractal_storage_v1.py</code>;</li>
+<li><code>benchmark_lodgepole_scaling_v1.py</code> through later versions;</li>
+<li><code>benchmark_lodgepole_vs_flat_v1.py</code> and later versions.</li>
+</ul>
+<h3 id="maf-engineering">MAF Engineering</h3>
+<ul>
+<li>indexed-access benchmarks;</li>
+<li>workload benchmarks;</li>
+<li>reconstruction benchmarks;</li>
+<li>neighborhood experiments;</li>
+<li>streaming experiments;</li>
+<li>MAF representation and index builders;</li>
+<li>MAF validation tools.</li>
+</ul>
+<h3 id="validation-utilities">Validation Utilities</h3>
+<ul>
+<li><code>validate_gguf_tensors_v1.py</code>;</li>
+<li><code>validate_maf_index_v1.py</code>;</li>
+<li><code>validate_topology_v3_v4.py</code>.</li>
+</ul>
+<h2 id="running-lab-scripts">Running Lab Scripts</h2>
+<p>Do not run an unfamiliar lab script solely because it exists.</p>
+<p>First inspect:</p>
+<ol>
+<li>its input paths;</li>
+<li>model requirements;</li>
+<li>expected runtime;</li>
+<li>memory requirements;</li>
+<li>output paths;</li>
+<li>whether it overwrites an artifact;</li>
+<li>experiment status;</li>
+<li>provenance requirements;</li>
+<li>whether another process is already consuming substantial CPU or GPU resources.</li>
+</ol>
+<p>The general invocation form is usually:</p>
+<pre><code class="language-bash">python experiments/model_fractal/&lt;script&gt;.py
+</code></pre>
+<p>but the source file and associated experiment documentation are authoritative for each research command.</p>
+<h2 id="long-running-experiments">Long-Running Experiments</h2>
+<p>For a known process ID, inspect status with:</p>
+<pre><code class="language-bash">ps -o pid,etime,time,%cpu,%mem,cmd -p &lt;PID&gt;
+</code></pre>
+<p>Important fields:</p>
+<ul>
+<li><code>ELAPSED</code> — wall-clock time since process start;</li>
+<li><code>TIME</code> — accumulated CPU time;</li>
+<li><code>%CPU</code> — current CPU utilization;</li>
+<li><code>%MEM</code> — memory percentage;</li>
+<li><code>CMD</code> — process command.</li>
+</ul>
+<p>When standard output is redirected to a file, output may remain empty while Python is still running because file output can be buffered.</p>
+<p>An empty output file alone therefore does not prove a process is stalled.</p>
+<h2 id="status-and-evidence-rules">Status and Evidence Rules</h2>
+<p>Commands under <code>experiments/</code> remain research commands unless explicitly promoted.</p>
+<p>Successful execution means the command ran successfully. It does not automatically establish that the experiment hypothesis is true.</p>
+<p>Research interpretation should follow:</p>
+<ul>
+<li><code>docs/labs/README.md</code>;</li>
+<li><code>docs/experiments/EXPERIMENT_WORKFLOW.md</code>;</li>
+<li><code>docs/experiments/VALIDATION.md</code>;</li>
+<li><code>docs/ai/EXPERIMENT_PROMOTION.md</code>;</li>
+<li><code>docs/data/REPRODUCIBILITY.md</code>.</li>
+</ul>
+<h2 id="related-manuals">Related Manuals</h2>
+<ul>
+<li><code>docs/getting-started/README.md</code> — project introduction;</li>
+<li><code>docs/getting-started/INSTALLATION.md</code> — installation and build environment;</li>
+<li><code>docs/getting-started/GLOSSARY.md</code> — OpenMind terminology;</li>
+<li><code>docs/development/BEST_PRACTICES.md</code> — engineering workflow;</li>
+<li><code>docs/operations/OPERATIONS.md</code> — operational guidance.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
