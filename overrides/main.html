@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% set seo_src = (page.file.src_path|string) if page else "" %}
+{% set seo = config.extra.seo_pages.get(seo_src, {}) if page else {} %}
+
+{% block site_meta %}
+{{ super() }}
+{% if page and not page.is_homepage and seo.get("description") %}
+<meta name="description" content="{{ seo.get('description')|e }}">
+{% endif %}
+{% if page and page.canonical_url %}
+<meta property="og:type" content="{% if page.is_homepage %}website{% else %}article{% endif %}">
+<meta property="og:site_name" content="MAF — Model Address Fabric">
+<meta property="og:title" content="{{ seo.get('title', page.title)|striptags|e }}">
+<meta property="og:description" content="{{ seo.get('description', config.site_description)|e }}">
+<meta property="og:url" content="{{ page.canonical_url|e }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ seo.get('title', page.title)|striptags|e }}">
+<meta name="twitter:description" content="{{ seo.get('description', config.site_description)|e }}">
+{% endif %}
+{% endblock %}
+
+{% block htmltitle %}
+{% if page and seo.get("title") %}
+<title>{{ seo.get("title")|striptags|e }}</title>
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}

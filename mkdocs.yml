@@ -1,12 +1,21 @@
 site_name: MAF — Model Address Fabric Documentation
-site_description: Documentation for MAF — Model Address Fabric
+site_url: https://mturchyniak108-ship-it.github.io/OpenMind/
+site_description: MAF — Model Address Fabric documentation for stable model-object identity, deterministic addressing, tensor-object relationships, payload provenance, and reconstruction.
+site_author: Mitchell Turchyniak
+repo_url: https://github.com/mturchyniak108-ship-it/OpenMind
+repo_name: OpenMind / MAF Research
+use_directory_urls: true
 docs_dir: docs
 
 exclude_docs: |
   /README.md
+  /ai/
+  /research/MAF_CURRENT_STATUS.md
 
 theme:
   name: mkdocs
+  locale: en
+  custom_dir: overrides
 
 plugins:
   - search
@@ -51,3 +60,79 @@ nav:
       - Phase 6 Summary: research/PHASE_6_SUMMARY.md
       - Current Work: research/CURRENT_WORK.md
       - Research Index: research/README.md
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+extra:
+  seo_pages:
+    index.md:
+      title: MAF — Model Address Fabric | Model-Object Addressing
+      description: MAF — Model Address Fabric documentation for stable model-object identity, deterministic addressing, tensor-object relationships, payload provenance, and reconstruction.
+    getting-started/README.md:
+      title: Getting Started with MAF — Model Address Fabric
+      description: 'Start with MAF — Model Address Fabric: learn the documentation structure, core model-object concepts, terminology, and the best paths into the research.'
+    getting-started/INSTALLATION.md:
+      title: MAF Installation and Research Environment Setup
+      description: Set up the documented OpenMind/MAF research environment, prerequisites, repository layout, and installation steps used by the project.
+    getting-started/COMMAND_REFERENCE.md:
+      title: MAF Command Reference
+      description: Reference the documented commands used to inspect, validate, and work with the OpenMind/MAF research repository and its tooling.
+    getting-started/GLOSSARY.md:
+      title: 'MAF Glossary: Model Addressing and Provenance Terms'
+      description: Definitions for MAF terminology covering model-object identity, deterministic addressing, provenance, reconstruction, storage, and related research concepts.
+    concepts/MAF_OVERVIEW.md:
+      title: Model Address Fabric (MAF) Overview
+      description: Understand the Model Address Fabric architecture, including persistent model objects, deterministic addressing, provenance, reconstruction, and selective access.
+    terminology/COINED_TERMS.md:
+      title: MAF Coined Terms and Definitions
+      description: Reference coined MAF terms and their intended meanings so Model Address Fabric concepts remain precise, consistent, and traceable across the project.
+    architecture/AUTHORITY_AND_TERMINOLOGY.md:
+      title: MAF Authority and Terminology Rules
+      description: Learn how MAF terminology, authority, provenance, and compatibility language are governed so current architecture stays distinct from historical OpenMind evidence.
+    howto/README.md:
+      title: MAF How-To Guides
+      description: Practical guides for reading MAF documentation, interpreting terminology, tracing provenance, and working safely with historical OpenMind artifacts.
+    howto/READ_THE_MAF_DOCUMENTATION.md:
+      title: How to Read the MAF Documentation
+      description: Navigate the MAF documentation by authority, concepts, reference material, provenance, compatibility, research status, and practical how-to guidance.
+    howto/INTERPRET_MAF_TERMS.md:
+      title: How to Interpret MAF Terms
+      description: Interpret MAF terminology consistently by distinguishing normative definitions, coined terms, compatibility language, and historical OpenMind usage.
+    howto/TRACE_MAF_PROVENANCE.md:
+      title: How to Trace MAF Model-Object Provenance
+      description: Trace MAF model-object provenance through identities, source relationships, representation boundaries, and the evidence that governs reconstruction.
+    howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS.md:
+      title: Working with Historical OpenMind Artifacts in MAF
+      description: Use historical OpenMind artifacts without rewriting their provenance while distinguishing frozen research evidence from current MAF terminology and architecture.
+    architecture/ARCHITECTURE.md:
+      title: 'MAF Architecture: Model Address Fabric'
+      description: Explore the MAF architecture for persistent model-object identity, deterministic addressing, provenance, storage, selection, residency, and reconstruction.
+    reference/MAF_OBJECT_MODEL.md:
+      title: 'MAF Object Model: Identity, Addressing and Provenance'
+      description: Reference the MAF object model for stable identity, addressing, payload provenance, representation relationships, and deterministic reconstruction.
+    reference/SCHEMA_REGISTRY.md:
+      title: MAF Schema Registry
+      description: Reference the MAF schema registry and compatibility boundaries used to distinguish current model-object representations from preserved historical schemas.
+    provenance/OPENMIND_TO_MAF_LINEAGE.md:
+      title: OpenMind to MAF Research Lineage
+      description: Trace the documented research lineage from OpenMind experiments to MAF — Model Address Fabric while preserving historical provenance and evidence.
+    compatibility/OPENMIND_COMPATIBILITY.md:
+      title: OpenMind Compatibility in MAF
+      description: Understand how MAF preserves compatibility with historical OpenMind artifacts, terminology, schemas, and provenance without redefining frozen evidence.
+    research/PHASE_6_SUMMARY.md:
+      title: MAF Phase 6 Research Summary
+      description: Review the bounded Phase 6 MAF research results, validated model-object provisioning work, correctness evidence, and performance characterization.
+    research/CURRENT_WORK.md:
+      title: Current MAF Research and Engineering Work
+      description: See the current MAF research and engineering direction, validated foundations, active boundaries, and work that remains architectural or experimental.
+    research/README.md:
+      title: MAF Research Index
+      description: Navigate the MAF research documentation, including validated phase summaries, current work, historical evidence, and the boundaries of existing conclusions.
