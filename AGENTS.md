@@ -1,4 +1,4 @@
-# OpenMind AI Collaboration Instructions
+# MAF — Model Address Fabric AI Collaboration Instructions
 
 <!-- OPENMIND:TERMUX-ATOMIC-PASTE:START -->
 ## Termux Atomic Paste Safety
@@ -53,7 +53,7 @@ AI collaborators must not reuse, regenerate, repair, or rerun Q2 V1.4. Human-rea
 
 ## Human Authority Rule
 
-OpenMind source code is modified by human contributors.
+MAF source code is modified by human contributors.
 
 AI agents are collaborators, not autonomous repository maintainers.
 

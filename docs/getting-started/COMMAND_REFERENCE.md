@@ -1,4 +1,4 @@
-# OpenMind Command Reference
+# MAF Command Reference
 
 ## Purpose
 
@@ -10,11 +10,11 @@ Commands are grouped by status so users do not accidentally treat research scrip
 
 ### Canonical Command
 
-A user-facing command backed by canonical OpenMind implementation.
+A user-facing command backed by canonical MAF implementation.
 
 ### Development Tool
 
-A command used to build, test, benchmark, inspect, or operate OpenMind during development.
+A command used to build, test, benchmark, inspect, or operate MAF during development.
 
 ### Diagnostic Tool
 
@@ -28,7 +28,7 @@ Lab commands may be incomplete, superseded, computationally expensive, or tied t
 
 ## General Rule
 
-Run commands from the OpenMind repository root unless a section explicitly says otherwise.
+Run commands from the repository root unless a section explicitly says otherwise.
 
 ```bash
 cd ~/OpenMind
@@ -258,7 +258,7 @@ Purpose: inspect the development environment and required system capabilities.
 bash preflight/resource_profile.sh
 ```
 
-Purpose: inspect hardware, software, memory, storage, and other resource characteristics relevant to OpenMind development.
+Purpose: inspect hardware, software, memory, storage, and other resource characteristics relevant to MAF development.
 
 Environment reports are snapshots. Rerun diagnostics when current state matters.
 
@@ -291,7 +291,7 @@ The probe currently reports or attempts to inspect:
 - relevant Vulkan, Mesa, GPU, EGL, ICD, and Termux environment variables;
 - OpenCL availability through `clinfo`.
 
-The Vulkan probe is diagnostic. Its output does not itself prove that a particular OpenMind model workload will execute correctly.
+The Vulkan probe is diagnostic. Its output does not itself prove that a particular MAF model workload will execute correctly.
 
 ## Git Inspection Commands
 
@@ -432,6 +432,6 @@ Research interpretation should follow:
 
 - `docs/getting-started/README.md` — project introduction;
 - `docs/getting-started/INSTALLATION.md` — installation and build environment;
-- `docs/getting-started/GLOSSARY.md` — OpenMind terminology;
+- `docs/getting-started/GLOSSARY.md` — MAF terminology;
 - `docs/development/BEST_PRACTICES.md` — engineering workflow;
 - `docs/operations/OPERATIONS.md` — operational guidance.

@@ -1,4 +1,4 @@
-# OpenMind Development Best Practices
+# MAF Development Best Practices
 
 <!-- OPENMIND:TERMUX-ATOMIC-PASTE:START -->
 ## Termux Atomic Paste Safety
@@ -21,13 +21,13 @@ If Termux unexpectedly shows `>`, treat the operation as incomplete and executio
 
 ## Purpose
 
-OpenMind is developed by human contributors with AI systems acting as engineering collaborators.
+MAF is developed by human contributors with AI systems acting as engineering collaborators.
 
 The quality standard does not depend on whether an idea originated with a person or an AI. Changes are accepted based on human review, reproducibility, tests, debugging evidence, benchmarks, and research controls where applicable.
 
 ## Human Authority
 
-Only human contributors modify OpenMind source code and decide what enters the repository.
+Only human contributors modify MAF source code and decide what enters the repository.
 
 AI collaborators may:
 

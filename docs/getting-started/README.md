@@ -1,12 +1,12 @@
-# Getting Started with OpenMind
+# Getting Started with MAF — Model Address Fabric
 
 <!-- OPENMIND:CURRENT-WORK-LINK:START -->
 Current scientific work: [`../research/CURRENT_WORK.md`](../research/CURRENT_WORK.md).
 <!-- OPENMIND:CURRENT-WORK-LINK:END -->
 
-## What OpenMind Is
+## What MAF Is
 
-OpenMind is a local-first AI systems project.
+MAF — Model Address Fabric is the active successor focused on persistent model-object representation and addressing.
 
 It combines several related areas:
 
@@ -21,7 +21,7 @@ You do not need to understand every research area to use or contribute to the pr
 
 ## Project Status
 
-OpenMind contains both implemented capabilities and active research.
+MAF contains both implemented capabilities and active research.
 
 These are intentionally kept separate.
 
@@ -45,7 +45,7 @@ For a first visit:
 
 ## Human and AI Collaboration
 
-OpenMind is developed by human contributors.
+MAF is developed by human contributors.
 
 AI systems may work alongside people as engineering collaborators by analyzing code, proposing changes, helping debug failures, designing tests, reviewing results, and assisting with documentation.
 
@@ -88,7 +88,7 @@ See `docs/development/TESTING.md` and `docs/development/BEST_PRACTICES.md` befor
 
 Research should begin with a question, not a desired conclusion.
 
-A strong OpenMind experiment records:
+A strong MAF experiment records:
 
 - the question;
 - immutable inputs;
@@ -104,7 +104,7 @@ Discovery data and validation data should remain distinct where the experiment r
 
 ## Licenses
 
-OpenMind software source code is licensed under Apache License 2.0.
+Software source code in this repository is licensed under Apache License 2.0.
 
 Original OpenMind research data and results are licensed under CC BY 4.0 only where explicitly marked.
 
@@ -120,3 +120,28 @@ See `LICENSE`, `RESEARCH_DATA_LICENSE.md`, and `THIRD_PARTY_LICENSES.md`.
 - Active research: `docs/labs/README.md`
 - Provenance: `docs/data/`
 - AI collaboration: `AGENTS.md` and `docs/ai/`
+
+<!-- MAF_GETTING_STARTED_IDENTITY_V1 -->
+## Current project identity
+
+The post-Phase-6 model-object representation/addressing
+work is **MAF — Model Address Fabric**.
+
+You will still encounter the name OpenMind in:
+
+- historical research;
+- repository paths;
+- Python imports;
+- native interfaces;
+- schemas;
+- Git history.
+
+Those names may be compatibility or provenance
+identifiers rather than current-facing branding.
+
+Start with:
+
+- `../index.md`
+- `../concepts/MAF_OVERVIEW.md`
+- `GLOSSARY.md`
+- `../terminology/COINED_TERMS.md`

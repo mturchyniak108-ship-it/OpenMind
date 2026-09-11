@@ -1,4 +1,4 @@
-# OpenMind TODO
+# MAF — Model Address Fabric TODO
 
 <!-- OPENMIND:CURRENT-AUTHORITY:START -->
 Current scientific authority is `docs/research/CURRENT_WORK.md`; `TODO.md` is planning material.

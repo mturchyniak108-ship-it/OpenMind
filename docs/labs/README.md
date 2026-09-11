@@ -1,4 +1,4 @@
-# OpenMind Labs
+# MAF Labs
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED
@@ -72,11 +72,11 @@ MAF engineering results must not be treated as evidence that representation recu
 
 The directory also contains earlier geometry, lattice, waveform, phase, parameter-field, and fractal experiments.
 
-These remain experimental research history unless separately promoted through the OpenMind validation process.
+These remain experimental research history unless separately promoted through the MAF validation process.
 
 ## Promotion Rule
 
-Experimental work may be promoted toward the professional OpenMind surface only when it has:
+Experimental work may be promoted toward the current MAF surface only when it has:
 
 1. a defined hypothesis or engineering question;
 2. immutable input provenance;

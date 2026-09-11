@@ -1,8 +1,8 @@
-# OpenMind Standard Experimental Phase Procedure
+# MAF Standard Experimental Phase Procedure
 
 ## Purpose
 
-Every OpenMind research phase follows the same evidence-driven lifecycle.
+Every MAF research phase follows the same evidence-driven lifecycle.
 No experimental result becomes a production capability merely because it appears promising.
 
 ## Standard Lifecycle

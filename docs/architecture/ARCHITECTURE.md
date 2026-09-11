@@ -1,4 +1,4 @@
-# OpenMind Architecture
+# MAF Architecture
 
 ## Design Principles
 
@@ -13,7 +13,7 @@
 ## System Flow
 
 ```text
-                         OpenMind
+                MAF successor + preserved OpenMind layers
                             |
           +-----------------+-----------------+
           |                 |                 |

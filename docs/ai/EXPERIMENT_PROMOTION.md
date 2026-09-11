@@ -1,6 +1,6 @@
 # Experimental Promotion Policy
 
-OpenMind separates canonical implementation, validated research, and active laboratory work.
+MAF separates canonical implementation, validated research, and active laboratory work.
 
 ## Status Classes
 
@@ -45,7 +45,7 @@ A lab candidate requires:
 
 ## Authority Order
 
-For claims about OpenMind:
+For claims about MAF:
 
 1. source code defines implementation;
 2. tests define verified behavior;

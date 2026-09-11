@@ -1,4 +1,8 @@
-# OpenMind Current Work
+# MAF Current Work
+
+<!-- MAF_CURRENT_WORK_AUTHORITY_V2_BEGIN -->
+> **Current authority — post-Phase-6:** Whole Phase 6 is formally closed. **MAF — Model Address Fabric** is the active successor identity for model-object representation/addressing work. Documentation publication and live-site deployment are complete. The older Phase 6D/Q2/Q4 status sections below are preserved historical status snapshots; they are not the current phase state. This status note does not authorize a Phase-6 rerun, MAFDB implementation, package/native/schema rename, repository/remote rename, external integration, successor runtime work or model execution.
+<!-- MAF_CURRENT_WORK_AUTHORITY_V2_END -->
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED
@@ -98,3 +102,27 @@ Q3 requires a new preregistration and authority boundary. It must validate query
 The roadmap then proceeds to 6D-Q4 route reuse with generation binding. Phase 6E remains not entered.
 
 Human-readable Q2 explanation: `Q2_V1_4_SUMMARY.md`.
+
+<!-- MAF_CURRENT_WORK_POST_PHASE6_V1 -->
+## Post-Phase-6 current state
+
+Whole Phase 6 is formally closed.
+
+Current authorized successor work is documentation,
+terminology, lineage and compatibility design for
+**MAF — Model Address Fabric**.
+
+The completed Phase-6 scientific evidence remains frozen.
+
+Current documentation work does not authorize:
+
+- Phase-6 reruns;
+- mutation of frozen evidence;
+- schema migration;
+- package/native rename;
+- repository/remote rename;
+- MAFDB implementation;
+- native/NEON/Vulkan successor implementation;
+- GPT-OSS model work.
+
+See `PHASE_6_SUMMARY.md` for the bounded closure summary.

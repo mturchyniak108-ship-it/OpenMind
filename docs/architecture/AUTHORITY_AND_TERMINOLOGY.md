@@ -1,8 +1,8 @@
-# OpenMind Authority and Terminology
+# MAF Authority and Terminology
 
 ## Purpose
 
-OpenMind uses more than one kind of authoritative artifact.
+MAF uses more than one kind of authoritative artifact.
 
 This document defines the terms used to distinguish them.
 
@@ -67,7 +67,7 @@ Derived representations may improve access, routing, storage, visualization, or 
 
 ## Two-Authority Model
 
-OpenMind therefore currently distinguishes two primary forms of authority:
+The repository therefore currently distinguishes two primary forms of authority:
 
 ```text
 MODEL AUTHORITY
@@ -137,3 +137,40 @@ Derived state must never redefine `model_pk`, `generation_pk`, `object_pk`, segm
 Physical relocation may change runtime path metadata while stable logical PK identity and immutable descriptor evidence remain unchanged.
 
 A successful activation or rollback invalidates the prior current-generation resident snapshot. A replacement snapshot must be completely rebuilt and validated before publication.
+
+<!-- MAF_AUTHORITY_POST_PHASE6_V1 -->
+## Post-Phase-6 project identity authority
+
+The canonical current-facing expansion of **MAF** is:
+
+**Model Address Fabric**
+
+MAF is the successor project identity for the
+model-object representation/addressing direction after
+formal closure of Phase 6.
+
+### Lineage rule
+
+OpenMind remains the historical repository/research
+lineage identity.
+
+Adoption of the MAF name does not authorize rewriting:
+
+- frozen scientific artifacts;
+- historical paths;
+- Git history;
+- historical commit subjects;
+- existing `openmind.*` schema identifiers.
+
+### Compatibility rule
+
+Existing `openmind.*` schemas, Python import paths and
+native identifiers remain compatibility-bearing surfaces
+until an explicit versioned migration contract is
+authorized.
+
+### Authority rule
+
+Current terminology may explain historical evidence but
+must not retroactively change the identity under which
+that evidence was produced.

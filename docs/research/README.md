@@ -1,4 +1,4 @@
-# OpenMind Research Documentation
+# MAF Research Documentation
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED

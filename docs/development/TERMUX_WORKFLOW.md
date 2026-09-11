@@ -1,4 +1,4 @@
-# OpenMind Termux Workflow
+# MAF Termux Workflow
 
 ## Termux Atomic Paste Safety
 

@@ -1,4 +1,4 @@
-# OpenMind AI Agent Documentation
+# MAF AI Agent Documentation
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED
@@ -59,11 +59,11 @@ Do not interpret Q2 PASS as selective-working-set sufficiency or Phase 6E entry.
 
 This directory contains machine-readable documentation for AI agents, repository scrapers, coding agents, and maintainers.
 
-The documentation explains what each OpenMind-owned file does, how components connect, what inputs and outputs they use, and which architectural invariants must be preserved.
+The documentation explains what each MAF-owned file does, how components connect, what inputs and outputs they use, and which architectural invariants must be preserved.
 
 ## Agent Rules
 
-Before modifying OpenMind:
+Before modifying MAF:
 
 1. Read README.md.
 2. Read ROADMAP.md.
@@ -78,7 +78,7 @@ Before modifying OpenMind:
 
 ## Repository Ownership
 
-### OpenMind-owned
+### MAF-owned
 
 - native/
 - benchmarks/
@@ -93,7 +93,7 @@ Before modifying OpenMind:
 
 - llama.cpp/
 
-Do not rewrite or duplicate upstream llama.cpp documentation into the OpenMind AI documentation layer unless OpenMind directly depends on a specific upstream API or behavior.
+Do not rewrite or duplicate upstream llama.cpp documentation into the MAF AI documentation layer unless MAF directly depends on a specific upstream API or behavior.
 
 ## Documentation Structure
 
@@ -115,11 +115,11 @@ docs/ai/
 
 ## File Documentation
 
-Each OpenMind-owned source file should eventually have an AI-readable documentation entry describing its purpose, interfaces, dependencies, inputs, outputs, tests, usage, and architectural constraints.
+Each MAF-owned source file should eventually have an AI-readable documentation entry describing its purpose, interfaces, dependencies, inputs, outputs, tests, usage, and architectural constraints.
 
 ## AI Agent Workflow
 
-AI agents working on OpenMind should follow this sequence:
+AI agents working on MAF should follow this sequence:
 
 1. Identify the requested subsystem.
 2. Read the relevant roadmap milestone.

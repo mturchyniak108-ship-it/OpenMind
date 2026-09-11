@@ -1,10 +1,10 @@
-# OpenMind Glossary
+# MAF Glossary
 
-This glossary gives a plain-language meaning first, followed by the more technical OpenMind usage where useful.
+This glossary gives a plain-language meaning first, followed by the more technical MAF usage where useful.
 
 ## Canonical
 
-**Plain language:** A part of OpenMind that the project currently treats as implemented behavior.
+**Plain language:** A part of MAF that the project currently treats as implemented behavior.
 
 **Technical meaning:** Source-backed behavior supported by appropriate tests and repository evidence.
 
@@ -40,7 +40,7 @@ Historical experiments may remain useful for provenance, comparison, or methodol
 
 Information used to support or verify a project claim.
 
-OpenMind distinguishes measured evidence from interpretation.
+MAF distinguishes measured evidence from interpretation.
 
 ## Truth Graph
 
@@ -58,13 +58,13 @@ A path can represent how one piece of information connects to another and can ca
 
 **Plain language:** The internal numerical form a model uses while processing information.
 
-In current OpenMind research, representations often refer to hidden-state vectors captured at transformer layers.
+In earlier OpenMind representation research, representations often referred to hidden-state vectors captured at transformer layers.
 
 ## Activation
 
 A numerical value or vector produced inside a neural network during computation.
 
-OpenMind activation experiments capture selected internal model representations for analysis.
+Earlier OpenMind activation experiments captured selected internal model representations for analysis.
 
 ## Embedding Dimension
 
@@ -76,7 +76,7 @@ For example, a 1536-dimensional activation contains 1536 scalar values.
 
 **Plain language:** Similar internal structure appearing again at another point in model processing.
 
-In OpenMind research, recurrence is measured rather than assumed. High similarity alone does not prove identical information or identical computation.
+In earlier OpenMind recurrence research, recurrence was measured rather than assumed. High similarity alone did not prove identical information or identical computation.
 
 ## Cosine Similarity
 
@@ -102,7 +102,7 @@ Examples include shuffled labels, cross-token comparisons, and randomized mappin
 
 ## MAF
 
-**Plain language:** OpenMind research into compact, indexed, or structured representations of model-derived information.
+**Plain language:** MAF research into compact, indexed, or structured representations of model-derived information.
 
 MAF work includes retrieval, indexing, reconstruction, streaming, scaling, and related representation experiments.
 
@@ -154,7 +154,7 @@ Any lossy reconstruction must be evaluated for numerical error and, where releva
 
 ## Fractal
 
-OpenMind uses this term for experimental repeated or hierarchical structure.
+Earlier OpenMind research used this term for experimental repeated or hierarchical structure.
 
 It should not be interpreted as proof that transformer representations are mathematical fractals unless an experiment specifically establishes that property.
 
@@ -162,7 +162,7 @@ It should not be interpreted as proof that transformer representations are mathe
 
 Given the same defined inputs and environment, an operation produces the same result.
 
-Where execution is not deterministic, OpenMind should record sources of variation.
+Where execution is not deterministic, MAF should record sources of variation.
 
 ## Manifest
 
@@ -199,3 +199,37 @@ A resident snapshot whose generation binding no longer matches the generation ex
 ## Path Independence
 
 The property that byte-identical valid physical evidence may move to another runtime path without changing logical PK identity or immutable descriptor mappings.
+
+<!-- MAF_GLOSSARY_POST_PHASE6_V1 -->
+## MAF — Model Address Fabric
+
+**Status:** Canonical current term.
+
+MAF means **Model Address Fabric**.
+
+It is the persistent model-object representation and
+addressing architecture focused on stable identities,
+deterministic addressing, tensor ↔ object relationships,
+payload provenance, reconstruction, scalable lookup and
+selection, and fail-closed validation.
+
+The acronym existed in earlier OpenMind research. This
+post-Phase-6 definition establishes the expanded
+current-facing name without rewriting historical
+evidence.
+
+## Terminology status
+
+**Canonical** — preferred current term.
+
+**Provisional** — working term that may change after
+design or validation.
+
+**Historical** — preserved term from earlier research or
+evidence.
+
+**Compatibility Identifier** — historical identifier that
+remains valid because software, schemas or data may
+depend on it.
+
+See `../terminology/COINED_TERMS.md`.

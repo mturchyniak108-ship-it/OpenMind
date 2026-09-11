@@ -1,10 +1,10 @@
-# Installing and Building OpenMind
+# Installing and Building MAF
 
 ## Scope
 
-This document describes the current OpenMind development environment, dependencies, build requirements, and validation workflow.
+This document describes the current MAF development environment, dependencies, build requirements, and validation workflow.
 
-OpenMind is under active development. This is a developer build guide rather than a finalized end-user installer.
+MAF is under active development. This is a developer build guide rather than a finalized end-user installer.
 
 Requirements and observed development versions are deliberately kept separate.
 
@@ -29,13 +29,13 @@ The core Python project currently declares no mandatory runtime package dependen
 
 ## Verified Termux Development Environment
 
-The following versions describe a development environment on which OpenMind is currently being developed and tested.
+The following versions describe a development environment on which MAF is currently being developed and tested.
 
 They are reproducibility information, not minimum version requirements unless explicitly stated above.
 
 | Component | Verified version |
 | --- | --- |
-| OpenMind | 0.1.0 |
+| MAF | 0.1.0 |
 | Python | 3.13.13 |
 | pip | 26.1.2 |
 | Git | 2.54.0 |
@@ -79,11 +79,11 @@ This distinction is important.
 
 `setuptools>=61.0` and `wheel` are declared as Python build-system requirements. Their absence from the current interactive environment does not remove them from the package build contract; a compatible PEP 517 build frontend may install build requirements in an isolated build environment.
 
-NumPy is installed in the current development environment but is not presently declared as a mandatory OpenMind runtime dependency.
+NumPy is installed in the current development environment but is not presently declared as a mandatory MAF runtime dependency.
 
 SciPy is not installed in this recorded Termux environment and is not a declared core dependency.
 
-Do not add packages to OpenMind requirements solely because they happen to be installed on a development device.
+Do not add packages to MAF requirements solely because they happen to be installed on a development device.
 
 ## Repository Layout Relevant to Building
 
@@ -160,7 +160,7 @@ The exact commit provides reproducibility information.
 
 The `dirty` suffix means the recorded llama.cpp working tree contained local modifications. Results that depend on those modifications should preserve the relevant diff or otherwise identify the changed source before being treated as fully reproducible.
 
-This revision is a verified development reference, not a declaration that OpenMind supports only this llama.cpp commit.
+This revision is a verified development reference, not a declaration that MAF supports only this llama.cpp commit.
 
 ## Current Native Configuration
 
@@ -225,7 +225,7 @@ Use `preflight/` and `vulkan/` diagnostics when validating a new environment.
 
 ## Models
 
-GGUF model files are external artifacts and are not automatically part of the OpenMind software distribution.
+GGUF model files are external artifacts and are not automatically part of the MAF software distribution.
 
 Models retain their applicable upstream licenses.
 
@@ -256,7 +256,7 @@ AI collaborators may analyze failures and propose modifications. Human contribut
 
 ## Distribution Status
 
-OpenMind does not yet provide a finalized one-command installer or stable end-user binary distribution.
+MAF does not yet provide a finalized one-command installer or stable end-user binary distribution.
 
 This document therefore describes the current development environment and build contract.
 

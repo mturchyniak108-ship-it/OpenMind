@@ -1,4 +1,4 @@
-# OpenMind Documentation
+# MAF — Model Address Fabric Documentation
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED
@@ -29,7 +29,7 @@ Current scientific work: [`research/CURRENT_WORK.md`](research/CURRENT_WORK.md).
 Current scientific authority: `research/CURRENT_WORK.md` and `research/MAF_CURRENT_STATUS.md`.
 <!-- OPENMIND:CURRENT-AUTHORITY:END -->
 
-OpenMind is a local-first AI systems project combining native inference, evidence-backed knowledge structures, reproducible model research, and experimental representation engineering.
+MAF — Model Address Fabric is the active successor for persistent model-object representation and addressing; the broader repository also preserves OpenMind-era native inference, evidence-backed knowledge structures, and representation research.
 
 These documents are written for people first while remaining structured enough for AI collaborators to navigate reliably.
 
@@ -40,13 +40,13 @@ These documents are written for people first while remaining structured enough f
 - [Command Reference](getting-started/COMMAND_REFERENCE.md)
 - [Glossary](getting-started/GLOSSARY.md)
 
-If you are new to OpenMind:
+If you are new to MAF:
 
 1. Read the project `README.md` for the high-level project status.
 2. Read [Architecture](architecture/ARCHITECTURE.md) for the system model.
 3. Read [Development](development/DEVELOPMENT.md) before changing code.
 4. Read [Best Practices](development/BEST_PRACTICES.md) for the shared human/AI engineering workflow.
-5. Read [OpenMind Labs](labs/README.md) before interpreting experimental work.
+5. Read [MAF Labs](labs/README.md) before interpreting experimental work.
 
 ## Who These Documents Are For
 
@@ -54,7 +54,7 @@ If you are new to OpenMind:
 
 Users need installation, operation, configuration, troubleshooting, and stable feature documentation.
 
-Human-oriented getting-started and manual pages are being expanded as OpenMind interfaces stabilize.
+Human-oriented getting-started and manual pages are being expanded as MAF interfaces stabilize.
 
 ### Developers
 
@@ -78,13 +78,13 @@ Begin with:
 - [MAF Research](experiments/MAF.md)
 - [Data and Provenance](data/DATA_AND_PROVENANCE.md)
 - [Reproducibility](data/REPRODUCIBILITY.md)
-- [OpenMind Labs](labs/README.md)
+- [MAF Labs](labs/README.md)
 
 ### AI Collaborators
 
 AI agents work alongside human contributors. They may inspect, analyze, explain, review, debug, test, benchmark, and propose changes.
 
-Only a human contributor may apply modifications to OpenMind source code or decide that a proposed change enters the repository.
+Only a human contributor may apply modifications to MAF source code or decide that a proposed change enters the repository.
 
 AI-specific navigation and repository rules are under [AI Documentation](ai/README.md).
 
@@ -134,7 +134,7 @@ AI-specific navigation and repository rules are under [AI Documentation](ai/READ
 
 ## Evidence and Status Language
 
-OpenMind uses four important status classes:
+The documentation uses four important status classes:
 
 - `canonical` — implemented behavior supported by source and appropriate tests.
 - `validated_research` — reproducible measured evidence that has completed its research validation requirements.
@@ -145,7 +145,7 @@ An experimental script, benchmark result, roadmap item, or AI interpretation is 
 
 ## Documentation Principle
 
-Important OpenMind concepts should eventually provide three levels of explanation:
+Important MAF concepts should eventually provide three levels of explanation:
 
 1. a one-sentence description;
 2. a practical human-readable example;
@@ -171,3 +171,27 @@ For a plain-language explanation of what was proven, what remains unproven, and 
 
 Phase 6E remains not entered.
 <!-- OPENMIND:Q2-HUMAN-SUMMARY:END -->
+
+<!-- MAF_DOC_PORTAL_V1 -->
+## MAF documentation portal
+
+Whole Phase 6 is formally closed and the current
+model-object/addressing direction is documented as
+**MAF — Model Address Fabric**.
+
+The documentation source of truth remains Git-tracked
+Markdown.
+
+Start with `docs/index.md`.
+
+New documentation groups include:
+
+- `docs/concepts/`
+- `docs/terminology/`
+- `docs/howto/`
+- `docs/reference/`
+- `docs/provenance/`
+- `docs/compatibility/`
+
+Historical OpenMind research documents are preserved
+rather than bulk-renamed.

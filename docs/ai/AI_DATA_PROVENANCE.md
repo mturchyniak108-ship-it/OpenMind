@@ -1,8 +1,8 @@
-# OpenMind AI Data Provenance Policy
+# MAF AI Data Provenance Policy
 
 ## Purpose
 
-OpenMind must distinguish authoritative information from copied, scraped, derived, mirrored, cloned, synthetic, and unknown information.
+MAF documentation and research must distinguish authoritative information from copied, scraped, derived, mirrored, cloned, synthetic, and unknown information.
 
 The Canonical Truth Graph is the canonical knowledge layer. AI-generated or duplicated material must never silently become independent evidence.
 

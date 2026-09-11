@@ -1,4 +1,4 @@
-# OpenMind
+# MAF — Model Address Fabric
 
 <!-- OPENMIND_MAF_Q4_STATUS_BEGIN -->
 ## MAF Phase 6D-Q4 status — CLOSED
@@ -48,17 +48,17 @@ Human-readable Q2 explanation: [`docs/research/Q2_V1_4_SUMMARY.md`](docs/researc
 Next research gate: **6D-Q3 — attach/detach ownership and cleanup semantics**. Phase 6E remains not entered.
 <!-- OPENMIND:CURRENT-SCIENTIFIC-STATUS:END -->
 
-OpenMind is a local-first AI systems project focused on native inference, evidence-backed knowledge structures, reproducible model research, and experimental representation-driven computation.
+MAF — Model Address Fabric is the active successor focused on persistent model-object representation and addressing; the broader OpenMind research lineage also contains native inference, evidence-backed knowledge structures, and earlier representation research.
 
 The long-term research question is whether useful AI computation can be performed with less dependence on conventional token-by-token inference while preserving correctness, provenance, and reproducibility.
 
-OpenMind deliberately separates implemented capabilities from active research. Experimental results are not presented as production features until they complete the project's validation and promotion process.
+MAF separates implemented capabilities from active research. Experimental results are not presented as production capabilities until they complete the validation and promotion process.
 
 ## Current Status
 
 ### Implemented Foundations
 
-OpenMind currently includes:
+The repository currently includes MAF successor work alongside preserved OpenMind-era components:
 
 - native local GGUF inference through llama.cpp;
 - Vulkan GPU acceleration on supported hardware;
@@ -132,7 +132,7 @@ The public native interface is defined in `native/include/openmind/inference.h`.
 
 ## Project Status Language
 
-OpenMind uses explicit evidence classes:
+The preserved OpenMind evidence layer uses explicit evidence classes:
 
 - `canonical` — implemented behavior supported by source code and appropriate tests.
 - `validated_research` — experimental evidence that has completed its defined reproducibility, control, validation, limitation, and promotion requirements.
@@ -143,7 +143,7 @@ A script, benchmark, roadmap entry, successful-looking output, or AI interpretat
 
 ## Human and AI Collaboration
 
-OpenMind is developed by human contributors working with AI systems as engineering collaborators.
+MAF is developed by human contributors working with AI systems as engineering collaborators.
 
 AI collaborators may inspect code, analyze failures, propose changes, design tests, interpret benchmarks, assist with debugging, and help write documentation.
 
@@ -198,7 +198,7 @@ See `docs/development/` for development, testing, documentation, and contributio
 
 ## Research Principles
 
-OpenMind research follows several non-negotiable rules:
+MAF research follows several non-negotiable rules:
 
 - preserve canonical source artifacts;
 - preserve provenance through transformations;
@@ -215,7 +215,7 @@ The broader research sequence is documented in `ROADMAP.md`.
 
 ## Licenses
 
-OpenMind software source code is licensed under the Apache License 2.0.
+Software source code in this repository is licensed under the Apache License 2.0.
 
 Original OpenMind research datasets, benchmark results, measurements, and other materials explicitly marked for research-data release use Creative Commons Attribution 4.0 International (CC BY 4.0).
 
@@ -225,7 +225,7 @@ See `LICENSE`, `RESEARCH_DATA_LICENSE.md`, and `THIRD_PARTY_LICENSES.md`.
 
 #### Current MAF engineering state
 
-OpenMind's current MAF engineering status is determined from frozen completion,
+MAF engineering status is determined from frozen completion,
 validation, benchmark, diagnostic, and scientific-verdict artifacts rather than
 from roadmap intent alone.
 
@@ -281,3 +281,27 @@ performance all require separate prospective experiments.
 
 Architecture document: `./experiments/model_fractal/MAF_QUERY_SCOPED_WORKING_SET_ARCHITECTURE.md`
 <!-- OPENMIND:MAF-QUERY-SCOPED-WORKING-SETS-README-MD:END -->
+
+<!-- MAF_POST_PHASE6_IDENTITY_V1 -->
+## Post-Phase-6 MAF identity
+
+Whole Phase 6 is formally closed.
+
+The successor identity for the model-object
+representation/addressing direction is:
+
+**MAF — Model Address Fabric**
+
+OpenMind remains the historical repository/research
+lineage and still appears in package names, schemas,
+native interfaces, paths and Git history.
+
+Those compatibility-bearing identifiers are not renamed
+by this documentation update.
+
+See:
+
+- `docs/index.md`
+- `docs/concepts/MAF_OVERVIEW.md`
+- `docs/provenance/OPENMIND_TO_MAF_LINEAGE.md`
+- `docs/compatibility/OPENMIND_COMPATIBILITY.md`
