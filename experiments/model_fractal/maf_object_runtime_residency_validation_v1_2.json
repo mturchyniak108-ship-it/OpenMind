@@ -1,0 +1,38 @@
+{
+  "all_pass": false,
+  "backend_selected": null,
+  "benchmark_executed": false,
+  "checks": {},
+  "exact_once": true,
+  "failed_checks": [],
+  "fatal_error": {
+    "message": "source fixture identity mismatch",
+    "type": "ValidationHarnessError"
+  },
+  "frozen_identities": {
+    "design_protocol_sha256": "81987d00ef4cb51556dcebf08bff9c9fa8979f033df05304d347b759e545eb13",
+    "engine_sha256": "4b8c0b8f5db9a67b4bcc368b18f159de6a3f2501f0badf0286de1459125d5cf9",
+    "resident_pk_directory_sha256": "4dadac5a1ffe448437718432edeee14a219a20da5a54956d2884d0b0b1d426b6",
+    "segment_reader_sha256": "3499cb8e528fe8e9315e3e5656d6aa888c95ca175310b6371e722de409827369",
+    "validation_protocol_sha256": "74b74a31c889ab3c1c39a35de11714b9e76e87acb5bb3bfa969c120b427a14f2"
+  },
+  "phase_6c_started": true,
+  "phase_6c_validation": "object_runtime_residency_v1",
+  "runtime_inventory": {},
+  "schema": "openmind.maf_object_runtime_residency_validation.v1.2",
+  "source_fixture": {
+    "active_generation.json": {
+      "sha256": "8608a480178c030cf70de39df845e724cc8f1a8afa99f74c66ef1c46f1befbd6",
+      "size": 380
+    },
+    "candidate_a.manifest.json": {
+      "sha256": "ba5ba793a0bcdda217b5e3b91061a35151617bcf7cb97ae6202f14c080369c96",
+      "size": 1846
+    },
+    "segment_00000000.mafseg": {
+      "sha256": "f965b526538d757ca2d6114af6517c57cbcb3650b71d8cfb92046a04ef2f566b",
+      "size": 4096
+    }
+  },
+  "validation_valid": false
+}

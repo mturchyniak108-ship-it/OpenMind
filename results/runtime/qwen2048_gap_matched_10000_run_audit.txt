@@ -1,0 +1,20 @@
+OPENMIND / QWEN-2048 LOPO GAP-MATCHED CONTROL V1
+PREREGISTERED DEFINITIVE RUN
+
+engine SHA           : 74b0c20bef7ff6dcc8ca15fe7250cc9f453192e182c6f05d58e08b09264d11d1
+protocol SHA         : 8275d0bd85233a1d2efa02708406a92a2bb1e44832590e401291114cf5ca4065
+engine audit SHA     : c70127a87ac5655442ce2745148c9cbf77651f76aa357b7795a4d444ad12e74f
+split draws          : 10000
+global draws         : 10000
+split seed base      : 7331
+global seed          : 17331
+worker exit          : 0
+wall seconds         : 33.735943
+governor attached    : 1
+governor exited      : 1
+stderr clean         : 1
+JSON contract        : 1
+thermal start        : 1
+thermal end          : 1
+process cleanup      : 1
+hypothesis gate      : PASS

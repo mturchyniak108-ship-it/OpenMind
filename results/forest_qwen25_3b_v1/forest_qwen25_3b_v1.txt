@@ -1,0 +1,40 @@
+============================================================================
+ OPENMIND / FROZEN FOREST QWEN2.5-3B V1
+============================================================================
+
+STATUS
+----------------------------------------------------------------------------
+state                    : QUALIFIED FROZEN CANDIDATE
+model                    : Qwen2.5-3B Q4_K_M
+embedding dimension      : 2048
+groups                   : 32
+dimensions/group         : 64
+training samples         : 113
+residual vectors         : 3955
+
+QUALIFICATION
+----------------------------------------------------------------------------
+held-out protocol        : 8-fold leave-one-prompt-out
+non-oracle Orange wins   : 4/4 access fractions
+controls                 : contiguous Pine + seeded Random
+generalization result    : PASS
+
+SERIALIZATION
+----------------------------------------------------------------------------
+artifact bytes           : 8344
+binary SHA256            : da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902
+geometry SHA256          : d9e68155244708a1c0e8c24b05031b287feac8a5c841a7c0f6e2c7f7cd1e9038
+
+SAFETY
+----------------------------------------------------------------------------
+llama activation written : NO
+model weights modified   : NO
+KV cache modified        : NO
+attention modified       : NO
+sampling modified        : NO
+generation authority     : STANDARD LLAMA
+
+NEXT
+----------------------------------------------------------------------------
+Forest V9A live shadow retry using this exact frozen artifact.
+Full 32/32 reconstruction before selective routing.

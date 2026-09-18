@@ -1,0 +1,83 @@
+{
+  "affinity_restore_error": null,
+  "benchmark_valid": false,
+  "execution_error": null,
+  "fatal_error": {
+    "message": "name 'runtime_state' is not defined",
+    "type": "NameError"
+  },
+  "frozen_identities": {
+    "checks": {
+      "completion_binds_protocol": true,
+      "completion_binds_raw": true,
+      "completion_binds_runner": true,
+      "completion_status_exact": true,
+      "protocol_identity": true,
+      "reader_identity": true,
+      "resident_identity": true,
+      "thermal_completion_identity": true,
+      "thermal_fatal_error_absent": true,
+      "thermal_protocol_exact": true,
+      "thermal_protocol_identity": true,
+      "thermal_raw_identity": true,
+      "thermal_result_valid": true,
+      "thermal_runner_identity": true,
+      "thermal_schema_exact": true,
+      "v1_core_identity": true,
+      "validation_result_identity": true
+    },
+    "identities": {
+      "protocol": {
+        "expected_sha256": "8a6af3a65c78c0ed9f47244ebd40613c5e84f13fc2e4e2d1543089e5481e3770",
+        "observed_sha256": "8a6af3a65c78c0ed9f47244ebd40613c5e84f13fc2e4e2d1543089e5481e3770",
+        "path": "experiments/model_fractal/MAF_SEGMENT_READER_BENCHMARK_V1_1_PROTOCOL.md"
+      },
+      "reader": {
+        "expected_sha256": "3499cb8e528fe8e9315e3e5656d6aa888c95ca175310b6371e722de409827369",
+        "observed_sha256": "3499cb8e528fe8e9315e3e5656d6aa888c95ca175310b6371e722de409827369",
+        "path": "experiments/model_fractal/maf_segment_reader_v1.py"
+      },
+      "resident": {
+        "expected_sha256": "4dadac5a1ffe448437718432edeee14a219a20da5a54956d2884d0b0b1d426b6",
+        "observed_sha256": "4dadac5a1ffe448437718432edeee14a219a20da5a54956d2884d0b0b1d426b6",
+        "path": "experiments/model_fractal/maf_resident_pk_directory_v1.py"
+      },
+      "thermal_completion": {
+        "expected_sha256": "3b89868f324b774c9107faa6b038c8a8573d509c0d93527d960922cda6ae62dd",
+        "observed_sha256": "3b89868f324b774c9107faa6b038c8a8573d509c0d93527d960922cda6ae62dd",
+        "path": "experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_2_COMPLETION.md"
+      },
+      "thermal_protocol": {
+        "expected_sha256": "b98e4c4d7309948b0fbf71f4a961e038a7e55470f03153e85ec724ffd32f3cbb",
+        "observed_sha256": "b98e4c4d7309948b0fbf71f4a961e038a7e55470f03153e85ec724ffd32f3cbb",
+        "path": "experiments/model_fractal/CPU_THERMAL_CHARACTERIZATION_V1_2_PROTOCOL.md"
+      },
+      "thermal_raw": {
+        "expected_sha256": "b2e587547ed2b7388f141210fb3de5873de7a9d61b1ca3273ec4e4a964eaa8b2",
+        "observed_sha256": "b2e587547ed2b7388f141210fb3de5873de7a9d61b1ca3273ec4e4a964eaa8b2",
+        "path": "experiments/model_fractal/cpu_thermal_characterization_v1_2.json"
+      },
+      "thermal_runner": {
+        "expected_sha256": "19218eaf8fe98a6bcbf6f465f9f0d5320d8fb42f6b3937bbfcc5b4a29a78c2f2",
+        "observed_sha256": "19218eaf8fe98a6bcbf6f465f9f0d5320d8fb42f6b3937bbfcc5b4a29a78c2f2",
+        "path": "experiments/model_fractal/cpu_thermal_characterization_v1_2.py"
+      },
+      "v1_core": {
+        "expected_sha256": "2972beda0d1a798cf5da9bf6371f5c0c96ee493ce6903da68021cec64e7947d4",
+        "observed_sha256": "2972beda0d1a798cf5da9bf6371f5c0c96ee493ce6903da68021cec64e7947d4",
+        "path": "experiments/model_fractal/benchmark_maf_segment_reader_v1.py"
+      },
+      "validation_result": {
+        "expected_sha256": "1ceef1ed2b814da3951811ea97e9f4475b3fa79557b341e7c8e089ec8a409328",
+        "observed_sha256": "1ceef1ed2b814da3951811ea97e9f4475b3fa79557b341e7c8e089ec8a409328",
+        "path": "experiments/model_fractal/maf_segment_reader_validation_v1.json"
+      }
+    }
+  },
+  "partial_evidence": null,
+  "protocol_sha256": "8a6af3a65c78c0ed9f47244ebd40613c5e84f13fc2e4e2d1543089e5481e3770",
+  "schema": "openmind.maf_segment_reader_benchmark.v1_1",
+  "thermal_completion_sha256": "3b89868f324b774c9107faa6b038c8a8573d509c0d93527d960922cda6ae62dd",
+  "thermal_raw_sha256": "b2e587547ed2b7388f141210fb3de5873de7a9d61b1ca3273ec4e4a964eaa8b2",
+  "v1_core_sha256": "2972beda0d1a798cf5da9bf6371f5c0c96ee493ce6903da68021cec64e7947d4"
+}

@@ -1,0 +1,220 @@
+{
+  "boundaries": [
+    "No new model inference is permitted.",
+    "No corpus mutation is permitted.",
+    "No training-selected pair may be changed.",
+    "No layer-gap profile may be changed.",
+    "Held-out prompt data may only be used after each split's selection is fixed.",
+    "No token-label permutation is needed for this control because the null question concerns layer-pair selection conditional on gap.",
+    "This protocol is frozen before any gap-matched result is calculated.",
+    "The validated LOPO recurrence result remains scientifically valid regardless of this control's outcome."
+  ],
+  "corpus": {
+    "dimensions": 2048,
+    "exclude_token_index": 0,
+    "layer_pairs": 630,
+    "layers": 36,
+    "prompts": 8
+  },
+  "frozen_inputs": {
+    "canonical": {
+      "path": "experiments/data/manifests/qwen25_3b_multi_prompt_2048_canonical_v1.json",
+      "sha256": "7f7e4d2079f4808fb9492a6fb81271d4a8d740523eb0426523377354dd390cca"
+    },
+    "engine": {
+      "path": "experiments/model_fractal/qwen2048_lopo_recurrence_v1.py",
+      "sha256": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7"
+    },
+    "engine_audit": {
+      "path": "experiments/data/manifests/qwen2048_lopo_engine_audit_v1.json",
+      "sha256": "5e23d967f4f4567a918c3b23490e3f9d5638e0d1f09f82dfc20aba46db38fc54"
+    },
+    "lopo_protocol": {
+      "path": "experiments/data/manifests/qwen2048_lopo_recurrence_v1_protocol.json",
+      "sha256": "2998b68c4b08f850487db3f82478c9e6ee4615c10795866da17367899ec2dd81"
+    },
+    "lopo_result_json": {
+      "path": "results/validated/representation_recurrence_v1/qwen2048_lopo_recurrence_v1_1000.json",
+      "sha256": "d599c0af7b87b2d636a11b8f02e5292d8e276a327743e5e73e451e8fc0fab975"
+    },
+    "validated_lopo": {
+      "path": "experiments/data/manifests/qwen2048_lopo_recurrence_v1_1000_validated.json",
+      "sha256": "e1dd113ec313e486bedf92474a7dda5305c48c6db06aac2a8ac83d8a2ca478ff"
+    }
+  },
+  "gap_matched_baseline": {
+    "base_seed": 7331,
+    "candidate_pool": "all 630 canonical layer pairs",
+    "matching_rule": "Each random comparison set must contain exactly the same number of pairs at every gap as the frozen selected top-50 set for that LOPO split.",
+    "matching_variable": "absolute forward layer gap b-a",
+    "random_sets_per_split": 10000,
+    "reason_selected_pairs_remain_eligible": "The null represents arbitrary topology conditional only on the exact gap profile; allowing selected pairs makes the test conservative and avoids constructing a baseline from pairs defined as nonselected.",
+    "sampling": "uniform without replacement within each layer-gap stratum",
+    "selected_pairs_excluded_from_pool": false,
+    "split_seed": "7331 + zero-based heldout prompt index"
+  },
+  "interpretation": {
+    "if_primary_fails": "The existing held-out recurrence result remains valid, but its topological selection advantage is not shown to exceed generic layer-distance effects.",
+    "if_primary_passes": "Training-prompt topology selection contains held-out predictive information beyond generic layer-distance decay.",
+    "stronger_claim_requires": "the preregistered primary endpoint; secondary metrics cannot substitute for a failed primary endpoint"
+  },
+  "primary_endpoint": {
+    "alternative": "global randomized mean enrichment >= observed global mean enrichment",
+    "empirical_p": "(exceedances + 1) / (10000 + 1)",
+    "global_base_seed": 17331,
+    "global_randomization": "For each of 10000 global draws, independently draw one exact-gap-matched 50-pair set for each held-out split, compute each matched mean minus that split's deterministic gap baseline, then average the eight values.",
+    "observed_statistic": "mean gap-adjusted enrichment across all eight held-out prompts",
+    "pass_conditions": {
+      "global_empirical_p": "<= 0.01",
+      "mean_gap_adjusted_enrichment": "> 0"
+    },
+    "unit": "eight-prompt experiment"
+  },
+  "purpose": "Test whether training-selected layer-pair topology predicts held-out recurrence beyond the generic effect of layer distance.",
+  "robustness_endpoints": {
+    "multiple_testing": "report Holm-Bonferroni adjusted per-split p-values across all eight splits",
+    "per_split_randomization": "report one-sided 10000-draw empirical p-value for each split",
+    "positive_split_requirement": "at least 7 of 8 split gap-adjusted enrichments > 0",
+    "strong_all_prompt_criterion": "descriptive stronger criterion only: 8/8 positive enrichments and all eight Holm-adjusted p <= 0.05"
+  },
+  "schema": "openmind.qwen2048_lopo_gap_matched.protocol.v1",
+  "scientific_context": {
+    "prior_supported_claim": "Prompt-generalizing same-token recurrence exists in training-selected short-range layer topology.",
+    "prior_unsupported_claim": "The training-selected ranking carries predictive information beyond generic layer-gap effects.",
+    "this_control_targets": "the prior unsupported claim"
+  },
+  "selection": {
+    "gap_profiles": {
+      "P01": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.26,
+        "min_gap": 1
+      },
+      "P02": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.26,
+        "min_gap": 1
+      },
+      "P03": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "max_gap": 7,
+        "mean_gap": 2.26,
+        "min_gap": 1
+      },
+      "P04": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 2,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.22,
+        "min_gap": 1
+      },
+      "P05": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.26,
+        "min_gap": 1
+      },
+      "P06": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 7,
+          "5": 1,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.2,
+        "min_gap": 1
+      },
+      "P07": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 7,
+          "5": 1,
+          "6": 1
+        },
+        "max_gap": 6,
+        "mean_gap": 2.2,
+        "min_gap": 1
+      },
+      "P08": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "max_gap": 7,
+        "mean_gap": 2.26,
+        "min_gap": 1
+      }
+    },
+    "method": "reuse the exact frozen top-50 training-selected layer pairs from the validated LOPO experiment",
+    "selection_hashes": {
+      "P01": "34a762393c7521845a95953507f074ce186547320ae0d3e7a49378464f2c3c06",
+      "P02": "7c0dcdad73d2a3a96d54b7dfc9a2e5eb198f71f032342d0fa0199f518655b010",
+      "P03": "c6de9f756c2cb10d0a461dec2597ce0ebce328c0407eeb331edd21aa1a189db6",
+      "P04": "d3661196a8ebbfb8f156d495a2a1d7a6ff5dda5c16a55d73aaea8717cb5c668b",
+      "P05": "a78b13174d34179fa2e693e8a6f94fe24f81bdfae1d3722b568a35a68bcbec4b",
+      "P06": "a314cde6f03ef90b6edc58aa7b3adb2235c3297e20287a49f71f3bb6a43426e8",
+      "P07": "71c3aa02472c61a48ea5984728e20a3a3d182805305e686803ef6978eff6f6d7",
+      "P08": "fd4c64540d7308985d8f062a3be0f7a5cff26dec22d6b5b95d9019e9fa6f02d2"
+    },
+    "selection_may_not_change": true,
+    "top_k": 50
+  },
+  "split_statistic": {
+    "alternative": "random matched mean >= observed selected mean",
+    "deterministic_gap_baseline": "weighted mean of held-out within-gap means using the selected set's exact gap counts",
+    "empirical_p": "(exceedances + 1) / (10000 + 1)",
+    "gap_adjusted_enrichment": "observed selected mean minus deterministic gap baseline",
+    "heldout_values": "same-token delta for each of the 630 layer pairs on the untouched held-out prompt",
+    "observed": "mean held-out delta of the frozen training-selected top-50 pairs",
+    "randomization_statistic": "mean held-out delta of one random gap-matched 50-pair set"
+  },
+  "status": "PREREGISTERED",
+  "study_type": "post-validation confirmatory control"
+}

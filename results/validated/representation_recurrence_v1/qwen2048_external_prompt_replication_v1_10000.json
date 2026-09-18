@@ -1,0 +1,158 @@
+{
+  "canonical_corpus_sha256": "d51422d9c89da5a469e328297362faa23887e03a9c7dd56e19e00260c7a5835d",
+  "corpus_manifest_sha256": "e955ab3eef83addf977294fcbecae34c9412c49bf695196bc92694e13b643431",
+  "engine_sha256": "25f59309ea2e45aac332e884636721f8b60536b3409a62fbabefe9c608a98213",
+  "per_prompt": [
+    {
+      "active_tokens": 17,
+      "deterministic_gap_baseline": 0.4536566320000195,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11428116649837472,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4534840687983069,
+      "matched_random_sd": 0.014986018236847514,
+      "observed_selected_mean": 0.5679377984983942,
+      "prompt_id": "R01",
+      "seed": 27331
+    },
+    {
+      "active_tokens": 17,
+      "deterministic_gap_baseline": 0.4439440011803469,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.1130246628281894,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.443844216225052,
+      "matched_random_sd": 0.013822064339220183,
+      "observed_selected_mean": 0.5569686640085363,
+      "prompt_id": "R02",
+      "seed": 27332
+    },
+    {
+      "active_tokens": 16,
+      "deterministic_gap_baseline": 0.42545677492853234,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.11772127947031291,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.42531680579754294,
+      "matched_random_sd": 0.014743876607647748,
+      "observed_selected_mean": 0.5431780543988453,
+      "prompt_id": "R03",
+      "seed": 27333
+    },
+    {
+      "active_tokens": 18,
+      "deterministic_gap_baseline": 0.4168672329927223,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.12046029357749921,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4168810310307822,
+      "matched_random_sd": 0.01435519693261202,
+      "observed_selected_mean": 0.5373275265702215,
+      "prompt_id": "R04",
+      "seed": 27334
+    },
+    {
+      "active_tokens": 17,
+      "deterministic_gap_baseline": 0.42129224723892755,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.10563260457056411,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4212856878973219,
+      "matched_random_sd": 0.013735923925949627,
+      "observed_selected_mean": 0.5269248518094917,
+      "prompt_id": "R05",
+      "seed": 27335
+    },
+    {
+      "active_tokens": 18,
+      "deterministic_gap_baseline": 0.46945313652726933,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.10585338686700713,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4691262590252914,
+      "matched_random_sd": 0.014589093144275006,
+      "observed_selected_mean": 0.5753065233942765,
+      "prompt_id": "R06",
+      "seed": 27336
+    },
+    {
+      "active_tokens": 26,
+      "deterministic_gap_baseline": 0.4138184096060025,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.07505574832489981,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.41379002675976134,
+      "matched_random_sd": 0.011206932593826003,
+      "observed_selected_mean": 0.48887415793090233,
+      "prompt_id": "R07",
+      "seed": 27337
+    },
+    {
+      "active_tokens": 15,
+      "deterministic_gap_baseline": 0.45791426799464313,
+      "draws": 10000,
+      "empirical_p": 9.999000099990002e-05,
+      "exceedances": 0,
+      "gap_adjusted_enrichment": 0.10253782121860561,
+      "holm_adjusted_p": 0.0007999200079992001,
+      "matched_random_mean": 0.4579244833663372,
+      "matched_random_sd": 0.01444996872377899,
+      "observed_selected_mean": 0.5604520892132487,
+      "prompt_id": "R08",
+      "seed": 27338
+    }
+  ],
+  "primary_endpoint": {
+    "draws": 10000,
+    "empirical_p": 9.999000099990002e-05,
+    "exceedances": 0,
+    "global_seed": 37331,
+    "null_mean": -6.622400734785516e-05,
+    "null_sd": 0.004954424455016776,
+    "observed_mean_gap_adjusted_enrichment": 0.10682087041943161,
+    "pass": true
+  },
+  "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0",
+  "reference_topology": {
+    "gap_counts": {
+      "1": 19,
+      "2": 13,
+      "3": 8,
+      "4": 7,
+      "5": 2,
+      "6": 1
+    },
+    "retrained": false,
+    "selected_pair_count": 50,
+    "selection_sha256": "945c826494a62c20ba52a8f4ae1b0133a3d8686f0a7fc23dc336666863992e7a"
+  },
+  "robustness": {
+    "positive_prompts": 8,
+    "positive_requirement_met": true,
+    "strong_criterion_met": true,
+    "strong_prompts": 8
+  },
+  "schema": "openmind.qwen2048_external_prompt_replication.result.v1",
+  "scientific_boundary": [
+    "Reference topology was frozen before replication capture.",
+    "Reference topology was not retrained on replication prompts.",
+    "Token index zero was excluded from analysis.",
+    "Exact frozen gap profile was used for matched randomization.",
+    "Primary interpretation is determined only by the preregistered global endpoint."
+  ],
+  "status": "PRIMARY_PASS"
+}

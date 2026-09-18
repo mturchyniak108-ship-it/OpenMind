@@ -1,0 +1,56 @@
+{
+  "baseline_commit": "366f829",
+  "boundaries": [
+    "no biological equivalence claim",
+    "no Forest dependency in MAF3D core",
+    "no transformer skipping before shadow validation",
+    "no compression-first optimization"
+  ],
+  "brain_mapping": {
+    "MAF_node": "cell",
+    "active_traversal": "visual firing path",
+    "depth": "hierarchical abstraction scale",
+    "route_edge": "synapse-like relationship"
+  },
+  "branch": "labs/multidimensional-maf",
+  "compression_policy": "Measure natural storage savings, but do not optimize compression until inference is proven unless compression preserves the same fidelity.",
+  "execution_state": "No MAF3D outcome has been computed.",
+  "fractal_rule": {
+    "Forest_geometry_required": false,
+    "children": "recursive partition of parent dimensions",
+    "initial_leaf_target": 64,
+    "root": "full route-conditioned representation domain"
+  },
+  "goal": "Test whether multidimensional MAF can reconstruct or predict hidden representations through route-conditioned fractal traversal without Forest.",
+  "initial_metrics": [
+    "hidden_state_cosine",
+    "relative_l2",
+    "max_abs_error",
+    "logit_cosine",
+    "top1_token_agreement",
+    "topk_overlap"
+  ],
+  "initial_model": "Qwen2.5-3B",
+  "logical_dimensions": {
+    "dimension_1": "route_id",
+    "dimension_2": "depth",
+    "dimension_3": "node_id"
+  },
+  "metadata_not_counted_as_dimensions": [
+    "model_id",
+    "checkpoint_sha256",
+    "provenance"
+  ],
+  "oracle": "standard untouched Qwen inference",
+  "primary_priority": "inference fidelity",
+  "research_order": [
+    "exact address and storage semantics",
+    "deterministic neutral 3D fractal",
+    "route-conditioned reconstruction",
+    "shadow hidden-state prediction",
+    "logit and token agreement",
+    "selective compute replacement only after shadow gates pass"
+  ],
+  "schema": "openmind.maf3d.inference_protocol.v1",
+  "status": "PREREGISTERED_DESIGN"
+}

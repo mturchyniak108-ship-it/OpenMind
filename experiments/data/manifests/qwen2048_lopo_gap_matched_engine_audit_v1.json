@@ -1,0 +1,137 @@
+{
+  "engine_sha256": "74b0c20bef7ff6dcc8ca15fe7250cc9f453192e182c6f05d58e08b09264d11d1",
+  "protocol_sha256": "8275d0bd85233a1d2efa02708406a92a2bb1e44832590e401291114cf5ca4065",
+  "real_data_audit": {
+    "gap_adjusted_enrichment_calculated": false,
+    "gap_matched_result_inspected": false,
+    "global_endpoint_calculated": false,
+    "heldout_gap_baseline_calculated": false,
+    "matched_randomization_calculated": false,
+    "per_split_p_values_calculated": false,
+    "purpose": "reconstruct frozen seven-prompt training selections only",
+    "selection_and_gap_profiles": {
+      "P01": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "34a762393c7521845a95953507f074ce186547320ae0d3e7a49378464f2c3c06",
+        "training_prompt_count": 7
+      },
+      "P02": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "7c0dcdad73d2a3a96d54b7dfc9a2e5eb198f71f032342d0fa0199f518655b010",
+        "training_prompt_count": 7
+      },
+      "P03": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "c6de9f756c2cb10d0a461dec2597ce0ebce328c0407eeb331edd21aa1a189db6",
+        "training_prompt_count": 7
+      },
+      "P04": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 2,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "d3661196a8ebbfb8f156d495a2a1d7a6ff5dda5c16a55d73aaea8717cb5c668b",
+        "training_prompt_count": 7
+      },
+      "P05": {
+        "gap_counts": {
+          "1": 19,
+          "2": 13,
+          "3": 8,
+          "4": 7,
+          "5": 2,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "a78b13174d34179fa2e693e8a6f94fe24f81bdfae1d3722b568a35a68bcbec4b",
+        "training_prompt_count": 7
+      },
+      "P06": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 7,
+          "5": 1,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "a314cde6f03ef90b6edc58aa7b3adb2235c3297e20287a49f71f3bb6a43426e8",
+        "training_prompt_count": 7
+      },
+      "P07": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 7,
+          "5": 1,
+          "6": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "71c3aa02472c61a48ea5984728e20a3a3d182805305e686803ef6978eff6f6d7",
+        "training_prompt_count": 7
+      },
+      "P08": {
+        "gap_counts": {
+          "1": 19,
+          "2": 14,
+          "3": 8,
+          "4": 6,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "selected_pair_count": 50,
+        "selection_hash": "fd4c64540d7308985d8f062a3be0f7a5cff26dec22d6b5b95d9019e9fa6f02d2",
+        "training_prompt_count": 7
+      }
+    },
+    "splits_checked": 8
+  },
+  "schema": "openmind.qwen2048_lopo_gap_matched.engine_audit.v1",
+  "scientific_boundary": [
+    "Real corpus data was used only to reconstruct the already-frozen training selections.",
+    "No real held-out gap-matched control statistic was calculated.",
+    "Randomization correctness was tested on synthetic data only.",
+    "The preregistered gap-matched outcome remains unobserved."
+  ],
+  "status": "ENGINE_AUDIT_PASS",
+  "synthetic_selftest": {
+    "baseline_identity_max_diff": 1.3877787807814457e-17,
+    "exact_gap_draws_checked": 250,
+    "holm_max_diff": 0.0,
+    "randomization_center_error": 0.0013132069297001059,
+    "selected_pairs_eligible": true
+  }
+}

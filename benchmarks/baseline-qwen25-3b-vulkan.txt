@@ -1,0 +1,21 @@
+OpenMind Native Inference Baseline
+Date: 2026-08-19
+Device: Samsung Galaxy S26 Ultra
+GPU: Adreno 840
+Driver: Turnip Mesa
+Backend: Vulkan
+Model: Qwen 2.5 3B Q4_K_M
+Context: 512
+GPU layers: 99
+
+Model load: 1836.58 ms
+Prompt tokens: 11
+Prompt eval: 501.19 ms
+Prompt speed: 21.95 tok/s
+Generated tokens: 32
+Generation: 1845.67 ms
+Generation speed: 17.34 tok/s
+Total runtime: 4273.86 ms
+
+Status: PASS
+Native llama.cpp Vulkan inference confirmed.

@@ -1,0 +1,505 @@
+{
+  "format": "openmind.maf_index_validation.v1",
+  "source": {
+    "path": "/data/data/com.termux/files/home/qwen2.5-coder-q8_0.gguf",
+    "sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+    "bytes": 1894532160
+  },
+  "index": {
+    "path": "experiments/model_fractal/maf_index_v1.json",
+    "index_sha256": "5223712ac3a2c5b9be19a000af278445db56d4deebe86253a59070f8731546c9"
+  },
+  "validation": {
+    "tensor_count": 339,
+    "payloads_verified": 339,
+    "layers_reconstructed": 28,
+    "global_tensors": 3,
+    "components_per_layer": 12,
+    "topology_mismatches": 0,
+    "overlaps": 0
+  },
+  "reconstruction_sha256": "6a88b9a70416b3beb5b83d4b39e1618aec6a5a396479fb4e04cd6137043ca5ab",
+  "layers": {
+    "0": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "1": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "2": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "3": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "4": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "5": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "6": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "7": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "8": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "9": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "10": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "11": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "12": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "13": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "14": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "15": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "16": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "17": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "18": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "19": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "20": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "21": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "22": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "23": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "24": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "25": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "26": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    },
+    "27": {
+      "tensor_count": 12,
+      "components": [
+        "attn_norm.weight",
+        "ffn_down.weight",
+        "ffn_gate.weight",
+        "ffn_up.weight",
+        "ffn_norm.weight",
+        "attn_k.bias",
+        "attn_k.weight",
+        "attn_output.weight",
+        "attn_q.bias",
+        "attn_q.weight",
+        "attn_v.bias",
+        "attn_v.weight"
+      ]
+    }
+  },
+  "global_tensor_names": [
+    "output.weight",
+    "token_embd.weight",
+    "output_norm.weight"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "protocol": "production_holdout_v1",
+  "status": "BASELINE_ONLY",
+  "warning": "This is a representation-consistency baseline, not an unseen-prompt generalization test.",
+  "dimensions": {
+    "parameter": 5070,
+    "transition": 1136,
+    "geometry": 318,
+    "phase": 557
+  },
+  "cross_representation_cosine": {
+    "parameter__transition": 0.11696860809104453,
+    "parameter__geometry": 0.11946295365809131,
+    "parameter__phase": 0.11652033657523618,
+    "transition__geometry": 0.057168937486107706,
+    "transition__phase": 0.059983987570330834,
+    "geometry__phase": 0.2741900024413696
+  }
+}

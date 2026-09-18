@@ -1,0 +1,46 @@
+{
+  "schema": "openmind.maf_f32_roundtrip.v1",
+  "source": "/data/data/com.termux/files/home/qwen2.5-coder-q8_0.gguf",
+  "source_sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+  "inventory_file_sha256": "7acf6d5dc672182aee0244b1bb85a47466f33dbdcdf10bde863e24f3659240ee",
+  "pilot_manifest_file_sha256": "690ec47152646907eed1ca873ff9cf86352777e79b116a6c2d63186e33f859d0",
+  "target_count": 2,
+  "total_payload_bytes": 12288,
+  "transformation": "opaque byte-preserving object",
+  "numeric_decode": false,
+  "results": [
+    {
+      "name": "output_norm.weight",
+      "type": "F32",
+      "dims": [
+        1536
+      ],
+      "span_bytes": 6144,
+      "file_start": 1894526016,
+      "offset": 1888575488,
+      "manifest_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "source_slice_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "reconstructed_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "byte_equal": true,
+      "hash_equal": true,
+      "pass": true
+    },
+    {
+      "name": "blk.0.attn_norm.weight",
+      "type": "F32",
+      "dims": [
+        1536
+      ],
+      "span_bytes": 6144,
+      "file_start": 501869632,
+      "offset": 495919104,
+      "manifest_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "source_slice_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "reconstructed_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "byte_equal": true,
+      "hash_equal": true,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

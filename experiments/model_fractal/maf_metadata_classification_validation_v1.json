@@ -1,0 +1,7746 @@
+{
+  "classifications": [
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "output",
+      "dims": [
+        1536,
+        151936
+      ],
+      "elements": 233373696,
+      "layer_index": null,
+      "name": "output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "output_projection",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "token_embd",
+      "dims": [
+        1536,
+        151936
+      ],
+      "elements": 233373696,
+      "layer_index": null,
+      "name": "token_embd.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "embedding",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 0,
+      "name": "blk.0.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 0,
+      "name": "blk.0.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 0,
+      "name": "blk.0.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 0,
+      "name": "blk.0.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 0,
+      "name": "blk.0.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 0,
+      "name": "blk.0.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 0,
+      "name": "blk.0.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 0,
+      "name": "blk.0.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 0,
+      "name": "blk.0.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 0,
+      "name": "blk.0.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 0,
+      "name": "blk.0.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 0,
+      "name": "blk.0.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 1,
+      "name": "blk.1.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 1,
+      "name": "blk.1.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 1,
+      "name": "blk.1.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 1,
+      "name": "blk.1.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 1,
+      "name": "blk.1.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 1,
+      "name": "blk.1.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 1,
+      "name": "blk.1.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 1,
+      "name": "blk.1.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 1,
+      "name": "blk.1.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 1,
+      "name": "blk.1.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 1,
+      "name": "blk.1.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 1,
+      "name": "blk.1.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 10,
+      "name": "blk.10.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 10,
+      "name": "blk.10.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 10,
+      "name": "blk.10.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 10,
+      "name": "blk.10.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 10,
+      "name": "blk.10.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 10,
+      "name": "blk.10.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 10,
+      "name": "blk.10.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 10,
+      "name": "blk.10.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 10,
+      "name": "blk.10.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 10,
+      "name": "blk.10.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 10,
+      "name": "blk.10.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 10,
+      "name": "blk.10.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 11,
+      "name": "blk.11.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 11,
+      "name": "blk.11.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 11,
+      "name": "blk.11.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 11,
+      "name": "blk.11.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 11,
+      "name": "blk.11.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 11,
+      "name": "blk.11.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 11,
+      "name": "blk.11.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 11,
+      "name": "blk.11.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 11,
+      "name": "blk.11.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 11,
+      "name": "blk.11.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 11,
+      "name": "blk.11.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 11,
+      "name": "blk.11.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 12,
+      "name": "blk.12.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 12,
+      "name": "blk.12.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 12,
+      "name": "blk.12.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 12,
+      "name": "blk.12.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 12,
+      "name": "blk.12.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 12,
+      "name": "blk.12.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 12,
+      "name": "blk.12.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 12,
+      "name": "blk.12.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 12,
+      "name": "blk.12.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 12,
+      "name": "blk.12.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 12,
+      "name": "blk.12.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 12,
+      "name": "blk.12.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 13,
+      "name": "blk.13.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 13,
+      "name": "blk.13.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 13,
+      "name": "blk.13.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 13,
+      "name": "blk.13.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 13,
+      "name": "blk.13.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 13,
+      "name": "blk.13.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 13,
+      "name": "blk.13.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 13,
+      "name": "blk.13.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 13,
+      "name": "blk.13.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 13,
+      "name": "blk.13.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 13,
+      "name": "blk.13.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 13,
+      "name": "blk.13.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 14,
+      "name": "blk.14.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 14,
+      "name": "blk.14.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 14,
+      "name": "blk.14.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 14,
+      "name": "blk.14.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 14,
+      "name": "blk.14.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 14,
+      "name": "blk.14.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 14,
+      "name": "blk.14.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 14,
+      "name": "blk.14.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 14,
+      "name": "blk.14.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 14,
+      "name": "blk.14.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 14,
+      "name": "blk.14.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 14,
+      "name": "blk.14.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 15,
+      "name": "blk.15.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 15,
+      "name": "blk.15.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 15,
+      "name": "blk.15.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 15,
+      "name": "blk.15.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 15,
+      "name": "blk.15.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 15,
+      "name": "blk.15.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 15,
+      "name": "blk.15.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 15,
+      "name": "blk.15.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 15,
+      "name": "blk.15.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 15,
+      "name": "blk.15.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 15,
+      "name": "blk.15.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 15,
+      "name": "blk.15.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 16,
+      "name": "blk.16.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 16,
+      "name": "blk.16.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 16,
+      "name": "blk.16.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 16,
+      "name": "blk.16.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 16,
+      "name": "blk.16.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 16,
+      "name": "blk.16.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 16,
+      "name": "blk.16.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 16,
+      "name": "blk.16.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 16,
+      "name": "blk.16.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 16,
+      "name": "blk.16.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 16,
+      "name": "blk.16.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 16,
+      "name": "blk.16.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 17,
+      "name": "blk.17.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 17,
+      "name": "blk.17.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 17,
+      "name": "blk.17.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 17,
+      "name": "blk.17.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 17,
+      "name": "blk.17.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 17,
+      "name": "blk.17.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 17,
+      "name": "blk.17.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 17,
+      "name": "blk.17.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 17,
+      "name": "blk.17.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 17,
+      "name": "blk.17.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 17,
+      "name": "blk.17.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 17,
+      "name": "blk.17.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 18,
+      "name": "blk.18.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 18,
+      "name": "blk.18.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 18,
+      "name": "blk.18.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 18,
+      "name": "blk.18.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 18,
+      "name": "blk.18.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 18,
+      "name": "blk.18.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 18,
+      "name": "blk.18.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 18,
+      "name": "blk.18.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 18,
+      "name": "blk.18.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 18,
+      "name": "blk.18.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 18,
+      "name": "blk.18.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 18,
+      "name": "blk.18.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 19,
+      "name": "blk.19.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 19,
+      "name": "blk.19.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 19,
+      "name": "blk.19.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 19,
+      "name": "blk.19.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 19,
+      "name": "blk.19.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 19,
+      "name": "blk.19.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 19,
+      "name": "blk.19.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 19,
+      "name": "blk.19.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 19,
+      "name": "blk.19.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 19,
+      "name": "blk.19.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 19,
+      "name": "blk.19.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 19,
+      "name": "blk.19.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 2,
+      "name": "blk.2.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 2,
+      "name": "blk.2.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 2,
+      "name": "blk.2.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 2,
+      "name": "blk.2.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 2,
+      "name": "blk.2.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 2,
+      "name": "blk.2.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 2,
+      "name": "blk.2.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 2,
+      "name": "blk.2.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 2,
+      "name": "blk.2.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 2,
+      "name": "blk.2.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 2,
+      "name": "blk.2.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 2,
+      "name": "blk.2.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 20,
+      "name": "blk.20.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 20,
+      "name": "blk.20.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 20,
+      "name": "blk.20.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 20,
+      "name": "blk.20.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 20,
+      "name": "blk.20.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 20,
+      "name": "blk.20.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 20,
+      "name": "blk.20.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 20,
+      "name": "blk.20.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 20,
+      "name": "blk.20.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 20,
+      "name": "blk.20.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 20,
+      "name": "blk.20.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 20,
+      "name": "blk.20.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 21,
+      "name": "blk.21.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 21,
+      "name": "blk.21.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 21,
+      "name": "blk.21.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 21,
+      "name": "blk.21.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 21,
+      "name": "blk.21.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 21,
+      "name": "blk.21.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 21,
+      "name": "blk.21.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 21,
+      "name": "blk.21.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 21,
+      "name": "blk.21.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 21,
+      "name": "blk.21.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 21,
+      "name": "blk.21.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 21,
+      "name": "blk.21.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 22,
+      "name": "blk.22.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 22,
+      "name": "blk.22.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 22,
+      "name": "blk.22.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 22,
+      "name": "blk.22.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 22,
+      "name": "blk.22.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 22,
+      "name": "blk.22.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 22,
+      "name": "blk.22.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 22,
+      "name": "blk.22.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 22,
+      "name": "blk.22.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 22,
+      "name": "blk.22.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 22,
+      "name": "blk.22.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 22,
+      "name": "blk.22.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 23,
+      "name": "blk.23.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 23,
+      "name": "blk.23.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 23,
+      "name": "blk.23.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 23,
+      "name": "blk.23.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 23,
+      "name": "blk.23.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 23,
+      "name": "blk.23.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 23,
+      "name": "blk.23.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 23,
+      "name": "blk.23.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 23,
+      "name": "blk.23.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 23,
+      "name": "blk.23.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 23,
+      "name": "blk.23.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 23,
+      "name": "blk.23.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 24,
+      "name": "blk.24.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 24,
+      "name": "blk.24.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 24,
+      "name": "blk.24.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 24,
+      "name": "blk.24.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 24,
+      "name": "blk.24.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 24,
+      "name": "blk.24.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 24,
+      "name": "blk.24.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 24,
+      "name": "blk.24.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 24,
+      "name": "blk.24.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 24,
+      "name": "blk.24.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 24,
+      "name": "blk.24.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 24,
+      "name": "blk.24.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 25,
+      "name": "blk.25.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 25,
+      "name": "blk.25.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 25,
+      "name": "blk.25.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 25,
+      "name": "blk.25.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 25,
+      "name": "blk.25.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 25,
+      "name": "blk.25.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 25,
+      "name": "blk.25.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 25,
+      "name": "blk.25.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 25,
+      "name": "blk.25.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 25,
+      "name": "blk.25.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 25,
+      "name": "blk.25.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 25,
+      "name": "blk.25.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 26,
+      "name": "blk.26.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 26,
+      "name": "blk.26.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 26,
+      "name": "blk.26.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 26,
+      "name": "blk.26.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 26,
+      "name": "blk.26.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 26,
+      "name": "blk.26.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 26,
+      "name": "blk.26.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 26,
+      "name": "blk.26.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 26,
+      "name": "blk.26.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 26,
+      "name": "blk.26.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 26,
+      "name": "blk.26.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 26,
+      "name": "blk.26.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 27,
+      "name": "blk.27.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 27,
+      "name": "blk.27.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 27,
+      "name": "blk.27.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 27,
+      "name": "blk.27.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 27,
+      "name": "blk.27.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 27,
+      "name": "blk.27.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 27,
+      "name": "blk.27.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 27,
+      "name": "blk.27.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 27,
+      "name": "blk.27.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 27,
+      "name": "blk.27.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 27,
+      "name": "blk.27.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 27,
+      "name": "blk.27.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 3,
+      "name": "blk.3.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 3,
+      "name": "blk.3.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 3,
+      "name": "blk.3.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 3,
+      "name": "blk.3.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 3,
+      "name": "blk.3.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 3,
+      "name": "blk.3.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 3,
+      "name": "blk.3.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 3,
+      "name": "blk.3.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 3,
+      "name": "blk.3.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 3,
+      "name": "blk.3.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 3,
+      "name": "blk.3.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 3,
+      "name": "blk.3.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 4,
+      "name": "blk.4.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 4,
+      "name": "blk.4.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 4,
+      "name": "blk.4.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 4,
+      "name": "blk.4.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 4,
+      "name": "blk.4.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 4,
+      "name": "blk.4.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 4,
+      "name": "blk.4.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 4,
+      "name": "blk.4.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 4,
+      "name": "blk.4.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 4,
+      "name": "blk.4.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 4,
+      "name": "blk.4.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 4,
+      "name": "blk.4.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 5,
+      "name": "blk.5.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 5,
+      "name": "blk.5.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 5,
+      "name": "blk.5.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 5,
+      "name": "blk.5.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 5,
+      "name": "blk.5.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 5,
+      "name": "blk.5.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 5,
+      "name": "blk.5.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 5,
+      "name": "blk.5.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 5,
+      "name": "blk.5.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 5,
+      "name": "blk.5.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 5,
+      "name": "blk.5.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 5,
+      "name": "blk.5.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 6,
+      "name": "blk.6.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 6,
+      "name": "blk.6.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 6,
+      "name": "blk.6.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 6,
+      "name": "blk.6.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 6,
+      "name": "blk.6.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 6,
+      "name": "blk.6.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 6,
+      "name": "blk.6.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 6,
+      "name": "blk.6.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 6,
+      "name": "blk.6.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 6,
+      "name": "blk.6.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 6,
+      "name": "blk.6.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 6,
+      "name": "blk.6.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 7,
+      "name": "blk.7.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 7,
+      "name": "blk.7.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 7,
+      "name": "blk.7.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 7,
+      "name": "blk.7.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 7,
+      "name": "blk.7.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 7,
+      "name": "blk.7.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 7,
+      "name": "blk.7.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 7,
+      "name": "blk.7.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 7,
+      "name": "blk.7.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 7,
+      "name": "blk.7.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 7,
+      "name": "blk.7.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 7,
+      "name": "blk.7.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 8,
+      "name": "blk.8.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 8,
+      "name": "blk.8.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 8,
+      "name": "blk.8.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 8,
+      "name": "blk.8.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 8,
+      "name": "blk.8.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 8,
+      "name": "blk.8.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 8,
+      "name": "blk.8.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 8,
+      "name": "blk.8.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 8,
+      "name": "blk.8.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 8,
+      "name": "blk.8.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 8,
+      "name": "blk.8.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 8,
+      "name": "blk.8.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 9,
+      "name": "blk.9.attn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_down.weight",
+      "dims": [
+        8960,
+        1536
+      ],
+      "elements": 13762560,
+      "layer_index": 9,
+      "name": "blk.9.ffn_down.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_down_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_gate.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 9,
+      "name": "blk.9.ffn_gate.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_gate_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_up.weight",
+      "dims": [
+        1536,
+        8960
+      ],
+      "elements": 13762560,
+      "layer_index": 9,
+      "name": "blk.9.ffn_up.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "ffn_up_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "ffn_norm.weight",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 9,
+      "name": "blk.9.ffn_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 9,
+      "name": "blk.9.attn_k.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_k.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 9,
+      "name": "blk.9.attn_k.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_key_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_output.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 9,
+      "name": "blk.9.attn_output.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_output_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.bias",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": 9,
+      "name": "blk.9.attn_q.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_q.weight",
+      "dims": [
+        1536,
+        1536
+      ],
+      "elements": 2359296,
+      "layer_index": 9,
+      "name": "blk.9.attn_q.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_query_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.bias",
+      "dims": [
+        256
+      ],
+      "elements": 256,
+      "layer_index": 9,
+      "name": "blk.9.attn_v.bias",
+      "parameter_kind": "bias",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_bias",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "attn_v.weight",
+      "dims": [
+        1536,
+        256
+      ],
+      "elements": 393216,
+      "layer_index": 9,
+      "name": "blk.9.attn_v.weight",
+      "parameter_kind": "weight",
+      "rank": 2,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "attention_value_weight",
+      "structural_class": "unknown",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "classification_basis": [
+        "name",
+        "type",
+        "dims",
+        "elements"
+      ],
+      "component": "output_norm",
+      "dims": [
+        1536
+      ],
+      "elements": 1536,
+      "layer_index": null,
+      "name": "output_norm.weight",
+      "parameter_kind": "weight",
+      "rank": 1,
+      "runtime_class": "unknown",
+      "schema": "openmind.maf_metadata_classification.v1",
+      "semantic_class": "normalization",
+      "structural_class": "unknown",
+      "tensor_type": "F32"
+    }
+  ],
+  "counts": {
+    "parameter_kind": {
+      "bias": 84,
+      "weight": 255
+    },
+    "rank": {
+      "1": 141,
+      "2": 198
+    },
+    "runtime_class": {
+      "unknown": 339
+    },
+    "semantic_class": {
+      "attention_key_bias": 28,
+      "attention_key_weight": 28,
+      "attention_output_weight": 28,
+      "attention_query_bias": 28,
+      "attention_query_weight": 28,
+      "attention_value_bias": 28,
+      "attention_value_weight": 28,
+      "embedding": 1,
+      "ffn_down_weight": 28,
+      "ffn_gate_weight": 28,
+      "ffn_up_weight": 28,
+      "normalization": 57,
+      "output_projection": 1
+    },
+    "structural_class": {
+      "unknown": 339
+    },
+    "tensor_type": {
+      "F32": 141,
+      "Q8_0": 198
+    }
+  },
+  "frozen_inputs": {
+    "engine": {
+      "path": "maf_metadata_classification_v1.py",
+      "sha256": "7ed816edd955b3df4d7b029a879f95c5318dfea3724e32fc847d3b663299f78a"
+    },
+    "inventory": {
+      "path": "gguf_tensor_inventory_v1.json",
+      "sha256": "7acf6d5dc672182aee0244b1bb85a47466f33dbdcdf10bde863e24f3659240ee"
+    },
+    "protocol": {
+      "path": "MAF_METADATA_CLASSIFICATION_V1_PROTOCOL.md",
+      "sha256": "4630cad87dd852c6597ed695b18b90eb747c7fb9ed043c4cd55ceef8337f1c96"
+    }
+  },
+  "schema": "openmind.maf_metadata_classification_validation.v1",
+  "summary": {
+    "all_pass": true,
+    "all_semantically_classified": true,
+    "gguf_payload_accessed": false,
+    "identity_fields_present": false,
+    "input_order_independent": true,
+    "input_record_count": 339,
+    "output_record_count": 339,
+    "physical_metadata_independent": true,
+    "repeated_generation_equal": true,
+    "repeated_mapping_equal": true,
+    "runtime_all_unknown": true,
+    "schema_all_valid": true,
+    "semantic_unknown_count": 0,
+    "structural_all_unknown": true,
+    "unique_output_names": 339
+  },
+  "validation_scope": {
+    "gguf_model_opened": false,
+    "identity_generation_performed": false,
+    "inventory_tensor_count": 339,
+    "logical_input_fields": [
+      "name",
+      "type",
+      "dims",
+      "elements"
+    ],
+    "payload_bytes_read": false,
+    "physical_control_fields": [
+      "file_start",
+      "offset",
+      "payload_sha256",
+      "span_bytes",
+      "validation"
+    ]
+  }
+}

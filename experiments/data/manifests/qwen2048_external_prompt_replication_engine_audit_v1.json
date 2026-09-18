@@ -1,0 +1,126 @@
+{
+  "engine": {
+    "path": "experiments/model_fractal/qwen2048_external_prompt_replication_v1.py",
+    "sha256": "25f59309ea2e45aac332e884636721f8b60536b3409a62fbabefe9c608a98213"
+  },
+  "frozen_inputs": {
+    "canonical_corpus_sha256": "d51422d9c89da5a469e328297362faa23887e03a9c7dd56e19e00260c7a5835d",
+    "canonical_manifest_sha256": "e955ab3eef83addf977294fcbecae34c9412c49bf695196bc92694e13b643431",
+    "gap_engine_sha256": "74b0c20bef7ff6dcc8ca15fe7250cc9f453192e182c6f05d58e08b09264d11d1",
+    "lopo_engine_sha256": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7",
+    "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "repair_history": [
+    {
+      "engine_sha256": "007855bbc919c7022e672c5f3a25d6328e66718b646695d01a9b9375859f6950",
+      "failure": "synthetic fixture used 32 dimensions instead of frozen 2048-dimensional geometry",
+      "real_replication_data_loaded": false,
+      "repair": "synthetic fixture dimension changed from literal 32 to DIMENSIONS",
+      "stderr_sha256": "fb17119dcfb47e8763ae2aff6f5a14e59d1e8f54f5a20398c24ee5454e284e06"
+    },
+    {
+      "engine_sha256": "97d65b3439f5ec0acd8d940a317e90f055afbd0a7f517e1639f4436547d134ed",
+      "failure": "synthetic local loop variable gap shadowed the imported gap module",
+      "real_replication_data_loaded": false,
+      "repair": "synthetic loop variable renamed from gap to gap_id",
+      "stderr_sha256": "8605a283cc09183d50f6fe1e1c014c2e8f6dadb5a0e1c8e737e6f7d92f4dd23e"
+    }
+  ],
+  "schema": "openmind.qwen2048_external_prompt_replication.engine_audit.v1",
+  "scientific_boundary": {
+    "Forest_optimization_performed": false,
+    "canonical_corpus_modified": false,
+    "engine_execution_mode": "SYNTHETIC_ONLY",
+    "real_replication_analysis_executed": false,
+    "real_replication_corpus_loaded_by_engine": false,
+    "reference_topology_retrained": false,
+    "replication_endpoint_observed": false,
+    "result_unlock_condition": "engine source and audit must be Git-frozen before real execution"
+  },
+  "static_scope_audit": {
+    "all_gap_store_lines": [
+      618
+    ],
+    "holm_call_lines": [
+      801
+    ],
+    "legitimate_gap_module_binding_lines": [
+      618
+    ],
+    "status": "PASS",
+    "unexpected_gap_store_lines": []
+  },
+  "status": "ENGINE_AUDIT_PASS",
+  "study": "prospective_external_prompt_replication",
+  "synthetic_audit": {
+    "result": {
+      "delta_algebra": {
+        "comparisons": 17,
+        "max_abs_diff": 1.3877787807814457e-17,
+        "status": "PASS"
+      },
+      "deterministic_gap_baseline": {
+        "max_abs_diff": 0.0,
+        "status": "PASS"
+      },
+      "exact_gap_randomization": {
+        "draws_checked": 256,
+        "status": "PASS"
+      },
+      "gap_counts": {
+        "1": 19,
+        "2": 13,
+        "3": 8,
+        "4": 7,
+        "5": 2,
+        "6": 1
+      },
+      "gap_engine_sha256": "74b0c20bef7ff6dcc8ca15fe7250cc9f453192e182c6f05d58e08b09264d11d1",
+      "holm_bonferroni": {
+        "max_abs_diff": 0.0,
+        "status": "PASS"
+      },
+      "lopo_engine_sha256": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7",
+      "mode": "SYNTHETIC_ONLY",
+      "pair_count": 630,
+      "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0",
+      "real_replication_corpus_loaded": false,
+      "replication_endpoint_calculated": false,
+      "schema": "openmind.qwen2048_external_prompt_replication.engine_selftest.v1",
+      "scientific_boundary": [
+        "Synthetic vectors only.",
+        "Frozen predecessor engines were imported by exact SHA256 contract.",
+        "The canonical replication corpus was not loaded.",
+        "No R01-R08 recurrence statistic was calculated.",
+        "No prospective primary endpoint was calculated."
+      ],
+      "selected_pair_count": 50,
+      "selection_sha256": "945c826494a62c20ba52a8f4ae1b0133a3d8686f0a7fc23dc336666863992e7a",
+      "status": "SELFTEST_PASS"
+    },
+    "result_path": "results/runtime/qwen2048_external_replication_engine_selftest_v1.json",
+    "result_sha256": "a9f95a24ab822df8447b1985335358dfa613fb3c6f56eb0ca8df3f55594d521c",
+    "stderr_path": "results/runtime/qwen2048_external_replication_engine_selftest_v1.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verified_contracts": {
+    "canonical_pair_count": 630,
+    "exact_gap_profile": {
+      "1": 19,
+      "2": 13,
+      "3": 8,
+      "4": 7,
+      "5": 2,
+      "6": 1
+    },
+    "global_draws": 10000,
+    "global_seed": 37331,
+    "holm_bonferroni": true,
+    "per_prompt_draws": 10000,
+    "per_prompt_seed_base": 27331,
+    "reference_pair_count": 50,
+    "reference_selection_sha256": "945c826494a62c20ba52a8f4ae1b0133a3d8686f0a7fc23dc336666863992e7a",
+    "token_index_zero_excluded": true,
+    "topology_retraining": false
+  }
+}

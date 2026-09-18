@@ -1,0 +1,57 @@
+{
+  "artifact": {
+    "binary": {
+      "bytes": 8344,
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1.bin",
+      "sha256": "da2110ec8a8bac2a0e9533192aca2f601e0b5a311d03983f90ae46e41dc4e902"
+    },
+    "geometry": {
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1_geometry.json",
+      "sha256": "d9e68155244708a1c0e8c24b05031b287feac8a5c841a7c0f6e2c7f7cd1e9038"
+    },
+    "manifest": {
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1_manifest.json",
+      "sha256": "65a7745eaed0d5773539efe351c6a191af963126f4278f0afd695fd06a95c70e"
+    },
+    "report": {
+      "path": "results/forest_qwen25_3b_v1/forest_qwen25_3b_v1.txt",
+      "sha256": "08c19408a30d9feecdfa0bb6f0b16e2c5134c29b65ff8c642dca08308c4e6424"
+    }
+  },
+  "contemporaneous_evidence": {
+    "binary_sha_recorded": true,
+    "manifest_sha_recorded": true,
+    "path": "results/runtime/v3_final_stop_audit.txt",
+    "sha256": "e188f4e1416333120f41a0f816454ec38374bc94a1ff6d21c37e743200aa5d7e"
+  },
+  "provenance_gap": {
+    "OMFRST01_writer_available_in_current_tree": false,
+    "artifact_regenerated": false,
+    "missing_writer_reconstructed": false,
+    "original_creation_commit_available": false,
+    "writer_source_available_in_git": false
+  },
+  "schema": "openmind.forest.qwen25_3b.provenance_gap.v1",
+  "scientific_boundary": {
+    "Forest_inference_modified": false,
+    "V9A_2048_created": false,
+    "existing_artifact_bytes_preserved": true,
+    "geometry_retrained": false,
+    "model_executed": false
+  },
+  "status": "FROZEN_WITH_PROVENANCE_GAP",
+  "verified_layout": {
+    "centroid_present": false,
+    "dimension_map_bytes": 8192,
+    "dimension_map_matches_geometry_json": true,
+    "embedding_dimension": 2048,
+    "group_count": 32,
+    "group_size": 64,
+    "header_bytes": 24,
+    "magic": "OMFRST01",
+    "per_layer_rankings_present": false,
+    "priority_bytes": 128,
+    "priority_matches_geometry_json": true,
+    "version": 1
+  }
+}

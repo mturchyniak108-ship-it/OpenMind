@@ -1,0 +1,23 @@
+ FULL CROSS-LAYER RECURRENCE SCAN
+============================================================
+
+Top 20 non-adjacent layer similarities:
+19 <-> 21 | cosine=0.970523527 | distance=18.088971
+24 <-> 26 | cosine=0.967025570 | distance=22.143973
+22 <-> 24 | cosine=0.966700367 | distance=20.826847
+20 <-> 22 | cosine=0.964351226 | distance=19.851908
+32 <-> 34 | cosine=0.962409199 | distance=121.563704
+31 <-> 33 | cosine=0.962171508 | distance=113.528794
+18 <-> 20 | cosine=0.961872944 | distance=18.996223
+21 <-> 23 | cosine=0.961105553 | distance=20.722617
+25 <-> 27 | cosine=0.960674716 | distance=29.418271
+23 <-> 25 | cosine=0.960331262 | distance=25.930241
+28 <-> 30 | cosine=0.958710306 | distance=46.481269
+17 <-> 19 | cosine=0.958304899 | distance=22.038612
+33 <-> 35 | cosine=0.957023716 | distance=144.024319
+21 <-> 24 | cosine=0.955905319 | distance=23.635522
+19 <-> 22 | cosine=0.953525194 | distance=22.550124
+27 <-> 29 | cosine=0.953521589 | distance=44.987860
+22 <-> 25 | cosine=0.953503444 | distance=26.455893
+17 <-> 20 | cosine=0.951947011 | distance=20.963476
+18 <-> 21 | cosine=0.951539638 | distance=24.662141

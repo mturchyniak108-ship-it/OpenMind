@@ -1,0 +1,128 @@
+{
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v6/forest_topology_v6.txt",
+      "sha256": "25abcdb4d72dc9476cd6d05674d30301a00d79ad865d6549a596eb5f7c7fc54f"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v6.py",
+      "sha256": "c34108f00632a7167402e67c067e3a7ffe76b7ff98bbe2e44f4a9ec744fb27ee"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v6/forest_topology_v6.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "cross_fold": {
+    "0.125": {
+      "bytes_per_item": 204,
+      "fold_wins": "4/4",
+      "orange_cosine": 0.63924899,
+      "orange_pine_energy": 1.19631795,
+      "orange_relative_l2": 0.74643603,
+      "pine_cosine": 0.58052199,
+      "pine_relative_l2": 0.79452186,
+      "router_oracle": 0.939524791
+    },
+    "0.250": {
+      "bytes_per_item": 408,
+      "fold_wins": "4/4",
+      "orange_cosine": 0.73306936,
+      "orange_pine_energy": 1.118091729,
+      "orange_relative_l2": 0.6622363,
+      "pine_cosine": 0.69137738,
+      "pine_relative_l2": 0.70587097,
+      "router_oracle": 0.923355515
+    },
+    "0.500": {
+      "bytes_per_item": 816,
+      "fold_wins": "4/4",
+      "orange_cosine": 0.86441774,
+      "orange_pine_energy": 1.096753822,
+      "orange_relative_l2": 0.49058277,
+      "pine_cosine": 0.824572,
+      "pine_relative_l2": 0.55351568,
+      "router_oracle": 0.958908104
+    },
+    "0.750": {
+      "bytes_per_item": 1224,
+      "fold_wins": "4/4",
+      "orange_cosine": 0.9464611,
+      "orange_pine_energy": 1.057863222,
+      "orange_relative_l2": 0.31552483,
+      "pine_cosine": 0.91998119,
+      "pine_relative_l2": 0.38381984,
+      "router_oracle": 0.979342092
+    }
+  },
+  "decision": {
+    "fold_requirement": "Orange wins at least 3/4 folds",
+    "observed": "4/4 at every tested access fraction",
+    "result": "quantized_non_oracle_orange_passes"
+  },
+  "experiment": {
+    "dimensions": 1536,
+    "group_size": 64,
+    "groups": 24,
+    "held_out_unit": "complete token ID",
+    "layers": 28,
+    "name": "Forest Topology V6",
+    "purpose": "Test whether the held-out non-oracle Orange routing advantage survives equal BLOCK_INT8_64 terminal quantization.",
+    "tokens": 13,
+    "vectors": 364
+  },
+  "limitations": [
+    "V6 evaluates quantized terminal residuals rather than a fully serialized Forest representation.",
+    "Root centroids, shared hierarchy storage, production headers, alignment, and indexes are not included in the terminal storage totals.",
+    "No filesystem, mmap, page-cache, or wall-clock retrieval measurements are performed.",
+    "Orange Oracle remains only as an upper-bound control."
+  ],
+  "metadata": {
+    "orange_fixed_metadata_bytes": 5760,
+    "orange_group_map_bytes": 3072,
+    "orange_router_bytes": 2688
+  },
+  "modeled_terminal_storage": {
+    "boundary": "These are terminal-residual payload measurements. They are not complete serialized Forest storage.",
+    "flat_fp32_bytes": 2236416,
+    "orange_quantized_payload_bytes": 594048,
+    "orange_ratio_vs_flat_fp32": 0.268200549,
+    "orange_total_with_topology_metadata": 599808,
+    "pine_quantized_payload_bytes": 594048,
+    "pine_ratio_vs_flat_fp32": 0.265625
+  },
+  "next_gate": {
+    "experiment": "Forest Topology V7",
+    "purpose": "Serialize equivalent Pine and Orange representations and benchmark actual indexed partial reads.",
+    "requirements": [
+      "real binary serialization",
+      "explicit format headers",
+      "offset/index tables",
+      "Orange dimension map",
+      "Orange router metadata",
+      "actual file byte sizes",
+      "cold or controlled-cache partial reads",
+      "warm indexed partial reads",
+      "bytes physically requested/read",
+      "wall-clock lookup latency",
+      "decoded reconstruction fidelity",
+      "Pine and Orange equal numerical quantization"
+    ]
+  },
+  "quantization": {
+    "bytes_per_block": 68,
+    "quantized_values_per_block": 64,
+    "same_quantizer_for_pine_and_orange": true,
+    "scale_bytes_per_block": 4,
+    "scheme": "BLOCK_INT8_64"
+  },
+  "schema": "openmind.forest_topology.v6",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "Orange's non-oracle partial-access advantage survives BLOCK_INT8_64 quantization.",
+    "Orange captures more held-out residual energy than contiguous Pine at every tested access fraction and in every fold.",
+    "Orange also improves mean cosine and relative-L2 against Pine at every tested access fraction.",
+    "The Orange advantage is not caused by receiving a larger selected terminal-byte budget.",
+    "Orange topology metadata is small relative to the full quantized terminal payload."
+  ]
+}

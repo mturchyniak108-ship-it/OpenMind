@@ -1,0 +1,97 @@
+{
+  "architecture_interpretation": {
+    "current_direction": "hybrid Forest architecture rather than replacing Lodgepole outright",
+    "lodgepole": "hierarchical shared structure and coarse routing",
+    "orange": "structure-derived non-contiguous terminal organization"
+  },
+  "artifacts": {
+    "result": {
+      "path": "results/forest_topology_v5/forest_topology_v5.txt",
+      "sha256": "d260f14be94875b3164e6636096329733f6ee5db9e91598547615e22a441e86c"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v5.py",
+      "sha256": "05d36984e7fadcb24e75a741fc7c34f0c453e4413f6787a7be274d7c1456140c"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v5/forest_topology_v5.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "cross_fold": {
+    "0.125": {
+      "fold_wins": "4/4",
+      "orange_pine": 1.19623733,
+      "orange_random": 1.204325562,
+      "router_oracle": 0.939549849
+    },
+    "0.250": {
+      "fold_wins": "4/4",
+      "orange_pine": 1.118034356,
+      "orange_random": 1.130692276,
+      "router_oracle": 0.923376577
+    },
+    "0.500": {
+      "fold_wins": "4/4",
+      "orange_pine": 1.096699693,
+      "orange_random": 1.073458244,
+      "router_oracle": 0.958914285
+    },
+    "0.750": {
+      "fold_wins": "4/4",
+      "orange_pine": 1.057789237,
+      "orange_random": 1.037835146,
+      "router_oracle": 0.97934227
+    }
+  },
+  "decision": {
+    "all_fraction_fold_wins": true,
+    "result": "non_oracle_orange_routing_passes"
+  },
+  "experiment": {
+    "fractions": [
+      0.125,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "held_out_unit": "complete token ID",
+    "name": "Forest Topology V5",
+    "purpose": "Test whether Orange correlated wedges can be selected on held-out tokens without inspecting held-out residual energy.",
+    "router": "layer-conditioned mean training wedge energy"
+  },
+  "limitations": [
+    "Routing currently uses layer identity and aggregate training statistics rather than prompt-specific semantic routing.",
+    "V5 does not quantize Orange wedge payloads.",
+    "V5 does not measure serialized index overhead.",
+    "V5 does not benchmark mmap or wall-clock retrieval."
+  ],
+  "next_gate": {
+    "candidate_encoding": "BLOCK_INT8_64",
+    "controls": [
+      "PINE_CONTIGUOUS_BLOCK_INT8_64",
+      "ORANGE_CORRELATED_BLOCK_INT8_64",
+      "ORANGE_ORACLE_BLOCK_INT8_64"
+    ],
+    "experiment": "Forest Topology V6",
+    "question": "Does the non-oracle Orange routing advantage survive quantized wedge storage?",
+    "required_measurements": [
+      "encoded bytes",
+      "routing metadata bytes",
+      "energy captured",
+      "mean cosine",
+      "minimum cosine",
+      "mean relative L2",
+      "maximum relative L2",
+      "router versus oracle retention"
+    ]
+  },
+  "schema": "openmind.forest_topology.v5",
+  "status": "executed_lab_candidate",
+  "supported": [
+    "A layer-conditioned router trained without held-out tokens selects Orange wedges better than equivalent Pine and Random controls.",
+    "Orange wins all four folds at every tested partial-access fraction.",
+    "The non-oracle router retains most of the Orange oracle information-concentration upper bound.",
+    "Orange correlated grouping is therefore usable without direct inspection of held-out residual energy under this experimental protocol."
+  ]
+}

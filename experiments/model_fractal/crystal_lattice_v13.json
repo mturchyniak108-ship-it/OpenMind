@@ -1,0 +1,148 @@
+{
+  "schema": "openmind.crystal_lattice.v13",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "structural_lattice_source": "experiments/model_fractal/structural_lattice_v11.json",
+  "layer_count": 28,
+  "candidate_periods": [
+    4,
+    6,
+    8,
+    11
+  ],
+  "candidates": [
+    {
+      "period": 8,
+      "cell_count": 3,
+      "mean_reconstruction_error": 2.3850904337620698,
+      "mean_cell_similarity": 0.4501662938799623,
+      "mean_translation_length": 3.765519063723179,
+      "translation_std": 0.8829783694253042,
+      "translation_uniformity": 0.8100507998286122,
+      "structural_score": 0.5117056822878868
+    },
+    {
+      "period": 11,
+      "cell_count": 2,
+      "mean_reconstruction_error": 3.947363109597207,
+      "mean_cell_similarity": -0.23596201434609568,
+      "mean_translation_length": 2.89252161647477,
+      "translation_std": 0.0,
+      "translation_uniformity": 1.0,
+      "structural_score": 0.36063836297320506
+    },
+    {
+      "period": 6,
+      "cell_count": 4,
+      "mean_reconstruction_error": 2.799295747981477,
+      "mean_cell_similarity": -0.24660057481687184,
+      "mean_translation_length": 4.9904032658431605,
+      "translation_std": 1.3642533010819136,
+      "translation_uniformity": 0.7853143931990559,
+      "structural_score": 0.3145563203675016
+    },
+    {
+      "period": 4,
+      "cell_count": 6,
+      "mean_reconstruction_error": 1.8850791441715802,
+      "mean_cell_similarity": -0.4305835428670397,
+      "mean_translation_length": 3.711920314584039,
+      "translation_std": 1.8184148048784152,
+      "translation_uniformity": 0.671192655490439,
+      "structural_score": 0.30534107925692017
+    }
+  ],
+  "best_candidate": {
+    "period": 8,
+    "cell_count": 3,
+    "mean_reconstruction_error": 2.3850904337620698,
+    "mean_cell_similarity": 0.4501662938799623,
+    "mean_translation_length": 3.765519063723179,
+    "translation_std": 0.8829783694253042,
+    "translation_uniformity": 0.8100507998286122,
+    "structural_score": 0.5117056822878868
+  },
+  "translation_basis": [
+    {
+      "x": -0.6987794530867664,
+      "y": -2.666765717224629,
+      "z": -0.842085945531954,
+      "length": 2.882540694297875
+    },
+    {
+      "x": 4.600407522277264,
+      "y": -0.34241313812237273,
+      "z": -0.5723043401932169,
+      "length": 4.648497433148483
+    }
+  ],
+  "replication_tests": [
+    {
+      "axis": 0,
+      "copies": 2,
+      "point_count": 18,
+      "mean_nearest_neighbor": 1.2660835893352564,
+      "nearest_neighbor_std": 0.4050602772118158,
+      "nearest_neighbor_uniformity": 0.7576149574430394
+    },
+    {
+      "axis": 0,
+      "copies": 3,
+      "point_count": 27,
+      "mean_nearest_neighbor": 1.261468324044151,
+      "nearest_neighbor_std": 0.39864507316279735,
+      "nearest_neighbor_uniformity": 0.759868769306063
+    },
+    {
+      "axis": 0,
+      "copies": 5,
+      "point_count": 45,
+      "mean_nearest_neighbor": 1.257776111811267,
+      "nearest_neighbor_std": 0.39339862014562366,
+      "nearest_neighbor_uniformity": 0.7617462207168183
+    },
+    {
+      "axis": 0,
+      "copies": 8,
+      "point_count": 72,
+      "mean_nearest_neighbor": 1.2556992424302698,
+      "nearest_neighbor_std": 0.390401164111666,
+      "nearest_neighbor_uniformity": 0.7628327150882578
+    },
+    {
+      "axis": 1,
+      "copies": 2,
+      "point_count": 18,
+      "mean_nearest_neighbor": 1.0584131266842134,
+      "nearest_neighbor_std": 0.5014703713969995,
+      "nearest_neighbor_uniformity": 0.678520625409622
+    },
+    {
+      "axis": 1,
+      "copies": 3,
+      "point_count": 27,
+      "mean_nearest_neighbor": 0.9845743738427607,
+      "nearest_neighbor_std": 0.5037122773163781,
+      "nearest_neighbor_uniformity": 0.661548884467877
+    },
+    {
+      "axis": 1,
+      "copies": 5,
+      "point_count": 45,
+      "mean_nearest_neighbor": 0.9255033715695984,
+      "nearest_neighbor_std": 0.49767234785239667,
+      "nearest_neighbor_uniformity": 0.6503085732417357
+    },
+    {
+      "axis": 1,
+      "copies": 8,
+      "point_count": 72,
+      "mean_nearest_neighbor": 0.8922759327909446,
+      "nearest_neighbor_std": 0.4911300850945088,
+      "nearest_neighbor_uniformity": 0.6449848571244435
+    }
+  ],
+  "interpretation": {
+    "status": "periodic_fractal_candidate",
+    "warning": "A high structural score indicates geometric lattice-like recurrence, not physical crystallinity."
+  }
+}

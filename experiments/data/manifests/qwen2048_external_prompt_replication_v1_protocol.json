@@ -1,0 +1,568 @@
+{
+  "capture_contract": {
+    "capture_all_tokens": true,
+    "exclude_token_index_from_analysis": 0,
+    "expected_dimensions": 2048,
+    "expected_layer_range": [
+      0,
+      35
+    ],
+    "expected_layers": 36,
+    "failed_capture_policy": "repair the capture implementation or mark the replication incomplete; do not replace a prompt after observing data",
+    "model_bytes": 2104932768,
+    "model_path": "/data/data/com.termux/files/home/models/qwen2.5-3b-q4_k_m.gguf",
+    "model_sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+    "prompt_order_may_change": false,
+    "prompt_replacement_allowed": false,
+    "prompt_text_may_change": false
+  },
+  "frozen_predecessor_artifacts": {
+    "canonical": {
+      "path": "experiments/data/manifests/qwen25_3b_multi_prompt_2048_canonical_v1.json",
+      "sha256": "7f7e4d2079f4808fb9492a6fb81271d4a8d740523eb0426523377354dd390cca"
+    },
+    "canonical_corpus": {
+      "path": "results/forest_v9a_2048_corpus/qwen25_3b_multi_prompt_2048.csv",
+      "sha256": "ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8"
+    },
+    "gap_result": {
+      "path": "results/validated/representation_recurrence_v1/qwen2048_lopo_gap_matched_v1_10000.json",
+      "sha256": "4c07c39fcf81b9bce9c2a1cd89c26fc3716860adada445761341f0b3df5dfaff"
+    },
+    "gap_validated": {
+      "path": "experiments/data/manifests/qwen2048_lopo_gap_matched_v1_10000_validated.json",
+      "sha256": "2809745a3c010dbc795a37a7c0f7f9f68b4787eebb5fdd0ff5a06d10e07ed1d2"
+    },
+    "lopo_engine": {
+      "path": "experiments/model_fractal/qwen2048_lopo_recurrence_v1.py",
+      "sha256": "0b30157669e3be64e16c120c6b2da1e7ad9ebd4c24d3e52f59d071ff2b2608e7"
+    },
+    "lopo_validated": {
+      "path": "experiments/data/manifests/qwen2048_lopo_recurrence_v1_1000_validated.json",
+      "sha256": "e1dd113ec313e486bedf92474a7dda5305c48c6db06aac2a8ac83d8a2ca478ff"
+    }
+  },
+  "interpretation": {
+    "if_primary_fails": "The predecessor LOPO and gap-matched results remain valid for their frozen corpus, but prospective external-prompt replication is not established.",
+    "if_primary_passes": "The frozen predecessor-derived topology prospectively generalizes to new prompts beyond generic layer distance.",
+    "secondary_results_cannot_override_primary": true
+  },
+  "per_prompt_statistic": {
+    "base_seed": 27331,
+    "deterministic_gap_baseline": "weighted mean of all held-out prompt layer-pair deltas at each gap using the reference topology's frozen gap counts",
+    "empirical_p": "(exceedances + 1) / 10001",
+    "gap_adjusted_enrichment": "observed minus deterministic gap baseline",
+    "observed": "mean same-token delta over the fixed 50-pair reference topology",
+    "prompt_seed": "27331 + zero-based replication prompt index",
+    "random_draws": 10000,
+    "randomization": "uniformly sample 50 unique layer pairs with exactly the frozen reference gap profile"
+  },
+  "preregistration_boundary": {
+    "capture_root": "results/qwen2048_external_prompt_replication_v1",
+    "new_replication_activations_exist": false,
+    "new_replication_results_inspected": false
+  },
+  "primary_endpoint": {
+    "alternative": "randomized global enrichment >= observed global enrichment",
+    "empirical_p": "(exceedances + 1) / 10001",
+    "global_random_draws": 10000,
+    "global_randomization": "independently draw one exact-gap-matched 50-pair set per replication prompt and average the eight gap-adjusted values",
+    "global_seed": 37331,
+    "observed": "mean gap-adjusted enrichment across all eight prospectively frozen replication prompts",
+    "pass_conditions": {
+      "global_empirical_p": "<= 0.01",
+      "mean_gap_adjusted_enrichment": "> 0"
+    }
+  },
+  "purpose": "Test whether one layer-pair topology learned entirely from the frozen predecessor prompt corpus predicts same-token recurrence on a new prospectively frozen prompt set beyond generic layer-distance effects.",
+  "reference_topology": {
+    "gap_counts": {
+      "1": 19,
+      "2": 13,
+      "3": 8,
+      "4": 7,
+      "5": 2,
+      "6": 1
+    },
+    "may_be_retrained_on_replication_prompts": false,
+    "pair_score": "mean per-prompt same-token delta across all eight frozen predecessor prompts",
+    "pairs": [
+      {
+        "gap": 1,
+        "layer_a": 1,
+        "layer_b": 2,
+        "pair": "L01<->L02",
+        "predecessor_mean_delta": 0.6541981056440982,
+        "rank": 1
+      },
+      {
+        "gap": 1,
+        "layer_a": 5,
+        "layer_b": 6,
+        "pair": "L05<->L06",
+        "predecessor_mean_delta": 0.6396342968860902,
+        "rank": 2
+      },
+      {
+        "gap": 1,
+        "layer_a": 6,
+        "layer_b": 7,
+        "pair": "L06<->L07",
+        "predecessor_mean_delta": 0.6250749454223627,
+        "rank": 3
+      },
+      {
+        "gap": 2,
+        "layer_a": 1,
+        "layer_b": 3,
+        "pair": "L01<->L03",
+        "predecessor_mean_delta": 0.6247699744582859,
+        "rank": 4
+      },
+      {
+        "gap": 1,
+        "layer_a": 4,
+        "layer_b": 5,
+        "pair": "L04<->L05",
+        "predecessor_mean_delta": 0.6226823601324445,
+        "rank": 5
+      },
+      {
+        "gap": 1,
+        "layer_a": 7,
+        "layer_b": 8,
+        "pair": "L07<->L08",
+        "predecessor_mean_delta": 0.6045249517693607,
+        "rank": 6
+      },
+      {
+        "gap": 1,
+        "layer_a": 3,
+        "layer_b": 4,
+        "pair": "L03<->L04",
+        "predecessor_mean_delta": 0.6023080113848915,
+        "rank": 7
+      },
+      {
+        "gap": 3,
+        "layer_a": 1,
+        "layer_b": 4,
+        "pair": "L01<->L04",
+        "predecessor_mean_delta": 0.6015769514446395,
+        "rank": 8
+      },
+      {
+        "gap": 1,
+        "layer_a": 8,
+        "layer_b": 9,
+        "pair": "L08<->L09",
+        "predecessor_mean_delta": 0.5998967637107014,
+        "rank": 9
+      },
+      {
+        "gap": 1,
+        "layer_a": 9,
+        "layer_b": 10,
+        "pair": "L09<->L10",
+        "predecessor_mean_delta": 0.5972457996040847,
+        "rank": 10
+      },
+      {
+        "gap": 2,
+        "layer_a": 4,
+        "layer_b": 6,
+        "pair": "L04<->L06",
+        "predecessor_mean_delta": 0.5972011886200372,
+        "rank": 11
+      },
+      {
+        "gap": 2,
+        "layer_a": 5,
+        "layer_b": 7,
+        "pair": "L05<->L07",
+        "predecessor_mean_delta": 0.5865479562529404,
+        "rank": 12
+      },
+      {
+        "gap": 1,
+        "layer_a": 10,
+        "layer_b": 11,
+        "pair": "L10<->L11",
+        "predecessor_mean_delta": 0.5864004347191397,
+        "rank": 13
+      },
+      {
+        "gap": 1,
+        "layer_a": 2,
+        "layer_b": 3,
+        "pair": "L02<->L03",
+        "predecessor_mean_delta": 0.5817865297295269,
+        "rank": 14
+      },
+      {
+        "gap": 2,
+        "layer_a": 6,
+        "layer_b": 8,
+        "pair": "L06<->L08",
+        "predecessor_mean_delta": 0.5694199034876923,
+        "rank": 15
+      },
+      {
+        "gap": 2,
+        "layer_a": 3,
+        "layer_b": 5,
+        "pair": "L03<->L05",
+        "predecessor_mean_delta": 0.5692942428070438,
+        "rank": 16
+      },
+      {
+        "gap": 4,
+        "layer_a": 1,
+        "layer_b": 5,
+        "pair": "L01<->L05",
+        "predecessor_mean_delta": 0.5623177120567845,
+        "rank": 17
+      },
+      {
+        "gap": 2,
+        "layer_a": 2,
+        "layer_b": 4,
+        "pair": "L02<->L04",
+        "predecessor_mean_delta": 0.559157886837627,
+        "rank": 18
+      },
+      {
+        "gap": 2,
+        "layer_a": 7,
+        "layer_b": 9,
+        "pair": "L07<->L09",
+        "predecessor_mean_delta": 0.556807491767763,
+        "rank": 19
+      },
+      {
+        "gap": 2,
+        "layer_a": 8,
+        "layer_b": 10,
+        "pair": "L08<->L10",
+        "predecessor_mean_delta": 0.5524054476421066,
+        "rank": 20
+      },
+      {
+        "gap": 3,
+        "layer_a": 4,
+        "layer_b": 7,
+        "pair": "L04<->L07",
+        "predecessor_mean_delta": 0.5513226844756915,
+        "rank": 21
+      },
+      {
+        "gap": 3,
+        "layer_a": 3,
+        "layer_b": 6,
+        "pair": "L03<->L06",
+        "predecessor_mean_delta": 0.5485585549287167,
+        "rank": 22
+      },
+      {
+        "gap": 5,
+        "layer_a": 1,
+        "layer_b": 6,
+        "pair": "L01<->L06",
+        "predecessor_mean_delta": 0.5430988708958342,
+        "rank": 23
+      },
+      {
+        "gap": 1,
+        "layer_a": 11,
+        "layer_b": 12,
+        "pair": "L11<->L12",
+        "predecessor_mean_delta": 0.540025762276652,
+        "rank": 24
+      },
+      {
+        "gap": 2,
+        "layer_a": 9,
+        "layer_b": 11,
+        "pair": "L09<->L11",
+        "predecessor_mean_delta": 0.5365455087649267,
+        "rank": 25
+      },
+      {
+        "gap": 3,
+        "layer_a": 5,
+        "layer_b": 8,
+        "pair": "L05<->L08",
+        "predecessor_mean_delta": 0.5348147871808417,
+        "rank": 26
+      },
+      {
+        "gap": 3,
+        "layer_a": 6,
+        "layer_b": 9,
+        "pair": "L06<->L09",
+        "predecessor_mean_delta": 0.5296067108718049,
+        "rank": 27
+      },
+      {
+        "gap": 3,
+        "layer_a": 2,
+        "layer_b": 5,
+        "pair": "L02<->L05",
+        "predecessor_mean_delta": 0.5263503453155166,
+        "rank": 28
+      },
+      {
+        "gap": 3,
+        "layer_a": 7,
+        "layer_b": 10,
+        "pair": "L07<->L10",
+        "predecessor_mean_delta": 0.5193867971238569,
+        "rank": 29
+      },
+      {
+        "gap": 1,
+        "layer_a": 12,
+        "layer_b": 13,
+        "pair": "L12<->L13",
+        "predecessor_mean_delta": 0.5164882332909606,
+        "rank": 30
+      },
+      {
+        "gap": 1,
+        "layer_a": 13,
+        "layer_b": 14,
+        "pair": "L13<->L14",
+        "predecessor_mean_delta": 0.5126346009203755,
+        "rank": 31
+      },
+      {
+        "gap": 4,
+        "layer_a": 4,
+        "layer_b": 8,
+        "pair": "L04<->L08",
+        "predecessor_mean_delta": 0.5104022662707417,
+        "rank": 32
+      },
+      {
+        "gap": 4,
+        "layer_a": 3,
+        "layer_b": 7,
+        "pair": "L03<->L07",
+        "predecessor_mean_delta": 0.5102396543509647,
+        "rank": 33
+      },
+      {
+        "gap": 1,
+        "layer_a": 17,
+        "layer_b": 18,
+        "pair": "L17<->L18",
+        "predecessor_mean_delta": 0.5100619628966269,
+        "rank": 34
+      },
+      {
+        "gap": 1,
+        "layer_a": 15,
+        "layer_b": 16,
+        "pair": "L15<->L16",
+        "predecessor_mean_delta": 0.5082682348197811,
+        "rank": 35
+      },
+      {
+        "gap": 4,
+        "layer_a": 2,
+        "layer_b": 6,
+        "pair": "L02<->L06",
+        "predecessor_mean_delta": 0.506947397789998,
+        "rank": 36
+      },
+      {
+        "gap": 3,
+        "layer_a": 8,
+        "layer_b": 11,
+        "pair": "L08<->L11",
+        "predecessor_mean_delta": 0.5048067533061169,
+        "rank": 37
+      },
+      {
+        "gap": 6,
+        "layer_a": 1,
+        "layer_b": 7,
+        "pair": "L01<->L07",
+        "predecessor_mean_delta": 0.5041933441069177,
+        "rank": 38
+      },
+      {
+        "gap": 1,
+        "layer_a": 14,
+        "layer_b": 15,
+        "pair": "L14<->L15",
+        "predecessor_mean_delta": 0.5035862507969319,
+        "rank": 39
+      },
+      {
+        "gap": 1,
+        "layer_a": 16,
+        "layer_b": 17,
+        "pair": "L16<->L17",
+        "predecessor_mean_delta": 0.503367273917762,
+        "rank": 40
+      },
+      {
+        "gap": 2,
+        "layer_a": 10,
+        "layer_b": 12,
+        "pair": "L10<->L12",
+        "predecessor_mean_delta": 0.503150526472224,
+        "rank": 41
+      },
+      {
+        "gap": 1,
+        "layer_a": 18,
+        "layer_b": 19,
+        "pair": "L18<->L19",
+        "predecessor_mean_delta": 0.5017812808462363,
+        "rank": 42
+      },
+      {
+        "gap": 4,
+        "layer_a": 5,
+        "layer_b": 9,
+        "pair": "L05<->L09",
+        "predecessor_mean_delta": 0.49940565763405187,
+        "rank": 43
+      },
+      {
+        "gap": 4,
+        "layer_a": 6,
+        "layer_b": 10,
+        "pair": "L06<->L10",
+        "predecessor_mean_delta": 0.49758779596531866,
+        "rank": 44
+      },
+      {
+        "gap": 2,
+        "layer_a": 16,
+        "layer_b": 18,
+        "pair": "L16<->L18",
+        "predecessor_mean_delta": 0.49577977898695813,
+        "rank": 45
+      },
+      {
+        "gap": 2,
+        "layer_a": 18,
+        "layer_b": 20,
+        "pair": "L18<->L20",
+        "predecessor_mean_delta": 0.48990289917495344,
+        "rank": 46
+      },
+      {
+        "gap": 1,
+        "layer_a": 19,
+        "layer_b": 20,
+        "pair": "L19<->L20",
+        "predecessor_mean_delta": 0.489761950610096,
+        "rank": 47
+      },
+      {
+        "gap": 2,
+        "layer_a": 11,
+        "layer_b": 13,
+        "pair": "L11<->L13",
+        "predecessor_mean_delta": 0.4872763663858359,
+        "rank": 48
+      },
+      {
+        "gap": 5,
+        "layer_a": 4,
+        "layer_b": 9,
+        "pair": "L04<->L09",
+        "predecessor_mean_delta": 0.4805468646153847,
+        "rank": 49
+      },
+      {
+        "gap": 4,
+        "layer_a": 7,
+        "layer_b": 11,
+        "pair": "L07<->L11",
+        "predecessor_mean_delta": 0.4797472305100373,
+        "rank": 50
+      }
+    ],
+    "selected_pair_count": 50,
+    "selection": "top 50 descending pair score with ascending canonical pair-index tie break",
+    "selection_sha256": "945c826494a62c20ba52a8f4ae1b0133a3d8686f0a7fc23dc336666863992e7a",
+    "training_data": "all eight frozen predecessor prompts only",
+    "training_prompt_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08"
+    ]
+  },
+  "replication_prompt_count": 8,
+  "replication_prompts": [
+    {
+      "domain": "visual-spatial narrative",
+      "prompt": "At dusk, six paper lanterns reflected in a puddle beside the empty train platform.",
+      "prompt_id": "R01"
+    },
+    {
+      "domain": "physical causal reasoning",
+      "prompt": "Explain why a sealed plastic bottle dents when the warm air inside it cools.",
+      "prompt_id": "R02"
+    },
+    {
+      "domain": "software and data reasoning",
+      "prompt": "A database query returns duplicate rows after two tables are joined; identify a likely cause.",
+      "prompt_id": "R03"
+    },
+    {
+      "domain": "formal logic",
+      "prompt": "If no square is a circle and every tile here is square, what follows about these tiles?",
+      "prompt_id": "R04"
+    },
+    {
+      "domain": "temporal auditory narrative",
+      "prompt": "The violinist tuned one string, closed the window, and heard the pitch change slightly.",
+      "prompt_id": "R05"
+    },
+    {
+      "domain": "language and semantics",
+      "prompt": "In the sentence Only Maya borrowed the red umbrella, which word most strongly narrows the claim?",
+      "prompt_id": "R06"
+    },
+    {
+      "domain": "numeric pattern reasoning",
+      "prompt": "A sequence begins 3, 6, 12, 24; state the simplest continuation rule and the next term.",
+      "prompt_id": "R07"
+    },
+    {
+      "domain": "abstract systems reasoning",
+      "prompt": "A short rule repeated many times can create a pattern that becomes difficult to predict.",
+      "prompt_id": "R08"
+    }
+  ],
+  "robustness": {
+    "multiple_testing": "Holm-Bonferroni across the eight replication prompts",
+    "per_prompt_p_values": "report all eight 10000-draw one-sided empirical p-values",
+    "positive_prompt_requirement": "at least 7 of 8 replication prompts have gap-adjusted enrichment > 0",
+    "strong_criterion": "8/8 positive and all eight Holm-adjusted p <= 0.05"
+  },
+  "schema": "openmind.qwen2048_external_prompt_replication.protocol.v1",
+  "scientific_boundaries": [
+    "No replication activation existed when this protocol was frozen.",
+    "No replication prompt may influence the reference topology.",
+    "The reference topology may not be retrained after replication capture.",
+    "The reference topology's exact 50 pairs and gap profile are frozen in this protocol.",
+    "Token index 0 is excluded from all replication statistics.",
+    "No prompt may be replaced because its result is inconvenient.",
+    "No architecture or Forest optimization should use the replication data before the primary replication result is frozen.",
+    "A positive result remains model/checkpoint-specific until a cross-model replication is performed."
+  ],
+  "status": "PREREGISTERED",
+  "study_type": "prospective external-prompt replication"
+}

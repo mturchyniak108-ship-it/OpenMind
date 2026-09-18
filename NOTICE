@@ -1,0 +1,22 @@
+OpenMind
+Copyright 2026 Mitchell Turchyniak
+
+OpenMind original software is licensed under the Apache License, Version 2.0.
+
+See LICENSE for the complete license text.
+
+Third-party components, libraries, models, datasets, and other materials
+remain subject to their respective licenses. Their licenses take precedence
+for those materials and are not relicensed by this project.
+
+OpenMind currently uses open-source foundations including llama.cpp and
+other ecosystem components. Users and redistributors are responsible for
+retaining applicable upstream notices and complying with those licenses.
+
+Experimental research results and original datasets may be separately
+identified as available under Creative Commons Attribution 4.0
+International (CC BY 4.0), unless otherwise stated.
+
+The MAF/fractal experiments are experimental research infrastructure and
+should not be interpreted as a validated replacement for conventional
+LLM inference unless supported by reproducible benchmark evidence.

@@ -1,0 +1,129 @@
+{
+  "schema": "openmind.closed_curve_spectrum.v18",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "sample_count": 256,
+  "arc_length": 43.43708809017613,
+  "period8_frequency": 32,
+  "dominant_frequencies": [
+    {
+      "frequency": 1,
+      "power": 0.36498110679779616
+    },
+    {
+      "frequency": 3,
+      "power": 0.07684406364022944
+    },
+    {
+      "frequency": 2,
+      "power": 0.04161508104403042
+    },
+    {
+      "frequency": 5,
+      "power": 0.004961022276062103
+    },
+    {
+      "frequency": 4,
+      "power": 0.0027512950308779113
+    },
+    {
+      "frequency": 9,
+      "power": 0.0016789477358911998
+    },
+    {
+      "frequency": 6,
+      "power": 0.001308871013115578
+    },
+    {
+      "frequency": 11,
+      "power": 0.0012716077207196497
+    },
+    {
+      "frequency": 8,
+      "power": 0.0007868255663509322
+    },
+    {
+      "frequency": 13,
+      "power": 0.0007093562016036299
+    },
+    {
+      "frequency": 12,
+      "power": 0.0005782378105379781
+    },
+    {
+      "frequency": 10,
+      "power": 0.000464761972164261
+    },
+    {
+      "frequency": 7,
+      "power": 0.00046050743720833564
+    },
+    {
+      "frequency": 14,
+      "power": 0.0004333056195265972
+    },
+    {
+      "frequency": 15,
+      "power": 0.00021371170164834983
+    },
+    {
+      "frequency": 20,
+      "power": 0.00016266020148128496
+    },
+    {
+      "frequency": 22,
+      "power": 0.0001254232383804554
+    },
+    {
+      "frequency": 16,
+      "power": 0.00011802584039450654
+    },
+    {
+      "frequency": 17,
+      "power": 7.813250493717697e-05
+    },
+    {
+      "frequency": 23,
+      "power": 5.802071159131072e-05
+    }
+  ],
+  "period8_harmonics": [
+    {
+      "harmonic": 1,
+      "frequency": 32,
+      "power": 9.16596537817335e-06
+    },
+    {
+      "harmonic": 2,
+      "frequency": 64,
+      "power": 1.0993177138020002e-06
+    },
+    {
+      "harmonic": 3,
+      "frequency": 96,
+      "power": 1.0507697102171013e-07
+    }
+  ],
+  "period8_power": 9.16596537817335e-06,
+  "top10_spectral_concentration": 0.49690817702667706,
+  "spectral_entropy": 1.6087926075527563,
+  "spectral_entropy_ratio": 0.29032956011601513,
+  "axis_period8_power": {
+    "x": 5.733838882500117e-07,
+    "y": 1.8918832390607458e-05,
+    "z": 9.856306582121356e-05
+  },
+  "phase": {
+    "x": 2.0275190510521997,
+    "y": 1.1278668482338237,
+    "z": 2.4912519100685846,
+    "coherence": 0.7106807040951313
+  },
+  "null_model": {
+    "trials": 200,
+    "mean": 0.008240780855713906,
+    "std": 0.006642850679056261,
+    "z_score": -1.2391690387213676
+  },
+  "classification": "NO_SIGNIFICANT_PERIODIC_SPECTRAL_STRUCTURE"
+}

@@ -1,0 +1,39 @@
+{
+  "cache_build_seconds": 7.6823616119800135,
+  "checkpoint": {
+    "completed_permutations": 1000,
+    "layer_pairs": 378,
+    "null_length": 1000
+  },
+  "dataset": {
+    "dimensions": 1536,
+    "excluded_tokens": [
+      0
+    ],
+    "layers": 28,
+    "tokens": 13,
+    "vectors": 364
+  },
+  "parity": {
+    "top_50_matches_frozen_result": true,
+    "top_50_rows_checked": 50
+  },
+  "permutations_rerun": false,
+  "reporting": {
+    "gap_summary": "COMPLETE",
+    "global_statistics": "COMPLETE",
+    "local_token_control": "COMPLETE",
+    "top_50": "PASS"
+  },
+  "schema": "openmind.recurrence_topology_v3_full_report.v1",
+  "sha256": {
+    "checkpoint": "faa2bb98c3d2cdffa5c3e870fc5698cf563055450bab030e1b7363318b0f483d",
+    "derived_report": "6c7565e58878a27b8f3b70e6e0228260c432b40ce3bd2e3ea70f8829369eeb9b",
+    "fixed_source": "d4f8dfa4fac59c6daa68eca82eb0fbb7c17f15cbc0dcce0c253fe588ef10ddd8",
+    "frozen_manifest": "6fef3d0cade02ba8867c0ecabb94cc81307f8a6a8d9aa9df53641dd40bc90f2e",
+    "frozen_result": "cc2846bdd0ef615ce57d31749908955b1b360e70739721a070c1d232fd18f274",
+    "original_v3": "66f496ffeafff5313d5d479303e5e81d61822e2f1609a9f970e0e4385eb80930"
+  },
+  "source": "frozen V3-fixed 1000-permutation checkpoint",
+  "status": "DERIVED_PARITY_PASS"
+}

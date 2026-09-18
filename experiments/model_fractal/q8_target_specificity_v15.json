@@ -1,0 +1,127 @@
+{
+  "absolute_effect_contrast": 0.1482674165343996,
+  "component_effects": [
+    {
+      "absolute_delta": 0.27113384626621856,
+      "component": "ffn_up.weight",
+      "delta": -0.27113384626621856,
+      "p": 0.015196960607878424,
+      "target": true
+    },
+    {
+      "absolute_delta": 0.2552546305971114,
+      "component": "attn_k.bias",
+      "delta": -0.2552546305971114,
+      "p": 0.07478504299140172,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.2506540324056841,
+      "component": "attn_v.bias",
+      "delta": -0.2506540324056841,
+      "p": 0.03559288142371526,
+      "target": true
+    },
+    {
+      "absolute_delta": 0.1677630378307,
+      "component": "attn_v.weight",
+      "delta": -0.1677630378307,
+      "p": 0.28254349130173967,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.15545089389434913,
+      "component": "attn_q.bias",
+      "delta": -0.15545089389434913,
+      "p": 0.33153369326134774,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.1227972325269725,
+      "component": "ffn_gate.weight",
+      "delta": 0.1227972325269725,
+      "p": 0.2571485702859428,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.11867982780472949,
+      "component": "attn_norm.weight",
+      "delta": -0.11867982780472949,
+      "p": 0.08778244351129774,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.10313863925925126,
+      "component": "attn_q.weight",
+      "delta": 0.10313863925925126,
+      "p": 0.4401119776044791,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.09290127938881576,
+      "component": "ffn_down.weight",
+      "delta": -0.09290127938881576,
+      "p": 0.5070985802839432,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.06577664338264022,
+      "component": "attn_k.weight",
+      "delta": 0.06577664338264022,
+      "p": 0.6560687862427514,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.02680429505698051,
+      "component": "attn_output.weight",
+      "delta": -0.02680429505698051,
+      "p": 0.8784243151369726,
+      "target": false
+    },
+    {
+      "absolute_delta": 0.01769874827396717,
+      "component": "ffn_norm.weight",
+      "delta": -0.01769874827396717,
+      "p": 0.889622075584883,
+      "target": false
+    }
+  ],
+  "configuration": {
+    "permutations": 5000,
+    "region_from": 8,
+    "region_to": 12,
+    "seed": 20260823,
+    "targets": [
+      "attn_v.bias",
+      "ffn_up.weight"
+    ]
+  },
+  "format": "OpenMind Q8 Target Specificity V15",
+  "interpretation": "TARGET_SPECIFIC_SIGNAL",
+  "non_target_absolute_mean": 0.11262652280155175,
+  "non_target_mean_delta": -0.05428401976777895,
+  "non_target_negative_fraction": 0.9,
+  "outside_count": 23,
+  "region": [
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ]
+  ],
+  "target_absolute_mean": 0.26089393933595134,
+  "target_mean_delta": -0.26089393933595134,
+  "target_negative_fraction": 1.0,
+  "target_specificity_p": 0.03419316136772645
+}

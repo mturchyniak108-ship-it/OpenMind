@@ -1,0 +1,593 @@
+{
+  "schema": "openmind.geometry_scaling_model_audit.v39",
+  "source": "experiments/model_fractal/q8_parameter_field_v4_1.json",
+  "layer_count": 28,
+  "component_dimension": 12,
+  "lag_range": {
+    "min": 1,
+    "max": 27
+  },
+  "models": [
+    "linear",
+    "quadratic",
+    "power",
+    "exponential"
+  ],
+  "breakpoint_search": {
+    "requested_min": 8,
+    "requested_max": 23,
+    "rule": "left x<=breakpoint; right x>breakpoint",
+    "minimum_segment_sizes": [
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "null_runs_per_condition": 2500,
+  "seed": 34038,
+  "selection_statistic": "best_global_bic_minus_best_piecewise_bic",
+  "real_by_min_segment_size": {
+    "4": {
+      "best_global": {
+        "model": "power",
+        "parameters": [
+          -20.324449588913833,
+          7.4396897004464595
+        ],
+        "A": 1.4900597920317254e-09,
+        "sse": 960.86865521243,
+        "rmse": 5.96554506904698,
+        "r2": 0.8442117810716312,
+        "aic": 100.44402317971411,
+        "bic": 103.03569691172277
+      },
+      "best_piecewise": {
+        "model": "quadratic",
+        "breakpoint": 23,
+        "left_parameters": [
+          5.420378312676483,
+          -0.3045342867197649,
+          0.03328318491988165
+        ],
+        "right_parameters": [
+          3842.6915580072905,
+          -316.30406115643035,
+          6.547843359675721
+        ],
+        "sse": 19.943148749410827,
+        "rmse": 0.8594388511506026,
+        "r2": 0.9967665636644091,
+        "aic": 3.8203175262050912,
+        "bic": 11.595338722231066
+      },
+      "delta_bic": 91.4403581894917
+    },
+    "6": {
+      "best_global": {
+        "model": "power",
+        "parameters": [
+          -20.324449588913833,
+          7.4396897004464595
+        ],
+        "A": 1.4900597920317254e-09,
+        "sse": 960.86865521243,
+        "rmse": 5.96554506904698,
+        "r2": 0.8442117810716312,
+        "aic": 100.44402317971411,
+        "bic": 103.03569691172277
+      },
+      "best_piecewise": {
+        "model": "quadratic",
+        "breakpoint": 21,
+        "left_parameters": [
+          4.7342329512942785,
+          -0.08375606464946556,
+          0.021458666937666928
+        ],
+        "right_parameters": [
+          1793.6615155257184,
+          -155.54394288803394,
+          3.4008939328962637
+        ],
+        "sse": 65.38001051480687,
+        "rmse": 1.5561111370717624,
+        "r2": 0.989399763082741,
+        "aic": 35.87825179517975,
+        "bic": 43.653272991205725
+      },
+      "delta_bic": 59.38242392051704
+    },
+    "8": {
+      "best_global": {
+        "model": "power",
+        "parameters": [
+          -20.324449588913833,
+          7.4396897004464595
+        ],
+        "A": 1.4900597920317254e-09,
+        "sse": 960.86865521243,
+        "rmse": 5.96554506904698,
+        "r2": 0.8442117810716312,
+        "aic": 100.44402317971411,
+        "bic": 103.03569691172277
+      },
+      "best_piecewise": {
+        "model": "quadratic",
+        "breakpoint": 19,
+        "left_parameters": [
+          4.40747390507192,
+          0.031043359025292816,
+          0.014703948889134634
+        ],
+        "right_parameters": [
+          951.9843191524254,
+          -87.19503029862081,
+          2.0194613600431937
+        ],
+        "sse": 161.65960803955744,
+        "rmse": 2.446914974075311,
+        "r2": 0.9737896930319024,
+        "aic": 60.32071398992332,
+        "bic": 68.0957351859493
+      },
+      "delta_bic": 34.93996172577347
+    },
+    "10": {
+      "best_global": {
+        "model": "power",
+        "parameters": [
+          -20.324449588913833,
+          7.4396897004464595
+        ],
+        "A": 1.4900597920317254e-09,
+        "sse": 960.86865521243,
+        "rmse": 5.96554506904698,
+        "r2": 0.8442117810716312,
+        "aic": 100.44402317971411,
+        "bic": 103.03569691172277
+      },
+      "best_piecewise": {
+        "model": "power",
+        "breakpoint": 17,
+        "left_parameters": [
+          1.1533995687555478,
+          0.32412318152607944
+        ],
+        "right_parameters": [
+          -22.940969807482663,
+          8.243171560991136
+        ],
+        "sse": 348.70928360329776,
+        "rmse": 3.593766638496995,
+        "r2": 0.9434628261400253,
+        "aic": 77.07684619135419,
+        "bic": 82.26019365537151
+      },
+      "delta_bic": 20.775503256351257
+    }
+  },
+  "null_by_min_segment_size": {
+    "4": {
+      "delta_bic": {
+        "n": 2500,
+        "mean": 45.31949676841562,
+        "sd": 20.436425320364037,
+        "min": 11.860017604899362,
+        "p01": 16.24230188027312,
+        "p05": 19.745410595272006,
+        "p50": 40.36053589034432,
+        "p95": 83.27395152970412,
+        "p99": 97.09182042966927,
+        "max": 122.19321762027819,
+        "real": 91.4403581894917,
+        "exceedances": 40,
+        "empirical_p": 0.01639344262295082
+      },
+      "global_model_counts": {
+        "linear": 776,
+        "quadratic": 1494,
+        "power": 230,
+        "exponential": 0
+      },
+      "piecewise_model_counts": {
+        "linear": 309,
+        "quadratic": 1936,
+        "power": 233,
+        "exponential": 22
+      },
+      "breakpoint_counts": {
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 13,
+        "12": 14,
+        "13": 82,
+        "14": 111,
+        "15": 151,
+        "16": 175,
+        "17": 171,
+        "18": 173,
+        "19": 187,
+        "20": 182,
+        "21": 193,
+        "22": 232,
+        "23": 816
+      },
+      "joint_piecewise_selection_counts": {
+        "power:14": 66,
+        "quadratic:21": 193,
+        "quadratic:13": 37,
+        "quadratic:22": 232,
+        "power:18": 61,
+        "quadratic:20": 182,
+        "quadratic:23": 816,
+        "quadratic:16": 150,
+        "quadratic:19": 128,
+        "linear:18": 101,
+        "power:11": 12,
+        "quadratic:15": 150,
+        "linear:17": 110,
+        "power:17": 29,
+        "linear:19": 44,
+        "power:13": 36,
+        "linear:16": 10,
+        "quadratic:18": 8,
+        "power:16": 15,
+        "linear:14": 43,
+        "quadratic:12": 12,
+        "power:19": 12,
+        "exponential:13": 8,
+        "exponential:17": 7,
+        "quadratic:17": 25,
+        "quadratic:14": 2,
+        "quadratic:11": 1,
+        "exponential:18": 3,
+        "power:12": 1,
+        "exponential:19": 3,
+        "exponential:12": 1,
+        "power:15": 1,
+        "linear:13": 1
+      },
+      "legal_breakpoints": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "6": {
+      "delta_bic": {
+        "n": 2500,
+        "mean": 31.867993525611098,
+        "sd": 14.25360198313066,
+        "min": 1.779283533175743,
+        "p01": 4.116551979240444,
+        "p05": 6.301757334907924,
+        "p50": 31.04763028048014,
+        "p95": 55.83632899279147,
+        "p99": 61.55800566211257,
+        "max": 89.3005997879854,
+        "real": 59.38242392051704,
+        "exceedances": 56,
+        "empirical_p": 0.022790883646541384
+      },
+      "global_model_counts": {
+        "linear": 803,
+        "quadratic": 1441,
+        "power": 256,
+        "exponential": 0
+      },
+      "piecewise_model_counts": {
+        "linear": 405,
+        "quadratic": 1845,
+        "power": 224,
+        "exponential": 26
+      },
+      "breakpoint_counts": {
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 14,
+        "12": 25,
+        "13": 65,
+        "14": 117,
+        "15": 135,
+        "16": 180,
+        "17": 192,
+        "18": 171,
+        "19": 191,
+        "20": 207,
+        "21": 1203,
+        "22": 0,
+        "23": 0
+      },
+      "joint_piecewise_selection_counts": {
+        "linear:21": 75,
+        "quadratic:21": 1128,
+        "linear:14": 47,
+        "quadratic:19": 123,
+        "quadratic:15": 127,
+        "linear:17": 112,
+        "quadratic:20": 207,
+        "quadratic:16": 157,
+        "quadratic:17": 35,
+        "linear:18": 108,
+        "exponential:13": 14,
+        "power:11": 14,
+        "linear:16": 12,
+        "exponential:17": 7,
+        "quadratic:13": 30,
+        "power:19": 17,
+        "quadratic:18": 10,
+        "power:14": 62,
+        "linear:19": 50,
+        "quadratic:12": 20,
+        "power:15": 8,
+        "power:12": 4,
+        "power:18": 50,
+        "power:13": 20,
+        "power:17": 38,
+        "quadratic:14": 8,
+        "exponential:12": 1,
+        "power:16": 11,
+        "exponential:18": 3,
+        "exponential:19": 1,
+        "linear:13": 1
+      },
+      "legal_breakpoints": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "8": {
+      "delta_bic": {
+        "n": 2500,
+        "mean": 23.392469084779233,
+        "sd": 13.368686846548636,
+        "min": -3.070020223909708,
+        "p01": -2.9321477836860996,
+        "p05": -2.488272775494951,
+        "p50": 22.00842411621943,
+        "p95": 49.29862900479134,
+        "p99": 58.025048968233946,
+        "max": 67.29719563169132,
+        "real": 34.93996172577347,
+        "exceedances": 435,
+        "empirical_p": 0.17433026789284287
+      },
+      "global_model_counts": {
+        "linear": 795,
+        "quadratic": 1462,
+        "power": 243,
+        "exponential": 0
+      },
+      "piecewise_model_counts": {
+        "linear": 558,
+        "quadratic": 1570,
+        "power": 333,
+        "exponential": 39
+      },
+      "breakpoint_counts": {
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 13,
+        "12": 22,
+        "13": 57,
+        "14": 140,
+        "15": 197,
+        "16": 204,
+        "17": 186,
+        "18": 262,
+        "19": 1419,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0
+      },
+      "joint_piecewise_selection_counts": {
+        "power:19": 93,
+        "quadratic:15": 151,
+        "quadratic:19": 1137,
+        "linear:18": 127,
+        "linear:16": 25,
+        "linear:14": 60,
+        "quadratic:16": 168,
+        "quadratic:18": 43,
+        "linear:19": 186,
+        "linear:17": 117,
+        "power:11": 13,
+        "quadratic:17": 24,
+        "power:18": 81,
+        "linear:15": 43,
+        "quadratic:13": 24,
+        "power:15": 3,
+        "quadratic:12": 16,
+        "power:14": 73,
+        "power:17": 38,
+        "quadratic:14": 7,
+        "exponential:19": 3,
+        "exponential:18": 11,
+        "exponential:13": 14,
+        "power:13": 19,
+        "power:16": 11,
+        "exponential:17": 7,
+        "exponential:12": 4,
+        "power:12": 2
+      },
+      "legal_breakpoints": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "10": {
+      "delta_bic": {
+        "n": 2500,
+        "mean": 17.19222040767335,
+        "sd": 14.741249024937739,
+        "min": -3.3258222668271884,
+        "p01": -2.9516767069675343,
+        "p05": -2.7275911894023275,
+        "p50": 13.060226996917919,
+        "p95": 48.989791261991,
+        "p99": 58.551481175994326,
+        "max": 66.02529162072545,
+        "real": 20.775503256351257,
+        "exceedances": 665,
+        "empirical_p": 0.26629348260695723
+      },
+      "global_model_counts": {
+        "linear": 800,
+        "quadratic": 1444,
+        "power": 254,
+        "exponential": 2
+      },
+      "piecewise_model_counts": {
+        "linear": 685,
+        "quadratic": 1152,
+        "power": 617,
+        "exponential": 46
+      },
+      "breakpoint_counts": {
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 16,
+        "12": 18,
+        "13": 74,
+        "14": 124,
+        "15": 248,
+        "16": 423,
+        "17": 1597,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0
+      },
+      "joint_piecewise_selection_counts": {
+        "quadratic:16": 204,
+        "power:17": 370,
+        "linear:17": 464,
+        "quadratic:17": 739,
+        "power:16": 124,
+        "power:14": 64,
+        "quadratic:15": 161,
+        "exponential:13": 15,
+        "linear:16": 91,
+        "linear:15": 78,
+        "power:13": 32,
+        "linear:14": 52,
+        "quadratic:12": 13,
+        "power:11": 16,
+        "quadratic:14": 8,
+        "exponential:17": 24,
+        "exponential:16": 4,
+        "quadratic:13": 27,
+        "exponential:12": 3,
+        "power:15": 9,
+        "power:12": 2
+      },
+      "legal_breakpoints": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  },
+  "robustness": {
+    "4": {
+      "best_global_model": "power",
+      "best_global_bic": 103.03569691172277,
+      "best_piecewise_model": "quadratic",
+      "best_piecewise_breakpoint": 23,
+      "best_piecewise_bic": 11.595338722231066,
+      "delta_bic": 91.4403581894917,
+      "empirical_p": 0.01639344262295082,
+      "null_p95": 83.27395152970412,
+      "null_p99": 97.09182042966927,
+      "breakpoint_23_null_frequency": 0.3264,
+      "breakpoint_23_legal": true
+    },
+    "6": {
+      "best_global_model": "power",
+      "best_global_bic": 103.03569691172277,
+      "best_piecewise_model": "quadratic",
+      "best_piecewise_breakpoint": 21,
+      "best_piecewise_bic": 43.653272991205725,
+      "delta_bic": 59.38242392051704,
+      "empirical_p": 0.022790883646541384,
+      "null_p95": 55.83632899279147,
+      "null_p99": 61.55800566211257,
+      "breakpoint_23_null_frequency": 0.0,
+      "breakpoint_23_legal": false
+    },
+    "8": {
+      "best_global_model": "power",
+      "best_global_bic": 103.03569691172277,
+      "best_piecewise_model": "quadratic",
+      "best_piecewise_breakpoint": 19,
+      "best_piecewise_bic": 68.0957351859493,
+      "delta_bic": 34.93996172577347,
+      "empirical_p": 0.17433026789284287,
+      "null_p95": 49.29862900479134,
+      "null_p99": 58.025048968233946,
+      "breakpoint_23_null_frequency": 0.0,
+      "breakpoint_23_legal": false
+    },
+    "10": {
+      "best_global_model": "power",
+      "best_global_bic": 103.03569691172277,
+      "best_piecewise_model": "power",
+      "best_piecewise_breakpoint": 17,
+      "best_piecewise_bic": 82.26019365537151,
+      "delta_bic": 20.775503256351257,
+      "empirical_p": 0.26629348260695723,
+      "null_p95": 48.989791261991,
+      "null_p99": 58.551481175994326,
+      "breakpoint_23_null_frequency": 0.0,
+      "breakpoint_23_legal": false
+    }
+  }
+}

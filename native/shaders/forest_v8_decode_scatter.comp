@@ -1,0 +1,78 @@
+#version 450
+
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(set = 0, binding = 0, std430) readonly buffer PackedValues {
+    uint packed[];
+};
+
+layout(set = 0, binding = 1, std430) readonly buffer Scales {
+    float scales[];
+};
+
+layout(set = 0, binding = 2, std430) readonly buffer DimensionMap {
+    uint dimensions_map[];
+};
+
+layout(set = 0, binding = 3, std430) buffer Output {
+    float output_values[];
+};
+
+layout(push_constant) uniform Params {
+    uint blocks_per_item;
+    uint selected_blocks;
+    uint dimensions;
+    uint batch;
+} params;
+
+int decode_signed_byte(uint word, uint byte_index)
+{
+    uint raw = (word >> (byte_index * 8u)) & 0xffu;
+
+    if (raw >= 128u) {
+        return int(raw) - 256;
+    }
+
+    return int(raw);
+}
+
+void main()
+{
+    uint lane = gl_LocalInvocationID.x;
+    uint selected = gl_WorkGroupID.x;
+    uint item = gl_WorkGroupID.y;
+
+    if (lane >= 64u ||
+        selected >= params.selected_blocks ||
+        item >= params.batch) {
+        return;
+    }
+
+    uint block = selected;
+
+    uint packed_base =
+        (item * params.blocks_per_item + block) * 16u;
+
+    uint word_index = lane >> 2u;
+    uint byte_index = lane & 3u;
+
+    uint word = packed[packed_base + word_index];
+
+    int q = decode_signed_byte(
+        word,
+        byte_index
+    );
+
+    float scale = scales[
+        item * params.blocks_per_item + block
+    ];
+
+    uint dimension =
+        dimensions_map[block * 64u + lane];
+
+    if (dimension < params.dimensions) {
+        output_values[
+            item * params.dimensions + dimension
+        ] = float(q) * scale;
+    }
+}

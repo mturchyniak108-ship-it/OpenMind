@@ -1,0 +1,56 @@
+{
+  "all_pass": true,
+  "allowed_claims": [
+    "encoder_delegates_payload_compilation_once",
+    "compiler_payload_loop_uses_iter_exact",
+    "iter_exact_bounds_each_requested_read",
+    "dynamic_payload_exceeds_stream_chunk",
+    "dynamic_multiple_payload_chunks_required",
+    "dynamic_traced_peak_below_half_payload",
+    "exact_persisted_payload_sha256",
+    "independent_persisted_object_reopen",
+    "no_python_tensor_sized_temporary_observed"
+  ],
+  "dynamic_audit": {
+    "chunk_bytes": 1048576,
+    "exact_payload_sha_pass": true,
+    "expected_payload_chunks": 16,
+    "max_traced_peak_bytes": 8388608,
+    "output_path": "/data/data/com.termux/files/home/OpenMind/results/runtime/maf_no_whole_tensor_temp_validation_v1/synthetic_object.maf",
+    "pass": true,
+    "payload_bytes": 16777216,
+    "peak_less_than_half_payload": true,
+    "peak_under_frozen_bound": true,
+    "persisted_payload_sha256": "4e95dc3c24e3d83f0224d95c4d2bffe8797bb6b35009f483f592055584936939",
+    "source_payload_sha256": "4e95dc3c24e3d83f0224d95c4d2bffe8797bb6b35009f483f592055584936939",
+    "source_rehash_pass": true,
+    "tracemalloc_current_bytes": 1327,
+    "tracemalloc_peak_bytes": 3156900
+  },
+  "forbidden_claims": [
+    "total_process_rss_bound",
+    "kernel_page_cache_bound",
+    "filesystem_cache_bound",
+    "zero_copy",
+    "no_native_allocator_temporary",
+    "compression",
+    "selective_access",
+    "runtime_residency_reduction",
+    "inference_speedup",
+    "maf_native_compute",
+    "vulkan_execution"
+  ],
+  "schema": "openmind.maf_no_whole_tensor_temp_validation.v1",
+  "static_audit": {
+    "bounded_read_expression_present": true,
+    "chunk_forwarding_present": true,
+    "compiler_iter_exact_calls": 1,
+    "encoder_compile_object_calls": 1,
+    "encoder_sha256": "0232fc49c2ef568291453b48b62bf6a37fa64f123051224b4228a214454995c0",
+    "forbidden_mechanisms_found": [],
+    "iter_exact_stream_read_calls": 1,
+    "object_sha256": "eed6cbd96995412a632883f3c534f9023e7711ea8eb437afe35a48312502f63b",
+    "pass": true
+  },
+  "test_scope": "python_level_tensor_temporary_allocation_in_frozen_encoder_compiler_path"
+}

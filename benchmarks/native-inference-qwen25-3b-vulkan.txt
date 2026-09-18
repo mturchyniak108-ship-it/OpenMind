@@ -1,0 +1,42 @@
+OpenMind Native Inference Baseline
+==================================
+
+Date: 2026-08-19
+Platform: Android ARM64 / Termux
+Backend: Vulkan
+Model: Qwen 2.5 3B Q4_K_M
+Executable: native/build/openmind_inference_test
+
+Configuration
+-------------
+Context: 512
+GPU layers: 99
+Effective GPU layers: 37/37
+Max tokens: 128
+
+Prompt
+------
+Explain what OpenMind is and why its native local inference architecture is useful in one concise paragraph.
+
+Results
+-------
+Prompt tokens: 20
+Prompt speed: 37.3206 tok/s
+Generated tokens: 128
+Generation: 6660.41 ms
+Generation speed: 19.218 tok/s
+Model load: 1820.35 ms
+Total: 7196.48 ms
+
+Backend confirmation
+--------------------
+Vulkan0 model buffer: 1591.39 MiB
+Vulkan0 KV cache: 18.00 MiB
+Vulkan0 compute buffer: 77.01 MiB
+Vulkan_Host compute buffer: 304.75 MiB
+
+Notes
+-----
+All 37 model layers were offloaded to Vulkan.
+Generation reached the configured 128-token limit.
+Native CMake build and inference completed successfully.

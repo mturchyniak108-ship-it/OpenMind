@@ -1,0 +1,53 @@
+site_name: MAF — Model Address Fabric Documentation
+site_description: Documentation for MAF — Model Address Fabric
+docs_dir: docs
+
+exclude_docs: |
+  /README.md
+
+theme:
+  name: mkdocs
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Overview: getting-started/README.md
+      - Installation: getting-started/INSTALLATION.md
+      - Command Reference: getting-started/COMMAND_REFERENCE.md
+      - Glossary: getting-started/GLOSSARY.md
+
+  - Concepts:
+      - MAF Overview: concepts/MAF_OVERVIEW.md
+
+  - Terminology:
+      - Coined Terms: terminology/COINED_TERMS.md
+      - Authority and Terminology: architecture/AUTHORITY_AND_TERMINOLOGY.md
+
+  - How-To:
+      - How-To Index: howto/README.md
+      - Read the Documentation: howto/READ_THE_MAF_DOCUMENTATION.md
+      - Interpret MAF Terms: howto/INTERPRET_MAF_TERMS.md
+      - Trace Provenance: howto/TRACE_MAF_PROVENANCE.md
+      - Historical OpenMind Artifacts: howto/WORK_WITH_HISTORICAL_OPENMIND_ARTIFACTS.md
+
+  - Architecture:
+      - Architecture: architecture/ARCHITECTURE.md
+
+  - Reference:
+      - MAF Object Model: reference/MAF_OBJECT_MODEL.md
+      - Schema Registry: reference/SCHEMA_REGISTRY.md
+
+  - Provenance:
+      - OpenMind to MAF Lineage: provenance/OPENMIND_TO_MAF_LINEAGE.md
+
+  - Compatibility:
+      - OpenMind Compatibility: compatibility/OPENMIND_COMPATIBILITY.md
+
+  - Research:
+      - Phase 6 Summary: research/PHASE_6_SUMMARY.md
+      - Current Work: research/CURRENT_WORK.md
+      - Research Index: research/README.md

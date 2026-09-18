@@ -1,0 +1,274 @@
+{
+  "model": {
+    "canonical_descriptor": "{\"architecture\":\"qwen2\",\"model_family\":\"Qwen2.5-Coder\",\"model_variant\":\"1.5B-Instruct\",\"schema\":\"openmind.maf_model_identity.v1\",\"tensor_count\":339}",
+    "descriptor": {
+      "architecture": "qwen2",
+      "model_family": "Qwen2.5-Coder",
+      "model_variant": "1.5B-Instruct",
+      "schema": "openmind.maf_model_identity.v1",
+      "tensor_count": 339
+    },
+    "descriptor_sha256": "d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+    "namespace": "mafmodel:v1",
+    "pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+    "repeat_equal": true,
+    "repeat_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258"
+  },
+  "objects": [
+    {
+      "canonical_descriptor": "{\"dims\":[1536],\"encoding\":\"gguf_payload_exact\",\"model_pk\":\"mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258\",\"schema\":\"openmind.maf_object_identity.v1\",\"tensor_name\":\"output_norm.weight\",\"tensor_type\":\"F32\"}",
+      "descriptor": {
+        "dims": [
+          1536
+        ],
+        "encoding": "gguf_payload_exact",
+        "model_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+        "schema": "openmind.maf_object_identity.v1",
+        "tensor_name": "output_norm.weight",
+        "tensor_type": "F32"
+      },
+      "descriptor_sha256": "00e8ed8c4636bf5ee14a1f27580d3a5b70fed9829cb58f03e93ab425d8a463ab",
+      "dims": [
+        1536
+      ],
+      "namespace": "mafobj:v1",
+      "ordinal": 1,
+      "payload_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "payload_sha_separate": true,
+      "pk": "mafobj:v1:00e8ed8c4636bf5ee14a1f27580d3a5b70fed9829cb58f03e93ab425d8a463ab",
+      "placement_a": {
+        "cache_residency": "cold",
+        "device_residency": "disk",
+        "object_offset": 5096,
+        "object_path": "generation-a/01.mafobj",
+        "physical_generation": 1,
+        "segment": "segment-a.maf",
+        "segment_offset": 24576
+      },
+      "placement_b": {
+        "cache_residency": "hot",
+        "device_residency": "ram",
+        "object_offset": 900777,
+        "object_path": "generation-b/relocated-01.mafobj",
+        "physical_generation": 99,
+        "segment": "segment-z.maf",
+        "segment_offset": 7065536
+      },
+      "placement_independent": true,
+      "repeat_equal": true,
+      "repeat_pk": "mafobj:v1:00e8ed8c4636bf5ee14a1f27580d3a5b70fed9829cb58f03e93ab425d8a463ab",
+      "span_bytes": 6144,
+      "tensor_name": "output_norm.weight",
+      "tensor_type": "F32"
+    },
+    {
+      "canonical_descriptor": "{\"dims\":[1536],\"encoding\":\"gguf_payload_exact\",\"model_pk\":\"mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258\",\"schema\":\"openmind.maf_object_identity.v1\",\"tensor_name\":\"blk.0.attn_norm.weight\",\"tensor_type\":\"F32\"}",
+      "descriptor": {
+        "dims": [
+          1536
+        ],
+        "encoding": "gguf_payload_exact",
+        "model_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+        "schema": "openmind.maf_object_identity.v1",
+        "tensor_name": "blk.0.attn_norm.weight",
+        "tensor_type": "F32"
+      },
+      "descriptor_sha256": "8489061c6271db7d1e726cc1795e084023c261ce448e31d50af22de77681c696",
+      "dims": [
+        1536
+      ],
+      "namespace": "mafobj:v1",
+      "ordinal": 2,
+      "payload_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "payload_sha_separate": true,
+      "pk": "mafobj:v1:8489061c6271db7d1e726cc1795e084023c261ce448e31d50af22de77681c696",
+      "placement_a": {
+        "cache_residency": "cold",
+        "device_residency": "disk",
+        "object_offset": 9192,
+        "object_path": "generation-a/02.mafobj",
+        "physical_generation": 1,
+        "segment": "segment-a.maf",
+        "segment_offset": 40960
+      },
+      "placement_b": {
+        "cache_residency": "hot",
+        "device_residency": "ram",
+        "object_offset": 901554,
+        "object_path": "generation-b/relocated-02.mafobj",
+        "physical_generation": 99,
+        "segment": "segment-z.maf",
+        "segment_offset": 7131072
+      },
+      "placement_independent": true,
+      "repeat_equal": true,
+      "repeat_pk": "mafobj:v1:8489061c6271db7d1e726cc1795e084023c261ce448e31d50af22de77681c696",
+      "span_bytes": 6144,
+      "tensor_name": "blk.0.attn_norm.weight",
+      "tensor_type": "F32"
+    },
+    {
+      "canonical_descriptor": "{\"dims\":[1536,1536],\"encoding\":\"gguf_payload_exact\",\"model_pk\":\"mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258\",\"schema\":\"openmind.maf_object_identity.v1\",\"tensor_name\":\"blk.0.attn_q.weight\",\"tensor_type\":\"Q8_0\"}",
+      "descriptor": {
+        "dims": [
+          1536,
+          1536
+        ],
+        "encoding": "gguf_payload_exact",
+        "model_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+        "schema": "openmind.maf_object_identity.v1",
+        "tensor_name": "blk.0.attn_q.weight",
+        "tensor_type": "Q8_0"
+      },
+      "descriptor_sha256": "1927b0228f913339bf9f6bd31daef6d1a2b6c3ad0aeb3c15fb158108288d44ba",
+      "dims": [
+        1536,
+        1536
+      ],
+      "namespace": "mafobj:v1",
+      "ordinal": 3,
+      "payload_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+      "payload_sha_separate": true,
+      "pk": "mafobj:v1:1927b0228f913339bf9f6bd31daef6d1a2b6c3ad0aeb3c15fb158108288d44ba",
+      "placement_a": {
+        "cache_residency": "cold",
+        "device_residency": "disk",
+        "object_offset": 13288,
+        "object_path": "generation-a/03.mafobj",
+        "physical_generation": 1,
+        "segment": "segment-a.maf",
+        "segment_offset": 57344
+      },
+      "placement_b": {
+        "cache_residency": "hot",
+        "device_residency": "ram",
+        "object_offset": 902331,
+        "object_path": "generation-b/relocated-03.mafobj",
+        "physical_generation": 99,
+        "segment": "segment-z.maf",
+        "segment_offset": 7196608
+      },
+      "placement_independent": true,
+      "repeat_equal": true,
+      "repeat_pk": "mafobj:v1:1927b0228f913339bf9f6bd31daef6d1a2b6c3ad0aeb3c15fb158108288d44ba",
+      "span_bytes": 2506752,
+      "tensor_name": "blk.0.attn_q.weight",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "canonical_descriptor": "{\"dims\":[8960,1536],\"encoding\":\"gguf_payload_exact\",\"model_pk\":\"mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258\",\"schema\":\"openmind.maf_object_identity.v1\",\"tensor_name\":\"blk.0.ffn_down.weight\",\"tensor_type\":\"Q8_0\"}",
+      "descriptor": {
+        "dims": [
+          8960,
+          1536
+        ],
+        "encoding": "gguf_payload_exact",
+        "model_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+        "schema": "openmind.maf_object_identity.v1",
+        "tensor_name": "blk.0.ffn_down.weight",
+        "tensor_type": "Q8_0"
+      },
+      "descriptor_sha256": "787817cc07b05c7520261bbccd9c3a2909a4a088e907093c3f43053879a4cd35",
+      "dims": [
+        8960,
+        1536
+      ],
+      "namespace": "mafobj:v1",
+      "ordinal": 4,
+      "payload_sha256": "d8f311c842b4abf6c51fd79bf81897605bddb2dfea1529e79688900303c7dd37",
+      "payload_sha_separate": true,
+      "pk": "mafobj:v1:787817cc07b05c7520261bbccd9c3a2909a4a088e907093c3f43053879a4cd35",
+      "placement_a": {
+        "cache_residency": "cold",
+        "device_residency": "disk",
+        "object_offset": 17384,
+        "object_path": "generation-a/04.mafobj",
+        "physical_generation": 1,
+        "segment": "segment-a.maf",
+        "segment_offset": 73728
+      },
+      "placement_b": {
+        "cache_residency": "hot",
+        "device_residency": "ram",
+        "object_offset": 903108,
+        "object_path": "generation-b/relocated-04.mafobj",
+        "physical_generation": 99,
+        "segment": "segment-z.maf",
+        "segment_offset": 7262144
+      },
+      "placement_independent": true,
+      "repeat_equal": true,
+      "repeat_pk": "mafobj:v1:787817cc07b05c7520261bbccd9c3a2909a4a088e907093c3f43053879a4cd35",
+      "span_bytes": 14622720,
+      "tensor_name": "blk.0.ffn_down.weight",
+      "tensor_type": "Q8_0"
+    },
+    {
+      "canonical_descriptor": "{\"dims\":[1536,151936],\"encoding\":\"gguf_payload_exact\",\"model_pk\":\"mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258\",\"schema\":\"openmind.maf_object_identity.v1\",\"tensor_name\":\"token_embd.weight\",\"tensor_type\":\"Q8_0\"}",
+      "descriptor": {
+        "dims": [
+          1536,
+          151936
+        ],
+        "encoding": "gguf_payload_exact",
+        "model_pk": "mafmodel:v1:d670768d29daf84be95501480a777fd1ee5fddda18f4d0a4c8c3953e1b8cc258",
+        "schema": "openmind.maf_object_identity.v1",
+        "tensor_name": "token_embd.weight",
+        "tensor_type": "Q8_0"
+      },
+      "descriptor_sha256": "d63df0559fb8566729d592b37e8d735146512a058f5def1108028e33b7b0fa2d",
+      "dims": [
+        1536,
+        151936
+      ],
+      "namespace": "mafobj:v1",
+      "ordinal": 5,
+      "payload_sha256": "1dc7e3115bc86f6a127f634edfee0257433f893df0eb4730928050abb70d588e",
+      "payload_sha_separate": true,
+      "pk": "mafobj:v1:d63df0559fb8566729d592b37e8d735146512a058f5def1108028e33b7b0fa2d",
+      "placement_a": {
+        "cache_residency": "cold",
+        "device_residency": "disk",
+        "object_offset": 21480,
+        "object_path": "generation-a/05.mafobj",
+        "physical_generation": 1,
+        "segment": "segment-a.maf",
+        "segment_offset": 90112
+      },
+      "placement_b": {
+        "cache_residency": "hot",
+        "device_residency": "ram",
+        "object_offset": 903885,
+        "object_path": "generation-b/relocated-05.mafobj",
+        "physical_generation": 99,
+        "segment": "segment-z.maf",
+        "segment_offset": 7327680
+      },
+      "placement_independent": true,
+      "repeat_equal": true,
+      "repeat_pk": "mafobj:v1:d63df0559fb8566729d592b37e8d735146512a058f5def1108028e33b7b0fa2d",
+      "span_bytes": 247959552,
+      "tensor_name": "token_embd.weight",
+      "tensor_type": "Q8_0"
+    }
+  ],
+  "prerequisites": {
+    "identity_engine_sha256": "dd4d70c2829ceb9c0a35e0e278e3a2c37b1ffaf1654165e17641f250bec8269c",
+    "identity_protocol_sha256": "5d1d5d44f2607d01f81a95dd5ddd8700301de82d389612c13195cc95e9aac76b",
+    "identity_spec_sha256": "0f391eb3d0b0374a60489a1b78926320b776f79cbdf5fadb7b5b5d59ba8f833f",
+    "pilot_manifest_sha256": "690ec47152646907eed1ca873ff9cf86352777e79b116a6c2d63186e33f859d0"
+  },
+  "schema": "openmind.maf_identity_pilot_validation.v2",
+  "summary": {
+    "all_pass": true,
+    "fragment_pk_generated": false,
+    "model_pk_count": 1,
+    "model_pk_distinct_from_objects": true,
+    "model_repeat_equal": true,
+    "object_pk_count": 5,
+    "object_repeat_equal": true,
+    "payload_sha_separate": true,
+    "placement_independent": true,
+    "unique_object_pks": true
+  }
+}

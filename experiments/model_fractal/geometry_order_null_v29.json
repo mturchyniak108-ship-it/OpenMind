@@ -1,0 +1,35 @@
+{
+  "schema": "openmind.geometry_order_null.v29",
+  "source": "experiments/model_fractal/transition_field_v5.json",
+  "layer_count": 28,
+  "component_dimension": 12,
+  "null_runs": 10000,
+  "seed": 28029,
+  "real": {
+    "mean_distance": 3.992959568568764,
+    "mean_cosine": 0.9629117565569462,
+    "median_distance": 0.7859365725483982,
+    "min_cosine": 0.0,
+    "max_distance": 66.62561604733533
+  },
+  "null": {
+    "mean_distance": 7.390495526668673,
+    "std_distance": 0.7436402184102657,
+    "mean_cosine": 0.9284760076071968,
+    "std_cosine": 0.009560431688106462,
+    "mean_median_distance": 1.3033057806355306,
+    "std_median_distance": 0.15370046801353987,
+    "mean_min_cosine": 0.0,
+    "std_min_cosine": 0.0
+  },
+  "statistics": {
+    "distance_lower_tail_fraction": 0.0001,
+    "distance_empirical_p": 0.00019998000199980003,
+    "cosine_upper_tail_fraction": 0.0,
+    "cosine_empirical_p": 9.999000099990002e-05,
+    "distance_z": -4.568789952435696,
+    "cosine_z": 3.601903143410218,
+    "distance_effect_size": 4.568789952435696,
+    "cosine_effect_size": 3.601903143410218
+  }
+}

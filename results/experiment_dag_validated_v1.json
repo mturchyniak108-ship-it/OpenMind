@@ -1,0 +1,646 @@
+{
+  "experiments": [
+    "activation_recurrence.py",
+    "benchmark_maf.py",
+    "benchmark_maf_advanced.py",
+    "canonical_lattice_v21.py",
+    "closed_curve_spectrum_v18.py",
+    "crystal_lattice_v13.py",
+    "crystal_raw_lattice_v15.py",
+    "crystal_realization_v14.py",
+    "fractal_renormalization_v17.py",
+    "geometry_null_v28.py",
+    "geometry_order_null_v29.py",
+    "geometry_order_null_v30.py",
+    "geometry_order_null_v30_reference.py",
+    "geometry_scaling_component_localization_test_v43.py",
+    "geometry_scaling_component_localization_test_v44.py",
+    "geometry_scaling_component_localization_test_v44_frozen.py",
+    "geometry_scaling_model_audit_v33.py",
+    "geometry_scaling_model_audit_v33_reference.py",
+    "geometry_scaling_model_audit_v34.py",
+    "geometry_scaling_model_audit_v37.py",
+    "geometry_scaling_model_audit_v38.py",
+    "geometry_scaling_model_audit_v38_snapshot.py",
+    "geometry_scaling_model_audit_v39.py",
+    "geometry_scaling_model_audit_v39_backup.py",
+    "geometry_scaling_model_audit_v39_work.py",
+    "geometry_scaling_model_audit_v40.py",
+    "geometry_scaling_transition_test_v41.py",
+    "geometry_scaling_transition_test_v42.py",
+    "geometry_scaling_v31.py",
+    "geometry_scaling_windows_v32.py",
+    "gguf_structural_v1.py",
+    "gguf_to_fractal.py",
+    "hybrid_fractal.py",
+    "hybrid_weighted.py",
+    "inspect_gguf_header.py",
+    "lattice_recovery_v25.py",
+    "layer_similarity.py",
+    "local_environment_v26.py",
+    "material_compatibility_v20.py",
+    "motif_graph_v19.py",
+    "normalized_geometry_v10.py",
+    "null_model_v23.py",
+    "parameter_divergence.py",
+    "parameter_fingerprint.py",
+    "periodicity_scan_v27.py",
+    "pi10Mcorrected.py",
+    "pi_benchmark.py",
+    "pi_benchmark_fixed.py",
+    "pi_full_pipeline.py",
+    "pi_maf_10m_benchmark.py",
+    "pi_predictor_v2.py",
+    "pi_science_benchmark.py",
+    "pi_waveform_fractal.py",
+    "q8_aware_divergence.py",
+    "q8_aware_divergence_v3.py",
+    "q8_component_coherence_v5.py",
+    "q8_cross_metric_v7.py",
+    "q8_parameter_field_v4.py",
+    "q8_parameter_field_v4_1.py",
+    "q8_phase_blind_discovery_v13.py",
+    "q8_phase_component_v8.py",
+    "q8_phase_detection_v6.py",
+    "q8_phase_region_discovery_v12.py",
+    "q8_phase_region_validation_v10.py",
+    "q8_phase_stability_v11.py",
+    "q8_phase_validation_v9.py",
+    "q8_structural_matched_targets_v14.py",
+    "q8_target_specificity_v15.py",
+    "recurrence_stability.py",
+    "recurrence_stability_v2.py",
+    "spatial_null_v24.py",
+    "structural_divergence_v1.py",
+    "structural_fingerprint.py",
+    "structural_lattice_v11.py",
+    "symmetry_spectrum_v16.py",
+    "threshold_robustness_v25.py",
+    "tie_experiment.py",
+    "tie_hybrid_experiment.py",
+    "tie_pi_experiment.py",
+    "topology_lattice_v22.py",
+    "transition_field_v5.py",
+    "transition_geometry_v6.py",
+    "transition_geometry_v9.py",
+    "transition_periodicity_v8.py",
+    "transition_recurrence_v7.py",
+    "unit_cell_v12.py",
+    "visualize_hybrid_basin.py"
+  ],
+  "dependencies": {
+    "activation_recurrence.py": [],
+    "benchmark_maf.py": [
+      "model.gguf"
+    ],
+    "benchmark_maf_advanced.py": [
+      "model.gguf"
+    ],
+    "canonical_lattice_v21.py": [
+      "canonical_lattice_v21.json",
+      "material_compatibility_v20.json",
+      "normalized_geometry_v10.json"
+    ],
+    "closed_curve_spectrum_v18.py": [
+      "closed_curve_spectrum_v18.json",
+      "normalized_geometry_v10.json"
+    ],
+    "crystal_lattice_v13.py": [
+      "crystal_lattice_v13.json",
+      "normalized_geometry_v10.json",
+      "structural_lattice_v11.json"
+    ],
+    "crystal_raw_lattice_v15.py": [
+      "crystal_raw_lattice_v15.json",
+      "normalized_geometry_v10.json"
+    ],
+    "crystal_realization_v14.py": [
+      "crystal_lattice_v13.json",
+      "crystal_realization_v14.json",
+      "normalized_geometry_v10.json"
+    ],
+    "fractal_renormalization_v17.py": [
+      "fractal_renormalization_v17.json",
+      "normalized_geometry_v10.json"
+    ],
+    "geometry_null_v28.py": [
+      "geometry_null_v28.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_order_null_v29.py": [
+      "geometry_order_null_v29.json",
+      "transition_field_v5.json"
+    ],
+    "geometry_order_null_v30.py": [
+      "geometry_order_null_v30.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_order_null_v30_reference.py": [
+      "geometry_order_null_v30.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_component_localization_test_v43.py": [
+      "geometry_scaling_component_localization_test_v43.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_component_localization_test_v44.py": [
+      "geometry_scaling_component_localization_test_v44.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_component_localization_test_v44_frozen.py": [
+      "geometry_scaling_component_localization_test_v44.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v33.py": [
+      "geometry_scaling_model_audit_v33.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v33_reference.py": [
+      "geometry_scaling_model_audit_v33.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v34.py": [
+      "geometry_scaling_model_audit_v34.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v37.py": [
+      "geometry_scaling_model_audit_v37.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v38.py": [
+      "geometry_scaling_model_audit_v38.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v38_snapshot.py": [
+      "geometry_scaling_model_audit_v38.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v39.py": [
+      "geometry_scaling_model_audit_v39.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v39_backup.py": [
+      "geometry_scaling_model_audit_v38.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v39_work.py": [
+      "geometry_scaling_model_audit_v39.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_model_audit_v40.py": [
+      "geometry_scaling_model_audit_v40.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_transition_test_v41.py": [
+      "geometry_scaling_transition_test_v41.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_transition_test_v42.py": [
+      "geometry_scaling_transition_test_v42.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_v31.py": [
+      "geometry_scaling_v31.json",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "geometry_scaling_windows_v32.py": [
+      "geometry_scaling_windows_v32.json",
+      "ort",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "gguf_structural_v1.py": [
+      "gguf_structure_v1.json",
+      "ort"
+    ],
+    "gguf_to_fractal.py": [
+      "model.gguf"
+    ],
+    "hybrid_fractal.py": [
+      "model.gguf"
+    ],
+    "hybrid_weighted.py": [],
+    "inspect_gguf_header.py": [
+      "ort"
+    ],
+    "lattice_recovery_v25.py": [
+      "lattice_recovery_v25.json",
+      "normalized_geometry_v10.json",
+      "spatial_null_v24.json"
+    ],
+    "layer_similarity.py": [
+      "ort"
+    ],
+    "local_environment_v26.py": [
+      "local_environment_v26.json",
+      "normalized_geometry_v10.json",
+      "spatial_null_v24.json"
+    ],
+    "material_compatibility_v20.py": [
+      "crystal_raw_lattice_v15.json",
+      "material_compatibility_v20.json",
+      "motif_graph_v19.json",
+      "normalized_geometry_v10.json"
+    ],
+    "motif_graph_v19.py": [
+      "motif_graph_v19.json",
+      "normalized_geometry_v10.json"
+    ],
+    "normalized_geometry_v10.py": [
+      "normalized_geometry_v10.json",
+      "transition_field_v5.json"
+    ],
+    "null_model_v23.py": [
+      "normalized_geometry_v10.json",
+      "null_model_v23.json",
+      "topology_lattice_v22.json"
+    ],
+    "parameter_divergence.py": [
+      "ort"
+    ],
+    "parameter_fingerprint.py": [
+      "ort"
+    ],
+    "periodicity_scan_v27.py": [
+      "normalized_geometry_v10.json",
+      "periodicity_scan_v27.json"
+    ],
+    "pi10Mcorrected.py": [
+      "pi_10M.txt"
+    ],
+    "pi_benchmark.py": [],
+    "pi_benchmark_fixed.py": [],
+    "pi_full_pipeline.py": [
+      "pi_10000.txt"
+    ],
+    "pi_maf_10m_benchmark.py": [
+      "pi_10M.txt"
+    ],
+    "pi_predictor_v2.py": [],
+    "pi_science_benchmark.py": [
+      "pi_100000.txt"
+    ],
+    "pi_waveform_fractal.py": [],
+    "q8_aware_divergence.py": [
+      "ort"
+    ],
+    "q8_aware_divergence_v3.py": [
+      "ort"
+    ],
+    "q8_component_coherence_v5.py": [
+      "q8_component_coherence_v5.json",
+      "q8_parameter_field_v4.json"
+    ],
+    "q8_cross_metric_v7.py": [
+      "q8_component_coherence_v5.json",
+      "q8_cross_metric_v7.json",
+      "q8_phase_detection_v6.json"
+    ],
+    "q8_parameter_field_v4.py": [
+      "ort",
+      "q8_parameter_field_v4.json"
+    ],
+    "q8_parameter_field_v4_1.py": [
+      "ort",
+      "q8_parameter_field_v4_1.json"
+    ],
+    "q8_phase_blind_discovery_v13.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_blind_discovery_v13.json"
+    ],
+    "q8_phase_component_v8.py": [
+      "q8_component_coherence_v5.json",
+      "q8_parameter_field_v4.json",
+      "q8_phase_component_v8.json",
+      "q8_phase_detection_v6.json"
+    ],
+    "q8_phase_detection_v6.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_detection_v6.json"
+    ],
+    "q8_phase_region_discovery_v12.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_region_discovery_v12.json"
+    ],
+    "q8_phase_region_validation_v10.py": [
+      "ort",
+      "q8_parameter_field_v4.json",
+      "q8_phase_component_v8.json",
+      "q8_phase_detection_v6.json",
+      "q8_phase_region_validation_v10.json"
+    ],
+    "q8_phase_stability_v11.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_detection_v6.json",
+      "q8_phase_region_validation_v10.json",
+      "q8_phase_stability_v11.json"
+    ],
+    "q8_phase_validation_v9.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_component_v8.json",
+      "q8_phase_detection_v6.json",
+      "q8_phase_validation_v9.json"
+    ],
+    "q8_structural_matched_targets_v14.py": [
+      "q8_parameter_field_v4.json",
+      "q8_phase_blind_discovery_v13.json",
+      "q8_structural_matched_targets_v14.json"
+    ],
+    "q8_target_specificity_v15.py": [
+      "q8_parameter_field_v4.json",
+      "q8_target_specificity_v15.json"
+    ],
+    "recurrence_stability.py": [
+      "ort"
+    ],
+    "recurrence_stability_v2.py": [
+      "ort"
+    ],
+    "spatial_null_v24.py": [
+      "normalized_geometry_v10.json",
+      "spatial_null_v24.json",
+      "topology_lattice_v22.json"
+    ],
+    "structural_divergence_v1.py": [
+      "gguf_structure_v1.json"
+    ],
+    "structural_fingerprint.py": [
+      "ort"
+    ],
+    "structural_lattice_v11.py": [
+      "normalized_geometry_v10.json",
+      "structural_lattice_v11.json"
+    ],
+    "symmetry_spectrum_v16.py": [
+      "normalized_geometry_v10.json",
+      "symmetry_spectrum_v16.json"
+    ],
+    "threshold_robustness_v25.py": [
+      "normalized_geometry_v10.json",
+      "spatial_null_v24.json",
+      "threshold_robustness_v25.json"
+    ],
+    "tie_experiment.py": [
+      "model.gguf"
+    ],
+    "tie_hybrid_experiment.py": [],
+    "tie_pi_experiment.py": [],
+    "topology_lattice_v22.py": [
+      "canonical_lattice_v21.json",
+      "normalized_geometry_v10.json",
+      "topology_lattice_v22.json"
+    ],
+    "transition_field_v5.py": [
+      "q8_parameter_field_v4_1.json",
+      "transition_field_v5.json"
+    ],
+    "transition_geometry_v6.py": [
+      "transition_field_v5.json",
+      "transition_geometry_v6.json"
+    ],
+    "transition_geometry_v9.py": [
+      "transition_field_v5.json",
+      "transition_geometry_v9.json"
+    ],
+    "transition_periodicity_v8.py": [
+      "transition_periodicity_v8.json",
+      "transition_recurrence_v7.json"
+    ],
+    "transition_recurrence_v7.py": [
+      "transition_field_v5.json",
+      "transition_recurrence_v7.json"
+    ],
+    "unit_cell_v12.py": [
+      "normalized_geometry_v10.json",
+      "unit_cell_v12.json"
+    ],
+    "visualize_hybrid_basin.py": []
+  },
+  "edges": {
+    "activation_recurrence.py": [],
+    "benchmark_maf.py": [],
+    "benchmark_maf_advanced.py": [],
+    "canonical_lattice_v21.py": [
+      "material_compatibility_v20.py",
+      "normalized_geometry_v10.py"
+    ],
+    "closed_curve_spectrum_v18.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "crystal_lattice_v13.py": [
+      "normalized_geometry_v10.py",
+      "structural_lattice_v11.py"
+    ],
+    "crystal_raw_lattice_v15.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "crystal_realization_v14.py": [
+      "crystal_lattice_v13.py",
+      "normalized_geometry_v10.py"
+    ],
+    "fractal_renormalization_v17.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "geometry_null_v28.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_order_null_v29.py": [
+      "transition_field_v5.py"
+    ],
+    "geometry_order_null_v30.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_order_null_v30_reference.py": [
+      "geometry_order_null_v30.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_component_localization_test_v43.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_component_localization_test_v44.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_component_localization_test_v44_frozen.py": [
+      "geometry_scaling_component_localization_test_v44.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v33.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v33_reference.py": [
+      "geometry_scaling_model_audit_v33.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v34.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v37.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v38.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v38_snapshot.py": [
+      "geometry_scaling_model_audit_v38.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v39.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v39_backup.py": [
+      "geometry_scaling_model_audit_v38.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v39_work.py": [
+      "geometry_scaling_model_audit_v39.py",
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_model_audit_v40.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_transition_test_v41.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_transition_test_v42.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_v31.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "geometry_scaling_windows_v32.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "gguf_structural_v1.py": [],
+    "gguf_to_fractal.py": [],
+    "hybrid_fractal.py": [],
+    "hybrid_weighted.py": [],
+    "inspect_gguf_header.py": [],
+    "lattice_recovery_v25.py": [
+      "normalized_geometry_v10.py",
+      "spatial_null_v24.py"
+    ],
+    "layer_similarity.py": [],
+    "local_environment_v26.py": [
+      "normalized_geometry_v10.py",
+      "spatial_null_v24.py"
+    ],
+    "material_compatibility_v20.py": [
+      "crystal_raw_lattice_v15.py",
+      "motif_graph_v19.py",
+      "normalized_geometry_v10.py"
+    ],
+    "motif_graph_v19.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "normalized_geometry_v10.py": [
+      "transition_field_v5.py"
+    ],
+    "null_model_v23.py": [
+      "normalized_geometry_v10.py",
+      "topology_lattice_v22.py"
+    ],
+    "parameter_divergence.py": [],
+    "parameter_fingerprint.py": [],
+    "periodicity_scan_v27.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "pi10Mcorrected.py": [],
+    "pi_benchmark.py": [],
+    "pi_benchmark_fixed.py": [],
+    "pi_full_pipeline.py": [],
+    "pi_maf_10m_benchmark.py": [],
+    "pi_predictor_v2.py": [],
+    "pi_science_benchmark.py": [],
+    "pi_waveform_fractal.py": [],
+    "q8_aware_divergence.py": [],
+    "q8_aware_divergence_v3.py": [],
+    "q8_component_coherence_v5.py": [
+      "q8_parameter_field_v4.py"
+    ],
+    "q8_cross_metric_v7.py": [
+      "q8_component_coherence_v5.py",
+      "q8_phase_detection_v6.py"
+    ],
+    "q8_parameter_field_v4.py": [],
+    "q8_parameter_field_v4_1.py": [],
+    "q8_phase_blind_discovery_v13.py": [
+      "q8_parameter_field_v4.py"
+    ],
+    "q8_phase_component_v8.py": [
+      "q8_component_coherence_v5.py",
+      "q8_parameter_field_v4.py",
+      "q8_phase_detection_v6.py"
+    ],
+    "q8_phase_detection_v6.py": [
+      "q8_parameter_field_v4.py"
+    ],
+    "q8_phase_region_discovery_v12.py": [
+      "q8_parameter_field_v4.py"
+    ],
+    "q8_phase_region_validation_v10.py": [
+      "q8_parameter_field_v4.py",
+      "q8_phase_component_v8.py",
+      "q8_phase_detection_v6.py"
+    ],
+    "q8_phase_stability_v11.py": [
+      "q8_parameter_field_v4.py",
+      "q8_phase_detection_v6.py",
+      "q8_phase_region_validation_v10.py"
+    ],
+    "q8_phase_validation_v9.py": [
+      "q8_parameter_field_v4.py",
+      "q8_phase_component_v8.py",
+      "q8_phase_detection_v6.py"
+    ],
+    "q8_structural_matched_targets_v14.py": [
+      "q8_parameter_field_v4.py",
+      "q8_phase_blind_discovery_v13.py"
+    ],
+    "q8_target_specificity_v15.py": [
+      "q8_parameter_field_v4.py"
+    ],
+    "recurrence_stability.py": [],
+    "recurrence_stability_v2.py": [],
+    "spatial_null_v24.py": [
+      "normalized_geometry_v10.py",
+      "topology_lattice_v22.py"
+    ],
+    "structural_divergence_v1.py": [],
+    "structural_fingerprint.py": [],
+    "structural_lattice_v11.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "symmetry_spectrum_v16.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "threshold_robustness_v25.py": [
+      "normalized_geometry_v10.py",
+      "spatial_null_v24.py"
+    ],
+    "tie_experiment.py": [],
+    "tie_hybrid_experiment.py": [],
+    "tie_pi_experiment.py": [],
+    "topology_lattice_v22.py": [
+      "canonical_lattice_v21.py",
+      "normalized_geometry_v10.py"
+    ],
+    "transition_field_v5.py": [
+      "q8_parameter_field_v4_1.py"
+    ],
+    "transition_geometry_v6.py": [
+      "transition_field_v5.py"
+    ],
+    "transition_geometry_v9.py": [
+      "transition_field_v5.py"
+    ],
+    "transition_periodicity_v8.py": [
+      "transition_recurrence_v7.py"
+    ],
+    "transition_recurrence_v7.py": [
+      "transition_field_v5.py"
+    ],
+    "unit_cell_v12.py": [
+      "normalized_geometry_v10.py"
+    ],
+    "visualize_hybrid_basin.py": []
+  }
+}

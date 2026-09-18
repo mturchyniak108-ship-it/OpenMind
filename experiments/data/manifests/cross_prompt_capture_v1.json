@@ -1,0 +1,58 @@
+{
+  "schema": "openmind.cross_prompt_capture.v1",
+  "status": "legacy_research_cohort_partial_provenance",
+  "dataset": {
+    "directory": "activation_dataset",
+    "prompt_files": 20,
+    "rows_per_prompt": 7,
+    "embedding_dimension": 1536,
+    "captured_layers": {
+      "first": 21,
+      "last": 27
+    },
+    "usable_recurrence_layers": {
+      "first": 21,
+      "last": 26
+    },
+    "structural_special_case": {
+      "layer": 27,
+      "token": 0,
+      "treatment": "exclude from controlled recurrence inference"
+    }
+  },
+  "prompt_1_provenance": {
+    "dataset_file": "activation_dataset/prompt_1.csv",
+    "dataset_sha256": "72d1341a0fd702ce8646ecc729c0925669c9b969d185c5fd59238be085957a6d",
+    "source_export": "activation_probe.csv",
+    "source_export_sha256": "510f97b0ea9fee8aa86af4b671a4bb92dccc9fe8f28552037bf1f5fab053e9b0",
+    "data_body_sha256": "5eb669600f4cd09c1a08d00aa1f628d70eb5d5bfb7f303a7d54d547cda39c182",
+    "relationship": "data rows are byte-identical; header field position was renamed to token",
+    "capture_log": "experiments/model_fractal/captures/P1/probe.log",
+    "capture_log_sha256": "045c2153f5d780dcde9390a6f0b17d4facb06bd7a60b400fbe471c4beb253f7d"
+  },
+  "model": {
+    "artifact_name": "qwen2.5-coder-q8_0.gguf",
+    "sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+    "transformer_layers": 28,
+    "embedding_dimension": 1536,
+    "prompt_1_model_identity": "directly established by byte-identical capture log"
+  },
+  "cohort_token_groups": {
+    "3": ["prompt_11.csv"],
+    "4": ["prompt_5.csv", "prompt_7.csv", "prompt_18.csv", "prompt_20.csv"],
+    "5": ["prompt_10.csv", "prompt_12.csv", "prompt_13.csv", "prompt_14.csv", "prompt_15.csv"],
+    "6": ["prompt_3.csv", "prompt_6.csv", "prompt_9.csv", "prompt_16.csv", "prompt_19.csv"],
+    "7": ["prompt_1.csv", "prompt_2.csv", "prompt_4.csv", "prompt_8.csv"],
+    "8": ["prompt_17.csv"]
+  },
+  "inference_groups": [4, 5, 6, 7],
+  "provenance_limits": [
+    "Prompt 1 has direct capture provenance to the named model.",
+    "Prompts 2 through 20 share the dataset schema and commit cohort but do not yet have individually recovered capture logs.",
+    "The cohort must not be described as fully canonical until those capture origins are independently established or the experiment is reproduced."
+  ],
+  "git_history": {
+    "dataset_introduction_commit": "92f99b12a531e4efd763afeb28f3a63b8dcd8e4a",
+    "commit_subject": "Advance MAF activation research and benchmarking"
+  }
+}

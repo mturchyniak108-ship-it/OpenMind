@@ -1,0 +1,742 @@
+{
+  "protocol": "production_holdout_v7",
+  "status": "LEAK_FREE_DUAL_SPACE_DIRECTIONAL",
+  "warning": "Structural layer prediction only. No unseen-prompt generalization is tested.",
+  "representation": {
+    "layers": 28,
+    "components": 12,
+    "raw_rms_dimensions": 12,
+    "rich_dimensions": 114,
+    "normalization": "target-excluded z-score"
+  },
+  "summary": {
+    "raw_rms_interpolation": {
+      "mean_cosine": 0.9136890351801633,
+      "mean_nrmse": 0.3734950911557886,
+      "layer_wins": 19
+    },
+    "raw_rms_directional": {
+      "mean_cosine": 0.7803823283875443,
+      "mean_nrmse": 0.9554777650252645,
+      "layer_wins": 3
+    },
+    "normalized_rms_interpolation": {
+      "mean_cosine": 0.349940824705404,
+      "mean_nrmse": 1.0899904665153228,
+      "layer_wins": 1
+    },
+    "normalized_rms_directional": {
+      "mean_cosine": 0.2470144994103164,
+      "mean_nrmse": 1.6292559301025418,
+      "layer_wins": 0
+    },
+    "normalized_rich_interpolation": {
+      "mean_cosine": 0.25180968804479403,
+      "mean_nrmse": 1.1204157728149613,
+      "layer_wins": 0
+    },
+    "normalized_rich_directional": {
+      "mean_cosine": 0.15528588884747938,
+      "mean_nrmse": 1.6840034983816108,
+      "layer_wins": 1
+    }
+  },
+  "results": [
+    {
+      "layer": 2,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.7764210516010517,
+          "nrmse": 1.2784997866641972
+        },
+        "raw_rms_directional": {
+          "cosine": -0.36537351416641095,
+          "nrmse": 8.750915430173162
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.5195484966251147,
+          "nrmse": 0.8549268206713184
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.8821489922082494,
+          "nrmse": 0.770495842629672
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.5007778442684885,
+          "nrmse": 0.8661865667828661
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.8404627327530896,
+          "nrmse": 0.7291947817414074
+        }
+      }
+    },
+    {
+      "layer": 3,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9962921109136526,
+          "nrmse": 0.15520090083122756
+        },
+        "raw_rms_directional": {
+          "cosine": 0.4634825802060249,
+          "nrmse": 1.7835729668488383
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.0938742063599789,
+          "nrmse": 1.635780604498904
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.3783468679786646,
+          "nrmse": 2.114349110250274
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.16916806432249631,
+          "nrmse": 1.3857510282135135
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.3224787507294577,
+          "nrmse": 1.7778899048485797
+        }
+      }
+    },
+    {
+      "layer": 4,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9800226114531121,
+          "nrmse": 0.2602166742864645
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9179856630966986,
+          "nrmse": 0.396920282235427
+        },
+        "normalized_rms_interpolation": {
+          "cosine": -0.007942048670321252,
+          "nrmse": 1.1255718185564065
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.2947928800642463,
+          "nrmse": 1.9180902337905434
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.02125915448608836,
+          "nrmse": 1.1134311357183555
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.19966967128024593,
+          "nrmse": 1.8412042570290803
+        }
+      }
+    },
+    {
+      "layer": 5,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9445249112234194,
+          "nrmse": 0.3586523342230428
+        },
+        "raw_rms_directional": {
+          "cosine": 0.5668987899024561,
+          "nrmse": 1.1724212527146827
+        },
+        "normalized_rms_interpolation": {
+          "cosine": -0.1385754880928414,
+          "nrmse": 1.226313919834452
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.13077146739560594,
+          "nrmse": 1.7094220090791121
+        },
+        "normalized_rich_interpolation": {
+          "cosine": -0.11003883366521754,
+          "nrmse": 1.2293699304744212
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.036919540540160445,
+          "nrmse": 1.7374777041204261
+        }
+      }
+    },
+    {
+      "layer": 6,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.8382443036505619,
+          "nrmse": 0.7059862194298941
+        },
+        "raw_rms_directional": {
+          "cosine": 0.8268950995009406,
+          "nrmse": 0.7953733322013026
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.11975549824986623,
+          "nrmse": 1.20316843868581
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.5004737132623155,
+          "nrmse": 1.8081844841408956
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.22097643523540933,
+          "nrmse": 1.1649099536919283
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.4305542998087226,
+          "nrmse": 1.7246016136547817
+        }
+      }
+    },
+    {
+      "layer": 7,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.6213615786802195,
+          "nrmse": 0.7838637759389749
+        },
+        "raw_rms_directional": {
+          "cosine": 0.6067332538314102,
+          "nrmse": 0.796650409127022
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.04220139107315435,
+          "nrmse": 1.5208694668628493
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.0955315642900323,
+          "nrmse": 2.6548451985175765
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.22173799299675476,
+          "nrmse": 1.1950255732977986
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.04736786032367261,
+          "nrmse": 2.1227681964927982
+        }
+      }
+    },
+    {
+      "layer": 8,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.8227539387769177,
+          "nrmse": 0.6613094820702073
+        },
+        "raw_rms_directional": {
+          "cosine": 0.5772714381604315,
+          "nrmse": 1.3311900868312494
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.2885169411574739,
+          "nrmse": 1.0631414794458596
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.16902117814108644,
+          "nrmse": 1.9334830270694854
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.32266721888827204,
+          "nrmse": 1.0249294277669756
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.01038517277171321,
+          "nrmse": 1.858613484249156
+        }
+      }
+    },
+    {
+      "layer": 9,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9929141853690934,
+          "nrmse": 0.12097571461813195
+        },
+        "raw_rms_directional": {
+          "cosine": 0.816189943293411,
+          "nrmse": 0.7003125116969809
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.5026797327180126,
+          "nrmse": 0.86530194412979
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.2822443483170529,
+          "nrmse": 1.0409352147031052
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.4264282382008238,
+          "nrmse": 0.9227632400820512
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.19626004418150395,
+          "nrmse": 1.259732397208761
+        }
+      }
+    },
+    {
+      "layer": 10,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9980104247310106,
+          "nrmse": 0.07002277103889937
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9824596131158511,
+          "nrmse": 0.21488579926187018
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.7628831246082594,
+          "nrmse": 0.6478825697751713
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.06706013810642011,
+          "nrmse": 1.684609002616689
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.5216060370455827,
+          "nrmse": 0.8840482461204958
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.035395575081084006,
+          "nrmse": 1.6548686814102493
+        }
+      }
+    },
+    {
+      "layer": 11,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9947250099229377,
+          "nrmse": 0.11304598927240607
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9286579368557408,
+          "nrmse": 0.4480466440095113
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.8239312227572578,
+          "nrmse": 0.5809223711404466
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.7641656428345901,
+          "nrmse": 1.651172932648953
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.3360605677650525,
+          "nrmse": 0.9713687628687839
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.2870894342836056,
+          "nrmse": 1.6259865525215262
+        }
+      }
+    },
+    {
+      "layer": 12,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9569653282694374,
+          "nrmse": 0.29293108467114315
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9608412657674005,
+          "nrmse": 0.3945201750440145
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.22969445554221313,
+          "nrmse": 1.377040970445256
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.6484658571666139,
+          "nrmse": 1.3215086786207264
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.20331274741891972,
+          "nrmse": 1.1691945997202675
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.5547407640226142,
+          "nrmse": 1.6434913827979913
+        }
+      }
+    },
+    {
+      "layer": 13,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.8801478878912968,
+          "nrmse": 0.4958534879775353
+        },
+        "raw_rms_directional": {
+          "cosine": 0.876692536962434,
+          "nrmse": 1.0085456182212782
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.271993601672077,
+          "nrmse": 1.0716272923622683
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.2567283991561343,
+          "nrmse": 1.1218764437297175
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.31477678452441427,
+          "nrmse": 1.1838856418883412
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.12434947850121277,
+          "nrmse": 1.3107364081256445
+        }
+      }
+    },
+    {
+      "layer": 14,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.717027611815092,
+          "nrmse": 0.841149351933065
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9180380468809886,
+          "nrmse": 0.4114335072697651
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.13732923713707343,
+          "nrmse": 1.0874110975135476
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.5114373927123625,
+          "nrmse": 0.9901980415975031
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.2516821738849309,
+          "nrmse": 0.9693512038656718
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.21729085589390965,
+          "nrmse": 1.0436596723924596
+        }
+      }
+    },
+    {
+      "layer": 15,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.6272410879438229,
+          "nrmse": 0.7793805699850623
+        },
+        "raw_rms_directional": {
+          "cosine": 0.4779528229384934,
+          "nrmse": 0.9473138059998965
+        },
+        "normalized_rms_interpolation": {
+          "cosine": -0.020589294186445214,
+          "nrmse": 1.7652963429136772
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.2585161479619258,
+          "nrmse": 3.841543807576343
+        },
+        "normalized_rich_interpolation": {
+          "cosine": -0.06223124003790592,
+          "nrmse": 1.8583858421138044
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.1701619051745701,
+          "nrmse": 3.389157437216374
+        }
+      }
+    },
+    {
+      "layer": 16,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.8654083192042862,
+          "nrmse": 0.7061511055052587
+        },
+        "raw_rms_directional": {
+          "cosine": 0.5046530670402498,
+          "nrmse": 1.5863692885116396
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.8213179178943776,
+          "nrmse": 0.5774030754136517
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.6325492508078556,
+          "nrmse": 2.2780584982891634
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.6544463996825892,
+          "nrmse": 0.7635722514881854
+        },
+        "normalized_rich_directional": {
+          "cosine": -0.339974213851029,
+          "nrmse": 2.2462998091432707
+        }
+      }
+    },
+    {
+      "layer": 17,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9802344402375499,
+          "nrmse": 0.26693254480802847
+        },
+        "raw_rms_directional": {
+          "cosine": 0.8054138733498893,
+          "nrmse": 0.6014982011298188
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.9110723141949711,
+          "nrmse": 0.6520289801106768
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.9046283738201615,
+          "nrmse": 0.4780434979725729
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.8129633379240765,
+          "nrmse": 0.655918138607749
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.5924368414296255,
+          "nrmse": 0.8832045707840837
+        }
+      }
+    },
+    {
+      "layer": 18,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9812818751446748,
+          "nrmse": 0.23047886282138452
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9701528776618696,
+          "nrmse": 0.32150073394109685
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.8333870409535343,
+          "nrmse": 1.2386505365415728
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.724679241770121,
+          "nrmse": 2.0438381099698124
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.4258914908728147,
+          "nrmse": 1.0771167537402433
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.31316529897788054,
+          "nrmse": 1.5901861168064604
+        }
+      }
+    },
+    {
+      "layer": 19,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.997826077826469,
+          "nrmse": 0.0663011533275589
+        },
+        "raw_rms_directional": {
+          "cosine": 0.978509765296969,
+          "nrmse": 0.20750481666694806
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.7285876595318774,
+          "nrmse": 0.6971455250980912
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.18944029483904468,
+          "nrmse": 1.2877047366275287
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.183846623226492,
+          "nrmse": 1.087687627443447
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.06530130546295973,
+          "nrmse": 1.9355300503191724
+        }
+      }
+    },
+    {
+      "layer": 20,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9984613408271228,
+          "nrmse": 0.07937773492843005
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9900967166367589,
+          "nrmse": 0.14209651923147507
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.4445990640152203,
+          "nrmse": 1.047686426919674
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.3881494263238144,
+          "nrmse": 1.2518431391717801
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.14253111941847138,
+          "nrmse": 1.2257168129372067
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.2607555847869518,
+          "nrmse": 1.8822510150144678
+        }
+      }
+    },
+    {
+      "layer": 21,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9905869271052961,
+          "nrmse": 0.14303828438157623
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9970234197902094,
+          "nrmse": 0.12099200140488747
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.13346593581595592,
+          "nrmse": 1.103143218069695
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.6648049967221301,
+          "nrmse": 1.094156189195318
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.0268140628383199,
+          "nrmse": 1.1669129016892261
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.1716023873208487,
+          "nrmse": 1.682550597346942
+        }
+      }
+    },
+    {
+      "layer": 22,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9867509165070308,
+          "nrmse": 0.1624286707204875
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9925995854597041,
+          "nrmse": 0.1222526699686621
+        },
+        "normalized_rms_interpolation": {
+          "cosine": -0.48593923280314305,
+          "nrmse": 1.9274572970506123
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.04492565075962827,
+          "nrmse": 1.5810387650609161
+        },
+        "normalized_rich_interpolation": {
+          "cosine": -0.12086002006361116,
+          "nrmse": 1.4897078884736124
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.03208730685264966,
+          "nrmse": 1.8959162305334551
+        }
+      }
+    },
+    {
+      "layer": 23,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.994083228235212,
+          "nrmse": 0.10957193545904924
+        },
+        "raw_rms_directional": {
+          "cosine": 0.9892014658127255,
+          "nrmse": 0.2171495956131725
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.21791718328642298,
+          "nrmse": 1.0067905921181577
+        },
+        "normalized_rms_directional": {
+          "cosine": -0.28447628377762446,
+          "nrmse": 1.6147476685586164
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.006288531336908095,
+          "nrmse": 1.1079361239526873
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.1305432668586289,
+          "nrmse": 1.2823581869425833
+        }
+      }
+    },
+    {
+      "layer": 24,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9949727586621313,
+          "nrmse": 0.13479000228979002
+        },
+        "raw_rms_directional": {
+          "cosine": 0.963626313986502,
+          "nrmse": 0.2762994635249565
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.5164711657219071,
+          "nrmse": 1.0029183076471873
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.6952679624746694,
+          "nrmse": 1.9110512172566136
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.2125083273547656,
+          "nrmse": 1.1048413370435517
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.46944894680827254,
+          "nrmse": 1.5403080960220596
+        }
+      }
+    },
+    {
+      "layer": 25,
+      "predictions": {
+        "raw_rms_interpolation": {
+          "cosine": 0.9922789183325206,
+          "nrmse": 0.14772375055711068
+        },
+        "raw_rms_directional": {
+          "cosine": 0.983173319920314,
+          "nrmse": 0.18370124897868986
+        },
+        "normalized_rms_interpolation": {
+          "cosine": 0.652399667367699,
+          "nrmse": 0.8812921005626716
+        },
+        "normalized_rms_directional": {
+          "cosine": 0.6806416449433589,
+          "nrmse": 1.0009464733880857
+        },
+        "normalized_rich_interpolation": {
+          "cosine": 0.36081945515012115,
+          "nrmse": 1.2719675595778865
+        },
+        "normalized_rich_directional": {
+          "cosine": 0.20312547414896215,
+          "nrmse": 1.7580968144369267
+        }
+      }
+    }
+  ]
+}

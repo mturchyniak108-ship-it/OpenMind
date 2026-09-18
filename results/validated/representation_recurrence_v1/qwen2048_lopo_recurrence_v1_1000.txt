@@ -1,0 +1,25 @@
+========================================================================================
+ OPENMIND / QWEN-2048 LOPO RECURRENCE V1
+========================================================================================
+Corpus SHA           : ddb445c4ec72f9d41e48ba919568e0d8627ecf6da49f1b296ead3a8867cf21b8
+Prompts              : 8
+Layers               : 36
+Layer pairs          : 630
+Excluded token       : T00
+Top K                : 50
+Permutations         : 1000
+Seed                 : 1337
+Corpus load seconds  : 2.156
+
+LOPO_P01 train= 92 test=13 delta=+0.577145 null=+0.000052 z=+11.268 p=0.000999 rho=+0.993 enrich=+0.251443 positive=1.000
+LOPO_P02 train= 94 test=11 delta=+0.555188 null=-0.003635 z=+9.906 p=0.000999 rho=+0.994 enrich=+0.248752 positive=1.000
+LOPO_P03 train= 92 test=13 delta=+0.547219 null=+0.000243 z=+11.335 p=0.000999 rho=+0.994 enrich=+0.245774 positive=1.000
+LOPO_P04 train= 89 test=16 delta=+0.530061 null=-0.001504 z=+13.441 p=0.000999 rho=+0.994 enrich=+0.242072 positive=1.000
+LOPO_P05 train= 93 test=12 delta=+0.550873 null=-0.000860 z=+9.946 p=0.000999 rho=+0.997 enrich=+0.253373 positive=1.000
+LOPO_P06 train= 91 test=14 delta=+0.522471 null=-0.000149 z=+10.959 p=0.000999 rho=+0.990 enrich=+0.253687 positive=1.000
+LOPO_P07 train= 92 test=13 delta=+0.532720 null=+0.000137 z=+11.201 p=0.000999 rho=+0.990 enrich=+0.256726 positive=1.000
+LOPO_P08 train= 92 test=13 delta=+0.537653 null=-0.000719 z=+10.739 p=0.000999 rho=+0.993 enrich=+0.244440 positive=1.000
+
+engineering split passes : 8/8
+total runtime seconds     : 2.406
+scientific final          : YES

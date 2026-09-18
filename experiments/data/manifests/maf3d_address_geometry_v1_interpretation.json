@@ -1,0 +1,42 @@
+{
+  "benchmark_rerun": false,
+  "decision": "TUPLE_MAF_BASELINE_SELECTED",
+  "derived_comparisons": {
+    "morton_address_plus_lookup_slowdown_vs_tuple": 2.812598713543326,
+    "morton_estimated_memory_reduction_vs_tuple": 0.26877078755395345,
+    "morton_hierarchy_slowdown_vs_tuple": 2.93268790251722,
+    "packed_address_plus_lookup_slowdown_vs_tuple": 1.4613913996291006,
+    "packed_estimated_memory_reduction_vs_tuple": 0.23937419170918572,
+    "packed_lookup_only_speedup_vs_tuple": 1.1605871683036901
+  },
+  "future_native_option": {
+    "reason": "Packed and Morton integer encodings may behave differently in native C++ where Python object and function-call overhead is absent.",
+    "rule": "Do not delay the MAF-3D inference prototype for native address optimization unless addressing becomes a measured runtime bottleneck.",
+    "status": "OPTIONAL_NOT_BLOCKING"
+  },
+  "next_research_step": "Build a deterministic neutral MAF-3D representation hierarchy using tuple-based MAF addressing, then test route-conditioned hidden-state reconstruction against the untouched Qwen oracle.",
+  "not_supported": [
+    "Morton encoding is universally slower across languages or native implementations.",
+    "Packed integer addressing can never outperform tuple addressing in native code.",
+    "The Python shallow-size estimate is an end-to-end memory measurement.",
+    "This benchmark measures hidden-state inference quality.",
+    "This benchmark proves or disproves MAF as an LLM replacement."
+  ],
+  "primary_result": {
+    "metric": "median_address_plus_lookup_ns",
+    "size": 1000000,
+    "tuple_maf_ns": 426.0126953125,
+    "winner": "tuple_maf",
+    "winner_speedup_vs_tuple": 1.0
+  },
+  "result_commit": "fe2a7e6",
+  "result_sha256": "906f04263b3f87dde642ebcbe7f6803518026dac4739c916923d207bf4a504ef",
+  "schema": "openmind.maf3d.address_geometry_interpretation.v1",
+  "status": "VALIDATED_PRIMARY_RESULT",
+  "supported_conclusions": [
+    "Under the frozen Python MAF-3D address benchmark, tuple-based flat addressing was the fastest candidate on the preregistered primary address-plus-lookup metric at one million entries.",
+    "Packed integer keys improved lookup-only latency and reduced estimated shallow Python bytes per entry, but their encoding overhead made end-to-end address-plus-lookup slower than tuple addressing.",
+    "Morton3D reduced estimated shallow Python bytes per entry but was slower than tuple addressing on both the primary metric and the five-step hierarchy traversal.",
+    "MAF-3D V1 should therefore retain tuple-based addressing and focus fractal research above the physical address layer on route-conditioned representation and traversal."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "controls": {
+    "baseline_fragment_pk": "maffrag:v1:c39f3e1ad857dd6a855c8984b4455551793f42000d2d673427d1a1170b2f6b5f",
+    "control_parent": "output.weight",
+    "different_index_fragment_pk": "maffrag:v1:be05733f91a9486e54ad4ce5fb96fc41c1bb1788c6f97323ab7e75530b1b489b",
+    "different_range_fragment_pk": "maffrag:v1:28a96d5c074e81113ac5f766cd94b6392b48f3bebe56c9f01447fde166c7a28c",
+    "placement_control_a": {
+      "device": "synthetic-device-A",
+      "generation": 1,
+      "offset": 0,
+      "segment": "synthetic-segment-A"
+    },
+    "placement_control_b": {
+      "device": "synthetic-device-B",
+      "generation": 777,
+      "offset": 999999,
+      "segment": "synthetic-segment-B"
+    },
+    "placement_pk_a": "maffrag:v1:c39f3e1ad857dd6a855c8984b4455551793f42000d2d673427d1a1170b2f6b5f",
+    "placement_pk_b": "maffrag:v1:c39f3e1ad857dd6a855c8984b4455551793f42000d2d673427d1a1170b2f6b5f"
+  },
+  "negative_inputs": [
+    {
+      "error_type": "MAFIdentityError",
+      "name": "negative_index",
+      "rejected": true
+    },
+    {
+      "error_type": "MAFIdentityError",
+      "name": "zero_width_range",
+      "rejected": true
+    },
+    {
+      "error_type": "MAFIdentityError",
+      "name": "reversed_range",
+      "rejected": true
+    },
+    {
+      "error_type": "MAFIdentityError",
+      "name": "negative_start",
+      "rejected": true
+    }
+  ],
+  "parents": [
+    {
+      "baseline_fragment": {
+        "descriptor": {
+          "fragment_scheme": "identity_validation_synthetic_range_v1",
+          "logical_fragment_index": 0,
+          "logical_range": [
+            0,
+            64
+          ],
+          "object_pk": "mafobj:v1:038d1abdd14f6ed60e99bd7e2e4bf851d77451503fc90642e3a084937e471fe0",
+          "schema": "openmind.maf_fragment_identity.v1"
+        },
+        "pk": "maffrag:v1:c39f3e1ad857dd6a855c8984b4455551793f42000d2d673427d1a1170b2f6b5f",
+        "repeat_equal": true,
+        "repeat_pk": "maffrag:v1:c39f3e1ad857dd6a855c8984b4455551793f42000d2d673427d1a1170b2f6b5f"
+      },
+      "object_pk": "mafobj:v1:038d1abdd14f6ed60e99bd7e2e4bf851d77451503fc90642e3a084937e471fe0",
+      "tensor_name": "output.weight"
+    },
+    {
+      "baseline_fragment": {
+        "descriptor": {
+          "fragment_scheme": "identity_validation_synthetic_range_v1",
+          "logical_fragment_index": 0,
+          "logical_range": [
+            0,
+            64
+          ],
+          "object_pk": "mafobj:v1:d63df0559fb8566729d592b37e8d735146512a058f5def1108028e33b7b0fa2d",
+          "schema": "openmind.maf_fragment_identity.v1"
+        },
+        "pk": "maffrag:v1:01f83e2009cbbd6ef65ad481f64122f3356b6cd509405e5b3f92c23e55ea17fd",
+        "repeat_equal": true,
+        "repeat_pk": "maffrag:v1:01f83e2009cbbd6ef65ad481f64122f3356b6cd509405e5b3f92c23e55ea17fd"
+      },
+      "object_pk": "mafobj:v1:d63df0559fb8566729d592b37e8d735146512a058f5def1108028e33b7b0fa2d",
+      "tensor_name": "token_embd.weight"
+    },
+    {
+      "baseline_fragment": {
+        "descriptor": {
+          "fragment_scheme": "identity_validation_synthetic_range_v1",
+          "logical_fragment_index": 0,
+          "logical_range": [
+            0,
+            64
+          ],
+          "object_pk": "mafobj:v1:00e8ed8c4636bf5ee14a1f27580d3a5b70fed9829cb58f03e93ab425d8a463ab",
+          "schema": "openmind.maf_fragment_identity.v1"
+        },
+        "pk": "maffrag:v1:63fb87c07faec2befd302c3395a728d1647b8432d61ba9b3cbe97289f9a52b3b",
+        "repeat_equal": true,
+        "repeat_pk": "maffrag:v1:63fb87c07faec2befd302c3395a728d1647b8432d61ba9b3cbe97289f9a52b3b"
+      },
+      "object_pk": "mafobj:v1:00e8ed8c4636bf5ee14a1f27580d3a5b70fed9829cb58f03e93ab425d8a463ab",
+      "tensor_name": "output_norm.weight"
+    }
+  ],
+  "prerequisites": {
+    "fragment_spec_sha256": "166e94d4024978f43e4139dc48234e8a35bb311397949982d1e3a0ca6c8d61ec",
+    "full_model_result_sha256": "ef954f38e16ccbc73211c503d7d9c9b8462028d6222fb32fb9b15eb59615d25d",
+    "identity_engine_sha256": "dd4d70c2829ceb9c0a35e0e278e3a2c37b1ffaf1654165e17641f250bec8269c"
+  },
+  "schema": "openmind.maf_fragment_identity_validation.v1",
+  "summary": {
+    "all_pass": true,
+    "baseline_fragment_pk_count": 3,
+    "baseline_fragment_pks_unique": true,
+    "gguf_payload_accessed": false,
+    "invalid_inputs_rejected": true,
+    "logical_index_changes_identity": true,
+    "logical_range_changes_identity": true,
+    "parent_object_changes_identity": true,
+    "parent_object_count": 3,
+    "payload_fragment_generated": false,
+    "placement_independent": true,
+    "production_fragment_scheme_defined": false,
+    "repeated_generation_equal": true
+  },
+  "validation_scheme": {
+    "name": "identity_validation_synthetic_range_v1",
+    "operational_fragmentation": false,
+    "range_unit": "intentionally_unspecified",
+    "status": "test_only"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "canonical_corpus_sha256": "d51422d9c89da5a469e328297362faa23887e03a9c7dd56e19e00260c7a5835d",
+  "corpus_manifest_sha256": "e955ab3eef83addf977294fcbecae34c9412c49bf695196bc92694e13b643431",
+  "engine_audit_sha256": "27f29921fb513f6dc6aee3d0b630c30772336c46fe0987acc73e107bd2323465",
+  "engine_sha256": "25f59309ea2e45aac332e884636721f8b60536b3409a62fbabefe9c608a98213",
+  "freeze_required_before_interpretation": true,
+  "interpretation_unlocked": false,
+  "protocol_sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0",
+  "reference_topology_retrained": false,
+  "result": {
+    "bytes": 5474,
+    "internal_status": "PRIMARY_PASS",
+    "path": "results/validated/representation_recurrence_v1/qwen2048_external_prompt_replication_v1_10000.json",
+    "sha256": "fe8e2e10523d7a38eaab0fb9295c03a7105e0af4c2e6d1c0083a673a343cf277"
+  },
+  "run_audit": {
+    "path": "experiments/data/manifests/qwen2048_external_prompt_replication_v1_10000_run_audit.json",
+    "sha256": "5dca75150cb187e4df052543c49036ac69e71120d7c3a733a997b1381b09b2f3"
+  },
+  "schema": "openmind.qwen2048_external_prompt_replication.validated.v1",
+  "status": "VALIDATED_FROZEN_RESULT"
+}

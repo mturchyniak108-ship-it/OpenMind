@@ -1,0 +1,524 @@
+[
+  {
+    "name": "activation_recurrence.py",
+    "path": "experiments/model_fractal/activation_recurrence.py",
+    "category": "RECURRENCE",
+    "executable_candidate": true
+  },
+  {
+    "name": "benchmark_maf.py",
+    "path": "experiments/model_fractal/benchmark_maf.py",
+    "category": "MAF",
+    "executable_candidate": true
+  },
+  {
+    "name": "benchmark_maf_advanced.py",
+    "path": "experiments/model_fractal/benchmark_maf_advanced.py",
+    "category": "MAF",
+    "executable_candidate": true
+  },
+  {
+    "name": "canonical_lattice_v21.py",
+    "path": "experiments/model_fractal/canonical_lattice_v21.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "closed_curve_spectrum_v18.py",
+    "path": "experiments/model_fractal/closed_curve_spectrum_v18.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "crystal_lattice_v13.py",
+    "path": "experiments/model_fractal/crystal_lattice_v13.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "crystal_raw_lattice_v15.py",
+    "path": "experiments/model_fractal/crystal_raw_lattice_v15.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "crystal_realization_v14.py",
+    "path": "experiments/model_fractal/crystal_realization_v14.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "fractal_renormalization_v17.py",
+    "path": "experiments/model_fractal/fractal_renormalization_v17.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_null_v28.py",
+    "path": "experiments/model_fractal/geometry_null_v28.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_order_null_v29.py",
+    "path": "experiments/model_fractal/geometry_order_null_v29.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_order_null_v30.py",
+    "path": "experiments/model_fractal/geometry_order_null_v30.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_order_null_v30_reference.py",
+    "path": "experiments/model_fractal/geometry_order_null_v30_reference.py",
+    "category": "ARCHIVE_VARIANT",
+    "executable_candidate": false
+  },
+  {
+    "name": "geometry_scaling_component_localization_test_v43.py",
+    "path": "experiments/model_fractal/geometry_scaling_component_localization_test_v43.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_component_localization_test_v44.py",
+    "path": "experiments/model_fractal/geometry_scaling_component_localization_test_v44.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_component_localization_test_v44_frozen.py",
+    "path": "experiments/model_fractal/geometry_scaling_component_localization_test_v44_frozen.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v33.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v33.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v33_reference.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v33_reference.py",
+    "category": "ARCHIVE_VARIANT",
+    "executable_candidate": false
+  },
+  {
+    "name": "geometry_scaling_model_audit_v34.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v34.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v37.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v37.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v38.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v38.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v38_snapshot.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v38_snapshot.py",
+    "category": "ARCHIVE_VARIANT",
+    "executable_candidate": false
+  },
+  {
+    "name": "geometry_scaling_model_audit_v39.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v39.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_model_audit_v39_backup.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v39_backup.py",
+    "category": "ARCHIVE_VARIANT",
+    "executable_candidate": false
+  },
+  {
+    "name": "geometry_scaling_model_audit_v39_work.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v39_work.py",
+    "category": "ARCHIVE_VARIANT",
+    "executable_candidate": false
+  },
+  {
+    "name": "geometry_scaling_model_audit_v40.py",
+    "path": "experiments/model_fractal/geometry_scaling_model_audit_v40.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_transition_test_v41.py",
+    "path": "experiments/model_fractal/geometry_scaling_transition_test_v41.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_transition_test_v42.py",
+    "path": "experiments/model_fractal/geometry_scaling_transition_test_v42.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_v31.py",
+    "path": "experiments/model_fractal/geometry_scaling_v31.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "geometry_scaling_windows_v32.py",
+    "path": "experiments/model_fractal/geometry_scaling_windows_v32.py",
+    "category": "GEOMETRY_SCALING",
+    "executable_candidate": true
+  },
+  {
+    "name": "gguf_structural_v1.py",
+    "path": "experiments/model_fractal/gguf_structural_v1.py",
+    "category": "GGUF",
+    "executable_candidate": true
+  },
+  {
+    "name": "gguf_to_fractal.py",
+    "path": "experiments/model_fractal/gguf_to_fractal.py",
+    "category": "GGUF",
+    "executable_candidate": true
+  },
+  {
+    "name": "hybrid_fractal.py",
+    "path": "experiments/model_fractal/hybrid_fractal.py",
+    "category": "MAF",
+    "executable_candidate": true
+  },
+  {
+    "name": "hybrid_weighted.py",
+    "path": "experiments/model_fractal/hybrid_weighted.py",
+    "category": "MAF",
+    "executable_candidate": true
+  },
+  {
+    "name": "inspect_gguf_header.py",
+    "path": "experiments/model_fractal/inspect_gguf_header.py",
+    "category": "GGUF",
+    "executable_candidate": true
+  },
+  {
+    "name": "lattice_recovery_v25.py",
+    "path": "experiments/model_fractal/lattice_recovery_v25.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "layer_similarity.py",
+    "path": "experiments/model_fractal/layer_similarity.py",
+    "category": "RECURRENCE",
+    "executable_candidate": true
+  },
+  {
+    "name": "local_environment_v26.py",
+    "path": "experiments/model_fractal/local_environment_v26.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "material_compatibility_v20.py",
+    "path": "experiments/model_fractal/material_compatibility_v20.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "motif_graph_v19.py",
+    "path": "experiments/model_fractal/motif_graph_v19.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "normalized_geometry_v10.py",
+    "path": "experiments/model_fractal/normalized_geometry_v10.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "null_model_v23.py",
+    "path": "experiments/model_fractal/null_model_v23.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "parameter_divergence.py",
+    "path": "experiments/model_fractal/parameter_divergence.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "parameter_fingerprint.py",
+    "path": "experiments/model_fractal/parameter_fingerprint.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "periodicity_scan_v27.py",
+    "path": "experiments/model_fractal/periodicity_scan_v27.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi10Mcorrected.py",
+    "path": "experiments/model_fractal/pi10Mcorrected.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_benchmark.py",
+    "path": "experiments/model_fractal/pi_benchmark.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_benchmark_fixed.py",
+    "path": "experiments/model_fractal/pi_benchmark_fixed.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_full_pipeline.py",
+    "path": "experiments/model_fractal/pi_full_pipeline.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_maf_10m_benchmark.py",
+    "path": "experiments/model_fractal/pi_maf_10m_benchmark.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_predictor_v2.py",
+    "path": "experiments/model_fractal/pi_predictor_v2.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_science_benchmark.py",
+    "path": "experiments/model_fractal/pi_science_benchmark.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "pi_waveform_fractal.py",
+    "path": "experiments/model_fractal/pi_waveform_fractal.py",
+    "category": "PI",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_aware_divergence.py",
+    "path": "experiments/model_fractal/q8_aware_divergence.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_aware_divergence_v3.py",
+    "path": "experiments/model_fractal/q8_aware_divergence_v3.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_component_coherence_v5.py",
+    "path": "experiments/model_fractal/q8_component_coherence_v5.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_cross_metric_v7.py",
+    "path": "experiments/model_fractal/q8_cross_metric_v7.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_parameter_field_v4.py",
+    "path": "experiments/model_fractal/q8_parameter_field_v4.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_parameter_field_v4_1.py",
+    "path": "experiments/model_fractal/q8_parameter_field_v4_1.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_blind_discovery_v13.py",
+    "path": "experiments/model_fractal/q8_phase_blind_discovery_v13.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_component_v8.py",
+    "path": "experiments/model_fractal/q8_phase_component_v8.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_detection_v6.py",
+    "path": "experiments/model_fractal/q8_phase_detection_v6.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_region_discovery_v12.py",
+    "path": "experiments/model_fractal/q8_phase_region_discovery_v12.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_region_validation_v10.py",
+    "path": "experiments/model_fractal/q8_phase_region_validation_v10.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_stability_v11.py",
+    "path": "experiments/model_fractal/q8_phase_stability_v11.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_phase_validation_v9.py",
+    "path": "experiments/model_fractal/q8_phase_validation_v9.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_structural_matched_targets_v14.py",
+    "path": "experiments/model_fractal/q8_structural_matched_targets_v14.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "q8_target_specificity_v15.py",
+    "path": "experiments/model_fractal/q8_target_specificity_v15.py",
+    "category": "Q8",
+    "executable_candidate": true
+  },
+  {
+    "name": "recurrence_stability.py",
+    "path": "experiments/model_fractal/recurrence_stability.py",
+    "category": "RECURRENCE",
+    "executable_candidate": true
+  },
+  {
+    "name": "recurrence_stability_v2.py",
+    "path": "experiments/model_fractal/recurrence_stability_v2.py",
+    "category": "RECURRENCE",
+    "executable_candidate": true
+  },
+  {
+    "name": "spatial_null_v24.py",
+    "path": "experiments/model_fractal/spatial_null_v24.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "structural_divergence_v1.py",
+    "path": "experiments/model_fractal/structural_divergence_v1.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "structural_fingerprint.py",
+    "path": "experiments/model_fractal/structural_fingerprint.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "structural_lattice_v11.py",
+    "path": "experiments/model_fractal/structural_lattice_v11.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "symmetry_spectrum_v16.py",
+    "path": "experiments/model_fractal/symmetry_spectrum_v16.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "threshold_robustness_v25.py",
+    "path": "experiments/model_fractal/threshold_robustness_v25.py",
+    "category": "OTHER",
+    "executable_candidate": true
+  },
+  {
+    "name": "tie_experiment.py",
+    "path": "experiments/model_fractal/tie_experiment.py",
+    "category": "TIE",
+    "executable_candidate": true
+  },
+  {
+    "name": "tie_hybrid_experiment.py",
+    "path": "experiments/model_fractal/tie_hybrid_experiment.py",
+    "category": "TIE",
+    "executable_candidate": true
+  },
+  {
+    "name": "tie_pi_experiment.py",
+    "path": "experiments/model_fractal/tie_pi_experiment.py",
+    "category": "TIE",
+    "executable_candidate": true
+  },
+  {
+    "name": "topology_lattice_v22.py",
+    "path": "experiments/model_fractal/topology_lattice_v22.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "transition_field_v5.py",
+    "path": "experiments/model_fractal/transition_field_v5.py",
+    "category": "TRANSITION",
+    "executable_candidate": true
+  },
+  {
+    "name": "transition_geometry_v6.py",
+    "path": "experiments/model_fractal/transition_geometry_v6.py",
+    "category": "TRANSITION",
+    "executable_candidate": true
+  },
+  {
+    "name": "transition_geometry_v9.py",
+    "path": "experiments/model_fractal/transition_geometry_v9.py",
+    "category": "TRANSITION",
+    "executable_candidate": true
+  },
+  {
+    "name": "transition_periodicity_v8.py",
+    "path": "experiments/model_fractal/transition_periodicity_v8.py",
+    "category": "TRANSITION",
+    "executable_candidate": true
+  },
+  {
+    "name": "transition_recurrence_v7.py",
+    "path": "experiments/model_fractal/transition_recurrence_v7.py",
+    "category": "TRANSITION",
+    "executable_candidate": true
+  },
+  {
+    "name": "unit_cell_v12.py",
+    "path": "experiments/model_fractal/unit_cell_v12.py",
+    "category": "GEOMETRY",
+    "executable_candidate": true
+  },
+  {
+    "name": "visualize_hybrid_basin.py",
+    "path": "experiments/model_fractal/visualize_hybrid_basin.py",
+    "category": "UTILITY",
+    "executable_candidate": false
+  }
+]

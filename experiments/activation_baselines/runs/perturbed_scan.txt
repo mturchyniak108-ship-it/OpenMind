@@ -1,0 +1,27 @@
+ FULL CROSS-LAYER RECURRENCE SCAN
+============================================================
+
+Top 20 non-adjacent layer similarities:
+19 <-> 21 | cosine=0.966015721 | distance=19.095570
+24 <-> 26 | cosine=0.964665307 | distance=22.672485
+32 <-> 34 | cosine=0.964204140 | distance=122.530816
+22 <-> 24 | cosine=0.963506282 | distance=21.667839
+31 <-> 33 | cosine=0.962467043 | distance=108.460814
+20 <-> 22 | cosine=0.961123710 | distance=20.499206
+28 <-> 30 | cosine=0.960674435 | distance=45.488751
+25 <-> 27 | cosine=0.960303041 | distance=28.494973
+18 <-> 20 | cosine=0.960154479 | distance=19.470620
+21 <-> 23 | cosine=0.959510354 | distance=20.808759
+23 <-> 25 | cosine=0.957840582 | distance=25.920893
+33 <-> 35 | cosine=0.957817665 | distance=145.230761
+17 <-> 19 | cosine=0.957466026 | distance=20.908121
+21 <-> 24 | cosine=0.952976667 | distance=24.356186
+27 <-> 29 | cosine=0.950802479 | distance=47.505307
+22 <-> 25 | cosine=0.950215822 | distance=26.726682
+24 <-> 27 | cosine=0.949678667 | distance=32.538910
+19 <-> 22 | cosine=0.948537056 | distance=23.418307
+17 <-> 20 | cosine=0.947782430 | distance=21.870611
+18 <-> 21 | cosine=0.946571772 | distance=24.992275
+
+============================================================
+ LAYER-GAP SIMILARITY PROFILE

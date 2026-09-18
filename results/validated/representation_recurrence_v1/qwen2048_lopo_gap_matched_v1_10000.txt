@@ -1,0 +1,20 @@
+========================================================================================
+ OPENMIND / QWEN-2048 LOPO GAP-MATCHED CONTROL V1
+========================================================================================
+split draws           : 10000
+global draws          : 10000
+
+LOPO_P01 obs=+0.577145 gap=+0.465775 enrich=+0.111370 p=0.000100 holm=0.000800
+LOPO_P02 obs=+0.555188 gap=+0.445916 enrich=+0.109272 p=0.000100 holm=0.000800
+LOPO_P03 obs=+0.547219 gap=+0.429293 enrich=+0.117926 p=0.000100 holm=0.000800
+LOPO_P04 obs=+0.530061 gap=+0.432478 enrich=+0.097583 p=0.000100 holm=0.000800
+LOPO_P05 obs=+0.550873 gap=+0.440323 enrich=+0.110549 p=0.000100 holm=0.000800
+LOPO_P06 obs=+0.522471 gap=+0.410177 enrich=+0.112294 p=0.000100 holm=0.000800
+LOPO_P07 obs=+0.532720 gap=+0.400828 enrich=+0.131892 p=0.000100 holm=0.000800
+LOPO_P08 obs=+0.537653 gap=+0.420845 enrich=+0.116808 p=0.000100 holm=0.000800
+
+positive splits       : 8/8
+global enrichment     : +0.113462
+global null mean      : +0.000051
+global p              : 0.000100
+primary gate          : PASS

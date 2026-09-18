@@ -1,0 +1,43 @@
+{
+  "name": "OpenMind Candidate v1",
+  "status": "EXPERIMENTAL",
+  "purpose": "Frozen structural representation candidate",
+  "spine": [
+    "q8_parameter_field_v4_1.py",
+    "q8_phase_detection_v6.py",
+    "q8_phase_component_v8.py",
+    "transition_field_v5.py",
+    "transition_recurrence_v7.py",
+    "normalized_geometry_v10.py",
+    "structural_lattice_v11.py",
+    "crystal_lattice_v13.py",
+    "canonical_lattice_v21.py",
+    "topology_lattice_v22.py"
+  ],
+  "validation": [
+    "geometry_null_v28.py",
+    "geometry_order_null_v29.py",
+    "geometry_order_null_v30.py",
+    "q8_cross_metric_v7.py",
+    "q8_phase_region_validation_v10.py",
+    "q8_phase_validation_v9.py",
+    "q8_phase_stability_v11.py",
+    "spatial_null_v24.py",
+    "threshold_robustness_v25.py",
+    "lattice_recovery_v25.py",
+    "local_environment_v26.py"
+  ],
+  "excluded_from_claims": [
+    "pi10Mcorrected.py",
+    "pi_full_pipeline.py",
+    "pi_maf_10m_benchmark.py",
+    "pi_science_benchmark.py",
+    "benchmark_maf.py",
+    "benchmark_maf_advanced.py",
+    "tie_experiment.py",
+    "tie_hybrid_experiment.py",
+    "tie_pi_experiment.py",
+    "hybrid_fractal.py",
+    "hybrid_weighted.py"
+  ]
+}

@@ -1,0 +1,45 @@
+====================================================================
+ OPENMIND / FOREST V9A-2048 — LIVE FULL-ACCESS SHADOW RECONSTRUCTION
+====================================================================
+
+LIVE ACTIVATION
+--------------------------------------------------------------------
+target layer             : 18
+prompt tokens            : 7
+target token index        : 6
+dimensions                : 2048
+source copy max error     : 0.000000e+00
+source mutation max error : 0.000000e+00
+
+FOREST FULL ACCESS
+--------------------------------------------------------------------
+selected groups           : 32 / 32
+encoded payload bytes     : 2176
+activation energy fraction: 0.998388557
+activation cosine         : 0.999923474
+activation relative L2    : 0.012392682
+activation max abs error  : 0.147125244
+
+GENERATION CONTROL
+--------------------------------------------------------------------
+next token id             : 576
+next token piece          : " The"
+shadow consumed by llama  : NO
+llama activation written  : NO
+
+V9A DECISION
+--------------------------------------------------------------------
+live activation capture   : PASS
+Forest artifact read      : PASS
+source copy intact        : PASS
+source activation intact  : PASS
+full-access reconstruction: PASS
+result                    : V9A SHADOW PASS
+
+INTERPRETATION BOUNDARY
+--------------------------------------------------------------------
+The live llama activation is observed but never overwritten.
+All 32 Orange groups are used, so routing loss is intentionally absent.
+Any reconstruction difference is primarily BLOCK_INT8_64 quantization.
+The standard sampler consumes only the untouched llama decode result.
+V9A does not establish selective Forest inference replacement.

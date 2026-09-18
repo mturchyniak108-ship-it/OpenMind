@@ -1,0 +1,1111 @@
+{
+  "schema": "openmind.motif_graph.v19",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "layer_count": 28,
+  "period": 8,
+  "bond_threshold": 2.0893456195429265,
+  "edge_count": 76,
+  "degree_mean": 5.428571428571429,
+  "degree_uniformity": 0.375,
+  "periodic_motif_recurrence": [
+    {
+      "from_layer": 0,
+      "to_layer": 8,
+      "similarity": 0.7682230171428571,
+      "coordination_a": 7,
+      "coordination_b": 7
+    },
+    {
+      "from_layer": 1,
+      "to_layer": 9,
+      "similarity": 0.42652923666666664,
+      "coordination_a": 4,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 2,
+      "to_layer": 10,
+      "similarity": 0.5073968833333333,
+      "coordination_a": 4,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 3,
+      "to_layer": 11,
+      "similarity": 0.4677521228571428,
+      "coordination_a": 4,
+      "coordination_b": 7
+    },
+    {
+      "from_layer": 4,
+      "to_layer": 12,
+      "similarity": 0.5130309599999999,
+      "coordination_a": 4,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 5,
+      "to_layer": 13,
+      "similarity": 0.29083761499999994,
+      "coordination_a": 3,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 6,
+      "to_layer": 14,
+      "similarity": 0.4275125616666667,
+      "coordination_a": 3,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 7,
+      "to_layer": 15,
+      "similarity": 0.32932359125,
+      "coordination_a": 8,
+      "coordination_b": 3
+    },
+    {
+      "from_layer": 8,
+      "to_layer": 16,
+      "similarity": 0.6915636885714286,
+      "coordination_a": 7,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 9,
+      "to_layer": 17,
+      "similarity": 0.6816332366666666,
+      "coordination_a": 6,
+      "coordination_b": 5
+    },
+    {
+      "from_layer": 10,
+      "to_layer": 18,
+      "similarity": 0.8144829433333334,
+      "coordination_a": 6,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 11,
+      "to_layer": 19,
+      "similarity": 0.5887327828571429,
+      "coordination_a": 7,
+      "coordination_b": 5
+    },
+    {
+      "from_layer": 12,
+      "to_layer": 20,
+      "similarity": 0.6946864333333334,
+      "coordination_a": 6,
+      "coordination_b": 5
+    },
+    {
+      "from_layer": 13,
+      "to_layer": 21,
+      "similarity": 0.29083761333333336,
+      "coordination_a": 6,
+      "coordination_b": 3
+    },
+    {
+      "from_layer": 14,
+      "to_layer": 22,
+      "similarity": 0.9625320049999999,
+      "coordination_a": 6,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 15,
+      "to_layer": 23,
+      "similarity": 0.49464884,
+      "coordination_a": 3,
+      "coordination_b": 5
+    },
+    {
+      "from_layer": 16,
+      "to_layer": 24,
+      "similarity": 0.6246595028571428,
+      "coordination_a": 6,
+      "coordination_b": 7
+    },
+    {
+      "from_layer": 17,
+      "to_layer": 25,
+      "similarity": 0.6721296483333333,
+      "coordination_a": 5,
+      "coordination_b": 6
+    },
+    {
+      "from_layer": 18,
+      "to_layer": 26,
+      "similarity": 0.6912540171428572,
+      "coordination_a": 6,
+      "coordination_b": 7
+    },
+    {
+      "from_layer": 19,
+      "to_layer": 27,
+      "similarity": 0.5033767628571428,
+      "coordination_a": 5,
+      "coordination_b": 7
+    }
+  ],
+  "edge_recurrence": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "translated_edge": [
+        8,
+        9
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        0,
+        7
+      ],
+      "translated_edge": [
+        8,
+        15
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "translated_edge": [
+        9,
+        10
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        2,
+        3
+      ],
+      "translated_edge": [
+        10,
+        11
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        2,
+        4
+      ],
+      "translated_edge": [
+        10,
+        12
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        2,
+        11
+      ],
+      "translated_edge": [
+        10,
+        19
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        3,
+        4
+      ],
+      "translated_edge": [
+        11,
+        12
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        3,
+        5
+      ],
+      "translated_edge": [
+        11,
+        13
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        3,
+        6
+      ],
+      "translated_edge": [
+        11,
+        14
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        4,
+        5
+      ],
+      "translated_edge": [
+        12,
+        13
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        4,
+        6
+      ],
+      "translated_edge": [
+        12,
+        14
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        5,
+        6
+      ],
+      "translated_edge": [
+        13,
+        14
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        7,
+        8
+      ],
+      "translated_edge": [
+        15,
+        16
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        8,
+        9
+      ],
+      "translated_edge": [
+        16,
+        17
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        8,
+        10
+      ],
+      "translated_edge": [
+        16,
+        18
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        8,
+        11
+      ],
+      "translated_edge": [
+        16,
+        19
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        8,
+        12
+      ],
+      "translated_edge": [
+        16,
+        20
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        8,
+        13
+      ],
+      "translated_edge": [
+        16,
+        21
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        8,
+        14
+      ],
+      "translated_edge": [
+        16,
+        22
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        9,
+        10
+      ],
+      "translated_edge": [
+        17,
+        18
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        9,
+        11
+      ],
+      "translated_edge": [
+        17,
+        19
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        9,
+        12
+      ],
+      "translated_edge": [
+        17,
+        20
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        9,
+        13
+      ],
+      "translated_edge": [
+        17,
+        21
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        9,
+        14
+      ],
+      "translated_edge": [
+        17,
+        22
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        10,
+        11
+      ],
+      "translated_edge": [
+        18,
+        19
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        10,
+        12
+      ],
+      "translated_edge": [
+        18,
+        20
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        10,
+        13
+      ],
+      "translated_edge": [
+        18,
+        21
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        10,
+        14
+      ],
+      "translated_edge": [
+        18,
+        22
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        11,
+        12
+      ],
+      "translated_edge": [
+        19,
+        20
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        11,
+        13
+      ],
+      "translated_edge": [
+        19,
+        21
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        11,
+        14
+      ],
+      "translated_edge": [
+        19,
+        22
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        12,
+        13
+      ],
+      "translated_edge": [
+        20,
+        21
+      ],
+      "preserved": false
+    },
+    {
+      "edge": [
+        12,
+        14
+      ],
+      "translated_edge": [
+        20,
+        22
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        13,
+        14
+      ],
+      "translated_edge": [
+        21,
+        22
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        15,
+        16
+      ],
+      "translated_edge": [
+        23,
+        24
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        15,
+        17
+      ],
+      "translated_edge": [
+        23,
+        25
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        15,
+        18
+      ],
+      "translated_edge": [
+        23,
+        26
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        16,
+        17
+      ],
+      "translated_edge": [
+        24,
+        25
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        16,
+        18
+      ],
+      "translated_edge": [
+        24,
+        26
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        16,
+        19
+      ],
+      "translated_edge": [
+        24,
+        27
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        17,
+        18
+      ],
+      "translated_edge": [
+        25,
+        26
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        17,
+        19
+      ],
+      "translated_edge": [
+        25,
+        27
+      ],
+      "preserved": true
+    },
+    {
+      "edge": [
+        18,
+        19
+      ],
+      "translated_edge": [
+        26,
+        27
+      ],
+      "preserved": true
+    }
+  ],
+  "edge_recurrence_score": 0.813953488372093,
+  "bond_recurrence": [
+    {
+      "from_layer": 0,
+      "to_layer": 8,
+      "similarity": 0.7682230171428571
+    },
+    {
+      "from_layer": 1,
+      "to_layer": 9,
+      "similarity": 0.639793855
+    },
+    {
+      "from_layer": 2,
+      "to_layer": 10,
+      "similarity": 0.761095325
+    },
+    {
+      "from_layer": 3,
+      "to_layer": 11,
+      "similarity": 0.8185662149999999
+    },
+    {
+      "from_layer": 4,
+      "to_layer": 12,
+      "similarity": 0.7695464399999999
+    },
+    {
+      "from_layer": 5,
+      "to_layer": 13,
+      "similarity": 0.5816752299999999
+    },
+    {
+      "from_layer": 6,
+      "to_layer": 14,
+      "similarity": 0.8550251233333334
+    },
+    {
+      "from_layer": 7,
+      "to_layer": 15,
+      "similarity": 0.8781962433333333
+    },
+    {
+      "from_layer": 8,
+      "to_layer": 16,
+      "similarity": 0.8068243033333333
+    },
+    {
+      "from_layer": 9,
+      "to_layer": 17,
+      "similarity": 0.817959884
+    },
+    {
+      "from_layer": 10,
+      "to_layer": 18,
+      "similarity": 0.8144829433333334
+    },
+    {
+      "from_layer": 11,
+      "to_layer": 19,
+      "similarity": 0.8242258960000001
+    },
+    {
+      "from_layer": 12,
+      "to_layer": 20,
+      "similarity": 0.83362372
+    },
+    {
+      "from_layer": 13,
+      "to_layer": 21,
+      "similarity": 0.5816752266666667
+    },
+    {
+      "from_layer": 14,
+      "to_layer": 22,
+      "similarity": 0.9625320049999999
+    },
+    {
+      "from_layer": 15,
+      "to_layer": 23,
+      "similarity": 0.8244147333333334
+    },
+    {
+      "from_layer": 16,
+      "to_layer": 24,
+      "similarity": 0.72876942
+    },
+    {
+      "from_layer": 17,
+      "to_layer": 25,
+      "similarity": 0.806555578
+    },
+    {
+      "from_layer": 18,
+      "to_layer": 26,
+      "similarity": 0.80646302
+    },
+    {
+      "from_layer": 19,
+      "to_layer": 27,
+      "similarity": 0.704727468
+    }
+  ],
+  "bond_recurrence_score": 0.7792187823238095,
+  "motif_score": 0.7085112857552325,
+  "classification": "MODERATE_PERIODIC_MOTIF",
+  "local_signatures": [
+    {
+      "layer": 0,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.0,
+          0.27043235,
+          0.87596312,
+          1.03743117,
+          1.56202891,
+          1.56884865,
+          1.68529581
+        ]
+      }
+    },
+    {
+      "layer": 1,
+      "signature": {
+        "coordination": 4,
+        "normalized_lengths": [
+          0.8674364,
+          1.01358922,
+          1.05948719,
+          1.05948719
+        ]
+      }
+    },
+    {
+      "layer": 2,
+      "signature": {
+        "coordination": 4,
+        "normalized_lengths": [
+          0.72079415,
+          0.89932874,
+          1.17392083,
+          1.20595628
+        ]
+      }
+    },
+    {
+      "layer": 3,
+      "signature": {
+        "coordination": 4,
+        "normalized_lengths": [
+          0.83786275,
+          0.88991832,
+          0.95225543,
+          1.3199635
+        ]
+      }
+    },
+    {
+      "layer": 4,
+      "signature": {
+        "coordination": 4,
+        "normalized_lengths": [
+          0.57976054,
+          0.88462374,
+          0.96360261,
+          1.57201311
+        ]
+      }
+    },
+    {
+      "layer": 5,
+      "signature": {
+        "coordination": 3,
+        "normalized_lengths": [
+          0.7632638,
+          0.91311054,
+          1.32362565
+        ]
+      }
+    },
+    {
+      "layer": 6,
+      "signature": {
+        "coordination": 3,
+        "normalized_lengths": [
+          0.68202897,
+          0.94755286,
+          1.37041817
+        ]
+      }
+    },
+    {
+      "layer": 7,
+      "signature": {
+        "coordination": 8,
+        "normalized_lengths": [
+          0.92227382,
+          0.9261385,
+          0.9642559,
+          0.9642559,
+          0.99888254,
+          1.03990419,
+          1.07848249,
+          1.10580664
+        ]
+      }
+    },
+    {
+      "layer": 8,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.43192876,
+          0.64972302,
+          0.7353824,
+          1.00787647,
+          1.19199264,
+          1.47894354,
+          1.50415316
+        ]
+      }
+    },
+    {
+      "layer": 9,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.450401,
+          0.50493487,
+          0.62573233,
+          1.14086716,
+          1.63022896,
+          1.64783567
+        ]
+      }
+    },
+    {
+      "layer": 10,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.50069756,
+          0.70097371,
+          0.7863066,
+          1.05640343,
+          1.40844884,
+          1.54716986
+        ]
+      }
+    },
+    {
+      "layer": 11,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.57287407,
+          0.82232115,
+          0.82421863,
+          1.05485101,
+          1.06538075,
+          1.08439017,
+          1.57596422
+        ]
+      }
+    },
+    {
+      "layer": 12,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.86443261,
+          0.90251854,
+          0.91349967,
+          1.00286868,
+          1.01273862,
+          1.30394187
+        ]
+      }
+    },
+    {
+      "layer": 13,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.37452476,
+          0.58781791,
+          0.78268301,
+          1.22624906,
+          1.38372054,
+          1.64500471
+        ]
+      }
+    },
+    {
+      "layer": 14,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.71762097,
+          0.93494695,
+          0.98369145,
+          1.02780236,
+          1.08870708,
+          1.24723119
+        ]
+      }
+    },
+    {
+      "layer": 15,
+      "signature": {
+        "coordination": 3,
+        "normalized_lengths": [
+          0.85295207,
+          0.90642051,
+          1.24062743
+        ]
+      }
+    },
+    {
+      "layer": 16,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.10447826,
+          0.67297452,
+          0.87265795,
+          1.22530924,
+          1.31849704,
+          1.806083
+        ]
+      }
+    },
+    {
+      "layer": 17,
+      "signature": {
+        "coordination": 5,
+        "normalized_lengths": [
+          0.72337933,
+          0.80497183,
+          0.81797443,
+          1.00968471,
+          1.6439897
+        ]
+      }
+    },
+    {
+      "layer": 18,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.10740188,
+          0.60761032,
+          0.911568,
+          1.27603142,
+          1.33855674,
+          1.75883164
+        ]
+      }
+    },
+    {
+      "layer": 19,
+      "signature": {
+        "coordination": 5,
+        "normalized_lengths": [
+          0.71711257,
+          0.81648234,
+          0.85085343,
+          0.95143175,
+          1.6641199
+        ]
+      }
+    },
+    {
+      "layer": 20,
+      "signature": {
+        "coordination": 5,
+        "normalized_lengths": [
+          0.60046285,
+          0.9371923,
+          1.06280835,
+          1.12890846,
+          1.27062804
+        ]
+      }
+    },
+    {
+      "layer": 21,
+      "signature": {
+        "coordination": 3,
+        "normalized_lengths": [
+          0.65505246,
+          1.13500541,
+          1.20994213
+        ]
+      }
+    },
+    {
+      "layer": 22,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.62234445,
+          0.93452315,
+          1.01109624,
+          1.03579489,
+          1.16571375,
+          1.23052753
+        ]
+      }
+    },
+    {
+      "layer": 23,
+      "signature": {
+        "coordination": 5,
+        "normalized_lengths": [
+          0.55262362,
+          0.69044083,
+          1.23017976,
+          1.23017976,
+          1.29657603
+        ]
+      }
+    },
+    {
+      "layer": 24,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.54507895,
+          0.63168155,
+          0.93391543,
+          0.93391543,
+          0.97526293,
+          1.35647858,
+          1.62366714
+        ]
+      }
+    },
+    {
+      "layer": 25,
+      "signature": {
+        "coordination": 6,
+        "normalized_lengths": [
+          0.60026436,
+          0.86839483,
+          0.86839483,
+          0.86911724,
+          1.05429343,
+          1.7395353
+        ]
+      }
+    },
+    {
+      "layer": 26,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.25420413,
+          0.25420413,
+          0.99966403,
+          1.01835085,
+          1.41049839,
+          1.51553645,
+          1.54754202
+        ]
+      }
+    },
+    {
+      "layer": 27,
+      "signature": {
+        "coordination": 7,
+        "normalized_lengths": [
+          0.0,
+          0.27043235,
+          0.87596312,
+          1.03743117,
+          1.56202891,
+          1.56884865,
+          1.68529581
+        ]
+      }
+    }
+  ]
+}

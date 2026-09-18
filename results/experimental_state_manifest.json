@@ -1,0 +1,586 @@
+{
+  "created_utc": "2026-08-24T00:21:27.910687+00:00",
+  "experiment_count": 87,
+  "artifacts": {
+    "experiments/model_fractal/MIC.json": {
+      "sha256": "b02a077a61c074b0177dac95e0d10352d94ba3bd9ef70c6edcea3fa434f5b75d",
+      "bytes": 965
+    },
+    "experiments/model_fractal/activation_recurrence.py": {
+      "sha256": "323e1bdd3e6477194f22b1c593c8c4de8a2c6359b63aeb9f781f812f7f9f0713",
+      "bytes": 5142
+    },
+    "experiments/model_fractal/benchmark_maf.py": {
+      "sha256": "0f1386ba35711d3f55a83f6b88d10a1cf04591c3f6e4790e010e5d2ce4ba3a1b",
+      "bytes": 1858
+    },
+    "experiments/model_fractal/benchmark_maf_advanced.py": {
+      "sha256": "f685aa38ba0a0351c02447de12654a95ea1ef122271f1fe2c091ef71091a3f44",
+      "bytes": 1560
+    },
+    "experiments/model_fractal/canonical_lattice_v21.json": {
+      "sha256": "b576c285328c79aa47f3822ef820bd7e6476e62e3efc3145f8b43ff718452acc",
+      "bytes": 3327
+    },
+    "experiments/model_fractal/canonical_lattice_v21.py": {
+      "sha256": "9a11479583e609768d43565f5f829468fe96bdecce6f574732923b74b2b50339",
+      "bytes": 10891
+    },
+    "experiments/model_fractal/closed_curve_spectrum_v18.json": {
+      "sha256": "55b0927946a7b2292f2ff16e984d6ca36b62bd4e48e874267460d4996b8a6d62",
+      "bytes": 2683
+    },
+    "experiments/model_fractal/closed_curve_spectrum_v18.py": {
+      "sha256": "8c8895afef12d442f9b24fc73e78fd8621b3582d337a41a565a3fe20e0f31aa2",
+      "bytes": 13113
+    },
+    "experiments/model_fractal/crystal_lattice_v13.json": {
+      "sha256": "c66d9b5d48d62556d0080ba3d072817ca93f721eea18712320d0a30b16ba8622",
+      "bytes": 4419
+    },
+    "experiments/model_fractal/crystal_lattice_v13.py": {
+      "sha256": "b42049d50d44301a63776d5715cd7984dd438e233c52f729fbe6cdd475968de5",
+      "bytes": 10251
+    },
+    "experiments/model_fractal/crystal_raw_lattice_v15.json": {
+      "sha256": "50d5679f87796334e079cb4b0b34bfe28c1ba9c24e0696f3d4c218bd276fabab",
+      "bytes": 2716
+    },
+    "experiments/model_fractal/crystal_raw_lattice_v15.py": {
+      "sha256": "43cedb81a08b7746404c6685f012e12fa3dacfba8f0fc0a7cd46875f1f9c113c",
+      "bytes": 9084
+    },
+    "experiments/model_fractal/crystal_realization_v14.json": {
+      "sha256": "d2079013e3063eb360014bfe273b28cd173bb4b66a98134ffd69edcec8e81828",
+      "bytes": 581289
+    },
+    "experiments/model_fractal/crystal_realization_v14.py": {
+      "sha256": "9d3d60c1dac27c58766c3ac3879f81e4705fd1080b1f8c05ee521ff01dff9ac1",
+      "bytes": 10302
+    },
+    "experiments/model_fractal/fractal_renormalization_v17.json": {
+      "sha256": "2f6adf38b63d488e99ab5eda099b4a251e9f9722602c1a3c86b9c768b566c676",
+      "bytes": 2831
+    },
+    "experiments/model_fractal/fractal_renormalization_v17.py": {
+      "sha256": "2ed78cc34a930140eca9a6badd92fdcfc4043ea65c49697e1ddb5755b50451e4",
+      "bytes": 12600
+    },
+    "experiments/model_fractal/geometry_null_v28.json": {
+      "sha256": "e6ded1ffd0ae50278cab16db10ec82095ac3baf9d7868744e9ebad0148a82a4b",
+      "bytes": 4306
+    },
+    "experiments/model_fractal/geometry_null_v28.py": {
+      "sha256": "7db297bdd31860d5a73215af4dbb11c4faa6f19ba01ceaadae2da0a116108dc2",
+      "bytes": 9374
+    },
+    "experiments/model_fractal/geometry_order_null_v29.json": {
+      "sha256": "ae370f0b0938ea3067edbc46e77b810a4ea52dc22b06d5d669c948bfefbe8ff9",
+      "bytes": 1102
+    },
+    "experiments/model_fractal/geometry_order_null_v29.py": {
+      "sha256": "35a0243271617cd3b6fe0c2ed3f4b45f96cd02ad12f81257dae8e6edf49fe4ff",
+      "bytes": 6641
+    },
+    "experiments/model_fractal/geometry_order_null_v30.json": {
+      "sha256": "56af93bc4fef5204b1726e29d1139358f4f4d30eb641d1478bf6f87e9b54c7a9",
+      "bytes": 1154
+    },
+    "experiments/model_fractal/geometry_order_null_v30.py": {
+      "sha256": "ba59a514247773d7f76d9b5eaef3aa533b07050845392ac64218c45abdd33acc",
+      "bytes": 7581
+    },
+    "experiments/model_fractal/geometry_order_null_v30_reference.json": {
+      "sha256": "56af93bc4fef5204b1726e29d1139358f4f4d30eb641d1478bf6f87e9b54c7a9",
+      "bytes": 1154
+    },
+    "experiments/model_fractal/geometry_order_null_v30_reference.py": {
+      "sha256": "ba59a514247773d7f76d9b5eaef3aa533b07050845392ac64218c45abdd33acc",
+      "bytes": 7581
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v43.json": {
+      "sha256": "a097457afc4f6480a7ab62ceb6357f831a9b5c7ec01f0a8b2f95b9fa5e5402bc",
+      "bytes": 64816
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v43.py": {
+      "sha256": "2db0516f8fa493f197bab018541068b6e01eaed616ef9bb8ad67ce0189a04b6a",
+      "bytes": 22990
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v44.json": {
+      "sha256": "a841c0bbed67c2e3b083f31434413d926a28f316169498af79454a58e78bcc4a",
+      "bytes": 127362
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v44.py": {
+      "sha256": "3150778ccc7a4430ad54549fa6a328710c345df89708ddfdc1cd21c798eee958",
+      "bytes": 30864
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v44_frozen.json": {
+      "sha256": "a841c0bbed67c2e3b083f31434413d926a28f316169498af79454a58e78bcc4a",
+      "bytes": 127362
+    },
+    "experiments/model_fractal/geometry_scaling_component_localization_test_v44_frozen.py": {
+      "sha256": "3150778ccc7a4430ad54549fa6a328710c345df89708ddfdc1cd21c798eee958",
+      "bytes": 30864
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v33.json": {
+      "sha256": "8ce22bf45f6ba8370ea1a501c9f50edd0a2c8b91b7d86d8ae3ec0f66fa2fef6f",
+      "bytes": 26029
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v33.py": {
+      "sha256": "b6657f5c16b2617567a8877a6d75440fc8cdc3ebd5cc945d81ac5cc833c72052",
+      "bytes": 11309
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v33_reference.json": {
+      "sha256": "8ce22bf45f6ba8370ea1a501c9f50edd0a2c8b91b7d86d8ae3ec0f66fa2fef6f",
+      "bytes": 26029
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v33_reference.py": {
+      "sha256": "b6657f5c16b2617567a8877a6d75440fc8cdc3ebd5cc945d81ac5cc833c72052",
+      "bytes": 11309
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v34.json": {
+      "sha256": "5b2bb90c3e241149cafeb43106a5763bd6e392376dbf89a019003de36ce23098",
+      "bytes": 26075
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v34.py": {
+      "sha256": "92a4563dac326714ed8dc84f4bf3dbee26662f4dc9719c60a748c2f5ec0894c2",
+      "bytes": 12083
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v37.json": {
+      "sha256": "76432503a737c9bf7e0eb7139519255c76c8e3b9b7efd1aef0277bb94b73efcb",
+      "bytes": 31370
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v37.py": {
+      "sha256": "c1a115863988332034c5b6929a4219994a8d85fa8152c8549471ae6d98cde38f",
+      "bytes": 11975
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v38.json": {
+      "sha256": "d42a89132a8c29f1e4d735ec8278154a57afbaa464646ed400b84c42a1818a0b",
+      "bytes": 3308
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v38.py": {
+      "sha256": "d274bac9295c47b6ea261f2c92ff200424a32cca805a2bf216fb874442f7bf83",
+      "bytes": 17675
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v38_snapshot.json": {
+      "sha256": "d42a89132a8c29f1e4d735ec8278154a57afbaa464646ed400b84c42a1818a0b",
+      "bytes": 3308
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v38_snapshot.py": {
+      "sha256": "d274bac9295c47b6ea261f2c92ff200424a32cca805a2bf216fb874442f7bf83",
+      "bytes": 17675
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v39.json": {
+      "sha256": "06ff12570e061a932cde2f4f50a4c47c7275d30428aa1cd1af16ede053e126a1",
+      "bytes": 14547
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v39.py": {
+      "sha256": "9ce91696f9aafe42915da16f278314b93453c88fcc672e5a95c290ddcf4f0f9c",
+      "bytes": 21326
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v39_backup.py": {
+      "sha256": "d274bac9295c47b6ea261f2c92ff200424a32cca805a2bf216fb874442f7bf83",
+      "bytes": 17675
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v39_work.py": {
+      "sha256": "14c729d20eb32c4b6c8fe9a4faf600a11eb81e03738acec8526f69e893a769fb",
+      "bytes": 17715
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v40.json": {
+      "sha256": "bded370d4a4ae3a20a818c31b26f2e8c679106c5477895ffa76e30c3e6785d29",
+      "bytes": 30256
+    },
+    "experiments/model_fractal/geometry_scaling_model_audit_v40.py": {
+      "sha256": "2e8343429a8be6b54bf2cc9d6ebcad84013932ffb945569de090d4780e6e30d0",
+      "bytes": 22608
+    },
+    "experiments/model_fractal/geometry_scaling_transition_test_v41.json": {
+      "sha256": "9e69ebbe1d623c852549d44760517428e8bd61b6c085de365aa922f28614701e",
+      "bytes": 14756
+    },
+    "experiments/model_fractal/geometry_scaling_transition_test_v41.py": {
+      "sha256": "92f9c1a9254c91157f332ba37f7b942c5d014de6cf052a33a165bd19d9da5f6a",
+      "bytes": 18382
+    },
+    "experiments/model_fractal/geometry_scaling_transition_test_v42.json": {
+      "sha256": "ec9b450b9f97ca97e993484a31778879be1226ba8218008be248fe732f75c730",
+      "bytes": 129168
+    },
+    "experiments/model_fractal/geometry_scaling_transition_test_v42.py": {
+      "sha256": "ff0a2d46ae5eaae8958498f2b8009385273c55cf847dca879cae4116da189cd1",
+      "bytes": 21963
+    },
+    "experiments/model_fractal/geometry_scaling_v31.json": {
+      "sha256": "da3b0943d2fa7795ad8bcdc0bd9baedaf108b6ec2f75efe5e2d402f69e8e5572",
+      "bytes": 13827
+    },
+    "experiments/model_fractal/geometry_scaling_v31.py": {
+      "sha256": "0786b928b9ecbe56100e48edaf4c16b297ad8b741f45ca91e0a7215c301ecb4a",
+      "bytes": 6962
+    },
+    "experiments/model_fractal/geometry_scaling_windows_v32.json": {
+      "sha256": "58911dd2925bed72e31378e5604541bce4d24206ce238013a8a6bc7225906c9f",
+      "bytes": 9100
+    },
+    "experiments/model_fractal/geometry_scaling_windows_v32.py": {
+      "sha256": "0311086a0f4d93b6ea7e013898794e4dd0d1d93ae294d0101598c8bc6fa1709b",
+      "bytes": 5476
+    },
+    "experiments/model_fractal/gguf_structural_v1.py": {
+      "sha256": "3fc9ae96d3ee647da3623509fd6686d863964c922609ba5dc9f67978bfcfec86",
+      "bytes": 8248
+    },
+    "experiments/model_fractal/gguf_structure_v1.json": {
+      "sha256": "6595f0a8793ff2bbd05a703e9ad31f40dcd2f80998d8c984efe13fcfd9982f66",
+      "bytes": 83089
+    },
+    "experiments/model_fractal/gguf_to_fractal.py": {
+      "sha256": "b4d338c351192d837421ce1e3daf15d2f585d64f59ff8d609a26485806267a82",
+      "bytes": 3412
+    },
+    "experiments/model_fractal/hybrid_fractal.py": {
+      "sha256": "042694b60e7b1e0576d49c76c52e0e998a50a3d85df113d95300499ed275b6a3",
+      "bytes": 1852
+    },
+    "experiments/model_fractal/hybrid_weighted.py": {
+      "sha256": "8123d8e04591387f216750275bd00a39c3f7057a4fc3f908165c24ae796d67c5",
+      "bytes": 1417
+    },
+    "experiments/model_fractal/inspect_gguf_header.py": {
+      "sha256": "c9956d772a5ae9c1b10aa6b0aead21d0fd67867fafa941e25d69abb8e67677d0",
+      "bytes": 5551
+    },
+    "experiments/model_fractal/lattice_recovery_v25.json": {
+      "sha256": "cc283b6a698d41c7d397fbb9b6a7f188cdab9de2c2acee6bd6fbe011e4c168f9",
+      "bytes": 1405
+    },
+    "experiments/model_fractal/lattice_recovery_v25.py": {
+      "sha256": "68e069207099b426ef637350a8216da0d062c82cb391a543f70f5cddc2a0a333",
+      "bytes": 11810
+    },
+    "experiments/model_fractal/layer_similarity.py": {
+      "sha256": "a9c8eae8de9cbf101e0cfb5619b26295e55528e269d7ac3f441f31e5113e84ec",
+      "bytes": 11778
+    },
+    "experiments/model_fractal/local_environment_v26.json": {
+      "sha256": "1dd9767dfe608a5c0a319210d2b7301803e331a9f2667d99fe17114257401435",
+      "bytes": 758
+    },
+    "experiments/model_fractal/local_environment_v26.py": {
+      "sha256": "2f2fd711f582689ff7abef2b71f56660b85c5fd03f2273ce84c919f1ac5c1230",
+      "bytes": 12828
+    },
+    "experiments/model_fractal/material_compatibility_v20.json": {
+      "sha256": "aba2575c4eee676eb1d358ed674abc26ab5fbbf2a041eb3ce968a74c135f31fe",
+      "bytes": 1232
+    },
+    "experiments/model_fractal/material_compatibility_v20.py": {
+      "sha256": "4c039f4984491dff664000abefedf9ddd9e672893c04364c01ad23535bfafa36",
+      "bytes": 11788
+    },
+    "experiments/model_fractal/motif_graph_v19.json": {
+      "sha256": "39129965fcb830734a6b2fd2cf301ad7cbcdbd5df1ce4baf484dfd505e49b8fb",
+      "bytes": 18550
+    },
+    "experiments/model_fractal/motif_graph_v19.py": {
+      "sha256": "73eeeceb69466f764edf89a7c56d1400c37a6fa7192095fd8094a01fb7a018b5",
+      "bytes": 9332
+    },
+    "experiments/model_fractal/normalized_geometry_v10.json": {
+      "sha256": "cb35675e34d0b4676b3bd2e0733826ab753cb783d9b5406bba4916d9585ecbe6",
+      "bytes": 9642
+    },
+    "experiments/model_fractal/normalized_geometry_v10.py": {
+      "sha256": "0f2898afe2f17a6abe6a3251939b2a40aa47f335ae0f80f92b42a7cd9f1338fe",
+      "bytes": 5947
+    },
+    "experiments/model_fractal/null_model_v23.json": {
+      "sha256": "d886e0167164c28dd24f1cd7974dfd3054cc5fcd9905faa3b709f42417c5f560",
+      "bytes": 910
+    },
+    "experiments/model_fractal/null_model_v23.py": {
+      "sha256": "1d2f4d7ed3480e9405ba3458a6e9adb1b17957c11acd538830054f314ea64d25",
+      "bytes": 8425
+    },
+    "experiments/model_fractal/parameter_divergence.py": {
+      "sha256": "e8eda71f971fca01843b0b5ecf1c4fee3f6c123deb764bdfe3a79cf1ed3d5385",
+      "bytes": 9521
+    },
+    "experiments/model_fractal/parameter_fingerprint.py": {
+      "sha256": "ae6fc272944bbe9ab14873e7e3e88ab4a81fe3b31b9d9e8a940bf4be792438e7",
+      "bytes": 8550
+    },
+    "experiments/model_fractal/periodicity_scan_v27.json": {
+      "sha256": "a1a91f55f742fdc2ea160460368d0cd491862d83564e6c3469dd76c42535518b",
+      "bytes": 6341
+    },
+    "experiments/model_fractal/periodicity_scan_v27.py": {
+      "sha256": "5c7304c4cfe29a0d1b219192127f7b48983d042f596e8f5c1877f2725f7f3a37",
+      "bytes": 9328
+    },
+    "experiments/model_fractal/pi10Mcorrected.py": {
+      "sha256": "ba64a7e77b8737143311920d7c26cd0d4a18434fe31737ade9f3c50c80906a28",
+      "bytes": 3537
+    },
+    "experiments/model_fractal/pi_benchmark.py": {
+      "sha256": "6d13632cd0a5a59f21ce78b80dc9f3700efb7e0777e45ad43f274dc337fba81b",
+      "bytes": 1492
+    },
+    "experiments/model_fractal/pi_benchmark_fixed.py": {
+      "sha256": "ef5c8c54dae962b0927affff2ff7bcc8d7e3eba2517bcbcfbdfcd324b0f980b2",
+      "bytes": 1370
+    },
+    "experiments/model_fractal/pi_full_pipeline.py": {
+      "sha256": "771de69d4ff0cf6f59a006fec8a6b48825d19ffa363ee61e012663f0b1635bb8",
+      "bytes": 3084
+    },
+    "experiments/model_fractal/pi_maf_10m_benchmark.py": {
+      "sha256": "378e554993587e2593ab85cc1e29eb3460135d5ba73cfc88cd8982f766b7ebbc",
+      "bytes": 2489
+    },
+    "experiments/model_fractal/pi_predictor_v2.py": {
+      "sha256": "d2b8ab1cb0ed2a12c56a9584133271366e743cf2756ec266449dd99c78cd475c",
+      "bytes": 1966
+    },
+    "experiments/model_fractal/pi_science_benchmark.py": {
+      "sha256": "25031ece3e7b473a00bfc8ad7724e036d1a4cba89fe9b86dadd4310a24bccb86",
+      "bytes": 3524
+    },
+    "experiments/model_fractal/pi_waveform_fractal.py": {
+      "sha256": "567b1b4f85f8eb255e66a53822483ffb0d66ab2223107f3e27604d64d2a17593",
+      "bytes": 4242
+    },
+    "experiments/model_fractal/q8_aware_divergence.py": {
+      "sha256": "1f248b876b2b6a0a4d2574d4f7d825453d5bc341e20964d73b0c1a70eafb32ee",
+      "bytes": 11522
+    },
+    "experiments/model_fractal/q8_aware_divergence_v3.py": {
+      "sha256": "06ffe944f75cc6d00c9e5aaa9a242a81150a2e375db4e4683babd7e8f38906a7",
+      "bytes": 14893
+    },
+    "experiments/model_fractal/q8_component_coherence_v5.json": {
+      "sha256": "75f90f9e8b936ef083343e6160e19c3309a5b18368bd783e99947d7dce67f781",
+      "bytes": 82175
+    },
+    "experiments/model_fractal/q8_component_coherence_v5.py": {
+      "sha256": "a98d0c46f3844976698bbe9a3befa85a30063d5881d8c991dbcaaf1a6ca041a7",
+      "bytes": 8946
+    },
+    "experiments/model_fractal/q8_cross_metric_v7.json": {
+      "sha256": "4e02e635b2f274cc049daed3a6a4bf373fc3ef164144b3a251f2d00ac37337b9",
+      "bytes": 22536
+    },
+    "experiments/model_fractal/q8_cross_metric_v7.py": {
+      "sha256": "685c1037f94a3f1ac1a5eb536063c8b10d73313406dc3602920880cdfc27072e",
+      "bytes": 8606
+    },
+    "experiments/model_fractal/q8_parameter_field_v4.json": {
+      "sha256": "39627e8d581d661c1631b69227f6420b45959ecb70f52370e762240dd6d4a989",
+      "bytes": 298804
+    },
+    "experiments/model_fractal/q8_parameter_field_v4.py": {
+      "sha256": "1522f3633b3274fe230fd312d946789cc67e497d3e949ef04fac3d112005d97f",
+      "bytes": 14327
+    },
+    "experiments/model_fractal/q8_parameter_field_v4_1.json": {
+      "sha256": "e3ae9d7fec5100488322b5cbfddf2e78783bb4bd216554bedb65b5d54c3aa1f4",
+      "bytes": 240900
+    },
+    "experiments/model_fractal/q8_parameter_field_v4_1.py": {
+      "sha256": "03e581a31f87109e105bd5730b5a64e66622c2ee4939c3526fcf5a616c1698a0",
+      "bytes": 14303
+    },
+    "experiments/model_fractal/q8_phase_blind_discovery_v13.json": {
+      "sha256": "47e05e2221040d02cff5829dd2b85b3d54b8b61dfbb515de4e6940dece99dd92",
+      "bytes": 83083
+    },
+    "experiments/model_fractal/q8_phase_blind_discovery_v13.py": {
+      "sha256": "56d8452f90784b3a4011247de600642ddc440d41b4907971741e6afa7d9d240a",
+      "bytes": 9236
+    },
+    "experiments/model_fractal/q8_phase_component_v8.json": {
+      "sha256": "7e9004843b2b9a28a7b58d4bc537bfd7694abbbf4881c483cca19443d5133509",
+      "bytes": 7623
+    },
+    "experiments/model_fractal/q8_phase_component_v8.py": {
+      "sha256": "a429c8e8eaf84e7e637457b979eb4a5bb55056f88a1d010acbad26dcbd956154",
+      "bytes": 7234
+    },
+    "experiments/model_fractal/q8_phase_detection_v6.json": {
+      "sha256": "af8e9609cf01252f1c80734cb1f6fd0b1c6e7bf3b195b27cef7407723551c622",
+      "bytes": 18415
+    },
+    "experiments/model_fractal/q8_phase_detection_v6.py": {
+      "sha256": "0963d1847b0b760b72460f4d20b49af78c2f8100d000436d1faba51d4e9483d0",
+      "bytes": 8497
+    },
+    "experiments/model_fractal/q8_phase_region_discovery_v12.json": {
+      "sha256": "54d1a22666fd719febb01004b47459b24a7c1eb9e9ebf3b3b57111f10cb29ff3",
+      "bytes": 106442
+    },
+    "experiments/model_fractal/q8_phase_region_discovery_v12.py": {
+      "sha256": "592e771e3d43050a750ac701ebd9c870d392b2fefd0d66b711386119176fb874",
+      "bytes": 10043
+    },
+    "experiments/model_fractal/q8_phase_region_validation_v10.json": {
+      "sha256": "7cfffc1b21df6ec7b6cb6ead5e450d3cb083882892f58acf3dffcf0ef83e831f",
+      "bytes": 16233
+    },
+    "experiments/model_fractal/q8_phase_region_validation_v10.py": {
+      "sha256": "6f872acc3c6c03517209963faccc4214753756b335971cb9abb0e9a1834e8a1b",
+      "bytes": 9984
+    },
+    "experiments/model_fractal/q8_phase_stability_v11.json": {
+      "sha256": "0677005746c0feba927c6013b66c59ef077a7c7e06a3646bb296a538bc240678",
+      "bytes": 10744
+    },
+    "experiments/model_fractal/q8_phase_stability_v11.py": {
+      "sha256": "d1ba96469fad2f6b4460a80488e6cb59498e5ee301a18606e28b75e3518b0b32",
+      "bytes": 5621
+    },
+    "experiments/model_fractal/q8_phase_validation_v9.json": {
+      "sha256": "f18244dc8fed9aa06e55b92cbf342305042175f5b90e5d4b01c4f18def2f46de",
+      "bytes": 6982
+    },
+    "experiments/model_fractal/q8_phase_validation_v9.py": {
+      "sha256": "8e1310315fdbf1f172f6500f44eaa3bb9adf331660b383804bfdd8e6323fd09c",
+      "bytes": 10288
+    },
+    "experiments/model_fractal/q8_structural_matched_targets_v14.json": {
+      "sha256": "a6f1ec835ae1365629dfc051eeb6c02a81b061c056c1e92d0bec7880f17448d1",
+      "bytes": 9638
+    },
+    "experiments/model_fractal/q8_structural_matched_targets_v14.py": {
+      "sha256": "173c8359f51b24a3250318634c188b59bae2a10a1334d3292d75d69b572c9405",
+      "bytes": 9330
+    },
+    "experiments/model_fractal/q8_target_specificity_v15.json": {
+      "sha256": "34ca1df362b4d34675b3de676478f219f4e3c0a7529f4088d1f88f324bfd6568",
+      "bytes": 3042
+    },
+    "experiments/model_fractal/q8_target_specificity_v15.py": {
+      "sha256": "e441cd5cec46579fdf306677043734ad2d8fa014ae01db0f1c535df893616bb0",
+      "bytes": 7337
+    },
+    "experiments/model_fractal/recurrence_stability.py": {
+      "sha256": "9d71616da600eb11f882f329559dec11770c4472a10e0f1c98b9736a92ba0dda",
+      "bytes": 8878
+    },
+    "experiments/model_fractal/recurrence_stability_v2.py": {
+      "sha256": "68acad6ba4b760941a63637ab54026f2be37ed1f39787a8b4ebb5640c64e1a36",
+      "bytes": 11828
+    },
+    "experiments/model_fractal/spatial_null_v24.json": {
+      "sha256": "6fda922ccd3d52af333bb25485a9860e3b4d43f18c5093b87292919fb7caf9ad",
+      "bytes": 4352
+    },
+    "experiments/model_fractal/spatial_null_v24.py": {
+      "sha256": "e8773de794f2aee8c3bc6f696692155960e3506ba8fc8d26fd370aaa337a99a2",
+      "bytes": 14785
+    },
+    "experiments/model_fractal/structural_divergence_v1.py": {
+      "sha256": "cbc4f6053752487425286004dfbb480fb94327feff40712a945982c65fc3ee57",
+      "bytes": 1668
+    },
+    "experiments/model_fractal/structural_fingerprint.py": {
+      "sha256": "8364cc0ad132188c302f13bc48eac2031606bd2c16d516b247c754c73a6c1f80",
+      "bytes": 8286
+    },
+    "experiments/model_fractal/structural_lattice_v11.json": {
+      "sha256": "a7bce299af81733df6925e22308bd48fe701e54c4cddb1621974e1873dd13bcf",
+      "bytes": 20810
+    },
+    "experiments/model_fractal/structural_lattice_v11.py": {
+      "sha256": "c99b8579e1bb00b1a87a15798b7ef1c70b0a3f984540c95f629a176ebec0a7d4",
+      "bytes": 11158
+    },
+    "experiments/model_fractal/symmetry_spectrum_v16.json": {
+      "sha256": "4b2c5335da9fd120b21473d56e2566b41639c929b9ff2ccb1e7866226fc408ae",
+      "bytes": 5359
+    },
+    "experiments/model_fractal/symmetry_spectrum_v16.py": {
+      "sha256": "a228f18c22b04da239d33ed348d90e4ecf3173d70db65c7f3a9b02b1ff8c81b4",
+      "bytes": 9592
+    },
+    "experiments/model_fractal/threshold_robustness_v25.json": {
+      "sha256": "b5d7c0326f7f24d6be1a57d9aba8f894fd7c04249c5cc848a114028e06eb3998",
+      "bytes": 5187
+    },
+    "experiments/model_fractal/threshold_robustness_v25.py": {
+      "sha256": "e424aa2b2db0749a3a424c74adc6c212086b5d7350d3d81dcaf06213bc875a95",
+      "bytes": 11425
+    },
+    "experiments/model_fractal/tie_experiment.py": {
+      "sha256": "f85d17bd535b7308bc6f65728d73f76c1399563fe5f94e64c9e4116f11dcd882",
+      "bytes": 2541
+    },
+    "experiments/model_fractal/tie_hybrid_experiment.py": {
+      "sha256": "ebd5ff6b4bc346d5674957379740b8dee2ef84de74fad34490e6044b0adf0b84",
+      "bytes": 1183
+    },
+    "experiments/model_fractal/tie_pi_experiment.py": {
+      "sha256": "55f855102d7e3aaf287a40fe8919fb048f4bf8eb8e250e1919b2b40e4ef3a66a",
+      "bytes": 1974
+    },
+    "experiments/model_fractal/topology_lattice_v22.json": {
+      "sha256": "e076cee2f7c0bc3944039aaaf20ad14b2b9daeba11ac082fe5b2624faf0ec720",
+      "bytes": 1985
+    },
+    "experiments/model_fractal/topology_lattice_v22.py": {
+      "sha256": "d6a7df983a3a50a873142d714fff983ad6034009dc9d72aa2f4f509feff4d71f",
+      "bytes": 13656
+    },
+    "experiments/model_fractal/transition_field_v5.json": {
+      "sha256": "01c79a6de500fad0af9d4fef5104619b7d893aa0e24b150e6feddaf4d5375045",
+      "bytes": 39850
+    },
+    "experiments/model_fractal/transition_field_v5.py": {
+      "sha256": "47a24f159c5d1bacc0b3b7a37cec2f57c7ecfde63af931725798dba583188d45",
+      "bytes": 5185
+    },
+    "experiments/model_fractal/transition_geometry_v6.json": {
+      "sha256": "6288b074cf982a04876593b9d682f43d53aba8a18ce07cf1aa4a3760ccb91066",
+      "bytes": 12792
+    },
+    "experiments/model_fractal/transition_geometry_v6.py": {
+      "sha256": "57326a00d1c55c3c42e9d5ff4df97ab44a55f7958914cef7d705b07fbbbfa795",
+      "bytes": 6580
+    },
+    "experiments/model_fractal/transition_geometry_v9.json": {
+      "sha256": "7fc4bb38cb29ad95a41c4f505166256c10a77d1e8ac93bab07215fe7339d5fd2",
+      "bytes": 24876
+    },
+    "experiments/model_fractal/transition_geometry_v9.py": {
+      "sha256": "eb291887a56204b64447df3b7730c074430aa0a362ace15d1b739e267c0a63ed",
+      "bytes": 10402
+    },
+    "experiments/model_fractal/transition_periodicity_v8.json": {
+      "sha256": "1f4e8c4674ce33a04655246f16f9fe72de62a5b259978e66516a91aff88a1203",
+      "bytes": 16873
+    },
+    "experiments/model_fractal/transition_periodicity_v8.py": {
+      "sha256": "140ad1015a6f1e11da82b7a4b8427fac2c1da4ccb375e094b4339dfb5f14f346",
+      "bytes": 4658
+    },
+    "experiments/model_fractal/transition_recurrence_v7.json": {
+      "sha256": "7f86cad9bf868c9b2bee0f56dd9ef1f404e3746567a8b7e9dfa76394a75280c3",
+      "bytes": 117790
+    },
+    "experiments/model_fractal/transition_recurrence_v7.py": {
+      "sha256": "661d77009a34021300f42ce74e2031c537d2d6ff74744de0a85d1046d10670d4",
+      "bytes": 4726
+    },
+    "experiments/model_fractal/unit_cell_v12.json": {
+      "sha256": "4ef736ce69e729f16cecd6c71b1acb92d8bfae98c39bec08e9ab2da9d55c7485",
+      "bytes": 4832
+    },
+    "experiments/model_fractal/unit_cell_v12.py": {
+      "sha256": "bd4764fb6c2a43ac814b4a3b919debc94c8f97add35c907acad9d5b0eed6270a",
+      "bytes": 9252
+    },
+    "experiments/model_fractal/visualize_hybrid_basin.py": {
+      "sha256": "77aa99edadb92f207dd89bd1899ba91bcb7a97cfea39450683c3221a8b56b3c4",
+      "bytes": 1462
+    }
+  }
+}

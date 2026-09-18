@@ -1,0 +1,30 @@
+{
+    "certificate_type": "Model Identity Certificate (MIC)",
+    "owner": "Mitchell",
+    "model_source": "/data/data/com.termux/files/home/qwen2.5-coder-q8_0.gguf",
+    "fractal_hash": "9b1075fa99d69264c3b6a958f87c5bb9ce1c7183a0a56b1ccdc6130326a44826",
+    "path_id": "N0→N1→N2→...→N127",
+    "strands": {
+        "A": 127,
+        "B": 127
+    },
+    "convergence_points": 127,
+    "color_samples": 127,
+    "entropy": {
+        "model": 0.0011163576,
+        "fractal": 0.4999998578
+    },
+    "divergence": 2.5464462652,
+    "stability": 0.0,
+    "semantic_drift": 0.4988835049,
+    "timestamp": "2026-08-21T20:11 PDT",
+    "location": "Smithers, BC, Canada",
+    "provenance_lineage": [
+        "GGUF → Sanitized Tensor",
+        "Sanitized Tensor → TruthGraph",
+        "TruthGraph → TruthPath(score,cost,nodes,edges)",
+        "TruthPath → MetaPath(predictive_weight=0.75)",
+        "MetaPath → Fractal",
+        "Fractal → MIC"
+    ]
+}

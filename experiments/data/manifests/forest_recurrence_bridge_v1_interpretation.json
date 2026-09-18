@@ -1,0 +1,40 @@
+{
+  "schema": "openmind.forest.recurrence_bridge.interpretation.v1",
+  "status": "VALIDATED_PRIMARY_FAIL",
+  "result_commit": "3e936e1",
+  "result_sha256": "8aec1ee5f16458ee4e60270e899be9aeb640cad27808b70fa6a9a285e8d4b521",
+
+  "primary": {
+    "enrichment": 0.005409795442,
+    "empirical_p": 0.147385261474,
+    "exceedances": 1473,
+    "draws": 10000,
+    "decision": "FAIL"
+  },
+
+  "robustness": {
+    "positive_prompts": "8/8",
+    "all_partial_budgets_positive": true,
+    "decision": "PASS"
+  },
+
+  "budget_enrichment": {
+    "4_groups": 0.012968629,
+    "8_groups": 0.005757715,
+    "16_groups": 0.002005278,
+    "24_groups": 0.000907559,
+    "32_groups": -0.000001422339
+  },
+
+  "supported_conclusion": "The frozen recurrence-selected layer topology showed a consistent directional partial-access advantage under the frozen Forest geometry, but the preregistered exact-gap-matched primary test did not establish that advantage as statistically distinguishable from matched alternatives.",
+
+  "not_supported": [
+    "recurrence-aware Forest access is validated",
+    "Forest improves inference speed",
+    "Forest reduces end-to-end model memory",
+    "transformer layers can be skipped",
+    "the recurrence topology is causal"
+  ],
+
+  "next_hypothesis": "The globally frozen Forest dimension priority may not be aligned with layer-pair-specific recurrence structure; a separately preregistered experiment is required before testing pair-conditioned access."
+}

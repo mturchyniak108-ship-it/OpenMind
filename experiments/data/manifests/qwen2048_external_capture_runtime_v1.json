@@ -1,0 +1,65 @@
+{
+  "capture_tool_manifest": {
+    "path": "experiments/data/manifests/qwen2048_external_capture_tool_v1.json",
+    "sha256": "08916a959a91c44d881087da9118278694f2cc063cb608c1e30f047144408793"
+  },
+  "compile_proof": {
+    "byte_identical": true,
+    "compile_database": {
+      "path": "llama.cpp/build-vulkan/compile_commands.json",
+      "sha256": "6efec610fca15057b96b24a29f9fc4c00934ae0fb931942b1be8f48efa642401"
+    },
+    "existing_object": {
+      "path": "llama.cpp/build-vulkan/src/CMakeFiles/llama.dir/models/qwen2.cpp.o",
+      "sha256": "182870691f75717eb9f9609b4a2f2833cf26d749e18e6d5f5459b8821859dbc0"
+    },
+    "independent_replay_object_sha256": "182870691f75717eb9f9609b4a2f2833cf26d749e18e6d5f5459b8821859dbc0"
+  },
+  "debug_source_boundary": {
+    "common_debug_cpp_modified": true,
+    "linked_into_capture_libllama": false,
+    "scientific_effect_on_native_capture_runtime": "not part of the frozen native probe link path"
+  },
+  "link_proof": {
+    "build_ninja_sha256": "3fb074542b6b9393340929bd1f4ff354078843ddd1e97062a0a770522a6abb74",
+    "ninja_log_sha256": "b35338de1eef4d1db6b419785da3239af1bbcfaa9be99b1ce3487a8ad8b8c89a",
+    "qwen2_object_is_link_input": true,
+    "real_libllama_path": "/data/data/com.termux/files/home/OpenMind/llama.cpp/build-vulkan/bin/libllama.so.0.1.2",
+    "real_libllama_sha256": "a7345bc68b534451924f22ea7827632e49bccc57d93cbf090f346d80ccc5ab35"
+  },
+  "llama_cpp": {
+    "commit": "dc72703fc69698b1ea68ece8d2dd8a96e6a4e1fe",
+    "instrumentation_patch": {
+      "activation_arithmetic_transform_added": false,
+      "graph_observation_instrumentation_added": true,
+      "path": "experiments/data/patches/qwen2048_llama_qwen2_layer_input_capture_v1.patch",
+      "role": "layer-input observation hook required by activation capture",
+      "sha256": "1d1ffa5a5e2bdde8c2196a30ded566fbbc957f33e7c39b36432cf1aec00d7dcf"
+    },
+    "qwen2_head_source_sha256": "0da43ff61f449be3a3da8ca2e7cc0eee119b4b8e07c8accce0041998241824e8",
+    "qwen2_instrumented_source": {
+      "differs_from_head": true,
+      "path": "llama.cpp/src/models/qwen2.cpp",
+      "sha256": "7a1ebebb3fee788b80f259f953613a5e687eb1832ead0a470cf7e59635a02bd7"
+    }
+  },
+  "replication_boundary": {
+    "R01_through_R08_observed": false,
+    "model_inference_performed": false,
+    "replication_activation_captured": false
+  },
+  "replication_protocol": {
+    "path": "experiments/data/manifests/qwen2048_external_prompt_replication_v1_protocol.json",
+    "sha256": "8a3a492c05220b23a8b4324640563b0439238faef43fb7c97b4de2bba7489ec0"
+  },
+  "schema": "openmind.qwen2048_external_capture_runtime.provenance.v1",
+  "scientific_interpretation": [
+    "The frozen Qwen runtime contains the layer-input observation instrumentation used by OpenMind activation capture.",
+    "An independent replay of the frozen qwen2.cpp compile produced a byte-identical qwen2.cpp object.",
+    "The qwen2.cpp object is a link input of the frozen libllama runtime.",
+    "The instrumentation exposes the existing layer input tensor for observation; it does not introduce a new arithmetic transformation of inpL.",
+    "The same frozen runtime must be retained for prospective R01-R08 capture.",
+    "Changing or rebuilding llama.cpp after this freeze would create a different scientific instrument and is forbidden for this replication."
+  ],
+  "status": "CAPTURE_RUNTIME_FROZEN"
+}

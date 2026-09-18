@@ -1,0 +1,1 @@
+"""OpenMind command-line interfaces."""

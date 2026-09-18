@@ -1,0 +1,137 @@
+{
+  "artifacts": {
+    "orange_binary": {
+      "bytes": 604344,
+      "path": "results/forest_topology_v7/orange_v7.bin",
+      "sha256": "9d28d4d43015589eadbc6686ce170fe2bfc7750ca0d3bed5d5cf3916d0d0c64a"
+    },
+    "pine_binary": {
+      "bytes": 601272,
+      "path": "results/forest_topology_v7/pine_v7.bin",
+      "sha256": "e5a6b7cb73e9d8708a226b008c7c6990cb512870ee1b5727094ce87cdefaba7e"
+    },
+    "result": {
+      "path": "results/forest_topology_v7/forest_topology_v7.txt",
+      "sha256": "2877a3a77d3967b88c8eddb456cc8d58f266822b48a4ff4c67e9d45d1a0a8791"
+    },
+    "script": {
+      "path": "experiments/model_fractal/forest_topology_v7.py",
+      "sha256": "d880036bb50ee168b119354954c33ae3c6d5590ede3646f16b212cd91b209904"
+    },
+    "stderr": {
+      "path": "results/forest_topology_v7/forest_topology_v7.stderr",
+      "sha256": "836ed03a476e7805a1387774db45798da470a281768592d8ec4f5a6812867328"
+    }
+  },
+  "experiment": {
+    "block_bytes": 68,
+    "dimensions": 1536,
+    "group_size": 64,
+    "groups": 24,
+    "header_bytes": 56,
+    "index_entry_bytes": 16,
+    "name": "Forest Topology V7",
+    "purpose": "Measure actual serialized Pine and Orange storage and warm indexed partial-read cost.",
+    "vectors": 364
+  },
+  "limitations": [
+    "V7 timing is influenced by the operating-system page cache.",
+    "Controlled cold-cache storage latency is not measured.",
+    "V7 isolates serialization and retrieval cost and does not repeat held-out geometry learning.",
+    "V7 does not execute Vulkan or transformer inference."
+  ],
+  "next_gate": {
+    "access_fractions": [
+      0.125,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "batch_sizes": [
+      1,
+      4,
+      16,
+      64,
+      256
+    ],
+    "compare": [
+      "CPU scalar decode/reconstruction",
+      "CPU NumPy decode/reconstruction",
+      "Vulkan decode/reconstruction"
+    ],
+    "experiment": "Forest Topology V8",
+    "measurements": [
+      "dispatch latency",
+      "decode latency",
+      "scatter/reconstruction latency",
+      "end-to-end batch latency",
+      "vectors per second",
+      "effective decoded bytes per second",
+      "CPU/Vulkan speed ratio",
+      "reconstruction equality"
+    ],
+    "name": "Vulkan Orange Decode/Reconstruction",
+    "question": "Can Vulkan accelerate batched BLOCK_INT8_64 Orange wedge decode and scatter reconstruction without changing numerical output?"
+  },
+  "schema": "openmind.forest_topology.v7",
+  "status": "executed_lab_candidate",
+  "storage": {
+    "orange_file_bytes": 604344,
+    "orange_index_bytes": 5824,
+    "orange_map_bytes": 3072,
+    "orange_minus_pine_bytes": 3072,
+    "orange_pine_ratio": 1.005109169,
+    "orange_router_bytes": 1344,
+    "orange_storage_premium": 0.005109169,
+    "pine_file_bytes": 601272,
+    "pine_index_bytes": 5824,
+    "pine_router_bytes": 1344
+  },
+  "supported": [
+    "Orange real serialized storage is only about 0.51 percent larger than Pine.",
+    "Warm indexed partial-read latency is effectively at parity between Pine and Orange.",
+    "Pine and Orange request identical quantized payload bytes at each tested access fraction.",
+    "Orange's non-contiguous dimension map therefore does not create a meaningful warm indexed-read penalty in this experiment."
+  ],
+  "validation": {
+    "equal_requested_bytes": "pass",
+    "orange_item_count": "pass",
+    "orange_magic": "pass",
+    "orange_map_roundtrip": "pass",
+    "pine_item_count": "pass",
+    "pine_magic": "pass"
+  },
+  "warm_indexed_reads": {
+    "0.125": {
+      "bytes": 204,
+      "orange_mean_ns": 16059.8,
+      "orange_pine_ratio": 0.998872,
+      "pine_mean_ns": 16077.9
+    },
+    "0.250": {
+      "bytes": 408,
+      "orange_mean_ns": 31443.5,
+      "orange_pine_ratio": 0.999741,
+      "pine_mean_ns": 31451.6
+    },
+    "0.500": {
+      "bytes": 816,
+      "orange_mean_ns": 62387.4,
+      "orange_pine_ratio": 1.000542,
+      "pine_mean_ns": 62353.6
+    },
+    "0.750": {
+      "bytes": 1224,
+      "orange_mean_ns": 93278.8,
+      "orange_pine_ratio": 0.999802,
+      "pine_mean_ns": 93297.2
+    },
+    "1.000": {
+      "bytes": 1632,
+      "orange_mean_ns": 135880.6,
+      "orange_pine_ratio": 1.000344,
+      "pine_mean_ns": 135833.8
+    }
+  }
+}

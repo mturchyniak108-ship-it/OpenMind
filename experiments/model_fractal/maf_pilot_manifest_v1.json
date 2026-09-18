@@ -1,0 +1,68 @@
+{
+  "inventory": "experiments/model_fractal/gguf_tensor_inventory_v1.json",
+  "inventory_tensor_count": 339,
+  "pilot": [
+    {
+      "dims": [
+        1536
+      ],
+      "name": "output_norm.weight",
+      "ordinal": 1,
+      "payload_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "reason": "small global F32 control",
+      "span_bytes": 6144,
+      "type": "F32"
+    },
+    {
+      "dims": [
+        1536
+      ],
+      "name": "blk.0.attn_norm.weight",
+      "ordinal": 2,
+      "payload_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "reason": "small layer-local F32 control",
+      "span_bytes": 6144,
+      "type": "F32"
+    },
+    {
+      "dims": [
+        1536,
+        1536
+      ],
+      "name": "blk.0.attn_q.weight",
+      "ordinal": 3,
+      "payload_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+      "reason": "representative quantized attention matrix",
+      "span_bytes": 2506752,
+      "type": "Q8_0"
+    },
+    {
+      "dims": [
+        8960,
+        1536
+      ],
+      "name": "blk.0.ffn_down.weight",
+      "ordinal": 4,
+      "payload_sha256": "d8f311c842b4abf6c51fd79bf81897605bddb2dfea1529e79688900303c7dd37",
+      "reason": "representative quantized FFN matrix",
+      "span_bytes": 14622720,
+      "type": "Q8_0"
+    },
+    {
+      "dims": [
+        1536,
+        151936
+      ],
+      "name": "token_embd.weight",
+      "ordinal": 5,
+      "payload_sha256": "1dc7e3115bc86f6a127f634edfee0257433f893df0eb4730928050abb70d588e",
+      "reason": "large global embedding object",
+      "span_bytes": 247959552,
+      "type": "Q8_0"
+    }
+  ],
+  "pilot_count": 5,
+  "pilot_total_bytes": 265101312,
+  "schema": "openmind.maf_pilot_manifest.v1",
+  "selection_policy": "deterministic fixed-name representative tensor pilot"
+}

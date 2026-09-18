@@ -1,0 +1,101 @@
+{
+  "schema": "openmind.maf_fragment_identity_validation_spec.v1",
+  "purpose": "Validate deterministic fragment logical identity without introducing operational fragmentation.",
+  "identity_protocol": {
+    "schema": "openmind.maf_fragment_identity.v1",
+    "namespace": "maffrag:v1",
+    "required_fields": [
+      "schema",
+      "object_pk",
+      "fragment_scheme",
+      "logical_fragment_index",
+      "logical_range"
+    ]
+  },
+  "validation_scheme": {
+    "name": "identity_validation_synthetic_range_v1",
+    "status": "test_only",
+    "operational_fragmentation": false,
+    "range_unit": "intentionally_unspecified",
+    "statement": "Ranges exist only to validate identity behavior. They do not represent bytes, elements, rows, blocks, tensor slices, or any production fragmentation scheme."
+  },
+  "parent_objects": [
+    "output.weight",
+    "token_embd.weight",
+    "output_norm.weight"
+  ],
+  "cases": [
+    {
+      "case": "baseline",
+      "logical_fragment_index": 0,
+      "logical_range": [0, 64]
+    },
+    {
+      "case": "different_index",
+      "logical_fragment_index": 1,
+      "logical_range": [0, 64]
+    },
+    {
+      "case": "different_range",
+      "logical_fragment_index": 0,
+      "logical_range": [64, 128]
+    }
+  ],
+  "placement_controls": [
+    {
+      "segment": "synthetic-segment-A",
+      "offset": 0,
+      "generation": 1,
+      "device": "synthetic-device-A"
+    },
+    {
+      "segment": "synthetic-segment-B",
+      "offset": 999999,
+      "generation": 777,
+      "device": "synthetic-device-B"
+    }
+  ],
+  "negative_inputs": [
+    {
+      "name": "negative_index",
+      "logical_fragment_index": -1,
+      "logical_range": [0, 64]
+    },
+    {
+      "name": "zero_width_range",
+      "logical_fragment_index": 0,
+      "logical_range": [64, 64]
+    },
+    {
+      "name": "reversed_range",
+      "logical_fragment_index": 0,
+      "logical_range": [128, 64]
+    },
+    {
+      "name": "negative_start",
+      "logical_fragment_index": 0,
+      "logical_range": [-1, 64]
+    }
+  ],
+  "pass_gates": {
+    "parent_object_count": 3,
+    "baseline_fragment_pk_count": 3,
+    "repeated_generation_equal": true,
+    "parent_object_changes_identity": true,
+    "logical_index_changes_identity": true,
+    "logical_range_changes_identity": true,
+    "placement_independent": true,
+    "invalid_inputs_rejected": true,
+    "production_fragment_scheme_defined": false,
+    "payload_fragment_generated": false,
+    "gguf_payload_accessed": false
+  },
+  "non_claims": [
+    "This validation does not define fragment range units.",
+    "This validation does not define a production fragmentation scheme.",
+    "This validation does not create persistent fragments.",
+    "This validation does not establish selective tensor access.",
+    "This validation does not establish reconstruction fidelity.",
+    "This validation does not establish runtime routing or inference behavior."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "openmind.material_compatibility.v20",
+  "source_geometry": "experiments/model_fractal/normalized_geometry_v10.json",
+  "source_raw": "experiments/model_fractal/crystal_raw_lattice_v15.json",
+  "source_motif": "experiments/model_fractal/motif_graph_v19.json",
+  "layer_count": 28,
+  "period": 8,
+  "bond_threshold": 2.0893456195429265,
+  "bond_count": 75,
+  "mean_coordination": 5.357142857142857,
+  "coordination_error": 0.7857142857142856,
+  "graphene_coordination_fraction": 0.14285714285714285,
+  "mean_bond_length": 1.2910730684454437,
+  "bond_rms": 0.47951964027034644,
+  "bond_cv": 0.3714116977497849,
+  "optimal_graphene_scale": 1.0998602904092754,
+  "scaled_graphene_bond_length": 1.42,
+  "mean_angle_degrees": 74.41726768926827,
+  "mean_angular_error_degrees": 54.19602575397639,
+  "period8_bond_similarity": 0.5895117990704014,
+  "null_mean": 0.5601088265033527,
+  "null_std": 0.07078543558393953,
+  "null_z": 0.41538167173078666,
+  "scores": {
+    "coordination": 0.2142857142857144,
+    "angle": 0.6989109680334644,
+    "bond": 0.6285883022502151,
+    "topology": 0.14285714285714285,
+    "period8": 0.5895117990704014,
+    "overall": 0.41178292309049963
+  },
+  "classification": "GRAPHENE_INCOMPATIBLE"
+}

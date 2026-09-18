@@ -1,0 +1,52 @@
+{
+  "classification": "NO_INDEPENDENT_LATTICE_RECOVERY",
+  "displacement_coherence": 0.7659440780348026,
+  "distance_pattern_similarity": 0.6909123326778188,
+  "empirical_p": 0.0004997501249375312,
+  "layer_count": 28,
+  "null_mean": 0.0,
+  "null_std": 0.0,
+  "null_trials": 2000,
+  "null_z": 0.0,
+  "period": 8,
+  "period8_displacement_count": 20,
+  "random_seed": 2501,
+  "schema": "openmind.lattice_recovery.v25",
+  "source": "experiments/model_fractal/normalized_geometry_v10.json",
+  "threshold_robustness": [
+    {
+      "mean_degree": 2.7142857142857144,
+      "quantile": 0.1,
+      "threshold": 1.3045860592052023
+    },
+    {
+      "mean_degree": 4.071428571428571,
+      "quantile": 0.15,
+      "threshold": 1.6977377319172149
+    },
+    {
+      "mean_degree": 5.428571428571429,
+      "quantile": 0.2,
+      "threshold": 2.0893456195429265
+    },
+    {
+      "mean_degree": 6.785714285714286,
+      "quantile": 0.25,
+      "threshold": 2.538870195097264
+    },
+    {
+      "mean_degree": 8.142857142857142,
+      "quantile": 0.3,
+      "threshold": 2.89252161647477
+    }
+  ],
+  "translation": [
+    1.5344297259540134,
+    0.18805251234003367,
+    -0.46752408009157287
+  ],
+  "translation_length": 1.6150594715843063,
+  "translation_reconstruction_rms": 3.960245696494011,
+  "translation_relative_error": 2.4520742215202604,
+  "v24_source": "experiments/model_fractal/spatial_null_v24.json"
+}

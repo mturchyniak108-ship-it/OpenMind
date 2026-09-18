@@ -1,0 +1,269 @@
+{
+  "all_pass": true,
+  "benchmark_executed": false,
+  "check_count": 50,
+  "checks": [
+    {
+      "error": null,
+      "name": "V01_module_binding",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V02_canonical_json_determinism",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V03_plain_integer_validation",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V04_exact_event_kind_surface",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V05_event_field_combinations",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V06_strict_sequence_enforcement",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V07_duplicate_sequence_rejection",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V08_access_counting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V09_self_transition_counting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V10_directed_transition_counting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V11_non_access_preserves_access_adjacency",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V12_first_access_reuse_behavior",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V13_reuse_interval_count",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V14_reuse_interval_sum",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V15_reuse_interval_min",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V16_reuse_interval_max",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V17_materialization_independence",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V18_bytes_read_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V19_named_cache_hit_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V20_named_cache_miss_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V21_residency_transition_aggregation",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V22_prefetch_issue_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V23_prefetch_consumed_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V24_prefetch_unused_accounting",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V25_duplicate_prefetch_terminal_rejection",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V26_invalid_event_failure_atomicity",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V27_empty_snapshot_semantics",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V28_nonempty_sequence_bounds",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V29_deterministic_snapshot_ordering",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V30_snapshot_payload_reproducibility",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V31_snapshot_sha_reproducibility",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V32_zero_denominator_metric_rejection",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V33_weighted_rank_distance_exactness",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V34_cross_segment_fraction_exactness",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V35_co_segment_fraction_exactness",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V36_cross_co_complement",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V37_placement_uniqueness",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V38_contiguous_segment_ordinals",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V39_contiguous_object_ordinals",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V40_exact_source_object_set_preservation",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V41_deterministic_planner_config_ordering",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V42_duplicate_planner_config_key_rejection",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V43_source_generation_binding",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V44_telemetry_snapshot_binding",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V45_deterministic_plan_ordering",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V46_plan_payload_reproducibility",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V47_plan_sha_reproducibility",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V48_no_payload_mutation_surface",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V49_phase6c_source_immutability",
+      "pass": true
+    },
+    {
+      "error": null,
+      "name": "V50_import_time_side_effect_absence",
+      "pass": true
+    }
+  ],
+  "data_model_protocol_sha256": "712caa2e7dfc948f607a4c8d68064fc838eb1f58701fc5206c52aaf8e6492bc4",
+  "failed_checks": [],
+  "fatal_error": null,
+  "implementation_path": "experiments/model_fractal/maf_segment_locality_data_model_v1.py",
+  "implementation_sha256": "5432f2d74a610f2d0f9181e9af146013bb198a4e837af634993909358fff8ad0",
+  "parent_phase6d_protocol_sha256": "a4c1a1d4fe22f7e714efa331cec9cf4dbd3a9e178f2b28b3ddb9034387e210ae",
+  "performance_verdict": null,
+  "phase6c_engine_sha256": "4b8c0b8f5db9a67b4bcc368b18f159de6a3f2501f0badf0286de1459125d5cf9",
+  "protocol_path": "experiments/model_fractal/MAF_SEGMENT_LOCALITY_DATA_MODEL_VALIDATION_V1_PROTOCOL.md",
+  "protocol_sha256": "954e71a523694b2913c35d328efdc59f7c95413c1746e7c50c087045da4291d8",
+  "schema": "openmind.maf_segment_locality_data_model_validation.v1",
+  "validation_valid": true
+}

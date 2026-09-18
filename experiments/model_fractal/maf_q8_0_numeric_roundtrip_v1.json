@@ -1,0 +1,29 @@
+{
+  "schema": "openmind.maf_q8_0_numeric_roundtrip.v1",
+  "target": "blk.0.attn_q.weight",
+  "dims": [
+    1536,
+    1536
+  ],
+  "elements": 2359296,
+  "qk": 32,
+  "block_bytes": 34,
+  "block_count": 73728,
+  "span_bytes": 2506752,
+  "source_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+  "reencoded_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+  "finite_scale_count": 73728,
+  "zero_scale_count": 0,
+  "scale_min": 3.063678741455078e-05,
+  "scale_max": 0.0164642333984375,
+  "scale_mean": 0.0004403581543657411,
+  "quant_min": -127,
+  "quant_max": 127,
+  "quant_mean": 0.060862223307291664,
+  "dequant_min": -2.0909576416015625,
+  "dequant_max": 1.6995086669921875,
+  "dequant_mean": 2.9286262664148428e-05,
+  "byte_equal": true,
+  "hash_equal": true,
+  "all_pass": true
+}

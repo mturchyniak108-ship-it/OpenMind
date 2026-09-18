@@ -1,0 +1,103 @@
+{
+  "address_geometry": {
+    "basis": "Frozen MAF-3D address geometry V1 primary result.",
+    "logical_key": [
+      "route_id",
+      "depth",
+      "node_id"
+    ],
+    "physical_baseline": "tuple_maf"
+  },
+  "baseline_commit": "16227a1",
+  "execution_state": "No neutral MAF-3D activation reconstruction outcome has been computed.",
+  "first_validation_stage": {
+    "activation_corpus_access": false,
+    "checks": [
+      "all 2048 dimensions covered exactly once at every depth",
+      "no overlapping sibling regions",
+      "parent equals union of its two children",
+      "all tuple MAF addresses unique",
+      "depth-5 exact reconstruction",
+      "depth-0-to-4 reconstruction shape is exactly 2048",
+      "all arithmetic outputs finite"
+    ],
+    "input": "deterministic synthetic float32 vectors only"
+  },
+  "hierarchy": {
+    "child_rule": "children(depth,node) = (depth+1,2*node) and (depth+1,2*node+1)",
+    "depths": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "node_counts": {
+      "0": 1,
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32
+    },
+    "parent_rule": "parent(depth,node) = (depth-1, node//2)",
+    "partition_rule": "At depth d, split dimensions into 2^d contiguous, equal-width regions in original dimension order.",
+    "region_widths": {
+      "0": 2048,
+      "1": 1024,
+      "2": 512,
+      "3": 256,
+      "4": 128,
+      "5": 64
+    },
+    "type": "deterministic_binary_partition"
+  },
+  "later_shadow_stage": {
+    "candidate_metrics": [
+      "hidden_delta_cosine",
+      "relative_l2",
+      "max_abs_error"
+    ],
+    "oracle": "untouched Qwen2.5-3B hidden activations",
+    "role": "Measure reconstruction fidelity only after synthetic contract validation and implementation freeze.",
+    "thresholds": "Not set by this structural protocol; a separate pre-execution outcome protocol is required."
+  },
+  "neutrality": {
+    "same_partition_for_every_prompt": true,
+    "same_partition_for_every_route": true,
+    "uses_Forest_ranking": false,
+    "uses_activation_statistics_to_choose_partition": false,
+    "uses_recurrence_scores_to_choose_partition": false
+  },
+  "next_if_valid": "Implement the neutral hierarchy with synthetic self-tests, freeze the implementation, then preregister the first Qwen shadow reconstruction experiment.",
+  "payload_semantics": {
+    "compression_optimization": "NONE",
+    "depth_0_to_4": "One float32 arithmetic mean of the node's covered delta dimensions.",
+    "depth_5": "Exact ordered float32 values for the leaf's 64 covered delta dimensions.",
+    "learned_parameters": "NONE",
+    "quantization": "NONE"
+  },
+  "purpose": "Define a deterministic Forest-free MAF-3D representation hierarchy before any route-conditioned learning or Qwen activation outcome is computed.",
+  "reconstruction": {
+    "depth_0_to_4": "Fill every covered dimension with that node's stored mean, producing a complete 2048-D piecewise-constant delta approximation.",
+    "depth_5": "Concatenate/scatter the 32 exact 64-D leaf payloads into original dimension order.",
+    "full_leaf_requirement": "Depth-5 reconstruction must be bitwise identical to the float32 input delta before any activation-corpus experiment is permitted."
+  },
+  "representation": {
+    "dimension": 2048,
+    "dtype": "float32",
+    "input_object": "layer-transition delta = normalized target hidden state - normalized source hidden state",
+    "normalization": "source and target hidden states use the frozen Qwen prospective tensor L2-normalization semantics before delta construction"
+  },
+  "research_boundaries": [
+    "No claim of compression from this hierarchy.",
+    "No claim of inference replacement from structural validation.",
+    "No route-conditioned learning in neutral V1.",
+    "No Forest dependency.",
+    "No transformer skipping.",
+    "No activation outcome before implementation is frozen."
+  ],
+  "schema": "openmind.maf3d.neutral_hierarchy_protocol.v1",
+  "status": "PREREGISTERED_DESIGN"
+}

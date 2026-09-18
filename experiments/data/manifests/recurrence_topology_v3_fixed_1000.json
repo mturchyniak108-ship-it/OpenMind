@@ -1,0 +1,59 @@
+{
+  "active_tokens": 13,
+  "checkpoint": {
+    "completed_permutations": 1000,
+    "layer_pair_entries": 378,
+    "null_lengths": [
+      1000
+    ]
+  },
+  "dataset": "activation_vectors_all_tokens.csv",
+  "dimensions": 1536,
+  "equivalence": {
+    "maximum_abs_difference": 8.881784197001252e-16,
+    "status": "PASS"
+  },
+  "excluded_tokens": [
+    0
+  ],
+  "layer_pairs": 378,
+  "layers": 28,
+  "permutations": 1000,
+  "runtime_seconds": 80.807,
+  "safety": {
+    "original_v3_preserved": true,
+    "residual_processes": false,
+    "stderr_empty": true
+  },
+  "schema": "openmind.recurrence_topology_v3_fixed.v1",
+  "scientific_boundary": [
+    "Permutation statistic validated against original V3 semantics.",
+    "This artifact does not alter model inference.",
+    "Original V3 reporting sections GAP SUMMARY, GLOBAL STATISTICS, and LOCAL TOKEN CONTROL remain to be regenerated from frozen evidence."
+  ],
+  "seed": 1337,
+  "sha256": {
+    "experiments/model_fractal/recurrence_topology_v3.py": "66f496ffeafff5313d5d479303e5e81d61822e2f1609a9f970e0e4385eb80930",
+    "experiments/model_fractal/recurrence_topology_v3_fixed.py": "d4f8dfa4fac59c6daa68eca82eb0fbb7c17f15cbc0dcce0c253fe588ef10ddd8",
+    "results/runtime/v3_fixed_1000_governor.txt": "f436ea54243266d690e17c94cb85ddba784876b28b8a89af48f7466c83b74fe0",
+    "results/runtime/v3_fixed_checkpoints/checkpoint_1000.json": "faa2bb98c3d2cdffa5c3e870fc5698cf563055450bab030e1b7363318b0f483d",
+    "results/runtime/v3_fixed_equivalence.txt": "2705ff036dbc0e658d9e298bde00ed72fcf50832ceae84ce1dedeaf0ebfef498",
+    "results/validated/representation_recurrence_v1/topology_permutation_v3_fixed_1000.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/validated/representation_recurrence_v1/topology_permutation_v3_fixed_1000.txt": "cc2846bdd0ef615ce57d31749908955b1b360e70739721a070c1d232fd18f274",
+    "tools/runtime/openmind_thermal_governor.sh": "4f2891496db4ceb8bc48f0201b4bc4b3f212e7d1db083f639aa90dfcfede1013"
+  },
+  "status": "VALIDATED_PASS",
+  "thermal": {
+    "governor": "VERIFIED",
+    "max_sampled_battery_c": 37.2,
+    "max_sampled_cpu_c": 57.0,
+    "state": "NORMAL"
+  },
+  "top_pair": {
+    "delta": 0.655899,
+    "gap": 1,
+    "p": 0.000999,
+    "pair": "L01<->L02",
+    "z": 11.058
+  }
+}

@@ -1,0 +1,95 @@
+============================================================================================================================
+ OPENMIND / FOREST TOPOLOGY V4 — TOKEN-HELD-OUT ORANGE GENERALIZATION
+============================================================================================================================
+
+DATASET
+----------------------------------------------------------------------------------------------------------------------------
+vectors                     : 364
+tokens                      : 13
+dimensions                  : 1536
+group size                  : 64
+groups                      : 24
+folds                       : 4
+excluded tokens             : [0]
+
+GENERALIZATION CONTRACT
+----------------------------------------------------------------------------------------------------------------------------
+Train/test partition is by complete token ID.
+Orange correlation groups are learned only from training-token residuals.
+The Orange map is frozen before held-out token evaluation.
+Pine and deterministic Random controls are fixed globally.
+Oracle top-energy group selection is retained to isolate grouping generalization.
+
+FOLD RESULTS
+----------------------------------------------------------------------------------------------------------------------------
+
+FOLD 1
+  train vectors             : 252
+  test vectors              : 112
+  held-out tokens           : 3,7,10,12
+  heldout Pine correlation  : 0.256975044
+  heldout Random correlation: 0.257117218
+  heldout Orange correlation: 0.262845788
+  request  pine_energy random_energy orange_energy orange/pine orange/random orange_l2/pine orange_l2/random
+    0.125 0.380826328   0.389063976   0.457656457 1.201745845   1.176301291    0.932283453      0.937785379
+    0.250 0.521251949   0.527982651   0.599656064 1.150415006   1.135749561    0.912233939      0.917305270
+    0.500 0.723382025   0.733314237   0.786375316 1.087081637   1.072357901    0.878928718      0.892906266
+    0.750 0.882534974   0.887359247   0.914182188 1.035859444   1.030227825    0.855229680      0.872775899
+
+FOLD 2
+  train vectors             : 280
+  test vectors              : 84
+  held-out tokens           : 1,8,13
+  heldout Pine correlation  : 0.296298095
+  heldout Random correlation: 0.297962682
+  heldout Orange correlation: 0.306376276
+  request  pine_energy random_energy orange_energy orange/pine orange/random orange_l2/pine orange_l2/random
+    0.125 0.426388539   0.441542662   0.524693882 1.230553437   1.188319788    0.904157701      0.915822803
+    0.250 0.566993723   0.577072571   0.648472942 1.143703916   1.123728581    0.895886194      0.904992429
+    0.500 0.763937715   0.765349863   0.818505230 1.071429272   1.069452376    0.872524025      0.873524705
+    0.750 0.904239651   0.901575807   0.931528619 1.030178910   1.033222733    0.839095999      0.828789800
+
+FOLD 3
+  train vectors             : 280
+  test vectors              : 84
+  held-out tokens           : 2,4,6
+  heldout Pine correlation  : 0.286731685
+  heldout Random correlation: 0.287684517
+  heldout Orange correlation: 0.297819765
+  request  pine_energy random_energy orange_energy orange/pine orange/random orange_l2/pine orange_l2/random
+    0.125 0.387027457   0.381411786   0.437394212 1.130137421   1.146776864    0.953090625      0.948283516
+    0.250 0.517619249   0.521110013   0.572476359 1.105979656   1.098571021    0.938262974      0.940844323
+    0.500 0.720492972   0.726663038   0.764380386 1.060913036   1.051904866    0.916654961      0.925552450
+    0.750 0.879270446   0.885711343   0.906391558 1.030845017   1.023348708    0.880031854      0.904048915
+
+FOLD 4
+  train vectors             : 280
+  test vectors              : 84
+  held-out tokens           : 5,9,11
+  heldout Pine correlation  : 0.290463070
+  heldout Random correlation: 0.290591029
+  heldout Orange correlation: 0.309180669
+  request  pine_energy random_energy orange_energy orange/pine orange/random orange_l2/pine orange_l2/random
+    0.125 0.387184542   0.382207190   0.431844666 1.115345833   1.129870596    0.957323550      0.953256801
+    0.250 0.527715724   0.517326872   0.566114734 1.072764574   1.094307612    0.953359504      0.942757188
+    0.500 0.731189605   0.726038811   0.762577332 1.042926933   1.050325852    0.935816165      0.926803311
+    0.750 0.887304516   0.886547740   0.907640563 1.022918904   1.023792089    0.900818805      0.898793289
+
+CROSS-FOLD SUMMARY
+----------------------------------------------------------------------------------------------------------------------------
+request  orange/pine_energy orange/random_energy orange_l2/pine orange_l2/random pine_wins random_wins
+  0.125        1.170834553          1.161434869    0.936971413      0.939073272         4/4           4/4
+  0.250        1.118645364          1.113472772    0.925264443      0.926828792         4/4           4/4
+  0.500        1.065612724          1.061148742    0.901430177      0.905306007         4/4           4/4
+  0.750        1.029941704          1.027672962    0.869399704      0.876942065         4/4           4/4
+
+FOREST V4 DECISION
+----------------------------------------------------------------------------------------------------------------------------
+result                     : HELD-OUT ORANGE GENERALIZATION PASSES
+
+INTERPRETATION BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+V4 holds out complete token IDs so the Orange correlation map cannot learn from the evaluated token trajectories.
+This experiment isolates grouping generalization; it does not yet test a fully retrained/frozen Lodgepole tree.
+Oracle top-energy selection remains in use, so successful V4 results do not establish deployable routing.
+If V4 passes, the next gate should remove the oracle before quantization.

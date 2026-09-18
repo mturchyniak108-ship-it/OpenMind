@@ -1,0 +1,724 @@
+{
+  "total_files": 88,
+  "categories": {
+    "RECURRENCE": 3,
+    "MAF": 3,
+    "GEOMETRY": 22,
+    "ARCHIVE_VARIANT": 5,
+    "GEOMETRY_SCALING": 13,
+    "GGUF": 3,
+    "OTHER": 7,
+    "PI": 8,
+    "Q8": 15,
+    "TIE": 3,
+    "TRANSITION": 5,
+    "UTILITY": 1
+  },
+  "results": [
+    {
+      "experiment": "activation_recurrence.py",
+      "category": "RECURRENCE",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.778,
+      "log": "results/experiment_runs/activation_recurrence.log"
+    },
+    {
+      "experiment": "benchmark_maf.py",
+      "category": "MAF",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.113,
+      "log": "results/experiment_runs/benchmark_maf.log"
+    },
+    {
+      "experiment": "benchmark_maf_advanced.py",
+      "category": "MAF",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.09,
+      "log": "results/experiment_runs/benchmark_maf_advanced.log"
+    },
+    {
+      "experiment": "canonical_lattice_v21.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.052,
+      "log": "results/experiment_runs/canonical_lattice_v21.log"
+    },
+    {
+      "experiment": "closed_curve_spectrum_v18.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 7.329,
+      "log": "results/experiment_runs/closed_curve_spectrum_v18.log"
+    },
+    {
+      "experiment": "crystal_lattice_v13.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.052,
+      "log": "results/experiment_runs/crystal_lattice_v13.log"
+    },
+    {
+      "experiment": "crystal_raw_lattice_v15.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 8.087,
+      "log": "results/experiment_runs/crystal_raw_lattice_v15.log"
+    },
+    {
+      "experiment": "crystal_realization_v14.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 10.557,
+      "log": "results/experiment_runs/crystal_realization_v14.log"
+    },
+    {
+      "experiment": "fractal_renormalization_v17.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.031,
+      "log": "results/experiment_runs/fractal_renormalization_v17.log"
+    },
+    {
+      "experiment": "geometry_null_v28.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.303,
+      "log": "results/experiment_runs/geometry_null_v28.log"
+    },
+    {
+      "experiment": "geometry_order_null_v29.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.057,
+      "log": "results/experiment_runs/geometry_order_null_v29.log"
+    },
+    {
+      "experiment": "geometry_order_null_v30.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.045,
+      "log": "results/experiment_runs/geometry_order_null_v30.log"
+    },
+    {
+      "experiment": "geometry_order_null_v30_reference.py",
+      "category": "ARCHIVE_VARIANT",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "geometry_scaling_component_localization_test_v43.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 24.25,
+      "log": "results/experiment_runs/geometry_scaling_component_localization_test_v43.log"
+    },
+    {
+      "experiment": "geometry_scaling_component_localization_test_v44.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 209.87,
+      "log": "results/experiment_runs/geometry_scaling_component_localization_test_v44.log"
+    },
+    {
+      "experiment": "geometry_scaling_component_localization_test_v44_frozen.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 211.767,
+      "log": "results/experiment_runs/geometry_scaling_component_localization_test_v44_frozen.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v33.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 8.116,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v33.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v33_reference.py",
+      "category": "ARCHIVE_VARIANT",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v34.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 62.41,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v34.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v37.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.069,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v37.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v38.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "TIMEOUT",
+      "returncode": null,
+      "seconds": 301.047,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v38.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v38_snapshot.py",
+      "category": "ARCHIVE_VARIANT",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v39.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 276.455,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v39.log"
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v39_backup.py",
+      "category": "ARCHIVE_VARIANT",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v39_work.py",
+      "category": "ARCHIVE_VARIANT",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "geometry_scaling_model_audit_v40.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 283.432,
+      "log": "results/experiment_runs/geometry_scaling_model_audit_v40.log"
+    },
+    {
+      "experiment": "geometry_scaling_transition_test_v41.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.645,
+      "log": "results/experiment_runs/geometry_scaling_transition_test_v41.log"
+    },
+    {
+      "experiment": "geometry_scaling_transition_test_v42.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 25.932,
+      "log": "results/experiment_runs/geometry_scaling_transition_test_v42.log"
+    },
+    {
+      "experiment": "geometry_scaling_v31.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 13.817,
+      "log": "results/experiment_runs/geometry_scaling_v31.log"
+    },
+    {
+      "experiment": "geometry_scaling_windows_v32.py",
+      "category": "GEOMETRY_SCALING",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 31.475,
+      "log": "results/experiment_runs/geometry_scaling_windows_v32.log"
+    },
+    {
+      "experiment": "gguf_structural_v1.py",
+      "category": "GGUF",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.37,
+      "log": "results/experiment_runs/gguf_structural_v1.log"
+    },
+    {
+      "experiment": "gguf_to_fractal.py",
+      "category": "GGUF",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.174,
+      "log": "results/experiment_runs/gguf_to_fractal.log"
+    },
+    {
+      "experiment": "hybrid_fractal.py",
+      "category": "OTHER",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.098,
+      "log": "results/experiment_runs/hybrid_fractal.log"
+    },
+    {
+      "experiment": "hybrid_weighted.py",
+      "category": "OTHER",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.109,
+      "log": "results/experiment_runs/hybrid_weighted.log"
+    },
+    {
+      "experiment": "inspect_gguf_header.py",
+      "category": "GGUF",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.257,
+      "log": "results/experiment_runs/inspect_gguf_header.log"
+    },
+    {
+      "experiment": "lattice_recovery_v25.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.183,
+      "log": "results/experiment_runs/lattice_recovery_v25.log"
+    },
+    {
+      "experiment": "layer_similarity.py",
+      "category": "OTHER",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.842,
+      "log": "results/experiment_runs/layer_similarity.log"
+    },
+    {
+      "experiment": "local_environment_v26.py",
+      "category": "OTHER",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.544,
+      "log": "results/experiment_runs/local_environment_v26.log"
+    },
+    {
+      "experiment": "maf_basic.cpp",
+      "category": "MAF",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    },
+    {
+      "experiment": "material_compatibility_v20.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.072,
+      "log": "results/experiment_runs/material_compatibility_v20.log"
+    },
+    {
+      "experiment": "motif_graph_v19.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.036,
+      "log": "results/experiment_runs/motif_graph_v19.log"
+    },
+    {
+      "experiment": "normalized_geometry_v10.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.042,
+      "log": "results/experiment_runs/normalized_geometry_v10.log"
+    },
+    {
+      "experiment": "null_model_v23.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 47.384,
+      "log": "results/experiment_runs/null_model_v23.log"
+    },
+    {
+      "experiment": "parameter_divergence.py",
+      "category": "OTHER",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.785,
+      "log": "results/experiment_runs/parameter_divergence.log"
+    },
+    {
+      "experiment": "parameter_fingerprint.py",
+      "category": "OTHER",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.612,
+      "log": "results/experiment_runs/parameter_fingerprint.log"
+    },
+    {
+      "experiment": "periodicity_scan_v27.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 12.679,
+      "log": "results/experiment_runs/periodicity_scan_v27.log"
+    },
+    {
+      "experiment": "pi10Mcorrected.py",
+      "category": "PI",
+      "status": "TIMEOUT",
+      "returncode": null,
+      "seconds": 300.085,
+      "log": "results/experiment_runs/pi10Mcorrected.log"
+    },
+    {
+      "experiment": "pi_benchmark.py",
+      "category": "PI",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.049,
+      "log": "results/experiment_runs/pi_benchmark.log"
+    },
+    {
+      "experiment": "pi_benchmark_fixed.py",
+      "category": "PI",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.029,
+      "log": "results/experiment_runs/pi_benchmark_fixed.log"
+    },
+    {
+      "experiment": "pi_full_pipeline.py",
+      "category": "PI",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.098,
+      "log": "results/experiment_runs/pi_full_pipeline.log"
+    },
+    {
+      "experiment": "pi_maf_10m_benchmark.py",
+      "category": "PI",
+      "status": "TIMEOUT",
+      "returncode": null,
+      "seconds": 301.39,
+      "log": "results/experiment_runs/pi_maf_10m_benchmark.log"
+    },
+    {
+      "experiment": "pi_predictor_v2.py",
+      "category": "PI",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.245,
+      "log": "results/experiment_runs/pi_predictor_v2.log"
+    },
+    {
+      "experiment": "pi_science_benchmark.py",
+      "category": "PI",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.361,
+      "log": "results/experiment_runs/pi_science_benchmark.log"
+    },
+    {
+      "experiment": "pi_waveform_fractal.py",
+      "category": "PI",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.259,
+      "log": "results/experiment_runs/pi_waveform_fractal.log"
+    },
+    {
+      "experiment": "q8_aware_divergence.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 11.014,
+      "log": "results/experiment_runs/q8_aware_divergence.log"
+    },
+    {
+      "experiment": "q8_aware_divergence_v3.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 11.18,
+      "log": "results/experiment_runs/q8_aware_divergence_v3.log"
+    },
+    {
+      "experiment": "q8_component_coherence_v5.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.057,
+      "log": "results/experiment_runs/q8_component_coherence_v5.log"
+    },
+    {
+      "experiment": "q8_cross_metric_v7.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.049,
+      "log": "results/experiment_runs/q8_cross_metric_v7.log"
+    },
+    {
+      "experiment": "q8_parameter_field_v4.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 13.746,
+      "log": "results/experiment_runs/q8_parameter_field_v4.log"
+    },
+    {
+      "experiment": "q8_parameter_field_v4_1.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.76,
+      "log": "results/experiment_runs/q8_parameter_field_v4_1.log"
+    },
+    {
+      "experiment": "q8_phase_blind_discovery_v13.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.179,
+      "log": "results/experiment_runs/q8_phase_blind_discovery_v13.log"
+    },
+    {
+      "experiment": "q8_phase_component_v8.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.089,
+      "log": "results/experiment_runs/q8_phase_component_v8.log"
+    },
+    {
+      "experiment": "q8_phase_detection_v6.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.084,
+      "log": "results/experiment_runs/q8_phase_detection_v6.log"
+    },
+    {
+      "experiment": "q8_phase_region_discovery_v12.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 83.731,
+      "log": "results/experiment_runs/q8_phase_region_discovery_v12.log"
+    },
+    {
+      "experiment": "q8_phase_region_validation_v10.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 8.575,
+      "log": "results/experiment_runs/q8_phase_region_validation_v10.log"
+    },
+    {
+      "experiment": "q8_phase_stability_v11.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.852,
+      "log": "results/experiment_runs/q8_phase_stability_v11.log"
+    },
+    {
+      "experiment": "q8_phase_validation_v9.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.348,
+      "log": "results/experiment_runs/q8_phase_validation_v9.log"
+    },
+    {
+      "experiment": "q8_structural_matched_targets_v14.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.175,
+      "log": "results/experiment_runs/q8_structural_matched_targets_v14.log"
+    },
+    {
+      "experiment": "q8_target_specificity_v15.py",
+      "category": "Q8",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.098,
+      "log": "results/experiment_runs/q8_target_specificity_v15.log"
+    },
+    {
+      "experiment": "recurrence_stability.py",
+      "category": "RECURRENCE",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 25.974,
+      "log": "results/experiment_runs/recurrence_stability.log"
+    },
+    {
+      "experiment": "recurrence_stability_v2.py",
+      "category": "RECURRENCE",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.645,
+      "log": "results/experiment_runs/recurrence_stability_v2.log"
+    },
+    {
+      "experiment": "spatial_null_v24.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.425,
+      "log": "results/experiment_runs/spatial_null_v24.log"
+    },
+    {
+      "experiment": "structural_divergence_v1.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.031,
+      "log": "results/experiment_runs/structural_divergence_v1.log"
+    },
+    {
+      "experiment": "structural_fingerprint.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.312,
+      "log": "results/experiment_runs/structural_fingerprint.log"
+    },
+    {
+      "experiment": "structural_lattice_v11.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.034,
+      "log": "results/experiment_runs/structural_lattice_v11.log"
+    },
+    {
+      "experiment": "symmetry_spectrum_v16.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.06,
+      "log": "results/experiment_runs/symmetry_spectrum_v16.log"
+    },
+    {
+      "experiment": "threshold_robustness_v25.py",
+      "category": "OTHER",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.05,
+      "log": "results/experiment_runs/threshold_robustness_v25.log"
+    },
+    {
+      "experiment": "tie_experiment.py",
+      "category": "TIE",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.173,
+      "log": "results/experiment_runs/tie_experiment.log"
+    },
+    {
+      "experiment": "tie_hybrid_experiment.py",
+      "category": "TIE",
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.098,
+      "log": "results/experiment_runs/tie_hybrid_experiment.log"
+    },
+    {
+      "experiment": "tie_pi_experiment.py",
+      "category": "TIE",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.125,
+      "log": "results/experiment_runs/tie_pi_experiment.log"
+    },
+    {
+      "experiment": "topology_lattice_v22.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.045,
+      "log": "results/experiment_runs/topology_lattice_v22.log"
+    },
+    {
+      "experiment": "transition_field_v5.py",
+      "category": "TRANSITION",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.047,
+      "log": "results/experiment_runs/transition_field_v5.log"
+    },
+    {
+      "experiment": "transition_geometry_v6.py",
+      "category": "TRANSITION",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.048,
+      "log": "results/experiment_runs/transition_geometry_v6.log"
+    },
+    {
+      "experiment": "transition_geometry_v9.py",
+      "category": "TRANSITION",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.042,
+      "log": "results/experiment_runs/transition_geometry_v9.log"
+    },
+    {
+      "experiment": "transition_periodicity_v8.py",
+      "category": "TRANSITION",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.038,
+      "log": "results/experiment_runs/transition_periodicity_v8.log"
+    },
+    {
+      "experiment": "transition_recurrence_v7.py",
+      "category": "TRANSITION",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.041,
+      "log": "results/experiment_runs/transition_recurrence_v7.log"
+    },
+    {
+      "experiment": "unit_cell_v12.py",
+      "category": "GEOMETRY",
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.049,
+      "log": "results/experiment_runs/unit_cell_v12.log"
+    },
+    {
+      "experiment": "visualize_hybrid_basin.py",
+      "category": "UTILITY",
+      "status": "SKIPPED",
+      "returncode": null,
+      "seconds": 0.0,
+      "log": null
+    }
+  ],
+  "timeout_seconds": 300
+}

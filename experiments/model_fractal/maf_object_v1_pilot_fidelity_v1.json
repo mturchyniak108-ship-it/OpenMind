@@ -1,0 +1,111 @@
+{
+  "all_pass": true,
+  "chunk_bytes": 4194304,
+  "engine_file_sha256": "eed6cbd96995412a632883f3c534f9023e7711ea8eb437afe35a48312502f63b",
+  "independent_reopen": true,
+  "inventory_file_sha256": "7acf6d5dc672182aee0244b1bb85a47466f33dbdcdf10bde863e24f3659240ee",
+  "literal_byte_comparison": true,
+  "persistent_objects": true,
+  "pilot_manifest_file_sha256": "690ec47152646907eed1ca873ff9cf86352777e79b116a6c2d63186e33f859d0",
+  "protocol_file_sha256": "d7e081e2030ee6cf2dde99026be7ef99d4a821a9b3a8b6e06fb780899ab3059b",
+  "results": [
+    {
+      "dims": [
+        1536
+      ],
+      "literal_byte_equal": true,
+      "metadata_sha256": "8d33fc19e7006dc64c8a8cd9b91df1d620bf936360c7f3c3f8fc1b8d4c358953",
+      "name": "output_norm.weight",
+      "object_file": "results/runtime/maf_object_v1_pilot/objects/01.mafobj",
+      "object_file_bytes": 6732,
+      "object_payload_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "ordinal": 1,
+      "pass": true,
+      "payload_offset": 588,
+      "source_file_start": 1894526016,
+      "source_payload_sha256": "88c9fbbe2593e0cb428617ce81b1389f099e40342f4717a81b59e2a8d022d2d5",
+      "span_bytes": 6144,
+      "type": "F32"
+    },
+    {
+      "dims": [
+        1536
+      ],
+      "literal_byte_equal": true,
+      "metadata_sha256": "28de2e8a5ce41803e78f69673bed468db3c1135dc4d6f0f8466f884397ed89bb",
+      "name": "blk.0.attn_norm.weight",
+      "object_file": "results/runtime/maf_object_v1_pilot/objects/02.mafobj",
+      "object_file_bytes": 6738,
+      "object_payload_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "ordinal": 2,
+      "pass": true,
+      "payload_offset": 594,
+      "source_file_start": 501869632,
+      "source_payload_sha256": "7052e000bdc3d4442a8beb442998629c84ca4ff39fe9c92c78495736a96d3250",
+      "span_bytes": 6144,
+      "type": "F32"
+    },
+    {
+      "dims": [
+        1536,
+        1536
+      ],
+      "literal_byte_equal": true,
+      "metadata_sha256": "a79a30fdc01e3a75de9556b378d2ea82becbb31b3840d8cc21c0806518ca04f1",
+      "name": "blk.0.attn_q.weight",
+      "object_file": "results/runtime/maf_object_v1_pilot/objects/03.mafobj",
+      "object_file_bytes": 2507352,
+      "object_payload_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+      "ordinal": 3,
+      "pass": true,
+      "payload_offset": 600,
+      "source_file_start": 548681792,
+      "source_payload_sha256": "97c8200d325e58cb936c84d7d5ee34d5e64e0a1c9b1f511b735d986d63ac5300",
+      "span_bytes": 2506752,
+      "type": "Q8_0"
+    },
+    {
+      "dims": [
+        8960,
+        1536
+      ],
+      "literal_byte_equal": true,
+      "metadata_sha256": "95d63a37cddf75c039205af79b58e1a65f12260d71ef8a7c9d9c096a4859156d",
+      "name": "blk.0.ffn_down.weight",
+      "object_file": "results/runtime/maf_object_v1_pilot/objects/04.mafobj",
+      "object_file_bytes": 14623326,
+      "object_payload_sha256": "d8f311c842b4abf6c51fd79bf81897605bddb2dfea1529e79688900303c7dd37",
+      "ordinal": 4,
+      "pass": true,
+      "payload_offset": 606,
+      "source_file_start": 501875776,
+      "source_payload_sha256": "d8f311c842b4abf6c51fd79bf81897605bddb2dfea1529e79688900303c7dd37",
+      "span_bytes": 14622720,
+      "type": "Q8_0"
+    },
+    {
+      "dims": [
+        1536,
+        151936
+      ],
+      "literal_byte_equal": true,
+      "metadata_sha256": "3f73c99f3b937df848cc77d9248a8f46325f9e413c3855fdae9d776b7ab69708",
+      "name": "token_embd.weight",
+      "object_file": "results/runtime/maf_object_v1_pilot/objects/05.mafobj",
+      "object_file_bytes": 247960154,
+      "object_payload_sha256": "1dc7e3115bc86f6a127f634edfee0257433f893df0eb4730928050abb70d588e",
+      "ordinal": 5,
+      "pass": true,
+      "payload_offset": 602,
+      "source_file_start": 253910080,
+      "source_payload_sha256": "1dc7e3115bc86f6a127f634edfee0257433f893df0eb4730928050abb70d588e",
+      "span_bytes": 247959552,
+      "type": "Q8_0"
+    }
+  ],
+  "schema": "openmind.maf_object_v1_pilot_fidelity.v1",
+  "source": "/data/data/com.termux/files/home/qwen2.5-coder-q8_0.gguf",
+  "source_sha256": "507de59046601282ba768a9789900e6ccf60ed93ddf346730b7c68eb0715bc47",
+  "target_count": 5,
+  "total_payload_bytes": 265101312
+}

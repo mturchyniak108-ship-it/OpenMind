@@ -1,0 +1,142 @@
+{
+  "schema": "openmind.geometry_scaling_model_audit.v38",
+  "source": "experiments/model_fractal/q8_parameter_field_v4_1.json",
+  "layer_count": 28,
+  "component_dimension": 12,
+  "lag_range": {
+    "min": 1,
+    "max": 27
+  },
+  "breakpoint_search": {
+    "min": 8,
+    "max": 23,
+    "rule": "left x<=breakpoint; right x>breakpoint",
+    "minimum_segment_size": 4
+  },
+  "models": [
+    "linear",
+    "quadratic",
+    "power",
+    "exponential"
+  ],
+  "null_runs": 10000,
+  "seed": 34038,
+  "selection_statistic": "best_global_bic_minus_best_piecewise_bic",
+  "real": {
+    "best_global": {
+      "model": "power",
+      "parameters": [
+        -20.324449588913833,
+        7.4396897004464595
+      ],
+      "A": 1.4900597920317254e-09,
+      "sse": 960.86865521243,
+      "rmse": 5.96554506904698,
+      "r2": 0.8442117810716312,
+      "aic": 100.44402317971411,
+      "bic": 103.03569691172277
+    },
+    "best_piecewise": {
+      "model": "quadratic",
+      "breakpoint": 23,
+      "left_parameters": [
+        5.420378312676483,
+        -0.3045342867197649,
+        0.03328318491988165
+      ],
+      "right_parameters": [
+        3842.6915580072905,
+        -316.30406115643035,
+        6.547843359675721
+      ],
+      "sse": 19.943148749410827,
+      "rmse": 0.8594388511506026,
+      "r2": 0.9967665636644091,
+      "aic": 3.8203175262050912,
+      "bic": 11.595338722231066
+    },
+    "delta_bic": 91.4403581894917
+  },
+  "null": {
+    "delta_bic": {
+      "n": 10000,
+      "mean": 45.61087820251777,
+      "sd": 20.688626717250433,
+      "min": 7.929733520157413,
+      "p01": 15.642328122656703,
+      "p05": 19.663158803774643,
+      "p50": 40.44136974054081,
+      "p95": 84.51933949591837,
+      "p99": 96.93147459189942,
+      "max": 118.9708985800076,
+      "real": 91.4403581894917,
+      "exceedances": 206,
+      "empirical_p": 0.0206979302069793
+    },
+    "global_model_counts": {
+      "linear": 3107,
+      "quadratic": 5828,
+      "power": 1063,
+      "exponential": 2
+    },
+    "piecewise_model_counts": {
+      "linear": 1254,
+      "quadratic": 7769,
+      "power": 893,
+      "exponential": 84
+    },
+    "breakpoint_counts": {
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 45,
+      "12": 67,
+      "13": 288,
+      "14": 440,
+      "15": 562,
+      "16": 757,
+      "17": 692,
+      "18": 700,
+      "19": 749,
+      "20": 725,
+      "21": 752,
+      "22": 809,
+      "23": 3414
+    },
+    "joint_piecewise_selection_counts": {
+      "power:14": 255,
+      "quadratic:20": 725,
+      "power:18": 207,
+      "quadratic:21": 752,
+      "power:17": 150,
+      "power:13": 112,
+      "quadratic:23": 3414,
+      "quadratic:22": 809,
+      "quadratic:19": 512,
+      "linear:17": 425,
+      "quadratic:16": 666,
+      "quadratic:15": 553,
+      "quadratic:13": 138,
+      "linear:19": 181,
+      "linear:18": 461,
+      "linear:14": 148,
+      "power:16": 54,
+      "quadratic:14": 37,
+      "exponential:12": 8,
+      "power:19": 51,
+      "quadratic:17": 93,
+      "power:11": 44,
+      "quadratic:18": 21,
+      "quadratic:12": 48,
+      "exponential:13": 36,
+      "power:15": 9,
+      "power:12": 11,
+      "linear:16": 37,
+      "exponential:18": 11,
+      "exponential:17": 24,
+      "exponential:19": 5,
+      "linear:13": 2,
+      "quadratic:11": 1
+    }
+  }
+}

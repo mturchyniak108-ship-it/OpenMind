@@ -1,0 +1,25 @@
+OPENMIND / RECURRENCE TOPOLOGY V3-FIXED
+DEFINITIVE 1000-PERMUTATION VALIDATION
+
+validation            : PASS
+seed                  : 1337
+permutations          : 1000
+layer pairs           : 378
+dimensions            : 1536
+excluded token        : T00
+direct equivalence    : PASS
+max equivalence diff  : 8.881784197001252e-16
+stderr                : CLEAN
+thermal supervision   : VERIFIED
+max sampled CPU       : 57.0 C
+battery range         : 36.8-37.2 C
+worker runtime        : 80.807 sec
+top pair              : L01<->L02
+top z                 : +11.058
+top empirical p       : 0.000999
+original V3           : BYTE-PRESERVED
+
+Boundary:
+Core permutation statistic is validated.
+Full original reporting parity remains a derived-report step.
+No additional permutations are required for that step.
